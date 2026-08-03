@@ -1,0 +1,751 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cayzen EHS Research｜国内・海外のEHS法令・規制の調査代行サービス - エイトス株式会社</title>
+<meta name="description" content="工場の法令順守を、属人技から仕組みへ。管理必要法令の棚卸しから毎月の法改正配信、個別調査まで。EHS（環境・労働安全衛生）法令・規制の調査代行サービス「Cayzen EHS Research」。">
+<meta property="og:title" content="Cayzen EHS Research｜EHS法令・規制の調査代行サービス">
+<meta property="og:description" content="工場の法令順守を、属人技から仕組みへ。管理必要法令の棚卸しから毎月の法改正配信、個別調査まで一括代行。">
+<meta property="og:type" content="website">
+<link rel="icon" type="image/svg+xml" href='data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"%3E%3Cpath d="M50 8 a42 42 0 1 0 29.7 12.3 l-12.7 12.7 a24 24 0 1 1 -17 -7 z" fill="%23106878"/%3E%3C/svg%3E'>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --teal-900:#0b4e5b;
+  --teal-700:#106878;
+  --teal-500:#308098;
+  --teal-300:#58a0b0;
+  --teal-100:#80c0c8;
+  --teal-050:#eef6f7;
+  --ink:#2b3338;
+  --gray:#505050;
+  --line:#dde6e8;
+  --white:#ffffff;
+  --accent:#e8a13d;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:84px}
+body{font-family:"Noto Sans JP",sans-serif;color:var(--ink);line-height:1.8;background:var(--white);-webkit-font-smoothing:antialiased}
+img{max-width:100%;height:auto;display:block}
+a{color:var(--teal-700);text-decoration:none}
+.container{max-width:1080px;margin:0 auto;padding:0 20px}
+section{padding:80px 0}
+.section-label{font-family:"Poppins","Noto Sans JP",sans-serif;font-size:14px;font-weight:700;letter-spacing:.18em;color:var(--teal-500);text-transform:uppercase;text-align:center;margin-bottom:10px}
+.section-title{font-size:32px;font-weight:900;text-align:center;line-height:1.5;margin-bottom:18px}
+.section-lead{max-width:760px;margin:0 auto 48px;text-align:center;color:var(--gray)}
+.table-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch}
+
+/* buttons */
+.btn{display:inline-block;padding:16px 36px;border-radius:999px;font-weight:700;font-size:16px;text-align:center;transition:transform .15s ease,box-shadow .15s ease;box-shadow:0 4px 14px rgba(16,104,120,.25)}
+.btn:hover{transform:translateY(-2px);box-shadow:0 8px 20px rgba(16,104,120,.3)}
+.btn-primary{background:linear-gradient(135deg,var(--teal-500),var(--teal-700));color:#fff}
+.btn-accent{background:linear-gradient(135deg,#f0b45c,var(--accent));color:#fff;box-shadow:0 4px 14px rgba(232,161,61,.35)}
+.btn-ghost{background:#fff;color:var(--teal-700);border:2px solid var(--teal-700);box-shadow:none}
+.btn-sm{padding:10px 22px;font-size:14px}
+
+/* header */
+header{position:fixed;top:0;left:0;right:0;background:rgba(255,255,255,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);z-index:100}
+.header-inner{display:flex;align-items:center;justify-content:space-between;height:68px;max-width:1160px;margin:0 auto;padding:0 20px}
+.header-logo img{height:36px;width:auto}
+.header-nav{display:flex;align-items:center;gap:10px}
+.header-nav .nav-links{display:flex;gap:22px;margin-right:14px;font-size:14px;font-weight:500}
+.header-nav .nav-links a{color:var(--ink)}
+.header-nav .nav-links a:hover{color:var(--teal-700)}
+
+/* hero */
+.hero{position:relative;padding:150px 0 90px;background:
+  radial-gradient(1100px 500px at 85% -10%,rgba(128,192,200,.30),transparent 60%),
+  radial-gradient(900px 480px at -10% 110%,rgba(48,128,152,.16),transparent 60%),
+  linear-gradient(180deg,#f6fafb 0%,#eef6f7 100%);overflow:hidden}
+.hero-inner{display:flex;flex-direction:column;align-items:center;text-align:center}
+.hero-logo img{height:64px;width:auto;margin:0 auto 28px}
+.hero-badge{display:inline-block;background:#fff;border:1px solid var(--teal-100);color:var(--teal-700);font-size:13px;font-weight:700;padding:6px 18px;border-radius:999px;margin-bottom:22px;letter-spacing:.04em}
+.hero h1{font-size:44px;font-weight:900;line-height:1.45;letter-spacing:.02em}
+.hero h1 .em{color:var(--teal-700)}
+.hero-sub{max-width:720px;margin:22px auto 34px;color:var(--gray);font-size:16px}
+.hero-cta{display:flex;gap:16px;flex-wrap:wrap;justify-content:center}
+.hero-note{margin-top:14px;font-size:13px;color:var(--gray)}
+.clients{margin-top:56px;width:100%}
+.clients p{font-size:13px;font-weight:700;color:var(--teal-700);letter-spacing:.1em;text-align:center;margin-bottom:14px}
+.clients ul{display:flex;flex-wrap:wrap;justify-content:center;gap:8px 10px;list-style:none;max-width:900px;margin:0 auto}
+.clients li{background:#fff;border:1px solid var(--line);border-radius:6px;padding:6px 14px;font-size:13px;font-weight:500;color:var(--gray)}
+
+/* problems */
+.problems{background:#fff}
+.card-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.p-card{background:var(--teal-050);border-radius:14px;padding:32px 26px;text-align:center}
+.p-card .icon{width:56px;height:56px;margin:0 auto 18px;border-radius:50%;background:linear-gradient(135deg,var(--teal-500),var(--teal-700));display:flex;align-items:center;justify-content:center;color:#fff;font-size:24px;font-weight:900}
+.p-card h3{font-size:18px;font-weight:700;margin-bottom:10px;line-height:1.5}
+.p-card p{font-size:14px;color:var(--gray);text-align:left}
+.problems-msg{margin-top:44px;text-align:center;font-size:20px;font-weight:700}
+.problems-msg .em{color:var(--teal-700)}
+
+/* services */
+.services{background:linear-gradient(180deg,var(--teal-050),#f6fafb)}
+.s-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px}
+.s-card{background:#fff;border-radius:14px;padding:30px 28px;border-top:4px solid var(--teal-500);box-shadow:0 4px 18px rgba(16,104,120,.07)}
+.s-card .num{font-family:"Poppins",sans-serif;font-size:13px;font-weight:700;color:var(--teal-300);letter-spacing:.14em}
+.s-card h3{font-size:19px;font-weight:700;margin:6px 0 10px}
+.s-card p{font-size:14px;color:var(--gray)}
+
+/* flow */
+.flow-steps{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-bottom:36px}
+.f-step{background:#fff;border:1px solid var(--line);border-radius:14px;padding:28px 24px;position:relative}
+.f-step .step-no{display:inline-block;background:var(--teal-700);color:#fff;font-family:"Poppins",sans-serif;font-size:12px;font-weight:700;letter-spacing:.1em;padding:4px 14px;border-radius:999px;margin-bottom:14px}
+.f-step h3{font-size:18px;font-weight:700;margin-bottom:10px}
+.f-step p{font-size:14px;color:var(--gray);margin-bottom:12px}
+.f-step ul{list-style:none;font-size:13px;color:var(--gray)}
+.f-step ul li{padding-left:18px;position:relative;margin-bottom:4px}
+.f-step ul li::before{content:"";position:absolute;left:0;top:.65em;width:8px;height:8px;border-radius:2px;background:var(--teal-100)}
+.f-output{margin-top:14px;background:var(--teal-050);border-radius:8px;padding:10px 14px;font-size:13px;font-weight:700;color:var(--teal-700)}
+
+/* outputs */
+.output{background:#fff}
+.output-block{margin-bottom:70px}
+.output-block:last-child{margin-bottom:0}
+.output-tag{display:inline-block;background:var(--teal-700);color:#fff;font-family:"Poppins","Noto Sans JP",sans-serif;font-weight:700;font-size:13px;letter-spacing:.12em;padding:6px 18px;border-radius:999px;margin-bottom:14px}
+.output-block h3{font-size:26px;font-weight:900;margin-bottom:14px;line-height:1.5}
+.output-block>p{color:var(--gray);margin-bottom:24px;max-width:820px}
+.legend{display:flex;gap:22px;flex-wrap:wrap;font-size:13px;color:var(--gray);margin-bottom:14px}
+.legend .mark{font-weight:900;color:var(--teal-700)}
+table.data{width:100%;border-collapse:collapse;font-size:13.5px;background:#fff;min-width:680px}
+table.data th{background:var(--teal-700);color:#fff;font-weight:700;padding:12px 14px;text-align:left;line-height:1.5}
+table.data td{border-bottom:1px solid var(--line);padding:12px 14px;vertical-align:top;color:var(--ink)}
+table.data tr:nth-child(even) td{background:#f7fbfc}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin:26px 0}
+.stat{background:var(--teal-050);border-radius:12px;padding:20px 16px;text-align:center}
+.stat .n{font-family:"Poppins","Noto Sans JP",sans-serif;font-size:30px;font-weight:700;color:var(--teal-700);line-height:1.2}
+.stat .l{font-size:12.5px;color:var(--gray);margin-top:6px;line-height:1.5}
+.notes{font-size:12.5px;color:var(--gray);margin-top:12px}
+.warn-list{margin-top:22px;background:#fdf6ec;border:1px solid #f0d9b0;border-radius:12px;padding:20px 24px}
+.warn-list h4{font-size:15px;font-weight:700;margin-bottom:10px;color:#8a5a12}
+.warn-list ul{list-style:none;font-size:14px;color:#6b4a14}
+.warn-list li{padding-left:22px;position:relative;margin-bottom:6px}
+.warn-list li::before{content:"!";position:absolute;left:0;top:0;font-weight:900;color:var(--accent)}
+
+/* comparison */
+.compare{background:linear-gradient(180deg,#f6fafb,var(--teal-050))}
+table.cmp{width:100%;border-collapse:collapse;font-size:14px;background:#fff;min-width:640px}
+table.cmp th,table.cmp td{padding:14px 16px;border-bottom:1px solid var(--line);text-align:center}
+table.cmp th{background:var(--teal-700);color:#fff;font-weight:700}
+table.cmp td:first-child{text-align:left;font-weight:500}
+table.cmp .ours{background:var(--teal-050);font-weight:700;color:var(--teal-700)}
+table.cmp .ng{color:#c0392b;font-weight:700}
+table.cmp .ok{color:var(--teal-700);font-weight:700}
+.compare-msg{text-align:center;margin-top:30px;font-size:17px;font-weight:700}
+
+/* merits */
+.merits .m-cols{display:grid;grid-template-columns:1fr 1fr;gap:28px}
+.m-col{background:#fff;border-radius:14px;border:1px solid var(--line);overflow:hidden}
+.m-col h3{background:var(--teal-700);color:#fff;font-size:17px;font-weight:700;padding:14px 22px}
+.m-col.alt h3{background:var(--teal-500)}
+.m-col ul{list-style:none;padding:10px 22px 18px}
+.m-col li{padding:14px 0;border-bottom:1px dashed var(--line)}
+.m-col li:last-child{border-bottom:none}
+.m-col li b{display:block;font-size:15.5px;margin-bottom:4px;color:var(--teal-900)}
+.m-col li span{font-size:13.5px;color:var(--gray)}
+.merit-hero{margin-bottom:34px;text-align:center}
+.merit-hero .big{font-size:22px;font-weight:900}
+.merit-hero .big .num{font-family:"Poppins","Noto Sans JP",sans-serif;font-size:52px;color:var(--teal-700);font-weight:700;line-height:1}
+
+/* scope */
+.scope-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:22px}
+.scope-card{background:var(--teal-050);border-radius:12px;padding:26px 24px}
+.scope-card h3{font-size:16.5px;font-weight:700;margin-bottom:8px;color:var(--teal-900)}
+.scope-card p{font-size:14px;color:var(--gray)}
+
+/* usecases */
+.usecase{background:linear-gradient(180deg,var(--teal-050),#f6fafb)}
+.uc-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:22px}
+.uc-card{background:#fff;border-radius:12px;padding:26px 24px;border-left:4px solid var(--teal-500)}
+.uc-card h3{font-size:16px;font-weight:700;margin-bottom:8px}
+.uc-card p{font-size:13.5px;color:var(--gray)}
+.q-examples{margin-top:34px;background:#fff;border-radius:14px;padding:28px 30px;border:1px solid var(--line)}
+.q-examples h4{font-size:15px;font-weight:700;color:var(--teal-700);margin-bottom:14px}
+.q-examples ul{list-style:none}
+.q-examples li{position:relative;padding:10px 0 10px 34px;font-size:14.5px;border-bottom:1px dashed var(--line)}
+.q-examples li:last-child{border-bottom:none}
+.q-examples li::before{content:"Q";position:absolute;left:0;top:8px;width:24px;height:24px;border-radius:50%;background:var(--teal-700);color:#fff;font-family:"Poppins",sans-serif;font-size:13px;font-weight:700;display:flex;align-items:center;justify-content:center}
+
+/* experts */
+.experts{background:#fff}
+.e-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:22px}
+.e-card{background:var(--teal-050);border-radius:12px;padding:26px 24px}
+.e-card h3{font-size:16px;font-weight:700;color:var(--teal-900);margin-bottom:8px}
+.e-card p{font-size:13.5px;color:var(--gray)}
+
+/* next steps */
+.nextsteps{background:linear-gradient(135deg,var(--teal-900),var(--teal-700))}
+.nextsteps .section-label{color:var(--teal-100)}
+.nextsteps .section-title,.nextsteps .section-lead{color:#fff}
+.ns-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-bottom:44px}
+.ns-card{background:rgba(255,255,255,.10);border:1px solid rgba(255,255,255,.25);border-radius:14px;padding:28px 24px;color:#fff}
+.ns-card .no{font-family:"Poppins",sans-serif;font-size:30px;font-weight:700;color:var(--teal-100);line-height:1}
+.ns-card h3{font-size:17px;font-weight:700;margin:12px 0 8px}
+.ns-card p{font-size:13.5px;color:rgba(255,255,255,.85)}
+.ns-cta{text-align:center}
+
+/* CTA forms */
+.cta{background:#f6fafb}
+.cta-tabs{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin-bottom:34px}
+.cta-tab{appearance:none;border:2px solid var(--teal-700);background:#fff;color:var(--teal-700);font-family:inherit;font-size:15px;font-weight:700;padding:12px 30px;border-radius:999px;cursor:pointer;transition:all .15s ease}
+.cta-tab:hover{background:var(--teal-050)}
+.cta-tab.active{background:var(--teal-700);color:#fff}
+.cta-panels{max-width:720px;margin:0 auto}
+.cta-panel{display:none;background:#fff;border-radius:16px;border:1px solid var(--line);box-shadow:0 6px 24px rgba(16,104,120,.08);padding:38px 36px}
+.cta-panel.active{display:block}
+.cta-panel h3{font-size:21px;font-weight:900;text-align:center;margin-bottom:8px}
+.cta-panel .desc{font-size:14px;color:var(--gray);text-align:center;margin-bottom:26px}
+.hs-form-frame{min-height:320px}
+
+/* company */
+.company table{width:100%;border-collapse:collapse;font-size:14.5px;max-width:820px;margin:0 auto}
+.company th{width:190px;background:var(--teal-050);color:var(--teal-900);font-weight:700;text-align:left;padding:14px 18px;border-bottom:1px solid var(--line);vertical-align:top}
+.company td{padding:14px 18px;border-bottom:1px solid var(--line);color:var(--ink)}
+
+/* footer */
+footer{background:var(--teal-900);color:#fff;padding:46px 0 30px}
+.footer-inner{display:flex;flex-direction:column;align-items:center;gap:14px;text-align:center}
+.footer-logo{background:#fff;border-radius:10px;padding:10px 18px}
+.footer-logo img{height:30px;width:auto}
+footer p{font-size:13px;color:rgba(255,255,255,.8)}
+footer .copy{font-size:12px;color:rgba(255,255,255,.55);margin-top:12px}
+
+/* responsive */
+@media(max-width:900px){
+  .card-grid,.flow-steps,.ns-grid{grid-template-columns:1fr}
+  .s-grid,.scope-grid,.uc-grid,.e-grid,.merits .m-cols{grid-template-columns:1fr}
+  .stats{grid-template-columns:repeat(2,1fr)}
+  .hero h1{font-size:30px}
+  .hero{padding:120px 0 70px}
+  .section-title{font-size:24px}
+  section{padding:60px 0}
+  .header-nav .nav-links{display:none}
+  .header-nav{gap:8px}
+  .header-nav .btn-sm{padding:9px 14px;font-size:12.5px;white-space:nowrap}
+  .header-logo img{height:30px}
+  .cta-panel{padding:28px 20px}
+  .output-block h3{font-size:21px}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <a class="header-logo" href="#top" aria-label="Cayzen EHS Research">
+      <img src="assets/logo.png" alt="Cayzen EHS Research">
+    </a>
+    <nav class="header-nav">
+      <div class="nav-links">
+        <a href="#services">サービス</a>
+        <a href="#flow">全体像</a>
+        <a href="#outputs">納品物</a>
+        <a href="#merits">メリット</a>
+        <a href="#company">会社概要</a>
+      </div>
+      <a class="btn btn-ghost btn-sm" href="#cta" data-tab="download">資料ダウンロード</a>
+      <a class="btn btn-primary btn-sm" href="#cta" data-tab="trial">無料トライアル</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <div class="hero">
+    <div class="container hero-inner">
+      <div class="hero-logo"><img src="assets/logo.png" alt="Cayzen EHS Research"></div>
+      <span class="hero-badge">国内・海外のEHS（環境・労働安全衛生）法令・規制の調査代行サービス</span>
+      <h1>工場の法令順守を、<br><span class="em">属人技</span>から<span class="em">仕組み</span>へ。</h1>
+      <p class="hero-sub">工場の資料をお預かりして「管理が必要な法令と、その根拠」を整理。そのうえで毎月の法改正を自社影響つきで配信し、判断の土台と更新をまとめて代行します。</p>
+      <div class="hero-cta">
+        <a class="btn btn-primary" href="#cta" data-tab="download">サービス資料をダウンロード</a>
+        <a class="btn btn-accent" href="#cta" data-tab="trial">無料トライアルに申し込む</a>
+      </div>
+      <p class="hero-note">1拠点・1か月分からお試しいただけます</p>
+      <div class="clients">
+        <p>導入企業（一部）</p>
+        <ul>
+          <li>AGC</li><li>AGCグラスプロダクツ</li><li>日本製鉄</li><li>日東電工</li><li>テルモ</li><li>ボッシュ</li><li>安藤・間</li><li>金沢村田製作所</li><li>伊勢村田製作所</li><li>UACJ</li><li>小松製作所</li><li>住友林業</li><li>東京エレクトロン</li><li>三菱重工業</li><li>SUMCO</li><li>理研計器</li><li>LIXIL</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- PROBLEMS -->
+  <section class="problems" id="problems">
+    <div class="container">
+      <p class="section-label">Problem</p>
+      <h2 class="section-title">法令順守は、いつも<br class="sp-only">「時間」と「属人化」でつまずきます。</h2>
+      <div class="card-grid">
+        <div class="p-card">
+          <div class="icon">⏱</div>
+          <h3>調査に時間がかかる</h3>
+          <p>EHS関連法令・規制への対応判断に、現場と環境担当の工数が多く取られている。</p>
+        </div>
+        <div class="p-card">
+          <div class="icon">📈</div>
+          <h3>負荷が毎月変わり、稼働を読めない</h3>
+          <p>過去の調査や法対応の情報が共有されず、都度同じ調査が必要になる。</p>
+        </div>
+        <div class="p-card">
+          <div class="icon">👤</div>
+          <h3>業務が属人化している</h3>
+          <p>法令の抜け漏れが発生。異動により対応できる人員を確保できなくなる懸念もある。</p>
+        </div>
+      </div>
+      <p class="problems-msg">Cayzen EHS Researchは、<span class="em">属人化の解消</span>と<span class="em">調査の生産性向上</span>に有効なサービスです。</p>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section class="services" id="services">
+    <div class="container">
+      <p class="section-label">Service</p>
+      <h2 class="section-title">4つのサービスで、法令順守を仕組みに変える。</h2>
+      <div class="s-grid">
+        <div class="s-card">
+          <span class="num">SERVICE 01</span>
+          <h3>管理必要法令の棚卸し</h3>
+          <p>工場の設備・作業・数量を前提に、管理が必要な法令と根拠を整理します。</p>
+        </div>
+        <div class="s-card">
+          <span class="num">SERVICE 02</span>
+          <h3>法改正の定期調査・配信</h3>
+          <p>官報等を全件確認し、自社対象の改正を影響度・担当部署つきで配信します。</p>
+        </div>
+        <div class="s-card">
+          <span class="num">SERVICE 03</span>
+          <h3>個別の法令・届出調査</h3>
+          <p>設備新設/更新、新製品、化学物質の適用判断を都度レポート化します。</p>
+        </div>
+        <div class="s-card">
+          <span class="num">SERVICE 04</span>
+          <h3>リスクアセスメント</h3>
+          <p>現場動画と拠点情報から、作業リスクと安全対策を分析します。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FLOW -->
+  <section class="flow" id="flow">
+    <div class="container">
+      <p class="section-label">Flow</p>
+      <h2 class="section-title">資料を集める。前提を整える。<br>あとは回し続ける。</h2>
+      <p class="section-lead">法令の該当判断は「工場に何があるか・何をしているか」で決まります。前提情報を体系化し、変化を追い続けることで、順守評価を仕組みに変えます。</p>
+      <div class="flow-steps">
+        <div class="f-step">
+          <span class="step-no">STEP 1</span>
+          <h3>各種資料の収集</h3>
+          <p>社内にある資料をお預かりします。新たに作成いただくものはありません。</p>
+          <ul>
+            <li>組織図／設備一覧／工程フロー</li>
+            <li>薬品一覧／廃棄物情報／排水分析</li>
+            <li>エネルギー使用実績／営業許可・許認可</li>
+          </ul>
+        </div>
+        <div class="f-step">
+          <span class="step-no">STEP 2</span>
+          <h3>前提情報の整備</h3>
+          <p>法令判断の基礎資料として体系化します。</p>
+          <ul>
+            <li>事業概要・組織体制／製造品目・工程情報</li>
+            <li>設備・機械の仕様／化学物質の管理状況</li>
+            <li>環境データ（排水・廃棄物・エネルギー）</li>
+            <li>危険物・高圧ガス情報／既存の許認可・届出</li>
+          </ul>
+          <div class="f-output">→ OUTPUT 01　管理必要法令と根拠の解説（Word／PDF）</div>
+        </div>
+        <div class="f-step">
+          <span class="step-no">STEP 3</span>
+          <h3>継続メンテナンス</h3>
+          <p>前提が変われば、判定も変わります。</p>
+          <ul>
+            <li>設備の追加・変更</li>
+            <li>人員・組織の変更</li>
+            <li>法改正への対応</li>
+          </ul>
+          <div class="f-output">→ OUTPUT 02　法改正一覧（Excel・毎月配信）</div>
+        </div>
+      </div>
+      <p class="notes" style="text-align:center">※ 変更時は資料を更新し、法令判断を再確認します。</p>
+    </div>
+  </section>
+
+  <!-- OUTPUTS -->
+  <section class="output" id="outputs">
+    <div class="container">
+      <p class="section-label">Output</p>
+      <h2 class="section-title">納品物のご紹介</h2>
+
+      <div class="output-block">
+        <span class="output-tag">OUTPUT 01</span>
+        <h3>「管理が必要な法令」と、その根拠を1冊に。</h3>
+        <p>分野別に法令を判定。判定だけでなく「なぜ当工場に当てはまるのか」と「何を・どの頻度で行うのか」まで記載します。納品物は9分野・14ページ。製品安全／労働安全衛生／外国人労働者／消防・危険物／高圧ガス・電気／環境／廃棄物・リサイクル／エネルギー・温暖化・フロン／取引・契約を網羅します。</p>
+        <div class="legend">
+          <span><span class="mark">●</span> 管理が必要：提供資料の事実から、義務が生じていると判断できる法令</span>
+          <span><span class="mark">▲</span> 条件付き・要確認：追加確認により義務の範囲が確定する法令</span>
+        </div>
+        <div class="table-scroll">
+          <table class="data">
+            <thead>
+              <tr><th>法令等（判定）</th><th>当工場が該当する根拠（工場の事実）</th><th>現場で必要な管理（何を・どの頻度で）</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>● 労働安全衛生法（管理体制）</td><td>常時使用する労働者が320人おり、300人以上の製造業に当たる</td><td>総括安全衛生管理者・産業医等の選任、安全衛生委員会（毎月）／定期健診（年1回）</td></tr>
+              <tr><td>● ボイラー及び圧力容器安全規則</td><td>蒸気ボイラー7台（4t/h×4、3t/h×2、バイオガス1t/h）</td><td>性能検査（年1回）＋定期自主検査（毎月）／取扱作業主任者の選任</td></tr>
+              <tr><td>● 消防法（危険物施設）</td><td>危険物屋内貯蔵所（第4類・指定数量の倍数9.0倍）の許可あり</td><td>危険物保安監督者の選任・届出／貯蔵量が許可数量を超えないよう受払を管理</td></tr>
+              <tr><td>▲ 特定化学物質障害予防規則</td><td>ジクロロメタン含有剥離剤、クロム酸カリウム等を保管している</td><td>使用作業の有無・数量を確認のうえ判定／該当時は作業環境測定・特殊健診（6か月ごと）</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3 style="margin-top:50px">年間計画に落とせる形で、頻度別に整理します。</h3>
+        <div class="table-scroll">
+          <table class="data">
+            <thead>
+              <tr><th style="width:160px">頻度</th><th>実施事項（関係法令）</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>毎月</td><td>ボイラー・圧力容器・クレーン・フォークリフトの定期自主検査／電気工作物の月次点検／安全衛生委員会</td></tr>
+              <tr><td>3か月ごと</td><td>業務用冷凍空調機器の簡易点検（フロン法）／特定技能外国人の受入れ・活動状況の定期届出</td></tr>
+              <tr><td>年1回</td><td>ボイラー・第一種圧力容器の性能検査／特定自主検査／消防用設備の総合点検／高圧ガス保安検査／定期健診</td></tr>
+              <tr><td>毎年（期限あり）</td><td>省エネ法 定期報告・中長期計画（7月末）／温対法SHK報告（7月末）／PRTR届出（4〜6月）</td></tr>
+              <tr><td>都度（変更時）</td><td>設備の新設・変更・燃料転換／新規薬品の採用／組織変更・資格者の異動（各種選任届）</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="warn-list">
+          <h4>判定の過程で見つかった不整合は、根拠つきで指摘します（サンプル工場の例）</h4>
+          <ul>
+            <li>【要対応】特別管理産業廃棄物を排出しているが、管理責任者の選任が未了</li>
+            <li>【要是正確認】消防用設備の点検結果報告が「4年毎」で運用されており、法定周期（3年に1回）と不整合</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="output-block">
+        <span class="output-tag">OUTPUT 02</span>
+        <h3>毎月の官報から、自社に関係する改正だけを。</h3>
+        <p>官報に掲載された法律・政令・省令・告示を全件確認し、整備済みの前提情報と突き合わせて対象を判定します。</p>
+        <div class="stats">
+          <div class="stat"><div class="n">485<span style="font-size:16px">件</span></div><div class="l">官報から確認</div></div>
+          <div class="stat"><div class="n">58<span style="font-size:16px">件</span></div><div class="l">自社対象と判定</div></div>
+          <div class="stat"><div class="n">10<span style="font-size:16px">件</span></div><div class="l">影響度「高」（中26・低22）</div></div>
+          <div class="stat"><div class="n">6<span style="font-size:16px">部署</span></div><div class="l">担当部署への振り分け</div></div>
+        </div>
+        <p class="notes" style="margin-bottom:10px">実績（サンプル工場・1か月）</p>
+        <div class="table-scroll">
+          <table class="data">
+            <thead>
+              <tr><th>対象</th><th>法令名</th><th>改正施行日</th><th>改正概要／対応事項</th><th>担当部署</th><th>影響度</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>✓</td><td>火薬類取締法施行規則</td><td>2026-06-01</td><td>軽微な変更工事の範囲追加、保安検査の基準日見直し／保安検査の年間計画を基準日ベースに更新</td><td>生産技術部</td><td><b style="color:#c0392b">高</b></td></tr>
+              <tr><td>✓</td><td>地域の自主性及び自立性を高めるための改革推進法</td><td>附則に定める日</td><td>地方公共団体への権限移譲、義務付け・枠付けの見直し／所管自治体の手続変更を確認</td><td>生産技術部</td><td>中</td></tr>
+              <tr><td></td><td>日本中央競馬会法施行規則</td><td>2026-06-01</td><td>競馬会の業務運営に関する規定の見直し／一般の事業者に新たな対応は生じない</td><td>―</td><td>対象外</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="notes">※ 列構成・部署名・判定基準は貴社の運用に合わせて設計します。官報URL・参照URLを各行に添付します。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- COMPARISON -->
+  <section class="compare" id="compare">
+    <div class="container">
+      <p class="section-label">Comparison</p>
+      <h2 class="section-title">法改正対応の負担は、<br>通知が届いた「後」にあります。</h2>
+      <div class="table-scroll">
+        <table class="cmp">
+          <thead>
+            <tr><th style="text-align:left">工程</th><th>通常の法改正通知</th><th class="ours">Cayzen EHS Research</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>法改正の網羅的な抽出</td><td class="ok">○<span style="font-weight:400;font-size:12px">（通知のみ）</span></td><td class="ours ok">○</td></tr>
+            <tr><td>対象法令の整理（条項抽出・非抽出）</td><td class="ng">×（自社対応）</td><td class="ours ok">○</td></tr>
+            <tr><td>自社影響のスクリーニング</td><td class="ng">×（自社対応）</td><td class="ours ok">○</td></tr>
+            <tr><td>要約・影響度付け・詳細資料</td><td class="ng">×（自社対応）</td><td class="ours ok">○<span style="font-weight:400;font-size:12px">（カスタマイズ可）</span></td></tr>
+            <tr><td>部署別 対応事項・チェックリスト</td><td class="ng">×（自社対応）</td><td class="ours ok">○</td></tr>
+            <tr><td>法令要求事項管理表への反映</td><td class="ng">×（自社対応）</td><td class="ours">△（オプション）</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="compare-msg">調査から対応策の実行まで一貫して伴走。<br>担当者は<span style="color:var(--teal-700)">最終確認に集中</span>できます。</p>
+    </div>
+  </section>
+
+  <!-- MERITS -->
+  <section class="merits" id="merits">
+    <div class="container">
+      <p class="section-label">Merit</p>
+      <h2 class="section-title">現場の工数も、管理部門の不安も減らします。</h2>
+      <div class="merit-hero">
+        <p class="big">法令調査業務を<br><span class="num">最大95<span style="font-size:26px">%</span></span><br>削減</p>
+      </div>
+      <div class="m-cols">
+        <div class="m-col">
+          <h3>現場の利用メリット</h3>
+          <ul>
+            <li><b>最大95%の工数削減</b><span>法令の調査に関する業務を最大95%削減。</span></li>
+            <li><b>対応工数の標準化＆変動費化</b><span>変動の大きい法令関連工数を固定で抱えない。</span></li>
+            <li><b>類似した過去の調査の活用</b><span>過去の法令調査結果を活用して効率化。</span></li>
+          </ul>
+        </div>
+        <div class="m-col alt">
+          <h3>管理部門の利用メリット</h3>
+          <ul>
+            <li><b>法令漏れの発生抑制</b><span>調査や判断を標準化し、対応漏れを防止。</span></li>
+            <li><b>属人化解消・業務の標準化</b><span>特定の人材に依存しない運用体制を構築。</span></li>
+            <li><b>過去の事例の活用</b><span>過去の法令調査の対応事例を活用。</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SCOPE -->
+  <section class="scope" id="scope">
+    <div class="container">
+      <p class="section-label">Coverage</p>
+      <h2 class="section-title">法改正調査は、ここまで対応できます。</h2>
+      <div class="scope-grid">
+        <div class="scope-card">
+          <h3>国内法規制・地方条例・海外法規制まで一括対応</h3>
+          <p>政令・省令・告示・通達や地方条例、海外の法規制を含むものまで一括で対応が可能です。</p>
+        </div>
+        <div class="scope-card">
+          <h3>改正の概要や事業への影響を解説</h3>
+          <p>改正内容を分かりやすく解説したものや、自社事業への影響コメントまで作成します。</p>
+        </div>
+        <div class="scope-card">
+          <h3>公布・施行日別の改正を調査</h3>
+          <p>対象期間内に施行されていない将来の法改正でも、公布された時点で報告できます。</p>
+        </div>
+        <div class="scope-card">
+          <h3>指定ファイルへの反映も可能</h3>
+          <p>エクセル／ワードなど、お客様の既存の管理台帳を更新する形での納品にも対応します。</p>
+        </div>
+      </div>
+      <p class="notes" style="text-align:center;margin-top:22px">法改正は国や自治体の公式サイト（e-Gov等）から最新情報を取得しています。ご要望に応じて、定期的な報告が可能です。</p>
+    </div>
+  </section>
+
+  <!-- USECASES -->
+  <section class="usecase" id="usecase">
+    <div class="container">
+      <p class="section-label">Use Case</p>
+      <h2 class="section-title">こんな調査を、まとめてお任せいただけます。</h2>
+      <div class="uc-grid">
+        <div class="uc-card">
+          <h3>＜個別調査＞設備新設/更新・新製品開発の法令・届出調査</h3>
+          <p>設備の新設・更新における関連法令や届出判断について、国内外の最新の法規制情報からレポートを作成します。</p>
+        </div>
+        <div class="uc-card">
+          <h3>＜定期調査＞定期の改正情報と自社影響調査レポート</h3>
+          <p>指定の対象法規制や既設設備等の情報を元に、法改正情報と事業・製品への影響分析を決まった頻度で配信します。</p>
+        </div>
+        <div class="uc-card">
+          <h3>化学物質・法規制適用判断調査</h3>
+          <p>化学物質名と対象製品からREACH規制等の適用有無や、対象物質の変更による影響を調査・レポート化します。</p>
+        </div>
+        <div class="uc-card">
+          <h3>リスクアセスメント・安全対策レポート</h3>
+          <p>法規制以外に想定される作業リスクや安全対策についての分析レポートを作成します。現場動画と拠点情報から、重大性×頻度×対策可否の観点で拠点別のリスクを評価します。</p>
+        </div>
+      </div>
+      <div class="q-examples">
+        <h4>日々の問い合わせも、その都度お受けします。前提情報をお預かりしているので、工場の実態を踏まえて回答できます。</h4>
+        <ul>
+          <li>「年間2,000トンの木質バイオマスを燃料とするボイラーを導入予定です。この規模に該当する法令は何ですか？」</li>
+          <li>「この化学物質はREACH規制の対象になりますか？」</li>
+          <li>「法改正をまとめて調査できますか？」</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERTS -->
+  <section class="experts" id="experts">
+    <div class="container">
+      <p class="section-label">Expert</p>
+      <h2 class="section-title">EHS実務を歩いてきた専門家が対応します。</h2>
+      <p class="section-lead">専門アシスタントが調査し、経験豊富な専門家の確認を経てレポート化します。（経歴は一例）</p>
+      <div class="e-grid">
+        <div class="e-card">
+          <h3>米国化学会社に38年間在職</h3>
+          <p>製造・環境安全部署での知識と経験を活用。米国化学会社標準に準拠した環境・安全・衛生コンプライアンス監査および監査準備サポート、化学工場の運転・業務管理、社内EHS監査の実施経験。</p>
+        </div>
+        <div class="e-card">
+          <h3>大手ガラス・製薬・石油化学メーカーでEHS業務19年</h3>
+          <p>複数のISO審査機関で環境・労働安全衛生の主任審査員業務に従事。海外拠点のEHS監査、是正処置対応、EHSマネジメントシステムの導入、リスクアセスメント研修の実施経験。</p>
+        </div>
+        <div class="e-card">
+          <h3>外資系製薬メーカーでEHS法規制の順守体制構築</h3>
+          <p>EMS・OHSMSの構築・運用、関連会社等の監査、リスクアセスメント、安全教育等に従事。製薬関係団体のEHS委員会の委員長・副委員長等を歴任。</p>
+        </div>
+        <div class="e-card">
+          <h3>大手電子部品メーカー等で環境・労働安全衛生業務</h3>
+          <p>複数の第三者認証機関で品質・環境・労働安全衛生の主任審査員やCSR監査員業務に従事。化学物質管理やEHS関連の研修講師、監査・コンサルティング業務にも従事。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- NEXT STEPS -->
+  <section class="nextsteps" id="nextsteps">
+    <div class="container">
+      <p class="section-label">Next Step</p>
+      <h2 class="section-title">まずは、アウトプットの実物をご覧ください。</h2>
+      <p class="section-lead">サンプル工場で作成した2つの納品物をお送りします。貴社の拠点・業種にあわせた進め方もご提案します。</p>
+      <div class="ns-grid">
+        <div class="ns-card">
+          <div class="no">01</div>
+          <h3>資料のご確認</h3>
+          <p>「管理必要法令と根拠の解説」「法改正一覧（Excel）」のサンプルをお送りします。</p>
+        </div>
+        <div class="ns-card">
+          <div class="no">02</div>
+          <h3>お打ち合わせ</h3>
+          <p>現在の管理方法と課題を伺い、対象範囲・納品形式をすり合わせます。</p>
+        </div>
+        <div class="ns-card">
+          <div class="no">03</div>
+          <h3>トライアル開始</h3>
+          <p>1拠点・1か月分からお試しいただけます。</p>
+        </div>
+      </div>
+      <div class="ns-cta">
+        <a class="btn btn-accent" href="#cta" data-tab="trial">無料トライアルに申し込む</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA FORMS -->
+  <section class="cta" id="cta">
+    <div class="container">
+      <p class="section-label">Contact</p>
+      <h2 class="section-title">お気軽にお問い合わせください</h2>
+      <div class="cta-tabs" role="tablist">
+        <button class="cta-tab active" type="button" data-panel="download" role="tab" aria-selected="true">資料ダウンロード</button>
+        <button class="cta-tab" type="button" data-panel="trial" role="tab" aria-selected="false">無料トライアル</button>
+        <button class="cta-tab" type="button" data-panel="contact" role="tab" aria-selected="false">お問い合わせ</button>
+      </div>
+      <div class="cta-panels">
+        <div class="cta-panel active" id="panel-download" role="tabpanel">
+          <h3>サービス資料ダウンロード</h3>
+          <p class="desc">Cayzen EHS Researchのサービス資料をダウンロードいただけます。フォーム送信後、資料をご案内します。</p>
+          <div class="hs-form-frame" id="hs-form-download"></div>
+        </div>
+        <div class="cta-panel" id="panel-trial" role="tabpanel">
+          <h3>無料トライアルのお申し込み</h3>
+          <p class="desc">1拠点・1か月分からお試しいただけます。フォーム送信後、担当者よりご連絡します。</p>
+          <div class="hs-form-frame" id="hs-form-trial"></div>
+        </div>
+        <div class="cta-panel" id="panel-contact" role="tabpanel">
+          <h3>お問い合わせ</h3>
+          <p class="desc">サービス内容・お見積り・個別のご相談など、お気軽にお問い合わせください。</p>
+          <div class="hs-form-frame" id="hs-form-contact"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- COMPANY -->
+  <section class="company" id="company">
+    <div class="container">
+      <p class="section-label">Company</p>
+      <h2 class="section-title">会社概要</h2>
+      <div class="table-scroll">
+        <table>
+          <tr><th>商号</th><td>エイトス株式会社</td></tr>
+          <tr><th>代表取締役</th><td>嶋田　亘</td></tr>
+          <tr><th>本社所在地</th><td>愛知県豊田市小坂本町1-5-5　YAMATO BLDG2F</td></tr>
+          <tr><th>設立日</th><td>2019年9月20日</td></tr>
+          <tr><th>資本金</th><td>8,546万円</td></tr>
+          <tr><th>事業内容</th><td>リモートアシスタント等の人材事業運営／システム開発受託／クラウドサービス開発・運営</td></tr>
+          <tr><th>認定・パートナー</th><td>J-Startup CENTRAL／SAP Partner</td></tr>
+        </table>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="container footer-inner">
+    <div class="footer-logo"><img src="assets/logo.png" alt="Cayzen EHS Research"></div>
+    <p>エイトス株式会社｜愛知県豊田市小坂本町1-5-5 YAMATO BLDG2F</p>
+    <p class="copy">© Eitoss Inc. All rights reserved.</p>
+  </div>
+</footer>
+
+<!-- HubSpot Forms -->
+<script charset="utf-8" type="text/javascript" src="https://js-na2.hsforms.net/forms/embed/v2.js"></script>
+<script>
+  hbspt.forms.create({
+    portalId: "8170895",
+    formId: "9af5e0d3-f32b-430f-a647-c4b3a56c343c",
+    region: "na2",
+    target: "#hs-form-download"
+  });
+  hbspt.forms.create({
+    portalId: "8170895",
+    formId: "5904d153-0e87-4de7-879a-18804b9ea649",
+    region: "na2",
+    target: "#hs-form-trial"
+  });
+  hbspt.forms.create({
+    portalId: "8170895",
+    formId: "de61c417-f176-4c76-af10-c59923cdfd79",
+    region: "na2",
+    target: "#hs-form-contact"
+  });
+</script>
+
+<script>
+(function(){
+  var tabs = document.querySelectorAll('.cta-tab');
+  var panels = document.querySelectorAll('.cta-panel');
+
+  function activate(name){
+    tabs.forEach(function(t){
+      var on = t.dataset.panel === name;
+      t.classList.toggle('active', on);
+      t.setAttribute('aria-selected', on ? 'true' : 'false');
+    });
+    panels.forEach(function(p){
+      p.classList.toggle('active', p.id === 'panel-' + name);
+    });
+  }
+
+  tabs.forEach(function(t){
+    t.addEventListener('click', function(){ activate(t.dataset.panel); });
+  });
+
+  // ヘッダー・本文のCTAリンク（data-tab属性つき）はCTAセクションへ移動しつつ該当タブを開く
+  document.querySelectorAll('a[data-tab]').forEach(function(a){
+    a.addEventListener('click', function(){ activate(a.dataset.tab); });
+  });
+
+  // #download / #trial / #contact の直接リンクにも対応
+  function handleHash(){
+    var h = location.hash.replace('#','');
+    if(['download','trial','contact'].indexOf(h) >= 0){
+      activate(h);
+      document.getElementById('cta').scrollIntoView();
+    }
+  }
+  window.addEventListener('hashchange', handleHash);
+  handleHash();
+})();
+</script>
+
+</body>
+</html>
