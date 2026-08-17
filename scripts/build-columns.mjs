@@ -26,13 +26,39 @@ const fmtDate = iso => {
 };
 const catOf = a => Array.isArray(a.category) ? a.category[0] : (a.category || '');
 
+const sleep = ms => new Promise(r => setTimeout(r, ms));
+
+async function fetchPage(offset) {
+  const url = `https://${SERVICE_ID}.microcms.io/api/v1/${ENDPOINT}?limit=100&offset=${offset}&orders=-publishedAt`;
+  let lastErr;
+  for (let attempt = 1; attempt <= 3; attempt++) {
+    try {
+      const res = await fetch(url, { headers: { 'X-MICROCMS-API-KEY': API_KEY } });
+      if (res.ok) return res.json();
+      const body = await res.text();
+      if (res.status === 401 || res.status === 403) {
+        throw new Error(`microCMS APIキーが拒否されました(${res.status})。VercelのMICROCMS_API_KEYが正しいコンテンツAPIキーか確認してください。`);
+      }
+      if (res.status === 404) {
+        throw new Error(`APIが見つかりません(404)。microCMSにエンドポイント「${ENDPOINT}」（リスト形式）が存在するか確認してください。`);
+      }
+      lastErr = new Error(`microCMS API ${res.status}: ${body.slice(0, 200)}`);
+    } catch (e) {
+      if (/APIキー|エンドポイント/.test(e.message)) throw e; // 設定ミスはリトライしない
+      lastErr = e;
+    }
+    if (attempt < 3) {
+      console.warn(`[build-columns] 取得失敗(${attempt}回目)、リトライします: ${lastErr.message}`);
+      await sleep(attempt * 2000);
+    }
+  }
+  throw lastErr;
+}
+
 async function fetchAll() {
   const items = [];
   for (let offset = 0; ; offset += 100) {
-    const url = `https://${SERVICE_ID}.microcms.io/api/v1/${ENDPOINT}?limit=100&offset=${offset}&orders=-publishedAt`;
-    const res = await fetch(url, { headers: { 'X-MICROCMS-API-KEY': API_KEY } });
-    if (!res.ok) throw new Error(`microCMS API ${res.status}: ${await res.text()}`);
-    const data = await res.json();
+    const data = await fetchPage(offset);
     items.push(...data.contents);
     if (items.length >= data.totalCount || data.contents.length === 0) break;
   }
