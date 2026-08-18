@@ -34,20 +34,19 @@ HubSpot Forms (portalId: 8170895 / region: na2) を埋め込んでいます。
 
 コラムは microCMS（サービスID: `eitoss`）で記事を管理し、ビルド時に `scripts/build-columns.mjs` が `/column/` 配下の静的HTMLを生成します（生成物はコミットしない。`.gitignore`済み）。
 
-### microCMS側のAPI設定
+### microCMS側のAPI設定（設定済み・ブログテンプレート）
 
-- API名: コラム ／ エンドポイント: `columns` ／ 型: リスト形式
-- フィールド（フィールドIDは完全一致で作成すること）:
+- エンドポイント: `blogs`（ブログテンプレートで作成済み。変更する場合は環境変数 `MICROCMS_ENDPOINT` で指定）
+- 利用フィールド:
 
-| フィールドID | 表示名 | 種類 | 必須 |
-|---|---|---|---|
-| `title` | タイトル | テキストフィールド | ○ |
-| `description` | 概要（一覧・meta description用） | テキストエリア | ○ |
-| `eyecatch` | アイキャッチ画像 | 画像 | − |
-| `category` | カテゴリ | セレクトフィールド | − |
-| `body` | 本文 | リッチエディタ | ○ |
+| フィールドID | 内容 | 備考 |
+|---|---|---|
+| `title` | タイトル | 必須 |
+| `content` | 本文（リッチエディタ） | 独自スキーマの`body`にも対応 |
+| `eyecatch` | アイキャッチ画像 | 任意 |
+| `category` | カテゴリ | 参照型（categories API）・セレクト型どちらも対応 |
 
-- カテゴリの選択肢（推奨）: `環境・労働安全衛生（EHS）` / `ISO` / `ナレッジマネジメント` / `お知らせ`
+- 概要文（一覧・meta description）は本文から自動生成されます。`description`フィールドを追加すればそちらが優先されます
 - 記事URLのスラッグには microCMS の「コンテンツID」がそのまま使われます（例: コンテンツID `ehs-law-2026-1h` → `/column/ehs-law-2026-1h/`）。公開前にコンテンツIDを英数字に編集してください。
 
 ### Vercel側の設定

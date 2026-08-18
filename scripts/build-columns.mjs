@@ -7,7 +7,7 @@
 //   MICROCMS_API_KEY    … コンテンツAPIキー（必須。Vercelの環境変数に設定）
 //   SITE_ORIGIN         … canonical用オリジン（既定: https://eitoss.com）
 
-import { mkdir, writeFile } from 'node:fs/promises';
+import { mkdir, writeFile, rm } from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 
@@ -15,7 +15,7 @@ const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const SERVICE_ID = process.env.MICROCMS_SERVICE_ID || 'eitoss';
 const API_KEY = process.env.MICROCMS_API_KEY || '';
 const ORIGIN = (process.env.SITE_ORIGIN || 'https://eitoss.com').replace(/\/$/, '');
-const ENDPOINT = 'columns';
+const ENDPOINT = process.env.MICROCMS_ENDPOINT || 'blogs';
 const USE_SAMPLE = process.argv.includes('--sample');
 
 const esc = s => String(s ?? '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
@@ -24,7 +24,20 @@ const fmtDate = iso => {
   const d = new Date(iso);
   return `${d.getFullYear()}.${String(d.getMonth() + 1).padStart(2, '0')}.${String(d.getDate()).padStart(2, '0')}`;
 };
-const catOf = a => Array.isArray(a.category) ? a.category[0] : (a.category || '');
+// category: セレクト(文字列/配列)・参照(オブジェクト)のどちらでも対応
+const catOf = a => {
+  const c = Array.isArray(a.category) ? a.category[0] : a.category;
+  if (!c) return '';
+  return typeof c === 'object' ? (c.name || '') : String(c);
+};
+// 本文: ブログテンプレートは content、独自スキーマは body
+const bodyOf = a => a.body || a.content || '';
+// 概要: descriptionフィールドがなければ本文から自動生成
+const descOf = a => {
+  if (a.description) return a.description;
+  const text = bodyOf(a).replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim();
+  return text.length > 90 ? text.slice(0, 90) + '…' : text;
+};
 
 const sleep = ms => new Promise(r => setTimeout(r, ms));
 
@@ -248,7 +261,7 @@ function listPage(articles) {
         <div class="body">
           <div class="meta">${cat ? `<span class="chip">${esc(cat)}</span>` : ''}<time datetime="${esc(a.publishedAt || '')}">${fmtDate(a.publishedAt)}</time></div>
           <h2>${esc(a.title)}</h2>
-          ${a.description ? `<p class="desc">${esc(a.description)}</p>` : ''}
+          ${descOf(a) ? `<p class="desc">${esc(descOf(a))}</p>` : ''}
         </div>
       </a>`;
   }).join('\n');
@@ -290,7 +303,7 @@ function articlePage(a) {
     <article class="post">
       ${a.eyecatch?.url ? `<div class="post-eyecatch"><img src="${esc(a.eyecatch.url)}?w=1280&fm=webp" alt=""></div>` : ''}
       <div class="article-body">
-${a.body || ''}
+${bodyOf(a)}
       </div>
       <div class="post-cta">
         <h2>法令対応・現場改善のご相談はエイトスへ</h2>
@@ -307,7 +320,7 @@ ${a.body || ''}
 
   return chrome(2, body, {
     title: `${a.title} - コラム｜エイトス株式会社`,
-    description: a.description || `${a.title}｜エイトス株式会社のコラム`,
+    description: descOf(a) || `${a.title}｜エイトス株式会社のコラム`,
     canonicalPath: `/column/${a.id}/`,
     ogType: 'article',
   });
@@ -326,6 +339,7 @@ if (USE_SAMPLE) {
   console.log(`[build-columns] microCMSから ${articles.length} 件取得`);
 }
 
+await rm(path.join(ROOT, 'column'), { recursive: true, force: true });
 await mkdir(path.join(ROOT, 'column'), { recursive: true });
 await writeFile(path.join(ROOT, 'column', 'index.html'), listPage(articles));
 for (const a of articles) {
