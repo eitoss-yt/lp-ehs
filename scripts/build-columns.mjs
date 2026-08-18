@@ -5,7 +5,7 @@
 // 環境変数:
 //   MICROCMS_SERVICE_ID … サービスID（既定: eitoss）
 //   MICROCMS_API_KEY    … コンテンツAPIキー（必須。Vercelの環境変数に設定）
-//   SITE_ORIGIN         … canonical用オリジン（既定: https://eitoss-com-1.vercel.app）
+//   SITE_ORIGIN         … canonical用オリジン（既定: https://eitoss.com）
 
 import { mkdir, writeFile } from 'node:fs/promises';
 import path from 'node:path';
@@ -14,7 +14,7 @@ import { fileURLToPath } from 'node:url';
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const SERVICE_ID = process.env.MICROCMS_SERVICE_ID || 'eitoss';
 const API_KEY = process.env.MICROCMS_API_KEY || '';
-const ORIGIN = (process.env.SITE_ORIGIN || 'https://eitoss-com-1.vercel.app').replace(/\/$/, '');
+const ORIGIN = (process.env.SITE_ORIGIN || 'https://eitoss.com').replace(/\/$/, '');
 const ENDPOINT = 'columns';
 const USE_SAMPLE = process.argv.includes('--sample');
 
