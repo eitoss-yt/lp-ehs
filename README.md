@@ -1,11 +1,22 @@
-# Cayzen EHS Research サービスLP
+# エイトス株式会社 Webサイト
 
-エイトス株式会社のEHS法令・規制調査代行サービス「Cayzen EHS Research」のランディングページです。
+コーポレートTOPページと、Cayzenシリーズ2サービスのランディングページです。
 
 ## 構成
 
-- `index.html` — LP本体（CSS・JS同梱の単一ファイル）
-- `assets/logo.png` — サービスロゴ
+- `index.html` — コーポレートTOPページ（公開URL: `/`。2サービスへの入口・ニュース・ビジョン・会社概要・問い合わせ）
+- `cayzen/ehsresearch/index.html` — Cayzen EHS Research LP（公開URL: `/cayzen/ehsresearch/`）
+- `cayzen/ehsresearch/assets/` — 同LP用の画像（ロゴ・導入企業ロゴ・イラスト）
+- `cayzen/knowledgemanagement/index.html` — Cayzen ナレッジマネジメントLP（公開URL: `/cayzen/knowledgemanagement/`）
+- `cayzen/knowledgemanagement/assets/` — 同LP用の画像（プロダクト画面・導入企業ロゴ）
+- `cayzen/iso/index.html` — Cayzen ISOサポートLP（公開URL: `/cayzen/iso/`）
+- `assets/` — TOPページ用の画像（導入企業ロゴ・サービスカードのサムネイル）
+
+導入企業ロゴを追加する際は、各ページの `assets/` に画像を置いて `.logo-track` に `<li>` を追記してください。
+
+## ファーストビュー
+
+2カラム構成（左: コピー+CTA / 右: YouTube動画）。動画は仮で `https://youtu.be/iRCrhDVNWnI` を埋め込み中。完成版に差し替える際は `index.html` 内の `youtube.com/embed/iRCrhDVNWnI` のID部分を変更してください。
 
 ## CTA（HubSpotフォーム）
 
@@ -19,6 +30,38 @@ HubSpot Forms (portalId: 8170895 / region: na2) を埋め込んでいます。
 
 `#download` / `#trial` / `#contact` のURLハッシュで各タブを直接開けます（例: `index.html#trial`）。
 
+## コラム（microCMS連携）
+
+コラムは microCMS（サービスID: `eitoss`）で記事を管理し、ビルド時に `scripts/build-columns.mjs` が `/column/` 配下の静的HTMLを生成します（生成物はコミットしない。`.gitignore`済み）。
+
+### microCMS側のAPI設定（設定済み・ブログテンプレート）
+
+- エンドポイント: `blogs`（ブログテンプレートで作成済み。変更する場合は環境変数 `MICROCMS_ENDPOINT` で指定）
+- 利用フィールド:
+
+| フィールドID | 内容 | 備考 |
+|---|---|---|
+| `title` | タイトル | 必須 |
+| `content` | 本文（リッチエディタ） | 独自スキーマの`body`にも対応 |
+| `eyecatch` | アイキャッチ画像 | 任意 |
+| `category` | カテゴリ | 参照型（categories API）・セレクト型どちらも対応 |
+
+- 概要文（一覧・meta description）は本文から自動生成されます。`description`フィールドを追加すればそちらが優先されます
+- 記事URLのスラッグには microCMS の「コンテンツID」がそのまま使われます（例: コンテンツID `ehs-law-2026-1h` → `/column/ehs-law-2026-1h/`）。公開前にコンテンツIDを英数字に編集してください。
+
+### Vercel側の設定
+
+1. 環境変数 `MICROCMS_API_KEY` に microCMS のコンテンツAPIキー（管理画面 > 権限管理 > APIキー）を設定
+2. `vercel.json` の `buildCommand` でビルド時に記事を取得（設定済み）
+3. Vercelの Settings > Git > Deploy Hooks でフックURLを作成し、microCMSの API設定 > Webhook（カスタム通知）に登録 → 記事の公開・更新・削除で自動再デプロイ
+
+### ローカル確認
+
+```
+node scripts/build-columns.mjs --sample   # サンプル記事でプレビュー
+MICROCMS_API_KEY=xxx node scripts/build-columns.mjs   # 本番データで生成
+```
+
 ## 公開方法
 
-静的ファイルのみで動作します。GitHub Pages・Netlify・Vercel等にそのまま配置してください。
+静的ファイルのみで動作します。Vercelに接続すると `vercel.json` の設定でコラムのビルドまで自動で行われます（コラム以外は静的ファイルのまま）。
