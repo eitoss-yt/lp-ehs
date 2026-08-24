@@ -29,7 +29,7 @@
   --accent:#e8a13d;
 }
 *{margin:0;padding:0;box-sizing:border-box}
-html{scroll-behavior:smooth;scroll-padding-top:84px}
+html{scroll-behavior:smooth;scroll-padding-top:130px}
 body{font-family:"Noto Sans JP",sans-serif;color:var(--ink);line-height:1.8;background:var(--white);-webkit-font-smoothing:antialiased}
 img{max-width:100%;height:auto;display:block}
 a{color:var(--teal-700);text-decoration:none}
@@ -64,7 +64,7 @@ header{position:fixed;top:0;left:0;right:0;background:rgba(255,255,255,.94);back
 .header-nav .nav-links a:hover{color:var(--teal-700)}
 
 /* hero */
-.hero{position:relative;padding:112px 0 70px;background:
+.hero{position:relative;padding:150px 0 70px;background:
   radial-gradient(1100px 500px at 85% -10%,rgba(128,192,200,.30),transparent 60%),
   radial-gradient(900px 480px at -10% 110%,rgba(48,128,152,.16),transparent 60%),
   linear-gradient(180deg,#f6fafb 0%,#eef6f7 100%);overflow:hidden}
@@ -247,7 +247,7 @@ html.hero-go .hd6{transition-delay:.68s}
   .hero-awards .aw-sap{height:44px}
   .hero-awards .aw-seizodx{height:32px}
   .hero h1{font-size:28px}
-  .hero{padding:100px 0 60px}
+  .hero{padding:120px 0 60px}
   .hero-shots{min-height:0;display:flex;flex-direction:column;gap:16px}
   .hero-shots .shot{position:static;width:100%}
   .hero-shots .shot-sub{border:none}
@@ -263,29 +263,75 @@ html.hero-go .hd6{transition-delay:.68s}
   .clients-band{padding:32px 0 26px}
   .logo-track li{margin-right:48px}
 }
+
+/* ===== 共通ヘッダー ===== */
+header.gh{position:fixed;top:0;left:0;right:0;background:rgba(255,255,255,.96);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);z-index:100}
+.gh-inner{display:flex;justify-content:space-between;align-items:center;gap:24px;max-width:1360px;margin:0 auto;padding:10px 24px}
+.gh-left{display:flex;flex-direction:column;gap:7px;align-items:flex-start}
+.gh-brand img{height:32px;width:auto;display:block}
+.gh-nav{display:flex;align-items:center;gap:26px;font-size:14.5px;font-weight:700}
+.gh-nav a,.gh-dd-label{color:#1c1c1c;white-space:nowrap;cursor:pointer}
+.gh-nav a:hover,.gh-dd:hover .gh-dd-label{color:var(--teal-700)}
+.gh-dd{position:relative}
+.gh-dd-label::after{content:" ▾";font-size:11px}
+.gh-dd-menu{display:none;position:absolute;top:100%;left:-14px;padding-top:12px;z-index:110}
+.gh-dd:hover .gh-dd-menu{display:block}
+.gh-dd-menu .in{background:#fff;border-radius:10px;box-shadow:0 12px 32px rgba(16,104,120,.18);padding:8px;min-width:280px}
+.gh-dd-menu a{display:block;padding:10px 14px;border-radius:8px;font-size:14px;white-space:nowrap}
+.gh-dd-menu a:hover{background:var(--teal-050)}
+.gh-right{display:flex;flex-direction:column;align-items:flex-end;gap:7px}
+.gh-tel{font-size:12.5px;color:#333;white-space:nowrap;line-height:1.3;display:flex;align-items:baseline;gap:6px}
+.gh-tel b{font-size:21px;font-weight:900;letter-spacing:.01em;font-family:"Poppins","Noto Sans JP",sans-serif}
+.gh-tel span{color:#555}
+.gh-actions{display:flex;gap:10px}
+.gh-btn{display:inline-flex;align-items:center;gap:7px;padding:10px 20px;border-radius:6px;color:#fff;font-weight:700;font-size:14px;white-space:nowrap;transition:transform .15s ease,filter .15s ease;box-shadow:0 3px 10px rgba(0,0,0,.14)}
+.gh-btn:hover{transform:translateY(-1px);filter:brightness(1.06)}
+.gh-btn svg{width:16px;height:16px}
+.gh-btn-dl{background:#f6941c}
+.gh-btn-tr{background:linear-gradient(90deg,#54a4ec,#2e7fd6)}
+.gh-btn-ct{background:#45a3b4}
+@media(max-width:1180px){.gh-nav{gap:18px;font-size:13.5px}}
+@media(max-width:1020px){.gh-nav{display:none}.gh-tel{display:none}.gh-left{flex-direction:row;align-items:center}}
+@media(max-width:640px){
+  .gh-inner{padding:10px 14px;gap:10px}
+  .gh-brand img{height:26px}
+  .gh-btn{padding:8px 10px;font-size:12px;gap:5px}
+  .gh-btn svg{width:14px;height:14px}
+  .gh-actions{gap:6px}
+}
 </style>
 </head>
 <body>
 <script>document.documentElement.classList.add('js');</script>
 
-<header>
-  <div class="header-inner">
-    <a class="brand header-brand" href="#top" aria-label="Cayzen ナレッジマネジメント">
-      <svg width="30" height="30" viewBox="0 0 100 100" aria-hidden="true"><path d="M50 8 a42 42 0 1 0 29.7 12.3 l-12.7 12.7 a24 24 0 1 1 -17 -7 z" fill="#106878"/></svg>
-      <span class="t"><span class="co">Cayzen</span><span class="sv">ナレッジマネジメント</span></span>
-    </a>
-    <nav class="header-nav">
-      <div class="nav-links">
-        <a href="#features">できること</a>
-        <a href="#ai">AIレポート</a>
-        <a href="#ehs">EHS対応</a>
-        <a href="#usecase">活用シーン</a>
-        <a href="#steps">導入の流れ</a>
-        <a href="#pricing">料金</a>
+<header class="gh">
+  <div class="gh-inner">
+    <div class="gh-left">
+      <a class="gh-brand" href="../../" aria-label="エイトス株式会社"><img src="../../assets/logo-corporate-horizontal-tagline@2x.png" alt="eitoss - Innovation by All"></a>
+      <nav class="gh-nav">
+        <div class="gh-dd">
+          <span class="gh-dd-label">活用シーン</span>
+          <div class="gh-dd-menu"><div class="in">
+          <a href="../ehsresearch/">Cayzen EHS Research（EHS法令調査代行）</a>
+          <a href="./">Cayzen ナレッジマネジメント（SaaS）</a>
+          <a href="../iso/">ISO支援</a>
+          </div></div>
+        </div>
+        <a href="https://eitoss.com/seminar">セミナー</a>
+        <a href="../../column/">コラム</a>
+        <a href="../../#news">ニュース</a>
+        <a href="#company">会社概要</a>
+        <a href="https://eitoss.com/recruit">採用情報</a>
+      </nav>
+    </div>
+    <div class="gh-right">
+      <p class="gh-tel">TEL: <b>050-8881-9881</b><span>（平日10:00〜19:00）</span></p>
+      <div class="gh-actions">
+        <a class="gh-btn gh-btn-dl" href="#cta" data-tab="download"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h9l4 4v14H6z"/><path d="M15 3v4h4M9 12h6M9 16h6"/></svg> 資料請求</a>
+        <a class="gh-btn gh-btn-tr" href="#cta" data-tab="trial"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h10M4 12h10M4 18h7"/><path d="M17 16l2 2 4-4"/></svg> トライアル</a>
+        <a class="gh-btn gh-btn-ct" href="#cta" data-tab="contact"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg> お問合せ</a>
       </div>
-      <a class="btn btn-ghost btn-sm" href="#cta" data-tab="download">資料ダウンロード</a>
-      <a class="btn btn-primary btn-sm" href="#cta" data-tab="trial">無料トライアル</a>
-    </nav>
+    </div>
   </div>
 </header>
 
