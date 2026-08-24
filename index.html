@@ -29,7 +29,7 @@
   --accent:#e8a13d;
 }
 *{margin:0;padding:0;box-sizing:border-box}
-html{scroll-behavior:smooth;scroll-padding-top:84px}
+html{scroll-behavior:smooth;scroll-padding-top:130px}
 body{font-family:"Noto Sans JP",sans-serif;color:var(--ink);line-height:1.8;background:var(--white);-webkit-font-smoothing:antialiased}
 img{max-width:100%;height:auto;display:block}
 a{color:var(--teal-700);text-decoration:none}
@@ -63,7 +63,7 @@ header{position:fixed;top:0;left:0;right:0;background:rgba(255,255,255,.94);back
 .header-nav .nav-links a:hover{color:var(--teal-700)}
 
 /* hero */
-.hero{position:relative;padding:170px 0 110px;background:linear-gradient(180deg,rgba(8,28,40,.42),rgba(8,28,40,.58)),url(assets/hero-bg.jpg) center/cover no-repeat;overflow:hidden;text-align:center}
+.hero{position:relative;padding:200px 0 110px;background:linear-gradient(180deg,rgba(8,28,40,.42),rgba(8,28,40,.58)),url(assets/hero-bg.jpg) center/cover no-repeat;overflow:hidden;text-align:center}
 .hero h1{font-size:42px;font-weight:900;line-height:1.6;letter-spacing:.02em;color:#fff;text-shadow:0 2px 18px rgba(4,20,28,.45)}
 .hero h1 .em{color:var(--teal-100)}
 .hero-sub{max-width:680px;margin:24px auto 36px;color:rgba(255,255,255,.88);font-size:15.5px;text-shadow:0 1px 12px rgba(4,20,28,.5)}
@@ -151,7 +151,7 @@ html.hero-go .hd2{transition-delay:.26s}
 @media(max-width:900px){
   .sv-grid{grid-template-columns:1fr}
   .hero h1{font-size:29px}
-  .hero{padding:130px 0 80px}
+  .hero{padding:120px 0 70px}
   .section-title{font-size:24px}
   section{padding:60px 0}
   .header-nav .nav-links{display:none}
@@ -163,26 +163,75 @@ html.hero-go .hd2{transition-delay:.26s}
   .clients-band{padding:32px 0 26px}
   .logo-track li{margin-right:48px}
 }
+
+/* ===== 共通ヘッダー ===== */
+header.gh{position:fixed;top:0;left:0;right:0;background:rgba(255,255,255,.96);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);z-index:100}
+.gh-inner{display:flex;justify-content:space-between;align-items:center;gap:24px;max-width:1360px;margin:0 auto;padding:10px 24px}
+.gh-left{display:flex;flex-direction:column;gap:7px;align-items:flex-start}
+.gh-brand img{height:32px;width:auto;display:block}
+.gh-nav{display:flex;align-items:center;gap:26px;font-size:14.5px;font-weight:700}
+.gh-nav a,.gh-dd-label{color:#1c1c1c;white-space:nowrap;cursor:pointer}
+.gh-nav a:hover,.gh-dd:hover .gh-dd-label{color:var(--teal-700)}
+.gh-dd{position:relative}
+.gh-dd-label::after{content:" ▾";font-size:11px}
+.gh-dd-menu{display:none;position:absolute;top:100%;left:-14px;padding-top:12px;z-index:110}
+.gh-dd:hover .gh-dd-menu{display:block}
+.gh-dd-menu .in{background:#fff;border-radius:10px;box-shadow:0 12px 32px rgba(16,104,120,.18);padding:8px;min-width:280px}
+.gh-dd-menu a{display:block;padding:10px 14px;border-radius:8px;font-size:14px;white-space:nowrap}
+.gh-dd-menu a:hover{background:var(--teal-050)}
+.gh-right{display:flex;flex-direction:column;align-items:flex-end;gap:7px}
+.gh-tel{font-size:12.5px;color:#333;white-space:nowrap;line-height:1.3;display:flex;align-items:baseline;gap:6px}
+.gh-tel b{font-size:21px;font-weight:900;letter-spacing:.01em;font-family:"Poppins","Noto Sans JP",sans-serif}
+.gh-tel span{color:#555}
+.gh-actions{display:flex;gap:10px}
+.gh-btn{display:inline-flex;align-items:center;gap:7px;padding:10px 20px;border-radius:6px;color:#fff;font-weight:700;font-size:14px;white-space:nowrap;transition:transform .15s ease,filter .15s ease;box-shadow:0 3px 10px rgba(0,0,0,.14)}
+.gh-btn:hover{transform:translateY(-1px);filter:brightness(1.06)}
+.gh-btn svg{width:16px;height:16px}
+.gh-btn-dl{background:#f6941c}
+.gh-btn-tr{background:linear-gradient(90deg,#54a4ec,#2e7fd6)}
+.gh-btn-ct{background:#45a3b4}
+@media(max-width:1180px){.gh-nav{gap:18px;font-size:13.5px}}
+@media(max-width:1020px){.gh-nav{display:none}.gh-tel{display:none}.gh-left{flex-direction:row;align-items:center}}
+@media(max-width:640px){
+  .gh-inner{padding:10px 14px;gap:10px}
+  .gh-brand img{height:26px}
+  .gh-btn{padding:8px 10px;font-size:12px;gap:5px}
+  .gh-btn svg{width:14px;height:14px}
+  .gh-actions{gap:6px}
+}
 </style>
 </head>
 <body>
 <script>document.documentElement.classList.add('js');</script>
 
-<header>
-  <div class="header-inner">
-    <a class="header-brand" href="#top" aria-label="エイトス株式会社">
-      <img src="assets/logo-corporate-horizontal-tagline@2x.png" alt="eitoss - Innovation by All">
-    </a>
-    <nav class="header-nav">
-      <div class="nav-links">
-        <a href="#services">サービス</a>
+<header class="gh">
+  <div class="gh-inner">
+    <div class="gh-left">
+      <a class="gh-brand" href="./" aria-label="エイトス株式会社"><img src="assets/logo-corporate-horizontal-tagline@2x.png" alt="eitoss - Innovation by All"></a>
+      <nav class="gh-nav">
+        <div class="gh-dd">
+          <span class="gh-dd-label">活用シーン</span>
+          <div class="gh-dd-menu"><div class="in">
+          <a href="cayzen/ehsresearch/">Cayzen EHS Research（EHS法令調査代行）</a>
+          <a href="cayzen/knowledgemanagement/">Cayzen ナレッジマネジメント（SaaS）</a>
+          <a href="cayzen/iso/">ISO支援</a>
+          </div></div>
+        </div>
+        <a href="https://eitoss.com/seminar">セミナー</a>
         <a href="column/">コラム</a>
         <a href="#news">ニュース</a>
-        <a href="#vision">ビジョン</a>
         <a href="#company">会社概要</a>
+        <a href="https://eitoss.com/recruit">採用情報</a>
+      </nav>
+    </div>
+    <div class="gh-right">
+      <p class="gh-tel">TEL: <b>050-8881-9881</b><span>（平日10:00〜19:00）</span></p>
+      <div class="gh-actions">
+        <a class="gh-btn gh-btn-dl" href="cayzen/ehsresearch/#download"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h9l4 4v14H6z"/><path d="M15 3v4h4M9 12h6M9 16h6"/></svg> 資料請求</a>
+        <a class="gh-btn gh-btn-tr" href="cayzen/ehsresearch/#trial"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h10M4 12h10M4 18h7"/><path d="M17 16l2 2 4-4"/></svg> トライアル</a>
+        <a class="gh-btn gh-btn-ct" href="#contact"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg> お問合せ</a>
       </div>
-      <a class="btn btn-primary btn-sm" href="#contact">お問い合わせ</a>
-    </nav>
+    </div>
   </div>
 </header>
 
