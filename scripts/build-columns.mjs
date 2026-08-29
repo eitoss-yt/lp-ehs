@@ -363,7 +363,7 @@ function articlePage(a) {
 <main class="section">
   <div class="container">
     <article class="post">
-      ${a.eyecatch?.url ? `<div class="post-eyecatch"><img src="${esc(a.eyecatch.url)}?w=1280&fm=webp" alt=""></div>` : ''}
+      ${a.eyecatch?.url && !bodyOf(a).trimStart().startsWith('<img') ? `<div class="post-eyecatch"><img src="${esc(a.eyecatch.url)}?w=1280&fm=webp" alt=""></div>` : ''}
       <div class="article-body">
 ${bodyOf(a)}
       </div>
