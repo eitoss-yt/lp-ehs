@@ -1,4 +1,276 @@
 {
   "buildCommand": "node scripts/build-columns.mjs",
-  "outputDirectory": "."
+  "outputDirectory": ".",
+  "redirects": [
+    {
+      "source": "/article",
+      "destination": "/column/",
+      "permanent": true
+    },
+    {
+      "source": "/article/1OgQHDhx",
+      "destination": "/column/1ogqhdhx/",
+      "permanent": true
+    },
+    {
+      "source": "/article/202604-mixed-work-safety-law-revision-employer-obligations",
+      "destination": "/column/202604-mixed-work-safety-law-revision-employer-obl/",
+      "permanent": true
+    },
+    {
+      "source": "/article/27oCFxCz",
+      "destination": "/column/27ocfxcz/",
+      "permanent": true
+    },
+    {
+      "source": "/article/2BYZzapM",
+      "destination": "/column/2byzzapm/",
+      "permanent": true
+    },
+    {
+      "source": "/article/2H-X8Be9",
+      "destination": "/column/2h-x8be9/",
+      "permanent": true
+    },
+    {
+      "source": "/article/2UTikaV-",
+      "destination": "/column/2utikav/",
+      "permanent": true
+    },
+    {
+      "source": "/article/3DSGUvWU",
+      "destination": "/column/3dsguvwu/",
+      "permanent": true
+    },
+    {
+      "source": "/article/3kjUEnPk",
+      "destination": "/column/3kjuenpk/",
+      "permanent": true
+    },
+    {
+      "source": "/article/4sRV3qgC",
+      "destination": "/column/4srv3qgc/",
+      "permanent": true
+    },
+    {
+      "source": "/article/7BXjKAVX",
+      "destination": "/column/7bxjkavx/",
+      "permanent": true
+    },
+    {
+      "source": "/article/8IolYmnJ",
+      "destination": "/column/8iolymnj/",
+      "permanent": true
+    },
+    {
+      "source": "/article/ADYCDZQc",
+      "destination": "/column/adycdzqc/",
+      "permanent": true
+    },
+    {
+      "source": "/article/AGV",
+      "destination": "/column/agv/",
+      "permanent": true
+    },
+    {
+      "source": "/article/BCHFi29E",
+      "destination": "/column/bchfi29e/",
+      "permanent": true
+    },
+    {
+      "source": "/article/BCP",
+      "destination": "/column/bcp/",
+      "permanent": true
+    },
+    {
+      "source": "/article/BwvBtcrk",
+      "destination": "/column/bwvbtcrk/",
+      "permanent": true
+    },
+    {
+      "source": "/article/CSR",
+      "destination": "/column/csr/",
+      "permanent": true
+    },
+    {
+      "source": "/article/Df8LGC2p",
+      "destination": "/column/df8lgc2p/",
+      "permanent": true
+    },
+    {
+      "source": "/article/HW-RCRM_",
+      "destination": "/column/hw-rcrm/",
+      "permanent": true
+    },
+    {
+      "source": "/article/IhdaVNij",
+      "destination": "/column/ihdavnij/",
+      "permanent": true
+    },
+    {
+      "source": "/article/ItewbeRI",
+      "destination": "/column/itewberi/",
+      "permanent": true
+    },
+    {
+      "source": "/article/Krwl9PcF",
+      "destination": "/column/krwl9pcf/",
+      "permanent": true
+    },
+    {
+      "source": "/article/Lea8W_08",
+      "destination": "/column/lea8w_08/",
+      "permanent": true
+    },
+    {
+      "source": "/article/M5yw96hx",
+      "destination": "/column/m5yw96hx/",
+      "permanent": true
+    },
+    {
+      "source": "/article/MTi7lvP1",
+      "destination": "/column/mti7lvp1/",
+      "permanent": true
+    },
+    {
+      "source": "/article/OyQ-Z5L8",
+      "destination": "/column/oyq-z5l8/",
+      "permanent": true
+    },
+    {
+      "source": "/article/QaETCwwM",
+      "destination": "/column/qaetcwwm/",
+      "permanent": true
+    },
+    {
+      "source": "/article/R3ijlrFl",
+      "destination": "/column/r3ijlrfl/",
+      "permanent": true
+    },
+    {
+      "source": "/article/SfhDBXXm",
+      "destination": "/column/sfhdbxxm/",
+      "permanent": true
+    },
+    {
+      "source": "/article/Ty8IGxzX",
+      "destination": "/column/ty8igxzx/",
+      "permanent": true
+    },
+    {
+      "source": "/article/V2tGPLBy",
+      "destination": "/column/v2tgplby/",
+      "permanent": true
+    },
+    {
+      "source": "/article/ViVH63kS",
+      "destination": "/column/vivh63ks/",
+      "permanent": true
+    },
+    {
+      "source": "/article/W3d8SDmA",
+      "destination": "/column/w3d8sdma/",
+      "permanent": true
+    },
+    {
+      "source": "/article/XrPh0_MB",
+      "destination": "/column/xrph0_mb/",
+      "permanent": true
+    },
+    {
+      "source": "/article/YG9Dtan4",
+      "destination": "/column/yg9dtan4/",
+      "permanent": true
+    },
+    {
+      "source": "/article/YWEpQTiU",
+      "destination": "/column/ywepqtiu/",
+      "permanent": true
+    },
+    {
+      "source": "/article/Zu_0b-Pv",
+      "destination": "/column/zu_0b-pv/",
+      "permanent": true
+    },
+    {
+      "source": "/article/a4MuTlXj",
+      "destination": "/column/a4mutlxj/",
+      "permanent": true
+    },
+    {
+      "source": "/article/bF5QFD6u",
+      "destination": "/column/bf5qfd6u/",
+      "permanent": true
+    },
+    {
+      "source": "/article/coAEQBx3",
+      "destination": "/column/coaeqbx3/",
+      "permanent": true
+    },
+    {
+      "source": "/article/eof_Rhy0",
+      "destination": "/column/eof_rhy0/",
+      "permanent": true
+    },
+    {
+      "source": "/article/gMeRY3Uo",
+      "destination": "/column/gmery3uo/",
+      "permanent": true
+    },
+    {
+      "source": "/article/iso14001-environmental-aspects-identification-guide",
+      "destination": "/column/iso14001-environmental-aspects-identification-guid/",
+      "permanent": true
+    },
+    {
+      "source": "/article/nX9JKHCG",
+      "destination": "/column/nx9jkhcg/",
+      "permanent": true
+    },
+    {
+      "source": "/article/oYz7Rb4a",
+      "destination": "/column/oyz7rb4a/",
+      "permanent": true
+    },
+    {
+      "source": "/article/op6rigLH",
+      "destination": "/column/op6riglh/",
+      "permanent": true
+    },
+    {
+      "source": "/article/pxvjzNse",
+      "destination": "/column/pxvjznse/",
+      "permanent": true
+    },
+    {
+      "source": "/article/rQNEtbGX",
+      "destination": "/column/rqnetbgx/",
+      "permanent": true
+    },
+    {
+      "source": "/article/sKRJAGU0",
+      "destination": "/column/skrjagu0/",
+      "permanent": true
+    },
+    {
+      "source": "/article/ttslvcKy",
+      "destination": "/column/ttslvcky/",
+      "permanent": true
+    },
+    {
+      "source": "/article/v-HE1Er8",
+      "destination": "/column/v-he1er8/",
+      "permanent": true
+    },
+    {
+      "source": "/article/yW1jLEnj",
+      "destination": "/column/yw1jlenj/",
+      "permanent": true
+    },
+    {
+      "source": "/article/:slug",
+      "destination": "/column/:slug/",
+      "permanent": true
+    }
+  ]
 }
