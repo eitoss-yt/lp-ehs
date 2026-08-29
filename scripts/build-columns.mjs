@@ -234,11 +234,8 @@ header.gh{position:fixed;top:0;left:0;right:0;background:rgba(255,255,255,.96);b
 .chip-closed{background:#eceff1;color:#607078}
 .chip-archive{background:var(--teal-700);color:#fff}
 .sem-info{background:var(--teal-050);border-radius:12px;padding:18px 22px;margin:0 0 26px;font-size:14.5px}
-<<<<<<< HEAD
 .sem-section{margin-bottom:56px}
 .sem-section .sem-heading{font-size:22px;font-weight:900;padding-left:14px;border-left:5px solid var(--teal-500);margin-bottom:22px}
-=======
->>>>>>> origin/main
 .video-wrap{position:relative;padding-top:56.25%;background:#0b4e5b;border-radius:14px;overflow:hidden;box-shadow:0 14px 34px rgba(16,104,120,.16);margin:26px 0 36px}
 .video-wrap iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
 .sem-apply{margin:30px 0 10px;text-align:center}
@@ -469,7 +466,11 @@ const semCoverOf = (s, depth = 1) => {
   if (typeof s.cover === 'string' && s.cover) return s.cover.startsWith('/') ? '../'.repeat(depth) + s.cover.slice(1) : s.cover;
   return '';
 };
-const semYoutubeOf = s => String(s.youtube || '').split('?')[0].trim();
+// YouTube動画ID（11文字）だけを採用。必須フィールド用の「-」等のプレースホルダは無視する
+const semYoutubeOf = s => {
+  const v = String(s.youtube || '').split('?')[0].trim().replace(/^.*\//, '');
+  return /^[A-Za-z0-9_-]{11}$/.test(v) ? v : '';
+};
 const semStateOf = s => {
   const now = new Date();
   const d = s.date ? new Date(s.date) : null;
@@ -480,11 +481,7 @@ const semStateOf = s => {
 const SEM_CHIP = { open: '<span class="chip chip-open">申込受付中</span>', archive: '<span class="chip chip-archive">アーカイブ配信中</span>', closed: '<span class="chip chip-closed">受付終了</span>' };
 
 function seminarListPage(items) {
-<<<<<<< HEAD
   const card = s => {
-=======
-  const cards = items.map(s => {
->>>>>>> origin/main
     const cover = semCoverOf(s, 1);
     const thumb = cover ? `<img src="${esc(cover)}" alt="" loading="lazy">` : (semYoutubeOf(s) ? `<img src="https://i.ytimg.com/vi/${esc(semYoutubeOf(s))}/hqdefault.jpg" alt="" loading="lazy">` : THUMB_PLACEHOLDER);
     const st = semStateOf(s);
@@ -496,7 +493,6 @@ function seminarListPage(items) {
           ${s.description ? `<p class="desc">${esc(String(s.description).replace(/\s+/g, ' ').slice(0, 90))}${String(s.description).length > 90 ? '…' : ''}</p>` : ''}
         </div>
       </a>`;
-<<<<<<< HEAD
   };
   // 開催予定（当日含む）と過去開催で上下に分ける
   const now = Date.now() - 24 * 3600 * 1000;
@@ -508,9 +504,6 @@ function seminarListPage(items) {
   const pastHtml = past.length
     ? `    <div class="col-grid">\n${past.map(card).join('\n')}\n    </div>`
     : '';
-=======
-  }).join('\n');
->>>>>>> origin/main
 
   const body = `<div class="page-head">
   <div class="container">
@@ -522,7 +515,6 @@ function seminarListPage(items) {
 </div>
 <main class="section">
   <div class="container">
-<<<<<<< HEAD
     <div class="sem-section">
       <h2 class="sem-heading">開催予定・受付中のセミナー</h2>
 ${upcomingHtml}
@@ -531,9 +523,6 @@ ${upcomingHtml}
       <h2 class="sem-heading">過去に開催したセミナー</h2>
 ${pastHtml}
     </div>` : ''}
-=======
-${items.length ? `    <div class="col-grid">\n${cards}\n    </div>` : '    <p class="empty">開催予定のセミナーは準備中です。</p>'}
->>>>>>> origin/main
   </div>
 </main>`;
   return chrome(1, body, {
