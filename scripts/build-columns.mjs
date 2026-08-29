@@ -39,6 +39,12 @@ const descOf = a => {
   return text.length > 90 ? text.slice(0, 90) + '…' : text;
 };
 
+// 一覧サムネイル: eyecatch > 本文先頭の画像
+const thumbOf = a => {
+  if (a.eyecatch?.url) return a.eyecatch.url + '?w=640&fm=webp';
+  const m = bodyOf(a).match(/<img[^>]+src="([^"]+)"/);
+  return m ? m[1] : null;
+};
 const sleep = ms => new Promise(r => setTimeout(r, ms));
 
 async function fetchPage(offset) {
@@ -302,9 +308,8 @@ const THUMB_PLACEHOLDER = `<svg viewBox="0 0 100 100" aria-hidden="true"><path d
 function listPage(articles) {
   const cards = articles.map(a => {
     const cat = catOf(a);
-    const thumb = a.eyecatch?.url
-      ? `<img src="${esc(a.eyecatch.url)}?w=640&fm=webp" alt="" loading="lazy">`
-      : THUMB_PLACEHOLDER;
+    const t = thumbOf(a);
+    const thumb = t ? `<img src="${esc(t)}" alt="" loading="lazy">` : THUMB_PLACEHOLDER;
     return `      <a class="col-card" href="${esc(a.id)}/">
         <div class="thumb">${thumb}</div>
         <div class="body">
@@ -384,8 +389,10 @@ if (USE_SAMPLE) {
   console.warn('[build-columns] MICROCMS_API_KEY が未設定のため、コラムのビルドをスキップしました。');
   process.exit(0);
 } else {
-  articles = await fetchAll();
-  console.log(`[build-columns] microCMSから ${articles.length} 件取得`);
+  const all = await fetchAll();
+  // APIキーの権限によっては下書きも返るため、公開済み（publishedAtあり）のみ採用
+  articles = all.filter(a => a.publishedAt);
+  console.log(`[build-columns] microCMSから ${all.length} 件取得（公開済み ${articles.length} 件を掲載）`);
 }
 
 await rm(path.join(ROOT, 'column'), { recursive: true, force: true });
