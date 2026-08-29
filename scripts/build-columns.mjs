@@ -15,10 +15,12 @@ const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const SERVICE_ID = process.env.MICROCMS_SERVICE_ID || 'eitoss';
 const API_KEY = process.env.MICROCMS_API_KEY || '';
 const ORIGIN = (process.env.SITE_ORIGIN || 'https://lp.eitoss.com').replace(/\/$/, '');
-const ENDPOINT = process.env.MICROCMS_ENDPOINT || 'blogs';
+const ENDPOINT = process.env.MICROCMS_ENDPOINT || 'column';
+const NEWS_ENDPOINT = process.env.MICROCMS_NEWS_ENDPOINT || 'news';
 const USE_SAMPLE = process.argv.includes('--sample');
 
 const esc = s => String(s ?? '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+const dateOf = a => a.date || a.publishedAt;
 const fmtDate = iso => {
   if (!iso) return '';
   const d = new Date(iso);
@@ -47,8 +49,8 @@ const thumbOf = a => {
 };
 const sleep = ms => new Promise(r => setTimeout(r, ms));
 
-async function fetchPage(offset) {
-  const url = `https://${SERVICE_ID}.microcms.io/api/v1/${ENDPOINT}?limit=100&offset=${offset}&orders=-publishedAt`;
+async function fetchPage(endpoint, offset) {
+  const url = `https://${SERVICE_ID}.microcms.io/api/v1/${endpoint}?limit=100&offset=${offset}&orders=-publishedAt`;
   let lastErr;
   for (let attempt = 1; attempt <= 3; attempt++) {
     try {
@@ -59,7 +61,7 @@ async function fetchPage(offset) {
         throw new Error(`microCMS APIキーが拒否されました(${res.status})。VercelのMICROCMS_API_KEYが正しいコンテンツAPIキーか確認してください。`);
       }
       if (res.status === 404) {
-        throw new Error(`APIが見つかりません(404)。microCMSにエンドポイント「${ENDPOINT}」（リスト形式）が存在するか確認してください。`);
+        throw new Error(`APIが見つかりません(404)。microCMSにエンドポイント「${endpoint}」（リスト形式）が存在するか確認してください。`);
       }
       lastErr = new Error(`microCMS API ${res.status}: ${body.slice(0, 200)}`);
     } catch (e) {
@@ -74,10 +76,10 @@ async function fetchPage(offset) {
   throw lastErr;
 }
 
-async function fetchAll() {
+async function fetchAll(endpoint) {
   const items = [];
   for (let offset = 0; ; offset += 100) {
-    const data = await fetchPage(offset);
+    const data = await fetchPage(endpoint, offset);
     items.push(...data.contents);
     if (items.length >= data.totalCount || data.contents.length === 0) break;
   }
@@ -220,6 +222,12 @@ header.gh{position:fixed;top:0;left:0;right:0;background:rgba(255,255,255,.96);b
   .gh-btn svg{width:14px;height:14px}
   .gh-actions{gap:6px}
 }
+
+.news-rows{max-width:860px;margin:0 auto}
+.news-row{display:flex;gap:22px;align-items:baseline;padding:18px 10px;border-bottom:1px solid var(--line);font-size:14.5px;color:var(--ink)}
+.news-row time{flex:0 0 auto;color:var(--teal-500);font-weight:700;font-family:"Poppins","Noto Sans JP",sans-serif}
+.news-row:hover .t{color:var(--teal-700)}
+@media(max-width:640px){.news-row{flex-direction:column;gap:4px}}
 `;
 
 const MARK = `<svg width="28" height="28" viewBox="0 0 100 100" aria-hidden="true"><path d="M50 8 a42 42 0 1 0 29.7 12.3 l-12.7 12.7 a24 24 0 1 1 -17 -7 z" fill="#106878"/></svg>`;
@@ -263,7 +271,7 @@ function chrome(depth, bodyHtml, { title, description, canonicalPath, ogType = '
         </div>
         <a href="https://eitoss.com/seminar">セミナー</a>
         <a href="${rel}column/">コラム</a>
-        <a href="${rel}#news">ニュース</a>
+        <a href="${rel}news/">ニュース</a>
         <a href="${rel}#company">会社概要</a>
         <a href="https://eitoss.com/recruit">採用情報</a>
       </nav>
@@ -313,7 +321,7 @@ function listPage(articles) {
     return `      <a class="col-card" href="${esc(a.id)}/">
         <div class="thumb">${thumb}</div>
         <div class="body">
-          <div class="meta">${cat ? `<span class="chip">${esc(cat)}</span>` : ''}<time datetime="${esc(a.publishedAt || '')}">${fmtDate(a.publishedAt)}</time></div>
+          <div class="meta">${cat ? `<span class="chip">${esc(cat)}</span>` : ''}<time datetime="${esc(dateOf(a) || '')}">${fmtDate(dateOf(a))}</time></div>
           <h2>${esc(a.title)}</h2>
           ${descOf(a) ? `<p class="desc">${esc(descOf(a))}</p>` : ''}
         </div>
@@ -347,7 +355,7 @@ function articlePage(a) {
   <div class="container">
     <article class="post post-head-wrap" style="max-width:760px;margin:0 auto">
       <p class="breadcrumb"><a href="../../">HOME</a> ／ <a href="../">コラム</a> ／ ${esc(a.title)}</p>
-      <div class="meta">${cat ? `<span class="chip">${esc(cat)}</span>` : ''}<time datetime="${esc(a.publishedAt || '')}">${fmtDate(a.publishedAt)}</time></div>
+      <div class="meta">${cat ? `<span class="chip">${esc(cat)}</span>` : ''}<time datetime="${esc(dateOf(a) || '')}">${fmtDate(dateOf(a))}</time></div>
       <div class="post-head"><h1>${esc(a.title)}</h1></div>
     </article>
   </div>
@@ -380,6 +388,79 @@ ${bodyOf(a)}
   });
 }
 
+
+// ---- ニュース ----
+function newsListPage(items) {
+  const rows = items.map(n => `      <a class="news-row" href="${esc(n.id)}/"><time datetime="${esc(dateOf(n))}">${fmtDate(dateOf(n))}</time><span class="t">${esc(n.title)}</span></a>`).join('\n');
+  const body = `<div class="page-head">
+  <div class="container">
+    <p class="breadcrumb"><a href="../">HOME</a> ／ ニュース</p>
+    <p class="label">News</p>
+    <h1>ニュース</h1>
+    <p class="lead">エイトス株式会社からのお知らせ・プレスリリースです。</p>
+  </div>
+</div>
+<main class="section">
+  <div class="container">
+    <div class="news-rows">
+${rows || '      <p class="empty">お知らせは準備中です。</p>'}
+    </div>
+  </div>
+</main>`;
+  return chrome(1, body, {
+    title: 'ニュース - エイトス株式会社',
+    description: 'エイトス株式会社からのお知らせ・プレスリリース一覧です。',
+    canonicalPath: '/news/',
+  });
+}
+
+function newsPage(n) {
+  const linkBtn = n.link ? `<p style="margin-top:28px"><a class="btn btn-primary" href="${esc(n.link)}" target="_blank" rel="noopener">関連リンクはこちら</a></p>` : '';
+  const body = `<div class="page-head">
+  <div class="container">
+    <article class="post" style="max-width:760px;margin:0 auto">
+      <p class="breadcrumb"><a href="../../">HOME</a> ／ <a href="../">ニュース</a> ／ ${esc(n.title)}</p>
+      <div class="meta"><span class="chip">お知らせ</span><time datetime="${esc(dateOf(n))}">${fmtDate(dateOf(n))}</time></div>
+      <div class="post-head"><h1>${esc(n.title)}</h1></div>
+    </article>
+  </div>
+</div>
+<main class="section">
+  <div class="container">
+    <article class="post">
+      <div class="article-body">
+${bodyOf(n)}
+      </div>
+      ${linkBtn}
+      <a class="back-link" href="../">← ニュース一覧へ戻る</a>
+    </article>
+  </div>
+</main>`;
+  return chrome(2, body, {
+    title: `${n.title} - ニュース｜エイトス株式会社`,
+    description: descOf(n) || `${n.title}｜エイトス株式会社のお知らせ`,
+    canonicalPath: `/news/${n.id}/`,
+    ogType: 'article',
+  });
+}
+
+// TOPのニュース欄（マーカー間）を最新5件で差し替え
+async function injectTopNews(items) {
+  const { readFile } = await import('node:fs/promises');
+  const topPath = path.join(ROOT, 'index.html');
+  let html;
+  try { html = await readFile(topPath, 'utf-8'); } catch { return; }
+  const S = '<!--NEWS_LIST_START-->', E = '<!--NEWS_LIST_END-->';
+  const i = html.indexOf(S), j = html.indexOf(E);
+  if (i < 0 || j < 0) return;
+  const lis = items.slice(0, 5).map(n =>
+    `        <li><span class="date">${fmtDate(dateOf(n))}</span><span class="body"><a href="news/${esc(n.id)}/">${esc(n.title)}</a></span></li>`
+  ).join('\n');
+  html = html.slice(0, i + S.length) + '\n' + lis + '\n' + html.slice(j);
+  await writeFile(topPath, html);
+  console.log(`[build-columns] TOPのニュース欄を更新（${Math.min(items.length, 5)}件）`);
+}
+
 // ---- main ----
 let articles;
 if (USE_SAMPLE) {
@@ -389,10 +470,11 @@ if (USE_SAMPLE) {
   console.warn('[build-columns] MICROCMS_API_KEY が未設定のため、コラムのビルドをスキップしました。');
   process.exit(0);
 } else {
-  const all = await fetchAll();
+  const all = await fetchAll(ENDPOINT);
   // APIキーの権限によっては下書きも返るため、公開済み（publishedAtあり）のみ採用
   articles = all.filter(a => a.publishedAt);
-  console.log(`[build-columns] microCMSから ${all.length} 件取得（公開済み ${articles.length} 件を掲載）`);
+  articles.sort((a, b) => new Date(dateOf(b)) - new Date(dateOf(a)));
+  console.log(`[build-columns] コラム: ${all.length} 件取得（公開済み ${articles.length} 件を掲載）`);
 }
 
 await rm(path.join(ROOT, 'column'), { recursive: true, force: true });
@@ -404,3 +486,23 @@ for (const a of articles) {
   await writeFile(path.join(dir, 'index.html'), articlePage(a));
 }
 console.log(`[build-columns] 生成完了: column/index.html + 記事 ${articles.length} ページ`);
+
+// ---- ニュースの生成 ----
+if (!USE_SAMPLE && API_KEY) {
+  try {
+    const allNews = (await fetchAll(NEWS_ENDPOINT)).filter(n => n.publishedAt);
+    allNews.sort((a, b) => new Date(dateOf(b)) - new Date(dateOf(a)));
+    await rm(path.join(ROOT, 'news'), { recursive: true, force: true });
+    await mkdir(path.join(ROOT, 'news'), { recursive: true });
+    await writeFile(path.join(ROOT, 'news', 'index.html'), newsListPage(allNews));
+    for (const n of allNews) {
+      const dir = path.join(ROOT, 'news', n.id);
+      await mkdir(dir, { recursive: true });
+      await writeFile(path.join(dir, 'index.html'), newsPage(n));
+    }
+    await injectTopNews(allNews);
+    console.log(`[build-columns] ニュース: ${allNews.length} 件生成`);
+  } catch (e) {
+    console.warn(`[build-columns] ニュース生成をスキップ: ${e.message}`);
+  }
+}
