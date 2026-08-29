@@ -103,6 +103,15 @@ header{position:fixed;top:0;left:0;right:0;background:rgba(255,255,255,.94);back
 .news-list li{display:flex;gap:24px;padding:20px 8px;border-bottom:1px solid var(--line);font-size:14.5px}
 .news-list .date{flex:0 0 auto;font-family:"Poppins","Noto Sans JP",sans-serif;color:var(--teal-500);font-weight:700}
 .news-list .body{color:var(--ink)}
+.res-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;max-width:860px;margin:0 auto}
+.res-card{display:block;background:#fff;border-radius:14px;padding:26px 28px;box-shadow:0 10px 26px rgba(16,104,120,.10);transition:transform .15s ease,box-shadow .15s ease}
+.res-card:hover{transform:translateY(-4px);box-shadow:0 16px 34px rgba(16,104,120,.16)}
+.res-card .res-label{font-family:"Poppins","Noto Sans JP",sans-serif;font-size:12px;font-weight:700;letter-spacing:.16em;color:var(--teal-500);text-transform:uppercase}
+.res-card h3{font-size:18px;font-weight:900;color:var(--ink);margin:4px 0 6px}
+.res-card p{font-size:13.5px;color:var(--gray)}
+.res-card .more{display:inline-block;margin-top:10px;font-size:14px;font-weight:700;color:var(--teal-700)}
+.res-card .more::after{content:" →"}
+@media(max-width:760px){.res-grid{grid-template-columns:1fr}}
 
 /* vision */
 .vision{background:linear-gradient(135deg,var(--teal-900),var(--teal-700));color:#fff}
@@ -217,7 +226,7 @@ header.gh{position:fixed;top:0;left:0;right:0;background:rgba(255,255,255,.96);b
           <a href="cayzen/iso/">ISO支援</a>
           </div></div>
         </div>
-        <a href="https://eitoss.com/seminar">セミナー</a>
+        <a href="seminar/">セミナー</a>
         <a href="column/">コラム</a>
         <a href="news/">ニュース</a>
         <a href="#company">会社概要</a>
@@ -227,8 +236,8 @@ header.gh{position:fixed;top:0;left:0;right:0;background:rgba(255,255,255,.96);b
     <div class="gh-right">
       <p class="gh-tel">TEL: <b>050-8881-9881</b><span>（平日10:00〜19:00）</span></p>
       <div class="gh-actions">
-        <a class="gh-btn gh-btn-dl" href="cayzen/ehsresearch/#download"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h9l4 4v14H6z"/><path d="M15 3v4h4M9 12h6M9 16h6"/></svg> 資料請求</a>
-        <a class="gh-btn gh-btn-tr" href="cayzen/ehsresearch/#trial"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h10M4 12h10M4 18h7"/><path d="M17 16l2 2 4-4"/></svg> トライアル</a>
+        <a class="gh-btn gh-btn-dl" href="document/"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h9l4 4v14H6z"/><path d="M15 3v4h4M9 12h6M9 16h6"/></svg> 資料請求</a>
+        <a class="gh-btn gh-btn-tr" href="trial/"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h10M4 12h10M4 18h7"/><path d="M17 16l2 2 4-4"/></svg> トライアル</a>
         <a class="gh-btn gh-btn-ct" href="#contact"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg> お問合せ</a>
       </div>
     </div>
@@ -330,6 +339,20 @@ header.gh{position:fixed;top:0;left:0;right:0;background:rgba(255,255,255,.96);b
 <!--NEWS_LIST_END-->
       </ul>
       <p style="text-align:center;margin-top:30px"><a class="btn btn-ghost" href="news/">ニュース一覧を見る</a></p>
+      <div class="res-grid" style="margin-top:56px">
+        <a class="res-card" href="document/">
+          <p class="res-label">Download</p>
+          <h3>資料ダウンロード</h3>
+          <p>サービス資料や法令対応の実務ガイドを無料でダウンロードいただけます。</p>
+          <span class="more">資料一覧を見る</span>
+        </a>
+        <a class="res-card" href="seminar/">
+          <p class="res-label">Seminar</p>
+          <h3>イベント・セミナー</h3>
+          <p>EHS法令対応・ISO・現場のAI活用をテーマにセミナーを開催しています。</p>
+          <span class="more">セミナー一覧を見る</span>
+        </a>
+      </div>
     </div>
   </section>
 
@@ -386,8 +409,10 @@ header.gh{position:fixed;top:0;left:0;right:0;background:rgba(255,255,255,.96);b
       <a href="cayzen/ehsresearch/">Cayzen EHS Research</a>
       <a href="cayzen/knowledgemanagement/">Cayzen ナレッジマネジメント</a>
       <a href="cayzen/iso/">ISO支援</a>
+      <a href="seminar/">セミナー</a>
       <a href="column/">コラム</a>
       <a href="news/">ニュース</a>
+      <a href="document/">資料ダウンロード</a>
       <a href="#company">会社概要</a>
       <a href="#contact">お問い合わせ</a>
     </div>
