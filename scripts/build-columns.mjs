@@ -17,6 +17,7 @@ const API_KEY = process.env.MICROCMS_API_KEY || '';
 const ORIGIN = (process.env.SITE_ORIGIN || 'https://lp.eitoss.com').replace(/\/$/, '');
 const ENDPOINT = process.env.MICROCMS_ENDPOINT || 'column';
 const NEWS_ENDPOINT = process.env.MICROCMS_NEWS_ENDPOINT || 'news';
+const SEMINAR_ENDPOINT = process.env.MICROCMS_SEMINAR_ENDPOINT || 'seminar';
 const USE_SAMPLE = process.argv.includes('--sample');
 
 const esc = s => String(s ?? '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
@@ -228,6 +229,14 @@ header.gh{position:fixed;top:0;left:0;right:0;background:rgba(255,255,255,.96);b
 .news-row time{flex:0 0 auto;color:var(--teal-500);font-weight:700;font-family:"Poppins","Noto Sans JP",sans-serif}
 .news-row:hover .t{color:var(--teal-700)}
 @media(max-width:640px){.news-row{flex-direction:column;gap:4px}}
+
+.chip-open{background:#fdf0dc;color:#b06a00}
+.chip-closed{background:#eceff1;color:#607078}
+.chip-archive{background:var(--teal-700);color:#fff}
+.sem-info{background:var(--teal-050);border-radius:12px;padding:18px 22px;margin:0 0 26px;font-size:14.5px}
+.video-wrap{position:relative;padding-top:56.25%;background:#0b4e5b;border-radius:14px;overflow:hidden;box-shadow:0 14px 34px rgba(16,104,120,.16);margin:26px 0 36px}
+.video-wrap iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.sem-apply{margin:30px 0 10px;text-align:center}
 `;
 
 const MARK = `<svg width="28" height="28" viewBox="0 0 100 100" aria-hidden="true"><path d="M50 8 a42 42 0 1 0 29.7 12.3 l-12.7 12.7 a24 24 0 1 1 -17 -7 z" fill="#106878"/></svg>`;
@@ -269,7 +278,7 @@ function chrome(depth, bodyHtml, { title, description, canonicalPath, ogType = '
             <a href="${rel}cayzen/iso/">ISO支援</a>
           </div></div>
         </div>
-        <a href="https://eitoss.com/seminar">セミナー</a>
+        <a href="${rel}seminar/">セミナー</a>
         <a href="${rel}column/">コラム</a>
         <a href="${rel}news/">ニュース</a>
         <a href="${rel}#company">会社概要</a>
@@ -279,8 +288,8 @@ function chrome(depth, bodyHtml, { title, description, canonicalPath, ogType = '
     <div class="gh-right">
       <p class="gh-tel">TEL: <b>050-8881-9881</b><span>（平日10:00〜19:00）</span></p>
       <div class="gh-actions">
-        <a class="gh-btn gh-btn-dl" href="${rel}cayzen/ehsresearch/#download"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h9l4 4v14H6z"/><path d="M15 3v4h4M9 12h6M9 16h6"/></svg> 資料請求</a>
-        <a class="gh-btn gh-btn-tr" href="${rel}cayzen/ehsresearch/#trial"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h10M4 12h10M4 18h7"/><path d="M17 16l2 2 4-4"/></svg> トライアル</a>
+        <a class="gh-btn gh-btn-dl" href="${rel}document/"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h9l4 4v14H6z"/><path d="M15 3v4h4M9 12h6M9 16h6"/></svg> 資料請求</a>
+        <a class="gh-btn gh-btn-tr" href="${rel}trial/"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h10M4 12h10M4 18h7"/><path d="M17 16l2 2 4-4"/></svg> トライアル</a>
         <a class="gh-btn gh-btn-ct" href="${rel}#contact"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg> お問合せ</a>
       </div>
     </div>
@@ -298,7 +307,9 @@ ${bodyHtml}
       <a href="${rel}cayzen/ehsresearch/">Cayzen EHS Research</a>
       <a href="${rel}cayzen/knowledgemanagement/">Cayzen ナレッジマネジメント</a>
       <a href="${rel}cayzen/iso/">ISO支援</a>
+      <a href="${rel}seminar/">セミナー</a>
       <a href="${rel}column/">コラム</a>
+      <a href="${rel}document/">資料ダウンロード</a>
       <a href="${rel}#company">会社概要</a>
       <a href="${rel}#contact">お問い合わせ</a>
     </div>
@@ -444,6 +455,105 @@ ${bodyOf(n)}
   });
 }
 
+// ---- セミナー ----
+// microCMSのSeminar API（推奨フィールド: title / date(日時) / eventDate / description / body /
+// cover(画像) / applyUrl / youtube）から生成。コンテンツが未登録・フィールド不足の間は
+// data/seminar-fallback.json（STUDIOからの移行データ）で生成する。
+const semCoverOf = (s, depth = 1) => {
+  if (s.cover?.url) return s.cover.url + '?w=800&fm=webp';
+  if (typeof s.cover === 'string' && s.cover) return s.cover.startsWith('/') ? '../'.repeat(depth) + s.cover.slice(1) : s.cover;
+  return '';
+};
+const semYoutubeOf = s => String(s.youtube || '').split('?')[0].trim();
+const semStateOf = s => {
+  const now = new Date();
+  const d = s.date ? new Date(s.date) : null;
+  if (d && d.getTime() > now.getTime() - 24 * 3600 * 1000 && s.applyUrl && !semYoutubeOf(s)) return 'open';
+  if (semYoutubeOf(s)) return 'archive';
+  return 'closed';
+};
+const SEM_CHIP = { open: '<span class="chip chip-open">申込受付中</span>', archive: '<span class="chip chip-archive">アーカイブ配信中</span>', closed: '<span class="chip chip-closed">受付終了</span>' };
+
+function seminarListPage(items) {
+  const cards = items.map(s => {
+    const cover = semCoverOf(s, 1);
+    const thumb = cover ? `<img src="${esc(cover)}" alt="" loading="lazy">` : (semYoutubeOf(s) ? `<img src="https://i.ytimg.com/vi/${esc(semYoutubeOf(s))}/hqdefault.jpg" alt="" loading="lazy">` : THUMB_PLACEHOLDER);
+    const st = semStateOf(s);
+    return `      <a class="col-card" href="${esc(s.id)}/">
+        <div class="thumb">${thumb}</div>
+        <div class="body">
+          <div class="meta">${SEM_CHIP[st]}<time datetime="${esc(dateOf(s) || '')}">${esc(s.eventDate || fmtDate(dateOf(s)))}</time></div>
+          <h2>${esc(s.title)}</h2>
+          ${s.description ? `<p class="desc">${esc(String(s.description).replace(/\s+/g, ' ').slice(0, 90))}${String(s.description).length > 90 ? '…' : ''}</p>` : ''}
+        </div>
+      </a>`;
+  }).join('\n');
+
+  const body = `<div class="page-head">
+  <div class="container">
+    <p class="breadcrumb"><a href="../">HOME</a> ／ セミナー</p>
+    <p class="label">Seminar</p>
+    <h1>イベント・セミナー</h1>
+    <p class="lead">EHS法令対応・ISO・現場のAI活用をテーマに、実務に役立つセミナーを開催しています。</p>
+  </div>
+</div>
+<main class="section">
+  <div class="container">
+${items.length ? `    <div class="col-grid">\n${cards}\n    </div>` : '    <p class="empty">開催予定のセミナーは準備中です。</p>'}
+  </div>
+</main>`;
+  return chrome(1, body, {
+    title: 'イベント・セミナー - エイトス株式会社',
+    description: 'エイトス株式会社が開催するイベント・セミナーの一覧です。EHS法令対応・ISO・現場のAI活用をテーマに実務に役立つ情報をお届けします。',
+    canonicalPath: '/seminar/',
+  });
+}
+
+function seminarPage(s) {
+  const st = semStateOf(s);
+  const cover = semCoverOf(s, 2);
+  const yt = semYoutubeOf(s);
+  const video = yt ? `<div class="video-wrap"><iframe src="https://www.youtube.com/embed/${esc(yt)}" title="${esc(s.title)}（アーカイブ）" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>` : '';
+  const apply = st === 'open' && s.applyUrl ? `<div class="sem-apply"><a class="btn btn-primary" href="${esc(s.applyUrl)}" target="_blank" rel="noopener">セミナーに申し込む（無料）</a></div>` : '';
+  const body = `<div class="page-head">
+  <div class="container">
+    <article class="post post-head-wrap" style="max-width:760px;margin:0 auto">
+      <p class="breadcrumb"><a href="../../">HOME</a> ／ <a href="../">セミナー</a> ／ ${esc(s.title)}</p>
+      <div class="meta">${SEM_CHIP[st]}<time datetime="${esc(dateOf(s) || '')}">${esc(s.eventDate || fmtDate(dateOf(s)))}</time></div>
+      <div class="post-head"><h1>${esc(s.title)}</h1></div>
+    </article>
+  </div>
+</div>
+<main class="section">
+  <div class="container">
+    <article class="post">
+      ${video || (cover ? `<div class="post-eyecatch"><img src="${esc(cover)}" alt=""></div>` : '')}
+      ${s.info ? `<div class="sem-info">${s.info}</div>` : ''}
+      ${apply}
+      <div class="article-body">
+${bodyOf(s)}
+      </div>
+      ${apply}
+      <div class="post-cta">
+        <h2>サービスに関するご相談・資料請求</h2>
+        <p>EHS法令調査の代行から、ISO対応、現場のナレッジマネジメントまで。まずはお気軽にご相談ください。</p>
+        <div class="btns">
+          <a class="btn btn-primary" href="../../document/">資料ダウンロード</a>
+          <a class="btn btn-ghost" href="../../#contact">お問い合わせ</a>
+        </div>
+      </div>
+      <a class="back-link" href="../">← セミナー一覧へ戻る</a>
+    </article>
+  </div>
+</main>`;
+  return chrome(2, body, {
+    title: `${s.title} - セミナー｜エイトス株式会社`,
+    description: s.description || `${s.title}｜エイトス株式会社のセミナー`,
+    canonicalPath: `/seminar/${s.id}/`,
+    ogType: 'article',
+  });
+}
+
 // TOPのニュース欄（マーカー間）を最新5件で差し替え
 async function injectTopNews(items) {
   const { readFile } = await import('node:fs/promises');
@@ -504,5 +614,42 @@ if (!USE_SAMPLE && API_KEY) {
     console.log(`[build-columns] ニュース: ${allNews.length} 件生成`);
   } catch (e) {
     console.warn(`[build-columns] ニュース生成をスキップ: ${e.message}`);
+  }
+
+  // ---- セミナーの生成（microCMS優先、未登録分は移行データで補完） ----
+  try {
+    const { readFile, readdir } = await import('node:fs/promises');
+    let fallback = [];
+    try { fallback = JSON.parse(await readFile(path.join(ROOT, 'data', 'seminar-fallback.json'), 'utf-8')); } catch {}
+    let cms = [];
+    try {
+      cms = (await fetchAll(SEMINAR_ENDPOINT)).filter(s => s.publishedAt);
+    } catch (e) {
+      console.warn(`[build-columns] セミナーAPIの取得に失敗（移行データのみで生成）: ${e.message}`);
+    }
+    // microCMSに同じIDがあればそちらを優先。中身が入っている（本文/開催日/動画あり）ものだけ採用
+    const byId = new Map(fallback.map(s => [s.id, s]));
+    let cmsUsed = 0;
+    for (const s of cms) {
+      if (bodyOf(s) || s.eventDate || s.youtube || s.description) { byId.set(s.id, s); cmsUsed++; }
+    }
+    const seminars = [...byId.values()].sort((a, b) => new Date(dateOf(b)) - new Date(dateOf(a)));
+
+    // seminar/ 配下を再生成（手作りの archive/ は残す）
+    const semRoot = path.join(ROOT, 'seminar');
+    await mkdir(semRoot, { recursive: true });
+    for (const entry of await readdir(semRoot, { withFileTypes: true })) {
+      if (entry.name === 'archive') continue;
+      await rm(path.join(semRoot, entry.name), { recursive: true, force: true });
+    }
+    await writeFile(path.join(semRoot, 'index.html'), seminarListPage(seminars));
+    for (const s of seminars) {
+      const dir = path.join(semRoot, s.id);
+      await mkdir(dir, { recursive: true });
+      await writeFile(path.join(dir, 'index.html'), seminarPage(s));
+    }
+    console.log(`[build-columns] セミナー: ${seminars.length} 件生成（microCMS ${cmsUsed} 件 / 移行データ ${seminars.length - cmsUsed} 件）`);
+  } catch (e) {
+    console.warn(`[build-columns] セミナー生成をスキップ: ${e.message}`);
   }
 }
