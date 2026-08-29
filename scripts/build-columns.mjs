@@ -284,7 +284,7 @@ function chrome(depth, bodyHtml, { title, description, canonicalPath, ogType = '
         <a href="${rel}column/">コラム</a>
         <a href="${rel}news/">ニュース</a>
         <a href="${rel}#company">会社概要</a>
-        <a href="https://eitoss.com/recruit">採用情報</a>
+        <a href="https://eitoss.notion.site/f56f60f846fe4af9bfa33420cf19103e" target="_blank" rel="noopener">採用情報</a>
       </nav>
     </div>
     <div class="gh-right">
