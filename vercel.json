@@ -1,4 +1,5 @@
 {
+  "trailingSlash": true,
   "buildCommand": "node scripts/build-columns.mjs",
   "outputDirectory": ".",
   "redirects": [

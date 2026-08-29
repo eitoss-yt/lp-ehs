@@ -234,6 +234,8 @@ header.gh{position:fixed;top:0;left:0;right:0;background:rgba(255,255,255,.96);b
 .chip-closed{background:#eceff1;color:#607078}
 .chip-archive{background:var(--teal-700);color:#fff}
 .sem-info{background:var(--teal-050);border-radius:12px;padding:18px 22px;margin:0 0 26px;font-size:14.5px}
+.sem-section{margin-bottom:56px}
+.sem-section .sem-heading{font-size:22px;font-weight:900;padding-left:14px;border-left:5px solid var(--teal-500);margin-bottom:22px}
 .video-wrap{position:relative;padding-top:56.25%;background:#0b4e5b;border-radius:14px;overflow:hidden;box-shadow:0 14px 34px rgba(16,104,120,.16);margin:26px 0 36px}
 .video-wrap iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
 .sem-apply{margin:30px 0 10px;text-align:center}
@@ -475,7 +477,7 @@ const semStateOf = s => {
 const SEM_CHIP = { open: '<span class="chip chip-open">申込受付中</span>', archive: '<span class="chip chip-archive">アーカイブ配信中</span>', closed: '<span class="chip chip-closed">受付終了</span>' };
 
 function seminarListPage(items) {
-  const cards = items.map(s => {
+  const card = s => {
     const cover = semCoverOf(s, 1);
     const thumb = cover ? `<img src="${esc(cover)}" alt="" loading="lazy">` : (semYoutubeOf(s) ? `<img src="https://i.ytimg.com/vi/${esc(semYoutubeOf(s))}/hqdefault.jpg" alt="" loading="lazy">` : THUMB_PLACEHOLDER);
     const st = semStateOf(s);
@@ -487,7 +489,17 @@ function seminarListPage(items) {
           ${s.description ? `<p class="desc">${esc(String(s.description).replace(/\s+/g, ' ').slice(0, 90))}${String(s.description).length > 90 ? '…' : ''}</p>` : ''}
         </div>
       </a>`;
-  }).join('\n');
+  };
+  // 開催予定（当日含む）と過去開催で上下に分ける
+  const now = Date.now() - 24 * 3600 * 1000;
+  const upcoming = items.filter(s => dateOf(s) && new Date(dateOf(s)).getTime() > now);
+  const past = items.filter(s => !upcoming.includes(s));
+  const upcomingHtml = upcoming.length
+    ? `    <div class="col-grid">\n${upcoming.map(card).join('\n')}\n    </div>`
+    : '    <p class="empty" style="padding:24px 0">現在、募集中のセミナーはありません。次回の開催をお待ちください。</p>';
+  const pastHtml = past.length
+    ? `    <div class="col-grid">\n${past.map(card).join('\n')}\n    </div>`
+    : '';
 
   const body = `<div class="page-head">
   <div class="container">
@@ -499,7 +511,14 @@ function seminarListPage(items) {
 </div>
 <main class="section">
   <div class="container">
-${items.length ? `    <div class="col-grid">\n${cards}\n    </div>` : '    <p class="empty">開催予定のセミナーは準備中です。</p>'}
+    <div class="sem-section">
+      <h2 class="sem-heading">開催予定・受付中のセミナー</h2>
+${upcomingHtml}
+    </div>
+    ${past.length ? `<div class="sem-section">
+      <h2 class="sem-heading">過去に開催したセミナー</h2>
+${pastHtml}
+    </div>` : ''}
   </div>
 </main>`;
   return chrome(1, body, {
