@@ -14,7 +14,7 @@ import { fileURLToPath } from 'node:url';
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const SERVICE_ID = process.env.MICROCMS_SERVICE_ID || 'eitoss';
 const API_KEY = process.env.MICROCMS_API_KEY || '';
-const ORIGIN = (process.env.SITE_ORIGIN || 'https://eitoss.com').replace(/\/$/, '');
+const ORIGIN = (process.env.SITE_ORIGIN || 'https://lp.eitoss.com').replace(/\/$/, '');
 const ENDPOINT = process.env.MICROCMS_ENDPOINT || 'blogs';
 const USE_SAMPLE = process.argv.includes('--sample');
 
