@@ -285,12 +285,13 @@ function chrome(depth, bodyHtml, { title, description, canonicalPath, ogType = '
           <div class="gh-dd-menu"><div class="in">
             <a href="${rel}cayzen/ehsresearch/">Cayzen EHS Research（EHS法令調査代行）</a>
             <a href="${rel}cayzen/knowledgemanagement/">Cayzen ナレッジマネジメント（SaaS）</a>
-            <a href="${rel}cayzen/iso/">ISO支援</a>
+            <a href="${rel}cayzen/iso/">Cayzen ISO サポート</a>
           </div></div>
         </div>
         <a href="${rel}seminar/">セミナー</a>
         <a href="${rel}column/">コラム</a>
         <a href="${rel}news/">ニュース</a>
+        <a href="${rel}resources/">お役立ち資料</a>
         <a href="${rel}#company">会社概要</a>
         <a href="https://eitoss.notion.site/f56f60f846fe4af9bfa33420cf19103e" target="_blank" rel="noopener">採用情報</a>
       </nav>
@@ -299,7 +300,6 @@ function chrome(depth, bodyHtml, { title, description, canonicalPath, ogType = '
       <p class="gh-tel">TEL: <b>050-8881-9881</b><span>（平日10:00〜19:00）</span></p>
       <div class="gh-actions">
         <a class="gh-btn gh-btn-dl" href="${rel}document/"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h9l4 4v14H6z"/><path d="M15 3v4h4M9 12h6M9 16h6"/></svg> 資料請求</a>
-        <a class="gh-btn gh-btn-tr" href="${rel}trial/"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h10M4 12h10M4 18h7"/><path d="M17 16l2 2 4-4"/></svg> トライアル</a>
         <a class="gh-btn gh-btn-ct" href="${rel}#contact"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg> お問合せ</a>
       </div>
     </div>
@@ -316,14 +316,15 @@ ${bodyHtml}
     <div class="footer-links">
       <a href="${rel}cayzen/ehsresearch/">Cayzen EHS Research</a>
       <a href="${rel}cayzen/knowledgemanagement/">Cayzen ナレッジマネジメント</a>
-      <a href="${rel}cayzen/iso/">ISO支援</a>
+      <a href="${rel}cayzen/iso/">Cayzen ISO サポート</a>
       <a href="${rel}seminar/">セミナー</a>
       <a href="${rel}column/">コラム</a>
       <a href="${rel}document/">資料ダウンロード</a>
+      <a href="${rel}resources/">お役立ち資料</a>
       <a href="${rel}#company">会社概要</a>
       <a href="${rel}#contact">お問い合わせ</a>
     </div>
-    <p>本社: 愛知県豊田市小坂本町1-5-5 YAMATO BLDG2F　｜　東京支店: 東京都豊島区東池袋3-1-1 サンシャイン60 12F</p>
+    <p>本社: 〒471-0031 愛知県豊田市小坂本町1-5-5 YAMATO BLDG2F　｜　営業拠点: 東京都豊島区東池袋3-1-1 サンシャイン60 12F</p>
     <p class="copy">© Eitoss Inc. All rights reserved.</p>
   </div>
 </footer>
@@ -636,7 +637,9 @@ if (USE_SAMPLE) {
 } else {
   const all = await fetchAll(ENDPOINT);
   // APIキーの権限によっては下書きも返るため、公開済み（publishedAtあり）のみ採用
-  articles = all.filter(a => a.publishedAt);
+  // 2023年以前の記事は非表示（microCMSのデータは残す）
+  articles = all.filter(a => a.publishedAt)
+    .filter(a => new Date(dateOf(a)) >= new Date('2024-01-01T00:00:00Z'));
   articles.sort((a, b) => new Date(dateOf(b)) - new Date(dateOf(a)));
   console.log(`[build-columns] コラム: ${all.length} 件取得（公開済み ${articles.length} 件を掲載）`);
 }
