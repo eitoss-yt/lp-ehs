@@ -117,7 +117,7 @@ const CSS = `
 html{scroll-behavior:smooth;scroll-padding-top:130px}
 body{font-family:"Noto Sans JP",sans-serif;font-size:17.5px;color:var(--ink);line-height:1.8;background:var(--white);-webkit-font-smoothing:antialiased}
 img{max-width:100%;height:auto;display:block}
-h1,h2,h3{letter-spacing:.08em}
+h1,h2,h3{letter-spacing:.08em;text-wrap:balance}
 a{color:var(--teal-700);text-decoration:none}
 .container{max-width:1080px;margin:0 auto;padding:0 20px}
 .btn{display:inline-block;padding:16px 36px;border-radius:999px;font-weight:500;font-size:17.5px;text-align:center;transition:transform .15s ease,box-shadow .15s ease;box-shadow:0 4px 14px rgba(16,104,120,.25)}
@@ -134,7 +134,7 @@ header{position:fixed;top:0;left:0;right:0;background:rgba(255,255,255,.94);back
 .header-nav .nav-links a{color:var(--ink)}
 .header-nav .nav-links a:hover{color:var(--teal-700)}
 .page-head{padding:155px 0 46px;background:radial-gradient(1100px 500px at 85% -10%,rgba(128,192,200,.30),transparent 60%),linear-gradient(180deg,#f6fafb 0%,#eef6f7 100%)}
-.page-head .label{font-family:"Poppins","Noto Sans JP",sans-serif;font-size:15.5px;font-weight:500;letter-spacing:.18em;color:var(--teal-500);text-transform:uppercase}
+.page-head .label{opacity:.65;font-family:"Poppins","Noto Sans JP",sans-serif;font-size:15.5px;font-weight:500;letter-spacing:.18em;color:var(--teal-500);text-transform:uppercase}
 .page-head h1{font-size:35.5px;font-weight:500;line-height:1.5;margin-top:6px}
 .page-head .lead{color:var(--gray);margin-top:10px;font-size:16.5px}
 .breadcrumb{font-size:14px;color:var(--gray);margin-bottom:14px}
