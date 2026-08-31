@@ -130,33 +130,10 @@ header.gh{position:fixed;top:0;left:0;right:0;background:rgba(255,255,255,.96);b
   .gh-actions{gap:6px}
 }
 
-/* 記事下CTAバナー（EHS／ISOテーマ） */
-.cta-banner{display:grid;grid-template-columns:1fr 1.1fr;border-radius:16px;overflow:hidden;margin-top:60px;box-shadow:0 14px 34px rgba(16,104,120,.16);transition:transform .15s ease,box-shadow .15s ease;text-decoration:none}
-.cta-banner:hover{transform:translateY(-3px);box-shadow:0 20px 44px rgba(16,104,120,.22)}
-.cta-banner .cb-btn{display:flex;align-items:center;justify-content:center;gap:10px;background:#f6941c;color:#fff;font-weight:900;font-size:16px;border-radius:10px;padding:13px 22px;margin-top:18px;box-shadow:0 4px 12px rgba(246,148,28,.35)}
-.cta-banner .cb-arrow{display:inline-flex;align-items:center;justify-content:center;width:24px;height:24px;border-radius:50%;background:rgba(255,255,255,.25);font-size:14px}
-.cta-iso .cb-media{background:#12351f}
-.cta-iso .cb-media img{width:100%;height:100%;object-fit:cover;display:block}
-.cta-iso .cb-body{background:linear-gradient(135deg,#f2f8fe,#dcecfa);padding:26px 28px;display:flex;flex-direction:column;justify-content:center}
-.cta-iso .cb-catch{color:#f0801a;font-size:26px;font-weight:900;line-height:1.3;margin:0 0 6px}
-.cta-iso .cb-text{color:#17303a;font-size:18px;font-weight:700;line-height:1.6;margin:0}
-.cta-iso .cb-text small{display:block;font-size:15px;font-weight:500;color:#3a5560}
-.cta-ehs .cb-left{background:#e9f1f5;padding:26px 26px 22px;display:flex;flex-direction:column;justify-content:center;gap:14px}
-.cta-ehs .cb-title{font-size:19px;font-weight:900;color:#17303a;line-height:1.55;margin:0}
-.cta-ehs .cb-title .em{color:var(--teal-700);font-size:23px}
-.cta-ehs .cb-bubbles{display:flex;gap:10px;flex-wrap:wrap}
-.cta-ehs .cb-bubbles span{background:#fff;border:1px solid #c8d9e0;color:#3a5560;font-size:13px;border-radius:999px;padding:6px 14px}
-.cta-ehs .cb-body{background:linear-gradient(135deg,#eaf4fd,#d8e9fa);padding:24px 28px;display:flex;flex-direction:column;justify-content:center}
-.cta-ehs .cb-lead{font-size:15px;font-weight:700;color:#17303a;margin:0 0 4px}
-.cta-ehs .chip-ai{display:inline-block;background:var(--teal-700);color:#fff;font-weight:700;border-radius:6px;padding:3px 12px;margin-right:6px}
-.cta-ehs .cb-num{color:#17303a;font-weight:900;font-size:18px;margin:0;line-height:1.2}
-.cta-ehs .cb-num b{color:#f0801a;font-size:44px;font-family:"Poppins","Noto Sans JP",sans-serif}
-.cta-ehs .cb-num small{color:#f0801a;font-size:20px;margin-right:8px}
-@media(max-width:700px){
-  .cta-banner{grid-template-columns:1fr}
-  .cta-iso .cb-media{aspect-ratio:16/9}
-  .cta-iso .cb-catch{font-size:22px}
-}
+/* 記事下CTAバナー（画像） */
+.cta-banner-img{display:block;margin-top:60px;border-radius:14px;overflow:hidden;box-shadow:0 14px 34px rgba(16,104,120,.16);transition:transform .15s ease,box-shadow .15s ease}
+.cta-banner-img:hover{transform:translateY(-3px);box-shadow:0 20px 44px rgba(16,104,120,.22)}
+.cta-banner-img img{width:100%;height:auto;display:block}
 
 .news-rows{max-width:860px;margin:0 auto}
 .news-row{display:flex;gap:22px;align-items:baseline;padding:18px 10px;border-bottom:1px solid var(--line);font-size:14.5px;color:var(--ink)}
@@ -224,16 +201,8 @@ header.gh{position:fixed;top:0;left:0;right:0;background:rgba(255,255,255,.96);b
       <div class="article-body">
 <p>2026年4月1日より、労働安全衛生法に基づく「製造時等検査制度」の見直しが施行されます。今回の改正では、特定機械等の製造時等検査について、その実施主体や運用方法が整理され、これまで一部で国や公的機関が関与してきた検査が、原則として民間の登録機関によって実施される仕組みへと移行します。</p><p>製造業、化学、エネルギー、建設業など、ボイラーやクレーン等の設備を保有・使用する企業にとって、本改正は単なる制度変更ではありません。検査を「誰が行うか」だけでなく、検査を委託する企業側が、どこまで把握し、どのように管理すべきかが明確に問われる内容となっています。</p><p>本記事では、製造時等検査制度の見直しの背景と概要、対象となる機械、委託管理の考え方、企業が今から取り組むべき対応までを、安全衛生の実務視点で整理します。</p><hr><h2 id="h02832659b3">製造時等検査制度とは何か</h2><p>製造時等検査制度とは、ボイラーやクレーンなど、重大な労働災害につながるおそれのある特定機械等について、製造段階や設置前の段階で安全性を確認するために行われる検査制度です。これにより、使用開始前に構造や性能が法令基準を満たしているかを確認し、事故の未然防止を図ることを目的としています。</p><p>【注釈】<br>製造時等検査：特定機械等が製造された段階や設置前の段階で実施される安全性確認のための検査。</p><p>【出典】<br>厚生労働省「労働安全衛生法の概要」<br><a href="https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/koyou_roudou/roudoukijun/anzen/an-eihou/index_00001.html" target="_blank" rel="noopener noreferrer nofollow">https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/koyou_roudou/roudoukijun/anzen/an-eihou/index_00001.html</a></p><hr><h2 id="h8209b883b1">2026年4月施行の制度見直しのポイント</h2><p>今回の見直しの大きなポイントは、製造時等検査の実施主体が整理され、原則として民間の登録機関が検査を行う仕組みに統一される点です。特に、移動式クレーンやゴンドラについては、登録を受けた民間機関（登録設計審査等機関）が製造時等検査を実施することとなります。</p><p>これにより、民間検査機関の役割が拡大する一方で、検査を委託する企業側には、検査内容や結果を正しく理解し、必要な対応を行う責任がこれまで以上に求められます。</p><p>【注釈】<br>登録設計審査等機関：国の登録を受け、設計審査や製造時等検査を実施する民間機関。</p><p>【出典】<br>厚生労働省 京都労働局「特定機械等の製造時等検査制度の見直しについて」<br><a href="https://jsite.mhlw.go.jp/kyoto-roudoukyoku/content/contents/002362310.pdf" target="_blank" rel="noopener noreferrer nofollow">https://jsite.mhlw.go.jp/kyoto-roudoukyoku/content/contents/002362310.pdf</a></p><hr><h2 id="h90ebd4b0eb">対象となる機械と検査の考え方</h2><p>今回の制度見直しでは、製造時等検査の対象となる特定機械のうち、以下のような機械が整理されています。</p><p>・移動式クレーン<br>・クレーン<br>・ゴンドラ<br>・ボイラー<br>・第一種圧力容器 など</p><p>これらの機械については、製造時等検査を経たうえでなければ、原則として使用することができません。検査を誰が実施するかだけでなく、検査が適切に完了しているか、検査結果が保存・管理されているかが重要となります。</p><hr><h2 id="h48de00ada5">委託管理はどう変わるのか</h2><p>制度見直しにより、製造時等検査の多くが民間検査機関により実施されるようになりますが、これにより「検査は外部に任せているから安心」という考え方は通用しなくなります。</p><p>企業側には、以下のような管理が求められます。</p><p>・どの設備について、どの検査機関に検査を委託しているかを把握しているか<br>・検査の範囲や内容が契約書等で明確になっているか<br>・検査結果や是正事項を社内で共有し、対応状況を管理できているか</p><p>【注釈】<br>委託管理：外部に業務を委託していても、その内容や結果について事業者が責任を持って把握・管理すること。</p><hr><h2 id="h97b43312fe">見落としやすい実務上の注意点</h2><p>製造時等検査制度の見直しにおいて、実務上見落とされやすいのが「契約内容の確認」と「記録管理」です。長年同じ検査機関に委託している場合、契約書の内容が現行制度に即していないケースも少なくありません。</p><p>また、検査結果や検査証明書を紙やExcelで管理している場合、担当者が異動・退職した際に情報が引き継がれず、属人化のリスクが高まります。監督指導や内部監査の際に、検査履歴を即座に提示できないことは、リスク要因となります。</p><hr><h2 id="hcaff8f2172">企業が今から取り組むべき対応チェックリスト</h2><p>2026年4月の施行に向け、企業が今から取り組むべき対応は以下の通りです。</p><p>・自社が保有・導入している特定機械等の洗い出し<br>・対象設備について、製造時等検査が必要かの確認<br>・委託している登録検査機関・登録設計審査等機関の把握<br>・検査委託契約の内容確認と必要に応じた見直し<br>・検査結果および是正対応の管理方法の整理</p><p>これらを早期に整理することで、施行直前の対応漏れを防ぐことができます。</p><hr><h2 id="he5555e80f9">属人化しがちな安全衛生・検査管理への対応</h2><p>安全衛生に関する法令は頻繁に改正され、設備ごとに求められる対応も異なります。これらを人手だけで管理し続けることには限界があり、属人化が進みやすい領域でもあります。</p><p>特に、複数拠点・複数設備を有する企業では、法令情報や検査状況を一元的に把握できないことが、大きなリスクとなります。</p><hr><h2 id="hfd95db2918">EHS Researchによる支援</h2><p>EHS Researchでは、自社の設備や事業内容を登録するだけで、関連する安全衛生・労働安全衛生法令の改正情報を自動的に抽出し、製造時等検査を含む対応事項を整理・可視化できます。</p><p>従来、調査や整理に1〜3か月を要していた作業も、最短1週間で全体像を把握できるため、属人化を防ぎながら効率的な法令対応が可能となります。</p><hr><h2 id="h21bf5e3d42">安全衛生・労働安全衛生法令の単発調査（無料）のご案内</h2><p>2026年4月施行の製造時等検査制度の見直しについて、<br>・自社設備が対象となるか確認したい<br>・委託管理の見直しポイントを整理したい<br>・見落としている法令がないか確認したい</p><p>といった企業向けに、安全衛生・労働安全衛生法令の単発調査を無料で実施しています。実際の調査レポートをご確認いただき、自社対応の検討にお役立てください。</p><hr><h2 id="h29a417fa44">まとめ｜2026年4月施行の製造時等検査制度見直しに向けて</h2><p>2026年4月に施行される製造時等検査制度の見直しは、検査の実施主体が民間検査機関へと整理されるだけでなく、検査を委託する企業側の管理責任をより明確にする改正です。</p><p>これまでのように「検査は外部に任せているから問題ない」という運用ではなく、</p><p>・自社が保有・導入する設備が検査対象となるか<br>・どの検査機関に、どの検査を委託しているのか<br>・検査結果や是正対応を社内で把握・管理できているか</p><p>といった点を、事業者自身が主体的に整理・管理していく必要があります。</p><p>特に、複数拠点・複数設備を有する企業では、法令改正の把握や検査情報の管理が属人化しやすく、対応の遅れがリスクにつながりかねません。今回の改正を契機として、安全衛生・労働安全衛生に関する法令対応を「一時的な対応」ではなく、「継続的に管理できる仕組み」として見直すことが重要です。</p><p>2026年4月の施行までに全体像を整理し、自社に必要な対応を明確にしておくことで、将来的なリスク低減と安定した安全衛生管理につなげることができます。</p><p><a href="https://eitoss.com/trial/ehs">▶ 関連資料はこちら</a></p>
       </div>
-      <a class="cta-banner cta-ehs" href="../../cayzen/ehsresearch/">
-        <span class="cb-left">
-          <span class="cb-title"><span class="em">環境・労働安全</span> 関連の<br>法令対応のお悩み</span>
-          <span class="cb-bubbles"><span>常に変化する…</span><span>わかりづらい…</span></span>
-        </span>
-        <span class="cb-body">
-          <span class="cb-lead"><span class="chip-ai">AI 調査代行</span>でスピード解決！</span>
-          <span class="cb-num">最大<b>95</b><small>%</small>工数削減</span>
-          <span class="cb-btn">詳しくはこちら <span class="cb-arrow">→</span></span>
-        </span>
+      <a class="cta-banner-img" href="../../cayzen/ehsresearch/">
+        <img src="../../assets/column_bnr_ehs.jpg" alt="環境・労働安全関連の法令対応のお悩み、AI調査代行でスピード解決！最大95%工数削減｜詳しくはこちら" loading="lazy" width="1080" height="300">
       </a>
       <a class="back-link" href="../">← コラム一覧へ戻る</a>
     </article>

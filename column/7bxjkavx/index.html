@@ -130,33 +130,10 @@ header.gh{position:fixed;top:0;left:0;right:0;background:rgba(255,255,255,.96);b
   .gh-actions{gap:6px}
 }
 
-/* 記事下CTAバナー（EHS／ISOテーマ） */
-.cta-banner{display:grid;grid-template-columns:1fr 1.1fr;border-radius:16px;overflow:hidden;margin-top:60px;box-shadow:0 14px 34px rgba(16,104,120,.16);transition:transform .15s ease,box-shadow .15s ease;text-decoration:none}
-.cta-banner:hover{transform:translateY(-3px);box-shadow:0 20px 44px rgba(16,104,120,.22)}
-.cta-banner .cb-btn{display:flex;align-items:center;justify-content:center;gap:10px;background:#f6941c;color:#fff;font-weight:900;font-size:16px;border-radius:10px;padding:13px 22px;margin-top:18px;box-shadow:0 4px 12px rgba(246,148,28,.35)}
-.cta-banner .cb-arrow{display:inline-flex;align-items:center;justify-content:center;width:24px;height:24px;border-radius:50%;background:rgba(255,255,255,.25);font-size:14px}
-.cta-iso .cb-media{background:#12351f}
-.cta-iso .cb-media img{width:100%;height:100%;object-fit:cover;display:block}
-.cta-iso .cb-body{background:linear-gradient(135deg,#f2f8fe,#dcecfa);padding:26px 28px;display:flex;flex-direction:column;justify-content:center}
-.cta-iso .cb-catch{color:#f0801a;font-size:26px;font-weight:900;line-height:1.3;margin:0 0 6px}
-.cta-iso .cb-text{color:#17303a;font-size:18px;font-weight:700;line-height:1.6;margin:0}
-.cta-iso .cb-text small{display:block;font-size:15px;font-weight:500;color:#3a5560}
-.cta-ehs .cb-left{background:#e9f1f5;padding:26px 26px 22px;display:flex;flex-direction:column;justify-content:center;gap:14px}
-.cta-ehs .cb-title{font-size:19px;font-weight:900;color:#17303a;line-height:1.55;margin:0}
-.cta-ehs .cb-title .em{color:var(--teal-700);font-size:23px}
-.cta-ehs .cb-bubbles{display:flex;gap:10px;flex-wrap:wrap}
-.cta-ehs .cb-bubbles span{background:#fff;border:1px solid #c8d9e0;color:#3a5560;font-size:13px;border-radius:999px;padding:6px 14px}
-.cta-ehs .cb-body{background:linear-gradient(135deg,#eaf4fd,#d8e9fa);padding:24px 28px;display:flex;flex-direction:column;justify-content:center}
-.cta-ehs .cb-lead{font-size:15px;font-weight:700;color:#17303a;margin:0 0 4px}
-.cta-ehs .chip-ai{display:inline-block;background:var(--teal-700);color:#fff;font-weight:700;border-radius:6px;padding:3px 12px;margin-right:6px}
-.cta-ehs .cb-num{color:#17303a;font-weight:900;font-size:18px;margin:0;line-height:1.2}
-.cta-ehs .cb-num b{color:#f0801a;font-size:44px;font-family:"Poppins","Noto Sans JP",sans-serif}
-.cta-ehs .cb-num small{color:#f0801a;font-size:20px;margin-right:8px}
-@media(max-width:700px){
-  .cta-banner{grid-template-columns:1fr}
-  .cta-iso .cb-media{aspect-ratio:16/9}
-  .cta-iso .cb-catch{font-size:22px}
-}
+/* 記事下CTAバナー（画像） */
+.cta-banner-img{display:block;margin-top:60px;border-radius:14px;overflow:hidden;box-shadow:0 14px 34px rgba(16,104,120,.16);transition:transform .15s ease,box-shadow .15s ease}
+.cta-banner-img:hover{transform:translateY(-3px);box-shadow:0 20px 44px rgba(16,104,120,.22)}
+.cta-banner-img img{width:100%;height:auto;display:block}
 
 .news-rows{max-width:860px;margin:0 auto}
 .news-row{display:flex;gap:22px;align-items:baseline;padding:18px 10px;border-bottom:1px solid var(--line);font-size:14.5px;color:var(--ink)}
@@ -224,16 +201,8 @@ header.gh{position:fixed;top:0;left:0;right:0;background:rgba(255,255,255,.96);b
       <div class="article-body">
 <p>製造現場において、安全対策は欠かせません。</p><p>ちょっとしたミスで重大事故やトラブルにつながる可能性も考えられます。</p><p></p><p>そこでリスク管理の考え方として有効なのが『<strong>スイスチーズモデル</strong>』です。</p><p>スイスチーズモデルをもとに、安全対策を講じている企業もあるでしょう。</p><p></p><p>しかし、その名称は聞いたことあるものの、詳しく知らない方もいるかもしれません。</p><p><br>この記事ではスイスチーズモデルについて解説します。</p><p>製造現場における具体例や重要性も紹介するので、製造業に従事されている方はぜひ参考にしてください。</p><p></p><blockquote><p>目次</p></blockquote><ul><li>スイスチーズモデルとは</li><li>製造現場におけるスイスチーズモデルの具体例①</li></ul><ul><li>製造現場におけるスイスチーズモデルの具体例②</li></ul><ul><li>スイスチーズの穴を見極めるためには</li><li>まとめ<p></p></li></ul><p></p><h2 id="h1a8eeca7c4">スイスチーズモデルとは</h2><p>スイスチーズモデルとは<strong>「安全対策をいくつも構築することで、事故が起こる可能性を減らせる考え方」</strong>のことです。</p><p>イギリスの心理学者であるジェームズ・リーズンにより提唱されました。</p><p></p><p>事故やトラブルが起こる場面では、いくつかの安全対策を講じます。</p><p>なんらかのヒューマンエラーが生じても、安全対策によって事前に事故やトラブルを防げることが多いです。<br></p><p>しかし完璧と思われている安全対策も、どこかに穴が存在します。</p><p>それはまるでチーズのように、どこかに穴が空いているものです。</p><p></p><p>そこで安全対策として何層も防護壁（チーズ）を立てることで、穴を通過させないようにします。</p><p>どこかに穴が空いている防護壁ですが、いくつも立てることで事故やトラブルを防げると示したものが、スイスチーズモデルの考え方です。</p><p><br></p><h2 id="hfaa8069925">製造現場におけるスイスチーズモデルの具体例①</h2><p>スイスチーズモデルの具体例を紹介します。</p><p><br></p><h3 id="h450f035223">製造現場の状況</h3><p>大型洗濯機をメンテナンスする際、普段稼動していない休日に行うことになっている。</p><p>メンテナンス業務は知識と技術の両方を兼ね備えていないとできない。</p><p>技術がない担当者も多いため、大型洗濯機1台に対して1人で担当している。</p><p></p><p>メンテナンス業務には大型洗濯機の中に入って行う作業もあり、周囲の声は届きにくい。</p><p>大型洗濯機は全部で10機あるが5メートルほどの間隔があいており、隣で行っている作業内容は目視しづらい。</p><p><br></p><h3 id="h6280de6c59">考えられる事故・トラブル</h3><p>メンテナンス業務を行う前に主電源を切っておくが、忘れてしまうと作業中に大型洗濯機が稼動してしまうおそれがある。</p><p>稼動した大型洗濯機に巻き込まれてけがをする、最悪の場合は死亡する可能性もある。<br></p><h3 id="h551e2fb12b">1枚目のチーズと穴</h3><p><strong>1枚目のチーズ</strong>：主電源を切る際は必ず二人で行う<br></p><p><strong>考えられる穴</strong>：ほかの作業員が周りにいなかったため、自分一人で電源を落としたつもりが切れていなかった</p><p>二人で主電源に向かったものの、主電源を切る作業を片方に任せてしまい、ダブルチェックができていなかった</p><p></p><h3 id="hb80ad7d9d3">2枚目のチーズと穴</h3><p><strong>2枚目のチーズ</strong>：大型洗濯機の主電源を切る作業は必ず二人で行うと、作業手順書に明記する</p><p></p><p><strong>考えられる穴</strong>：作業手順書の作成後、メンテナンス業務担当者全員に読み合わせを行わなかった</p><p>新しくメンテナンス業務に従事するよう任命された担当者に、作業手順書の読み合わせを行わなかった</p><p>業務担当者がそれぞれマイルールを作り、作業手順書の順序に従わなかった<br></p><p></p><h2 id="hcd9faccf26">製造現場におけるスイスチーズモデルの具体例②</h2><p>製造現場におけるスイスチーズモデルの2例目を紹介します。</p><p><br></p><h3 id="h450f035223">製造現場の状況</h3><p>プラスチックの原料に色をつけるため、液体の添加剤を加える業務がある。</p><p>液体の添加剤は合計で4種類あり、ロットごとに添加剤を加える量を調整しなければならない。</p><p><br></p><p>添加材を加える量が記載されている業務日報は、モニターを見ながらすべて手書きで書かなくてはならない。</p><p>手書きで書かれた業務日報を現場作業員に手渡しをして、作業にあたるのが基本的な流れ。</p><p><br></p><h3 id="h6280de6c59">考えられる事故・トラブル</h3><p>モニターに表示されている数字を見間違ってしまい、添加剤の加える量が適正でなくなる。</p><p>結果として品質が落ちてしまい、該当するロットの原料を破棄することになる。</p><p><br></p><h3 id="h551e2fb12b">1枚目のチーズと穴</h3><p><strong>1枚目のチーズ</strong>：業務日報とモニターの数字が間違っていないか、第三者にチェックしてもらう<br></p><p><strong>考えられる穴</strong>：チェックしてもらう第三者が見つからないため、そのまま現場作業員に渡してしまう</p><p>第三者がいい加減にチェックしたので、数字の間違いに気づかない</p><p><br></p><h3 id="hb80ad7d9d3">2枚目のチーズと穴</h3><p><strong>2枚目のチーズ</strong>：モニターの数字を電子データとして印刷する仕組みを導入する<br></p><p><strong>考えられる穴</strong>：予期せぬトラブルにより印刷できない</p><p>違うモニターの画面を印刷してしまう</p><p><br></p><h2 id="h1ba7d2ea03">スイスチーズの穴を見極めるには</h2><p>完璧だと思えたスイスチーズにも、穴はどこかに空いているものです。</p><p>しかし、スイスチーズの穴を見極めるのはなかなか難しく、見つからないケースも考えられます。</p><p><br>そこで、スイスチーズの穴を見極める方法を紹介します。</p><p><br></p><h3 id="h792a78fe3a">スイスチーズの穴を見極める方法1.ヒヤリハットの記録をつける</h3><p>重大な事故やトラブルが起こる前には、ヒヤッとしたりハッとしたりすることが起きているケースも珍しくありません。</p><p>危ないことが起こったものの、事故やトラブルにつながらなかった事象を<strong>ヒヤリハット</strong>とよびます。<br></p><p>1件の重大事故の裏には29件の軽微な事故、300件のヒヤリハットがあるといわれています。</p><p>これを『ハインリッヒの法則』とよび、製造現場の安全対策を考える際にも有効です。<br></p><p>これまでにどのようなヒヤリハットが起きたのかを洗い出して、一つずつ記録していきます。</p><p>この記録が、<strong>どのような事故やトラブルにつながるのかを事前に把握するヒント</strong>になるのです。</p><p><br></p><h3 id="h29c3797a2e">スイスチーズの穴を見極める方法2.KYTを実施する</h3><p><strong>どのような危険が潜んでいるのかを予知するトレーニング（KYT）を積む</strong>ことで、スイスチーズの穴がどこにあるのかを見つけられるようになります。</p><p></p><p>製造現場のことを最もよく知っているのは現場作業員です。</p><p>現場作業員の危険に対する意識を高めることで、結果的にスイスチーズの穴を見つけることにもつながります。<br></p><p></p><h2 id="ha214098e44">まとめ</h2><p>製造現場は常に危険と隣り合わせです。</p><p>安全対策を怠ると、重大な事故やトラブルに巻き込まれる危険性をはらんでいます。</p><p></p><p>そこで役立つのがスイスチーズモデルです。</p><p></p><p>単体の防護壁では安全対策として弱く、複数設けても穴がある可能性があります。</p><p>そこで<strong>さまざまな視点から安全対策（チーズ）を振り返り、穴に即座に対応できるようにしておく</strong>必要があります。</p><p></p><p>製造現場におけるスイスチーズモデルの具体例も紹介しました。</p><p>この機会に、スイスチーズモデルをもとにした安全対策を講じてみてはいかがでしょうか？</p><p></p><p></p><blockquote><p><br>エイトスでは、提案活動を活性化させる方法や、従業員が自律的に動ける組織文化を作る支援をしています。無料でのご相談をしておりますので、<a href="https://eitoss.com/form/contact" target="_blank" rel="noopener noreferrer nofollow">是非一度ご連絡ください</a>。</p><p>さらに改善のDX化についてのノウハウや最新情報をメルマガで定期配信しているので、ぜひ下記URLからご登録お願い致します。<a href="https://mail.salesdiv.jp/bm/p/f/tf.php?id=eitoss0920&amp;task=regist" target="_blank" rel="noopener noreferrer nofollow">https://mail.salesdiv.jp/bm/p/f/tf.php?id=eitoss0920&amp;task=regist</a></p></blockquote>
       </div>
-      <a class="cta-banner cta-ehs" href="../../cayzen/ehsresearch/">
-        <span class="cb-left">
-          <span class="cb-title"><span class="em">環境・労働安全</span> 関連の<br>法令対応のお悩み</span>
-          <span class="cb-bubbles"><span>常に変化する…</span><span>わかりづらい…</span></span>
-        </span>
-        <span class="cb-body">
-          <span class="cb-lead"><span class="chip-ai">AI 調査代行</span>でスピード解決！</span>
-          <span class="cb-num">最大<b>95</b><small>%</small>工数削減</span>
-          <span class="cb-btn">詳しくはこちら <span class="cb-arrow">→</span></span>
-        </span>
+      <a class="cta-banner-img" href="../../cayzen/ehsresearch/">
+        <img src="../../assets/column_bnr_ehs.jpg" alt="環境・労働安全関連の法令対応のお悩み、AI調査代行でスピード解決！最大95%工数削減｜詳しくはこちら" loading="lazy" width="1080" height="300">
       </a>
       <a class="back-link" href="../">← コラム一覧へ戻る</a>
     </article>
