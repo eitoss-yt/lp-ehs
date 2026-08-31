@@ -230,7 +230,7 @@ header.gh{position:fixed;top:0;left:0;right:0;background:rgba(255,255,255,.96);b
 /* 記事下CTAバナー（画像） */
 .cta-banner-img{display:block;margin-top:60px;border-radius:14px;overflow:hidden;box-shadow:0 14px 34px rgba(16,104,120,.16);transition:transform .15s ease,box-shadow .15s ease}
 .cta-banner-img:hover{transform:translateY(-3px);box-shadow:0 20px 44px rgba(16,104,120,.22)}
-.cta-banner-img img{width:100%;height:auto;display:block}
+.cta-banner-img img{width:100%;height:auto;display:block;margin:0;border-radius:0;box-shadow:none}
 
 .news-rows{max-width:860px;margin:0 auto}
 .news-row{display:flex;gap:22px;align-items:baseline;padding:18px 10px;border-bottom:1px solid var(--line);font-size:14.5px;color:var(--ink)}
@@ -378,9 +378,26 @@ function ctaBanner(a) {
         <img src="../../assets/column_bnr_iso14001.jpg" alt="どう変わる？ISO14001の改訂を現場レベルで確認するポイント｜詳しくはこちら" loading="lazy" width="1080" height="300">
       </a>`;
   }
-  return `<a class="cta-banner-img" href="../../cayzen/ehsresearch/">
+  return `<a class="cta-banner-img" href="../../document/ehs-research/">
         <img src="../../assets/column_bnr_ehs.jpg" alt="環境・労働安全関連の法令対応のお悩み、AI調査代行でスピード解決！最大95%工数削減｜詳しくはこちら" loading="lazy" width="1080" height="300">
       </a>`;
+}
+
+// 本文の中間（中央に最も近いh2見出しの直前、なければ中央付近の段落の直後）にバナーを挿入
+function insertMidBanner(html, banner) {
+  if (!html || html.length < 1200) return html; // 短い記事には入れない
+  const mid = html.length / 2;
+  const h2s = [...html.matchAll(/<h2[\s>]/g)].map(m => m.index).filter(i => i > html.length * 0.2 && i < html.length * 0.85);
+  if (h2s.length) {
+    const pos = h2s.reduce((a, b) => Math.abs(b - mid) < Math.abs(a - mid) ? b : a);
+    return html.slice(0, pos) + banner + '\n' + html.slice(pos);
+  }
+  const ps = [...html.matchAll(/<\/p>/g)].map(m => m.index + 4).filter(i => i > html.length * 0.3 && i < html.length * 0.8);
+  if (ps.length) {
+    const pos = ps.reduce((a, b) => Math.abs(b - mid) < Math.abs(a - mid) ? b : a);
+    return html.slice(0, pos) + '\n' + banner + '\n' + html.slice(pos);
+  }
+  return html;
 }
 
 function articlePage(a) {
@@ -399,7 +416,7 @@ function articlePage(a) {
     <article class="post">
       ${a.eyecatch?.url && !bodyOf(a).trimStart().startsWith('<img') ? `<div class="post-eyecatch"><img src="${esc(a.eyecatch.url)}?w=1280&fm=webp" alt=""></div>` : ''}
       <div class="article-body">
-${stripEmoji(bodyOf(a))}
+${insertMidBanner(stripEmoji(bodyOf(a)), ctaBanner(a))}
       </div>
       ${ctaBanner(a)}
       <a class="back-link" href="../">← コラム一覧へ戻る</a>
