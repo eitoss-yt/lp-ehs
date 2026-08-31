@@ -204,13 +204,6 @@ header{position:fixed;top:0;left:0;right:0;background:rgba(255,255,255,.94);back
 .company th{width:190px;background:var(--teal-050);color:var(--teal-900);font-weight:500;text-align:left;padding:14px 18px;border-bottom:1px solid var(--line);vertical-align:top}
 .company td{padding:14px 18px;border-bottom:1px solid var(--line);color:var(--ink)}
 
-/* footer */
-footer{background:var(--teal-900);color:#fff;padding:46px 0 30px}
-.footer-inner{display:flex;flex-direction:column;align-items:center;gap:14px;text-align:center}
-.footer-brand{background:#fff;border-radius:10px;padding:12px 22px}
-.footer-brand img{height:30px}
-footer p{font-size:14.5px;color:rgba(255,255,255,.8)}
-footer .copy{font-size:13.5px;color:rgba(255,255,255,.55);margin-top:12px}
 
 /* animations */
 html.js .hero-anim{opacity:0;transform:translateY(18px)}
@@ -302,6 +295,18 @@ section.wm .section-title{padding-top:34px}
 @media(max-width:760px){section.wm .section-title{padding-top:10px}}
 section.wm.wm-light::before{color:rgba(255,255,255,.05)}
 @media(max-width:760px){section.wm::before{font-size:72px;top:20px}}
+
+footer{background:var(--teal-900);color:#fff;padding:56px 0 28px}
+.footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:44px;align-items:start;max-width:1080px;margin:0 auto}
+.footer-brand{background:#fff;border-radius:10px;padding:12px 20px;display:inline-block}
+.footer-brand img{height:32px;width:auto;display:block}
+.footer-addr{font-size:13.5px;color:rgba(255,255,255,.75);margin-top:18px;line-height:2}
+.footer-head{font-size:15.5px;font-weight:500;color:#fff;letter-spacing:.08em;margin-bottom:14px;padding-bottom:8px;border-bottom:1px solid rgba(255,255,255,.2)}
+.footer-col a{display:block;font-size:14.5px;color:rgba(255,255,255,.8);margin-bottom:10px}
+.footer-col a:hover{color:#fff}
+footer .copy{font-size:12.5px;color:rgba(255,255,255,.55);text-align:center;margin-top:44px;padding-top:20px;border-top:1px solid rgba(255,255,255,.12)}
+@media(max-width:860px){.footer-grid{grid-template-columns:1fr 1fr;gap:30px}}
+@media(max-width:560px){.footer-grid{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -669,9 +674,33 @@ section.wm.wm-light::before{color:rgba(255,255,255,.05)}
 </main>
 
 <footer>
-  <div class="container footer-inner">
-    <div class="footer-brand"><img src="assets/logo.png" alt="Cayzen EHS Research"></div>
-    <p>エイトス株式会社｜本社: 愛知県豊田市小坂本町1-5-5 YAMATO BLDG2F　東京支店: 東京都豊島区東池袋3-1-1 サンシャイン60 12F</p>
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand"><img src="../../assets/logo-corporate-horizontal-single.svg" alt="eitoss"></div>
+        <p class="footer-addr">本社: 〒471-0031<br>愛知県豊田市小坂本町1-5-5 YAMATO BLDG2F<br>営業拠点: 東京都豊島区東池袋3-1-1<br>サンシャイン60 12F</p>
+      </div>
+      <nav class="footer-col">
+        <p class="footer-head">サービス</p>
+        <a href="../../cayzen/ehsresearch/">Cayzen EHS Research</a>
+        <a href="../../cayzen/knowledgemanagement/">Cayzen ナレッジマネジメント</a>
+        <a href="../../cayzen/iso/">Cayzen ISO サポート</a>
+      </nav>
+      <nav class="footer-col">
+        <p class="footer-head">コンテンツ</p>
+        <a href="../../seminar/">セミナー</a>
+        <a href="../../column/">コラム</a>
+        <a href="../../news/">ニュース</a>
+        <a href="../../document/">資料ダウンロード</a>
+        <a href="../../resources/">お役立ち資料</a>
+      </nav>
+      <nav class="footer-col">
+        <p class="footer-head">企業情報</p>
+        <a href="../../#company">会社概要</a>
+        <a href="https://eitoss.notion.site/f56f60f846fe4af9bfa33420cf19103e" target="_blank" rel="noopener">採用情報</a>
+        <a href="../../#contact">お問い合わせ</a>
+      </nav>
+    </div>
     <p class="copy">© Eitoss Inc. All rights reserved.</p>
   </div>
 </footer>
