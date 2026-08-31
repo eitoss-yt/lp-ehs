@@ -323,7 +323,7 @@ ${bodyHtml}
     <div class="footer-grid">
       <div>
         <div class="footer-brand"><img src="${rel}assets/logo-corporate-horizontal-white.png" alt="eitoss"></div>
-        <p class="footer-addr">本社: 〒471-0031<br>愛知県豊田市小坂本町1-5-5 YAMATO BLDG2F<br>営業拠点: 東京都豊島区東池袋3-1-1<br>サンシャイン60 12F</p>
+        <p class="footer-addr">本社: 〒471-0031<br>愛知県豊田市小坂本町1-5-5 YAMATO BLDG2F<br>営業拠点: 〒170-6012<br>東京都豊島区東池袋3-1-1<br>サンシャイン60 12F</p>
       </div>
       <nav class="footer-col">
         <p class="footer-head">サービス</p>
