@@ -65,7 +65,8 @@ header{position:fixed;top:0;left:0;right:0;background:rgba(255,255,255,.94);back
 /* hero */
 .hero{position:relative;padding:200px 0 110px;background:linear-gradient(180deg,rgba(8,28,40,.42),rgba(8,28,40,.58)),url(assets/hero-bg.jpg) center/cover no-repeat;overflow:hidden;text-align:center}
 .hero h1{font-size:42px;font-weight:900;line-height:1.6;letter-spacing:.02em;color:#fff;text-shadow:0 2px 18px rgba(4,20,28,.45)}
-.hero-en{font-family:"Poppins","Noto Sans JP",sans-serif;font-size:15px;font-weight:600;letter-spacing:.14em;color:var(--teal-100);margin-bottom:14px;text-shadow:0 1px 10px rgba(4,20,28,.5)}
+.hero h1.hero-en-main{font-family:"Poppins","Noto Sans JP",sans-serif;font-size:56px;font-weight:700;line-height:1.3;letter-spacing:.01em}
+.hero-jp{margin:26px auto 40px;color:rgba(255,255,255,.92);font-size:19px;font-weight:500;letter-spacing:.04em;text-shadow:0 1px 12px rgba(4,20,28,.5)}
 .hero h1 .em{color:var(--teal-100)}
 .hero-sub{max-width:680px;margin:24px auto 36px;color:rgba(255,255,255,.88);font-size:15.5px;text-shadow:0 1px 12px rgba(4,20,28,.5)}
 .hero-cta{display:flex;gap:16px;flex-wrap:wrap;justify-content:center}
@@ -114,6 +115,10 @@ header{position:fixed;top:0;left:0;right:0;background:rgba(255,255,255,.94);back
 .res-card .more::after{content:" →"}
 @media(max-width:760px){.res-grid{grid-template-columns:1fr}}
 
+/* mission */
+.mission{background:#fff;padding:70px 0 56px}
+.mission .section-title{font-size:30px}
+
 /* vision */
 .vision{background:linear-gradient(135deg,var(--teal-900),var(--teal-700));color:#fff}
 .vision .section-label{color:var(--teal-100)}
@@ -161,6 +166,8 @@ html.hero-go .hd2{transition-delay:.26s}
 @media(max-width:900px){
   .sv-grid{grid-template-columns:1fr}
   .hero h1{font-size:29px}
+  .hero h1.hero-en-main{font-size:30px}
+  .hero-jp{font-size:15px}
   .hero{padding:120px 0 70px}
   .section-title{font-size:24px}
   section{padding:60px 0}
@@ -252,9 +259,8 @@ header.gh{position:fixed;top:0;left:0;right:0;background:rgba(255,255,255,.96);b
   <!-- HERO -->
   <div class="hero">
     <div class="container">
-      <p class="hero-en hero-anim">Safe Environment. Enriched Lives. Sustainable Future.</p>
-      <h1 class="hero-anim">人と社会を<span class="em">豊か</span>にし、<br>次の世代に<span class="em">つなげる</span></h1>
-      <p class="hero-sub hero-anim hd1">エイトスは、EHS（環境・労働安全衛生）の法令対応から現場のしくみづくりまで、Cayzenシリーズを通して、働く人と社会の力を最大限に引き出すことを目指しています。</p>
+      <h1 class="hero-anim hero-en-main">Safe Environment.<br>Enriched Lives.<br>Sustainable Future.</h1>
+      <p class="hero-jp hero-anim hd1">人と社会を豊かにし、次の世代につなげる</p>
       <div class="hero-cta hero-anim hd2">
         <a class="btn btn-primary" href="#services">サービスを見る</a>
         <a class="btn btn-ghost" href="#contact">お問い合わせ</a>
@@ -289,6 +295,22 @@ header.gh{position:fixed;top:0;left:0;right:0;background:rgba(255,255,255,.96);b
       <p class="clients-note">※ Cayzenの各サービスのご利用を含む導入実績です</p>
     </div>
   </div>
+
+  <!-- MISSION -->
+  <section class="mission" id="mission">
+    <div class="container">
+      <p class="section-label">Mission</p>
+      <h2 class="section-title">「人と社会を豊かにし、次の世代につなげる」</h2>
+    </div>
+  </section>
+
+  <!-- VISION -->
+  <section class="vision" id="vision">
+    <div class="container">
+      <p class="section-label">Vision</p>
+      <p class="vision-body">私たちのすべての事業活動は、新たな機会と可能性を社会に実装し、今と未来を生きる人と社会の力を最大限に引き出すことを目的としています。<br>変化の時代において、常に挑戦と革新を重ねながら、社会を前進させ、より豊かで持続可能な社会の実現に貢献します。<br>私たちは、次の世代へと価値を継承し、未来を共に創造していく企業であり続けます。</p>
+    </div>
+  </section>
 
   <!-- SERVICES -->
   <section class="services" id="services">
@@ -357,15 +379,6 @@ header.gh{position:fixed;top:0;left:0;right:0;background:rgba(255,255,255,.96);b
           <span class="more">セミナー一覧を見る</span>
         </a>
       </div>
-    </div>
-  </section>
-
-  <!-- VISION -->
-  <section class="vision" id="vision">
-    <div class="container">
-      <p class="section-label">Mission / Vision</p>
-      <h2 class="section-title">人と社会を豊かにし、次の世代につなげる</h2>
-      <p class="vision-body">私たちのすべての事業活動は、新たな機会と可能性を社会に実装し、今と未来を生きる人と社会の力を最大限に引き出すことを目的としています。<br>変化の時代において、常に挑戦と革新を重ねながら、社会を前進させ、より豊かで持続可能な社会の実現に貢献します。<br>私たちは、次の世代へと価値を継承し、未来を共に創造していく企業であり続けます。</p>
     </div>
   </section>
 
