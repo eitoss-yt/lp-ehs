@@ -125,6 +125,9 @@ header{position:fixed;top:0;left:0;right:0;background:rgba(255,255,255,.94);back
 
 /* mission / vision（地続きの1ブロック） */
 .mv{position:relative;padding:120px 0;text-align:center;background:linear-gradient(180deg,rgba(8,28,40,.55),rgba(8,28,40,.66)),url(assets/hero-bg.jpg) center/cover no-repeat}
+.mv .mv-scrim{position:relative}
+.mv .mv-scrim::before{content:"";position:absolute;inset:-52px -6%;background:radial-gradient(58% 78% at 50% 50%,rgba(6,24,34,.55),rgba(6,24,34,0) 74%);-webkit-backdrop-filter:blur(7px);backdrop-filter:blur(7px);-webkit-mask-image:radial-gradient(58% 78% at 50% 50%,#000 46%,transparent 76%);mask-image:radial-gradient(58% 78% at 50% 50%,#000 46%,transparent 76%);pointer-events:none}
+.mv .mv-scrim>*{position:relative}
 .mission-label{opacity:.65;font-family:"Poppins","Noto Sans JP",sans-serif;font-size:37.5px;font-weight:500;letter-spacing:.12em;color:#fff;margin-bottom:22px}
 .mission-copy{text-wrap:balance;font-size:33.5px;font-weight:500;color:#fff;line-height:1.7;letter-spacing:.04em;text-shadow:0 1px 14px rgba(4,20,28,.5)}
 .mv-divider{border:none;height:1px;background:rgba(255,255,255,.55);max-width:860px;margin:80px auto}
@@ -331,12 +334,12 @@ footer .copy{font-size:12.5px;color:rgba(255,255,255,.55);text-align:center;marg
 
   <!-- MISSION / VISION -->
   <section class="mv" id="mission">
-    <div class="container">
+    <div class="container mv-scrim">
       <p class="mission-label reveal">MISSION</p>
       <p class="mission-copy reveal" style="transition-delay:.15s">「人と社会を豊かにし、次の世代につなげる」</p>
     </div>
     <div class="container"><hr class="mv-divider reveal"></div>
-    <div class="container" id="vision">
+    <div class="container mv-scrim" id="vision">
       <p class="vision-label reveal">VISION</p>
       <div class="vision-body reveal" style="transition-delay:.15s">
         <p>私たちのすべての事業活動は、新たな機会と可能性を社会に実装し、今と未来を生きる人と社会の力を最大限に引き出すことを目的としています。</p>
@@ -362,7 +365,7 @@ footer .copy{font-size:12.5px;color:rgba(255,255,255,.55);text-align:center;marg
           </div>
         </a>
         <a class="sv-card" href="cayzen/knowledgemanagement/">
-          <div class="thumb"><img src="assets/service-km.png" alt="Cayzen ナレッジマネジメントのLP画面"></div>
+          <div class="thumb"><img src="assets/service-km-kv.jpg" alt="Cayzen ナレッジマネジメント 紹介ビジュアル"></div>
           <div class="body">
             <span class="tag">SaaSプロダクト</span>
             <h3>Cayzen ナレッジマネジメント</h3>
@@ -371,7 +374,7 @@ footer .copy{font-size:12.5px;color:rgba(255,255,255,.55);text-align:center;marg
           </div>
         </a>
         <a class="sv-card" href="cayzen/iso/">
-          <div class="thumb"><img src="assets/service-iso.png" alt="Cayzen ISOサポートのLP画面"></div>
+          <div class="thumb"><img src="assets/service-iso-kv.jpg" alt="Cayzen ISOサポート 紹介動画のキャプチャ"></div>
           <div class="body">
             <span class="tag">コンサルティング</span>
             <h3>Cayzen ISO サポート</h3>
