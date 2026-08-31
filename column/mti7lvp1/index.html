@@ -130,33 +130,10 @@ header.gh{position:fixed;top:0;left:0;right:0;background:rgba(255,255,255,.96);b
   .gh-actions{gap:6px}
 }
 
-/* 記事下CTAバナー（EHS／ISOテーマ） */
-.cta-banner{display:grid;grid-template-columns:1fr 1.1fr;border-radius:16px;overflow:hidden;margin-top:60px;box-shadow:0 14px 34px rgba(16,104,120,.16);transition:transform .15s ease,box-shadow .15s ease;text-decoration:none}
-.cta-banner:hover{transform:translateY(-3px);box-shadow:0 20px 44px rgba(16,104,120,.22)}
-.cta-banner .cb-btn{display:flex;align-items:center;justify-content:center;gap:10px;background:#f6941c;color:#fff;font-weight:900;font-size:16px;border-radius:10px;padding:13px 22px;margin-top:18px;box-shadow:0 4px 12px rgba(246,148,28,.35)}
-.cta-banner .cb-arrow{display:inline-flex;align-items:center;justify-content:center;width:24px;height:24px;border-radius:50%;background:rgba(255,255,255,.25);font-size:14px}
-.cta-iso .cb-media{background:#12351f}
-.cta-iso .cb-media img{width:100%;height:100%;object-fit:cover;display:block}
-.cta-iso .cb-body{background:linear-gradient(135deg,#f2f8fe,#dcecfa);padding:26px 28px;display:flex;flex-direction:column;justify-content:center}
-.cta-iso .cb-catch{color:#f0801a;font-size:26px;font-weight:900;line-height:1.3;margin:0 0 6px}
-.cta-iso .cb-text{color:#17303a;font-size:18px;font-weight:700;line-height:1.6;margin:0}
-.cta-iso .cb-text small{display:block;font-size:15px;font-weight:500;color:#3a5560}
-.cta-ehs .cb-left{background:#e9f1f5;padding:26px 26px 22px;display:flex;flex-direction:column;justify-content:center;gap:14px}
-.cta-ehs .cb-title{font-size:19px;font-weight:900;color:#17303a;line-height:1.55;margin:0}
-.cta-ehs .cb-title .em{color:var(--teal-700);font-size:23px}
-.cta-ehs .cb-bubbles{display:flex;gap:10px;flex-wrap:wrap}
-.cta-ehs .cb-bubbles span{background:#fff;border:1px solid #c8d9e0;color:#3a5560;font-size:13px;border-radius:999px;padding:6px 14px}
-.cta-ehs .cb-body{background:linear-gradient(135deg,#eaf4fd,#d8e9fa);padding:24px 28px;display:flex;flex-direction:column;justify-content:center}
-.cta-ehs .cb-lead{font-size:15px;font-weight:700;color:#17303a;margin:0 0 4px}
-.cta-ehs .chip-ai{display:inline-block;background:var(--teal-700);color:#fff;font-weight:700;border-radius:6px;padding:3px 12px;margin-right:6px}
-.cta-ehs .cb-num{color:#17303a;font-weight:900;font-size:18px;margin:0;line-height:1.2}
-.cta-ehs .cb-num b{color:#f0801a;font-size:44px;font-family:"Poppins","Noto Sans JP",sans-serif}
-.cta-ehs .cb-num small{color:#f0801a;font-size:20px;margin-right:8px}
-@media(max-width:700px){
-  .cta-banner{grid-template-columns:1fr}
-  .cta-iso .cb-media{aspect-ratio:16/9}
-  .cta-iso .cb-catch{font-size:22px}
-}
+/* 記事下CTAバナー（画像） */
+.cta-banner-img{display:block;margin-top:60px;border-radius:14px;overflow:hidden;box-shadow:0 14px 34px rgba(16,104,120,.16);transition:transform .15s ease,box-shadow .15s ease}
+.cta-banner-img:hover{transform:translateY(-3px);box-shadow:0 20px 44px rgba(16,104,120,.22)}
+.cta-banner-img img{width:100%;height:auto;display:block}
 
 .news-rows{max-width:860px;margin:0 auto}
 .news-row{display:flex;gap:22px;align-items:baseline;padding:18px 10px;border-bottom:1px solid var(--line);font-size:14.5px;color:var(--ink)}
@@ -224,16 +201,8 @@ header.gh{position:fixed;top:0;left:0;right:0;background:rgba(255,255,255,.96);b
       <div class="article-body">
 <h2 id="h8d44f46252">現場の改善は、最終的には会社だけではなく、「社員の利益」になる。永嶋代表の考える改善を通して作りたい組織とは？</h2><p>以前より、改善活動は、会社だけでなく「社員に利益をもたらす」ことを実感してほしいと考えていたVIETNAM NAGASHIMA CO.,LTD 代表取締役 永嶋茂様に導入の経緯や効果などについてお話しを伺いました。</p><h2 id="h214824962e"><strong>上から下への一方的な改善の指示という風潮を変えたかった</strong></h2><p><strong>ーーCayzenに興味を持ったきっかけを伺えますでしょうか。</strong></p><p>これまでも5S活動を中心に現場改善活動をしていました。活動は、週一回管理者が巡回して課題を現場に伝えて、改善してもらう、という取り組みが中心。会社としても方針を掲げていく中で、現場の改善にも新しい取り組みを入れていきたいと考えていたタイミングでCayzenの話を聞き、導入に至りました。</p><p></p><p><strong>ーー特にどのような点を課題に感じられていましたか?</strong></p><p>ベトナムで周りのメーカー改善活動の状況等を見ていると、改善のノウハウを持った方が現場で改善活動を推進しているケースでは、活動が活発に行われていると感じています。私達も管理者を中心に、改善活動を進めていましたが、上から下に指示をするという風土ができていました。現場から自発的に改善が提案される様な活動にしていくことで、上から下に改善の指示をするのが前提という風潮を変え、自発的に改善が提案される文化にしていきたいと考えていました。</p><h2 id="h379455733c">改善活動で一番大切にしているのは「持続力」</h2><p><strong>ーー新たな取り組みの導入にあたり、特に意識されたことを教えてください。</strong></p><p>新たな取り組みを進めるためには、リーダーは、社員の意見をしっかりと受け止めるため、社員からの報連相の確認を徹底することが大切だと思っています。やはり、リーダーが話を聞く姿勢がないと、新しいことを進めても、社員はついてこないですから。一方、現場のメンバーにも何かあれば報連相の徹底をすることを意識してもらいたいと思っています。相互に意見を共有することが、新しい取り組みを前に進める上では大事ですね。<br></p><p><strong>ーーCayzenを導入されて良かった点を伺えますでしょうか。</strong></p><p>一番大切だと考えているのは、「持続力」です。やはり、継続しないと効果も生まれないので。ただ、持続するためには、そのためのコミュニケーション等の負荷が高まります。Cayzenでは、リアルタイムで改善活動が見える化され、確認やフィードバックが簡単にできるので、活動を継続する負担が減るので、持続的な活動にしやすいと考えています。</p><p></p><h2 id="h6cb564ab4e">「社員の利益」になることが、何よりも大切</h2><p><strong>ーー最後に今後目指す工場像や現場に対する想いを教えてください。</strong></p><p>改善活動自体は、会社全体に利益をもたらす、というものだけではなく、その精神自体は社員自身の教育にもつながり、普段の業務や、生活にも役に立つはずなので、「社員自身の利益」になることを、実感してほしいと思っています。</p><p>元々は、日本の高品質な技術をベトナムのお客様にも届けていきたい、ということをビジョンにベトナムでの事業を展開していたのですが、独立に伴い、会社全体で新しい標語を作り掲げようと進める中で、自発的に改善活動が行われる風潮もCayzenと共に作っていきたいと考えています。その中で、社員の方に成長を実感してもらえる様な職場であり続けられればと思っています。</p><p>      </p>
       </div>
-      <a class="cta-banner cta-ehs" href="../../cayzen/ehsresearch/">
-        <span class="cb-left">
-          <span class="cb-title"><span class="em">環境・労働安全</span> 関連の<br>法令対応のお悩み</span>
-          <span class="cb-bubbles"><span>常に変化する…</span><span>わかりづらい…</span></span>
-        </span>
-        <span class="cb-body">
-          <span class="cb-lead"><span class="chip-ai">AI 調査代行</span>でスピード解決！</span>
-          <span class="cb-num">最大<b>95</b><small>%</small>工数削減</span>
-          <span class="cb-btn">詳しくはこちら <span class="cb-arrow">→</span></span>
-        </span>
+      <a class="cta-banner-img" href="../../cayzen/ehsresearch/">
+        <img src="../../assets/column_bnr_ehs.jpg" alt="環境・労働安全関連の法令対応のお悩み、AI調査代行でスピード解決！最大95%工数削減｜詳しくはこちら" loading="lazy" width="1080" height="300">
       </a>
       <a class="back-link" href="../">← コラム一覧へ戻る</a>
     </article>

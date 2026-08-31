@@ -130,33 +130,10 @@ header.gh{position:fixed;top:0;left:0;right:0;background:rgba(255,255,255,.96);b
   .gh-actions{gap:6px}
 }
 
-/* 記事下CTAバナー（EHS／ISOテーマ） */
-.cta-banner{display:grid;grid-template-columns:1fr 1.1fr;border-radius:16px;overflow:hidden;margin-top:60px;box-shadow:0 14px 34px rgba(16,104,120,.16);transition:transform .15s ease,box-shadow .15s ease;text-decoration:none}
-.cta-banner:hover{transform:translateY(-3px);box-shadow:0 20px 44px rgba(16,104,120,.22)}
-.cta-banner .cb-btn{display:flex;align-items:center;justify-content:center;gap:10px;background:#f6941c;color:#fff;font-weight:900;font-size:16px;border-radius:10px;padding:13px 22px;margin-top:18px;box-shadow:0 4px 12px rgba(246,148,28,.35)}
-.cta-banner .cb-arrow{display:inline-flex;align-items:center;justify-content:center;width:24px;height:24px;border-radius:50%;background:rgba(255,255,255,.25);font-size:14px}
-.cta-iso .cb-media{background:#12351f}
-.cta-iso .cb-media img{width:100%;height:100%;object-fit:cover;display:block}
-.cta-iso .cb-body{background:linear-gradient(135deg,#f2f8fe,#dcecfa);padding:26px 28px;display:flex;flex-direction:column;justify-content:center}
-.cta-iso .cb-catch{color:#f0801a;font-size:26px;font-weight:900;line-height:1.3;margin:0 0 6px}
-.cta-iso .cb-text{color:#17303a;font-size:18px;font-weight:700;line-height:1.6;margin:0}
-.cta-iso .cb-text small{display:block;font-size:15px;font-weight:500;color:#3a5560}
-.cta-ehs .cb-left{background:#e9f1f5;padding:26px 26px 22px;display:flex;flex-direction:column;justify-content:center;gap:14px}
-.cta-ehs .cb-title{font-size:19px;font-weight:900;color:#17303a;line-height:1.55;margin:0}
-.cta-ehs .cb-title .em{color:var(--teal-700);font-size:23px}
-.cta-ehs .cb-bubbles{display:flex;gap:10px;flex-wrap:wrap}
-.cta-ehs .cb-bubbles span{background:#fff;border:1px solid #c8d9e0;color:#3a5560;font-size:13px;border-radius:999px;padding:6px 14px}
-.cta-ehs .cb-body{background:linear-gradient(135deg,#eaf4fd,#d8e9fa);padding:24px 28px;display:flex;flex-direction:column;justify-content:center}
-.cta-ehs .cb-lead{font-size:15px;font-weight:700;color:#17303a;margin:0 0 4px}
-.cta-ehs .chip-ai{display:inline-block;background:var(--teal-700);color:#fff;font-weight:700;border-radius:6px;padding:3px 12px;margin-right:6px}
-.cta-ehs .cb-num{color:#17303a;font-weight:900;font-size:18px;margin:0;line-height:1.2}
-.cta-ehs .cb-num b{color:#f0801a;font-size:44px;font-family:"Poppins","Noto Sans JP",sans-serif}
-.cta-ehs .cb-num small{color:#f0801a;font-size:20px;margin-right:8px}
-@media(max-width:700px){
-  .cta-banner{grid-template-columns:1fr}
-  .cta-iso .cb-media{aspect-ratio:16/9}
-  .cta-iso .cb-catch{font-size:22px}
-}
+/* 記事下CTAバナー（画像） */
+.cta-banner-img{display:block;margin-top:60px;border-radius:14px;overflow:hidden;box-shadow:0 14px 34px rgba(16,104,120,.16);transition:transform .15s ease,box-shadow .15s ease}
+.cta-banner-img:hover{transform:translateY(-3px);box-shadow:0 20px 44px rgba(16,104,120,.22)}
+.cta-banner-img img{width:100%;height:auto;display:block}
 
 .news-rows{max-width:860px;margin:0 auto}
 .news-row{display:flex;gap:22px;align-items:baseline;padding:18px 10px;border-bottom:1px solid var(--line);font-size:14.5px;color:var(--ink)}
@@ -224,16 +201,8 @@ header.gh{position:fixed;top:0;left:0;right:0;background:rgba(255,255,255,.96);b
       <div class="article-body">
 <p></p><p>このコラムでは製造業の現場で働くみなさんが知っている・知っておくべきワードをわかりやすい例を用いて紹介します。「何となくわかる」から<strong>「全く違う業界の方や新人にもわかりやすく教えることが出来るようになる」</strong>レベルまで理解できるようになりたい方必見です。</p><p>今回は、生産効率を向上させるうえで基本となる3つのタイム（タクトタイム・サイクルタイム・リードタイム）をご紹介します。</p><p></p><blockquote><p>目次</p></blockquote><ul><li>タクトタイムとは</li></ul><ul><li>サイクルタイムとは</li></ul><ul><li>リードタイムとは</li></ul><ul><li>人に説明できるようになるために</li></ul><p></p><p></p><p></p><h2 id="h7b901d44c8">│タクトタイムとは</h2><p>タクトタイムとは<strong>製品1個（台）にかける工程製造時間</strong>の事です。1日の稼働時間を、予定生産数量（顧客のニーズを満たす数量）で割る事で求められます。作業状況は各場所によって異なるので、それぞれのタクトタイムを設定する必要があります。</p><p>タクトとはドイツ語で「指揮棒」、「拍子」を意味します。この言葉が表すように、生産していくうえで一定のリズムをつくるための指標になる時間です。</p><p></p><h2 id="ha1e540a0c0"><strong>│サイクルタイムとは</strong></h2><p>製造過程において、<strong>1つの製品の作業開始から完了まで実際にかかる工程作業時間</strong>の事です。ここでは実際に費やす時間が対象であり、余裕や損失は考慮しません。稼働時間を実際に生産した個数で割って求めることができます。</p><p><strong>サイクルタイムがタクトタイムと等しくなる状態をつくることが理想的</strong>です。必要な個数を効果的な時間配分で作成しているといえるからです。</p><p>タクトタイムを早くすると、必要な個数より多く製造できることになりますが、過剰生産による在庫が発生してしまう可能性もあります。</p><p>しかし、バランスが悪いと無駄な工程が生まれてしまいます。このような生産の流れをせき止めてしまう要因を<strong>ボトルネック</strong>と言います。特定とその解決という無駄な時間も要してしまうため、作業配分を見直したり、設備の再調整によってボトルネックを解消する必要があります。</p><p></p><h2 id="h6cbebf374d"><strong>｜リードタイムとは</strong></h2><p>リードタイムとは、商品の発注から納品に至るまでにかかる（輸送の時間なども含む）すべての時間を表しています。実際には業種や現場によって対象となる工程は異なり、出荷リードタイム、製造リードタイムなど様々な種類に分類することが出来ます。</p><p>リードタイムの中には作業間での待ち時間なども含まれます。そのため工程間のムリ・ムラ・ムダを削減しすることで、リードタイムを短縮、業務効率の向上も見込めます。</p><p></p><p>↓ムリ・ムラ・ムダに関する過去の記事は<a href="https://eitoss.com/article/ItewbeRI" target="_blank" rel="noopener noreferrer nofollow">こちら</a>から</p><p></p><h2 id="h7920f80698"><strong>│人に説明できるようになるために</strong></h2><p>では3つのをわかりやすい例に置き換えて考えてみましょう。</p><p>あなたは<strong>朝方、動き回る小さい子供の着替えを手伝わなければならない</strong>とします。その中には、①服を選ぶ→②子供を捕まえる→③服を着替えさせる→④子供が逃げ回る→⑤子供を捕まえて服を着せる　という工程があると仮定します。</p><p></p><p><strong>・タクトタイム</strong></p><p>→<strong>一つの服を着るのにかける時間</strong>にあたります。この時間がそれぞれの服（Tシャツ、ズボン等）を着るのに最も理想的な時間とされています。例えば、「Tシャツは15秒で着せたらちょうどいい時間で着替えが終わるな、、」という考えがあるとしたら、Tシャツ＝15秒というのがタクトタイムにあたります。（1つの製品にかけるべきとされている時間）</p><p><br>・<strong>サイクルタイム</strong></p><p>→<strong>「実際に服を着る」のにかかる時間</strong>です。ここでは、逃げる子供を捕まえるといったロスタイムを考慮しません。着替え＝服を着るだけ、と考えると服を選ぶ時間はサイクルタイムに含まないことになります。（製品の一連の工程にかかる正味時間）</p><p><br>・<strong>リードタイム</strong></p><p>→<strong>服を選ぶ時間から着替えを終える全ての時間</strong>です。あらかじめ昨日の夜に着る服を決めておいたら、朝はその分時間をカットできますよね。このように、リードタイムは工夫次第で短縮することが可能になります。（発注から納品にかかる時間）</p><p></p><p></p><p></p><p>先述しましたが、3つのタイムは効率的に業務を遂行していくにおいて考えるべき要素です。しかし、実際に業務に関する情報は1つのフィールドでのみ処理されるのではなく、複数の部門をまたぎます。それぞれの部署にはそれぞれの事情や役割があります。そのため、部門間で情報伝達が難しく、大きなロスタイムに繋がります。ここで、<strong>煩雑な情報をデータで整理して一元化すること</strong>が重要であると考えることが出来ます。</p><p></p><p>Cayzenはこのような問題を解決する便利なクラウドサービスです。</p><p>ぜひ一度、御社の状況をヒアリングしたのちに、弊社ツール「<strong>Cayzen</strong>」を用いてどの様なソリューションをご提案できるかディスカッションさせていただけますと幸いです。</p><p></p><p></p><blockquote><p>エイトスでは、提案活動を活性化させる方法や、従業員が自律的に動ける組織文化を作る支援をしています。無料でのご相談をしておりますので、<a href="https://eitoss.com/form/contact" target="_blank" rel="noopener noreferrer nofollow">是非一度ご連絡ください</a>。</p><p>さらに改善のDX化についてのノウハウや最新情報をメルマガで定期配信しているので、ぜひ下記URLからご登録お願い致します。<a href="https://mail.salesdiv.jp/bm/p/f/tf.php?id=eitoss0920&amp;task=regist" target="_blank" rel="noopener noreferrer nofollow">https://mail.salesdiv.jp/bm/p/f/tf.php?id=eitoss0920&amp;task=regist</a></p></blockquote><p></p><p></p>
       </div>
-      <a class="cta-banner cta-ehs" href="../../cayzen/ehsresearch/">
-        <span class="cb-left">
-          <span class="cb-title"><span class="em">環境・労働安全</span> 関連の<br>法令対応のお悩み</span>
-          <span class="cb-bubbles"><span>常に変化する…</span><span>わかりづらい…</span></span>
-        </span>
-        <span class="cb-body">
-          <span class="cb-lead"><span class="chip-ai">AI 調査代行</span>でスピード解決！</span>
-          <span class="cb-num">最大<b>95</b><small>%</small>工数削減</span>
-          <span class="cb-btn">詳しくはこちら <span class="cb-arrow">→</span></span>
-        </span>
+      <a class="cta-banner-img" href="../../cayzen/ehsresearch/">
+        <img src="../../assets/column_bnr_ehs.jpg" alt="環境・労働安全関連の法令対応のお悩み、AI調査代行でスピード解決！最大95%工数削減｜詳しくはこちら" loading="lazy" width="1080" height="300">
       </a>
       <a class="back-link" href="../">← コラム一覧へ戻る</a>
     </article>

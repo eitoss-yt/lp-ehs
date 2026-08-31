@@ -130,33 +130,10 @@ header.gh{position:fixed;top:0;left:0;right:0;background:rgba(255,255,255,.96);b
   .gh-actions{gap:6px}
 }
 
-/* 記事下CTAバナー（EHS／ISOテーマ） */
-.cta-banner{display:grid;grid-template-columns:1fr 1.1fr;border-radius:16px;overflow:hidden;margin-top:60px;box-shadow:0 14px 34px rgba(16,104,120,.16);transition:transform .15s ease,box-shadow .15s ease;text-decoration:none}
-.cta-banner:hover{transform:translateY(-3px);box-shadow:0 20px 44px rgba(16,104,120,.22)}
-.cta-banner .cb-btn{display:flex;align-items:center;justify-content:center;gap:10px;background:#f6941c;color:#fff;font-weight:900;font-size:16px;border-radius:10px;padding:13px 22px;margin-top:18px;box-shadow:0 4px 12px rgba(246,148,28,.35)}
-.cta-banner .cb-arrow{display:inline-flex;align-items:center;justify-content:center;width:24px;height:24px;border-radius:50%;background:rgba(255,255,255,.25);font-size:14px}
-.cta-iso .cb-media{background:#12351f}
-.cta-iso .cb-media img{width:100%;height:100%;object-fit:cover;display:block}
-.cta-iso .cb-body{background:linear-gradient(135deg,#f2f8fe,#dcecfa);padding:26px 28px;display:flex;flex-direction:column;justify-content:center}
-.cta-iso .cb-catch{color:#f0801a;font-size:26px;font-weight:900;line-height:1.3;margin:0 0 6px}
-.cta-iso .cb-text{color:#17303a;font-size:18px;font-weight:700;line-height:1.6;margin:0}
-.cta-iso .cb-text small{display:block;font-size:15px;font-weight:500;color:#3a5560}
-.cta-ehs .cb-left{background:#e9f1f5;padding:26px 26px 22px;display:flex;flex-direction:column;justify-content:center;gap:14px}
-.cta-ehs .cb-title{font-size:19px;font-weight:900;color:#17303a;line-height:1.55;margin:0}
-.cta-ehs .cb-title .em{color:var(--teal-700);font-size:23px}
-.cta-ehs .cb-bubbles{display:flex;gap:10px;flex-wrap:wrap}
-.cta-ehs .cb-bubbles span{background:#fff;border:1px solid #c8d9e0;color:#3a5560;font-size:13px;border-radius:999px;padding:6px 14px}
-.cta-ehs .cb-body{background:linear-gradient(135deg,#eaf4fd,#d8e9fa);padding:24px 28px;display:flex;flex-direction:column;justify-content:center}
-.cta-ehs .cb-lead{font-size:15px;font-weight:700;color:#17303a;margin:0 0 4px}
-.cta-ehs .chip-ai{display:inline-block;background:var(--teal-700);color:#fff;font-weight:700;border-radius:6px;padding:3px 12px;margin-right:6px}
-.cta-ehs .cb-num{color:#17303a;font-weight:900;font-size:18px;margin:0;line-height:1.2}
-.cta-ehs .cb-num b{color:#f0801a;font-size:44px;font-family:"Poppins","Noto Sans JP",sans-serif}
-.cta-ehs .cb-num small{color:#f0801a;font-size:20px;margin-right:8px}
-@media(max-width:700px){
-  .cta-banner{grid-template-columns:1fr}
-  .cta-iso .cb-media{aspect-ratio:16/9}
-  .cta-iso .cb-catch{font-size:22px}
-}
+/* 記事下CTAバナー（画像） */
+.cta-banner-img{display:block;margin-top:60px;border-radius:14px;overflow:hidden;box-shadow:0 14px 34px rgba(16,104,120,.16);transition:transform .15s ease,box-shadow .15s ease}
+.cta-banner-img:hover{transform:translateY(-3px);box-shadow:0 20px 44px rgba(16,104,120,.22)}
+.cta-banner-img img{width:100%;height:auto;display:block}
 
 .news-rows{max-width:860px;margin:0 auto}
 .news-row{display:flex;gap:22px;align-items:baseline;padding:18px 10px;border-bottom:1px solid var(--line);font-size:14.5px;color:var(--ink)}
@@ -224,16 +201,8 @@ header.gh{position:fixed;top:0;left:0;right:0;background:rgba(255,255,255,.96);b
       <div class="article-body">
 <p>自然災害や、新型コロナウイルス感染症の拡大になど、突発的な緊急事態が多く発生している日本。</p><p>企業にとって脅威となるさまざまな緊急事態が発生した際、トラブルからの速やかな復旧や、トラブル発生時の対応を事前に検討し、企業が事業の継続や早期復旧を行うための「BCP（Business Continuity Plan：事業継続計画）」の策定に対する重要性が、製造業にとってもこれまで以上に高まっています。</p><p>そして、在庫管理やサプライチェーンをもつ製造業こそ、事業規模の大小を問わずBCPの策定を必要とする業種であると言えます。しかし、日本国内では、大企業の3割程度はBCPの策定が完了しているものの、中小企業ではまだ1割程度しか策定ができていないという調査データもあり、早急な作成が望まれています。</p><p>そこで今回は、製造業がBCPを策定する目的や、リスクヘッジとしての意味合い、BCPとBCMの関係、BCPを行うことによって得られる企業価値と信頼性の向上についてご紹介したいと思います。<br></p><p><br></p><p>  </p><p></p><p></p><p></p><blockquote><p>目次</p></blockquote><ul><li>製造業におけるBCP(事業継続計画)対策とは</li><li>製造業におけるBCP対策の目的</li><li>BCPを策定する流れ</li><li>BCPとBCMの関係</li><li>BCP対策を行うことで製造業が得られるもの</li></ul><p></p><p></p><p></p><p></p><h2 id="h8eb9520fbf"><strong>製造業におけるBCP(事業継続計画)対策とは</strong></h2><p>それでは、製造業におけるBCP対策とはどのようなものなのでしょうか。</p><p>BCPとは、「Business Continuity Plan」のそれぞれの単語の頭文字をとったもので、日本語では、「<strong>事業継続計画</strong>」と訳されます。</p><p>日本は地震や台風、集中豪雨などによる水害など、諸外国と比較しても、自然災害の発生数が非常に多い国として有名です。さらに2020年からは、新型コロナウイルス感染症の拡大による経済活動の制限があったなど、誰にも予想できないような危機的事態がいつ発生してもおかしくない国であると言えます。BCPは、こういった企業にとって脅威となるさまざまな緊急事態が発生した時でも、重要業務が中断しないこと、また万一、事業が中断したとしても速やかに復旧させるため、平時に行っておくべき活動や非常時に取るべき対策をまとめた計画を指します。</p><p>予想できないような天災や新型コロナウイルス感染症の拡大により、多くの製造業の工場が操業停止に追い込まれました。この工場の操業停止は、従業員の安全を確保すると共に、予定していた部品の調達ができないといった理由によるものでした。特に近年、大手製造業では、部品の調達を海外に大きく依存していることが多く、緊急時の部品、原材料の調達は大きな課題の一つとなっています。</p><p>大規模災害等において、直接被害はもとより、上述したサプライチェーンにも大きな影響が出る等の経験から、<strong>「防災」及び「災害時における事業継続」の重要性を再認識</strong>するためにも、製造業のBCP対策は必須なのです。</p><p></p><p><br></p><p></p><p></p><h2 id="h8e6f1463dd"><strong>製造業におけるBCP対策の目的</strong></h2><p>なぜ、災害や大きな事故に備えた BCP が必要なのでしょうか？</p><p>背景として、製造業にとって、平時からも取引先や顧客から、さまざまなニーズが寄せられ迅速な対応が求められていることや、事業をとりまく環境の変化が目まぐるしいといった社会情勢が挙げられます。</p><p>災害や大きな事故が発生しても、顧客からは平時と同様な対応を求められるため、事業を続けるためには、多くの課題が出てきます。代表的な課題は以下が挙げられます。</p><p> </p><h3 id="hcf765984c3">従業員の安全確保</h3><p>原材料や部品が調達できた場合でもそれを使って実際に作業を行う従業員が確保できなければ意味がありません。そのためBCPでは従業員の安全の確保は重要な課題と位置付けられます。</p><p> </p><h3 id="he0e65fa9d5">原材料や部品調達などのサプライチェーン</h3><p>広域にわたる災害が発生した場合、原材料の調達や１次加工品の調達なども停止してしまう可能性があります。自社には直接的な被害が生じていなくとも、原材料の供給が滞れば生産活動は継続できません。そのため、自社の操業停止期間を最小限に抑える目的で、有事に備え原材料や1次加工品の調達先を複数に分散し、トラブルが発生した場合に別のサプライヤーから調達できる体制を整えておくことが肝要です。</p><p> </p><h3 id="hf8279eff2b">製造工場建屋や倉庫などの建物の被害</h3><p>災害が発生し製造工場の設備が破損した場合、製造工場は操業停止を余儀なくされます。そうしたことを想定し、災害が発生し工場設備が罹災した際の速やかな復旧対策を検討しておく必要があります。工場などの大型インフラが罹災した場合、修理や建て替えなどに巨額の資金が必要となる場合もあります。そうした資金面の確保を事前に検討しておく必要もあります。</p><p> </p><h3 id="h2d0ae3ea79">生産設備への被害</h3><p>大規模な災害やテロなど、外的要因以外に発生する可能性が高い損害の一つが、生産設備の損傷に起因するトラブルです。製造の現場で使用される機械は大なり小なり常に故障や損傷などのリスクを抱えています。これらに対し、代替設備の準備や、協力工場の確保などの対策を具体的に検討しておく必要があります。</p><p> </p><p>このような課題を抱えながらも、以下の①～③のようなことを短時間で迅速に把握し、災害や大きな事故への対応をしなければ顧客のニーズを満たすことはできません。</p><p>① <strong>何が起きたのか</strong>（自社の被害や災害による自社への影響）</p><p>② <strong>何が足りないのか</strong>（人、モノ、資金、情報）</p><p>③ <strong>何をいつまでにしなければならないのか</strong></p><p>これらを、人・モノ・資金・情報が足りなくなるという状況の中で、短時間で対応できるようにするためには、あらかじめ何が起こりうるかを考えて、その時行うべきことを計画として定め、実際にその計画が実行できるように訓練を行うなどして備えておかなくてはいけません。このことが BCP の本質であり、被災後の事業継続を図っていくための経営戦略であると言えるのです。</p><h3 id="hcf83e1357e"></h3><p></p><h2 id="h506b646af9"><strong>BCPを策定する流れ</strong></h2><p>一般的なBCP策定の手順は</p><p>①   基本方針の立案</p><p>②   重要製品の検討</p><p>③   被害状況の確認</p><p>④   事前対策の実施</p><p>⑤   緊急時の体制整備</p><p>という5つの手順を踏みながら行われることが多いです。</p><p></p><p>これら5つの手順ではどのようなことを行うかを以下に記載します。</p><p>①   基本方針の立案では、何のためにやるのかという目的をはっきりさせます。</p><p>②   重要製品の検討では、何をやり、何をやらないのかという優先順位付けを行うことで、緊急事態発生時に短時間に復旧することが可能になります。</p><p>③   被害状況の確認では、現状を認識し、今のままであると、緊急事態発生時にどういう状況になるのかということを理解します。この認識を十分に行うことで、事前対策として何を行えば良いかが分かります。</p><p>④   事前対策の実施では、どうすれば、それらの被害を改善出来るのかということを検討、実施します。</p><p>⑤   緊急時の体制整備は、誰が何を行うのかという責任を明確化します。それにより、緊急事態発生時に、自らが何をすれば良いのか社員が認識し、自立的に行動することで、短期間での復旧に貢献出来るようになります。</p><p></p><p>これら5つの手順の策定を行った後、策定したBCPの定着として、社員へ徹底して作成したBCPを浸透させます。また、定期的・継続的な見直しを行うことにより、改善し、より、その時々にあったBCPとしていく必要があります。</p><p> </p><p></p><p></p><h2 id="h3eeaeef9ef"><strong>BCPとBCMの関係</strong></h2><p>BCPと似た言葉にBCMという言葉があります。BCPとBCMの関係はどのようなものなのでしょうか？</p><p>BCMは「Business Continuity Management」の略で、「事業継続マネジメント」のことを指します。それに対し、BCPは前述したように「Business Continuity Plan」の略で、「事業継続計画」のことです。</p><p>BCMは事業継続のためのマネジメント活動を指すのに対し、BCPは事業継続のための具体的な行動計画を指します。BCMを構築するために、BCPがあると考えていただいて良いでしょう。BCPを策定し、これに関する教育や訓練を行うことでBCM構築を行っていくのです。</p><p>この2つの概念や内容の違いをその製造業に所属する社員が理解し、また、それら社員に対し、基礎訓練や意思決定、連携などの訓練を行っていくことが重要になります。</p><p></p><p></p><p></p><p></p><h2 id="hacc112f4b8"><strong>BCP対策を行うことで製造業が得られるもの</strong></h2><p>BCP対策を行うことで製造業が得られるものとして、「<strong>緊急事態が発生しても対応力の高い企業になることができるため、顧客からの信用度が高まること</strong>」が挙げられます。BCP対策を行い、事業継続能力を向上することで、大事な顧客の事業中断リスクの低減に寄与して、信頼度の向上や競争力の強化、また企業として社会的責任を果たすことにもつながります。また、BCP対策の計画策定を通じ、製造における業務改善の効果も期待できます。</p><p>策定は大変ではありますが、このような大きなメリットもあるのです。</p><p>BCPの策定は必要と理解していながらも、策定するまでの負担の大きさからなかなか手が付けられないのが現実です。そのために、中小企業に対しては、2019年にBCP策定を支援する制度が盛り込まれた「中小企業強靱化法案」が施行されました。「税制優遇」と「金融支援」があり、これらの支援が受けられれば、BCPの策定も行いやすくなります。</p><p>策定が大変だからと避けるのでは無く、上記の制度なども用いながら、BCPの策定へつなげていただければと思います。</p><p></p><p></p><p></p><p></p><blockquote><p><br>エイトスでは、提案活動を活性化させる方法や、従業員が自律的に動ける組織文化を作る支援をしています。無料でのご相談をしておりますので、<a href="https://eitoss.com/form/contact" target="_blank" rel="noopener noreferrer nofollow">是非一度ご連絡ください</a>。</p><p>さらに改善のDX化についてのノウハウや最新情報をメルマガで定期配信しているので、ぜひ下記URLからご登録お願い致します。<a href="https://mail.salesdiv.jp/bm/p/f/tf.php?id=eitoss0920&amp;task=regist" target="_blank" rel="noopener noreferrer nofollow">https://mail.salesdiv.jp/bm/p/f/tf.php?id=eitoss0920&amp;task=regist</a></p></blockquote>
       </div>
-      <a class="cta-banner cta-ehs" href="../../cayzen/ehsresearch/">
-        <span class="cb-left">
-          <span class="cb-title"><span class="em">環境・労働安全</span> 関連の<br>法令対応のお悩み</span>
-          <span class="cb-bubbles"><span>常に変化する…</span><span>わかりづらい…</span></span>
-        </span>
-        <span class="cb-body">
-          <span class="cb-lead"><span class="chip-ai">AI 調査代行</span>でスピード解決！</span>
-          <span class="cb-num">最大<b>95</b><small>%</small>工数削減</span>
-          <span class="cb-btn">詳しくはこちら <span class="cb-arrow">→</span></span>
-        </span>
+      <a class="cta-banner-img" href="../../cayzen/ehsresearch/">
+        <img src="../../assets/column_bnr_ehs.jpg" alt="環境・労働安全関連の法令対応のお悩み、AI調査代行でスピード解決！最大95%工数削減｜詳しくはこちら" loading="lazy" width="1080" height="300">
       </a>
       <a class="back-link" href="../">← コラム一覧へ戻る</a>
     </article>

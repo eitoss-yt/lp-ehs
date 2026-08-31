@@ -130,33 +130,10 @@ header.gh{position:fixed;top:0;left:0;right:0;background:rgba(255,255,255,.96);b
   .gh-actions{gap:6px}
 }
 
-/* 記事下CTAバナー（EHS／ISOテーマ） */
-.cta-banner{display:grid;grid-template-columns:1fr 1.1fr;border-radius:16px;overflow:hidden;margin-top:60px;box-shadow:0 14px 34px rgba(16,104,120,.16);transition:transform .15s ease,box-shadow .15s ease;text-decoration:none}
-.cta-banner:hover{transform:translateY(-3px);box-shadow:0 20px 44px rgba(16,104,120,.22)}
-.cta-banner .cb-btn{display:flex;align-items:center;justify-content:center;gap:10px;background:#f6941c;color:#fff;font-weight:900;font-size:16px;border-radius:10px;padding:13px 22px;margin-top:18px;box-shadow:0 4px 12px rgba(246,148,28,.35)}
-.cta-banner .cb-arrow{display:inline-flex;align-items:center;justify-content:center;width:24px;height:24px;border-radius:50%;background:rgba(255,255,255,.25);font-size:14px}
-.cta-iso .cb-media{background:#12351f}
-.cta-iso .cb-media img{width:100%;height:100%;object-fit:cover;display:block}
-.cta-iso .cb-body{background:linear-gradient(135deg,#f2f8fe,#dcecfa);padding:26px 28px;display:flex;flex-direction:column;justify-content:center}
-.cta-iso .cb-catch{color:#f0801a;font-size:26px;font-weight:900;line-height:1.3;margin:0 0 6px}
-.cta-iso .cb-text{color:#17303a;font-size:18px;font-weight:700;line-height:1.6;margin:0}
-.cta-iso .cb-text small{display:block;font-size:15px;font-weight:500;color:#3a5560}
-.cta-ehs .cb-left{background:#e9f1f5;padding:26px 26px 22px;display:flex;flex-direction:column;justify-content:center;gap:14px}
-.cta-ehs .cb-title{font-size:19px;font-weight:900;color:#17303a;line-height:1.55;margin:0}
-.cta-ehs .cb-title .em{color:var(--teal-700);font-size:23px}
-.cta-ehs .cb-bubbles{display:flex;gap:10px;flex-wrap:wrap}
-.cta-ehs .cb-bubbles span{background:#fff;border:1px solid #c8d9e0;color:#3a5560;font-size:13px;border-radius:999px;padding:6px 14px}
-.cta-ehs .cb-body{background:linear-gradient(135deg,#eaf4fd,#d8e9fa);padding:24px 28px;display:flex;flex-direction:column;justify-content:center}
-.cta-ehs .cb-lead{font-size:15px;font-weight:700;color:#17303a;margin:0 0 4px}
-.cta-ehs .chip-ai{display:inline-block;background:var(--teal-700);color:#fff;font-weight:700;border-radius:6px;padding:3px 12px;margin-right:6px}
-.cta-ehs .cb-num{color:#17303a;font-weight:900;font-size:18px;margin:0;line-height:1.2}
-.cta-ehs .cb-num b{color:#f0801a;font-size:44px;font-family:"Poppins","Noto Sans JP",sans-serif}
-.cta-ehs .cb-num small{color:#f0801a;font-size:20px;margin-right:8px}
-@media(max-width:700px){
-  .cta-banner{grid-template-columns:1fr}
-  .cta-iso .cb-media{aspect-ratio:16/9}
-  .cta-iso .cb-catch{font-size:22px}
-}
+/* 記事下CTAバナー（画像） */
+.cta-banner-img{display:block;margin-top:60px;border-radius:14px;overflow:hidden;box-shadow:0 14px 34px rgba(16,104,120,.16);transition:transform .15s ease,box-shadow .15s ease}
+.cta-banner-img:hover{transform:translateY(-3px);box-shadow:0 20px 44px rgba(16,104,120,.22)}
+.cta-banner-img img{width:100%;height:auto;display:block}
 
 .news-rows{max-width:860px;margin:0 auto}
 .news-row{display:flex;gap:22px;align-items:baseline;padding:18px 10px;border-bottom:1px solid var(--line);font-size:14.5px;color:var(--ink)}
@@ -224,16 +201,8 @@ header.gh{position:fixed;top:0;left:0;right:0;background:rgba(255,255,255,.96);b
       <div class="article-body">
 <p></p><p>2026年に向けて、労働安全衛生法（以下、安衛法）および作業環境測定法の改正が段階的に施行されます。今回の法改正は、単なる条文の追加・修正にとどまらず、<strong>企業の安全衛生管理の考え方そのものを見直すことを求める内容</strong>となっています。</p><p>これまで多くの企業では、安全衛生対応は「法令で求められている最低限の対応を行うもの」「現場単位で対応するもの」として運用されてきました。しかし今回の改正では、</p><ul><li>事業者としてどのようなリスクを把握しているか</li><li>そのリスクに対してどのような管理体制を構築しているか</li><li>継続的に見直し・改善が行われているか</li></ul><p>といった<strong>マネジメントレベルでの対応状況</strong>がより強く問われるようになります。</p><p>特に、製造業・化学・エネルギー・建設業など、作業現場や工場を有する企業では、</p><ul><li>法令改正の情報量が多く、全体像を把握できていない</li><li>施行日が分散しており、対応時期の整理が難しい</li><li>安全衛生業務が一部の担当者に依存している</li></ul><p>といった課題が顕在化しやすい傾向があります。</p><p>本記事では、2026年に施行される安衛法改正について、<strong>全体像の整理から施行日ごとの対応ポイント、自社が対象となるかの判断軸、企業が取るべき具体的なToDoまでを網羅的に解説</strong>します。安全衛生・EHS担当者が、自社対応を検討する際の実務的な指針としてご活用ください。</p><hr><h2 id="h74a61f1c65"><strong>2026年の安衛法改正とは？全体像を整理</strong></h2><p>2026年に向けて施行される安衛法および作業環境測定法の改正（令和7年法律第33号）は、「事故や健康障害が起きてから対応する」のではなく、<strong>未然防止を前提とした安全衛生管理</strong>を企業に求める点が大きな特徴です。</p><h3 id="h1a33c829be"><strong>改正の背景</strong></h3><p>厚生労働省の資料によると、近年の労働災害は重篤な事故件数こそ減少しているものの、</p><ul><li>慢性的な健康障害</li><li>有害物質への長期ばく露</li><li>多様な雇用形態・外部委託の増加</li></ul><p>といった新たなリスクが顕在化しています。これに対応するため、従来の枠組みでは不十分と判断され、今回の法改正が行われました。</p><h3 id="hc4fb9d97ec"><strong>主な改正ポイント</strong></h3><p>今回の改正で特に重要となるポイントは以下の通りです。</p><ul><li>リスクアセスメントの実効性強化</li><li>作業環境測定・評価・是正プロセスの明確化</li><li>事業者責任の明確化と管理範囲の拡大</li><li>記録管理・管理体制の厳格化</li></ul><p>これにより、「実施しているかどうか」だけでなく、<strong>どのように管理し、改善しているか</strong>が問われるようになります。</p><p>【注釈】</p><ul><li>労働安全衛生法（安衛法）：労働者の安全と健康を確保し、快適な職場環境の形成を目的とする法律</li><li>リスクアセスメント：職場に存在する危険性・有害性を特定し、リスク低減措置を検討・実施する一連の手法</li></ul><p>【出典】</p><p>厚生労働省「労働安全衛生法の概要」</p><p><a href="https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/koyou_roudou/roudoukijun/anzen/an-eihou/index_00001.html" target="_blank" rel="noopener noreferrer nofollow">https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/koyou_roudou/roudoukijun/anzen/an-eihou/index_00001.html</a></p><hr><h2 id="hf7145ea320"><strong>【施行日一覧】2026年 安衛法改正 施行日カレンダー</strong></h2><p>今回の安衛法改正は、一斉施行ではなく段階的に施行される点が大きな特徴です。施行日を正確に把握していないと、対応漏れにつながる恐れがあります。</p><h3 id="h0b5119f193"><strong>2026年1月1日施行</strong></h3><p>2026年1月1日には、改正安衛法の一部規定が先行して施行されます。</p><ul><li>安全衛生管理体制に関する規定の見直し</li><li>管理状況や実施内容の記録・保存に関する要件強化</li><li>一部業種における即時対応義務</li></ul><p>特に、既存の管理体制をそのまま流用している企業では、<strong>形式的な対応にとどまっていないかの確認</strong>が重要になります。</p><h3 id="h5f8516e10a"><strong>2026年4月1日施行</strong></h3><p>2026年4月1日には、作業環境測定法改正が本格的に施行されます。</p><ul><li>作業環境測定結果の評価方法の明確化</li><li>評価結果に基づく是正措置の実施義務</li><li>外部委託時における事業者の管理責任の整理</li></ul><p>測定を外部に委託している場合でも、「委託しているから安心」という考え方は通用しなくなります。</p><h3 id="h2b2ab2b560"><strong>2026年10月1日施行</strong></h3><p>2026年10月1日には、安全衛生管理全体に関わる追加規定が施行されます。</p><ul><li>安全衛生管理の継続的改善を前提とした運用</li><li>管理体制の定期的な見直し</li></ul><p>これらは短期的な対応ではなく、<strong>中長期的な体制整備を前提とした内容</strong>である点が特徴です。</p><p>【出典】</p><p>厚生労働省「労働安全衛生関係法令の改正について（令和7年）」</p><p><a href="https://www.mhlw.go.jp/content/11300000/001513749.pdf" target="_blank" rel="noopener noreferrer nofollow">https://www.mhlw.go.jp/content/11300000/001513749.pdf</a></p><hr><h2 id="h53139d19ae"><strong>自社は対象になる？該当判定の考え方</strong></h2><p>安衛法改正に対応するうえで、まず行うべきは「自社がどの範囲まで対象となるのか」を整理することです。</p><h3 id="hd0c87b9839"><strong>影響を受けやすい企業の特徴</strong></h3><p>以下のような企業は、今回の改正内容を重点的に確認する必要があります。</p><ul><li>製造業・化学・エネルギー・建設業</li><li>工場や作業現場を複数拠点で保有している</li><li>危険物・有害物質を取り扱っている</li><li>ISO14001・ISO45001を取得、または運用している</li></ul><p>これらに該当する場合、複数の法令改正が同時に影響する可能性があります。</p><h3 id="hc3a58067a6"><strong>よくある誤解と注意点</strong></h3><p>「外部業者に委託しているから問題ない」「自社は大企業ではないから対象外だろう」といった認識は危険です。改正後は、<strong>最終的な法令遵守責任が事業者にあることがより明確化</strong>されます。</p><hr><h2 id="h295fc96aa3"><strong>企業がやるべきToDoチェックリスト</strong></h2><h3 id="hb341bf61ad"><strong>今すぐ着手すべき対応</strong></h3><ul><li>改正対象となる安衛法・作業環境測定法の洗い出し</li><li>自社事業・設備・作業工程との関係整理</li><li>施行日ごとの対応スケジュール策定</li></ul><h3 id="h513ddf6f0e"><strong>中期的に必要な対応</strong></h3><ul><li>リスクアセスメント手法の見直しと標準化</li><li>測定結果・是正対応・改善履歴の記録管理</li><li>社内教育・周知体制の再設計</li></ul><h3 id="hbb7a1831c4"><strong>属人化を防ぐための視点</strong></h3><ul><li>Excelや紙ベース管理からの脱却</li><li>法令情報・対応履歴の一元管理</li><li>担当者変更時でも継続できる仕組みづくり</li></ul><hr><h2 id="hcbd8d769b1"><strong>安衛法対応を属人化させない社内体制づくり</strong></h2><p>安全衛生・労働安全衛生に関する法令は、国内法だけでなく、業種や地域、場合によっては海外法令まで影響が及びます。これらを人手だけで追い続けることには限界があります。</p><p>実際、多くの企業では、</p><ul><li>法令改正の調査に多くの時間を取られる</li><li>情報が分散し、全体像が見えない</li><li>担当者依存から抜け出せない</li></ul><p>といった課題を抱えています。</p><h3 id="ha531eca5dc"><strong>Cayzen AI for EHSによる対応支援</strong></h3><p>Cayzen AI for EHSでは、自社の設備・事業内容を登録するだけで、関連する安全衛生・労働安全衛生法令の改正情報を自動で抽出し、<strong>対応すべき事項を整理・可視化</strong>できます。</p><p>従来、調査から対応方針の整理までに1〜3か月を要していた作業も、最短1週間で対応可能となり、属人化を防ぎながら継続的な法令対応を実現します。</p><hr><h2 id="ha2b64fcd6a"><strong>2026年安衛法改正に向けて、今から準備すべきこと</strong></h2><p>2026年の安衛法改正は、企業の安全衛生管理体制を見直す重要な転換点です。</p><ul><li>改正内容は段階的に施行される</li><li>対応の遅れは事業リスクにつながる</li><li>属人化した管理体制では限界がある</li></ul><p>今のうちから全体像を把握し、継続的に対応できる仕組みを構築することが、将来的なリスク低減につながります。</p><hr><h2 id="h21bf5e3d42"><strong>安全衛生・労働安全衛生法令の単発調査（無料）のご案内</strong></h2><p>2026年の安衛法改正について、</p><ul><li>自社がどこまで対応すべきか</li><li>見落としている法令がないか</li><li>何から着手すべきか</li></ul><p>を整理したい企業向けに、<strong>安全衛生・労働安全衛生法令の単発調査を無料で実施</strong>しています。</p><p>実際の調査レポートをご確認いただいたうえで、今後の対応方針の検討にお役立てください。</p><p><a href="https://eitoss.com/trial/ehs">▶ 関連資料はこちら</a></p>
       </div>
-      <a class="cta-banner cta-ehs" href="../../cayzen/ehsresearch/">
-        <span class="cb-left">
-          <span class="cb-title"><span class="em">環境・労働安全</span> 関連の<br>法令対応のお悩み</span>
-          <span class="cb-bubbles"><span>常に変化する…</span><span>わかりづらい…</span></span>
-        </span>
-        <span class="cb-body">
-          <span class="cb-lead"><span class="chip-ai">AI 調査代行</span>でスピード解決！</span>
-          <span class="cb-num">最大<b>95</b><small>%</small>工数削減</span>
-          <span class="cb-btn">詳しくはこちら <span class="cb-arrow">→</span></span>
-        </span>
+      <a class="cta-banner-img" href="../../cayzen/ehsresearch/">
+        <img src="../../assets/column_bnr_ehs.jpg" alt="環境・労働安全関連の法令対応のお悩み、AI調査代行でスピード解決！最大95%工数削減｜詳しくはこちら" loading="lazy" width="1080" height="300">
       </a>
       <a class="back-link" href="../">← コラム一覧へ戻る</a>
     </article>

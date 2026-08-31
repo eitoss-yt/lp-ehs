@@ -130,33 +130,10 @@ header.gh{position:fixed;top:0;left:0;right:0;background:rgba(255,255,255,.96);b
   .gh-actions{gap:6px}
 }
 
-/* 記事下CTAバナー（EHS／ISOテーマ） */
-.cta-banner{display:grid;grid-template-columns:1fr 1.1fr;border-radius:16px;overflow:hidden;margin-top:60px;box-shadow:0 14px 34px rgba(16,104,120,.16);transition:transform .15s ease,box-shadow .15s ease;text-decoration:none}
-.cta-banner:hover{transform:translateY(-3px);box-shadow:0 20px 44px rgba(16,104,120,.22)}
-.cta-banner .cb-btn{display:flex;align-items:center;justify-content:center;gap:10px;background:#f6941c;color:#fff;font-weight:900;font-size:16px;border-radius:10px;padding:13px 22px;margin-top:18px;box-shadow:0 4px 12px rgba(246,148,28,.35)}
-.cta-banner .cb-arrow{display:inline-flex;align-items:center;justify-content:center;width:24px;height:24px;border-radius:50%;background:rgba(255,255,255,.25);font-size:14px}
-.cta-iso .cb-media{background:#12351f}
-.cta-iso .cb-media img{width:100%;height:100%;object-fit:cover;display:block}
-.cta-iso .cb-body{background:linear-gradient(135deg,#f2f8fe,#dcecfa);padding:26px 28px;display:flex;flex-direction:column;justify-content:center}
-.cta-iso .cb-catch{color:#f0801a;font-size:26px;font-weight:900;line-height:1.3;margin:0 0 6px}
-.cta-iso .cb-text{color:#17303a;font-size:18px;font-weight:700;line-height:1.6;margin:0}
-.cta-iso .cb-text small{display:block;font-size:15px;font-weight:500;color:#3a5560}
-.cta-ehs .cb-left{background:#e9f1f5;padding:26px 26px 22px;display:flex;flex-direction:column;justify-content:center;gap:14px}
-.cta-ehs .cb-title{font-size:19px;font-weight:900;color:#17303a;line-height:1.55;margin:0}
-.cta-ehs .cb-title .em{color:var(--teal-700);font-size:23px}
-.cta-ehs .cb-bubbles{display:flex;gap:10px;flex-wrap:wrap}
-.cta-ehs .cb-bubbles span{background:#fff;border:1px solid #c8d9e0;color:#3a5560;font-size:13px;border-radius:999px;padding:6px 14px}
-.cta-ehs .cb-body{background:linear-gradient(135deg,#eaf4fd,#d8e9fa);padding:24px 28px;display:flex;flex-direction:column;justify-content:center}
-.cta-ehs .cb-lead{font-size:15px;font-weight:700;color:#17303a;margin:0 0 4px}
-.cta-ehs .chip-ai{display:inline-block;background:var(--teal-700);color:#fff;font-weight:700;border-radius:6px;padding:3px 12px;margin-right:6px}
-.cta-ehs .cb-num{color:#17303a;font-weight:900;font-size:18px;margin:0;line-height:1.2}
-.cta-ehs .cb-num b{color:#f0801a;font-size:44px;font-family:"Poppins","Noto Sans JP",sans-serif}
-.cta-ehs .cb-num small{color:#f0801a;font-size:20px;margin-right:8px}
-@media(max-width:700px){
-  .cta-banner{grid-template-columns:1fr}
-  .cta-iso .cb-media{aspect-ratio:16/9}
-  .cta-iso .cb-catch{font-size:22px}
-}
+/* 記事下CTAバナー（画像） */
+.cta-banner-img{display:block;margin-top:60px;border-radius:14px;overflow:hidden;box-shadow:0 14px 34px rgba(16,104,120,.16);transition:transform .15s ease,box-shadow .15s ease}
+.cta-banner-img:hover{transform:translateY(-3px);box-shadow:0 20px 44px rgba(16,104,120,.22)}
+.cta-banner-img img{width:100%;height:auto;display:block}
 
 .news-rows{max-width:860px;margin:0 auto}
 .news-row{display:flex;gap:22px;align-items:baseline;padding:18px 10px;border-bottom:1px solid var(--line);font-size:14.5px;color:var(--ink)}
@@ -224,16 +201,8 @@ header.gh{position:fixed;top:0;left:0;right:0;background:rgba(255,255,255,.96);b
       <div class="article-body">
 <p>自然災害や、新型コロナウイルス感染症の拡大になど、突発的な緊急事態が多く発生している日本。</p><p>インターネット技術の発展と共に、取り扱うデータなどの量も膨大になっています。</p><p>また、データなどを扱う端末も専用の機器であったり、一般的なパソコン、最近ではスマホ端末で仕事を完了させる方も多いのではないでしょうか？</p><p>外出先で必要なデータを参照したい、とあるデータを複数人で共有したいなどといった場合<strong>「クラウドサービス」</strong>と言う物が使われますが、クラウドサービスにもいくつか種類があります。</p><p>この記事では、クラウドサービスの中でも割合安価であり、導入も容易である<strong>「パブリッククラウド」</strong>について紹介します。場所や時間を選ばずさまざまなリソースを利用できるパブリッククラウドについて理解を深めて、ぜひ活用してください。</p><p></p><p></p><p></p><blockquote><p>目次</p></blockquote><ul><li>クラウドサービスとは？</li><li>パブリッククラウドとプライベートクラウド</li><li>パブリッククラウドのメリット</li><li>パブリッククラウドのデメリット</li><li>代表的なパブリッククラウドサービス</li><li>パブリッククラウドサービス利用で効率的な作業を</li></ul><p></p><p></p><p></p><h2 id="hb5d1167ad3">クラウドサービスとは？</h2><p>そもそも「クラウドサービス」とは、今まで自分のパソコン内のみで取り扱っていたデータやソフトウェアなどを、ネットワーク経由でさまざまな端末で扱えるような仕組みです。</p><p>身近な例ですと、ｗｅｂメールの「<a href="http://gmail.com/">Gmail</a>」や「<a href="http://www.yahoo.co.jp/">Yahoo!メール</a>」は代表的なクラウドサービスです。今までの電子メールでは受信した端末でのみメールの内容を確認できましたが、Ｗｅｂメールであれば、端末だけでなく場所や時間問わず、メールの内容を確認できます。</p><p>また、Apple社の端末を使っている方はデータのバックアップに「iCloud」サービスを使っている方もいらっしゃるでしょう。「iCloud」もクラウドサービスの一種で、ネットワーク環境があればいつどこでもデータのバックアップや参照をすることができます。</p><p></p><p></p><h2 id="h33176908bc">パブリッククラウドとプライベートクラウド</h2><p>身近で多く使われているクラウドサービスですが、企業でも積極的にクラウドサービスは利用されています。総務省が発表している<a href="https://www.soumu.go.jp/johotsusintokei/whitepaper/ja/r03/html/nd242140.html"><u>「情報通信白書　令和３年版」</u></a>によれば、クラウドサービスを一部でも利用している日本の企業は68.7％にものぼり、クラウドサービスを利用している企業にクラウドサービスを利用した効果を聞くと、「非常に効果があった」又は「ある程度効果があった」と回答した企業の割合は87.1％にも上りました。</p><p>企業の半数以上が利用するクラウドサービスですが、クラウドサービスの種類は大きくわけて<strong>「パブリッククラウド」</strong>と<strong>「プライベートクラウド」</strong>の２種類があります。</p><p>パブリッククラウドとプライベートクラウドは、ネットワーク上にあるデータを場所を問わずに利用する環境という観点では同じなのですが、いくつかの点で大きな違いがあります。</p><p>パブリッククラウドは、クラウドサービスを運営するクラウド事業者が、データを管理するサーバやソフトウェア、データベースといった一連の管理に必要なシステムを提供し、それらの環境を、不特定多数の利用者が共有して使うものです。</p><p>対してプライベートクラウドは事業者が提供する環境の一部を占有し、管理するソフトウェアやデータベースなどを利用者独自で構築する仕組みとなっています。</p><p>例えるならば、パブリッククラウドは設備などがあらかじめ用意された部屋を提供されるのに対して、プライベートクラウドは土地だけを借りてそこに1から部屋を自由に作るといった感じになります。</p><p><br></p><h2 id="h3942efd8c7">パブリッククラウドのメリット</h2><p>場所や時間を選ばすデータやソフトウェアの利用ができるパブリッククラウドですが、どのようなメリットがあるのでしょうか？メリットを1つずつ解説します。</p><p></p><h3 id="h6a932fc57e">1.導入が容易ですぐに始められる</h3><p>ネット上のシステムを利用するには、専門的な知識が必要であったり開設するまで長い時間が必要な印象があります。ですが、パブリッククラウドを利用するのは容易で、クラウド業者に利用手続きをすれば簡単な設定をするだけで即日利用することが出来ます。（クラウド業者によっては開設に日数を要する場合もありますのでご注意ください。）</p><p><br>今すぐにクラウド環境を利用したいと思った場合、即利用できることは大きなメリットとなるでしょう。</p><p></p><h3 id="h97ea4ca086">2.必要な時必要な分だけ利用可能</h3><p>クラウドを使う人、企業によって扱うデータ量などは変わってきます。個人であればそれほど扱うデータ量は多くないでしょうし、企業でも企業規模によって扱うデータ量も変わってきます。<br>パブリッククラウドの多くは、契約によって取り扱えるデータ量の選択が可能であり、多くのデータを使わないのであれば安価にクラウドサービスを利用することができます。また、取り扱うデータ量が多くなった場合には契約を変更するだけで扱えるデータ量も変更できるので、その時の状況により柔軟に対応することができます。<br>今まで多くのデータを取り扱っていたが、あまり使わなくなったので契約を変更してコストを下げるといったコストカットにも有効となります。</p><p></p><h3 id="h364d35163b">3.設備投資・管理コストカット</h3><p>データを取り扱うサーバーやシステムを自分で構築し管理するとなると、多額の設備投資や管理にコストが発生します。設備管理には専門のシステム管理者が必要となり、人件費にも負担がかかります。パブリッククラウドであれば、設備投資及び管理はクラウド事業者が担うため、かかるコストはクラウド使用のため契約料のみとなり、大幅なコストカットに繋がります。</p><p></p><h3 id="h65852410f9">4.信頼性が高い</h3><p>クラウド業者にも寄りますが、多くのクラウド業者ではデータなどの保護のためにさまざまな対策を講じています。必要になるデータ管理を自身で行うと手間もコストもかかりますが、クラウド事業者が管理をしてくれるため信頼性があります。</p><p></p><p></p><p></p><h2 id="h925dbe202c">パブリッククラウドのデメリット</h2><p>比較的安価に利用できるパブリッククラウドですが、当然デメリットも存在します。パブリッククラウドのデメリットは以下の通りになります。</p><p></p><h3 id="hab954f283a">1. 自由なカスタマイズができない</h3><p>パブリッククラウドはクラウド業者が提供するシステムを利用する仕組みです。ある程度のカスタマイズはできますが、基本的に提供された枠組みで利用することになるため、自分が使いやすい独自のシステムを構築することは出来ません。簡単に使える分、自由度は劣るということです。</p><p></p><h3 id="hb99a2add3c">2. 障害時にできることが少ない</h3><p>クラウド事業者も完璧ではありません。どんなに対策をしてもシステム障害などが発生する可能性があります。クラウド事業者側で障害が発生した場合、クラウドに存在するデータやソフトウェアの使用が制限されたり利用不可能になる可能性がありまする。その時、クラウドを利用するユーザー側は事業者側のシステム復旧を待つしかありません。必要な時にいつでもどこでもデータを取り扱えるのがメリットのクラウドサービスですが、障害時にはその恩恵を受けられないことになります。</p><p></p><h3 id="h3253d118b5">3. 機密情報を取り扱うのに不向き</h3><p>パブリッククラウドは、さまざまな端末からデータなどを取り扱うことができます。データの公開範囲はクラウド業者によって設定を変更できたりもしますが、機密情報などを不特定多数が利用するパブリッククラウドで使うのは危険が伴います。設定ミスなどにより不特定多数に機密情報を公開してしまうことになれば、大きな損害にもつながるでしょう。</p><p></p><h3 id="h44feb7ee8f">4. セキュリティの不安</h3><p>パブリッククラウドは不特定多数の利用者がいます。多くの人が使うということは当然そこを狙ってサイバー攻撃を仕掛けられる危険性があります。クラウド業者も対策はしていますが、データ流出のニュースを耳にしたことがある方も多いでしょう。不特定多数の人間が使うシステムであることを認識し、取り扱うデータをより慎重に選択する必要があります。</p><p></p><p></p><h2 id="h809a0add38">代表的なパブリッククラウドサービス</h2><p>パブリッククラウドサービスは多くの企業で提供されていますが、ここでは代表的なクラウドサービスを3つほど紹介いたします。</p><p></p><h3 id="h276921efbb">1. Google Cloud Platform</h3><p>Google Cloud PlatformはGoogle社が提供するパブリッククラウドサービスです。<br>Google Cloud Platformの強みは、Googleで提供している検索エンジンやGmailなどといった代表的なサービスと同等の環境が提供されていることです。AI関連のサービスも提供されていて、今後の伸びが期待されています。</p><p></p><h3 id="h29c7df6d9f">2. Amazon Web Services</h3><p>Amazon Web Servicesは、大手通販会社であるAmazon社が提供するパブリッククラウドサービスです。世界的に普及しているパブリッククラウドサービスで、Amazon社が持つ、商品などを取り扱う巨大なインフラをクラウドサービスに活用しており、データ分析などの分野など幅広いサービスを提供しています。<br></p><h3 id="h89c7f3fadf">3. Microsoft Azure</h3><p>Microsoft Azureは、Windowsの開発元であるマイクロソフト社が提供するパブリッククラウドサービスです。Microsoft Azureは、企業でよく使われているOffice製品との連携が容易であり、Officeや他マイクロソフト製品のサービスをよく利用されている企業であれば、マイクロソフト製品を使った業務をより効率的に運用できます。</p><p></p><p></p><h2 id="h361100e369">パブリッククラウドサービス利用で効率的な作業を</h2><p>パブリッククラウドサービスについて紹介しました。場所や時間を選ばず世界各地で作業するために必須のサービスであるパブリッククラウドサービス。メリットとデメリットをしっかり把握して利用すれば業務改善に大きな力になりますのでぜひ活用してください。</p><p></p><p></p><p></p><p></p><p></p><blockquote><p>エイトスでは、提案活動を活性化させる方法や、従業員が自律的に動ける組織文化を作る支援をしています。無料でのご相談をしておりますので、<a href="https://eitoss.com/form/contact" target="_blank" rel="noopener noreferrer nofollow">是非一度ご連絡ください</a>。</p><p>さらに改善のDX化についてのノウハウや最新情報をメルマガで定期配信しているので、ぜひ下記URLからご登録お願い致します。<a href="https://mail.salesdiv.jp/bm/p/f/tf.php?id=eitoss0920&amp;task=regist" target="_blank" rel="noopener noreferrer nofollow">https://mail.salesdiv.jp/bm/p/f/tf.php?id=eitoss0920&amp;task=regist</a></p></blockquote><p></p>
       </div>
-      <a class="cta-banner cta-ehs" href="../../cayzen/ehsresearch/">
-        <span class="cb-left">
-          <span class="cb-title"><span class="em">環境・労働安全</span> 関連の<br>法令対応のお悩み</span>
-          <span class="cb-bubbles"><span>常に変化する…</span><span>わかりづらい…</span></span>
-        </span>
-        <span class="cb-body">
-          <span class="cb-lead"><span class="chip-ai">AI 調査代行</span>でスピード解決！</span>
-          <span class="cb-num">最大<b>95</b><small>%</small>工数削減</span>
-          <span class="cb-btn">詳しくはこちら <span class="cb-arrow">→</span></span>
-        </span>
+      <a class="cta-banner-img" href="../../cayzen/ehsresearch/">
+        <img src="../../assets/column_bnr_ehs.jpg" alt="環境・労働安全関連の法令対応のお悩み、AI調査代行でスピード解決！最大95%工数削減｜詳しくはこちら" loading="lazy" width="1080" height="300">
       </a>
       <a class="back-link" href="../">← コラム一覧へ戻る</a>
     </article>
