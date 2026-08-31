@@ -130,6 +130,34 @@ header.gh{position:fixed;top:0;left:0;right:0;background:rgba(255,255,255,.96);b
   .gh-actions{gap:6px}
 }
 
+/* 記事下CTAバナー（EHS／ISOテーマ） */
+.cta-banner{display:grid;grid-template-columns:1fr 1.1fr;border-radius:16px;overflow:hidden;margin-top:60px;box-shadow:0 14px 34px rgba(16,104,120,.16);transition:transform .15s ease,box-shadow .15s ease;text-decoration:none}
+.cta-banner:hover{transform:translateY(-3px);box-shadow:0 20px 44px rgba(16,104,120,.22)}
+.cta-banner .cb-btn{display:flex;align-items:center;justify-content:center;gap:10px;background:#f6941c;color:#fff;font-weight:900;font-size:16px;border-radius:10px;padding:13px 22px;margin-top:18px;box-shadow:0 4px 12px rgba(246,148,28,.35)}
+.cta-banner .cb-arrow{display:inline-flex;align-items:center;justify-content:center;width:24px;height:24px;border-radius:50%;background:rgba(255,255,255,.25);font-size:14px}
+.cta-iso .cb-media{background:#12351f}
+.cta-iso .cb-media img{width:100%;height:100%;object-fit:cover;display:block}
+.cta-iso .cb-body{background:linear-gradient(135deg,#f2f8fe,#dcecfa);padding:26px 28px;display:flex;flex-direction:column;justify-content:center}
+.cta-iso .cb-catch{color:#f0801a;font-size:26px;font-weight:900;line-height:1.3;margin:0 0 6px}
+.cta-iso .cb-text{color:#17303a;font-size:18px;font-weight:700;line-height:1.6;margin:0}
+.cta-iso .cb-text small{display:block;font-size:15px;font-weight:500;color:#3a5560}
+.cta-ehs .cb-left{background:#e9f1f5;padding:26px 26px 22px;display:flex;flex-direction:column;justify-content:center;gap:14px}
+.cta-ehs .cb-title{font-size:19px;font-weight:900;color:#17303a;line-height:1.55;margin:0}
+.cta-ehs .cb-title .em{color:var(--teal-700);font-size:23px}
+.cta-ehs .cb-bubbles{display:flex;gap:10px;flex-wrap:wrap}
+.cta-ehs .cb-bubbles span{background:#fff;border:1px solid #c8d9e0;color:#3a5560;font-size:13px;border-radius:999px;padding:6px 14px}
+.cta-ehs .cb-body{background:linear-gradient(135deg,#eaf4fd,#d8e9fa);padding:24px 28px;display:flex;flex-direction:column;justify-content:center}
+.cta-ehs .cb-lead{font-size:15px;font-weight:700;color:#17303a;margin:0 0 4px}
+.cta-ehs .chip-ai{display:inline-block;background:var(--teal-700);color:#fff;font-weight:700;border-radius:6px;padding:3px 12px;margin-right:6px}
+.cta-ehs .cb-num{color:#17303a;font-weight:900;font-size:18px;margin:0;line-height:1.2}
+.cta-ehs .cb-num b{color:#f0801a;font-size:44px;font-family:"Poppins","Noto Sans JP",sans-serif}
+.cta-ehs .cb-num small{color:#f0801a;font-size:20px;margin-right:8px}
+@media(max-width:700px){
+  .cta-banner{grid-template-columns:1fr}
+  .cta-iso .cb-media{aspect-ratio:16/9}
+  .cta-iso .cb-catch{font-size:22px}
+}
+
 .news-rows{max-width:860px;margin:0 auto}
 .news-row{display:flex;gap:22px;align-items:baseline;padding:18px 10px;border-bottom:1px solid var(--line);font-size:14.5px;color:var(--ink)}
 .news-row time{flex:0 0 auto;color:var(--teal-500);font-weight:700;font-family:"Poppins","Noto Sans JP",sans-serif}
@@ -196,14 +224,17 @@ header.gh{position:fixed;top:0;left:0;right:0;background:rgba(255,255,255,.96);b
       <div class="article-body">
 <p>改善活動は、業務の効率化を図る事により、生産性の向上の留まらず、リードタイムの短縮、業務や製品の品質向上、安全性の向上を目的とし、多くの企業で日常的に幅広く行われている活動です。また、活動の成果としては、改善提案件数や改善効果額、リードタイムやサイクルタイム等があり、活動に取り組んでいる部門のKPIや人事評価の指標としても使用されています。</p><p>　その改善活動ですが、いつのまにか、本来、手段であるはずの「改善すること」自体が、目的になってしまったり、目的から外れた活動となったり、又、活動そのものが停滞してしまったりすることがあります。</p><p>　今回は、改善提案活動を継続的に続け、形骸化させないための取り組みのTipsやヒントについてご紹介したいと思います。</p><blockquote><p></p><p>エイトスでは、提案活動を活性化させる方法や、従業員が自律的に動ける組織文化を作る支援をしています。無料でのご相談をしておりますので、<a href="https://eitoss.com/form/contact" target="_blank" rel="noopener noreferrer nofollow">是非一度ご連絡ください</a>。</p><p>またサービス資料請求は<a href="https://eitoss.com/form/service" rel="nofollow">こちら</a>からお願いいたします。</p><p>さらに改善のDX化についてのノウハウや最新情報をメルマガで定期配信しているので、ぜひ下記URLからご登録お願い致します。<a href="https://mail.salesdiv.jp/bm/p/f/tf.php?id=eitoss0920&amp;task=regist" target="_blank" rel="noopener noreferrer nofollow">https://mail.salesdiv.jp/bm/p/f/tf.php?id=eitoss0920&amp;task=regist</a></p></blockquote><p></p><p></p><h3 id="hf5d85efca2"><strong>改善活動は「トップダウン」と「ボトムアップ」が必要</strong></h3><p>改善活動は、多くの場合、小集団活動として、10人程度のグループ単位で行われます。小集団活動は、そのグループに属するメンバーが自ら行動し、能動的に活動するボトムアップ型の典型的な活動として多くの書籍やインターネットなどの情報ツールなどでは紹介されています。</p><p>しかし、実はボトムアップによる活動だけでは十分ではなく、「改善すること」に終始したり、課題や問題点を解決するよりも寧ろ、「出来る改善を行う」ことがありその結果、改善活動そのものが、本来の目的から逸脱し、形骸化してしまうことがあります。そうした状況を抑制し、本来の目的を達成する為の的確な活動とする為には、達成すべき目的を明確にすることが極めて重要となります。又、その目的は企業の経営的、戦略的な目標や課題を踏まえた上で、小集団のメンバーの属している組織やグループが達成すべき目標やニーズに反映、展開する必要があります。合わせて、活動の成果を評価するKPIや方法(製造部門の場合、生産性のアップ率やコスト低減率、歩留まりなど)を全員に周知し、認識させる必要があります。KPIや評価方法が適正ではない場合、その改善が、企業の経営に対し、どの程度効果が出ているのか、又、経営的な課題に対し、どの様に貢献したのか分からなくなってしまうことがあります。</p><p>活動メンバー全員が達成すべき目標に対し、同じ方向を向いて、適切なKPIで評価することにより、改善の方向性が定まり、改善活動はより進みやすくなります。改善活動の目標や方向性、KPIや評価方法を定め、改善活動を促進させるのはトップダウン、即ち、小集団のメンバーの属している組織やグループの上長の役割です。</p><p>加えて、改善活動は、いかに組織や小集団のメンバーに改善や業務の効率化に対する意欲や達成感を持たせるかも重要な要素であり、活動の成果を大きく左右します。その意欲や達成感を醸成する意味からも活動の成果を企業の経営陣や組織や小集団メンバーの属している上長だけでなく、経営陣が認め、褒める場を作ることも必要になります。</p><p>こうした観点から、改善活動には、小集団活動などでよく言われる「ボトムアップ」的な改善の取り組みと「トップダウン」的な目標やニーズの設定、意欲や達成感の醸成の双方向の役割が不可欠です。</p><h3 id="h8668ec36be"><strong>自律的に活動できる雰囲気を作る</strong></h3><p>企業でいう「仕事」とは、日常行っている定型的な業務だけでなく、改善活動も勿論含まれます。つまり、改善活動に自律的という言葉が必ずしも当てはまるということではありません。</p><p>ただ、強制されてやる活動では、チャレンジ精神も減衰し、業務効率も下がり、改善ということが生まれません。</p><p>組織のメンバーが「自分たちは自律的に改善を行っている」と思うようなリードが出来るように心がける必要があります。</p><p>改善活動の目的は、勿論、問題の解決による業務の効率化ではありますが、まずは、改善のプロセスを経験することによるメンバーの能力向上と相互の交流の活発化にあります。それらが進めば、組織と個人が成長し、気配りをしなくても改善活動が自律的に行われるようになります。</p><h3 id="h658418a455"><strong>改善活動は成長度に応じてテーマを選定した方が長続きする</strong></h3><p>改善活動は大きく分けて3つの成長度によって、テーマの選定を変えた方がよいと言われることがあります。それぞれの組織や集団の成長度と余りにかけ離れた改善のテーマとしてしまうと、その活動自体が長続きしないことがある為、成長度に合った改善のテーマを選定し、改善を長続きさせることもポイントの1つです。</p><p>3つの成長度とそのそれぞれに適していると言われるテーマですが、</p><p>1)初心者(守りのテーマ)</p><p>2)中級者(守りと攻めのテーマ)</p><p>3)上級者(攻めのテーマ)                と言われます。</p><p> </p><p>まず、1)初心者(守りのテーマ)では</p><p>　①仕事をどうすれば楽に出来るかを考えるテーマ</p><p>　②職場の整理整頓を取り上げたテーマ</p><p>　③上流/下流工程やお客様に迷惑をかけている課題解決を取り上げたテーマ</p><p>　④自部門の困りごとを課題に取り上げたテーマ           </p><p>というようなテーマが挙げられます。</p><p>成長度がそれほど高くない組織では、身近なテーマの方が、解決がしやすいと言うことを指します。</p><p>次に、少し成長が進んだ組織や小集団に対して行う2)中級者(守りと攻めのテーマ)では、</p><p>　　①日常のデータに基づき、QCDESの観点で解決するために取り上げたテーマ</p><p>　　②目標(標準)と実績(現実)との差に基づき取り上げたテーマ</p><p>　　③次工程からの指摘に基づき取り上げたテーマ　                  などがあります。</p><p>これは、身近なテーマから更に一歩進み、取り組む視点を生産活動や日常業務全体に広げたテーマになります。</p><p>3)上級者(攻めのテーマ)では</p><p>　①自部門の課題に基づき取り上げたテーマ</p><p>　②レベルアップの為に課題を取り上げたテーマ                     と言われます。</p><p>　これらは、組織そのものが抱えている課題や、組織や小集団グループの枠を超え、他部門との調整も必要となるより高度な改善活動になります。</p><p>自身の組織や小集団グループの状態が、現在、どの様な状況に当てはまるのか再度、確認してみて下さい。あまりに背伸びしすぎていたり、簡単に解決できるものをテーマとして選んでいないでしょうか？今一度、見直してみるのも大切です。</p><blockquote><p>エイトスでは、提案活動を活性化させる方法や、従業員が自律的に動ける組織文化を作る支援をしています。無料でのご相談をしておりますので、<a href="https://eitoss.com/form/contact" target="_blank" rel="noopener noreferrer nofollow">是非一度ご連絡ください</a>。</p><p>さらに改善のDX化についてのノウハウや最新情報をメルマガで定期配信しているので、ぜひ下記URLからご登録お願い致します。<a href="https://mail.salesdiv.jp/bm/p/f/tf.php?id=eitoss0920&amp;task=regist" target="_blank" rel="noopener noreferrer nofollow">https://mail.salesdiv.jp/bm/p/f/tf.php?id=eitoss0920&amp;task=regist</a></p></blockquote><p></p><p></p><h3 id="h171906fe6f"><strong>形骸化は活動の停滞から始まる。活動を停滞させないためには</strong></h3><p>活動に取り組んでいること自体を「報告すること」が目的という状態になったときは、改善の形骸化に陥りやすい状態であると言えます。それは改善の活動が停滞している時期でもあります。活動を停滞させないためにはどのようにすれば良いのでしょうか。</p><p>まず、達成すべき目標やテーマが何であったことを振り返ってみて下さい。そこでは最初に述べました「トップダウンによるニーズ」が何であったかを確認することになります。それらを踏まえた上で、組織や小集団グループが抱える課題を振り返って下さい。</p><p>次に、改善活動の年間計画がきちんと立てられているか、ということを確認して下さい。1テーマずつの活動計画では、どうしても1つ完結するとそれで満足してしまい、改善活動を行う意欲が低下してしまうことがあります。</p><p>1) 1テーマを何ヶ月で完成させるか、年間でいくつ完結するのかを織り込む</p><p>2) テーマ候補に挙がってきたものを評価点の高い順番に織り込む　　　　　　ということが必要です。</p><p>　このようにすればテーマ活動は計画的に進み、1テーマ完了する毎に気が抜けるということも防止できます。更に挙がってきた複数のテーマについて</p><p>　1) 平行して取り組む</p><p>　2）一部重複して取り組む事により、活動の停滞を防ぐなどの工夫をしても良いかもしれません。</p><p>　次に、改善活動の計画・立案段階において、に改善活動に関わるメンバー全員の役割分担と、その活動スケジュールの日程を明確にしておくことも重要です。それにより、メンバー全員が、自分自身が何をすれば良いのかを理解しながら進めることができるでしょう。</p><p>また、マンネリ化や無気力化を防止するのも、ある程度長期間の活動計画をしっかり立てる事で防ぐ事が出来ます。その計画の中では。ある期間ごとに会合や打ち合わせなどを行い、役割分担をした上で、報告をしてもらうようことで、メンバーのやる気を促すようにすることも大切です。</p><p>　また、データ取りなどは必ず、メンバー全員が作業の合間に行い、後で纏めてしないということも大切です。更に、データ取る条件、すなわち時間・場所・測定器・工程などを確実に決めておくことが重要です。条件を決めてデータを取ると意外な事柄を発見することもあります。</p><p>改善には有形効果と無形効果がありますが、できる限り有形効果で評価するように指導し、活動していく必要があります。有形効果とは具体的な特性値(数字)として現れる、例えば生産性指標やコスト低減額などで、無形効果は職場が明るくなったなど抽象的な効果を指します。活動は客観的に効果を把握する必要がありますので、そのためにも有形効果での評価が必要になるのです。</p><p>評価した結果は必ず職場の見える場所に表示して下さい。これは「目で見る管理」の1つのやり方で、全員が活動計画を理解し、情報の共有化を図る事が出来るからです。</p><p>問題が解決しない場合は、別の切り口を探すということも有効です。例えば、問題点を分解してみる、指標を見直すなどしてみると、問題解決の糸口になり、停滞から抜け出せることがあります。</p><p>最後に、もし、改善活動が停滞から抜け出せないような場合は、上長にも相談し、上長からのアドバイス等をもらうというのも1つの手段でもあります。また、上長は停滞しているように見える場合は、適宜、アドバイスやサポートを実施することが肝要です。但し、上長が中心になって改善活動を行うのではなく、あくまでもサポート役に徹して下さい。</p><h3 id="h42f13d19f7"><strong>「自己満足活動」に陥らないために</strong></h3><p>組織や小集団活動のメンバーのQC能力が不十分な場合、せっかくの改善活動が成果に繋がらず「自己満足活動」に陥ってしまいます。つまり、改善活動を行う前にメンバーにはQC能力を持たせる方策を考える必要があります。トップダウンとして直接指導することが最も即効性が有り、実行が上がりますが、それが出来ない場合、研修などを受講させる事が有効な手段になります。</p><p>　メンバーの育成は管理者の責務の一つで有り、目先の業務の忙しさを理由に成長の機会を奪わないようにしなければなりません。メンバーの成長により、業務がより改善され、業績も向上できます。</p><p>成果を上げるか上げないかというのはメンバーの才能によるものではありません。いくつかの習慣的な姿勢と、基礎的な方法が身についているかどうかによるのです。</p><blockquote><p>エイトスでは、提案活動を活性化させる方法や、従業員が自律的に動ける組織文化を作る支援をしています。無料でのご相談をしておりますので、<a href="https://eitoss.com/form/contact" target="_blank" rel="noopener noreferrer nofollow">是非一度ご連絡ください</a>。</p><p>またサービス資料請求は<a href="https://eitoss.com/form/service" rel="nofollow">こちら</a>からお願いいたします。（サービス資料をダウンロードして頂いた方限定で現場の業務改善を網羅的に確認する「改善チェックポイント100」を差し上げます。）</p></blockquote><h3 id="h288f4ca5cf"><strong>活発な改善活動の特徴と不活発な場合の特徴</strong></h3><p><strong>活発な改善活動を行えている場合</strong>の特徴として、</p><p>①メンバーが問題意識を持っている</p><p>②自律的に職場を改善する意欲に燃えている</p><p>③管理者の強制や圧力がない</p><p>④改善のグループリーダーが常に情報を収集している</p><p>⑤打ち合わせの時間は全員の参加しやすさに配慮している</p><p>⑥話し合いのまとめや実施事項がスムーズである</p><p>⑦グループリーダーと上司の連携が良い</p><p>⑧グループ員全員が能力向上に満足感を持っている    などというものが見られます。</p><p>逆に、<strong>不活発な改善活動の場合</strong></p><p>①活動テーマや目標を指示された</p><p>②グループ員の問題分析能力が低く、何をして良いのかがわからない</p><p>③グループ員の能力を引き出せていない</p><p>④いつ終わると知れぬ、議題が不明確なミーティングを行っている</p><p>⑤取り組み意識が低く、特定の人のみによる活動となっている</p><p>⑥業務に追われ、活動が負担だと思っている</p><p>⑦愚痴や苦情ばかりで自分たちが出来ることを考えていない</p><p>⑧発言・提案が出されっぱなしで、まとめがなく、実施事項に結びつかない</p><p>⑨改善成果のフォローがなく、達成感がない             ということが見られます。</p><p>今、自分たちの組織や小集団グループが上記のどちらにあるのかチェックしてみましょう。もし、不活発な改善活動に分類できると考えられる場合は、その状態から抜け出す為に、インセンティブを与えてみるということも考えられます。インセンティブは何も改善提案に対する報奨だけではありません。達成感を感じさせるためのグループ内での報告、発表会、表彰なども1つの手段になるので、実践してみるとよいでしょう。</p><p> いくつか改善活動に対してのTipsを紹介しました。改善活動の参考としていただければ幸いです。</p><p></p><p></p><p>現場のQCサークル活動が上手くいかなくて困っている場合には、現場の困りごとを「見える化」して情報を共有できるシステムを提供する「提案制度特化クラウド「Cayzen（カイゼン）」を活用して、現場の生産性向上に努めるようにしていきましょう。</p><p></p><p></p><p></p><blockquote><p>エイトスでは、提案活動を活性化させる方法や、従業員が自律的に動ける組織文化を作る支援をしています。無料でのご相談をしておりますので、<a href="https://eitoss.com/form/contact" target="_blank" rel="noopener noreferrer nofollow">是非一度ご連絡ください</a>。</p><p>現場の業務改善を網羅的に確認する「改善チェックポイント100」を上記画像よりダウンロードが可能となっております。</p><p>さらに改善のDX化についてのノウハウや最新情報をメルマガで定期配信しているので、ぜひ下記URLからご登録お願い致します。<a href="https://mail.salesdiv.jp/bm/p/f/tf.php?id=eitoss0920&amp;task=regist" target="_blank" rel="noopener noreferrer nofollow">https://mail.salesdiv.jp/bm/p/f/tf.php?id=eitoss0920&amp;task=regist</a></p></blockquote><p></p>
       </div>
-      <div class="post-cta">
-        <h2>法令対応・現場改善のご相談はエイトスへ</h2>
-        <p>EHS法令調査の代行から、ISO対応、現場のナレッジマネジメントまで。まずはお気軽にご相談ください。</p>
-        <div class="btns">
-          <a class="btn btn-primary" href="../../#services">サービスを見る</a>
-          <a class="btn btn-ghost" href="../../#contact">お問い合わせ</a>
-        </div>
-      </div>
+      <a class="cta-banner cta-ehs" href="../../cayzen/ehsresearch/">
+        <span class="cb-left">
+          <span class="cb-title"><span class="em">環境・労働安全</span> 関連の<br>法令対応のお悩み</span>
+          <span class="cb-bubbles"><span>常に変化する…</span><span>わかりづらい…</span></span>
+        </span>
+        <span class="cb-body">
+          <span class="cb-lead"><span class="chip-ai">AI 調査代行</span>でスピード解決！</span>
+          <span class="cb-num">最大<b>95</b><small>%</small>工数削減</span>
+          <span class="cb-btn">詳しくはこちら <span class="cb-arrow">→</span></span>
+        </span>
+      </a>
       <a class="back-link" href="../">← コラム一覧へ戻る</a>
     </article>
   </div>

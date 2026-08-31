@@ -130,6 +130,34 @@ header.gh{position:fixed;top:0;left:0;right:0;background:rgba(255,255,255,.96);b
   .gh-actions{gap:6px}
 }
 
+/* 記事下CTAバナー（EHS／ISOテーマ） */
+.cta-banner{display:grid;grid-template-columns:1fr 1.1fr;border-radius:16px;overflow:hidden;margin-top:60px;box-shadow:0 14px 34px rgba(16,104,120,.16);transition:transform .15s ease,box-shadow .15s ease;text-decoration:none}
+.cta-banner:hover{transform:translateY(-3px);box-shadow:0 20px 44px rgba(16,104,120,.22)}
+.cta-banner .cb-btn{display:flex;align-items:center;justify-content:center;gap:10px;background:#f6941c;color:#fff;font-weight:900;font-size:16px;border-radius:10px;padding:13px 22px;margin-top:18px;box-shadow:0 4px 12px rgba(246,148,28,.35)}
+.cta-banner .cb-arrow{display:inline-flex;align-items:center;justify-content:center;width:24px;height:24px;border-radius:50%;background:rgba(255,255,255,.25);font-size:14px}
+.cta-iso .cb-media{background:#12351f}
+.cta-iso .cb-media img{width:100%;height:100%;object-fit:cover;display:block}
+.cta-iso .cb-body{background:linear-gradient(135deg,#f2f8fe,#dcecfa);padding:26px 28px;display:flex;flex-direction:column;justify-content:center}
+.cta-iso .cb-catch{color:#f0801a;font-size:26px;font-weight:900;line-height:1.3;margin:0 0 6px}
+.cta-iso .cb-text{color:#17303a;font-size:18px;font-weight:700;line-height:1.6;margin:0}
+.cta-iso .cb-text small{display:block;font-size:15px;font-weight:500;color:#3a5560}
+.cta-ehs .cb-left{background:#e9f1f5;padding:26px 26px 22px;display:flex;flex-direction:column;justify-content:center;gap:14px}
+.cta-ehs .cb-title{font-size:19px;font-weight:900;color:#17303a;line-height:1.55;margin:0}
+.cta-ehs .cb-title .em{color:var(--teal-700);font-size:23px}
+.cta-ehs .cb-bubbles{display:flex;gap:10px;flex-wrap:wrap}
+.cta-ehs .cb-bubbles span{background:#fff;border:1px solid #c8d9e0;color:#3a5560;font-size:13px;border-radius:999px;padding:6px 14px}
+.cta-ehs .cb-body{background:linear-gradient(135deg,#eaf4fd,#d8e9fa);padding:24px 28px;display:flex;flex-direction:column;justify-content:center}
+.cta-ehs .cb-lead{font-size:15px;font-weight:700;color:#17303a;margin:0 0 4px}
+.cta-ehs .chip-ai{display:inline-block;background:var(--teal-700);color:#fff;font-weight:700;border-radius:6px;padding:3px 12px;margin-right:6px}
+.cta-ehs .cb-num{color:#17303a;font-weight:900;font-size:18px;margin:0;line-height:1.2}
+.cta-ehs .cb-num b{color:#f0801a;font-size:44px;font-family:"Poppins","Noto Sans JP",sans-serif}
+.cta-ehs .cb-num small{color:#f0801a;font-size:20px;margin-right:8px}
+@media(max-width:700px){
+  .cta-banner{grid-template-columns:1fr}
+  .cta-iso .cb-media{aspect-ratio:16/9}
+  .cta-iso .cb-catch{font-size:22px}
+}
+
 .news-rows{max-width:860px;margin:0 auto}
 .news-row{display:flex;gap:22px;align-items:baseline;padding:18px 10px;border-bottom:1px solid var(--line);font-size:14.5px;color:var(--ink)}
 .news-row time{flex:0 0 auto;color:var(--teal-500);font-weight:700;font-family:"Poppins","Noto Sans JP",sans-serif}
@@ -196,14 +224,17 @@ header.gh{position:fixed;top:0;left:0;right:0;background:rgba(255,255,255,.96);b
       <div class="article-body">
 <p>イントレプレナーシップは、まだ比較的新しい概念ですが、多くの成功した組織がイントラプレナーシップを重視し、イントレプレナーの創出に向けた取り組みを重要な経営施策と位置付けています。では、具体的にどの様な取り組みをすべきでしょうか？このためには、必ずしも特別な取り組みが必要なわけではありません。まずできることは、従業員の持つアイデアに対して経営陣や上司、他の従業員が耳を傾け、提案しやすい環境をつくることです。</p><p>例えば、トヨタを初めとする製造業で広く取り入れられている「改善提案制度」は、一つの有効な仕組みで、幅広い業種に適用可能なものです。また、リモートワーク時において、従業員からボトムアップで多様な提案がなされる文化は、企業の競争力をつける上で重要な取り組みになることが予想されます。</p><p></p><p></p><blockquote><p>エイトスでは、提案活動を活性化させる方法や、従業員が自律的に動ける組織文化を作る支援をしています。無料でのご相談をしておりますので、<a href="https://eitoss.com/form/contact" target="_blank" rel="noopener noreferrer nofollow">是非一度ご連絡ください</a>。</p><p>さらに改善のDX化についてのノウハウや最新情報をメルマガで定期配信しているので、ぜひ下記URLからご登録お願い致します。<a href="https://mail.salesdiv.jp/bm/p/f/tf.php?id=eitoss0920&amp;task=regist" target="_blank" rel="noopener noreferrer nofollow">https://mail.salesdiv.jp/bm/p/f/tf.php?id=eitoss0920&amp;task=regist</a></p></blockquote><h3 id="h6cc7044559">改善提案制度とは？</h3><p>改善提案は、海外でもそのまま『Kaizen Teian』として、広く浸透しており、主に業務や職場環境や顧客サービスなど従業員の気づくことから継続的に提案し、実行する取り組みです。小さな効果であっても、日常的に提案活動が行われ、長い期間をかけて持続的に取り組むことで、コスト削減や売り上げ向上など目に見える結果を生み出します。この様な自発的に提案が出てくる文化を醸成することは、不況時にも強い筋肉質な経営基盤を構築する上で不可欠です。</p><p>従業員から活発に提案がなされる組織文化を構築するためには、改善提案制度を正しく制度設計し、運用することが重要であると考えられます。この制度では、従業員一人一人が積極的に関与し、小さな段階的な変化、改善を行うことが奨励されています。一つ一つの提案は小さな効果だったとしても、全社員で継続することで、最終的に大規模な変化をもたらします。</p><p></p><h3 id="h7909b8d190"><strong>どのように提案文化を醸成するか？</strong></h3><p>あなたの職場を自律的に提案が行われる組織文化にするためには、提案制度をどの様に運用するのか学ぶことが有効です。ここでは、提案制度を上手に運用するための6つのポイントをご紹介します。</p><ol><li>目標・効果の見える化 <br>提案活動を開始するための最初のステップは、目標を見える化することです。提案活動が継続しないよくある要因の一つは、提案活動がどの様に効果を出しているか分からず、モチベーションを維持できないことです。目標や改善したい指標を共有することで、従業員が主体的にアイデアを提案する土台ができるので、まずは改善したい指標を明確化することが大切です。<br></li><li>アイデア「数」へのコミット <br>提案活動でよくある課題として挙げられることの一つに、アイデアの質が上がらない、というものがあります。アイデアの質はすぐには上がりません。活動を継続する中で、従業員が学び、継続して高い質のアイデアが出るようになります。まずは、アイデアの「数」に拘り、継続してアイデアが提案されることに注力することが重要です。<br></li><li>フィードバック<br>提案活動で最も大切なことが、提案者に対してフィードバックをしっかりと行うこと。せっかく提案しても、何も反応がなければ、徐々に提案の意欲は無くなります。評価者を定め、提案者に対して、できるだけタイムリーに、フィードバックをすることが提案活動を継続し、活性化させるためには必要不可欠です。<br></li><li>アイデアのシェア<br>進捗状況を追跡するための指標を考え出すことができれば、それはより良いことです。そして、時間とともに進捗状況を追跡しながら進めていくべきです。もし物事が計画した方向に進んでいないことに気づいたら、何がそれらを引きずっているのかを確認し、それに応じて修正する必要があります。この手順に従うことができれば、あなたの組織や職場がどのように継続的な改善を経験しているかを見ることができるようになります。その結果、目標を達成することができるようになります。<br></li><li>報奨制度<br>提案活動を活性化させるためには、報奨制度を活用することが有効です。よくある事例としては1件あたり500円など件数や提案内容に応じた報奨金を設けるケースです。また、人事制度とも連携し、評価や昇進などに繋がる活動にすることも、従業員のモチベーションを高める一つの方法になります。<br></li><li>教育<br>提案活動の一つの目的として、従業員の教育機会を創出することがあります。特に、定常的な業務を行うことが主となっている従業員にとっては、定常業務の枠外で会社をよくする提案ができる仕組みは、自分の可能性を広げ、新たなキャリアのステップにつながる機会を与えることになります。会社側でも従業員が主体的に学び、より質の高い提案に結びつくような教育の仕組みを整えることが、活動の活性化に繋がります。<p></p></li></ol><p>提案文化を職場に導入を検討する背景は様々だと思いますが、その中でも、コスト削減は最大の理由の一つです。経営陣や管理職では気が付かない業務の無駄や、経費の無駄など、全社員が小さなアイデアを積み上げることで、莫大な効果に繋がります。</p><p>また、提案文化が根付くことで、従業員のエンゲージメントの向上ができます。一人一人が当事者意識を持ち、会社の継続的な改善に従事する責任が与えられます。コスト削減を行うと同時に一緒に、従業員の満足度や、活動を通した教育を行うことが可能です。これは、従業員の離職率を減らし、長期的には多くのメリットを享受することができます。</p><p>また、リモートワークにおいて、提案活動は従業員の自発的な取り組みを評価する上で有効です。オフィスワークであれば、業務分掌の枠外で、主体的に取り組んでいることを上司が目にとめやすく、その姿勢が評価に反映されるケースもあったかと思います。しかしリモートワーク時には、個人が自主的に行っている改善活動や職場をよくする提案を目にとめる機会は少なくなります。提案活動を適切に運用し、各従業員がどの様な提案をどのくらい発案し、どの程度の効果があったのかを定量化することは、適切な人事評価をする上で、重要な役割を担うものと考えられます。<br><br></p><p></p><blockquote><p>エイトスでは、提案活動を活性化させる方法や、従業員が自律的に動ける組織文化を作る支援をしています。無料でのご相談をしておりますので、<a href="https://eitoss.com/form/contact" target="_blank" rel="noopener noreferrer nofollow">是非一度ご連絡ください</a>。</p><p>現場の業務改善を網羅的に確認する「改善チェックポイント100」を上記画像よりダウンロードが可能となっております。</p><p>さらに改善のDX化についてのノウハウや最新情報をメルマガで定期配信しているので、ぜひ下記URLからご登録お願い致します。<a href="https://mail.salesdiv.jp/bm/p/f/tf.php?id=eitoss0920&amp;task=regist" target="_blank" rel="noopener noreferrer nofollow">https://mail.salesdiv.jp/bm/p/f/tf.php?id=eitoss0920&amp;task=regist</a></p></blockquote>
       </div>
-      <div class="post-cta">
-        <h2>法令対応・現場改善のご相談はエイトスへ</h2>
-        <p>EHS法令調査の代行から、ISO対応、現場のナレッジマネジメントまで。まずはお気軽にご相談ください。</p>
-        <div class="btns">
-          <a class="btn btn-primary" href="../../#services">サービスを見る</a>
-          <a class="btn btn-ghost" href="../../#contact">お問い合わせ</a>
-        </div>
-      </div>
+      <a class="cta-banner cta-ehs" href="../../cayzen/ehsresearch/">
+        <span class="cb-left">
+          <span class="cb-title"><span class="em">環境・労働安全</span> 関連の<br>法令対応のお悩み</span>
+          <span class="cb-bubbles"><span>常に変化する…</span><span>わかりづらい…</span></span>
+        </span>
+        <span class="cb-body">
+          <span class="cb-lead"><span class="chip-ai">AI 調査代行</span>でスピード解決！</span>
+          <span class="cb-num">最大<b>95</b><small>%</small>工数削減</span>
+          <span class="cb-btn">詳しくはこちら <span class="cb-arrow">→</span></span>
+        </span>
+      </a>
       <a class="back-link" href="../">← コラム一覧へ戻る</a>
     </article>
   </div>
