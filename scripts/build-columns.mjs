@@ -133,8 +133,10 @@ header{position:fixed;top:0;left:0;right:0;background:rgba(255,255,255,.94);back
 .header-nav .nav-links{display:flex;gap:22px;margin-right:14px;font-size:15.5px;font-weight:500}
 .header-nav .nav-links a{color:var(--ink)}
 .header-nav .nav-links a:hover{color:var(--teal-700)}
-.page-head{padding:155px 0 46px;background:radial-gradient(1100px 500px at 85% -10%,rgba(128,192,200,.30),transparent 60%),linear-gradient(180deg,#f6fafb 0%,#eef6f7 100%)}
-.page-head .label{opacity:.65;font-family:"Poppins","Noto Sans JP",sans-serif;font-size:30px;font-weight:500;letter-spacing:.12em;color:var(--teal-500)}
+.page-head{position:relative;overflow:hidden;padding:155px 0 46px;background:radial-gradient(1100px 500px at 85% -10%,rgba(128,192,200,.30),transparent 60%),linear-gradient(180deg,#f6fafb 0%,#eef6f7 100%)}
+.page-head::before{content:attr(data-wm);position:absolute;top:96px;left:50%;transform:translateX(-50%);font-family:"Poppins","Noto Sans JP",sans-serif;font-weight:700;font-size:150px;line-height:1;letter-spacing:.08em;color:rgba(16,104,120,.06);white-space:nowrap;pointer-events:none}
+.page-head .container{position:relative}
+.page-head .label{display:none}
 .page-head h1{font-size:35.5px;font-weight:500;line-height:1.5;margin-top:6px}
 .page-head .lead{color:var(--gray);margin-top:10px;font-size:16.5px}
 .breadcrumb{font-size:14px;color:var(--gray);margin-bottom:14px}
@@ -180,6 +182,7 @@ article.post{max-width:760px;margin:0 auto}
 @media(max-width:900px){
   .col-grid{grid-template-columns:1fr}
   .page-head h1{font-size:27.5px}
+  .page-head::before{font-size:64px;top:122px}
   .post-head h1{font-size:24.5px}
   .header-nav .nav-links{display:none}
   .header-nav .btn-sm{padding:9px 14px;font-size:14px;white-space:nowrap}
@@ -365,10 +368,9 @@ function listPage(articles) {
       </a>`;
   }).join('\n');
 
-  const body = `<div class="page-head">
+  const body = `<div class="page-head" data-wm="COLUMN">
   <div class="container">
     <p class="breadcrumb"><a href="../">HOME</a> ／ コラム</p>
-    <p class="label">Column</p>
     <h1>コラム</h1>
     <p class="lead">環境・労働安全衛生（EHS）法令、ISO、ナレッジマネジメントに関する実務情報をお届けします。</p>
   </div>
@@ -452,10 +454,9 @@ ${insertMidBanner(stripEmoji(bodyOf(a)), ctaBanner(a))}
 // ---- ニュース ----
 function newsListPage(items) {
   const rows = items.map(n => `      <a class="news-row" href="/news/${esc(n.id)}/"><time datetime="${esc(dateOf(n))}">${fmtDate(dateOf(n))}</time><span class="t">${esc(n.title)}</span></a>`).join('\n');
-  const body = `<div class="page-head">
+  const body = `<div class="page-head" data-wm="NEWS">
   <div class="container">
     <p class="breadcrumb"><a href="../">HOME</a> ／ ニュース</p>
-    <p class="label">News</p>
     <h1>ニュース</h1>
     <p class="lead">エイトス株式会社からのお知らせ・プレスリリースです。</p>
   </div>
@@ -552,10 +553,9 @@ function seminarListPage(items) {
     ? `    <div class="col-grid">\n${past.map(card).join('\n')}\n    </div>`
     : '';
 
-  const body = `<div class="page-head">
+  const body = `<div class="page-head" data-wm="SEMINAR">
   <div class="container">
     <p class="breadcrumb"><a href="../">HOME</a> ／ セミナー</p>
-    <p class="label">Seminar</p>
     <h1>イベント・セミナー</h1>
     <p class="lead">EHS法令対応・ISO・現場のAI活用をテーマに、実務に役立つセミナーを開催しています。</p>
   </div>
