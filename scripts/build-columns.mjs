@@ -120,7 +120,7 @@ img{max-width:100%;height:auto;display:block}
 h1,h2,h3{letter-spacing:.08em;text-wrap:balance}
 a{color:var(--teal-700);text-decoration:none}
 .container{max-width:1080px;margin:0 auto;padding:0 20px}
-.btn{display:inline-block;padding:16px 36px;border-radius:999px;font-weight:500;font-size:17.5px;text-align:center;transition:transform .15s ease,box-shadow .15s ease;box-shadow:0 4px 14px rgba(16,104,120,.25)}
+.btn{display:inline-block;padding:16px 36px;border-radius:8px;font-weight:500;font-size:17.5px;text-align:center;transition:transform .15s ease,box-shadow .15s ease;box-shadow:0 4px 14px rgba(16,104,120,.25)}
 .btn:hover{transform:translateY(-2px);box-shadow:0 8px 20px rgba(16,104,120,.3)}
 .btn-primary{background:linear-gradient(135deg,var(--teal-500),var(--teal-700));color:#fff}
 .btn-ghost{background:#fff;color:var(--teal-700);box-shadow:0 4px 14px rgba(16,104,120,.18)}
