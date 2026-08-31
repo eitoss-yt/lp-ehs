@@ -61,8 +61,10 @@ header.gh{position:fixed;top:0;left:0;right:0;background:rgba(255,255,255,.96);b
   .gh-btn svg{width:14px;height:14px}
   .gh-actions{gap:6px}
 }
-.page-head{padding:155px 0 46px;background:radial-gradient(1100px 500px at 85% -10%,rgba(128,192,200,.30),transparent 60%),linear-gradient(180deg,#f6fafb 0%,#eef6f7 100%)}
-.page-head .label{opacity:.65;font-family:"Poppins","Noto Sans JP",sans-serif;font-size:30px;font-weight:500;letter-spacing:.12em;color:var(--teal-500)}
+.page-head{position:relative;overflow:hidden;padding:155px 0 46px;background:radial-gradient(1100px 500px at 85% -10%,rgba(128,192,200,.30),transparent 60%),linear-gradient(180deg,#f6fafb 0%,#eef6f7 100%)}
+.page-head::before{content:attr(data-wm);position:absolute;top:96px;left:50%;transform:translateX(-50%);font-family:"Poppins","Noto Sans JP",sans-serif;font-weight:700;font-size:150px;line-height:1;letter-spacing:.08em;color:rgba(16,104,120,.06);white-space:nowrap;pointer-events:none}
+.page-head .container{position:relative}
+.page-head .label{display:none}
 .page-head h1{font-size:35.5px;font-weight:500;line-height:1.5;margin-top:6px}
 .page-head .lead{color:var(--gray);margin-top:10px;font-size:16.5px}
 .breadcrumb{font-size:14px;color:var(--gray);margin-bottom:14px}
@@ -106,6 +108,7 @@ main.section{padding:56px 0 80px}
 .back-link{display:inline-block;margin-top:44px;font-size:15.5px;font-weight:500}
 @media(max-width:900px){
   .page-head h1{font-size:27.5px}
+  .page-head::before{font-size:64px;top:122px}
   .doc-grid{grid-template-columns:1fr}
   .doc-detail{grid-template-columns:1fr}
   .form-card{position:static}
@@ -158,10 +161,9 @@ footer .copy{font-size:12.5px;color:rgba(255,255,255,.55);text-align:center;marg
   </div>
 </header>
 
-<div class="page-head">
+<div class="page-head" data-wm="DOWNLOAD">
   <div class="container">
     <p class="breadcrumb"><a href="../">HOME</a> ／ 資料ダウンロード</p>
-    <p class="label">Download</p>
     <h1>資料ダウンロード</h1>
     <p class="lead">サービス資料や法令対応の実務ガイドを無料でダウンロードいただけます。</p>
   </div>
