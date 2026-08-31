@@ -130,6 +130,34 @@ header.gh{position:fixed;top:0;left:0;right:0;background:rgba(255,255,255,.96);b
   .gh-actions{gap:6px}
 }
 
+/* 記事下CTAバナー（EHS／ISOテーマ） */
+.cta-banner{display:grid;grid-template-columns:1fr 1.1fr;border-radius:16px;overflow:hidden;margin-top:60px;box-shadow:0 14px 34px rgba(16,104,120,.16);transition:transform .15s ease,box-shadow .15s ease;text-decoration:none}
+.cta-banner:hover{transform:translateY(-3px);box-shadow:0 20px 44px rgba(16,104,120,.22)}
+.cta-banner .cb-btn{display:flex;align-items:center;justify-content:center;gap:10px;background:#f6941c;color:#fff;font-weight:900;font-size:16px;border-radius:10px;padding:13px 22px;margin-top:18px;box-shadow:0 4px 12px rgba(246,148,28,.35)}
+.cta-banner .cb-arrow{display:inline-flex;align-items:center;justify-content:center;width:24px;height:24px;border-radius:50%;background:rgba(255,255,255,.25);font-size:14px}
+.cta-iso .cb-media{background:#12351f}
+.cta-iso .cb-media img{width:100%;height:100%;object-fit:cover;display:block}
+.cta-iso .cb-body{background:linear-gradient(135deg,#f2f8fe,#dcecfa);padding:26px 28px;display:flex;flex-direction:column;justify-content:center}
+.cta-iso .cb-catch{color:#f0801a;font-size:26px;font-weight:900;line-height:1.3;margin:0 0 6px}
+.cta-iso .cb-text{color:#17303a;font-size:18px;font-weight:700;line-height:1.6;margin:0}
+.cta-iso .cb-text small{display:block;font-size:15px;font-weight:500;color:#3a5560}
+.cta-ehs .cb-left{background:#e9f1f5;padding:26px 26px 22px;display:flex;flex-direction:column;justify-content:center;gap:14px}
+.cta-ehs .cb-title{font-size:19px;font-weight:900;color:#17303a;line-height:1.55;margin:0}
+.cta-ehs .cb-title .em{color:var(--teal-700);font-size:23px}
+.cta-ehs .cb-bubbles{display:flex;gap:10px;flex-wrap:wrap}
+.cta-ehs .cb-bubbles span{background:#fff;border:1px solid #c8d9e0;color:#3a5560;font-size:13px;border-radius:999px;padding:6px 14px}
+.cta-ehs .cb-body{background:linear-gradient(135deg,#eaf4fd,#d8e9fa);padding:24px 28px;display:flex;flex-direction:column;justify-content:center}
+.cta-ehs .cb-lead{font-size:15px;font-weight:700;color:#17303a;margin:0 0 4px}
+.cta-ehs .chip-ai{display:inline-block;background:var(--teal-700);color:#fff;font-weight:700;border-radius:6px;padding:3px 12px;margin-right:6px}
+.cta-ehs .cb-num{color:#17303a;font-weight:900;font-size:18px;margin:0;line-height:1.2}
+.cta-ehs .cb-num b{color:#f0801a;font-size:44px;font-family:"Poppins","Noto Sans JP",sans-serif}
+.cta-ehs .cb-num small{color:#f0801a;font-size:20px;margin-right:8px}
+@media(max-width:700px){
+  .cta-banner{grid-template-columns:1fr}
+  .cta-iso .cb-media{aspect-ratio:16/9}
+  .cta-iso .cb-catch{font-size:22px}
+}
+
 .news-rows{max-width:860px;margin:0 auto}
 .news-row{display:flex;gap:22px;align-items:baseline;padding:18px 10px;border-bottom:1px solid var(--line);font-size:14.5px;color:var(--ink)}
 .news-row time{flex:0 0 auto;color:var(--teal-500);font-weight:700;font-family:"Poppins","Noto Sans JP",sans-serif}
@@ -196,14 +224,17 @@ header.gh{position:fixed;top:0;left:0;right:0;background:rgba(255,255,255,.96);b
       <div class="article-body">
 <p>ペーパーレス化と聞くと、「ああ、うちの会社でもISO14001の関係でコピー用紙の使用量を低減しよう等呼びかけていたな」とか、紙の無駄遣いを無くすために裏紙を使用しているなど思いつくことがあるかと思います。ペーパーレス化とは、その名の通り紙を無くすことを意味しています。環境保全やコスト削減の観点から推し進められていると言う側面があります。ただ、このペーパーレス化、単純な紙の節約によるコスト低減だけの効果だけではありません。後述しますが、非常に多くの、又、有益な効果を得ることが出来るのです。特にこのコロナ禍で工場や繊細現場においても在宅勤務が広がったことにより、ペーパーレスの必要性は一層高まっています。</p><p>では、実際のところ、ぺーパーレス化することによって、仕事や業務のやり方、職場の環境はどのように変わり、良くなっていくのでしょうか。今回は、ペーパーレス化を行う上で、うまく活用するための方法や失敗例、メリット及びデメリットなどを紹介し、工場や生産現場でのペーパーレス化について考えていきたいと思います。</p><p></p><blockquote><p>エイトスでは、提案活動を活性化させる方法や、従業員が自律的に動ける組織文化を作る支援をしています。無料でのご相談をしておりますので、<a href="https://eitoss.com/form/contact" target="_blank" rel="noopener noreferrer nofollow">是非一度ご連絡ください</a>。</p><p>またサービス資料請求は<a href="https://eitoss.com/form/service" rel="nofollow">こちら</a>からお願いいたします。</p><p>さらに改善のDX化についてのノウハウや最新情報をメルマガで定期配信しているので、ぜひ下記URLからご登録お願い致します。<a href="https://mail.salesdiv.jp/bm/p/f/tf.php?id=eitoss0920&amp;task=regist" target="_blank" rel="noopener noreferrer nofollow">https://mail.salesdiv.jp/bm/p/f/tf.php?id=eitoss0920&amp;task=regist</a> </p></blockquote><p></p><h3 id="hf0cc5fbbd6"><strong><u>ペーパーレス化とは</u></strong></h3><p>　初めにペーパーレス化とは何かを説明します。先にも書きましたとおり、紙を無くすことなのですが、単純に紙を無くすだけではありません。紙を無くすことと併せて、従来は紙媒体に記載や記録していた情報やデータなどをPCやタブレット端末、スマートフォンと言ったデバイスを用いて、データベース化し、そのデータを上手く活用することで、業務の効率化を図るということを言います。インダストリー4.0やデジタル・トランスフォーメンション(DX)の推進が叫ばれている中、これらに関連させ、紙媒体から電子媒体に置き換えを図り、情報やデータの可用性を向上させる共にこれらの情報やデータを活用して、様々な評価や分析することが業務の効率化の為の重要なポイントであり、その重要性は益々、高まってきています。</p><p> </p><h3 id="h982630f1bc"><strong><u>なぜペーパーレス化を行うのか</u></strong></h3><p>昨今の労働力人口の減少に伴い、限られた労働資源を最大限、かつ、効率的に活用する働き方改革が必要となっています。紙媒体による文書や情報、記録の保管や管理は伝達手段として、誰もが紙面を見て、比較的簡単に情報や記録その他を何度も確認できると言った優れた面があり、長年利用されて来ましたし、現在も使われ続けています。工場や生産現場では、作業指示や作業手順、製品の要求事項や使用、図面や記録等の情報を管理する媒体は、やはり、紙によるものが、まだまだ多いでしょう。そうした紙媒体は、上述の様に優れている面がある一方で、それら紙媒体の印刷や押印、上長の承認印、また内容の確認と転記などの様々な間接作業が発生し、業務負荷を押し上げている一因となっており、そうした業務負荷は、本来、生産に当てるべき時間や労働資源がこれらに割かれるため、業務の生産性を下げる要因となっています。</p><p>ペーパーレス化を推進する事によるメリットとして、第一に従来、紙やノートなどに記載していた文書や情報、記録をPCやタブレット端末、スマートフォンと言ったデバイスに入力し、データベースとして管理、活用することにより、情報やデータの抜け漏れを抑制し、可用性も高まります。更に紙媒体の印刷や押印などの間接作業によって割かれていた時間を低減する事で生産など、別の業務に充てることが出来ます。例えば、過去に出荷した製品の品質記録の確認が必要になった場合でも、紙に記載された記録を探すより、データを検索、確認する方が効率的にピックアップすることが出来、全体的に業務の効率化が図りやすくなります。更にこうした業務効率化だけでなく、紙媒体の保管スペースの削減が可能となります。勿論、ペーパーレス化による紙の購入費や印刷時のインク使用量を低減することによるコストの低減も期待できます。</p><p>次にペーパーレス化は、単に工場や生産現場での間接作業の効率化だけに留まらず、会社の業務の全般のプロセス改善、効率化にも繋がります。例えば、図書の電子承認プロセスや、電子配布化も可能となり、又、最近では、在宅勤務中の機会も増えつつあると思いますが、在宅勤務中であっても、書類や図書の提出、承認や配信が可能となり、社員それぞれが持つデバイスから、会社の保管する情報にアクセス出来る様になります。それにより、従来の様に紙媒体を配布せずとも、多くの社員が情報やデータを同時期に共有し、更にスマートフォン等で業務を完結することも出来る様になります。情報共有の手段が格段に簡易化された結果、業務効率の向上だけでなく、社内のチームワーク向上にもつながる場合があります。</p><p>一方、ペーパーレス化のリスクとして、セキュリティ面で問題があるのではないかと思われる方もいるかも知れません。実は、今や電子データのセキュリティは紙媒体よりも強固であるといえます。勿論、セキュリティシステムの導入とその適切な運用は必須ですが、物理的な紛失の可能性がなくなることは、情報漏えいの観点から見て大きな違いといえるでしょう。</p><p>また、情報をデータファイル化することで、ファイルそれぞれにアクセス権限を付け、一部の情報は限られた社員しかアクセスできないようにするなどといった社内統制をとることもできるようになります。</p><p>それだけではありません。ペーパーレス化することのメリットとして、データ分析が容易になります。紙媒体では一次データを管理しますが、それをまた転記し、Excelやその他のシステムで統計処理や分析を行おうとすると多くの時間やコストが発生し、データの転記、入力ミスと言ったことも起こり得ます。元々使用するデータを分析し易い様に電子化やデータベース化しておけば、そのデータを使用し、機械学習やディープラーニングなどの人工知能(AI)を活用した予測などにも展開できます。総務省の2020年「デジタルデータの経済的価値の計測と活用の現状に関する調査研究」では、DXの取組みの一環として、年以上前から社内の業務ペーパーレス化を行ったと回答した企業が2003社中42.4%、また、直近3年以内に実施したと答えた企業が18%、合計60%を超える企業が取組んでいることからも重要であることが分かると思います。</p><p> </p><h3 id="h818741188b"><strong><u>ペーパーレス化が進まない理由</u></strong></h3><p>上記の様なメリットがあると分かっていながらも、ペーパーレス化が中々進まないと言われる方もおられるでしょう。その理由は、まず、第一に今まで慣れていた業務の仕組みを変えなければならず、それに伴い、社員の考え方を変える必要があるということが挙げられます。ペーパーレス化は、業務の効率化に繋がる反面、今まで、慣れ親しんだ業務や仕事のやり方を変えていくことが求められます。</p><p>次に、データ化して保存し閲覧するためのデジタル機器やソフトウェアを揃え、社内LANを構築し、インターネットにつないでセキュリティ対策を施すために、多くの初期投資と時間が必要ということもあります。データ消失、情報漏えい、システム障害、サイバー攻撃といったリスクにも対策をしておく必要があるので、こちらにもコストと時間がかかります。そのため導入をためらう企業も多いようです。</p><p>その他には、経営陣や社員のITリテラシーが不足している事も考えられます。特定の担当者がパソコンを使うというだけならまだしも、全社員がデジタルデータを扱うようにするには知識やスキルが不足しているというようなケースです。このようなケースでは、すべての書類をデジタル化することで、かえって効率が悪くなり途中でやめてしまうということがあります。また、せっかく、ペーパーレス化のハード面の環境を整備し、充実させても、それらを操作する社員のスキルが追い付かなければ、結局、データの活用に対応できない社員が、電子データをわざわざプリントアウトして作業するといった、本末転倒な事態も起こりかねません。</p><p> </p><blockquote><p>エイトスでは、提案活動を活性化させる方法や、従業員が自律的に動ける組織文化を作る支援をしています。無料でのご相談をしておりますので、<a href="https://eitoss.com/form/contact" target="_blank" rel="noopener noreferrer nofollow">是非一度ご連絡ください</a>。</p><p>さらに改善のDX化についてのノウハウや最新情報をメルマガで定期配信しているので、ぜひ下記URLからご登録お願い致します。<a href="https://mail.salesdiv.jp/bm/p/f/tf.php?id=eitoss0920&amp;task=regist" target="_blank" rel="noopener noreferrer nofollow">https://mail.salesdiv.jp/bm/p/f/tf.php?id=eitoss0920&amp;task=regist</a></p><p></p></blockquote><p></p><h3 id="h7beb88b593"><strong><u>ペーパーレス化を実現させるには</u></strong></h3><p>なかなかペーパーレス化に踏みきれない理由を踏まえたうえで、実現させるにはどうすればよいのでしょう。いくつかのポイントを紹介します。</p><p><strong>① 事前にデジタル化するものとしないものを明確に分ける</strong></p><p>ペーパーレス化を導入するうえで、するものとしないものを明確に分ける作業は非常に重要です。仕分けをせずにデジタル化を進めると、必要のないデジタルデータが増えることになり、メリットの一つである検索のしやすさが損なわれてしまうでしょう。ペーパーレス化のメリットを最大限に生かすためにも、何の目的でどのデータをペーパーレス化の対象とするのか、事前の仕分けは必須といえます。</p><p><strong>② トップマネジメントからの周知を行う</strong></p><p>今まで当たり前のように使っていた紙媒体をなくし、電子化するのは企業にとって大きな変革です。このような大変革には時間がかかりますが、企業のトップが率先して推進することにより、成功へのスピードを速められます。まずは、経営陣にペーパーレス化の必要性とメリットを説きましょう。経営層から各部署の幹部、一般社員とトップダウンで電子化のメリットや意義を周知させていくのです。経営陣にメリットを説明するときは、漠然としたイメージではなく、明確かつわかりやすく伝えることが大切です。メリットが明確でないと、経営陣が前向きに検討してくれない可能性があるからです。業務効率が向上する、多様な働き方が実現できる、大幅なコストダウンが可能など、電子化によって得られるありとあらゆるメリットを丁寧に伝えましょう。</p><p><strong>③ ペーパーレス化は一気に行うのではなく、できるところから始める</strong></p><p>企業によっては一部を紙で残しておきたいといった理由から、すべてのデジタル化ができないケースがあります。ペーパーレス化は必ずしも全社で一気に行う必要はありません。できるところから始めてみましょう。</p><p><strong>④ クラウドサービスを活用し、コストをかけずに行う</strong></p><p>ペーパーレス化の導入を低コストで進めるには、クラウドサービスをいかに効果的に活用するかがポイントです。またクラウドサービスの活用で、テレワークやモバイルワークの導入も可能になります。</p><p><strong>⑤ 社員へのITリテラシー教育を行う</strong></p><p>せっかくペーパーレス化に成功しても、社員のスキルが追い付いていなければメリットは半減してしまいます。現場に余計な混乱を招くおそれもあるため、導入前にITリテラシー教育を実施しましょう。書類の電子化に対応できるスキルを身につけてもらえれば、導入後のトラブルも軽減できます。社員によっては、ITに苦手意識を持つ方がいるかもしれません。このような社員にも対応できるよう、必要に応じてマニュアルを整備しましょう。希望者を募り、ITリテラシーの研修を行うのも効果が期待できます。技術的な指導だけでなく、セキュリティに関する教育も必要です。単にペーパーレス化しただけでは、セキュリティが万全とはいえません。スタッフのセキュリティ意識が低ければ、情報漏洩してしまうリスクは十分考えられます。技術面と併せてスタッフへの指導を行い、意識改革を進めましょう。</p><p> </p><p>繰り返しになりますが、ペーパーレス化は、情報やデータを紙媒体から電子媒体への置き換え、それら情報やデータの可用性を高めながら、うまく活用し、業務の効率化を図ることが肝要であり、従来の業務や仕事のやり方を変革していくことが重要です。こうした一連の進め方を念頭にペーパーレス化の推進を図って戴ければ、幸いです。</p><p></p><blockquote><p>エイトスでは、提案活動を活性化させる方法や、従業員が自律的に動ける組織文化を作る支援をしています。無料でのご相談をしておりますので、<a href="https://eitoss.com/form/contact" target="_blank" rel="noopener noreferrer nofollow">是非一度ご連絡ください</a>。</p><p>現場の業務改善を網羅的に確認する「改善チェックポイント100」を上記画像よりダウンロードが可能となっております。</p><p>また改善のDX化についてのノウハウや最新情報をメルマガで定期配信しているので、ぜひ下記URLからご登録お願い致します。<a href="https://mail.salesdiv.jp/bm/p/f/tf.php?id=eitoss0920&amp;task=regist" target="_blank" rel="noopener noreferrer nofollow">https://mail.salesdiv.jp/bm/p/f/tf.php?id=eitoss0920&amp;task=regist</a>                                            </p><p></p></blockquote><p></p>
       </div>
-      <div class="post-cta">
-        <h2>法令対応・現場改善のご相談はエイトスへ</h2>
-        <p>EHS法令調査の代行から、ISO対応、現場のナレッジマネジメントまで。まずはお気軽にご相談ください。</p>
-        <div class="btns">
-          <a class="btn btn-primary" href="../../#services">サービスを見る</a>
-          <a class="btn btn-ghost" href="../../#contact">お問い合わせ</a>
-        </div>
-      </div>
+      <a class="cta-banner cta-ehs" href="../../cayzen/ehsresearch/">
+        <span class="cb-left">
+          <span class="cb-title"><span class="em">環境・労働安全</span> 関連の<br>法令対応のお悩み</span>
+          <span class="cb-bubbles"><span>常に変化する…</span><span>わかりづらい…</span></span>
+        </span>
+        <span class="cb-body">
+          <span class="cb-lead"><span class="chip-ai">AI 調査代行</span>でスピード解決！</span>
+          <span class="cb-num">最大<b>95</b><small>%</small>工数削減</span>
+          <span class="cb-btn">詳しくはこちら <span class="cb-arrow">→</span></span>
+        </span>
+      </a>
       <a class="back-link" href="../">← コラム一覧へ戻る</a>
     </article>
   </div>

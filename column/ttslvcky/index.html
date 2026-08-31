@@ -130,6 +130,34 @@ header.gh{position:fixed;top:0;left:0;right:0;background:rgba(255,255,255,.96);b
   .gh-actions{gap:6px}
 }
 
+/* 記事下CTAバナー（EHS／ISOテーマ） */
+.cta-banner{display:grid;grid-template-columns:1fr 1.1fr;border-radius:16px;overflow:hidden;margin-top:60px;box-shadow:0 14px 34px rgba(16,104,120,.16);transition:transform .15s ease,box-shadow .15s ease;text-decoration:none}
+.cta-banner:hover{transform:translateY(-3px);box-shadow:0 20px 44px rgba(16,104,120,.22)}
+.cta-banner .cb-btn{display:flex;align-items:center;justify-content:center;gap:10px;background:#f6941c;color:#fff;font-weight:900;font-size:16px;border-radius:10px;padding:13px 22px;margin-top:18px;box-shadow:0 4px 12px rgba(246,148,28,.35)}
+.cta-banner .cb-arrow{display:inline-flex;align-items:center;justify-content:center;width:24px;height:24px;border-radius:50%;background:rgba(255,255,255,.25);font-size:14px}
+.cta-iso .cb-media{background:#12351f}
+.cta-iso .cb-media img{width:100%;height:100%;object-fit:cover;display:block}
+.cta-iso .cb-body{background:linear-gradient(135deg,#f2f8fe,#dcecfa);padding:26px 28px;display:flex;flex-direction:column;justify-content:center}
+.cta-iso .cb-catch{color:#f0801a;font-size:26px;font-weight:900;line-height:1.3;margin:0 0 6px}
+.cta-iso .cb-text{color:#17303a;font-size:18px;font-weight:700;line-height:1.6;margin:0}
+.cta-iso .cb-text small{display:block;font-size:15px;font-weight:500;color:#3a5560}
+.cta-ehs .cb-left{background:#e9f1f5;padding:26px 26px 22px;display:flex;flex-direction:column;justify-content:center;gap:14px}
+.cta-ehs .cb-title{font-size:19px;font-weight:900;color:#17303a;line-height:1.55;margin:0}
+.cta-ehs .cb-title .em{color:var(--teal-700);font-size:23px}
+.cta-ehs .cb-bubbles{display:flex;gap:10px;flex-wrap:wrap}
+.cta-ehs .cb-bubbles span{background:#fff;border:1px solid #c8d9e0;color:#3a5560;font-size:13px;border-radius:999px;padding:6px 14px}
+.cta-ehs .cb-body{background:linear-gradient(135deg,#eaf4fd,#d8e9fa);padding:24px 28px;display:flex;flex-direction:column;justify-content:center}
+.cta-ehs .cb-lead{font-size:15px;font-weight:700;color:#17303a;margin:0 0 4px}
+.cta-ehs .chip-ai{display:inline-block;background:var(--teal-700);color:#fff;font-weight:700;border-radius:6px;padding:3px 12px;margin-right:6px}
+.cta-ehs .cb-num{color:#17303a;font-weight:900;font-size:18px;margin:0;line-height:1.2}
+.cta-ehs .cb-num b{color:#f0801a;font-size:44px;font-family:"Poppins","Noto Sans JP",sans-serif}
+.cta-ehs .cb-num small{color:#f0801a;font-size:20px;margin-right:8px}
+@media(max-width:700px){
+  .cta-banner{grid-template-columns:1fr}
+  .cta-iso .cb-media{aspect-ratio:16/9}
+  .cta-iso .cb-catch{font-size:22px}
+}
+
 .news-rows{max-width:860px;margin:0 auto}
 .news-row{display:flex;gap:22px;align-items:baseline;padding:18px 10px;border-bottom:1px solid var(--line);font-size:14.5px;color:var(--ink)}
 .news-row time{flex:0 0 auto;color:var(--teal-500);font-weight:700;font-family:"Poppins","Noto Sans JP",sans-serif}
@@ -196,14 +224,17 @@ header.gh{position:fixed;top:0;left:0;right:0;background:rgba(255,255,255,.96);b
       <div class="article-body">
 <p>最近では、製造業でも生産現場との情報の利活用が増え、活用のニーズも高まってきています。AIや機械学習が身近なものになってきており、IoT技術の進展で自動化された製造ラインの制御機器から膨大な制御データを収集し、分析、フィードバックが出来るようになってきました。さらに、“スマートファクトリー”や“インダストリアル4.0”といった、製造工程のオートメーション化だけでなく、部品の調達や、自社の市場分析などにも連携されつつあります。</p><p>今回は情報技術の変革により製造業のデータ分析はどのように変わってきたのか、また、データ分析の必要性やメリットなどを考えていこうと思います。</p><p></p><blockquote><p>エイトスでは、提案活動を活性化させる方法や、従業員が自律的に動ける組織文化を作る支援をしています。無料でのご相談をしておりますので、<a href="https://eitoss.com/form/contact" target="_blank" rel="noopener noreferrer nofollow">是非一度ご連絡ください</a>。</p><p>またサービス資料請求は<a href="https://eitoss.com/form/service" rel="nofollow">こちら</a>からお願いいたします。</p><p>さらに改善のDX化についてのノウハウや最新情報をメルマガで定期配信しているので、ぜひ下記URLからご登録お願い致します。<a href="https://mail.salesdiv.jp/bm/p/f/tf.php?id=eitoss0920&amp;task=regist" target="_blank" rel="noopener noreferrer nofollow">https://mail.salesdiv.jp/bm/p/f/tf.php?id=eitoss0920&amp;task=regist</a></p></blockquote><p> </p><h3 id="hd500ba955f"><strong><u>製造業におけるデータとは</u></strong></h3><p>製造業におけるデータ分析は、昔から行われており、機器にセンサーを取り付けてデータを収集し、故障検知や生産性向上のために利用されています。また、統計的手法を用いた最適化技術も古くから適用されています。では、そのデータというのはどのようなものがあるのでしょうか。主にQCDESの観点で考えると分かり易いのですが、大きく、5つに分けることが出来ます。</p><p>　まずは、①生産設備の保全に関わるようなデータです。どうしても製造現場では事後保全になってしまいがちですが、事後保全では、計画的に安定した品質の製品を製造するというのが難しく、更に、故障してからの修理となるため、設備の停止期間が延びる傾向にあります。それを予防保全や時間基準保全などに変更するべく、設備部品の寿命や設備のチョコ停や稼働時間などのデータをとるということがあります。</p><p>　次に、②製品の生産性向上の為のデータです。例えば、製品のサイクルタイム、作業者の動作分析の計測結果、設備稼働時間、歩留まりなどがあります。これらのデータを分析することで、改善につなげ生産性を向上させる事が出来ます。</p><p>　3つ目に、③製造の品質管理に関わるデータです。例えば作業者間の不適合発生件数の差をデータ化することで、その工程におけるノウハウや暗黙知を抽出し、品質管理を行いやすくすることが出来ます。製品の寸法のバラツキ、その工程における工程能力などがこの中に含まれます。</p><p>　次に、④環境に対するデータです。昨今の各国や企業のSDGsの対応でも分かるように、自分たちが製造することで、環境にどれだけの負荷をかけてしまっているかを定量的に評価する為に、データ取りすることが多いと思います。また、使用電力量をデータ取りすることで、環境に対する負荷だけでなく、コスト低減にもつながることもあります。</p><p>　最後に⑤安全に関わるデータです。製造業は災害や事故が発生しやすい環境にあります。しかし、災害や事故が発生すると生産が止まるだけでなく、他社や顧客からの評価、自社の社員のモチベーションの低下、保険料の増加などコストへの影響などもあります。安全に関することをデータ取りし、それらのデータを分析することで安全に生産を続ける事が可能になります。</p><p>　それではこれら取得したデータはどのようにすればいいのでしょうか。次項ではデータの分析の必要性について見ていこうと思います。</p><p> </p><h3 id="h8a45cd4a28"><strong><u>データ分析の必要性とデータ分析の基本</u></strong></h3><p>　製造現場では、上記のような様々なデータが蓄積されているにもかかわらず、それらを活用できていない場合が散見されます。それは、データ分析が出来ていないことにあります。本項ではデータ分析の必要性について考えていきたいと思います。</p><p>　IoTの意味を広義に捉え第四次産業革命の中で生き残っていくためには、これからの社会がデータ駆動社会に変わっていくことを認識する必要があります。すなわち、IoTでつながることによって収集したデータを元に、価値のある判断をする必要があります。変化のはげしい時代において、過去の経験や勘だけに頼っていては生き残れないでしょう。製造業においても、工場や企業内で発生していることをデータ化し、データを基に判断を進めなければ、正しい考えに到達できないと思われます。つまり、データが付加価値創出の中核になっていきます。単純にデータを集め、グラフ化し、それを眺めるだけでは意味がなく、しっかりデータを分析しなければ付加価値創出につながりません。データ分析の必要性がここにあります。「ビッグデータ社会」の基本でもあり、CPS（Cyber Physical System）の考え方でもあります。最近では、経済産業省の文章にもCPS（Cyber Physical System）の概念についての記載があるので、おおよそどのような事をしなければ成らないかという事をご理解されている方も多いと思います。</p><p>図.ＣＰＳによるデータ駆動型社会の概念図(H27年度産業構造審議会 商務流通情報分科会 情報経済小委員会 中間取りまとめ ～ＣＰＳによるデータ駆動型社会の到来を見据えた変革～より抜粋)</p><p></p><p>　それでは、それらのデータはどのように分析すれば良いのでしょうか？AIや機械学習を用いればよいのでしょうか？もしくはデータ分析のコンサルタントや処理ソフトなどを導入する必要があるのでしょうか？もちろん、第四次産業革命ではAI、特にディープラーニングの存在感が高くなると思われますが、ここではまず、基本となる考え方について触れたいと思います。</p><p>　まず、データ分析で最も大切な事は、「データ分析で何をしたいのか」という目的を明確に決めることです。「データ分析によって成し遂げたいこと、知りたいことは何か？」を徹底的に議論するところからデータ分析はスタートします。目的を明確にすることから始まったデータ分析は、分析結果を上手く活用しやすい傾向が見られます。目的を決めずにデータを見ることから始めてしまうと、分析する人は何をすればよく分からないままで取り敢えず今取り扱えるデータで作業を進めていきます。そのため、データ分析が目的になってしまうことがよくあります。そこで、データ分析の手段の目的化を防ぎ、データ分析で得た結果を上手く活用する為に、①目的を明確にする。②データ分析作業を行う。③分析結果の解釈を行うといった「考える」プロセスと「作業する」プロセスを交互に繰り返していくことが大切です。   </p><p>データ分析の基本がイメージできたら、「データを分ける」ことに視点を置き「何を分けるのか？(分ける対象)」 と 「どうやって分けるのか？(分ける視点)」をしっかりと意識した上で分類の軸を考えます。5W1Hで分ける事が多いように思われます。クロス集計分析、ロジスティック回帰分析、アソシエーション分析、クラスター分析などがよく使われる分析手法です。</p><p>次に、「データ分析は戦略を教えてくれない」という事実を理解することです。データ分析はあくまで意思決定に必要な判断材料となる情報を、さまざまなデータの中から捻出するためのツールです。データ分析を実施したからといってビジネス戦略が即座に最適化されるわけではありません。最終的に判断するのは人であり、この事実を受け止めてデータ分析はあくまでツールなのだという意識を持つことが大切です</p><p></p><blockquote><p>エイトスでは、提案活動を活性化させる方法や、従業員が自律的に動ける組織文化を作る支援をしています。無料でのご相談をしておりますので、<a href="https://eitoss.com/form/contact" target="_blank" rel="noopener noreferrer nofollow">是非一度ご連絡ください</a>。</p><p>さらに改善のDX化についてのノウハウや最新情報をメルマガで定期配信しているので、ぜひ下記URLからご登録お願い致します。<a href="https://mail.salesdiv.jp/bm/p/f/tf.php?id=eitoss0920&amp;task=regist" target="_blank" rel="noopener noreferrer nofollow">https://mail.salesdiv.jp/bm/p/f/tf.php?id=eitoss0920&amp;task=regist</a></p></blockquote><p> </p><h3 id="h337b1c146a"><strong><u>データ分析のメリット</u></strong></h3><p>データ分析にはさまざまなメリットがあります。代表的なものには、「分析を元に予測が可能になる」「視覚的に現状を把握できる」、「新アイデアのヒントが得られる」、「意思決定が早くなる」、「成果を分析する際の判断基準となり、振り返りが容易になる」などが挙げられます。</p><p>製造業において、まず現状の製造の状況を把握する必要があります。現状をどうとらえるかで、今後の方向性を決定づけられます。そのため、直感による判断よりも、客観的なデータを用いて視覚化した方が社内での意思統一にも役立つことが考えられます。また、多様なデータから、着想のヒントが得られることで、新たな改善につながるアイデアも膨らみます。加えて、分析結果から着想された施策を実施することで、前後の状況が理解しやすく、改善分析にも有効です。データ分析から施策の立案、振り返りをして改善、ふたたび実行というPDCAサイクルを回し続けることで、効率のよい生産へつなげることができます。</p><p> </p><h3 id="h22c751c962"><strong><u>概念実証（PoC）の壁</u></strong></h3><p>人工知能（AI）活用の準備段階で、実現可能性を確かめる「概念実証（PoC：（Proof of Concept）」と呼ぶ工程があります。「PoC貧乏」「PoC止まり」という言葉に象徴されるように、PoCから先に進まないケースが少なくなく、多くの企業において、ここで躓くケースが散見されます。</p><p>PoCで検証されるのは、実現性や、効果・コスト、具体性などです。実現性では、予想通りデータを拾えるか、実際の環境で電波が正常に届くかなどと言った内容で、ノウハウがないとわかりにくい内容が多いことから、ここでの躓きがあります。解決策としては、詳しいメンバーを参画させて進める必要があります。</p><p>効果・コストにおいては、PoCを実施する前にも、机上で十分な費用対効果が得られるかがあまりできておらず、他の項目を先に実施しても、費用対効果が取れず、徒労となるケースが見られます。また、プロジェクトを進めるうちに目的がシステムを導入すること自体にすり替わってしまうことによる躓きもあります。どのようなシステムを導入する場合でも、最終目的は費用対効果の達成であることを心得、導入することが必要になります。</p><p>具体性の検証においては、技術的な実現性や費用対効果について一定の担保がなされた後に実施されるのが一般的です。また、ここで躓く大きな要因としては、現場から離れた人員だけでPoCを進めてしまい、現実とはかけ離れたシステムになってしまうことが挙げられます。必ず実際に使用する現場の人員を巻き込んで具体性の検証だけでなく、実現性や、効果なども検討するべきでしょう。</p><p> </p><h3 id="hfe368d8a36"><strong><u>データの二次利用</u></strong></h3><p>データには、一次データと二次データがあります。</p><p>一次データとは、特定の目的のために新しく収集されるデータのことで、必要なデータを入手できるメリットがある代わりにお金と時間がかかります。二次データは、他の目的のために自己または他者が事前に収集しているデータのことで、お金と時間が節約できる代わりに、必ずしも必要なデータが手に入るとは限りません。今までは一次データを用い利用する、取得した情報をその設備や生産の為だけに使用するという本来の情報の使い方をしてきました。しかし、一定以上の情報量が必要になり、膨大な情報の中から必要な情報のみを抽出、抜き出し、一つ一つのデータを目的の為に加工する事から行わなければならず、意思決定までに期間を要することが想定されます。二次利用は本来の目的であるデータ収集とは異なる目的の為にその情報を利用することです。二次利用されるデータは膨大なデータを比較的容易に分類したり検討したりすることが出来るようになりました。</p><p>近年、設備や工場の垣根を越えて、より広範囲より大量のデータを集積したビックデータを大規模に二次利用するための政府の取組みが本格化しています。「大きすぎて扱いきれない」というニュアンスも含ませて名付けられたとされるビッグデータは、情報処理のソフトウェアやハードウェア、インフラの進歩発展によって今や私たちの生活の中で活かされる時代となりました。これにより、より生産効率を向上させ、製造業の発展に寄与する事ができるようになります。また、新たな観点から既存データを分析しなおすことにより、一次分析では明らかにしえなかったことを明らかにすることが出来るというメリットもあります。</p><p>今後、データの二次利用についても念頭に置きながら、様々な製造に関するデータを取得していく必要があります。</p><p> </p><p> </p><p>今回は、製造のデータ分析について考えました。データを取得し、正しく分析することで大きなメリットを得られます。データの活用について一度検討してみてはいかがでしょうか。</p><p></p><p></p><blockquote><p>エイトスでは、提案活動を活性化させる方法や、従業員が自律的に動ける組織文化を作る支援をしています。無料でのご相談をしておりますので、<a href="https://eitoss.com/form/contact" target="_blank" rel="noopener noreferrer nofollow">是非一度ご連絡ください</a>。</p><p>現場の業務改善を網羅的に確認する「改善チェックポイント100」を上記画像よりダウンロードが可能となっております。</p><p>さらに改善のDX化についてのノウハウや最新情報をメルマガで定期配信しているので、ぜひ下記URLからご登録お願い致します。<a href="https://mail.salesdiv.jp/bm/p/f/tf.php?id=eitoss0920&amp;task=regist" target="_blank" rel="noopener noreferrer nofollow">https://mail.salesdiv.jp/bm/p/f/tf.php?id=eitoss0920&amp;task=regist</a></p></blockquote><p>                                                                         </p>
       </div>
-      <div class="post-cta">
-        <h2>法令対応・現場改善のご相談はエイトスへ</h2>
-        <p>EHS法令調査の代行から、ISO対応、現場のナレッジマネジメントまで。まずはお気軽にご相談ください。</p>
-        <div class="btns">
-          <a class="btn btn-primary" href="../../#services">サービスを見る</a>
-          <a class="btn btn-ghost" href="../../#contact">お問い合わせ</a>
-        </div>
-      </div>
+      <a class="cta-banner cta-ehs" href="../../cayzen/ehsresearch/">
+        <span class="cb-left">
+          <span class="cb-title"><span class="em">環境・労働安全</span> 関連の<br>法令対応のお悩み</span>
+          <span class="cb-bubbles"><span>常に変化する…</span><span>わかりづらい…</span></span>
+        </span>
+        <span class="cb-body">
+          <span class="cb-lead"><span class="chip-ai">AI 調査代行</span>でスピード解決！</span>
+          <span class="cb-num">最大<b>95</b><small>%</small>工数削減</span>
+          <span class="cb-btn">詳しくはこちら <span class="cb-arrow">→</span></span>
+        </span>
+      </a>
       <a class="back-link" href="../">← コラム一覧へ戻る</a>
     </article>
   </div>

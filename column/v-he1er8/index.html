@@ -130,6 +130,34 @@ header.gh{position:fixed;top:0;left:0;right:0;background:rgba(255,255,255,.96);b
   .gh-actions{gap:6px}
 }
 
+/* 記事下CTAバナー（EHS／ISOテーマ） */
+.cta-banner{display:grid;grid-template-columns:1fr 1.1fr;border-radius:16px;overflow:hidden;margin-top:60px;box-shadow:0 14px 34px rgba(16,104,120,.16);transition:transform .15s ease,box-shadow .15s ease;text-decoration:none}
+.cta-banner:hover{transform:translateY(-3px);box-shadow:0 20px 44px rgba(16,104,120,.22)}
+.cta-banner .cb-btn{display:flex;align-items:center;justify-content:center;gap:10px;background:#f6941c;color:#fff;font-weight:900;font-size:16px;border-radius:10px;padding:13px 22px;margin-top:18px;box-shadow:0 4px 12px rgba(246,148,28,.35)}
+.cta-banner .cb-arrow{display:inline-flex;align-items:center;justify-content:center;width:24px;height:24px;border-radius:50%;background:rgba(255,255,255,.25);font-size:14px}
+.cta-iso .cb-media{background:#12351f}
+.cta-iso .cb-media img{width:100%;height:100%;object-fit:cover;display:block}
+.cta-iso .cb-body{background:linear-gradient(135deg,#f2f8fe,#dcecfa);padding:26px 28px;display:flex;flex-direction:column;justify-content:center}
+.cta-iso .cb-catch{color:#f0801a;font-size:26px;font-weight:900;line-height:1.3;margin:0 0 6px}
+.cta-iso .cb-text{color:#17303a;font-size:18px;font-weight:700;line-height:1.6;margin:0}
+.cta-iso .cb-text small{display:block;font-size:15px;font-weight:500;color:#3a5560}
+.cta-ehs .cb-left{background:#e9f1f5;padding:26px 26px 22px;display:flex;flex-direction:column;justify-content:center;gap:14px}
+.cta-ehs .cb-title{font-size:19px;font-weight:900;color:#17303a;line-height:1.55;margin:0}
+.cta-ehs .cb-title .em{color:var(--teal-700);font-size:23px}
+.cta-ehs .cb-bubbles{display:flex;gap:10px;flex-wrap:wrap}
+.cta-ehs .cb-bubbles span{background:#fff;border:1px solid #c8d9e0;color:#3a5560;font-size:13px;border-radius:999px;padding:6px 14px}
+.cta-ehs .cb-body{background:linear-gradient(135deg,#eaf4fd,#d8e9fa);padding:24px 28px;display:flex;flex-direction:column;justify-content:center}
+.cta-ehs .cb-lead{font-size:15px;font-weight:700;color:#17303a;margin:0 0 4px}
+.cta-ehs .chip-ai{display:inline-block;background:var(--teal-700);color:#fff;font-weight:700;border-radius:6px;padding:3px 12px;margin-right:6px}
+.cta-ehs .cb-num{color:#17303a;font-weight:900;font-size:18px;margin:0;line-height:1.2}
+.cta-ehs .cb-num b{color:#f0801a;font-size:44px;font-family:"Poppins","Noto Sans JP",sans-serif}
+.cta-ehs .cb-num small{color:#f0801a;font-size:20px;margin-right:8px}
+@media(max-width:700px){
+  .cta-banner{grid-template-columns:1fr}
+  .cta-iso .cb-media{aspect-ratio:16/9}
+  .cta-iso .cb-catch{font-size:22px}
+}
+
 .news-rows{max-width:860px;margin:0 auto}
 .news-row{display:flex;gap:22px;align-items:baseline;padding:18px 10px;border-bottom:1px solid var(--line);font-size:14.5px;color:var(--ink)}
 .news-row time{flex:0 0 auto;color:var(--teal-500);font-weight:700;font-family:"Poppins","Noto Sans JP",sans-serif}
@@ -196,14 +224,17 @@ header.gh{position:fixed;top:0;left:0;right:0;background:rgba(255,255,255,.96);b
       <div class="article-body">
 <p>現在の社内の業務効率が悪く、何とかして改善したいと考えている経営者や社員は多いでしょう。しかしながら、どのようにして改善を行っていけば良いのか明確になっていない企業が大半のはずです。</p><p>そこで本記事では、業務効率を大幅に改善する為に行うべき「改善提案」について徹底解説しました。これから社内の業務効率を改善して、コスト削減や利益率を上げるなどを目指しているのであれば、是非最後までご覧ください。</p><blockquote><p>エイトスでは、提案活動を活性化させる方法や、従業員が自律的に動ける組織文化を作る支援をしています。無料でのご相談をしておりますので、<a href="https://eitoss.com/form/contact" target="_blank" rel="noopener noreferrer nofollow">是非一度ご連絡ください</a>。</p><p>またサービス資料請求は<a href="https://eitoss.com/form/service" rel="nofollow">こちら</a>からお願いいたします。</p><p>さらに改善のDX化についてのノウハウや最新情報をメルマガで定期配信しているので、ぜひ下記URLからご登録お願い致します。<a href="https://mail.salesdiv.jp/bm/p/f/tf.php?id=eitoss0920&amp;task=regist" target="_blank" rel="noopener noreferrer nofollow">https://mail.salesdiv.jp/bm/p/f/tf.php?id=eitoss0920&amp;task=regist</a></p></blockquote><p></p><h2 id="h30952433db">改善提案とは？</h2><h3 id="h0ae4471b9e">改善提案とは、現在の業務や作業を改善するべきポイントを提案することです。チームや社内のメンバーで話し合って、それぞれの業務を明確にすることで、どこに問題があるのか発見できます。<br>複数の問題点が発見されることが多いので、そこから最も効果が出る可能性の高い部分を、どのように改善するのか提案をしていきましょう。ちなみに、上司の指示で業務を改善するのは改善提案ではありません。あくまで現場のメンバーで話し合いの場を設けて、問題点を改善できる案を洗い出すのが改善提案になります。</h3><p> </p><h2 id="hb79f6d25ac">改善提案を行うべき理由</h2><h3 id="h33b5f6f8f4">これから、改善提案を行っていくのか迷っている企業は多いでしょう。<br>そこで、改善提案を行うべき理由を3つに厳選して解説していきます。</h3><ol><li><u>コスト削減に繋がる</u><br>作業効率を改善できる社内の全体の業務を見直して改善提案を行うことで、作業効率を改善できる可能性があります。作業効率を改善することができれば、他の業務に時間を費やすことが可能です。また、人件費の削減などコスト削減も期待できます。無駄な業務に従業員の時間を奪われていると感じるのであれば、改善提案を行う価値があると言えるでしょう。</li><li><u>売上アップを目指せる</u><br>商品の生産が間に合っていなくて、売上の機会損失が発生していると悩んでいる企業は多いでしょう。改善提案によって作業効率が改善されれば、商品の生産数を上げることができて売上アップを目指せる可能性があります。<p>生産数を増やしたいと考えている企業は、改善提案を行って業務の見直しを行うべきです。</p></li><li><u>出費・時間を削減できる可能性がある</u><br>作業効率が改善されることで、人件費や作業時間を大幅に削減できる可能性があります。単純作業に多くの従業員が時間を奪われていて、人件費も高騰しているという企業は少なくありません。改善提案を行うことで従業員の時間確保や人件費の削減が達成される可能性は十分にあるので、やってみる価値はあると言えるでしょう。</li></ol><p> </p><h2 id="hc3f93091a7">良い改善提案を行う為の課題を発見する手順</h2><h3 id="h3d47dd7d0f">今までの記事を読んで、改善提案を行いたいと考え始めている企業は多いはずです。そこで、良い改善提案を行う為の課題を発見する手順を4段階に分けて解説していきます。これから紹介する手順で業務改善を行えば、社内の課題を解決できる可能性が一気に上がると言えるでしょう。 </h3><ol><li><u>組織で振り返る</u><br>多くの企業は社長や上司の判断で業務の改善を試みますが、本当は組織で振り返った方が効果は高いです。社長や上司は従業員全員の業務を把握しているわけでは無いので、かなり限定された視野で物事を判断する傾向があります。組織で業務を振り返らなければ、会社全体の問題を見つけることができません。実際に現場で働いている全員が意見をぶつけることで、社長や上司が気付かなかった課題を見つけることができると言えるでしょう。これから改善提案を行っていくのであれば、最初に組織で振り返るという作業を行って下さい。</li><li><u>業務を可視化してみる</u><br>組織で振り返った後に、それぞれの部門やチームの業務を可視化してみましょう。<p>業務を可視化して共有することによって、部門・チームのメンバーでは気づかなかった課題を見つけられる可能性があります。</p><p>また、今まで知らなかった他部者や他チームの業務を詳しく知る良いきっかけになります。組織として全体を上手くまとめる為に、業務を可視化するという作業を行いましょう。</p></li><li><u>それぞれの業務のヒヤリング</u><p>組織全体で業務を可視化することができれば、気になるポイントをヒヤリングしましょう。それぞれの業務をヒヤリングすることで、具体的に課題となる点を見つけることができます。</p></li><li><u>業務の流れや手順を紙にまとめる</u><p>業務をヒヤリングするだけでは課題を見つけられない可能性もあるので、具体的な流れや手順を紙に書いて共有しましょう。業務の手順や流れのタイミングで問題点がある場合もあるので、できるだけ深掘りすることが大切です。組織全体の業務が可視化されて、手順や流れから問題点が見つかれば、それを解決する改善案を具体的に行っていくのが「改善提案」になります。</p></li></ol><h2 id="h3ac62ba773">改善提案の課題を考える際の観点</h2><h3 id="h8fe999102f">それでは、改善提案の課題を考える際の観点を2つ紹介していきます。改善提案を行なっていくのであれば、これから紹介する2つの観点を持つことが重要です。</h3><ol><li><u>QCD</u><p>QCDとは「Quality（品質）」「Cost（費用）」「Delivery（納期）」の3つを合わせた言葉になります。業務改善を行なう際に、品質の低下や納期の遅延があってはいけません。現状の品質を担保できて納期にも間に合う生産体制を整えられる改善提案を行うことが大切です。</p><p>また、品質や納期の問題を解決できたとしても、現状より費用が発生するのであれば違う改善案を模索しなければいけません。QCDの観点から、改善することで期待している成果を得られるのか検討しましょう。</p></li><li><u>ムダ・ムリ・ムラ</u><p>これから改善提案を行なっていくのであれば、業務を行う上で非効率の原因を生み出す指標である「ムダ」「ムリ」「ムラ」の部分を最初に改善するようにしましょう。</p><p>不要な人員の用意や活用されていない設備投資など「ムダ」になっている部分は、どのように改善すれば削減できるのか検討して下さい。既に「ムダ」だと判断できているのであれば、比較的簡単に改善することが可能です。</p><p>どう考えても「ムリ」だと判断されている業務量や短納期に関しては、代替案を考えましょう。</p><p>「ムリ」な業務量を現状維持の状態で改善できる可能性は限りなく低いです。業務量を減らせないのであれば機械の導入や従業員の増員など。「ムリ」な状態を放置していても、現状から全く変わらないので、改善案を模索しましょう。</p><p>商品やサービスの品質に「ムラ」があるのであれば、良い品質を提供できている状態を保ててない原因を見つけなければいけません。基本的には従業員のモチベーションや作業量増加による流れ作業が原因になりますが、それらの「ムラ」は大きな影響が出る可能性が極めて高いです。</p><p>何かしらの方法を模索して、一定の品質を担保できる状態にしていきましょう。</p></li></ol><p></p><blockquote><p>エイトスでは、提案活動を活性化させる方法や、従業員が自律的に動ける組織文化を作る支援をしています。無料でのご相談をしておりますので、<a href="https://eitoss.com/form/contact" target="_blank" rel="noopener noreferrer nofollow">是非一度ご連絡ください</a>。</p><p>さらに改善のDX化についてのノウハウや最新情報をメルマガで定期配信しているので、ぜひ下記URLからご登録お願い致します。<a href="https://mail.salesdiv.jp/bm/p/f/tf.php?id=eitoss0920&amp;task=regist" target="_blank" rel="noopener noreferrer nofollow">https://mail.salesdiv.jp/bm/p/f/tf.php?id=eitoss0920&amp;task=regist</a></p></blockquote><p></p><h2 id="hcf17f178b3">改善提案を行う際の注意点</h2><h3 id="hac27efc87e">それでは、改善提案を行なっていく際の注意点を解説していきます。これから紹介する注意点を理解して改善提案を行わなければ、期待している効果を得られないかもしれません。</h3><ol><li><u>改善するほどの効果を得られるのかシミュレーションする</u><p>改善提案によって発覚した問題点に対して、本当に改善するほどの効果を得られるのかシミュレーションをしなければいけません。</p><p>例えば、Aという問題点を解決できたとしても、業務時間が10分の削減にならないのであれば、あまり大きな成果を得たとは言えないでしょう。</p><p>改善する作業に取り掛かる前に、本当に改善するほどの効果を得られるのかシミュレーションして確認することが大切です。</p></li><li><u>実現可能か考慮する</u><p>予算面や従業員のリソースなどから、改善提案で洗い出された問題を本当に解決できるのか考慮しなければいけません。</p><p>例えば、予算が少ないにも拘らず、最新のIT技術を導入するのは実現不可能と言えるでしょう。また従業員が少ないにも拘らず、売上を作る為に受注量を増やすのも難しいはずです。</p><p>実現可能か考慮しないで作業に取り掛かると、途中で改善は難しいと判断することになって、時間も費用も無駄になります。</p><p>改善提案によって様々な案が出てくると思いますが、本当に実現可能なのか判断してから、改善を行なっていきましょう。</p></li><li><u>課題の優先順位を付ける</u><p>改善提案を行なっていくと複数の問題点が発覚しますが、いきなり全てを改善していくのは不可能なので、優先順位を付けていくことになります。</p><p>基本的には、売上アップやコスト削減ができる部分を優先に改善していくことをおすすめします。また、簡単に着手できるポイントから改善を行なっていくのも選択肢の1つです。</p><p>全ての問題点を洗い出すことができたら、優先順位を付けて改善を行なっていきましょう。</p></li><li><u>一気に改善をしない</u><p>改善提案で問題を洗い出したら一気に全て解決したくなりますが、絶対に辞めましょう。</p><p>全ての問題点を一気に改善すると、業務トラブルや社員の困惑を招きかねません。改善提案では、優先順位を付けて一つ一つ丁寧に課題を解決していくことが大切になります。</p><p>一気に多くの業務を改善しようとすると逆効果だと理解しておくことが大切です。</p></li></ol><p></p><h2 id="ha56b7e269c">改善提案の課題を解決する方法3選</h2><h3 id="hd06362396e">今までの記事を読んで、改善提案によって課題を解決していきたいと考えている人も多いでしょう。<br>最後に、改善提案の課題を解決する為の方法を3つに厳選して解説していきます。</h3><ol><li><u>ECRSの観点で考える</u><p>ECRSとは、業務プロセスを改善する場合の観点で、大きな効果が期待できる順番でアプローチを行うことを指します。<br>①Eliminate（排除）：業務やプロセスなど無駄な部分を排除する<br>②Combine（結合）：複数の業務を1つにまとめて簡潔化させる<br>③Rearrange（再配置）：担当者の配置を変えて適材適所で勝負する環境を作る<br>④Simplify（簡素化）：誰でも作業ができるようにマニュアルを簡単にする</p><p>基本的には、上記の数字の順番で改善できる部分が無いのか確認していきましょう。</p><p>最も手の付けやすい部分から業務を改善していくことで、効率良く成果を得ることができます。</p></li><li><u>業務のマニュアルの見直し</u><p>従業員の多くはマニュアル通りに業務を行うので、まずはマニュアルを見直しましょう。</p><p>マニュアルを改善するだけで、従業員の全員が作業方法を変えるので大きな成果を得ることが可能です。</p><p>もちろん、間違えた形でマニュアルを変更すると、会社全体に悪い影響を及ぼします。</p><p>業務のマニュアルの見直しは会社全体に大きな影響を与えるので、慎重に考えてから判断することが大切です。</p></li><li><u>ツールの導入</u><p>人員で作業効率を改善するのは難しいと判断されたのであれば、ツールの導入を検討しましょう。</p><p>例えば、エクセル記入などの単純作業は、ツールを導入することで自動化することが可能です。</p><p>ツールを導入することで人件費を大幅に削減できる可能性があるので、検討する価値は十分にあるでしょう。</p><p>最後に注意点ですが、ツールによっては導入する際に大きなコストが発生する可能性があります。また、運用コストも必要になるので、費用対効果が合うのか検討しましょう。</p><p>導入コストと運用コストを計算して、費用対効果が合うと判断できればツールの導入をおすすめします。</p></li></ol><p></p><h2 id="ha214098e44">まとめ</h2><p>本記事では、改善提案を行うべき理由や注意点、課題を解決する方法などを徹底解説しました。<br>提案改善を行うことによって、企業にとって大きなメリットを得られる可能性があります。現在の業務効率や経費に対して不満があるのであれば、改善提案をして問題点を洗い出しましょう。そこから問題を解決していくことで、社内の業務効率を改善することが可能です。</p><p></p><p></p><p></p><blockquote><p>エイトスでは、提案活動を活性化させる方法や、従業員が自律的に動ける組織文化を作る支援をしています。無料でのご相談をしておりますので、<a href="https://eitoss.com/form/contact" target="_blank" rel="noopener noreferrer nofollow">是非一度ご連絡ください</a>。</p><p>現場の業務改善を網羅的に確認する「改善チェックポイント100」を上記画像よりダウンロードが可能となっております。</p><p>さらに改善のDX化についてのノウハウや最新情報をメルマガで定期配信しているので、ぜひ下記URLからご登録お願い致します。<a href="https://mail.salesdiv.jp/bm/p/f/tf.php?id=eitoss0920&amp;task=regist" target="_blank" rel="noopener noreferrer nofollow">https://mail.salesdiv.jp/bm/p/f/tf.php?id=eitoss0920&amp;task=regist</a></p></blockquote>
       </div>
-      <div class="post-cta">
-        <h2>法令対応・現場改善のご相談はエイトスへ</h2>
-        <p>EHS法令調査の代行から、ISO対応、現場のナレッジマネジメントまで。まずはお気軽にご相談ください。</p>
-        <div class="btns">
-          <a class="btn btn-primary" href="../../#services">サービスを見る</a>
-          <a class="btn btn-ghost" href="../../#contact">お問い合わせ</a>
-        </div>
-      </div>
+      <a class="cta-banner cta-ehs" href="../../cayzen/ehsresearch/">
+        <span class="cb-left">
+          <span class="cb-title"><span class="em">環境・労働安全</span> 関連の<br>法令対応のお悩み</span>
+          <span class="cb-bubbles"><span>常に変化する…</span><span>わかりづらい…</span></span>
+        </span>
+        <span class="cb-body">
+          <span class="cb-lead"><span class="chip-ai">AI 調査代行</span>でスピード解決！</span>
+          <span class="cb-num">最大<b>95</b><small>%</small>工数削減</span>
+          <span class="cb-btn">詳しくはこちら <span class="cb-arrow">→</span></span>
+        </span>
+      </a>
       <a class="back-link" href="../">← コラム一覧へ戻る</a>
     </article>
   </div>

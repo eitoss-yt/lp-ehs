@@ -35,10 +35,13 @@ const catOf = a => {
 };
 // 本文: ブログテンプレートは content、独自スキーマは body
 const bodyOf = a => a.body || a.content || '';
+// 絵文字はサイト上に表示しない方針（入稿データに含まれていてもビルド時に除去）
+const EMOJI_RE = /[\u{1F000}-\u{1FAFF}\u{1F1E6}-\u{1F1FF}\u{2600}-\u{27BF}\u{2B50}\u{2B55}\u{FE0F}\u{203C}\u{2049}]/gu;
+const stripEmoji = s => String(s ?? '').replace(EMOJI_RE, '').replace(/(<p>|<li>|<h[1-6][^>]*>)[ \t]+/g, '$1');
 // 概要: descriptionフィールドがなければ本文から自動生成
 const descOf = a => {
-  if (a.description) return a.description;
-  const text = bodyOf(a).replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim();
+  if (a.description) return stripEmoji(a.description);
+  const text = stripEmoji(bodyOf(a)).replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim();
   return text.length > 90 ? text.slice(0, 90) + '…' : text;
 };
 
@@ -224,6 +227,34 @@ header.gh{position:fixed;top:0;left:0;right:0;background:rgba(255,255,255,.96);b
   .gh-actions{gap:6px}
 }
 
+/* 記事下CTAバナー（EHS／ISOテーマ） */
+.cta-banner{display:grid;grid-template-columns:1fr 1.1fr;border-radius:16px;overflow:hidden;margin-top:60px;box-shadow:0 14px 34px rgba(16,104,120,.16);transition:transform .15s ease,box-shadow .15s ease;text-decoration:none}
+.cta-banner:hover{transform:translateY(-3px);box-shadow:0 20px 44px rgba(16,104,120,.22)}
+.cta-banner .cb-btn{display:flex;align-items:center;justify-content:center;gap:10px;background:#f6941c;color:#fff;font-weight:900;font-size:16px;border-radius:10px;padding:13px 22px;margin-top:18px;box-shadow:0 4px 12px rgba(246,148,28,.35)}
+.cta-banner .cb-arrow{display:inline-flex;align-items:center;justify-content:center;width:24px;height:24px;border-radius:50%;background:rgba(255,255,255,.25);font-size:14px}
+.cta-iso .cb-media{background:#12351f}
+.cta-iso .cb-media img{width:100%;height:100%;object-fit:cover;display:block}
+.cta-iso .cb-body{background:linear-gradient(135deg,#f2f8fe,#dcecfa);padding:26px 28px;display:flex;flex-direction:column;justify-content:center}
+.cta-iso .cb-catch{color:#f0801a;font-size:26px;font-weight:900;line-height:1.3;margin:0 0 6px}
+.cta-iso .cb-text{color:#17303a;font-size:18px;font-weight:700;line-height:1.6;margin:0}
+.cta-iso .cb-text small{display:block;font-size:15px;font-weight:500;color:#3a5560}
+.cta-ehs .cb-left{background:#e9f1f5;padding:26px 26px 22px;display:flex;flex-direction:column;justify-content:center;gap:14px}
+.cta-ehs .cb-title{font-size:19px;font-weight:900;color:#17303a;line-height:1.55;margin:0}
+.cta-ehs .cb-title .em{color:var(--teal-700);font-size:23px}
+.cta-ehs .cb-bubbles{display:flex;gap:10px;flex-wrap:wrap}
+.cta-ehs .cb-bubbles span{background:#fff;border:1px solid #c8d9e0;color:#3a5560;font-size:13px;border-radius:999px;padding:6px 14px}
+.cta-ehs .cb-body{background:linear-gradient(135deg,#eaf4fd,#d8e9fa);padding:24px 28px;display:flex;flex-direction:column;justify-content:center}
+.cta-ehs .cb-lead{font-size:15px;font-weight:700;color:#17303a;margin:0 0 4px}
+.cta-ehs .chip-ai{display:inline-block;background:var(--teal-700);color:#fff;font-weight:700;border-radius:6px;padding:3px 12px;margin-right:6px}
+.cta-ehs .cb-num{color:#17303a;font-weight:900;font-size:18px;margin:0;line-height:1.2}
+.cta-ehs .cb-num b{color:#f0801a;font-size:44px;font-family:"Poppins","Noto Sans JP",sans-serif}
+.cta-ehs .cb-num small{color:#f0801a;font-size:20px;margin-right:8px}
+@media(max-width:700px){
+  .cta-banner{grid-template-columns:1fr}
+  .cta-iso .cb-media{aspect-ratio:16/9}
+  .cta-iso .cb-catch{font-size:22px}
+}
+
 .news-rows{max-width:860px;margin:0 auto}
 .news-row{display:flex;gap:22px;align-items:baseline;padding:18px 10px;border-bottom:1px solid var(--line);font-size:14.5px;color:var(--ink)}
 .news-row time{flex:0 0 auto;color:var(--teal-500);font-weight:700;font-family:"Poppins","Noto Sans JP",sans-serif}
@@ -362,6 +393,31 @@ ${articles.length ? `    <div class="col-grid">\n${cards}\n    </div>` : '    <p
   });
 }
 
+// 記事テーマ別のCTAバナー（タイトルにISOを含む記事はISO資料、それ以外はEHS調査代行）
+function ctaBanner(a) {
+  if (/iso/i.test(a.title || '')) {
+    return `<a class="cta-banner cta-iso" href="../../document/ISO14001_2026-revision/">
+        <span class="cb-media"><img src="../../assets/cms/7befeb27a2c3.jpg" alt="ISO14001 2026年改訂ポイント解説 実務ガイド" loading="lazy"></span>
+        <span class="cb-body">
+          <span class="cb-catch">どう変わる？</span>
+          <span class="cb-text">ISO14001 の改訂を<small>現場レベルで確認するポイント</small></span>
+          <span class="cb-btn">詳しくはこちら <span class="cb-arrow">→</span></span>
+        </span>
+      </a>`;
+  }
+  return `<a class="cta-banner cta-ehs" href="../../cayzen/ehsresearch/">
+        <span class="cb-left">
+          <span class="cb-title"><span class="em">環境・労働安全</span> 関連の<br>法令対応のお悩み</span>
+          <span class="cb-bubbles"><span>常に変化する…</span><span>わかりづらい…</span></span>
+        </span>
+        <span class="cb-body">
+          <span class="cb-lead"><span class="chip-ai">AI 調査代行</span>でスピード解決！</span>
+          <span class="cb-num">最大<b>95</b><small>%</small>工数削減</span>
+          <span class="cb-btn">詳しくはこちら <span class="cb-arrow">→</span></span>
+        </span>
+      </a>`;
+}
+
 function articlePage(a) {
   const cat = catOf(a);
   const body = `<div class="page-head">
@@ -378,16 +434,9 @@ function articlePage(a) {
     <article class="post">
       ${a.eyecatch?.url && !bodyOf(a).trimStart().startsWith('<img') ? `<div class="post-eyecatch"><img src="${esc(a.eyecatch.url)}?w=1280&fm=webp" alt=""></div>` : ''}
       <div class="article-body">
-${bodyOf(a)}
+${stripEmoji(bodyOf(a))}
       </div>
-      <div class="post-cta">
-        <h2>法令対応・現場改善のご相談はエイトスへ</h2>
-        <p>EHS法令調査の代行から、ISO対応、現場のナレッジマネジメントまで。まずはお気軽にご相談ください。</p>
-        <div class="btns">
-          <a class="btn btn-primary" href="../../#services">サービスを見る</a>
-          <a class="btn btn-ghost" href="../../#contact">お問い合わせ</a>
-        </div>
-      </div>
+      ${ctaBanner(a)}
       <a class="back-link" href="../">← コラム一覧へ戻る</a>
     </article>
   </div>
@@ -442,7 +491,7 @@ function newsPage(n) {
   <div class="container">
     <article class="post">
       <div class="article-body">
-${bodyOf(n)}
+${stripEmoji(bodyOf(n))}
       </div>
       ${linkBtn}
       <a class="back-link" href="../">← ニュース一覧へ戻る</a>
@@ -554,7 +603,7 @@ function seminarPage(s) {
       ${s.info ? `<div class="sem-info">${s.info}</div>` : ''}
       ${apply}
       <div class="article-body">
-${bodyOf(s)}
+${stripEmoji(bodyOf(s))}
       </div>
       ${apply}
       <div class="post-cta">

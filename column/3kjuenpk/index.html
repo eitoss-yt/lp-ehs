@@ -130,6 +130,34 @@ header.gh{position:fixed;top:0;left:0;right:0;background:rgba(255,255,255,.96);b
   .gh-actions{gap:6px}
 }
 
+/* 記事下CTAバナー（EHS／ISOテーマ） */
+.cta-banner{display:grid;grid-template-columns:1fr 1.1fr;border-radius:16px;overflow:hidden;margin-top:60px;box-shadow:0 14px 34px rgba(16,104,120,.16);transition:transform .15s ease,box-shadow .15s ease;text-decoration:none}
+.cta-banner:hover{transform:translateY(-3px);box-shadow:0 20px 44px rgba(16,104,120,.22)}
+.cta-banner .cb-btn{display:flex;align-items:center;justify-content:center;gap:10px;background:#f6941c;color:#fff;font-weight:900;font-size:16px;border-radius:10px;padding:13px 22px;margin-top:18px;box-shadow:0 4px 12px rgba(246,148,28,.35)}
+.cta-banner .cb-arrow{display:inline-flex;align-items:center;justify-content:center;width:24px;height:24px;border-radius:50%;background:rgba(255,255,255,.25);font-size:14px}
+.cta-iso .cb-media{background:#12351f}
+.cta-iso .cb-media img{width:100%;height:100%;object-fit:cover;display:block}
+.cta-iso .cb-body{background:linear-gradient(135deg,#f2f8fe,#dcecfa);padding:26px 28px;display:flex;flex-direction:column;justify-content:center}
+.cta-iso .cb-catch{color:#f0801a;font-size:26px;font-weight:900;line-height:1.3;margin:0 0 6px}
+.cta-iso .cb-text{color:#17303a;font-size:18px;font-weight:700;line-height:1.6;margin:0}
+.cta-iso .cb-text small{display:block;font-size:15px;font-weight:500;color:#3a5560}
+.cta-ehs .cb-left{background:#e9f1f5;padding:26px 26px 22px;display:flex;flex-direction:column;justify-content:center;gap:14px}
+.cta-ehs .cb-title{font-size:19px;font-weight:900;color:#17303a;line-height:1.55;margin:0}
+.cta-ehs .cb-title .em{color:var(--teal-700);font-size:23px}
+.cta-ehs .cb-bubbles{display:flex;gap:10px;flex-wrap:wrap}
+.cta-ehs .cb-bubbles span{background:#fff;border:1px solid #c8d9e0;color:#3a5560;font-size:13px;border-radius:999px;padding:6px 14px}
+.cta-ehs .cb-body{background:linear-gradient(135deg,#eaf4fd,#d8e9fa);padding:24px 28px;display:flex;flex-direction:column;justify-content:center}
+.cta-ehs .cb-lead{font-size:15px;font-weight:700;color:#17303a;margin:0 0 4px}
+.cta-ehs .chip-ai{display:inline-block;background:var(--teal-700);color:#fff;font-weight:700;border-radius:6px;padding:3px 12px;margin-right:6px}
+.cta-ehs .cb-num{color:#17303a;font-weight:900;font-size:18px;margin:0;line-height:1.2}
+.cta-ehs .cb-num b{color:#f0801a;font-size:44px;font-family:"Poppins","Noto Sans JP",sans-serif}
+.cta-ehs .cb-num small{color:#f0801a;font-size:20px;margin-right:8px}
+@media(max-width:700px){
+  .cta-banner{grid-template-columns:1fr}
+  .cta-iso .cb-media{aspect-ratio:16/9}
+  .cta-iso .cb-catch{font-size:22px}
+}
+
 .news-rows{max-width:860px;margin:0 auto}
 .news-row{display:flex;gap:22px;align-items:baseline;padding:18px 10px;border-bottom:1px solid var(--line);font-size:14.5px;color:var(--ink)}
 .news-row time{flex:0 0 auto;color:var(--teal-500);font-weight:700;font-family:"Poppins","Noto Sans JP",sans-serif}
@@ -196,14 +224,17 @@ header.gh{position:fixed;top:0;left:0;right:0;background:rgba(255,255,255,.96);b
       <div class="article-body">
 <p>現場で働く労働者は全労働者の<a href="https://www2.deloitte.com/insights/us/en/focus/technology-and-the-future-of-work/untethered-workforce-mobile-workers.html" rel="nofollow">50％以上を占める</a>と推定されています。現場従業員は、ウェイター、カウンタースタッフ、製造ラインの従業員、溶接工、看護師、ソフトウェア開発者、客室乗務員などのような人々で構成されており、彼らは製品やサービスを提供し続けるために重要な役割を担っています。<br><br>彼らは組織のミッションを達成し、価値を生み出す上で非常に重要な原動力である一方で、マニュアル等に定めらた業務に加えて、自発的な改善をするなど、期待以上の成果を出すモチベーションの高いフロントラインは多くありません。そうしたモチベーションの高い現場の従業員を持つためには、管理者が彼らのパフォーマンスに対して適切なフィードバックをし、彼らに権限や責任を与え、自発的な行動を支援することで、彼らの可能性を最大限に活かすための仕組みを導入することが重要です。最初は簡単なことのように聞こえるかもしれませんが、実際にはそうではありません。</p><p></p><blockquote><p>エイトスでは、提案活動を活性化させる方法や、従業員が自律的に動ける組織文化を作る支援をしています。無料でのご相談をしておりますので、<a href="https://eitoss.com/form/contact" target="_blank" rel="noopener noreferrer nofollow">是非一度ご連絡ください</a>。</p><p>またサービス資料請求は<a href="https://eitoss.com/form/service" rel="nofollow">こちら</a>からお願いいたします。</p><p>現場の業務改善を網羅的に確認する「改善チェックポイント100」を上記画像よりダウンロードが可能となっております。</p><p>さらに改善のDX化についてのノウハウや最新情報をメルマガで定期配信しているので、ぜひ下記URLからご登録お願い致します。<a href="https://mail.salesdiv.jp/bm/p/f/tf.php?id=eitoss0920&amp;task=regist" target="_blank" rel="noopener noreferrer nofollow">https://mail.salesdiv.jp/bm/p/f/tf.php?id=eitoss0920&amp;task=regist</a></p></blockquote><p>重要な要因の一つは、労働者と経営者の間のコミュニケーションです。コミュニケーションが悪いと誤解が生じ、原因の特定に失敗したり、再発する業務上の問題の解決に長期間を要したり、目標を達成できなかったり、品質評価が適切になされない等の面で表出されることがあります。ここでは、コミュニケーションの取り方を見直す必要性を示唆するいくつかの兆候をご紹介します。</p><ol><li>情報へのアクセスが限られていること<br>経営陣の経営方針や施策を立案する際、現場の労働者は自分たちのことが考慮されていないと感じてしまうことがあります。MITの調査によると、この割合は<a href="https://www.peoplemattersglobal.com/article/employee-engagement-ideas/top-10-hidden-costs-of-not-going-digital-with-employee-engagement-19553?amp%3Butm_source=peoplematters" rel="nofollow">70％以上にも上る</a>と言われています。これは、経営者と現場スタッフの間の課題認識のギャップを明らかにしています。行われている施策が、労働者が抱えている問題や懸念に対応できていないのです。<br></li><li>モチベーションの欠如<br>アイデアを共有する仕組みや機会がない、経営者や上司にアイデアを確認してもらえない、自分の可能性を発揮する場がないと感じる、ボトムアップで意見を伝える・吸い上げる文化がない、といったことを従業員が感じているとしたら、それは組織のイノベーションや成長の可能性を阻害している可能性があります。また、この状態が続くと労働者が指示されたことだけを行う様になり、モチベーションの低下につながる可能性があります。従業員が自発的にアイデアや意見を上司に伝えていても、そのことを経営者や上司が認識できない場合、従業員が自発的に組織をよくすることに対してインセンティブがないと感じ、課題や問題が放置され、新しい事業の機会を見逃すことに繋がります。さらに、これらの従業員の多くが、顧客と直接対面する場合、組織に対して無関心であることは顧客へ提供するサービス品質の悪化や、組織の評判を低下させる可能性があります。このことは、顧客の獲得や有望な人材の採用の機会を失うことに繋がります。<p></p></li></ol><ol start="3"><li>ワークフローの非効率性<br>現場の労働者はオペレーションの流れをよく知っており、失敗や非効率性の潜在的なポイントを特定し、実施すべき対策を提案することができますが、コミュニケーションの不足や現場労働者のそうした課題解決を支援する対応が十分でない場合は、ボトルネックや障害が対処されないまま放置され続けるため、収益の損失や人的リソースの浪費に繋がります。<p></p></li></ol><ol start="4"><li>顧客のニーズと提供する製品・サービスのミスマッチ<br>顧客と対話する現場の労働者は、顧客が何を望んでいるかをよく理解しています。しかし、新製品を企画する際にこの貴重な資産を利用していない場合、顧客ニーズとずれた製品・サービスを開発することに繋がります。顧客にとって有用性の高い製品を作るためには、顧客のニーズを理解し、顧客と向き合い、顧客をサポートする人々からのレビューを直接聞くことが不可欠です。顧客満足度や商品の好みなどの評価は、現場の従業員の精度が高いことが研究で明らかになっています。</li></ol><p>上記の様な問題が発生する原因は複数考えられ、以下の様な問題が挙げられます。</p><ol><li>一方的なコミュニケーションに繋がるトップダウン経営をしている</li><li>現場から生み出されるイノベーティブなアイデアへの評価と尊重が欠如している</li><li>物理的な移動が頻繁に発生する現場労働者と、定期的にコミュニケーションをとることが難しい</li><li>情報を共有するために紙媒体を使用しているため、共有やフォローアップ、スピードが制限される</li></ol><p>階層を超えて自由にアイデアや問題を共有し、経営陣と現場の社員の間で自由にコミュニケーションが取れる様な良いエコシステムを持つことで、多くの問題を解決することができます。また、社員が変化をリードし、組織文化をボトムアップからのアプローチで変革し、筋肉質な経営基盤にすることで、驚異的な変化をもたらすことができます。機会と場所さえ与えられれば、現場の従業員はアイデアを共有し、実現しようというモチベーションを持つことができるのです。</p><p>ボトムアップの継続的な改善文化を促進しようとすることに加えて、<a href="https://drive.google.com/a/eitoss.com/open?id=1ykGH2Y_rf0VS4gkNTPOhynjKnzUKCr7JEjvQOCTO3kY" rel="nofollow">フォーブスの研究</a>は、以下の様なことを実践することで、そのような課題にうまく対処するのに役立つことを示唆しています。</p><ol><li>現場の従業員のアイデアや取り組みに対する定期的なフィードバックを行う</li><li>従業員の能力やスキルを踏まえた上で実行可能なアクションプランを現場からヒアリングする</li><li>アイデアの実行について、進捗状況の適切なフォローアップを行い、持続的な効果の創出と他の分野への応用を実施する</li></ol><p>これらのうちのいくつかは、経営者が従業員と直接対話することで一部実践することができます。<br>しかし、より効率的かつ効果的な解決策としては、現場の労働者が協力してアイデアや問題を共有し、経営者だけでなく双方に協力することを支援することができるソフトウェアを使用し、PDCAを回しながら継続的な改善を図ることです。経営者や上司と現場従業員との壁を壊し、コミュニケーションのギャップを埋めるためのデジタルツールを活用することで、持続的な経営改善の仕組みや文化を根付かせると共に、コストを削減し、収益を高めることができます。<br>これらは、チームや組織の文化を、より自律・自走的でオープンにし、強力なイノベーションのハブに変える上で重要な役割を果たすと考えています。</p><p>私たちエイトスではソフトウェアと専属スタッフのアドバイザリーサービス双方により、このようなボトムアップでの組織での変革を支援致します。ソフトウェアから分析されるデータに基づき、ボトムアップで組織を変革する文化を根付かせるため、課題を特定し、改善のアクションプランの実行に伴奏し、支援するサービスです。<br><br></p><blockquote><p>エイトスでは、提案活動を活性化させる方法や、従業員が自律的に動ける組織文化を作る支援をしています。無料でのご相談をしておりますので、<a href="https://eitoss.com/form/contact" target="_blank" rel="noopener noreferrer nofollow">是非一度ご連絡ください</a>。</p><p>さらに改善のDX化についてのノウハウや最新情報をメルマガで定期配信しているので、ぜひ下記URLからご登録お願い致します。<a href="https://mail.salesdiv.jp/bm/p/f/tf.php?id=eitoss0920&amp;task=regist" target="_blank" rel="noopener noreferrer nofollow">https://mail.salesdiv.jp/bm/p/f/tf.php?id=eitoss0920&amp;task=regist</a></p></blockquote>
       </div>
-      <div class="post-cta">
-        <h2>法令対応・現場改善のご相談はエイトスへ</h2>
-        <p>EHS法令調査の代行から、ISO対応、現場のナレッジマネジメントまで。まずはお気軽にご相談ください。</p>
-        <div class="btns">
-          <a class="btn btn-primary" href="../../#services">サービスを見る</a>
-          <a class="btn btn-ghost" href="../../#contact">お問い合わせ</a>
-        </div>
-      </div>
+      <a class="cta-banner cta-ehs" href="../../cayzen/ehsresearch/">
+        <span class="cb-left">
+          <span class="cb-title"><span class="em">環境・労働安全</span> 関連の<br>法令対応のお悩み</span>
+          <span class="cb-bubbles"><span>常に変化する…</span><span>わかりづらい…</span></span>
+        </span>
+        <span class="cb-body">
+          <span class="cb-lead"><span class="chip-ai">AI 調査代行</span>でスピード解決！</span>
+          <span class="cb-num">最大<b>95</b><small>%</small>工数削減</span>
+          <span class="cb-btn">詳しくはこちら <span class="cb-arrow">→</span></span>
+        </span>
+      </a>
       <a class="back-link" href="../">← コラム一覧へ戻る</a>
     </article>
   </div>
