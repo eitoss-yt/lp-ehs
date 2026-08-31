@@ -4,6 +4,21 @@
   "outputDirectory": ".",
   "redirects": [
     {
+      "source": "/trial/:path*",
+      "destination": "/#contact",
+      "permanent": true
+    },
+    {
+      "source": "/document/cayzen-ai/:path*",
+      "destination": "/document/",
+      "permanent": true
+    },
+    {
+      "source": "/document/7u0e4Uml/:path*",
+      "destination": "/document/",
+      "permanent": true
+    },
+    {
       "source": "/article",
       "destination": "/column/",
       "permanent": true

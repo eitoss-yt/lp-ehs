@@ -316,12 +316,13 @@ header.gh{position:fixed;top:0;left:0;right:0;background:rgba(255,255,255,.96);b
           <div class="gh-dd-menu"><div class="in">
           <a href="../ehsresearch/">Cayzen EHS Research（EHS法令調査代行）</a>
           <a href="./">Cayzen ナレッジマネジメント（SaaS）</a>
-          <a href="../iso/">ISO支援</a>
+          <a href="../iso/">Cayzen ISO サポート</a>
           </div></div>
         </div>
         <a href="../../seminar/">セミナー</a>
         <a href="../../column/">コラム</a>
         <a href="../../news/">ニュース</a>
+        <a href="../../resources/">お役立ち資料</a>
         <a href="#company">会社概要</a>
         <a href="https://eitoss.notion.site/f56f60f846fe4af9bfa33420cf19103e" target="_blank" rel="noopener">採用情報</a>
       </nav>
@@ -330,7 +331,6 @@ header.gh{position:fixed;top:0;left:0;right:0;background:rgba(255,255,255,.96);b
       <p class="gh-tel">TEL: <b>050-8881-9881</b><span>（平日10:00〜19:00）</span></p>
       <div class="gh-actions">
         <a class="gh-btn gh-btn-dl" href="../../document/" data-tab="download"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h9l4 4v14H6z"/><path d="M15 3v4h4M9 12h6M9 16h6"/></svg> 資料請求</a>
-        <a class="gh-btn gh-btn-tr" href="../../trial/" data-tab="trial"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h10M4 12h10M4 18h7"/><path d="M17 16l2 2 4-4"/></svg> トライアル</a>
         <a class="gh-btn gh-btn-ct" href="#cta" data-tab="contact"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg> お問合せ</a>
       </div>
     </div>
@@ -354,7 +354,7 @@ header.gh{position:fixed;top:0;left:0;right:0;background:rgba(255,255,255,.96);b
           <p class="hero-sub hero-anim hd4">現場のデータとナレッジをCayzenに一元化し、AIが毎朝要点をレポート。EHS管理から現場改善まで、これ一つで。</p>
           <div class="hero-cta hero-anim hd5">
             <a class="btn btn-primary" href="#cta" data-tab="download">資料をダウンロード</a>
-            <a class="btn btn-accent" href="#cta" data-tab="trial">無料トライアルはこちら</a>
+            <a class="btn btn-accent" href="#cta" data-tab="contact">お問い合わせはこちら</a>
           </div>
           <p class="hero-note hero-anim hd6">導入から運用定着まで、専任担当者が伴走します</p>
         </div>
@@ -646,7 +646,6 @@ header.gh{position:fixed;top:0;left:0;right:0;background:rgba(255,255,255,.96);b
       <h2 class="section-title">お気軽にお問い合わせください</h2>
       <div class="cta-tabs" role="tablist">
         <button class="cta-tab active" type="button" data-panel="download" role="tab" aria-selected="true">資料ダウンロード</button>
-        <button class="cta-tab" type="button" data-panel="trial" role="tab" aria-selected="false">無料トライアル</button>
         <button class="cta-tab" type="button" data-panel="contact" role="tab" aria-selected="false">お問い合わせ</button>
       </div>
       <div class="cta-panels">
@@ -655,10 +654,6 @@ header.gh{position:fixed;top:0;left:0;right:0;background:rgba(255,255,255,.96);b
           <p class="desc">Cayzen ナレッジマネジメントのサービス資料をダウンロードいただけます。フォーム送信後、資料をご案内します。</p>
           <div class="hs-form-frame" id="hs-form-download"></div>
         </div>
-        <div class="cta-panel" id="panel-trial" role="tabpanel">
-          <h3>無料トライアルのお申し込み</h3>
-          <p class="desc">フォーム送信後、担当者よりトライアルのご案内を差し上げます。</p>
-          <div class="hs-form-frame" id="hs-form-trial"></div>
         </div>
         <div class="cta-panel" id="panel-contact" role="tabpanel">
           <h3>お問い合わせ</h3>
@@ -710,12 +705,6 @@ header.gh{position:fixed;top:0;left:0;right:0;background:rgba(255,255,255,.96);b
     formId: "29321982-b048-45f3-ae3c-3752d8dba971",
     region: "na2",
     target: "#hs-form-download"
-  });
-  hbspt.forms.create({
-    portalId: "8170895",
-    formId: "678bc896-c6d8-4c54-819f-368a36522f16",
-    region: "na2",
-    target: "#hs-form-trial"
   });
   hbspt.forms.create({
     portalId: "8170895",
@@ -775,7 +764,7 @@ header.gh{position:fixed;top:0;left:0;right:0;background:rgba(255,255,255,.96);b
 
   function handleHash(){
     var h = location.hash.replace('#','');
-    if(['download','trial','contact'].indexOf(h) >= 0){
+    if(['download','contact'].indexOf(h) >= 0){
       activate(h);
       document.getElementById('cta').scrollIntoView();
     }
