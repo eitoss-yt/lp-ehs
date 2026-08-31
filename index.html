@@ -123,28 +123,20 @@ header{position:fixed;top:0;left:0;right:0;background:rgba(255,255,255,.94);back
 @media(max-width:760px){.res-grid{grid-template-columns:1fr}}
 
 
-/* mission */
-.mission{position:relative;padding:120px 0;background:linear-gradient(180deg,rgba(8,28,40,.52),rgba(8,28,40,.62)),url(assets/hero-bg.jpg) center/cover no-repeat;text-align:center}
+/* mission / vision（地続きの1ブロック） */
+.mv{position:relative;padding:120px 0;text-align:center;background:linear-gradient(180deg,rgba(8,28,40,.55),rgba(8,28,40,.66)),url(assets/hero-bg.jpg) center/cover no-repeat}
 .mission-label{opacity:.65;font-family:"Poppins","Noto Sans JP",sans-serif;font-size:37.5px;font-weight:500;letter-spacing:.12em;color:#fff;margin-bottom:22px}
 .mission-copy{text-wrap:balance;font-size:33.5px;font-weight:500;color:#fff;line-height:1.7;letter-spacing:.04em;text-shadow:0 1px 14px rgba(4,20,28,.5)}
-@media(max-width:760px){
-  .mission{padding:80px 0}
-  .mission-label{opacity:.65;font-size:23.5px}
-  .mission-copy{text-wrap:balance;font-size:21.5px}
-}
-
-/* vision */
-.vision{position:relative;padding:130px 0 120px;text-align:center;overflow:hidden;background:radial-gradient(900px 420px at 12% 8%,rgba(128,192,200,.22),transparent 60%),radial-gradient(900px 460px at 88% 92%,rgba(48,128,152,.16),transparent 60%),linear-gradient(180deg,#f8fbfc 0%,#e9f3f5 100%)}
-.vision::before{content:"VISION";position:absolute;top:26px;left:50%;transform:translateX(-50%);font-family:"Poppins","Noto Sans JP",sans-serif;font-size:170px;font-weight:700;letter-spacing:.08em;line-height:1;color:rgba(16,104,120,.06);white-space:nowrap;pointer-events:none}
-.vision .container{position:relative}
-.vision-label{opacity:.65;font-family:"Poppins","Noto Sans JP",sans-serif;font-size:37.5px;font-weight:500;letter-spacing:.12em;color:var(--teal-500);margin-bottom:30px}
-.vision-body{text-wrap:pretty;max-width:860px;margin:0 auto;font-size:19.5px;font-weight:500;letter-spacing:.08em;line-height:2.1;color:#212121}
+.mv-divider{border:none;height:1px;background:rgba(255,255,255,.55);max-width:860px;margin:80px auto}
+.vision-label{opacity:.65;font-family:"Poppins","Noto Sans JP",sans-serif;font-size:37.5px;font-weight:500;letter-spacing:.12em;color:#fff;margin-bottom:26px}
+.vision-body{text-wrap:pretty;max-width:860px;margin:0 auto;font-size:19.5px;font-weight:500;letter-spacing:.08em;line-height:2.1;color:rgba(255,255,255,.94);text-shadow:0 1px 10px rgba(4,20,28,.45)}
 @media(max-width:760px){
   .section-label{font-size:23.5px}
-  .vision{padding:76px 0}
-  .vision::before{font-size:72px;top:20px}
-  .vision-label{opacity:.65;font-size:23.5px}
-  .vision-body{text-wrap:pretty;font-size:16px;text-align:left;letter-spacing:.04em}
+  .mv{padding:80px 0}
+  .mission-label,.vision-label{font-size:23.5px}
+  .mission-copy{font-size:21.5px}
+  .mv-divider{margin:56px auto}
+  .vision-body{font-size:16px;text-align:left;letter-spacing:.04em}
 }
 
 /* company */
@@ -329,18 +321,15 @@ section.wm.wm-light::before{color:rgba(255,255,255,.05)}
     </div>
   </div>
 
-  <!-- MISSION -->
-  <section class="mission" id="mission">
+  <!-- MISSION / VISION -->
+  <section class="mv" id="mission">
     <div class="container">
       <p class="mission-label reveal">MISSION</p>
       <p class="mission-copy reveal" style="transition-delay:.15s">「人と社会を豊かにし、次の世代につなげる」</p>
     </div>
-  </section>
-
-  <!-- VISION -->
-  <section class="vision" id="vision">
-    <div class="container">
-      <p class="vision-label reveal">Vision</p>
+    <div class="container"><hr class="mv-divider reveal"></div>
+    <div class="container" id="vision">
+      <p class="vision-label reveal">VISION</p>
       <p class="vision-body reveal" style="transition-delay:.15s">私たちのすべての事業活動は、新たな機会と可能性を社会に実装し、今と未来を生きる人と社会の力を最大限に引き出すことを目的としています。<br>変化の時代において、常に挑戦と革新を重ねながら、社会を前進させ、より豊かで持続可能な社会の実現に貢献します。<br>私たちは、次の世代へと価値を継承し、未来を共に創造していく企業であり続けます。</p>
     </div>
   </section>
