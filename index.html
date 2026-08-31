@@ -99,6 +99,13 @@ header{position:fixed;top:0;left:0;right:0;background:rgba(255,255,255,.94);back
 .sv-card:hover{transform:translateY(-4px);box-shadow:0 18px 40px rgba(16,104,120,.18)}
 .sv-card .thumb{aspect-ratio:16/10;overflow:hidden;border-bottom:1px solid var(--line)}
 .sv-card .thumb img{width:100%;height:100%;object-fit:cover;object-position:top}
+.sv-card .thumb-logo{display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#f2f8f9,#e6f0f2)}
+.svc-logo{display:flex;align-items:center;gap:16px;padding:0 20px}
+.sv-card .thumb-logo .svc-logo img{height:60px;width:auto;flex:none;object-fit:contain}
+.svc-logo .txt{display:flex;flex-direction:column;line-height:1.2;text-align:left}
+.svc-logo .cz{font-family:"Poppins","Noto Sans JP",sans-serif;font-weight:600;color:#5a6468;font-size:19px;letter-spacing:.02em}
+.svc-logo .nm{font-family:"Poppins","Noto Sans JP",sans-serif;font-weight:600;color:var(--teal-700);font-size:29px;white-space:nowrap}
+.svc-logo .nm.jp{font-size:21px}
 .sv-card .body{padding:26px 28px 30px;display:flex;flex-direction:column;flex:1}
 .sv-card .tag{display:inline-block;align-self:flex-start;background:var(--teal-050);color:var(--teal-700);font-size:13.5px;font-weight:500;padding:4px 14px;border-radius:999px;margin-bottom:12px}
 .sv-card h3{font-size:20.5px;font-weight:500;margin-bottom:10px;color:var(--ink)}
@@ -120,6 +127,10 @@ header{position:fixed;top:0;left:0;right:0;background:rgba(255,255,255,.94);back
 .res-card p{font-size:15px;color:var(--gray)}
 .res-card .more{display:inline-block;margin-top:10px;font-size:15.5px;font-weight:500;color:var(--teal-700)}
 .res-card .more::after{content:" →"}
+.res-card.res-dl{background:linear-gradient(135deg,var(--teal-500),var(--teal-700));display:flex;flex-direction:column;justify-content:center}
+.res-card.res-dl .res-label{color:rgba(255,255,255,.75)}
+.res-card.res-dl h3{color:#fff;font-size:23.5px;margin:4px 0 2px}
+.res-card.res-dl .more{color:#fff}
 @media(max-width:760px){.res-grid{grid-template-columns:1fr}}
 
 
@@ -356,7 +367,7 @@ footer .copy{font-size:12.5px;color:rgba(255,255,255,.55);text-align:center;marg
       <p class="section-lead">現場の「改善」と「法令順守」。ものづくりの2つの土台を、AIとプロフェッショナルの力で支えます。</p>
       <div class="sv-grid">
         <a class="sv-card" href="cayzen/ehsresearch/">
-          <div class="thumb"><img src="assets/service-ehs-kv.jpg" alt="Cayzen EHS Research 紹介動画のキャプチャ"></div>
+          <div class="thumb thumb-logo"><div class="svc-logo"><img src="assets/cayzen-mark.png" alt=""><span class="txt"><span class="cz">Cayzen</span><span class="nm">EHS Research</span></span></div></div>
           <div class="body">
             <span class="tag">調査代行サービス</span>
             <h3>Cayzen EHS Research</h3>
@@ -365,7 +376,7 @@ footer .copy{font-size:12.5px;color:rgba(255,255,255,.55);text-align:center;marg
           </div>
         </a>
         <a class="sv-card" href="cayzen/knowledgemanagement/">
-          <div class="thumb"><img src="assets/service-km-kv.jpg" alt="Cayzen ナレッジマネジメント 紹介ビジュアル"></div>
+          <div class="thumb thumb-logo"><div class="svc-logo"><img src="assets/cayzen-mark.png" alt=""><span class="txt"><span class="cz">Cayzen</span><span class="nm jp">ナレッジマネジメント</span></span></div></div>
           <div class="body">
             <span class="tag">SaaSプロダクト</span>
             <h3>Cayzen ナレッジマネジメント</h3>
@@ -374,7 +385,7 @@ footer .copy{font-size:12.5px;color:rgba(255,255,255,.55);text-align:center;marg
           </div>
         </a>
         <a class="sv-card" href="cayzen/iso/">
-          <div class="thumb"><img src="assets/service-iso-kv.jpg" alt="Cayzen ISOサポート 紹介動画のキャプチャ"></div>
+          <div class="thumb thumb-logo"><div class="svc-logo"><img src="assets/cayzen-mark.png" alt=""><span class="txt"><span class="cz">Cayzen</span><span class="nm jp">ISO サポート</span></span></div></div>
           <div class="body">
             <span class="tag">コンサルティング</span>
             <h3>Cayzen ISO サポート</h3>
@@ -402,10 +413,9 @@ footer .copy{font-size:12.5px;color:rgba(255,255,255,.55);text-align:center;marg
       </ul>
       <p style="text-align:center;margin-top:30px"><a class="btn btn-ghost" href="news/">ニュース一覧を見る</a></p>
       <div class="res-grid" style="margin-top:56px">
-        <a class="res-card" href="document/">
+        <a class="res-card res-dl" href="document/">
           <p class="res-label">Download</p>
           <h3>資料ダウンロード</h3>
-          <p>サービス資料や法令対応の実務ガイドを無料でダウンロードいただけます。</p>
           <span class="more">資料一覧を見る</span>
         </a>
         <a class="res-card" href="seminar/">
