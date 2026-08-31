@@ -331,7 +331,7 @@ function listPage(articles) {
     const cat = catOf(a);
     const t = thumbOf(a);
     const thumb = t ? `<img src="${esc(t)}" alt="" loading="lazy">` : THUMB_PLACEHOLDER;
-    return `      <a class="col-card" href="${esc(a.id)}/">
+    return `      <a class="col-card" href="/column/${esc(a.id)}/">
         <div class="thumb">${thumb}</div>
         <div class="body">
           <div class="meta">${cat ? `<span class="chip">${esc(cat)}</span>` : ''}<time datetime="${esc(dateOf(a) || '')}">${fmtDate(dateOf(a))}</time></div>
@@ -404,7 +404,7 @@ ${bodyOf(a)}
 
 // ---- ニュース ----
 function newsListPage(items) {
-  const rows = items.map(n => `      <a class="news-row" href="${esc(n.id)}/"><time datetime="${esc(dateOf(n))}">${fmtDate(dateOf(n))}</time><span class="t">${esc(n.title)}</span></a>`).join('\n');
+  const rows = items.map(n => `      <a class="news-row" href="/news/${esc(n.id)}/"><time datetime="${esc(dateOf(n))}">${fmtDate(dateOf(n))}</time><span class="t">${esc(n.title)}</span></a>`).join('\n');
   const body = `<div class="page-head">
   <div class="container">
     <p class="breadcrumb"><a href="../">HOME</a> ／ ニュース</p>
@@ -485,7 +485,7 @@ function seminarListPage(items) {
     const cover = semCoverOf(s, 1);
     const thumb = cover ? `<img src="${esc(cover)}" alt="" loading="lazy">` : (semYoutubeOf(s) ? `<img src="https://i.ytimg.com/vi/${esc(semYoutubeOf(s))}/hqdefault.jpg" alt="" loading="lazy">` : THUMB_PLACEHOLDER);
     const st = semStateOf(s);
-    return `      <a class="col-card" href="${esc(s.id)}/">
+    return `      <a class="col-card" href="/seminar/${esc(s.id)}/">
         <div class="thumb">${thumb}</div>
         <div class="body">
           <div class="meta">${SEM_CHIP[st]}<time datetime="${esc(dateOf(s) || '')}">${esc(s.eventDate || fmtDate(dateOf(s)))}</time></div>
