@@ -247,8 +247,8 @@ header.gh{position:fixed;top:0;left:0;right:0;background:rgba(255,255,255,.96);b
 .sem-apply{margin:30px 0 10px;text-align:center}
 footer{background:var(--teal-900);color:#fff;padding:56px 0 28px}
 .footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:44px;align-items:start;max-width:1080px;margin:0 auto}
-.footer-brand{background:#fff;border-radius:10px;padding:12px 20px;display:inline-block}
-.footer-brand img{height:32px;width:auto;display:block}
+.footer-brand{display:inline-block}
+.footer-brand img{height:38px;width:auto;display:block}
 .footer-addr{font-size:13.5px;color:rgba(255,255,255,.75);margin-top:18px;line-height:2}
 .footer-head{font-size:15.5px;font-weight:500;color:#fff;letter-spacing:.08em;margin-bottom:14px;padding-bottom:8px;border-bottom:1px solid rgba(255,255,255,.2)}
 .footer-col a{display:block;font-size:14.5px;color:rgba(255,255,255,.8);margin-bottom:10px}
@@ -321,7 +321,7 @@ ${bodyHtml}
   <div class="container">
     <div class="footer-grid">
       <div>
-        <div class="footer-brand"><img src="${rel}assets/logo-corporate-horizontal-single.svg" alt="eitoss"></div>
+        <div class="footer-brand"><img src="${rel}assets/logo-corporate-horizontal-white.png" alt="eitoss"></div>
         <p class="footer-addr">本社: 〒471-0031<br>愛知県豊田市小坂本町1-5-5 YAMATO BLDG2F<br>営業拠点: 東京都豊島区東池袋3-1-1<br>サンシャイン60 12F</p>
       </div>
       <nav class="footer-col">
