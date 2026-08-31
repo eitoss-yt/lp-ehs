@@ -32,13 +32,13 @@
 html{scroll-behavior:smooth;scroll-padding-top:130px}
 body{font-family:"Noto Sans JP",sans-serif;font-size:17.5px;color:var(--ink);line-height:1.8;background:var(--white);-webkit-font-smoothing:antialiased}
 img{max-width:100%;height:auto;display:block}
-h1,h2,h3{letter-spacing:.08em}
+h1,h2,h3{letter-spacing:.08em;text-wrap:balance}
 a{color:var(--teal-700);text-decoration:none}
 .container{max-width:1080px;margin:0 auto;padding:0 20px}
 section{padding:80px 0}
 .section-label{font-family:"Poppins","Noto Sans JP",sans-serif;font-size:15.5px;font-weight:500;letter-spacing:.18em;color:var(--teal-500);text-transform:uppercase;text-align:center;margin-bottom:10px}
 .section-title{font-size:33.5px;font-weight:500;text-align:center;line-height:1.5;margin-bottom:18px}
-.section-lead{max-width:760px;margin:0 auto 48px;text-align:center;color:var(--gray)}
+.section-lead{text-wrap:pretty;max-width:760px;margin:0 auto 48px;text-align:center;color:var(--gray)}
 .table-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch}
 
 /* buttons */
@@ -71,10 +71,12 @@ header{position:fixed;top:0;left:0;right:0;background:rgba(255,255,255,.94);back
 @media (prefers-reduced-motion:reduce){.hero-video{display:none}.hero{background:linear-gradient(180deg,rgba(8,28,40,.42),rgba(8,28,40,.58)),url(assets/hero-bg.jpg) center/cover no-repeat}}
 .hero h1{font-size:43.5px;font-weight:500;line-height:1.6;letter-spacing:.08em;color:#fff;text-shadow:0 2px 18px rgba(4,20,28,.45)}
 .hero h1.hero-en-main{font-family:"Poppins","Noto Sans JP",sans-serif;font-size:57.5px;font-weight:500;line-height:1.3;letter-spacing:.08em}
-.hero-jp{margin:28px auto 42px;color:#fff;font-size:25.5px;font-weight:500;letter-spacing:.06em;text-shadow:0 1px 12px rgba(4,20,28,.5)}
+.hero-jp{text-wrap:balance;margin:28px auto 42px;color:#fff;font-size:25.5px;font-weight:500;letter-spacing:.06em;text-shadow:0 1px 12px rgba(4,20,28,.5)}
 .hero h1 .em{color:var(--teal-100)}
 .hero-sub{max-width:680px;margin:24px auto 36px;color:rgba(255,255,255,.88);font-size:17px;text-shadow:0 1px 12px rgba(4,20,28,.5)}
 .hero-cta{display:flex;gap:16px;flex-wrap:wrap;justify-content:center}
+.hero-cta .btn{box-shadow:0 12px 30px rgba(4,20,28,.5)}
+.hero-cta .btn:hover{box-shadow:0 18px 40px rgba(4,20,28,.6)}
 
 /* clients */
 .clients-band{background:#fff;padding:44px 0 36px}
@@ -124,21 +126,24 @@ header{position:fixed;top:0;left:0;right:0;background:rgba(255,255,255,.94);back
 /* mission */
 .mission{position:relative;padding:120px 0;background:linear-gradient(180deg,rgba(8,28,40,.52),rgba(8,28,40,.62)),url(assets/hero-bg.jpg) center/cover no-repeat;text-align:center}
 .mission-label{font-family:"Poppins","Noto Sans JP",sans-serif;font-size:37.5px;font-weight:500;letter-spacing:.12em;color:#fff;margin-bottom:22px}
-.mission-copy{font-size:33.5px;font-weight:500;color:#fff;line-height:1.7;letter-spacing:.04em;text-shadow:0 1px 14px rgba(4,20,28,.5)}
+.mission-copy{text-wrap:balance;font-size:33.5px;font-weight:500;color:#fff;line-height:1.7;letter-spacing:.04em;text-shadow:0 1px 14px rgba(4,20,28,.5)}
 @media(max-width:760px){
   .mission{padding:80px 0}
   .mission-label{font-size:23.5px}
-  .mission-copy{font-size:21.5px}
+  .mission-copy{text-wrap:balance;font-size:21.5px}
 }
 
 /* vision */
-.vision{background:#fff;padding:110px 0;text-align:center}
+.vision{position:relative;padding:130px 0 120px;text-align:center;overflow:hidden;background:radial-gradient(900px 420px at 12% 8%,rgba(128,192,200,.22),transparent 60%),radial-gradient(900px 460px at 88% 92%,rgba(48,128,152,.16),transparent 60%),linear-gradient(180deg,#f8fbfc 0%,#e9f3f5 100%)}
+.vision::before{content:"VISION";position:absolute;top:26px;left:50%;transform:translateX(-50%);font-family:"Poppins","Noto Sans JP",sans-serif;font-size:170px;font-weight:700;letter-spacing:.08em;line-height:1;color:rgba(16,104,120,.06);white-space:nowrap;pointer-events:none}
+.vision .container{position:relative}
 .vision-label{font-family:"Poppins","Noto Sans JP",sans-serif;font-size:37.5px;font-weight:500;letter-spacing:.12em;color:var(--teal-500);margin-bottom:30px}
-.vision-body{max-width:800px;margin:0 auto;font-size:19.5px;font-weight:500;letter-spacing:.08em;line-height:2.1;color:#212121}
+.vision-body{text-wrap:pretty;max-width:860px;margin:0 auto;font-size:19.5px;font-weight:500;letter-spacing:.08em;line-height:2.1;color:#212121}
 @media(max-width:760px){
   .vision{padding:76px 0}
+  .vision::before{font-size:72px;top:20px}
   .vision-label{font-size:23.5px}
-  .vision-body{font-size:16px;text-align:left;letter-spacing:.04em}
+  .vision-body{text-wrap:pretty;font-size:16px;text-align:left;letter-spacing:.04em}
 }
 
 /* company */
@@ -183,7 +188,7 @@ html.hero-go .hd2{transition-delay:.26s}
   .sv-grid{grid-template-columns:1fr}
   .hero h1{font-size:30.5px}
   .hero h1.hero-en-main{font-size:31.5px}
-  .hero-jp{font-size:18.5px}
+  .hero-jp{text-wrap:balance;font-size:18.5px}
   .hero{padding:120px 0 70px}
   .section-title{font-size:25.5px}
   section{padding:60px 0}
