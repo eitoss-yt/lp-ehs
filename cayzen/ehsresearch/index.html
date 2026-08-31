@@ -339,6 +339,13 @@ header.gh{position:fixed;top:0;left:0;right:0;background:rgba(255,255,255,.96);b
 }
 .scroll-hint{display:none}
 @media(max-width:760px){.scroll-hint{display:block;text-align:center;font-size:13.5px;color:var(--gray);margin:0 0 8px}}
+
+/* セクションラベルの透かし（Vision風） */
+section.wm{position:relative;overflow:hidden}
+section.wm::before{content:attr(data-wm);position:absolute;top:26px;left:50%;transform:translateX(-50%);font-family:"Poppins","Noto Sans JP",sans-serif;font-weight:700;font-size:170px;line-height:1;letter-spacing:.08em;color:rgba(16,104,120,.06);white-space:nowrap;pointer-events:none}
+section.wm > .container{position:relative}
+section.wm.wm-light::before{color:rgba(255,255,255,.05)}
+@media(max-width:760px){section.wm::before{font-size:72px;top:20px}}
 </style>
 </head>
 <body>
@@ -432,7 +439,7 @@ header.gh{position:fixed;top:0;left:0;right:0;background:rgba(255,255,255,.96);b
   </div>
 
   <!-- PROBLEMS -->
-  <section class="problems" id="problems">
+  <section class="problems wm" id="problems" data-wm="PROBLEM">
     <div class="container">
       <p class="section-label">Problem</p>
       <h2 class="section-title">法令順守は、いつも<br class="sp-only">「時間」と「属人化」でつまずきます。</h2>
@@ -459,7 +466,7 @@ header.gh{position:fixed;top:0;left:0;right:0;background:rgba(255,255,255,.96);b
   </section>
 
   <!-- SERVICES -->
-  <section class="services" id="services">
+  <section class="services wm" id="services" data-wm="SERVICE">
     <div class="container">
       <p class="section-label">Service</p>
       <h2 class="section-title">4つのサービスで、法令順守を仕組みに変える。</h2>
@@ -489,7 +496,7 @@ header.gh{position:fixed;top:0;left:0;right:0;background:rgba(255,255,255,.96);b
   </section>
 
   <!-- FLOW -->
-  <section class="flow" id="flow">
+  <section class="flow wm" id="flow" data-wm="FLOW">
     <div class="container">
       <p class="section-label">Flow</p>
       <h2 class="section-title">資料を集める。前提を整える。<br>あとは回し続ける。</h2>
@@ -534,7 +541,7 @@ header.gh{position:fixed;top:0;left:0;right:0;background:rgba(255,255,255,.96);b
   </section>
 
   <!-- OUTPUTS -->
-  <section class="output" id="outputs">
+  <section class="output wm" id="outputs" data-wm="OUTPUT">
     <div class="container">
       <p class="section-label">Output</p>
       <h2 class="section-title">納品物のご紹介</h2>
@@ -622,7 +629,7 @@ header.gh{position:fixed;top:0;left:0;right:0;background:rgba(255,255,255,.96);b
   </section>
 
   <!-- COMPARISON -->
-  <section class="compare" id="compare">
+  <section class="compare wm" id="compare" data-wm="COMPARISON">
     <div class="container">
       <p class="section-label">Comparison</p>
       <h2 class="section-title">法改正対応の負担は、<br>通知が届いた「後」にあります。</h2>
@@ -647,7 +654,7 @@ header.gh{position:fixed;top:0;left:0;right:0;background:rgba(255,255,255,.96);b
   </section>
 
   <!-- MERITS -->
-  <section class="merits" id="merits">
+  <section class="merits wm" id="merits" data-wm="MERIT">
     <div class="container">
       <p class="section-label">Merit</p>
       <h2 class="section-title">現場の工数も、管理部門の不安も減らします。</h2>
@@ -701,7 +708,7 @@ header.gh{position:fixed;top:0;left:0;right:0;background:rgba(255,255,255,.96);b
   </section>
 
   <!-- SCOPE -->
-  <section class="scope" id="scope">
+  <section class="scope wm" id="scope" data-wm="COVERAGE">
     <div class="container">
       <p class="section-label">Coverage</p>
       <h2 class="section-title">法改正調査は、ここまで対応できます。</h2>
@@ -716,7 +723,7 @@ header.gh{position:fixed;top:0;left:0;right:0;background:rgba(255,255,255,.96);b
   </section>
 
   <!-- USECASES -->
-  <section class="usecase" id="usecase">
+  <section class="usecase wm" id="usecase" data-wm="USE CASE">
     <div class="container">
       <p class="section-label">Use Case</p>
       <h2 class="section-title">こんな調査を、まとめてお任せいただけます。</h2>
@@ -750,7 +757,7 @@ header.gh{position:fixed;top:0;left:0;right:0;background:rgba(255,255,255,.96);b
   </section>
 
   <!-- EXPERTS -->
-  <section class="experts" id="experts">
+  <section class="experts wm" id="experts" data-wm="EXPERT">
     <div class="container">
       <p class="section-label">Expert</p>
       <h2 class="section-title">EHS実務を歩いてきた専門家が対応します。</h2>
@@ -777,7 +784,7 @@ header.gh{position:fixed;top:0;left:0;right:0;background:rgba(255,255,255,.96);b
   </section>
 
   <!-- NEXT STEPS -->
-  <section class="nextsteps" id="nextsteps">
+  <section class="nextsteps wm" id="nextsteps" data-wm="NEXT STEP">
     <div class="container">
       <p class="section-label">Next Step</p>
       <h2 class="section-title">まずは、アウトプットの実物をご覧ください。</h2>
@@ -806,7 +813,7 @@ header.gh{position:fixed;top:0;left:0;right:0;background:rgba(255,255,255,.96);b
   </section>
 
   <!-- CTA FORMS -->
-  <section class="cta" id="cta">
+  <section class="cta wm wm-light" id="cta" data-wm="CONTACT">
     <div class="container">
       <p class="section-label">Contact</p>
       <h2 class="section-title">お気軽にお問い合わせください</h2>
@@ -831,7 +838,7 @@ header.gh{position:fixed;top:0;left:0;right:0;background:rgba(255,255,255,.96);b
   </section>
 
   <!-- COMPANY -->
-  <section class="company" id="company">
+  <section class="company wm" id="company" data-wm="COMPANY">
     <div class="container">
       <p class="section-label">Company</p>
       <h2 class="section-title">会社概要</h2>

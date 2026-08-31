@@ -293,6 +293,13 @@ header.gh{position:fixed;top:0;left:0;right:0;background:rgba(255,255,255,.96);b
 }
 .scroll-hint{display:none}
 @media(max-width:760px){.scroll-hint{display:block;text-align:center;font-size:13.5px;color:var(--gray);margin:0 0 8px}}
+
+/* セクションラベルの透かし（Vision風） */
+section.wm{position:relative;overflow:hidden}
+section.wm::before{content:attr(data-wm);position:absolute;top:26px;left:50%;transform:translateX(-50%);font-family:"Poppins","Noto Sans JP",sans-serif;font-weight:700;font-size:170px;line-height:1;letter-spacing:.08em;color:rgba(16,104,120,.06);white-space:nowrap;pointer-events:none}
+section.wm > .container{position:relative}
+section.wm.wm-light::before{color:rgba(255,255,255,.05)}
+@media(max-width:760px){section.wm::before{font-size:72px;top:20px}}
 </style>
 </head>
 <body>
@@ -398,7 +405,7 @@ header.gh{position:fixed;top:0;left:0;right:0;background:rgba(255,255,255,.96);b
   </div>
 
   <!-- PRICE -->
-  <section class="price-sec" id="price">
+  <section class="price-sec wm" id="price" data-wm="PRICE">
     <div class="container">
       <p class="section-label">Price</p>
       <h2 class="section-title">改訂対応のコストを、桁から変える。</h2>
@@ -442,7 +449,7 @@ header.gh{position:fixed;top:0;left:0;right:0;background:rgba(255,255,255,.96);b
   </section>
 
   <!-- SERVICES -->
-  <section class="services" id="services">
+  <section class="services wm" id="services" data-wm="SERVICE">
     <div class="container">
       <p class="section-label">Service</p>
       <h2 class="section-title">サービス領域</h2>
@@ -477,7 +484,7 @@ header.gh{position:fixed;top:0;left:0;right:0;background:rgba(255,255,255,.96);b
   </section>
 
   <!-- SCHEME -->
-  <section class="scheme" id="scheme">
+  <section class="scheme wm" id="scheme" data-wm="SCHEME">
     <div class="container">
       <p class="section-label">Scheme</p>
       <h2 class="section-title">低コストとスピードを支える、独自の支援体制</h2>
@@ -505,7 +512,7 @@ header.gh{position:fixed;top:0;left:0;right:0;background:rgba(255,255,255,.96);b
   </section>
 
   <!-- STRENGTHS -->
-  <section class="strengths" id="strengths">
+  <section class="strengths wm" id="strengths" data-wm="MERIT">
     <div class="container">
       <p class="section-label">Merit</p>
       <h2 class="section-title">ご利用メリット</h2>
@@ -530,7 +537,7 @@ header.gh{position:fixed;top:0;left:0;right:0;background:rgba(255,255,255,.96);b
   </section>
 
   <!-- EXPERTS -->
-  <section class="experts" id="experts">
+  <section class="experts wm" id="experts" data-wm="EXPERT">
     <div class="container">
       <p class="section-label">Expert</p>
       <h2 class="section-title">ISO審査・EHS実務を歩いてきた専門家が対応します。</h2>
@@ -557,7 +564,7 @@ header.gh{position:fixed;top:0;left:0;right:0;background:rgba(255,255,255,.96);b
   </section>
 
   <!-- STEPS -->
-  <section class="steps" id="steps">
+  <section class="steps wm" id="steps" data-wm="FLOW">
     <div class="container">
       <p class="section-label">Flow</p>
       <h2 class="section-title">支援の進め方</h2>
@@ -587,7 +594,7 @@ header.gh{position:fixed;top:0;left:0;right:0;background:rgba(255,255,255,.96);b
   </section>
 
   <!-- FAQ -->
-  <section class="faq" id="faq">
+  <section class="faq wm" id="faq" data-wm="Q&A">
     <div class="container">
       <p class="section-label">Q &amp; A</p>
       <h2 class="section-title">よくあるご質問</h2>
@@ -613,7 +620,7 @@ header.gh{position:fixed;top:0;left:0;right:0;background:rgba(255,255,255,.96);b
   </section>
 
   <!-- CTA FORMS -->
-  <section class="cta" id="cta">
+  <section class="cta wm wm-light" id="cta" data-wm="CONTACT">
     <div class="container">
       <p class="section-label">Contact</p>
       <h2 class="section-title">お気軽にお問い合わせください</h2>
@@ -637,7 +644,7 @@ header.gh{position:fixed;top:0;left:0;right:0;background:rgba(255,255,255,.96);b
   </section>
 
   <!-- COMPANY -->
-  <section class="company" id="company">
+  <section class="company wm" id="company" data-wm="COMPANY">
     <div class="container">
       <p class="section-label">Company</p>
       <h2 class="section-title">会社概要</h2>
