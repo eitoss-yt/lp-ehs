@@ -278,7 +278,7 @@ function chrome(depth, bodyHtml, { title, description, canonicalPath, ogType = '
 <header class="gh">
   <div class="gh-inner">
     <div class="gh-left">
-      <a class="gh-brand" href="${rel}" aria-label="エイトス株式会社"><img src="${rel}assets/logo-corporate-horizontal-tagline@2x.png" alt="eitoss - Innovation by All"></a>
+      <a class="gh-brand" href="${rel}" aria-label="エイトス株式会社"><img src="${rel}assets/logo-corporate-horizontal-single.svg" alt="eitoss"></a>
       <nav class="gh-nav">
         <div class="gh-dd">
           <span class="gh-dd-label">活用シーン</span>
@@ -311,7 +311,7 @@ ${bodyHtml}
 <footer>
   <div class="container footer-inner">
     <div class="footer-brand">
-      <img src="${rel}assets/logo-corporate-horizontal-tagline@2x.png" alt="eitoss - Innovation by All" style="height:34px;width:auto">
+      <img src="${rel}assets/logo-corporate-horizontal-single.svg" alt="eitoss" style="height:34px;width:auto">
     </div>
     <div class="footer-links">
       <a href="${rel}cayzen/ehsresearch/">Cayzen EHS Research</a>
