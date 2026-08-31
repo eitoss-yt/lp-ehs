@@ -240,6 +240,13 @@ header.gh{position:fixed;top:0;left:0;right:0;background:rgba(255,255,255,.96);b
 }
 .scroll-hint{display:none}
 @media(max-width:760px){.scroll-hint{display:block;text-align:center;font-size:13.5px;color:var(--gray);margin:0 0 8px}}
+
+/* セクションラベルの透かし（Vision風） */
+section.wm{position:relative;overflow:hidden}
+section.wm::before{content:attr(data-wm);position:absolute;top:26px;left:50%;transform:translateX(-50%);font-family:"Poppins","Noto Sans JP",sans-serif;font-weight:700;font-size:170px;line-height:1;letter-spacing:.08em;color:rgba(16,104,120,.06);white-space:nowrap;pointer-events:none}
+section.wm > .container{position:relative}
+section.wm.wm-light::before{color:rgba(255,255,255,.05)}
+@media(max-width:760px){section.wm::before{font-size:72px;top:20px}}
 </style>
 </head>
 <body>
@@ -339,7 +346,7 @@ header.gh{position:fixed;top:0;left:0;right:0;background:rgba(255,255,255,.96);b
   </section>
 
   <!-- SERVICES -->
-  <section class="services" id="services">
+  <section class="services wm" id="services" data-wm="SERVICE">
     <div class="container">
       <p class="section-label">Service</p>
       <h2 class="section-title">Cayzenシリーズ</h2>
@@ -377,7 +384,7 @@ header.gh{position:fixed;top:0;left:0;right:0;background:rgba(255,255,255,.96);b
   </section>
 
   <!-- NEWS -->
-  <section class="news" id="news">
+  <section class="news wm" id="news" data-wm="NEWS">
     <div class="container">
       <p class="section-label">News</p>
       <h2 class="section-title">ニュースリリース</h2>
@@ -409,7 +416,7 @@ header.gh{position:fixed;top:0;left:0;right:0;background:rgba(255,255,255,.96);b
   </section>
 
   <!-- COMPANY -->
-  <section class="company" id="company">
+  <section class="company wm" id="company" data-wm="COMPANY">
     <div class="container">
       <p class="section-label">Company</p>
       <h2 class="section-title">会社概要</h2>
@@ -430,7 +437,7 @@ header.gh{position:fixed;top:0;left:0;right:0;background:rgba(255,255,255,.96);b
   </section>
 
   <!-- CONTACT -->
-  <section class="contact" id="contact">
+  <section class="contact wm" id="contact" data-wm="CONTACT">
     <div class="container">
       <p class="section-label">Contact</p>
       <h2 class="section-title">お問い合わせ</h2>

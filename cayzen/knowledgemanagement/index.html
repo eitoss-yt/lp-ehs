@@ -302,6 +302,13 @@ header.gh{position:fixed;top:0;left:0;right:0;background:rgba(255,255,255,.96);b
 }
 .scroll-hint{display:none}
 @media(max-width:760px){.scroll-hint{display:block;text-align:center;font-size:13.5px;color:var(--gray);margin:0 0 8px}}
+
+/* セクションラベルの透かし（Vision風） */
+section.wm{position:relative;overflow:hidden}
+section.wm::before{content:attr(data-wm);position:absolute;top:26px;left:50%;transform:translateX(-50%);font-family:"Poppins","Noto Sans JP",sans-serif;font-weight:700;font-size:170px;line-height:1;letter-spacing:.08em;color:rgba(16,104,120,.06);white-space:nowrap;pointer-events:none}
+section.wm > .container{position:relative}
+section.wm.wm-light::before{color:rgba(255,255,255,.05)}
+@media(max-width:760px){section.wm::before{font-size:72px;top:20px}}
 </style>
 </head>
 <body>
@@ -396,7 +403,7 @@ header.gh{position:fixed;top:0;left:0;right:0;background:rgba(255,255,255,.96);b
   </div>
 
   <!-- PROBLEMS -->
-  <section class="problems" id="problems">
+  <section class="problems wm" id="problems" data-wm="PROBLEM">
     <div class="container">
       <p class="section-label">Problem</p>
       <h2 class="section-title">現場のデータもナレッジも、<br>「あるのに活かせない」状態になっていませんか。</h2>
@@ -427,7 +434,7 @@ header.gh{position:fixed;top:0;left:0;right:0;background:rgba(255,255,255,.96);b
   </section>
 
   <!-- FEATURES -->
-  <section class="features" id="features">
+  <section class="features wm" id="features" data-wm="FEATURE">
     <div class="container">
       <p class="section-label">Feature</p>
       <h2 class="section-title">Cayzenでできること</h2>
@@ -453,7 +460,7 @@ header.gh{position:fixed;top:0;left:0;right:0;background:rgba(255,255,255,.96);b
   </section>
 
   <!-- AI -->
-  <section class="ai" id="ai">
+  <section class="ai wm" id="ai" data-wm="AI REPORT">
     <div class="container">
       <p class="section-label">AI Report</p>
       <h2 class="section-title">毎朝、AIが現場の"今"をレポート。</h2>
@@ -494,7 +501,7 @@ header.gh{position:fixed;top:0;left:0;right:0;background:rgba(255,255,255,.96);b
   </section>
 
   <!-- EHS -->
-  <section class="ehs" id="ehs">
+  <section class="ehs wm" id="ehs" data-wm="EHS">
     <div class="container">
       <p class="section-label">EHS</p>
       <h2 class="section-title">環境・労働安全衛生（EHS）の管理も、Cayzenで。</h2>
@@ -527,7 +534,7 @@ header.gh{position:fixed;top:0;left:0;right:0;background:rgba(255,255,255,.96);b
   </section>
 
   <!-- USE CASES -->
-  <section class="usecase" id="usecase">
+  <section class="usecase wm" id="usecase" data-wm="USE CASE">
     <div class="container">
       <p class="section-label">Use Case</p>
       <h2 class="section-title">Cayzenの活用シーン</h2>
@@ -554,7 +561,7 @@ header.gh{position:fixed;top:0;left:0;right:0;background:rgba(255,255,255,.96);b
   </section>
 
   <!-- CASES -->
-  <section class="cases" id="cases">
+  <section class="cases wm" id="cases" data-wm="CASE">
     <div class="container">
       <p class="section-label">Case</p>
       <h2 class="section-title">導入事例</h2>
@@ -572,7 +579,7 @@ header.gh{position:fixed;top:0;left:0;right:0;background:rgba(255,255,255,.96);b
   </section>
 
   <!-- STEPS -->
-  <section class="steps" id="steps">
+  <section class="steps wm" id="steps" data-wm="STEP & PLAN">
     <div class="container">
       <p class="section-label">Step &amp; Plan</p>
       <h2 class="section-title">導入のステップ</h2>
@@ -609,7 +616,7 @@ header.gh{position:fixed;top:0;left:0;right:0;background:rgba(255,255,255,.96);b
   </section>
 
   <!-- PRICING -->
-  <section class="pricing" id="pricing">
+  <section class="pricing wm" id="pricing" data-wm="PRICE">
     <div class="container">
       <p class="section-label">Price</p>
       <h2 class="section-title">料金プラン</h2>
@@ -623,7 +630,7 @@ header.gh{position:fixed;top:0;left:0;right:0;background:rgba(255,255,255,.96);b
   </section>
 
   <!-- FAQ -->
-  <section class="faq" id="faq">
+  <section class="faq wm" id="faq" data-wm="Q&A">
     <div class="container">
       <p class="section-label">Q &amp; A</p>
       <h2 class="section-title">よくあるご質問</h2>
@@ -641,7 +648,7 @@ header.gh{position:fixed;top:0;left:0;right:0;background:rgba(255,255,255,.96);b
   </section>
 
   <!-- CTA FORMS -->
-  <section class="cta" id="cta">
+  <section class="cta wm wm-light" id="cta" data-wm="CONTACT">
     <div class="container">
       <p class="section-label">Contact</p>
       <h2 class="section-title">お気軽にお問い合わせください</h2>
@@ -666,7 +673,7 @@ header.gh{position:fixed;top:0;left:0;right:0;background:rgba(255,255,255,.96);b
   </section>
 
   <!-- COMPANY -->
-  <section class="company" id="company">
+  <section class="company wm" id="company" data-wm="COMPANY">
     <div class="container">
       <p class="section-label">Company</p>
       <h2 class="section-title">会社概要</h2>
