@@ -232,6 +232,7 @@ header.gh{position:fixed;top:0;left:0;right:0;background:rgba(255,255,255,.96);b
 .cta-banner-img img{width:100%;height:auto;display:block;margin:0;border-radius:0;box-shadow:none}
 
 .news-rows{max-width:860px;margin:0 auto}
+.news-row.nr-hidden{display:none}
 .news-row{display:flex;gap:22px;align-items:baseline;padding:18px 10px;border-bottom:1px solid var(--line);font-size:16px;color:var(--ink)}
 .news-row time{flex:0 0 auto;color:var(--teal-500);font-weight:500;font-family:"Poppins","Noto Sans JP",sans-serif}
 .news-row:hover .t{color:var(--teal-700)}
@@ -456,7 +457,11 @@ ${insertMidBanner(stripEmoji(bodyOf(a)), ctaBanner(a))}
 
 // ---- ニュース ----
 function newsListPage(items) {
-  const rows = items.map(n => `      <a class="news-row" href="/news/${esc(n.id)}/"><time datetime="${esc(dateOf(n))}">${fmtDate(dateOf(n))}</time><span class="t">${esc(n.title)}</span></a>`).join('\n');
+  // 初期表示は10件。それ以降は「さらに表示する」で展開
+  const rows = items.map((n, i) => `      <a class="news-row${i >= 10 ? ' nr-hidden' : ''}" href="/news/${esc(n.id)}/"><time datetime="${esc(dateOf(n))}">${fmtDate(dateOf(n))}</time><span class="t">${esc(n.title)}</span></a>`).join('\n');
+  const moreBtn = items.length > 10 ? `
+    <p style="text-align:center;margin-top:36px"><button class="btn btn-ghost" id="news-more" type="button">さらに表示する</button></p>
+    <script>document.getElementById('news-more').addEventListener('click',function(){document.querySelectorAll('.news-rows .nr-hidden').forEach(function(el){el.classList.remove('nr-hidden')});this.parentNode.remove()});</script>` : '';
   const body = `<div class="page-head" data-wm="NEWS">
   <div class="container">
     <p class="breadcrumb"><a href="../">HOME</a> ／ ニュース</p>
@@ -468,7 +473,7 @@ function newsListPage(items) {
   <div class="container">
     <div class="news-rows">
 ${rows || '      <p class="empty">お知らせは準備中です。</p>'}
-    </div>
+    </div>${moreBtn}
   </div>
 </main>`;
   return chrome(1, body, {
@@ -708,7 +713,9 @@ if (!USE_SAMPLE && API_KEY) {
     for (const s of cms) {
       if (bodyOf(s) || s.eventDate || s.youtube || s.description) { byId.set(s.id, s); cmsUsed++; }
     }
-    const seminars = [...byId.values()].sort((a, b) => new Date(dateOf(b)) - new Date(dateOf(a)));
+    // 非公開にしたセミナー（microCMS側で下書きに戻したもの。キーが下書きも返すため明示的に除外）
+    const SEM_EXCLUDE = new Set(['20250213']);
+    const seminars = [...byId.values()].filter(s => !SEM_EXCLUDE.has(s.id)).sort((a, b) => new Date(dateOf(b)) - new Date(dateOf(a)));
 
     // seminar/ 配下を再生成（手作りの archive/ は残す）
     const semRoot = path.join(ROOT, 'seminar');

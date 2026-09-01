@@ -4,6 +4,11 @@
   "outputDirectory": ".",
   "redirects": [
     {
+      "source": "/seminar/20250213/:path*",
+      "destination": "/seminar/",
+      "permanent": true
+    },
+    {
       "source": "/trial/:path*",
       "destination": "/#contact",
       "permanent": true
