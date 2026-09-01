@@ -233,6 +233,8 @@ header.gh{position:fixed;top:0;left:0;right:0;background:rgba(255,255,255,.96);b
 
 .news-rows{max-width:860px;margin:0 auto}
 .news-row.nr-hidden{display:none}
+.news-more{background:none;border:none;box-shadow:none;padding:6px 10px;font-family:inherit;font-size:16.5px;font-weight:500;color:var(--teal-700);cursor:pointer}
+.news-more:hover{text-decoration:underline;text-underline-offset:4px}
 .news-row{display:flex;gap:22px;align-items:baseline;padding:18px 10px;border-bottom:1px solid var(--line);font-size:16px;color:var(--ink)}
 .news-row time{flex:0 0 auto;color:var(--teal-500);font-weight:500;font-family:"Poppins","Noto Sans JP",sans-serif}
 .news-row:hover .t{color:var(--teal-700)}
@@ -460,7 +462,7 @@ function newsListPage(items) {
   // 初期表示は10件。それ以降は「さらに表示する」で展開
   const rows = items.map((n, i) => `      <a class="news-row${i >= 10 ? ' nr-hidden' : ''}" href="/news/${esc(n.id)}/"><time datetime="${esc(dateOf(n))}">${fmtDate(dateOf(n))}</time><span class="t">${esc(n.title)}</span></a>`).join('\n');
   const moreBtn = items.length > 10 ? `
-    <p style="text-align:center;margin-top:36px"><button class="btn btn-ghost" id="news-more" type="button">さらに表示する</button></p>
+    <p style="text-align:center;margin-top:36px"><button class="news-more" id="news-more" type="button">さらに表示する ›</button></p>
     <script>document.getElementById('news-more').addEventListener('click',function(){document.querySelectorAll('.news-rows .nr-hidden').forEach(function(el){el.classList.remove('nr-hidden')});this.parentNode.remove()});</script>` : '';
   const body = `<div class="page-head" data-wm="NEWS">
   <div class="container">
