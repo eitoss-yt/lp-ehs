@@ -73,18 +73,23 @@ header.gh{position:fixed;top:0;left:0;right:0;background:rgba(255,255,255,.96);b
 .breadcrumb{font-size:14px;color:var(--gray);margin-bottom:14px}
 .breadcrumb a{color:var(--gray)}
 .breadcrumb a:hover{color:var(--teal-700)}
-main.section{padding:56px 0 80px}
+main.section{padding:40px 0 70px}
 .doc-section{margin-bottom:56px}
 .doc-section > h2{font-size:23.5px;font-weight:500;padding-left:14px;border-left:5px solid var(--teal-500);margin-bottom:6px}
 .doc-section > p.note{font-size:15px;color:var(--gray);margin-bottom:22px;padding-left:19px}
-.doc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
-.doc-card{background:#fff;border-radius:14px;overflow:hidden;box-shadow:0 10px 26px rgba(16,104,120,.10);transition:transform .15s ease,box-shadow .15s ease;display:flex;flex-direction:column}
-.doc-card:hover{transform:translateY(-4px);box-shadow:0 16px 34px rgba(16,104,120,.16)}
-.doc-card .thumb{aspect-ratio:16/9;background:linear-gradient(135deg,var(--teal-050),#dcebee);overflow:hidden}
+.doc-grid{display:flex;flex-direction:column;gap:14px;max-width:840px;margin:0 auto}
+.doc-card{background:#fff;border-radius:14px;overflow:hidden;box-shadow:0 10px 26px rgba(16,104,120,.10);transition:transform .15s ease,box-shadow .15s ease;display:flex;flex-direction:row;align-items:stretch}
+.doc-card:hover{transform:translateY(-3px);box-shadow:0 16px 34px rgba(16,104,120,.16)}
+.doc-card .thumb{flex:0 0 232px;aspect-ratio:16/9;background:linear-gradient(135deg,var(--teal-050),#dcebee);overflow:hidden}
 .doc-card .thumb img{width:100%;height:100%;object-fit:cover}
-.doc-card .body{padding:20px 22px 22px;display:flex;flex-direction:column;gap:8px;flex:1}
-.doc-card h3{font-size:18px;font-weight:500;line-height:1.55;color:var(--ink)}
-.doc-card p.sub{font-size:14.5px;color:var(--gray);flex:1}
+.doc-card .body{padding:12px 26px;display:flex;flex-direction:column;gap:3px;flex:1;justify-content:center}
+.doc-card h3{font-size:18px;font-weight:500;line-height:1.45;color:var(--ink)}
+@media(max-width:700px){
+  .doc-card{flex-direction:column}
+  .doc-card .thumb{flex:none}
+  .doc-card .body{padding:18px 22px 22px}
+}
+.doc-card p.sub{font-size:13.5px;color:var(--gray);flex:none;line-height:1.6}
 .doc-card .cta{font-size:15.5px;font-weight:500;color:var(--teal-700)}
 .doc-card .cta::after{content:" →"}
 .doc-detail{display:grid;grid-template-columns:1fr 400px;gap:40px;align-items:start}
