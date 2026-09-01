@@ -714,7 +714,7 @@ if (!USE_SAMPLE && API_KEY) {
     const semRoot = path.join(ROOT, 'seminar');
     await mkdir(semRoot, { recursive: true });
     for (const entry of await readdir(semRoot, { withFileTypes: true })) {
-      if (entry.name === 'archive') continue;
+      if (entry.name === 'archive' || entry.name === 'thanks') continue;
       await rm(path.join(semRoot, entry.name), { recursive: true, force: true });
     }
     await writeFile(path.join(semRoot, 'index.html'), seminarListPage(seminars));
