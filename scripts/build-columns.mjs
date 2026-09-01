@@ -161,7 +161,8 @@ main.section{padding:56px 0 80px}
 article.post{max-width:760px;margin:0 auto}
 .post-head h1{font-size:31.5px;font-weight:500;line-height:1.5;margin:14px 0 16px}
 .post-eyecatch{border-radius:14px;overflow:hidden;box-shadow:0 14px 34px rgba(16,104,120,.14);margin:26px 0 36px}
-.article-body{font-size:17px}
+.article-body{font-size:17px;overflow-wrap:break-word}
+.article-body a{word-break:break-all}
 .article-body h1,.article-body h2{font-size:25.5px;font-weight:500;line-height:1.5;margin:46px 0 16px;padding-bottom:10px;border-bottom:2px solid var(--teal-050)}
 .article-body h3{font-size:20.5px;font-weight:500;margin:36px 0 12px;padding-left:12px;border-left:4px solid var(--teal-500)}
 .article-body h4{font-size:18px;font-weight:500;margin:28px 0 10px}
@@ -486,7 +487,8 @@ ${rows || '      <p class="empty">お知らせは準備中です。</p>'}
 }
 
 function newsPage(n) {
-  const linkBtn = n.link ? `<p style="margin-top:28px"><a class="btn btn-primary" href="${esc(n.link)}" target="_blank" rel="noopener">関連リンクはこちら</a></p>` : '';
+  // link はhttp(s)の完全なURLのみ採用（CMSに相対パス等の不正値が入っていても無視）
+  const linkBtn = n.link && /^https?:\/\//.test(n.link) ? `<p style="margin-top:28px"><a class="btn btn-primary" href="${esc(n.link)}" target="_blank" rel="noopener">関連リンクはこちら</a></p>` : '';
   const body = `<div class="page-head">
   <div class="container">
     <article class="post" style="max-width:760px;margin:0 auto">
