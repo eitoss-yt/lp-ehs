@@ -534,8 +534,7 @@ const semYoutubeOf = s => {
 const semStateOf = s => {
   const now = new Date();
   const d = s.date ? new Date(s.date) : null;
-  if (d && d.getTime() > now.getTime() - 24 * 3600 * 1000 && s.applyUrl && !semYoutubeOf(s)) return 'open';
-  if (semYoutubeOf(s)) return 'archive';
+  if (d && d.getTime() > now.getTime() - 24 * 3600 * 1000 && s.applyUrl) return 'open';
   return 'closed';
 };
 const SEM_CHIP = { open: '<span class="chip chip-open">申込受付中</span>', archive: '<span class="chip chip-archive">アーカイブ配信中</span>', closed: '<span class="chip chip-closed">受付終了</span>' };
@@ -595,7 +594,7 @@ function seminarPage(s) {
   const st = semStateOf(s);
   const cover = semCoverOf(s, 2);
   const yt = semYoutubeOf(s);
-  const video = yt ? `<div class="video-wrap"><iframe src="https://www.youtube.com/embed/${esc(yt)}" title="${esc(s.title)}（アーカイブ）" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>` : '';
+  const video = ''; // アーカイブ動画は個別ページに掲載しない方針（終了セミナーは紹介ページとして残す）
   const apply = st === 'open' && s.applyUrl ? `<div class="sem-apply"><a class="btn btn-primary" href="${esc(s.applyUrl)}" target="_blank" rel="noopener">セミナーに申し込む（無料）</a></div>` : '';
   const body = `<div class="page-head">
   <div class="container">
