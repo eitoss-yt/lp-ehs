@@ -171,7 +171,34 @@ footer .copy{font-size:12.5px;color:rgba(255,255,255,.55);text-align:center;marg
 @media(max-width:640px){.job-row{flex-wrap:wrap;gap:8px}.job-row .t{flex:1 1 100%}}
 .jobs-box .cats span{background:var(--teal-050);color:var(--teal-700);font-size:15px;font-weight:500;padding:8px 20px;border-radius:999px}
 .jobs-box p{color:var(--gray);font-size:15.5px}
-@media(max-width:860px){.biz-list{grid-template-columns:1fr}.value-grid{grid-template-columns:1fr}.r-mv .copy{font-size:22.5px}}
+.r-intro{padding:64px 0 10px;text-align:center}
+.r-intro p{max-width:820px;margin:0 auto;font-size:18.5px;font-weight:500;line-height:2.2;color:var(--ink);text-wrap:pretty}
+.stat-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;max-width:1000px;margin:0 auto}
+.stat-card{background:#fff;border-radius:14px;padding:26px 18px;text-align:center;box-shadow:0 10px 26px rgba(16,104,120,.10)}
+.stat-card .k{font-size:14px;font-weight:500;color:var(--gray);margin-bottom:4px}
+.stat-card .v{font-family:"Poppins","Noto Sans JP",sans-serif;font-size:27.5px;font-weight:600;color:var(--teal-700);line-height:1.3}
+.stat-card .v small{font-size:15px;font-weight:500}
+.clients-band{background:#fff;padding:40px 0 32px}
+.clients-band>.container>p{font-size:14.5px;font-weight:500;color:var(--teal-700);letter-spacing:.1em;text-align:center;margin-bottom:20px}
+.logo-slider{overflow:hidden;-webkit-mask-image:linear-gradient(90deg,transparent,#000 10%,#000 90%,transparent);mask-image:linear-gradient(90deg,transparent,#000 10%,#000 90%,transparent)}
+.logo-track{display:flex;width:max-content;list-style:none;animation:logo-slide 24s linear infinite}
+.logo-track li{flex:0 0 auto;height:60px;display:flex;align-items:center;justify-content:center;margin-right:64px}
+.logo-track img{height:40px;width:auto;max-width:200px;object-fit:contain}
+@keyframes logo-slide{to{transform:translateX(-50%)}}
+@media (prefers-reduced-motion:reduce){.logo-track{animation:none;width:auto;flex-wrap:wrap;justify-content:center}.logo-slider{mask-image:none;-webkit-mask-image:none}}
+.ceo-box{max-width:820px;margin:0 auto;background:#fff;border-radius:16px;padding:38px 36px;box-shadow:0 14px 34px rgba(16,104,120,.12)}
+.ceo-box p{font-size:16px;color:var(--ink);text-wrap:pretty}
+.ceo-box p+p{margin-top:1.1em}
+.ceo-box .sig{margin-top:22px;text-align:right;font-size:15px;color:var(--gray)}
+.ceo-box .sig b{display:block;font-size:18px;font-weight:500;color:var(--ink)}
+.ceo-box .bio{margin-top:18px;padding-top:18px;border-top:1px solid var(--line);font-size:13.5px;color:var(--gray)}
+.flow-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;max-width:960px;margin:0 auto}
+.flow-card{background:#fff;border-radius:14px;padding:24px 20px;text-align:center;box-shadow:0 10px 26px rgba(16,104,120,.10);position:relative}
+.flow-card .num{font-family:"Poppins","Noto Sans JP",sans-serif;font-size:13.5px;font-weight:600;letter-spacing:.14em;color:var(--teal-300)}
+.flow-card h3{font-size:17px;font-weight:500;margin:6px 0 8px;color:var(--teal-900)}
+.flow-card p{font-size:13.5px;color:var(--gray)}
+.casual-note{max-width:760px;margin:34px auto 0;text-align:center;background:var(--teal-050);border-radius:12px;padding:20px 24px;font-size:15.5px;color:var(--teal-900)}
+@media(max-width:860px){.biz-list{grid-template-columns:1fr}.value-grid{grid-template-columns:1fr}.r-mv .copy{font-size:22.5px}.stat-grid{grid-template-columns:1fr 1fr}.flow-grid{grid-template-columns:1fr 1fr}}
 </style>
 </head>
 <body>
@@ -211,10 +238,17 @@ footer .copy{font-size:12.5px;color:rgba(255,255,255,.55);text-align:center;marg
   <div class="container">
     <p class="breadcrumb"><a href="../">HOME</a> ／ 採用情報</p>
     <h1>採用情報</h1>
-    <p class="lead">「人と社会を豊かにし、次の世代につなげる」。ミッションに共感し、共に挑戦する仲間を募集しています。</p>
+    <p class="lead">次の世代につながる仕事を、一緒に。</p>
   </div>
 </div>
 <main>
+  <section class="r-intro">
+    <div class="container">
+      <p>環境・労働安全衛生の法令対応、現場のナレッジマネジメント、ISOの構築・運用。<br>エイトスは、ものづくりの現場を支える「地味だけれど、なくてはならない仕事」を、テクノロジーで変えようとしているスタートアップです。<br>変化の途中にあるチームだからこそ、一人ひとりの仕事が事業の形をつくります。<br>私たちのミッションに共感してくれるあなたと、お会いできることを楽しみにしています。</p>
+    </div>
+  </section>
+
+
   <section class="r-mv">
     <div class="container">
       <p class="label">MISSION</p>
@@ -254,7 +288,56 @@ footer .copy{font-size:12.5px;color:rgba(255,255,255,.55);text-align:center;marg
 
   <section class="r-sec alt">
     <div class="container">
-      <h2>行動指針</h2>
+      <h2>数字で見るエイトス</h2>
+      <div class="stat-grid">
+        <div class="stat-card"><p class="k">設立</p><p class="v">2019<small>年</small></p></div>
+        <div class="stat-card"><p class="k">働き方</p><p class="v"><small>フルリモート</small></p></div>
+        <div class="stat-card"><p class="k">就業可能地域</p><p class="v">47<small>都道府県</small></p></div>
+        <div class="stat-card"><p class="k">導入実績</p><p class="v"><small>大手製造業・建設業ほか</small></p></div>
+      </div>
+    </div>
+  </section>
+  <div class="clients-band">
+    <div class="container">
+      <p>導入企業（一部）</p>
+      <div class="logo-slider">
+        <ul class="logo-track">
+          <li><img src="../assets/fuji-electric.webp" alt="富士電機" style="height:38px"></li>
+          <li><img src="../assets/murata.webp" alt="村田製作所" style="height:41px"></li>
+          <li><img src="../assets/bosch.webp" alt="ボッシュ" style="height:33px"></li>
+          <li><img src="../assets/nabtesco.webp" alt="Nabtesco" style="height:28px"></li>
+          <li><img src="../assets/hazama-ando.webp" alt="安藤ハザマ" style="height:37px"></li>
+          <li><img src="../assets/japan-post.webp" alt="日本郵便" style="height:33px"></li>
+          <li><img src="../assets/matsui-kiko.webp" alt="松井機工" style="height:39px"></li>
+          <li><img src="../assets/okubo-gear.webp" alt="大久保歯車工業" style="height:26px"></li>
+          <li><img src="../assets/fuji-electric.webp" alt="" style="height:38px"></li>
+          <li><img src="../assets/murata.webp" alt="" style="height:41px"></li>
+          <li><img src="../assets/bosch.webp" alt="" style="height:33px"></li>
+          <li><img src="../assets/nabtesco.webp" alt="" style="height:28px"></li>
+          <li><img src="../assets/hazama-ando.webp" alt="" style="height:37px"></li>
+          <li><img src="../assets/japan-post.webp" alt="" style="height:33px"></li>
+          <li><img src="../assets/matsui-kiko.webp" alt="" style="height:39px"></li>
+          <li><img src="../assets/okubo-gear.webp" alt="" style="height:26px"></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <section class="r-sec">
+    <div class="container">
+      <h2>代表メッセージ</h2>
+      <div class="ceo-box">
+        <p>ものづくりの現場には、法令対応や安全衛生、日々の記録といった「誰かがやらなければならない仕事」が数多くあります。私たちは、そうした仕事を支える仕組みをつくることで、現場で働く人と組織の力を最大限に引き出したいと考えています。</p>
+        <p>まだ小さなチームです。だからこそ、一人ひとりの意思と行動が、そのままプロダクトと事業の形になります。ミッションに共感し、共に未来をつくってくれる仲間を待っています。</p>
+        <p class="sig">エイトス株式会社 代表取締役<b>嶋田 亘</b></p>
+        <p class="bio">豊田通商にて自動車部品のサプライチェーン管理・現場の物流改善等に従事した後、KPMG FAS、スタートアップを経て2019年にエイトスを創業。2024年 J-Startup CENTRAL採択。一般社団法人製造DX協会に参画。</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="r-sec alt">
+    <div class="container">
+      <h2>私たちが大切にしていること</h2>
       <p class="lead2">エイトスのメンバーが日々の仕事で大切にしている、4つのバリューです。</p>
       <div class="value-grid">
         <div class="value-card">
@@ -283,13 +366,26 @@ footer .copy{font-size:12.5px;color:rgba(255,255,255,.55);text-align:center;marg
 
   <section class="r-sec">
     <div class="container">
-      <h2>働き方</h2>
-      <p class="lead2">場所にとらわれない働き方で、多様なメンバーが活躍しています。</p>
+      <h2>働く環境</h2>
+      <p class="lead2">場所にとらわれない働き方で、正社員から業務委託・副業まで、多様なメンバーが活躍しています。</p>
       <div class="work-points">
         <span>フルリモート勤務可</span>
         <span>47都道府県どこからでも就業可能</span>
         <span>副業・複業メンバーも活躍中</span>
       </div>
+    </div>
+  </section>
+
+  <section class="r-sec">
+    <div class="container">
+      <h2>選考の流れ</h2>
+      <div class="flow-grid">
+        <div class="flow-card"><p class="num">STEP 01</p><h3>カジュアル面談</h3><p>応募前に、事業や働き方について気軽にお話しできます</p></div>
+        <div class="flow-card"><p class="num">STEP 02</p><h3>書類選考</h3><p>ご経歴・ポートフォリオ等を拝見します</p></div>
+        <div class="flow-card"><p class="num">STEP 03</p><h3>面接</h3><p>オンラインで実施。相互理解を大切にしています</p></div>
+        <div class="flow-card"><p class="num">STEP 04</p><h3>オファー</h3><p>条件をご相談のうえ、入社日を決定します</p></div>
+      </div>
+      <p class="casual-note">「まだ応募までは…」という方も、まずはカジュアル面談からお気軽にどうぞ。各求人ページ、または<a href="../#contact">お問い合わせ</a>からご連絡ください。</p>
     </div>
   </section>
 
