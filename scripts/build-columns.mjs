@@ -531,6 +531,13 @@ const semYoutubeOf = s => {
   const v = String(s.youtube || '').split('?')[0].trim().replace(/^.*\//, '');
   return /^[A-Za-z0-9_-]{11}$/.test(v) ? v : '';
 };
+// セミナーの日付表記は「YYYY年M月D日」に統一（時間・曜日は表示しない）
+const semDateFmt = s => {
+  const iso = dateOf(s);
+  if (!iso) return '';
+  const d = new Date(iso);
+  return `${d.getFullYear()}年${d.getMonth() + 1}月${d.getDate()}日`;
+};
 const semStateOf = s => {
   const now = new Date();
   const d = s.date ? new Date(s.date) : null;
@@ -547,7 +554,7 @@ function seminarListPage(items) {
     return `      <a class="col-card" href="/seminar/${esc(s.id)}/">
         <div class="thumb">${thumb}</div>
         <div class="body">
-          <div class="meta">${SEM_CHIP[st]}<time datetime="${esc(dateOf(s) || '')}">${esc(s.eventDate || fmtDate(dateOf(s)))}</time></div>
+          <div class="meta">${SEM_CHIP[st]}<time datetime="${esc(dateOf(s) || '')}">${semDateFmt(s)}</time></div>
           <h2>${esc(s.title)}</h2>
           ${s.description ? `<p class="desc">${esc(String(s.description).replace(/\s+/g, ' ').slice(0, 90))}${String(s.description).length > 90 ? '…' : ''}</p>` : ''}
         </div>
@@ -600,7 +607,7 @@ function seminarPage(s) {
   <div class="container">
     <article class="post post-head-wrap" style="max-width:760px;margin:0 auto">
       <p class="breadcrumb"><a href="../../">HOME</a> ／ <a href="../">セミナー</a> ／ ${esc(s.title)}</p>
-      <div class="meta">${SEM_CHIP[st]}<time datetime="${esc(dateOf(s) || '')}">${esc(s.eventDate || fmtDate(dateOf(s)))}</time></div>
+      <div class="meta">${SEM_CHIP[st]}<time datetime="${esc(dateOf(s) || '')}">${semDateFmt(s)}</time></div>
       <div class="post-head"><h1>${esc(s.title)}</h1></div>
     </article>
   </div>
