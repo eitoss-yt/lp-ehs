@@ -3,13 +3,13 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>お役立ち資料 - エイトス株式会社</title>
-<meta name="description" content="ISO・EHS法令対応に役立つ実務ガイドを無料でダウンロードいただけます。エイトス株式会社のお役立ち資料です。">
-<meta property="og:title" content="お役立ち資料 - エイトス株式会社">
-<meta property="og:description" content="ISO・EHS法令対応に役立つ実務ガイドを無料でダウンロードいただけます。">
+<title>「JIS Q 14001:2026」完全解説書＋改訂対応セルフチェックシート - 資料ダウンロード｜エイトス株式会社</title>
+<meta name="description" content="JIS Q 14001:2026（ISO 14001:2026と一致）の規格の骨格から移行時の実務までを4章で解説した「完全解説書」と、自社EMSの見直し箇所を確認できる「改訂対応セルフチェックシート」の2点セット。1つのフォームでまとめてダウンロードいただけます。">
+<meta property="og:title" content="「JIS Q 14001:2026」完全解説書＋改訂対応セルフチェックシート - 資料ダウンロード｜エイトス株式会社">
+<meta property="og:description" content="JIS Q 14001:2026（ISO 14001:2026と一致）の規格の骨格から移行時の実務までを4章で解説した「完全解説書」と、自社EMSの見直し箇所を確認できる「改訂対応セルフチェックシート」の2点セット。1つのフォームでまとめてダウンロードいただけます。">
 <meta property="og:type" content="website">
-<link rel="canonical" href="https://lp.eitoss.com/resources/">
-<meta property="og:url" content="https://lp.eitoss.com/resources/">
+<link rel="canonical" href="https://lp.eitoss.com/document/JISQ14001_2026-guide/">
+<meta property="og:url" content="https://lp.eitoss.com/document/JISQ14001_2026-guide/">
 <link rel="icon" type="image/svg+xml" href='data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"%3E%3Cpath d="M50 8 a42 42 0 1 0 29.7 12.3 l-12.7 12.7 a24 24 0 1 1 -17 -7 z" fill="%23106878"/%3E%3C/svg%3E'>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -77,21 +77,15 @@ main.section{padding:56px 0 80px}
 .doc-section{margin-bottom:56px}
 .doc-section > h2{font-size:23.5px;font-weight:500;padding-left:14px;border-left:5px solid var(--teal-500);margin-bottom:6px}
 .doc-section > p.note{font-size:15px;color:var(--gray);margin-bottom:22px;padding-left:19px}
-.doc-grid{display:flex;flex-direction:column;gap:14px;max-width:840px;margin:0 auto}
-.doc-card{position:relative;background:#fff;border-radius:14px;overflow:hidden;box-shadow:0 10px 26px rgba(16,104,120,.10);transition:transform .15s ease,box-shadow .15s ease;display:flex;flex-direction:row;align-items:stretch}
-.doc-card:hover{transform:translateY(-3px);box-shadow:0 16px 34px rgba(16,104,120,.16)}
-.doc-card .thumb{flex:0 0 232px;aspect-ratio:16/9;background:linear-gradient(135deg,var(--teal-050),#dcebee);overflow:hidden}
+.doc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
+.doc-card{background:#fff;border-radius:14px;overflow:hidden;box-shadow:0 10px 26px rgba(16,104,120,.10);transition:transform .15s ease,box-shadow .15s ease;display:flex;flex-direction:column}
+.doc-card:hover{transform:translateY(-4px);box-shadow:0 16px 34px rgba(16,104,120,.16)}
+.doc-card .thumb{aspect-ratio:16/9;background:linear-gradient(135deg,var(--teal-050),#dcebee);overflow:hidden}
 .doc-card .thumb img{width:100%;height:100%;object-fit:cover}
-.doc-card .body{padding:12px 250px 12px 26px;display:flex;flex-direction:column;gap:3px;flex:1;justify-content:center}
-.doc-card h3{font-size:18px;font-weight:500;line-height:1.45;color:var(--ink)}
-.doc-card p.sub{font-size:13.5px;color:var(--gray);flex:none;line-height:1.6}
-.doc-card .cta{position:absolute;right:28px;bottom:16px;font-size:15.5px;font-weight:500;color:var(--teal-700);white-space:nowrap}
-@media(max-width:700px){
-  .doc-card{flex-direction:column}
-  .doc-card .thumb{flex:none}
-  .doc-card .body{padding:18px 22px 22px}
-  .doc-card .cta{position:static;transform:none;margin-top:6px}
-}
+.doc-card .body{padding:20px 22px 22px;display:flex;flex-direction:column;gap:8px;flex:1}
+.doc-card h3{font-size:18px;font-weight:500;line-height:1.55;color:var(--ink)}
+.doc-card p.sub{font-size:14.5px;color:var(--gray);flex:1}
+.doc-card .cta{font-size:15.5px;font-weight:500;color:var(--teal-700)}
 .doc-card .cta::after{content:" →"}
 .doc-detail{display:grid;grid-template-columns:1fr 400px;gap:40px;align-items:start}
 .doc-info .cover{border-radius:14px;overflow:hidden;box-shadow:0 14px 34px rgba(16,104,120,.14);margin-bottom:26px}
@@ -142,63 +136,65 @@ footer .copy{font-size:12.5px;color:rgba(255,255,255,.55);text-align:center;marg
 <header class="gh">
   <div class="gh-inner">
     <div class="gh-left">
-      <a class="gh-brand" href="../" aria-label="エイトス株式会社"><img src="../assets/logo-corporate-horizontal-single.svg" alt="eitoss"></a>
+      <a class="gh-brand" href="../../" aria-label="エイトス株式会社"><img src="../../assets/logo-corporate-horizontal-single.svg" alt="eitoss"></a>
       <nav class="gh-nav">
         <div class="gh-dd">
           <span class="gh-dd-label">活用シーン</span>
           <div class="gh-dd-menu"><div class="in">
-            <a href="../cayzen/ehsresearch/">Cayzen EHS Research（EHS法令調査代行）</a>
-            <a href="../cayzen/knowledgemanagement/">Cayzen ナレッジマネジメント（SaaS）</a>
-            <a href="../cayzen/iso/">Cayzen ISO サポート</a>
+            <a href="../../cayzen/ehsresearch/">Cayzen EHS Research（EHS法令調査代行）</a>
+            <a href="../../cayzen/knowledgemanagement/">Cayzen ナレッジマネジメント（SaaS）</a>
+            <a href="../../cayzen/iso/">Cayzen ISO サポート</a>
           </div></div>
         </div>
-        <a href="../seminar/">セミナー</a>
-        <a href="../column/">コラム</a>
-        <a href="../news/">ニュース</a>
-        <a href="../resources/">お役立ち資料</a>
-        <a href="../#company">会社概要</a>
-        <a href="../recruit/">採用情報</a>
+        <a href="../../seminar/">セミナー</a>
+        <a href="../../column/">コラム</a>
+        <a href="../../news/">ニュース</a>
+        <a href="../../resources/">お役立ち資料</a>
+        <a href="../../#company">会社概要</a>
+        <a href="../../recruit/">採用情報</a>
       </nav>
     </div>
     <div class="gh-right">
       <p class="gh-tel">TEL: <b>050-8881-9881</b><span>（平日10:00〜19:00）</span></p>
       <div class="gh-actions">
-        <a class="gh-btn gh-btn-dl" href="../document/"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h9l4 4v14H6z"/><path d="M15 3v4h4M9 12h6M9 16h6"/></svg> 資料請求</a>
-        <a class="gh-btn gh-btn-ct" href="../#contact"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg> お問合せ</a>
+        <a class="gh-btn gh-btn-dl" href="../../document/"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h9l4 4v14H6z"/><path d="M15 3v4h4M9 12h6M9 16h6"/></svg> 資料請求</a>
+        <a class="gh-btn gh-btn-ct" href="../../#contact"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg> お問合せ</a>
       </div>
     </div>
   </div>
 </header>
 
-<div class="page-head" data-wm="RESOURCES">
+<div class="page-head" data-wm="DOWNLOAD">
   <div class="container">
-    <p class="breadcrumb"><a href="../">HOME</a> ／ お役立ち資料</p>
-    <h1>お役立ち資料</h1>
-    <p class="lead">ISO・EHS法令対応に役立つ実務ガイドを無料でダウンロードいただけます。</p>
+    <p class="breadcrumb"><a href="../../">HOME</a> ／ <a href="../">資料ダウンロード</a> ／ 「JIS Q 14001:2026」完全解説書</p>
+    <h1>「JIS Q 14001:2026」完全解説書＋改訂対応セルフチェックシート</h1>
+    <p class="lead">環境管理担当者向け 実務ガイド（2点セット）</p>
   </div>
 </div>
 <main class="section">
   <div class="container">
-    <div class="doc-section">
-      <div class="doc-grid">
-      <a class="doc-card" href="../document/JISQ14001_2026-guide/">
-        <div class="thumb"><img src="../assets/doc-iso14001-2026-guide.jpg" alt="" loading="lazy"></div>
-        <div class="body">
-          <h3>「JIS Q 14001:2026」完全解説書＋改訂対応セルフチェックシート</h3>
-          <p class="sub">環境管理担当者向け 実務ガイド（2点セット）</p>
-          <span class="cta">資料ダウンロードする</span>
-        </div>
-      </a>
-      <a class="doc-card" href="../document/ISO14001_2026-revision/">
-        <div class="thumb"><img src="../assets/cms/7befeb27a2c3.jpg" alt="" loading="lazy"></div>
-        <div class="body">
-          <h3>「ISO14001」2026年 改訂ポイント解説</h3>
-          <p class="sub">環境管理担当者向け 実務ガイド</p>
-          <span class="cta">資料ダウンロードする</span>
-        </div>
-      </a>
+    <div class="doc-detail">
+      <div class="doc-info">
+        <div class="cover"><img src="../../assets/doc-iso14001-2026-guide.jpg" alt="「JIS Q 14001:2026」完全解説書＋改訂対応セルフチェックシート"></div>
+        <p class="desc">2026年改正のJIS Q 14001（ISO 14001:2026と一致・IDT）に対応した2点セットの実務資料です。規格の骨格・箇条ごとの要点・2026年改正の要点・移行チェックリストを4章で体系的に解説した「完全解説書」（25ページ）と、改訂内容に照らして自社のEMSで手を入れる箇所が残っていないかを18項目で確認できる「改訂対応セルフチェックシート」を、1つのフォームでまとめてダウンロードいただけます。</p>
+      <h3><strong>この資料でわかること</strong></h3><ol><li><p>規格の骨格 ― 箇条4〜10とPDCAの対応、リーダーシップの位置づけ、意図した成果</p></li><li><p>箇条ごとの要点 ― 箇条4〜10の要求内容を実務の言葉で要約し、2026年改正点を明示</p></li><li><p>2026年改正の要点 ― 文書と運用の見直しが必要な7つの改正ポイント</p></li><li><p>移行時に見直す箇所 ― 既存EMSを2026年版に合わせる際のチェックリスト（8項目）</p></li><li><p>セルフチェックシート ― 組織の状況・計画策定・運用・評価と文書の18の確認項目と判定の目安</p></li></ol><h3><strong>こんな方におすすめ</strong></h3><ul><li><p>ISO 14001／JIS Q 14001の認証を取得・維持している企業の環境管理担当者</p></li><li><p>2026年改正の内容を「作り直し」ではなく「明文化」の観点から体系的に把握したい方</p></li><li><p>移行審査までに、自社のEMSのどこへ手を入れるべきかを確認したい方</p></li><li><p>リスク及び機会・外部委託の範囲・環境状態の捉え方など、解釈が分かれていた論点を整理したい方</p></li></ul>
+      </div>
+      <div class="form-card">
+        <h2>資料をダウンロードする（無料）</h2>
+        <p class="note">フォーム送信後、2つの資料をまとめてご案内いたします。</p>
+        <div class="form-wrap">
+        <script charset="utf-8" type="text/javascript" src="//js-na2.hsforms.net/forms/embed/v2.js"></script>
+        <script>
+          hbspt.forms.create({
+            portalId: "8170895",
+            formId: "20bf541e-4913-4cfb-b7fd-ad4fa371e6ba",
+            region: "na2"
+          });
+        </script>
+      </div>
       </div>
     </div>
+    <a class="back-link" href="../">← 資料ダウンロード一覧へ戻る</a>
   </div>
 </main>
 
@@ -206,28 +202,28 @@ footer .copy{font-size:12.5px;color:rgba(255,255,255,.55);text-align:center;marg
   <div class="container">
     <div class="footer-grid">
       <div>
-        <div class="footer-brand"><img src="../assets/logo-corporate-horizontal-white.png" alt="eitoss"></div>
+        <div class="footer-brand"><img src="../../assets/logo-corporate-horizontal-white.png" alt="eitoss"></div>
         <p class="footer-addr">本社: 〒471-0031<br>愛知県豊田市小坂本町1-5-5 YAMATO BLDG2F<br>営業拠点: 〒170-6012<br>東京都豊島区東池袋3-1-1<br>サンシャイン60 12F</p>
       </div>
       <nav class="footer-col">
         <p class="footer-head">サービス</p>
-        <a href="../cayzen/ehsresearch/">Cayzen EHS Research</a>
-        <a href="../cayzen/knowledgemanagement/">Cayzen ナレッジマネジメント</a>
-        <a href="../cayzen/iso/">Cayzen ISO サポート</a>
+        <a href="../../cayzen/ehsresearch/">Cayzen EHS Research</a>
+        <a href="../../cayzen/knowledgemanagement/">Cayzen ナレッジマネジメント</a>
+        <a href="../../cayzen/iso/">Cayzen ISO サポート</a>
       </nav>
       <nav class="footer-col">
         <p class="footer-head">コンテンツ</p>
-        <a href="../seminar/">セミナー</a>
-        <a href="../column/">コラム</a>
-        <a href="../news/">ニュース</a>
-        <a href="../document/">資料ダウンロード</a>
-        <a href="../resources/">お役立ち資料</a>
+        <a href="../../seminar/">セミナー</a>
+        <a href="../../column/">コラム</a>
+        <a href="../../news/">ニュース</a>
+        <a href="../../document/">資料ダウンロード</a>
+        <a href="../../resources/">お役立ち資料</a>
       </nav>
       <nav class="footer-col">
         <p class="footer-head">企業情報</p>
-        <a href="../#company">会社概要</a>
-        <a href="../recruit/">採用情報</a>
-        <a href="../#contact">お問い合わせ</a>
+        <a href="../../#company">会社概要</a>
+        <a href="../../recruit/">採用情報</a>
+        <a href="../../#contact">お問い合わせ</a>
       </nav>
     </div>
     <p class="copy">© Eitoss Inc. All rights reserved.</p>
