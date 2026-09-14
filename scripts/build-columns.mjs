@@ -350,6 +350,7 @@ ${bodyHtml}
         <a href="${rel}#contact">お問い合わせ</a>
         <a href="/privacy-policy/">プライバシーポリシー</a>
         <a href="/security-policy/">情報セキュリティ方針</a>
+        <a href="/terms/">利用規約</a>
       </nav>
     </div>
     <p class="copy">© Eitoss Inc. All rights reserved.</p>
