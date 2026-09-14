@@ -348,6 +348,8 @@ ${bodyHtml}
         <a href="${rel}#company">会社概要</a>
         <a href="${rel}recruit/">採用情報</a>
         <a href="${rel}#contact">お問い合わせ</a>
+        <a href="/privacy-policy/">プライバシーポリシー</a>
+        <a href="/security-policy/">情報セキュリティ方針</a>
       </nav>
     </div>
     <p class="copy">© Eitoss Inc. All rights reserved.</p>
