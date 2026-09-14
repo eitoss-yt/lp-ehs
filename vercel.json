@@ -364,16 +364,6 @@
       "permanent": true
     },
     {
-      "source": "/privacy-policy",
-      "destination": "/",
-      "permanent": true
-    },
-    {
-      "source": "/security-policy",
-      "destination": "/",
-      "permanent": true
-    },
-    {
       "source": "/form",
       "destination": "/#contact",
       "permanent": true
