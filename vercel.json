@@ -9,7 +9,27 @@
       "permanent": true
     },
     {
+      "source": "/seminar/20250213/",
+      "destination": "/seminar/",
+      "permanent": true
+    },
+    {
+      "source": "/seminar/20250213/:path*/",
+      "destination": "/seminar/",
+      "permanent": true
+    },
+    {
       "source": "/trial/:path*",
+      "destination": "/#contact",
+      "permanent": true
+    },
+    {
+      "source": "/trial/",
+      "destination": "/#contact",
+      "permanent": true
+    },
+    {
+      "source": "/trial/:path*/",
       "destination": "/#contact",
       "permanent": true
     },
@@ -19,7 +39,27 @@
       "permanent": true
     },
     {
+      "source": "/document/cayzen-ai/",
+      "destination": "/document/",
+      "permanent": true
+    },
+    {
+      "source": "/document/cayzen-ai/:path*/",
+      "destination": "/document/",
+      "permanent": true
+    },
+    {
       "source": "/document/7u0e4Uml/:path*",
+      "destination": "/document/",
+      "permanent": true
+    },
+    {
+      "source": "/document/7u0e4Uml/",
+      "destination": "/document/",
+      "permanent": true
+    },
+    {
+      "source": "/document/7u0e4Uml/:path*/",
       "destination": "/document/",
       "permanent": true
     },
@@ -29,7 +69,17 @@
       "permanent": true
     },
     {
+      "source": "/article/",
+      "destination": "/column/",
+      "permanent": true
+    },
+    {
       "source": "/article/1OgQHDhx",
+      "destination": "/column/1ogqhdhx/",
+      "permanent": true
+    },
+    {
+      "source": "/article/1OgQHDhx/",
       "destination": "/column/1ogqhdhx/",
       "permanent": true
     },
@@ -39,7 +89,17 @@
       "permanent": true
     },
     {
+      "source": "/article/202604-mixed-work-safety-law-revision-employer-obligations/",
+      "destination": "/column/202604-mixed-work-safety-law-revision-employer-obl/",
+      "permanent": true
+    },
+    {
       "source": "/article/27oCFxCz",
+      "destination": "/column/27ocfxcz/",
+      "permanent": true
+    },
+    {
+      "source": "/article/27oCFxCz/",
       "destination": "/column/27ocfxcz/",
       "permanent": true
     },
@@ -49,7 +109,17 @@
       "permanent": true
     },
     {
+      "source": "/article/2BYZzapM/",
+      "destination": "/column/2byzzapm/",
+      "permanent": true
+    },
+    {
       "source": "/article/2H-X8Be9",
+      "destination": "/column/2h-x8be9/",
+      "permanent": true
+    },
+    {
+      "source": "/article/2H-X8Be9/",
       "destination": "/column/2h-x8be9/",
       "permanent": true
     },
@@ -59,7 +129,17 @@
       "permanent": true
     },
     {
+      "source": "/article/2UTikaV-/",
+      "destination": "/column/2utikav/",
+      "permanent": true
+    },
+    {
       "source": "/article/3DSGUvWU",
+      "destination": "/column/3dsguvwu/",
+      "permanent": true
+    },
+    {
+      "source": "/article/3DSGUvWU/",
       "destination": "/column/3dsguvwu/",
       "permanent": true
     },
@@ -69,7 +149,17 @@
       "permanent": true
     },
     {
+      "source": "/article/3kjUEnPk/",
+      "destination": "/column/3kjuenpk/",
+      "permanent": true
+    },
+    {
       "source": "/article/4sRV3qgC",
+      "destination": "/column/4srv3qgc/",
+      "permanent": true
+    },
+    {
+      "source": "/article/4sRV3qgC/",
       "destination": "/column/4srv3qgc/",
       "permanent": true
     },
@@ -79,7 +169,17 @@
       "permanent": true
     },
     {
+      "source": "/article/7BXjKAVX/",
+      "destination": "/column/7bxjkavx/",
+      "permanent": true
+    },
+    {
       "source": "/article/8IolYmnJ",
+      "destination": "/column/8iolymnj/",
+      "permanent": true
+    },
+    {
+      "source": "/article/8IolYmnJ/",
       "destination": "/column/8iolymnj/",
       "permanent": true
     },
@@ -89,7 +189,17 @@
       "permanent": true
     },
     {
+      "source": "/article/ADYCDZQc/",
+      "destination": "/column/adycdzqc/",
+      "permanent": true
+    },
+    {
       "source": "/article/AGV",
+      "destination": "/column/agv/",
+      "permanent": true
+    },
+    {
+      "source": "/article/AGV/",
       "destination": "/column/agv/",
       "permanent": true
     },
@@ -99,7 +209,17 @@
       "permanent": true
     },
     {
+      "source": "/article/BCHFi29E/",
+      "destination": "/column/bchfi29e/",
+      "permanent": true
+    },
+    {
       "source": "/article/BCP",
+      "destination": "/column/bcp/",
+      "permanent": true
+    },
+    {
+      "source": "/article/BCP/",
       "destination": "/column/bcp/",
       "permanent": true
     },
@@ -109,7 +229,17 @@
       "permanent": true
     },
     {
+      "source": "/article/BwvBtcrk/",
+      "destination": "/column/bwvbtcrk/",
+      "permanent": true
+    },
+    {
       "source": "/article/CSR",
+      "destination": "/column/csr/",
+      "permanent": true
+    },
+    {
+      "source": "/article/CSR/",
       "destination": "/column/csr/",
       "permanent": true
     },
@@ -119,7 +249,17 @@
       "permanent": true
     },
     {
+      "source": "/article/Df8LGC2p/",
+      "destination": "/column/df8lgc2p/",
+      "permanent": true
+    },
+    {
       "source": "/article/HW-RCRM_",
+      "destination": "/column/hw-rcrm/",
+      "permanent": true
+    },
+    {
+      "source": "/article/HW-RCRM_/",
       "destination": "/column/hw-rcrm/",
       "permanent": true
     },
@@ -129,7 +269,17 @@
       "permanent": true
     },
     {
+      "source": "/article/IhdaVNij/",
+      "destination": "/column/ihdavnij/",
+      "permanent": true
+    },
+    {
       "source": "/article/ItewbeRI",
+      "destination": "/column/itewberi/",
+      "permanent": true
+    },
+    {
+      "source": "/article/ItewbeRI/",
       "destination": "/column/itewberi/",
       "permanent": true
     },
@@ -139,7 +289,17 @@
       "permanent": true
     },
     {
+      "source": "/article/Krwl9PcF/",
+      "destination": "/column/krwl9pcf/",
+      "permanent": true
+    },
+    {
       "source": "/article/Lea8W_08",
+      "destination": "/column/lea8w_08/",
+      "permanent": true
+    },
+    {
+      "source": "/article/Lea8W_08/",
       "destination": "/column/lea8w_08/",
       "permanent": true
     },
@@ -149,7 +309,17 @@
       "permanent": true
     },
     {
+      "source": "/article/M5yw96hx/",
+      "destination": "/column/m5yw96hx/",
+      "permanent": true
+    },
+    {
       "source": "/article/MTi7lvP1",
+      "destination": "/column/mti7lvp1/",
+      "permanent": true
+    },
+    {
+      "source": "/article/MTi7lvP1/",
       "destination": "/column/mti7lvp1/",
       "permanent": true
     },
@@ -159,7 +329,17 @@
       "permanent": true
     },
     {
+      "source": "/article/OyQ-Z5L8/",
+      "destination": "/column/oyq-z5l8/",
+      "permanent": true
+    },
+    {
       "source": "/article/QaETCwwM",
+      "destination": "/column/qaetcwwm/",
+      "permanent": true
+    },
+    {
+      "source": "/article/QaETCwwM/",
       "destination": "/column/qaetcwwm/",
       "permanent": true
     },
@@ -169,7 +349,17 @@
       "permanent": true
     },
     {
+      "source": "/article/R3ijlrFl/",
+      "destination": "/column/r3ijlrfl/",
+      "permanent": true
+    },
+    {
       "source": "/article/SfhDBXXm",
+      "destination": "/column/sfhdbxxm/",
+      "permanent": true
+    },
+    {
+      "source": "/article/SfhDBXXm/",
       "destination": "/column/sfhdbxxm/",
       "permanent": true
     },
@@ -179,7 +369,17 @@
       "permanent": true
     },
     {
+      "source": "/article/Ty8IGxzX/",
+      "destination": "/column/ty8igxzx/",
+      "permanent": true
+    },
+    {
       "source": "/article/V2tGPLBy",
+      "destination": "/column/v2tgplby/",
+      "permanent": true
+    },
+    {
+      "source": "/article/V2tGPLBy/",
       "destination": "/column/v2tgplby/",
       "permanent": true
     },
@@ -189,7 +389,17 @@
       "permanent": true
     },
     {
+      "source": "/article/ViVH63kS/",
+      "destination": "/column/vivh63ks/",
+      "permanent": true
+    },
+    {
       "source": "/article/W3d8SDmA",
+      "destination": "/column/w3d8sdma/",
+      "permanent": true
+    },
+    {
+      "source": "/article/W3d8SDmA/",
       "destination": "/column/w3d8sdma/",
       "permanent": true
     },
@@ -199,7 +409,17 @@
       "permanent": true
     },
     {
+      "source": "/article/XrPh0_MB/",
+      "destination": "/column/xrph0_mb/",
+      "permanent": true
+    },
+    {
       "source": "/article/YG9Dtan4",
+      "destination": "/column/yg9dtan4/",
+      "permanent": true
+    },
+    {
+      "source": "/article/YG9Dtan4/",
       "destination": "/column/yg9dtan4/",
       "permanent": true
     },
@@ -209,7 +429,17 @@
       "permanent": true
     },
     {
+      "source": "/article/YWEpQTiU/",
+      "destination": "/column/ywepqtiu/",
+      "permanent": true
+    },
+    {
       "source": "/article/Zu_0b-Pv",
+      "destination": "/column/zu_0b-pv/",
+      "permanent": true
+    },
+    {
+      "source": "/article/Zu_0b-Pv/",
       "destination": "/column/zu_0b-pv/",
       "permanent": true
     },
@@ -219,7 +449,17 @@
       "permanent": true
     },
     {
+      "source": "/article/a4MuTlXj/",
+      "destination": "/column/a4mutlxj/",
+      "permanent": true
+    },
+    {
       "source": "/article/bF5QFD6u",
+      "destination": "/column/bf5qfd6u/",
+      "permanent": true
+    },
+    {
+      "source": "/article/bF5QFD6u/",
       "destination": "/column/bf5qfd6u/",
       "permanent": true
     },
@@ -229,7 +469,17 @@
       "permanent": true
     },
     {
+      "source": "/article/coAEQBx3/",
+      "destination": "/column/coaeqbx3/",
+      "permanent": true
+    },
+    {
       "source": "/article/eof_Rhy0",
+      "destination": "/column/eof_rhy0/",
+      "permanent": true
+    },
+    {
+      "source": "/article/eof_Rhy0/",
       "destination": "/column/eof_rhy0/",
       "permanent": true
     },
@@ -239,7 +489,17 @@
       "permanent": true
     },
     {
+      "source": "/article/gMeRY3Uo/",
+      "destination": "/column/gmery3uo/",
+      "permanent": true
+    },
+    {
       "source": "/article/iso14001-environmental-aspects-identification-guide",
+      "destination": "/column/iso14001-environmental-aspects-identification-guid/",
+      "permanent": true
+    },
+    {
+      "source": "/article/iso14001-environmental-aspects-identification-guide/",
       "destination": "/column/iso14001-environmental-aspects-identification-guid/",
       "permanent": true
     },
@@ -249,7 +509,17 @@
       "permanent": true
     },
     {
+      "source": "/article/nX9JKHCG/",
+      "destination": "/column/nx9jkhcg/",
+      "permanent": true
+    },
+    {
       "source": "/article/oYz7Rb4a",
+      "destination": "/column/oyz7rb4a/",
+      "permanent": true
+    },
+    {
+      "source": "/article/oYz7Rb4a/",
       "destination": "/column/oyz7rb4a/",
       "permanent": true
     },
@@ -259,7 +529,17 @@
       "permanent": true
     },
     {
+      "source": "/article/op6rigLH/",
+      "destination": "/column/op6riglh/",
+      "permanent": true
+    },
+    {
       "source": "/article/pxvjzNse",
+      "destination": "/column/pxvjznse/",
+      "permanent": true
+    },
+    {
+      "source": "/article/pxvjzNse/",
       "destination": "/column/pxvjznse/",
       "permanent": true
     },
@@ -269,7 +549,17 @@
       "permanent": true
     },
     {
+      "source": "/article/rQNEtbGX/",
+      "destination": "/column/rqnetbgx/",
+      "permanent": true
+    },
+    {
       "source": "/article/sKRJAGU0",
+      "destination": "/column/skrjagu0/",
+      "permanent": true
+    },
+    {
+      "source": "/article/sKRJAGU0/",
       "destination": "/column/skrjagu0/",
       "permanent": true
     },
@@ -279,7 +569,17 @@
       "permanent": true
     },
     {
+      "source": "/article/ttslvcKy/",
+      "destination": "/column/ttslvcky/",
+      "permanent": true
+    },
+    {
       "source": "/article/v-HE1Er8",
+      "destination": "/column/v-he1er8/",
+      "permanent": true
+    },
+    {
+      "source": "/article/v-HE1Er8/",
       "destination": "/column/v-he1er8/",
       "permanent": true
     },
@@ -289,7 +589,17 @@
       "permanent": true
     },
     {
+      "source": "/article/yW1jLEnj/",
+      "destination": "/column/yw1jlenj/",
+      "permanent": true
+    },
+    {
       "source": "/article/tag/:tag",
+      "destination": "/column/",
+      "permanent": true
+    },
+    {
+      "source": "/article/tag/:tag/",
       "destination": "/column/",
       "permanent": true
     },
@@ -299,7 +609,17 @@
       "permanent": true
     },
     {
+      "source": "/article/:slug/",
+      "destination": "/column/:slug/",
+      "permanent": true
+    },
+    {
       "source": "/company",
+      "destination": "/#company",
+      "permanent": true
+    },
+    {
+      "source": "/company/",
       "destination": "/#company",
       "permanent": true
     },
@@ -309,7 +629,17 @@
       "permanent": true
     },
     {
+      "source": "/faq/",
+      "destination": "/",
+      "permanent": true
+    },
+    {
       "source": "/campaign202401_1",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/campaign202401_1/",
       "destination": "/",
       "permanent": true
     },
@@ -319,7 +649,17 @@
       "permanent": true
     },
     {
+      "source": "/energysaving/",
+      "destination": "/",
+      "permanent": true
+    },
+    {
       "source": "/sustainability",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/sustainability/",
       "destination": "/",
       "permanent": true
     },
@@ -329,7 +669,17 @@
       "permanent": true
     },
     {
+      "source": "/safety-environment-management/",
+      "destination": "/",
+      "permanent": true
+    },
+    {
       "source": "/kaizen-management",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/kaizen-management/",
       "destination": "/",
       "permanent": true
     },
@@ -339,7 +689,22 @@
       "permanent": true
     },
     {
+      "source": "/kaizen-teian/",
+      "destination": "/",
+      "permanent": true
+    },
+    {
       "source": "/kaizenkun/:path*",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/kaizenkun/",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/kaizenkun/:path*/",
       "destination": "/",
       "permanent": true
     },
@@ -349,7 +714,17 @@
       "permanent": true
     },
     {
+      "source": "/news_old/",
+      "destination": "/news/",
+      "permanent": true
+    },
+    {
       "source": "/top-old",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/top-old/",
       "destination": "/",
       "permanent": true
     },
@@ -359,7 +734,22 @@
       "permanent": true
     },
     {
+      "source": "/video_usecase/",
+      "destination": "/seminar/",
+      "permanent": true
+    },
+    {
       "source": "/video/:path*",
+      "destination": "/seminar/",
+      "permanent": true
+    },
+    {
+      "source": "/video/",
+      "destination": "/seminar/",
+      "permanent": true
+    },
+    {
+      "source": "/video/:path*/",
       "destination": "/seminar/",
       "permanent": true
     },
@@ -369,7 +759,17 @@
       "permanent": true
     },
     {
+      "source": "/form/",
+      "destination": "/#contact",
+      "permanent": true
+    },
+    {
       "source": "/form/contact",
+      "destination": "/#contact",
+      "permanent": true
+    },
+    {
+      "source": "/form/contact/",
       "destination": "/#contact",
       "permanent": true
     },
@@ -379,7 +779,17 @@
       "permanent": true
     },
     {
+      "source": "/form/service/",
+      "destination": "/document/",
+      "permanent": true
+    },
+    {
       "source": "/form/energysaving",
+      "destination": "/#contact",
+      "permanent": true
+    },
+    {
+      "source": "/form/energysaving/",
       "destination": "/#contact",
       "permanent": true
     },
@@ -389,7 +799,17 @@
       "permanent": true
     },
     {
+      "source": "/form/campaign2022/",
+      "destination": "/#contact",
+      "permanent": true
+    },
+    {
       "source": "/form/article-inquiry",
+      "destination": "/#contact",
+      "permanent": true
+    },
+    {
+      "source": "/form/article-inquiry/",
       "destination": "/#contact",
       "permanent": true
     },
@@ -399,7 +819,17 @@
       "permanent": true
     },
     {
+      "source": "/form/DHQMgByn/",
+      "destination": "/#contact",
+      "permanent": true
+    },
+    {
       "source": "/form/IV5DV18E",
+      "destination": "/#contact",
+      "permanent": true
+    },
+    {
+      "source": "/form/IV5DV18E/",
       "destination": "/#contact",
       "permanent": true
     },
@@ -409,7 +839,17 @@
       "permanent": true
     },
     {
+      "source": "/form/QNSnxaF0/",
+      "destination": "/#contact",
+      "permanent": true
+    },
+    {
       "source": "/form/tkSkWJbs",
+      "destination": "/#contact",
+      "permanent": true
+    },
+    {
+      "source": "/form/tkSkWJbs/",
       "destination": "/#contact",
       "permanent": true
     },
@@ -419,7 +859,22 @@
       "permanent": true
     },
     {
+      "source": "/form/wHzlHl2q/",
+      "destination": "/#contact",
+      "permanent": true
+    },
+    {
       "source": "/lp_ehs/:path*",
+      "destination": "/cayzen/ehsresearch/",
+      "permanent": true
+    },
+    {
+      "source": "/lp_ehs/",
+      "destination": "/cayzen/ehsresearch/",
+      "permanent": true
+    },
+    {
+      "source": "/lp_ehs/:path*/",
       "destination": "/cayzen/ehsresearch/",
       "permanent": true
     },
@@ -429,7 +884,17 @@
       "permanent": true
     },
     {
+      "source": "/service/cayzen-ai/ehs-reseach/",
+      "destination": "/cayzen/ehsresearch/",
+      "permanent": true
+    },
+    {
       "source": "/service/cayzen-ai/iso-support",
+      "destination": "/cayzen/iso/",
+      "permanent": true
+    },
+    {
+      "source": "/service/cayzen-ai/iso-support/",
       "destination": "/cayzen/iso/",
       "permanent": true
     },
@@ -439,7 +904,22 @@
       "permanent": true
     },
     {
+      "source": "/service/cayzen-saas/",
+      "destination": "/cayzen/knowledgemanagement/",
+      "permanent": true
+    },
+    {
       "source": "/service/:path*",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/service/",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/service/:path*/",
       "destination": "/",
       "permanent": true
     },
@@ -449,7 +929,17 @@
       "permanent": true
     },
     {
+      "source": "/seminar/watch/:slug/",
+      "destination": "/seminar/:slug/",
+      "permanent": true
+    },
+    {
       "source": "/seminar/20250304/:sub",
+      "destination": "/seminar/20250304/",
+      "permanent": true
+    },
+    {
+      "source": "/seminar/20250304/:sub/",
       "destination": "/seminar/20250304/",
       "permanent": true
     },
@@ -459,7 +949,17 @@
       "permanent": true
     },
     {
+      "source": "/news/-kt2_sHb/",
+      "destination": "/news/kt2_shb/",
+      "permanent": true
+    },
+    {
       "source": "/news/0_3MkBwR",
+      "destination": "/news/0_3mkbwr/",
+      "permanent": true
+    },
+    {
+      "source": "/news/0_3MkBwR/",
       "destination": "/news/0_3mkbwr/",
       "permanent": true
     },
@@ -469,7 +969,17 @@
       "permanent": true
     },
     {
+      "source": "/news/1Z274hHG/",
+      "destination": "/news/1z274hhg/",
+      "permanent": true
+    },
+    {
       "source": "/news/2KwIyL4x",
+      "destination": "/news/2kwiyl4x/",
+      "permanent": true
+    },
+    {
+      "source": "/news/2KwIyL4x/",
       "destination": "/news/2kwiyl4x/",
       "permanent": true
     },
@@ -479,7 +989,17 @@
       "permanent": true
     },
     {
+      "source": "/news/2Wm7u25j/",
+      "destination": "/news/2wm7u25j/",
+      "permanent": true
+    },
+    {
       "source": "/news/58Hi2zkV",
+      "destination": "/news/58hi2zkv/",
+      "permanent": true
+    },
+    {
+      "source": "/news/58Hi2zkV/",
       "destination": "/news/58hi2zkv/",
       "permanent": true
     },
@@ -489,7 +1009,17 @@
       "permanent": true
     },
     {
+      "source": "/news/62T5rRK_/",
+      "destination": "/news/62t5rrk_/",
+      "permanent": true
+    },
+    {
       "source": "/news/6FeJrHBw",
+      "destination": "/news/6fejrhbw/",
+      "permanent": true
+    },
+    {
+      "source": "/news/6FeJrHBw/",
       "destination": "/news/6fejrhbw/",
       "permanent": true
     },
@@ -499,7 +1029,17 @@
       "permanent": true
     },
     {
+      "source": "/news/BGfvyq7o/",
+      "destination": "/news/bgfvyq7o/",
+      "permanent": true
+    },
+    {
       "source": "/news/Gf582hrB",
+      "destination": "/news/gf582hrb/",
+      "permanent": true
+    },
+    {
+      "source": "/news/Gf582hrB/",
       "destination": "/news/gf582hrb/",
       "permanent": true
     },
@@ -509,7 +1049,17 @@
       "permanent": true
     },
     {
+      "source": "/news/Hmt7c8Sj/",
+      "destination": "/news/hmt7c8sj/",
+      "permanent": true
+    },
+    {
       "source": "/news/LpgWBgTY",
+      "destination": "/news/lpgwbgty/",
+      "permanent": true
+    },
+    {
+      "source": "/news/LpgWBgTY/",
       "destination": "/news/lpgwbgty/",
       "permanent": true
     },
@@ -519,7 +1069,17 @@
       "permanent": true
     },
     {
+      "source": "/news/R2cMdJnz/",
+      "destination": "/news/r2cmdjnz/",
+      "permanent": true
+    },
+    {
       "source": "/news/Rx61Jvge",
+      "destination": "/news/rx61jvge/",
+      "permanent": true
+    },
+    {
+      "source": "/news/Rx61Jvge/",
       "destination": "/news/rx61jvge/",
       "permanent": true
     },
@@ -529,7 +1089,17 @@
       "permanent": true
     },
     {
+      "source": "/news/S80T6qYZ/",
+      "destination": "/news/s80t6qyz/",
+      "permanent": true
+    },
+    {
       "source": "/news/SC4yBKz8",
+      "destination": "/news/sc4ybkz8/",
+      "permanent": true
+    },
+    {
+      "source": "/news/SC4yBKz8/",
       "destination": "/news/sc4ybkz8/",
       "permanent": true
     },
@@ -539,7 +1109,17 @@
       "permanent": true
     },
     {
+      "source": "/news/TT0b_udF/",
+      "destination": "/news/tt0b_udf/",
+      "permanent": true
+    },
+    {
       "source": "/news/TsU2lkD_",
+      "destination": "/news/tsu2lkd_/",
+      "permanent": true
+    },
+    {
+      "source": "/news/TsU2lkD_/",
       "destination": "/news/tsu2lkd_/",
       "permanent": true
     },
@@ -549,7 +1129,17 @@
       "permanent": true
     },
     {
+      "source": "/news/TuMGko_o/",
+      "destination": "/news/tumgko_o/",
+      "permanent": true
+    },
+    {
       "source": "/news/ULtVqwO6",
+      "destination": "/news/ultvqwo6/",
+      "permanent": true
+    },
+    {
+      "source": "/news/ULtVqwO6/",
       "destination": "/news/ultvqwo6/",
       "permanent": true
     },
@@ -559,7 +1149,17 @@
       "permanent": true
     },
     {
+      "source": "/news/V-vZNv6Z/",
+      "destination": "/news/v-vznv6z/",
+      "permanent": true
+    },
+    {
       "source": "/news/X9FYu5_s",
+      "destination": "/news/x9fyu5_s/",
+      "permanent": true
+    },
+    {
+      "source": "/news/X9FYu5_s/",
       "destination": "/news/x9fyu5_s/",
       "permanent": true
     },
@@ -569,7 +1169,17 @@
       "permanent": true
     },
     {
+      "source": "/news/Y5KNsghF/",
+      "destination": "/news/y5knsghf/",
+      "permanent": true
+    },
+    {
       "source": "/news/Z73G7Jbx",
+      "destination": "/news/z73g7jbx/",
+      "permanent": true
+    },
+    {
+      "source": "/news/Z73G7Jbx/",
       "destination": "/news/z73g7jbx/",
       "permanent": true
     },
@@ -579,7 +1189,17 @@
       "permanent": true
     },
     {
+      "source": "/news/_5ibfuAJ/",
+      "destination": "/news/_5ibfuaj/",
+      "permanent": true
+    },
+    {
       "source": "/news/_m1qB-Ij",
+      "destination": "/news/_m1qb-ij/",
+      "permanent": true
+    },
+    {
+      "source": "/news/_m1qB-Ij/",
       "destination": "/news/_m1qb-ij/",
       "permanent": true
     },
@@ -589,7 +1209,17 @@
       "permanent": true
     },
     {
+      "source": "/news/aZR0qX5T/",
+      "destination": "/news/azr0qx5t/",
+      "permanent": true
+    },
+    {
       "source": "/news/dq_wCnu2",
+      "destination": "/news/dq_wcnu2/",
+      "permanent": true
+    },
+    {
+      "source": "/news/dq_wCnu2/",
       "destination": "/news/dq_wcnu2/",
       "permanent": true
     },
@@ -599,7 +1229,17 @@
       "permanent": true
     },
     {
+      "source": "/news/lGK3Xgdu/",
+      "destination": "/news/lgk3xgdu/",
+      "permanent": true
+    },
+    {
       "source": "/news/mFNVZQLc",
+      "destination": "/news/mfnvzqlc/",
+      "permanent": true
+    },
+    {
+      "source": "/news/mFNVZQLc/",
       "destination": "/news/mfnvzqlc/",
       "permanent": true
     },
@@ -609,7 +1249,17 @@
       "permanent": true
     },
     {
+      "source": "/news/qIe9ZCZC/",
+      "destination": "/news/qie9zczc/",
+      "permanent": true
+    },
+    {
       "source": "/news/rel94R5V",
+      "destination": "/news/rel94r5v/",
+      "permanent": true
+    },
+    {
+      "source": "/news/rel94R5V/",
       "destination": "/news/rel94r5v/",
       "permanent": true
     },
@@ -619,7 +1269,17 @@
       "permanent": true
     },
     {
+      "source": "/news/s6Up5mhS/",
+      "destination": "/news/s6up5mhs/",
+      "permanent": true
+    },
+    {
       "source": "/news/sp-ZgKjQ",
+      "destination": "/news/sp-zgkjq/",
+      "permanent": true
+    },
+    {
+      "source": "/news/sp-ZgKjQ/",
       "destination": "/news/sp-zgkjq/",
       "permanent": true
     },
@@ -629,7 +1289,17 @@
       "permanent": true
     },
     {
+      "source": "/news/ws8wID0-/",
+      "destination": "/news/ws8wid0/",
+      "permanent": true
+    },
+    {
       "source": "/news/z6bBdAbK",
+      "destination": "/news/z6bbdabk/",
+      "permanent": true
+    },
+    {
+      "source": "/news/z6bBdAbK/",
       "destination": "/news/z6bbdabk/",
       "permanent": true
     },
@@ -639,7 +1309,17 @@
       "permanent": true
     },
     {
+      "source": "/news/-IePLttf/",
+      "destination": "/news/",
+      "permanent": true
+    },
+    {
       "source": "/news/1H_AlVan",
+      "destination": "/news/",
+      "permanent": true
+    },
+    {
+      "source": "/news/1H_AlVan/",
       "destination": "/news/",
       "permanent": true
     },
@@ -649,7 +1329,17 @@
       "permanent": true
     },
     {
+      "source": "/news/20220312/",
+      "destination": "/news/",
+      "permanent": true
+    },
+    {
       "source": "/news/20230316",
+      "destination": "/news/",
+      "permanent": true
+    },
+    {
+      "source": "/news/20230316/",
       "destination": "/news/",
       "permanent": true
     },
@@ -659,7 +1349,17 @@
       "permanent": true
     },
     {
+      "source": "/news/20230320/",
+      "destination": "/news/",
+      "permanent": true
+    },
+    {
       "source": "/news/20230531",
+      "destination": "/news/",
+      "permanent": true
+    },
+    {
+      "source": "/news/20230531/",
       "destination": "/news/",
       "permanent": true
     },
@@ -669,7 +1369,17 @@
       "permanent": true
     },
     {
+      "source": "/news/20230531-1/",
+      "destination": "/news/",
+      "permanent": true
+    },
+    {
       "source": "/news/20230712",
+      "destination": "/news/",
+      "permanent": true
+    },
+    {
+      "source": "/news/20230712/",
       "destination": "/news/",
       "permanent": true
     },
@@ -679,7 +1389,17 @@
       "permanent": true
     },
     {
+      "source": "/news/20231013/",
+      "destination": "/news/",
+      "permanent": true
+    },
+    {
       "source": "/news/20231014",
+      "destination": "/news/",
+      "permanent": true
+    },
+    {
+      "source": "/news/20231014/",
       "destination": "/news/",
       "permanent": true
     },
@@ -689,7 +1409,17 @@
       "permanent": true
     },
     {
+      "source": "/news/20231107/",
+      "destination": "/news/",
+      "permanent": true
+    },
+    {
       "source": "/news/20231114",
+      "destination": "/news/",
+      "permanent": true
+    },
+    {
+      "source": "/news/20231114/",
       "destination": "/news/",
       "permanent": true
     },
@@ -699,7 +1429,17 @@
       "permanent": true
     },
     {
+      "source": "/news/20231204/",
+      "destination": "/news/",
+      "permanent": true
+    },
+    {
       "source": "/news/20231222",
+      "destination": "/news/",
+      "permanent": true
+    },
+    {
+      "source": "/news/20231222/",
       "destination": "/news/",
       "permanent": true
     },
@@ -709,7 +1449,17 @@
       "permanent": true
     },
     {
+      "source": "/news/20231226/",
+      "destination": "/news/",
+      "permanent": true
+    },
+    {
       "source": "/news/20240215",
+      "destination": "/news/",
+      "permanent": true
+    },
+    {
+      "source": "/news/20240215/",
       "destination": "/news/",
       "permanent": true
     },
@@ -719,7 +1469,17 @@
       "permanent": true
     },
     {
+      "source": "/news/20240410/",
+      "destination": "/news/",
+      "permanent": true
+    },
+    {
       "source": "/news/20240821",
+      "destination": "/news/",
+      "permanent": true
+    },
+    {
+      "source": "/news/20240821/",
       "destination": "/news/",
       "permanent": true
     },
@@ -729,7 +1489,17 @@
       "permanent": true
     },
     {
+      "source": "/news/20240821-1/",
+      "destination": "/news/",
+      "permanent": true
+    },
+    {
       "source": "/news/61NebVNq",
+      "destination": "/news/",
+      "permanent": true
+    },
+    {
+      "source": "/news/61NebVNq/",
       "destination": "/news/",
       "permanent": true
     },
@@ -739,7 +1509,17 @@
       "permanent": true
     },
     {
+      "source": "/news/8l8VT_fa/",
+      "destination": "/news/",
+      "permanent": true
+    },
+    {
       "source": "/news/QJffi6ye",
+      "destination": "/news/",
+      "permanent": true
+    },
+    {
+      "source": "/news/QJffi6ye/",
       "destination": "/news/",
       "permanent": true
     },
@@ -749,12 +1529,27 @@
       "permanent": true
     },
     {
+      "source": "/news/gL5Hs9rB/",
+      "destination": "/news/",
+      "permanent": true
+    },
+    {
       "source": "/news/jFWbCyDn",
       "destination": "/news/",
       "permanent": true
     },
     {
+      "source": "/news/jFWbCyDn/",
+      "destination": "/news/",
+      "permanent": true
+    },
+    {
       "source": "/news/uoYLnSFw",
+      "destination": "/news/",
+      "permanent": true
+    },
+    {
+      "source": "/news/uoYLnSFw/",
       "destination": "/news/",
       "permanent": true
     }
