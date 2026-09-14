@@ -14,7 +14,7 @@ import { fileURLToPath } from 'node:url';
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const SERVICE_ID = process.env.MICROCMS_SERVICE_ID || 'eitoss';
 const API_KEY = process.env.MICROCMS_API_KEY || '';
-const ORIGIN = (process.env.SITE_ORIGIN || 'https://lp.eitoss.com').replace(/\/$/, '');
+const ORIGIN = (process.env.SITE_ORIGIN || 'https://eitoss.com').replace(/\/$/, '');
 const ENDPOINT = process.env.MICROCMS_ENDPOINT || 'column';
 const NEWS_ENDPOINT = process.env.MICROCMS_NEWS_ENDPOINT || 'news';
 const SEMINAR_ENDPOINT = process.env.MICROCMS_SEMINAR_ENDPOINT || 'seminar';
@@ -744,4 +744,35 @@ if (!USE_SAMPLE && API_KEY) {
   } catch (e) {
     console.warn(`[build-columns] セミナー生成をスキップ: ${e.message}`);
   }
+}
+
+// ---- sitemap.xml の生成 ----
+try {
+  const { readdir: rd, stat } = await import('node:fs/promises');
+  const pages = [];
+  const SKIP_DIRS = new Set(['assets', 'scripts', 'data', 'node_modules', '.git', '.claude']);
+  async function walk(dir, rel) {
+    for (const e of await rd(dir, { withFileTypes: true })) {
+      if (!e.isDirectory()) continue;
+      if (rel === '' && SKIP_DIRS.has(e.name)) continue;
+      if (e.name === 'thanks' || e.name === 'archive') continue; // サンクス・アーカイブは載せない
+      const sub = rel ? `${rel}/${e.name}` : e.name;
+      try {
+        await stat(path.join(dir, e.name, 'index.html'));
+        pages.push(`/${sub}/`);
+      } catch {}
+      await walk(path.join(dir, e.name), sub);
+    }
+  }
+  pages.push('/');
+  await walk(ROOT, '');
+  pages.sort();
+  const today = new Date().toISOString().slice(0, 10);
+  const xml = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n` +
+    pages.map(p => `  <url><loc>${ORIGIN}${p}</loc><lastmod>${today}</lastmod></url>`).join('\n') +
+    `\n</urlset>\n`;
+  await writeFile(path.join(ROOT, 'sitemap.xml'), xml);
+  console.log(`[build-columns] sitemap.xml: ${pages.length} URL`);
+} catch (e) {
+  console.warn(`[build-columns] sitemap生成をスキップ: ${e.message}`);
 }
