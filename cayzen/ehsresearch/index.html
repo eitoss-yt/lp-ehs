@@ -125,9 +125,11 @@ header{position:fixed;top:0;left:0;right:0;background:rgba(255,255,255,.94);back
 .f-output{margin-top:14px;background:var(--teal-050);border-radius:8px;padding:10px 14px;font-size:14.5px;font-weight:500;color:var(--teal-700)}
 
 /* outputs */
-.output-fig{margin:26px 0 0;max-width:900px}
-.output-fig img{width:100%;height:auto;border:1px solid var(--line);border-radius:10px;box-shadow:0 10px 26px rgba(16,104,120,.10)}
-.output-fig figcaption{margin-top:8px;font-size:13.5px;color:var(--gray);text-align:center}
+.output-figs{display:flex;gap:28px;margin-top:26px;align-items:flex-start}
+.output-fig{flex:1;min-width:0;margin:0}
+.output-fig img{width:100%;height:auto;border:1px solid var(--line);border-radius:10px;box-shadow:0 18px 40px rgba(16,104,120,.28),0 4px 12px rgba(0,0,0,.10)}
+.output-fig figcaption{margin-top:12px;font-size:13.5px;color:var(--gray);text-align:center}
+@media(max-width:700px){.output-figs{flex-direction:column;gap:30px}}
 .output{background:#fff}
 .output-block{margin-bottom:70px}
 .output-block:last-child{margin-bottom:0}
@@ -561,14 +563,16 @@ footer .copy{font-size:12.5px;color:rgba(255,255,255,.55);text-align:center;marg
         <span class="output-tag">OUTPUT 01</span>
         <h3>「管理が必要な法令」と、その根拠を1冊に。</h3>
         <p>分野別に法令を判定。判定だけでなく「なぜ自社に当てはまるのか」と「何を・どの頻度で行うのか」まで記載します。納品物は9分野・14ページ。製品安全／労働安全衛生／外国人労働者／消防・危険物／高圧ガス・電気／環境／廃棄物・リサイクル／エネルギー・温暖化・フロン／取引・契約を網羅します。</p>
-        <figure class="output-fig">
-          <img src="assets/eitoss_ehs_sample_02.png" alt="関連設備 法令チェック表のサンプル" loading="lazy">
-          <figcaption>関連設備 法令チェック表（サンプル）</figcaption>
-        </figure>
-        <figure class="output-fig">
-          <img src="assets/eitoss_ehs_sample_01.png" alt="法改正一覧のサンプル" loading="lazy">
-          <figcaption>法改正一覧（サンプル）</figcaption>
-        </figure>
+        <div class="output-figs">
+          <figure class="output-fig">
+            <img src="assets/eitoss_ehs_sample_02.png" alt="関連設備 法令チェック表のサンプル" loading="lazy">
+            <figcaption>関連設備 法令チェック表（サンプル）</figcaption>
+          </figure>
+          <figure class="output-fig">
+            <img src="assets/eitoss_ehs_sample_01.png" alt="法改正一覧のサンプル" loading="lazy">
+            <figcaption>法改正一覧（サンプル）</figcaption>
+          </figure>
+        </div>
         <div class="warn-list">
           <h4>判定の過程で見つかった不整合は、根拠つきで指摘します（サンプル事業所の例）</h4>
           <ul>
