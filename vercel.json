@@ -1092,6 +1092,16 @@
       "source": "/article/:path*/",
       "destination": "/column/",
       "permanent": true
+    },
+    {
+      "source": "/document/JISQ14001_2026-guide",
+      "destination": "/resources/",
+      "permanent": false
+    },
+    {
+      "source": "/document/JISQ14001_2026-guide/",
+      "destination": "/resources/",
+      "permanent": false
     }
   ]
 }
