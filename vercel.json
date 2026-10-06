@@ -774,173 +774,23 @@
       "permanent": true
     },
     {
-      "source": "/news/20220312",
-      "destination": "/news/",
-      "permanent": true
-    },
-    {
-      "source": "/news/20220312/",
-      "destination": "/news/",
-      "permanent": true
-    },
-    {
-      "source": "/news/20230316",
-      "destination": "/news/",
-      "permanent": true
-    },
-    {
-      "source": "/news/20230316/",
-      "destination": "/news/",
-      "permanent": true
-    },
-    {
-      "source": "/news/20230320",
-      "destination": "/news/",
-      "permanent": true
-    },
-    {
-      "source": "/news/20230320/",
-      "destination": "/news/",
-      "permanent": true
-    },
-    {
-      "source": "/news/20230531",
-      "destination": "/news/",
-      "permanent": true
-    },
-    {
-      "source": "/news/20230531/",
-      "destination": "/news/",
-      "permanent": true
-    },
-    {
       "source": "/news/20230531-1",
-      "destination": "/news/",
+      "destination": "/news/20230531/",
       "permanent": true
     },
     {
       "source": "/news/20230531-1/",
-      "destination": "/news/",
-      "permanent": true
-    },
-    {
-      "source": "/news/20230712",
-      "destination": "/news/",
-      "permanent": true
-    },
-    {
-      "source": "/news/20230712/",
-      "destination": "/news/",
-      "permanent": true
-    },
-    {
-      "source": "/news/20231013",
-      "destination": "/news/",
-      "permanent": true
-    },
-    {
-      "source": "/news/20231013/",
-      "destination": "/news/",
-      "permanent": true
-    },
-    {
-      "source": "/news/20231014",
-      "destination": "/news/",
-      "permanent": true
-    },
-    {
-      "source": "/news/20231014/",
-      "destination": "/news/",
-      "permanent": true
-    },
-    {
-      "source": "/news/20231107",
-      "destination": "/news/",
-      "permanent": true
-    },
-    {
-      "source": "/news/20231107/",
-      "destination": "/news/",
-      "permanent": true
-    },
-    {
-      "source": "/news/20231114",
-      "destination": "/news/",
-      "permanent": true
-    },
-    {
-      "source": "/news/20231114/",
-      "destination": "/news/",
-      "permanent": true
-    },
-    {
-      "source": "/news/20231204",
-      "destination": "/news/",
-      "permanent": true
-    },
-    {
-      "source": "/news/20231204/",
-      "destination": "/news/",
-      "permanent": true
-    },
-    {
-      "source": "/news/20231222",
-      "destination": "/news/",
-      "permanent": true
-    },
-    {
-      "source": "/news/20231222/",
-      "destination": "/news/",
-      "permanent": true
-    },
-    {
-      "source": "/news/20231226",
-      "destination": "/news/",
-      "permanent": true
-    },
-    {
-      "source": "/news/20231226/",
-      "destination": "/news/",
-      "permanent": true
-    },
-    {
-      "source": "/news/20240215",
-      "destination": "/news/",
-      "permanent": true
-    },
-    {
-      "source": "/news/20240215/",
-      "destination": "/news/",
-      "permanent": true
-    },
-    {
-      "source": "/news/20240410",
-      "destination": "/news/",
-      "permanent": true
-    },
-    {
-      "source": "/news/20240410/",
-      "destination": "/news/",
-      "permanent": true
-    },
-    {
-      "source": "/news/20240821",
-      "destination": "/news/",
-      "permanent": true
-    },
-    {
-      "source": "/news/20240821/",
-      "destination": "/news/",
+      "destination": "/news/20230531/",
       "permanent": true
     },
     {
       "source": "/news/20240821-1",
-      "destination": "/news/",
+      "destination": "/news/20240821/",
       "permanent": true
     },
     {
       "source": "/news/20240821-1/",
-      "destination": "/news/",
+      "destination": "/news/20240821/",
       "permanent": true
     },
     {
