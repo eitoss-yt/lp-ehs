@@ -78,6 +78,16 @@ Meta広告で配信している訴求を、HubSpotのメルマガでも配信す
 GA4では `document_request`（資料DL）と `contact_submit`（問い合わせ）を送信完了時に計測済み。
 Spirの面談予約はGA4では計測できないため、Spir側の予約件数で数える。
 
+### データの置き場所（BigQuery）
+
+| データ | 場所 | 状態 |
+|---|---|---|
+| GA4 | `eitoss-marketing-510701.analytics_340482961`（毎日エクスポート、10/6〜） | 稼働中 |
+| Search Console | `eitoss-marketing-510701.searchconsole`（一括データエクスポート、10/10設定） | 初回データ待ち |
+| Meta広告 | `data-mining-510816.share_eitoss.meta_daily`（運用者の個人BigQueryから、Cayzen AIアカウント分だけを閲覧共有） | 共有済み。yuki.tomioka@eitoss.com で閲覧可。claude-bq への共有は依頼中 |
+
+Meta広告のベースライン（10/5のタスク）は、上記の共有ビューから集計できる。
+
 ### 未決事項（ユーザーの判断待ち）
 
 - [x] ISO面談の予約URL → 上記Spir URLで確定
@@ -94,5 +104,8 @@ Spirの面談予約はGA4では計測できないため、Spir側の予約件数
 ## 進捗ログ
 
 新しいものを上に追記する。
+
+- 2026-10-10 Meta広告の実績を、運用者の個人BigQueryからビュー共有で受け取れることを確認（Cayzen AI、531行、費用502,660円）。運用者の元データは閲覧できないことも確認済み（Web/LP）
+- 2026-10-10 Search ConsoleのBigQueryエクスポートを設定。BigQueryの使用量アラート（毎朝9時、月500GiB超でメール）と1日のクエリ上限（30GiB）を設定（Web/LP）
 
 - 2026-10-03 共有ボードを作成。スケジュールと判定基準を設定（Web/LP）
