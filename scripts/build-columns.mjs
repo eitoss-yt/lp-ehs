@@ -412,9 +412,14 @@ ${articles.length ? `    <div class="col-grid">\n${cards}\n    </div>` : '    <p
   });
 }
 
-// 記事テーマ別のCTAバナー（タイトルにISOを含む記事はISO資料、それ以外はEHS調査代行）
-// バナー画像: assets/column_bnr_iso14001.jpg ／ assets/column_bnr_ehs.jpg
+// 記事テーマ別のCTAバナー（タイトルにPPWRを含む記事はPPWR資料、ISOを含む記事はISO資料、それ以外はEHS調査代行）
+// バナー画像: assets/column_bnr_ppwr.jpg ／ assets/column_bnr_iso14001.jpg ／ assets/column_bnr_ehs.jpg
 function ctaBanner(a) {
+  if (/PPWR/i.test(a.title || '')) {
+    return `<a class="cta-banner-img" href="../../document/ppwr/">
+        <img src="../../assets/column_bnr_ppwr.jpg" alt="PPWR、施行済み。いま確認すべきこと｜役割ごとの義務・期限一覧・部門別チェックリストを1冊に｜無料で資料をダウンロード" loading="lazy" width="1080" height="300">
+      </a>`;
+  }
   if (/iso/i.test(a.title || '')) {
     return `<a class="cta-banner-img" href="../../document/ISO14001_2026-revision/">
         <img src="../../assets/column_bnr_iso14001.jpg" alt="どう変わる？ISO14001の改訂を現場レベルで確認するポイント｜詳しくはこちら" loading="lazy" width="1080" height="300">
