@@ -699,6 +699,20 @@ if (USE_SAMPLE) {
   console.log(`[build-columns] コラム: ${all.length} 件取得（公開済み ${articles.length} 件を掲載）`);
 }
 
+// microCMS未登録の記事をリポジトリ内のデータ（data/column-local.json）で補完。同じIDがmicroCMSにあればそちらを優先
+try {
+  const { readFile } = await import('node:fs/promises');
+  const local = JSON.parse(await readFile(path.join(ROOT, 'data', 'column-local.json'), 'utf-8'));
+  const ids = new Set(articles.map(a => a.id));
+  const add = local.filter(a => a.id && !ids.has(a.id));
+  if (add.length) {
+    articles = [...articles, ...add].sort((a, b) => new Date(dateOf(b)) - new Date(dateOf(a)));
+    console.log(`[build-columns] コラム: リポジトリ内データから ${add.length} 件を追加`);
+  }
+} catch (e) {
+  if (e.code !== 'ENOENT') console.warn(`[build-columns] data/column-local.json の読み込みをスキップ: ${e.message}`);
+}
+
 await rm(path.join(ROOT, 'column'), { recursive: true, force: true });
 await mkdir(path.join(ROOT, 'column'), { recursive: true });
 await writeFile(path.join(ROOT, 'column', 'index.html'), listPage(articles));
