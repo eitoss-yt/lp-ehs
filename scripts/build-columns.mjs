@@ -412,9 +412,14 @@ ${articles.length ? `    <div class="col-grid">\n${cards}\n    </div>` : '    <p
   });
 }
 
-// 記事テーマ別のCTAバナー（タイトルにISOを含む記事はISO資料、それ以外はEHS調査代行）
-// バナー画像: assets/column_bnr_iso14001.jpg ／ assets/column_bnr_ehs.jpg
+// 記事テーマ別のCTAバナー（タイトルにPPWRを含む記事はPPWR資料、ISOを含む記事はISO資料、それ以外はEHS調査代行）
+// バナー画像: assets/column_bnr_ppwr.jpg ／ assets/column_bnr_iso14001.jpg ／ assets/column_bnr_ehs.jpg
 function ctaBanner(a) {
+  if (/PPWR/i.test(a.title || '')) {
+    return `<a class="cta-banner-img" href="../../document/ppwr/">
+        <img src="../../assets/column_bnr_ppwr.jpg" alt="PPWR、施行済み。いま確認すべきこと｜役割ごとの義務・期限一覧・部門別チェックリストを1冊に｜無料で資料をダウンロード" loading="lazy" width="1080" height="300">
+      </a>`;
+  }
   if (/iso/i.test(a.title || '')) {
     return `<a class="cta-banner-img" href="../../document/ISO14001_2026-revision/">
         <img src="../../assets/column_bnr_iso14001.jpg" alt="どう変わる？ISO14001の改訂を現場レベルで確認するポイント｜詳しくはこちら" loading="lazy" width="1080" height="300">
@@ -692,6 +697,20 @@ if (USE_SAMPLE) {
     .filter(a => new Date(dateOf(a)) >= new Date('2024-01-01T00:00:00Z'));
   articles.sort((a, b) => new Date(dateOf(b)) - new Date(dateOf(a)));
   console.log(`[build-columns] コラム: ${all.length} 件取得（公開済み ${articles.length} 件を掲載）`);
+}
+
+// microCMS未登録の記事をリポジトリ内のデータ（data/column-local.json）で補完。同じIDがmicroCMSにあればそちらを優先
+try {
+  const { readFile } = await import('node:fs/promises');
+  const local = JSON.parse(await readFile(path.join(ROOT, 'data', 'column-local.json'), 'utf-8'));
+  const ids = new Set(articles.map(a => a.id));
+  const add = local.filter(a => a.id && !ids.has(a.id));
+  if (add.length) {
+    articles = [...articles, ...add].sort((a, b) => new Date(dateOf(b)) - new Date(dateOf(a)));
+    console.log(`[build-columns] コラム: リポジトリ内データから ${add.length} 件を追加`);
+  }
+} catch (e) {
+  if (e.code !== 'ENOENT') console.warn(`[build-columns] data/column-local.json の読み込みをスキップ: ${e.message}`);
 }
 
 await rm(path.join(ROOT, 'column'), { recursive: true, force: true });
