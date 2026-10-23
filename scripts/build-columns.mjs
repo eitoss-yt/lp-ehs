@@ -447,6 +447,31 @@ function insertMidBanner(html, banner) {
   return html;
 }
 
+// 記事内の資料CTA（記事中・記事下のバナー、本文のテキストリンク）の表示とクリックをGA4に送る
+// イベント: cta_view（画面に50%以上表示） / cta_click、パラメータ: cta_position, article_id, link_url
+const CTA_TRACKING = `<script>
+(function(){
+  if (typeof gtag !== 'function') return;
+  var article = location.pathname.split('/')[2] || '';
+  var links = document.querySelectorAll('article.post a[href*="/document/"]');
+  var io = 'IntersectionObserver' in window ? new IntersectionObserver(function(es){
+    es.forEach(function(e){
+      if (!e.isIntersecting) return;
+      gtag('event', 'cta_view', { cta_position: e.target.dataset.ctaPos, article_id: article, link_url: e.target.href });
+      io.unobserve(e.target);
+    });
+  }, { threshold: 0.5 }) : null;
+  links.forEach(function(a){
+    var pos = a.classList.contains('cta-banner-img') ? (a.closest('.article-body') ? 'banner_mid' : 'banner_bottom') : 'text_link';
+    a.dataset.ctaPos = pos;
+    a.addEventListener('click', function(){
+      gtag('event', 'cta_click', { cta_position: pos, article_id: article, link_url: a.href });
+    });
+    if (io) io.observe(a);
+  });
+})();
+</script>`;
+
 function articlePage(a) {
   const cat = catOf(a);
   const body = `<div class="page-head">
@@ -469,7 +494,8 @@ ${insertMidBanner(stripEmoji(bodyOf(a)), ctaBanner(a))}
       <a class="back-link" href="../">← コラム一覧へ戻る</a>
     </article>
   </div>
-</main>`;
+</main>
+${CTA_TRACKING}`;
 
   return chrome(2, body, {
     title: `${a.title} - コラム｜エイトス株式会社`,

@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-199DLM16MH"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-199DLM16MH');
+  window.addEventListener('message', function(e){
+    var d = e.data;
+    if (!d || d.type !== 'hsFormCallback' || d.eventName !== 'onFormSubmitted') return;
+    var isContact = d.id === 'de61c417-f176-4c76-af10-c59923cdfd79';
+    gtag('event', isContact ? 'contact_submit' : 'document_request', { form_id: d.id });
+  });
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PPWRのproducerとは？製造者・輸入者との違いと自社の役割の見極め方 - コラム｜エイトス株式会社</title>
+<meta name="description" content="PPWRのproducer（生産者）は包装を作った会社とは限りません。メーカー・輸入者との違い、自社名で売るとメーカー扱いになる21条、EUに拠点がない場合の認定代理人（45条）を解説します。">
+<meta property="og:title" content="PPWRのproducerとは？製造者・輸入者との違いと自社の役割の見極め方 - コラム｜エイトス株式会社">
+<meta property="og:description" content="PPWRのproducer（生産者）は包装を作った会社とは限りません。メーカー・輸入者との違い、自社名で売るとメーカー扱いになる21条、EUに拠点がない場合の認定代理人（45条）を解説します。">
+<meta property="og:type" content="article">
+<link rel="canonical" href="https://eitoss.com/column/ppwr-producer-manufacturer/">
+<meta property="og:url" content="https://eitoss.com/column/ppwr-producer-manufacturer/">
+<link rel="icon" type="image/svg+xml" href='data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"%3E%3Cpath d="M50 8 a42 42 0 1 0 29.7 12.3 l-12.7 12.7 a24 24 0 1 1 -17 -7 z" fill="%23106878"/%3E%3C/svg%3E'>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600;700&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--teal-900:#0b4e5b;--teal-700:#106878;--teal-500:#308098;--teal-300:#58a0b0;--teal-100:#80c0c8;--teal-050:#eef6f7;--ink:#2b3338;--gray:#505050;--line:#dde6e8;--white:#ffffff;--accent:#e8a13d}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:130px}
+body{font-family:"Noto Sans JP",sans-serif;font-size:17.5px;color:var(--ink);line-height:1.8;background:var(--white);-webkit-font-smoothing:antialiased}
+img{max-width:100%;height:auto;display:block}
+h1,h2,h3{letter-spacing:.08em;text-wrap:balance}
+a{color:var(--teal-700);text-decoration:none}
+.container{max-width:1080px;margin:0 auto;padding:0 20px}
+.btn{display:inline-block;padding:16px 30px;border-radius:8px;font-weight:500;font-size:17.5px;text-align:center;transition:transform .15s ease,box-shadow .15s ease;box-shadow:0 4px 14px rgba(16,104,120,.25)}
+.btn::after{content:"›";margin-left:8px;opacity:.55;font-weight:400}
+.btn:hover{transform:translateY(-2px);box-shadow:0 8px 20px rgba(16,104,120,.3)}
+.btn-primary{background:linear-gradient(135deg,var(--teal-500),var(--teal-700));color:#fff}
+.btn-ghost{background:#fff;color:var(--teal-700);box-shadow:0 4px 14px rgba(16,104,120,.18)}
+.btn-sm{padding:10px 22px;font-size:15.5px}
+.brand{display:inline-flex;align-items:center;gap:10px}
+.brand .name{font-weight:500;font-size:18.5px;color:var(--ink)}
+header{position:fixed;top:0;left:0;right:0;background:rgba(255,255,255,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);z-index:100}
+.header-inner{display:flex;align-items:center;justify-content:space-between;height:68px;max-width:1160px;margin:0 auto;padding:0 20px}
+.header-nav{display:flex;align-items:center;gap:10px}
+.header-nav .nav-links{display:flex;gap:22px;margin-right:14px;font-size:15.5px;font-weight:500}
+.header-nav .nav-links a{color:var(--ink)}
+.header-nav .nav-links a:hover{color:var(--teal-700)}
+.page-head{position:relative;overflow:hidden;padding:155px 0 46px;background:radial-gradient(1100px 500px at 85% -10%,rgba(128,192,200,.30),transparent 60%),linear-gradient(180deg,#f6fafb 0%,#eef6f7 100%)}
+.page-head::before{content:attr(data-wm);position:absolute;top:96px;left:50%;transform:translateX(-50%);font-family:"Poppins","Noto Sans JP",sans-serif;font-weight:700;font-size:150px;line-height:1;letter-spacing:.08em;color:rgba(16,104,120,.06);white-space:nowrap;pointer-events:none}
+.page-head .container{position:relative}
+.page-head[data-wm] .container{text-align:center}
+.page-head[data-wm] .breadcrumb{text-align:left}
+.page-head .label{display:none}
+.page-head h1{font-size:35.5px;font-weight:500;line-height:1.5;margin-top:6px}
+.page-head .lead{color:var(--gray);margin-top:10px;font-size:16.5px}
+.breadcrumb{font-size:14px;color:var(--gray);margin-bottom:14px}
+.breadcrumb a{color:var(--gray)}
+.breadcrumb a:hover{color:var(--teal-700)}
+.chip{display:inline-block;background:var(--teal-050);color:var(--teal-700);font-size:13.5px;font-weight:500;padding:4px 14px;border-radius:999px}
+.meta{display:flex;align-items:center;gap:12px;font-size:14.5px;color:var(--gray)}
+main.section{padding:56px 0 80px}
+.col-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
+.col-card{background:#fff;border-radius:14px;overflow:hidden;box-shadow:0 10px 26px rgba(16,104,120,.10);transition:transform .15s ease,box-shadow .15s ease;display:flex;flex-direction:column}
+.col-card:hover{transform:translateY(-4px);box-shadow:0 16px 34px rgba(16,104,120,.16)}
+.col-card .thumb{aspect-ratio:16/9;background:linear-gradient(135deg,var(--teal-050),#dcebee);display:flex;align-items:center;justify-content:center;overflow:hidden}
+.col-card .thumb img{width:100%;height:100%;object-fit:cover}
+.col-card .thumb svg{width:44px;height:44px;opacity:.5}
+.col-card .body{padding:20px 22px 24px;display:flex;flex-direction:column;gap:10px;flex:1}
+.col-card h2{font-size:18px;font-weight:500;line-height:1.55;color:var(--ink)}
+.col-card p.desc{font-size:14.5px;color:var(--gray);flex:1}
+.empty{padding:60px 0;text-align:center;color:var(--gray)}
+article.post{max-width:760px;margin:0 auto}
+.post-head h1{font-size:31.5px;font-weight:500;line-height:1.5;margin:14px 0 16px}
+.post-eyecatch{border-radius:14px;overflow:hidden;box-shadow:0 14px 34px rgba(16,104,120,.14);margin:26px 0 36px}
+.article-body{font-size:17px;overflow-wrap:break-word}
+.article-body a{word-break:break-all}
+.article-body h1,.article-body h2{font-size:25.5px;font-weight:500;line-height:1.5;margin:46px 0 16px;padding-bottom:10px;border-bottom:2px solid var(--teal-050)}
+.article-body h3{font-size:20.5px;font-weight:500;margin:36px 0 12px;padding-left:12px;border-left:4px solid var(--teal-500)}
+.article-body h4{font-size:18px;font-weight:500;margin:28px 0 10px}
+.article-body p{margin:0 0 1.3em}
+.article-body ul,.article-body ol{margin:0 0 1.3em;padding-left:1.5em}
+.article-body li{margin-bottom:.4em}
+.article-body a{text-decoration:underline;text-underline-offset:3px}
+.article-body img{border-radius:10px;margin:8px 0 20px;box-shadow:0 8px 22px rgba(16,104,120,.12)}
+.article-body blockquote{background:var(--teal-050);border-left:4px solid var(--teal-500);border-radius:0 10px 10px 0;padding:16px 20px;margin:0 0 1.3em;color:var(--gray)}
+.article-body blockquote p:last-child{margin-bottom:0}
+.article-body table{border-collapse:collapse;width:100%;margin:0 0 1.3em;font-size:15.5px}
+.article-body th,.article-body td{border:1px solid var(--line);padding:10px 12px;text-align:left}
+.article-body th{background:var(--teal-050);font-weight:500}
+.article-body pre{background:#0f2e33;color:#e8f2f4;border-radius:10px;padding:16px 18px;overflow-x:auto;font-size:14.5px;margin:0 0 1.3em}
+.article-body code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace}
+.post-cta{margin-top:60px;background:linear-gradient(135deg,var(--teal-050),#f6fafb);border-radius:16px;padding:34px 30px;text-align:center;box-shadow:0 10px 26px rgba(16,104,120,.08)}
+.post-cta h2{font-size:21.5px;font-weight:500;margin-bottom:8px}
+.post-cta p{font-size:15.5px;color:var(--gray);margin-bottom:20px}
+.post-cta .btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+.back-link{display:inline-block;margin-top:44px;font-size:15.5px;font-weight:500}
+@media(max-width:900px){
+  .col-grid{grid-template-columns:1fr}
+  .page-head h1{font-size:27.5px}
+  .page-head::before{font-size:64px;top:122px}
+  .post-head h1{font-size:24.5px}
+  .header-nav .nav-links{display:none}
+  .header-nav .btn-sm{padding:9px 14px;font-size:14px;white-space:nowrap}
+  main.section{padding:40px 0 60px}
+}
+header.gh{position:fixed;top:0;left:0;right:0;background:rgba(255,255,255,.96);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);z-index:100}
+.gh-inner{display:flex;justify-content:space-between;align-items:center;gap:24px;max-width:1360px;margin:0 auto;padding:10px 24px}
+.gh-left{display:flex;flex-direction:column;gap:7px;align-items:flex-start}
+.gh-brand img{height:32px;width:auto;display:block}
+.gh-nav{display:flex;align-items:center;gap:26px;font-size:16px;font-weight:500}
+.gh-nav a,.gh-dd-label{color:#1c1c1c;white-space:nowrap;cursor:pointer}
+.gh-nav a:hover,.gh-dd:hover .gh-dd-label{color:var(--teal-700)}
+.gh-dd{position:relative}
+.gh-dd-label::after{content:" ▾";font-size:12.5px}
+.gh-dd-menu{display:none;position:absolute;top:100%;left:-14px;padding-top:12px;z-index:110}
+.gh-dd:hover .gh-dd-menu{display:block}
+.gh-dd-menu .in{background:#fff;border-radius:10px;box-shadow:0 12px 32px rgba(16,104,120,.18);padding:8px;min-width:280px}
+.gh-dd-menu a{display:block;padding:10px 14px;border-radius:8px;font-size:15.5px;white-space:nowrap}
+.gh-dd-menu a:hover{background:var(--teal-050)}
+.gh-right{display:flex;flex-direction:column;align-items:flex-end;gap:7px}
+.gh-tel{font-size:14px;color:#333;white-space:nowrap;line-height:1.3;display:flex;align-items:baseline;gap:6px}
+.gh-tel b{font-size:22.5px;font-weight:500;font-family:"Poppins","Noto Sans JP",sans-serif}
+.gh-tel span{color:#555}
+.gh-actions{display:flex;gap:10px}
+.gh-btn{display:inline-flex;align-items:center;gap:7px;padding:10px 20px;border-radius:6px;color:#fff;font-weight:700;font-size:15.5px;white-space:nowrap;transition:transform .15s ease,filter .15s ease;box-shadow:0 3px 10px rgba(0,0,0,.14)}
+.gh-btn:hover{transform:translateY(-1px);filter:brightness(1.06)}
+.gh-btn svg{width:16px;height:16px}
+.gh-btn-dl{background:#f6941c}
+.gh-btn-tr{background:linear-gradient(90deg,#54a4ec,#2e7fd6)}
+.gh-btn-ct{background:#45a3b4}
+@media(max-width:1180px){.gh-nav{gap:18px;font-size:15px}}
+@media(max-width:1020px){.gh-nav{display:none}.gh-tel{display:none}.gh-left{flex-direction:row;align-items:center}}
+@media(max-width:640px){
+  .gh-inner{padding:10px 14px;gap:10px}
+  .gh-brand img{height:26px}
+  .gh-btn{padding:8px 10px;font-size:13.5px;gap:5px}
+  .gh-btn svg{width:14px;height:14px}
+  .gh-actions{gap:6px}
+}
+
+/* 記事下CTAバナー（画像） */
+.cta-banner-img{display:block;margin-top:60px;border-radius:14px;overflow:hidden;box-shadow:0 14px 34px rgba(16,104,120,.16);transition:transform .15s ease,box-shadow .15s ease}
+.cta-banner-img:hover{transform:translateY(-3px);box-shadow:0 20px 44px rgba(16,104,120,.22)}
+.cta-banner-img img{width:100%;height:auto;display:block;margin:0;border-radius:0;box-shadow:none}
+
+.news-rows{max-width:860px;margin:0 auto}
+.news-row.nr-hidden{display:none}
+.news-more{background:none;border:none;box-shadow:none;padding:6px 10px;font-family:inherit;font-size:16.5px;font-weight:500;color:var(--teal-700);cursor:pointer}
+.news-more:hover{text-decoration:underline;text-underline-offset:4px}
+.news-row{display:flex;gap:22px;align-items:baseline;padding:18px 10px;border-bottom:1px solid var(--line);font-size:16px;color:var(--ink)}
+.news-row time{flex:0 0 auto;color:var(--teal-500);font-weight:500;font-family:"Poppins","Noto Sans JP",sans-serif}
+.news-row:hover .t{color:var(--teal-700)}
+@media(max-width:640px){.news-row{flex-direction:column;gap:4px}}
+
+.chip-open{background:#fdf0dc;color:#b06a00}
+.chip-closed{background:#eceff1;color:#607078}
+.chip-archive{background:var(--teal-700);color:#fff}
+.sem-info{background:var(--teal-050);border-radius:12px;padding:18px 22px;margin:0 0 26px;font-size:16px}
+.sem-section{margin-bottom:56px}
+.sem-section .sem-heading{font-size:23.5px;font-weight:500;padding-left:14px;border-left:5px solid var(--teal-500);margin-bottom:22px}
+.video-wrap{position:relative;padding-top:56.25%;background:#0b4e5b;border-radius:14px;overflow:hidden;box-shadow:0 14px 34px rgba(16,104,120,.16);margin:26px 0 36px}
+.video-wrap iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.sem-apply{margin:30px 0 10px;text-align:center}
+footer{background:var(--teal-900);color:#fff;padding:56px 0 28px}
+.footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:44px;align-items:start;max-width:1080px;margin:0 auto}
+.footer-brand{display:inline-block}
+.footer-brand img{height:38px;width:auto;display:block}
+.footer-addr{font-size:13.5px;color:rgba(255,255,255,.75);margin-top:18px;line-height:2}
+.footer-head{font-size:15.5px;font-weight:500;color:#fff;letter-spacing:.08em;margin-bottom:14px;padding-bottom:8px;border-bottom:1px solid rgba(255,255,255,.2)}
+.footer-col a{display:block;font-size:14.5px;color:rgba(255,255,255,.8);margin-bottom:10px}
+.footer-col a:hover{color:#fff}
+footer .copy{font-size:12.5px;color:rgba(255,255,255,.55);text-align:center;margin-top:44px;padding-top:20px;border-top:1px solid rgba(255,255,255,.12)}
+@media(max-width:860px){.footer-grid{grid-template-columns:1fr 1fr;gap:30px}}
+@media(max-width:560px){.footer-grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+
+<header class="gh">
+  <div class="gh-inner">
+    <div class="gh-left">
+      <a class="gh-brand" href="../../" aria-label="エイトス株式会社"><img src="../../assets/logo-corporate-horizontal-single.svg" alt="eitoss"></a>
+      <nav class="gh-nav">
+        <div class="gh-dd">
+          <span class="gh-dd-label">活用シーン</span>
+          <div class="gh-dd-menu"><div class="in">
+            <a href="../../cayzen/ehsresearch/">Cayzen EHS Research（EHS法令調査代行）</a>
+            <a href="../../cayzen/knowledgemanagement/">Cayzen Knowledge Management（SaaS）</a>
+            <a href="../../cayzen/iso/">Cayzen ISO サポート</a>
+          </div></div>
+        </div>
+        <a href="../../seminar/">セミナー</a>
+        <a href="../../column/">コラム</a>
+        <a href="../../news/">ニュース</a>
+        <a href="../../resources/">お役立ち資料</a>
+        <a href="../../#company">会社概要</a>
+        <a href="../../recruit/">採用情報</a>
+      </nav>
+    </div>
+    <div class="gh-right">
+      <p class="gh-tel">TEL: <b>050-8881-9881</b><span>（平日10:00〜19:00）</span></p>
+      <div class="gh-actions">
+        <a class="gh-btn gh-btn-dl" href="../../document/"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h9l4 4v14H6z"/><path d="M15 3v4h4M9 12h6M9 16h6"/></svg> 資料請求</a>
+        <a class="gh-btn gh-btn-ct" href="../../#contact"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg> お問合せ</a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="page-head">
+  <div class="container">
+    <article class="post post-head-wrap" style="max-width:760px;margin:0 auto">
+      <p class="breadcrumb"><a href="../../">HOME</a> ／ <a href="../">コラム</a> ／ PPWRのproducerとは？製造者・輸入者との違いと自社の役割の見極め方</p>
+      <div class="meta"><span class="chip">法令改正</span><time datetime="2026-10-22T08:50:00.000Z">2026.10.22</time></div>
+      <div class="post-head"><h1>PPWRのproducerとは？製造者・輸入者との違いと自社の役割の見極め方</h1></div>
+    </article>
+  </div>
+</div>
+<main class="section">
+  <div class="container">
+    <article class="post">
+      <div class="post-eyecatch"><img src="/assets/column/ppwr-producer-manufacturer.jpg?w=1280&fm=webp" alt=""></div>
+      <div class="article-body">
+<p>EUの包装・包装廃棄物規則（PPWR）への対応で、最初につまずきやすいのが「自社はどの立場で義務を負うのか」という問題です。PPWRには「メーカー（manufacturer）」「輸入者（importer）」「販売者（distributor）」「producer（生産者）」など複数の役割があり、どの役割に当たるかで守るべき条文が変わります。</p>
+<p>特に分かりにくいのが<strong>producer</strong>です。日本語では「生産者」と訳されますが、包装を製造した会社を指すとは限りません。また、PPWRの「メーカー」も、包装を物理的に成形した会社とは限りません。</p>
+<p>本記事では、PPWRの役割の考え方、producerが製造者・輸入者とどう違うのか、EUの販売子会社や代理店を経由する場合に役割がどう分かれるのかを、日本の製造業の例を交えて解説します。</p>
+<blockquote><p>出典：EUR-Lex「Regulation (EU) 2025/40」第3条（定義）、第15条〜第22条、第44条・第45条 <a href="https://eur-lex.europa.eu/eli/reg/2025/40/oj" target="_blank" rel="noopener noreferrer nofollow">https://eur-lex.europa.eu/eli/reg/2025/40/oj</a><br>欧州委員会「FAQ on the Packaging and Packaging Waste Regulation」 <a href="https://environment.ec.europa.eu/publications/faq-packaging-and-packaging-waste-regulationppwr_en" target="_blank" rel="noopener noreferrer nofollow">https://environment.ec.europa.eu/publications/faq-packaging-and-packaging-waste-regulationppwr_en</a></p></blockquote>
+<p><strong>役割ごとの義務を一覧にした「義務の整理表」付きの資料を無料でダウンロードいただけます。</strong></p>
+<p><a href="https://eitoss.com/document/ppwr/">資料をダウンロードする</a></p>
+<hr>
+
+<h2>PPWRは「役割」ごとに義務を課す</h2>
+<p>PPWRは、ひとつの会社にすべての義務を課す法律ではありません。包装に関わる会社を役割に分け、役割ごとに守るべき条文を定めています。</p>
+<table><tbody>
+<tr><th>役割</th><th>どんな会社か</th><th>主な条文</th></tr>
+<tr><td>メーカー</td><td>包装の仕様（材質・寸法・構造）を決めて発注する者</td><td>5〜7・10〜12・15・22・39条</td></tr>
+<tr><td>輸入者・販売者</td><td>EUに持ち込む者、EUで販売する者</td><td>18・19・21条</td></tr>
+<tr><td>包装を充填する者</td><td>製品を包装に詰める者</td><td>24・27・29条</td></tr>
+<tr><td>producer</td><td>EUの各国で最初に包装・包装済み製品を提供する者</td><td>44・45条</td></tr>
+<tr><td>加盟国</td><td>回収制度や目標、罰則を整える。企業の義務ではない</td><td>43・48・52条など</td></tr>
+</tbody></table>
+<p>義務の中身で見ると、メーカーは「何でできているか（設計・材料）」と「書類とラベル」、充填者は「詰め方と繰り返し使うか」、producerは「お金と登録」を担う、と整理すると分かりやすくなります。なお、市場監視（62条）は特定の役割ではなく、すべての事業者に共通して及びます。</p>
+<p>そのため、PPWR対応の最初の一歩は、条文を読み込むことではなく<strong>自社がどの役割に当たるかを決めること</strong>です。</p>
+
+<h2>メーカー（manufacturer）とは｜「作った会社」ではなく「仕様を決めた会社」</h2>
+<p>PPWRのメーカーは、包装を物理的に成形した会社とは限りません。包装の材質や寸法、構造を指定して発注している会社が、メーカーに当たり得ます。</p>
+<p>たとえば、精密部品メーカーが製品を収める専用容器について、樹脂の種類や寸法、保持構造を指定して容器メーカーに製造を委託している場合、成形しているのは容器メーカーでも、PPWR上のメーカーとして義務を負うのは精密部品メーカー側になる可能性があります。</p>
+<p>メーカーには、包装がPPWRの要件を満たしていることを自ら評価し（適合性評価）、技術文書とEU適合宣言書（DoC）を作成する義務があります（15条・39条）。さらに、包装にバッチ番号やシリアル番号、事業者名、連絡先などの識別情報を表示する必要があります（22条）。詳しくは<a href="https://eitoss.com/column/ppwr-doc-technical-documentation/">PPWRのEU適合宣言書（DoC）と技術文書とは？</a>をご覧ください。</p>
+<h3>輸送包装は「最終形にする者」が原則メーカー</h3>
+<p>欧州委員会のFAQ（2026年8月の第2版）は、輸送包装については、包装を最終的な形にする者が原則としてメーカーに当たると整理しています。段ボール箱や緩衝材を自社の出荷場で組み合わせて外装を仕上げている場合は、その会社がメーカーに当たる可能性があります。</p>
+<h3>自社名で売ると「メーカー扱い」になる（21条）</h3>
+<p>輸入者や販売者であっても、<strong>自社の名称や商標で包装を上市する場合、または上市済みの包装を改変する場合は、メーカーとみなされます</strong>（21条）。たとえば、EUの販売子会社が自社ブランドで製品を販売すると、その会社が15条のメーカーとしての義務を負うことになります。EUの倉庫で包装を詰め替える場合も、改変に当たるかどうかの確認が必要です。</p>
+
+<h2>輸入者（importer）・販売者とは｜確認と保管の責任</h2>
+<p>輸入者は、EU域内に設立され、EU域外の包装をEU市場に出す者です。輸入者は自ら包装を設計しませんが、<strong>メーカーが適合性評価・技術文書・DoC・表示を整えていることを確認</strong>し、DoCを保管し、当局から求められたときは10日以内に提出する義務があります（18条）。</p>
+<p>販売者（19条）は、不適合を認識した場合に市場へ提供しないこと、保管・輸送の条件を維持することなどが求められます。EUの倉庫や物流を受託するフルフィルメント事業者（20条）も、メーカーや輸入者が義務を果たしている場合にのみサービスを提供できるとされています。</p>
+<p>つまり、日本のメーカーが書類を整えていなければ、EUの輸入者や物流事業者は製品を扱えなくなります。輸入者を経由する商流でも、日本側の準備は欠かせません。</p>
+
+<a class="cta-banner-img" href="../../document/ppwr/">
+        <img src="../../assets/column_bnr_ppwr.jpg" alt="PPWR、施行済み。いま確認すべきこと｜役割ごとの義務・期限一覧・部門別チェックリストを1冊に｜無料で資料をダウンロード" loading="lazy" width="1080" height="300">
+      </a>
+<h2>producer（生産者）とは｜EPRの費用を負担する役割</h2>
+<p>producerは、<strong>加盟国内で最初に包装、または包装された製品を提供する者</strong>です。メーカー・輸入者・販売者のいずれもproducerになり得ます。さらに、EU域外から別の加盟国の最終使用者（end user）へ直接提供する事業者も含まれる場合があります。ここでいう最終使用者には、消費者だけでなく、受け取った製品を自社の生産に使う法人（professional end user）も含まれます。</p>
+<p>producerには、次の義務があります。</p>
+<ul>
+<li>製品を提供する加盟国ごとに、生産者登録簿へ登録する（44条）</li>
+<li>拡大生産者責任（EPR）として、包装が廃棄物になったときの回収・処理費用を負担する（45条）</li>
+</ul>
+<p>日本の工場から出荷した段ボール外装や緩衝材、ストレッチフィルムは、EUの顧客工場で開梱された時点で廃棄物になります。この費用を負担するのがproducerです。EPRの実務は、各国のPRO（Producer Responsibility Organisation：EPRの運営団体）が担い、料金や手続は国ごとに異なります。</p>
+<h3>EUに拠点がない場合は「認定代理人」が必要になる</h3>
+<p>producerは、自らが設立されている加盟国以外の国で包装を初めて提供する場合、その国ごとに<strong>書面による委任でEPRの認定代理人（authorised representative）を選任</strong>しなければなりません（45条）。</p>
+<p>EUに拠点を持たない日本企業がproducerに当たる場合、販売先の加盟国すべてで代理人が必要になる可能性があります。対象国の数が、そのままコストと管理の手間に直結します。</p>
+<h3>2つの「認定代理人」を混同しない</h3>
+<table><tbody>
+<tr><th>制度</th><th>根拠</th><th>目的</th></tr>
+<tr><td>製品適合の認定代理人</td><td>17条</td><td>メーカーの適合に関する代理。技術文書の作成は委任の範囲に含められない</td></tr>
+<tr><td>EPRの認定代理人</td><td>45条</td><td>producerのEPR義務を、設立国以外の加盟国ごとに代理</td></tr>
+</tbody></table>
+
+<hr>
+<p><strong>自社の役割を確定するための確認項目を、部門別チェックリストにまとめた資料を無料でダウンロードいただけます。</strong></p>
+<p><a href="https://eitoss.com/document/ppwr/">資料をダウンロードする</a></p>
+<hr>
+
+<h2>役割は「商流」で決まる</h2>
+<p>同じ製品でも、EUへの売り方によって、どの会社がどの役割を負うかが変わります。代表的な商流は次の3つです。</p>
+<table><tbody>
+<tr><th>商流</th><th>役割の考え方（概要）</th></tr>
+<tr><td>日本から顧客工場へ直送</td><td>日本企業がメーカーとproducerを兼ねる可能性が高い。EUに拠点がなければ国ごとに認定代理人が必要になり得る</td></tr>
+<tr><td>EUの輸入者・販売子会社・代理店を経由</td><td>輸入者が確認義務を負い、producerになる可能性もある。自社名で売ればメーカー扱い。日本側はデータ提供を求められる</td></tr>
+<tr><td>EUの物流センターを経由</td><td>上市の主体に加え、EU域内の輸送包装の再使用（29条）も論点になる</td></tr>
+</tbody></table>
+<h3>EUの販売子会社がproducerになる場合</h3>
+<p>EUの輸入者や販売子会社がproducerになる場合、その会社が設立国で登録し、EPRを負います。このとき日本の本社は、包装の仕様とDoCの提供元として、材質・重量・再生材の比率などのデータ提供を求められます。データ提供の義務は、契約で明確にしておくことが重要です。</p>
+<h3>判定には貿易条件と輸入名義人の確認が必要</h3>
+<p>実際の判定には、取引ごとの貿易条件（Incoterms）や輸入名義人（importer of record）の確認が必要です。たとえば、同じ顧客向けでも、ある製品は日本から直送し、別の製品は商社経由で納めているといったように、取引形態が複数ある場合は、製品（SKU）や出荷ルートごとに整理しなければなりません。</p>
+<h3>同じ会社が複数の役割を兼ねることもある</h3>
+<p>たとえば、日本で専用容器の仕様を決めて発注し、自社工場で製品を詰め、EUの顧客工場へ直接販売している電子部品メーカーは、次の3つの役割を同時に負う可能性があります。</p>
+<ul>
+<li><strong>メーカー</strong>：専用容器の材質・寸法・品質仕様を指定して発注している（5・6・7・10・11・12・15・39条）</li>
+<li><strong>包装を充填する者</strong>：自社で製品を詰め、外箱に入れてパレットに積んでいる（24・27・29条）</li>
+<li><strong>producer</strong>：EUの顧客工場へ直販していれば、その加盟国で最初に提供する者になる（44・45条）</li>
+</ul>
+<p>「うちはメーカーだから15条だけ見ればよい」とはならない点に注意が必要です。</p>
+
+<h2>役割を確定するまでの考え方</h2>
+<p>役割の判定は、おおむね次の順序で考えると整理しやすくなります。</p>
+<ol>
+<li>EU向けの商流を「直送」「輸入者経由」「物流センター経由」などに分類する</li>
+<li>取引ごとの貿易条件と輸入名義人を確認する</li>
+<li>加盟国ごとに、メーカー・輸入者・producer・販売者が誰になるかを仮に割り当てる</li>
+<li>producer登録と認定代理人の要否を国別に判断する</li>
+</ol>
+<p>加盟国ごとに誰がどの役割を担うかを一覧にした整理表のイメージや、法務・営業・欧州拠点などの部門ごとの確認項目は、資料にまとめています。</p>
+
+<h2>役割の判定を後回しにするリスク</h2>
+<p>producerの判定を後回しにすると、EPRの登録や報告が漏れるおそれがあります。また、誰がメーカーなのかが決まらなければ、技術文書やDoCを誰が作成するのかも決まりません。EUの商流と物流を法的な主体の単位で見える化しない限り、EPR登録も、報告も、費用の見積もりもできません。</p>
+<p>包装材の変更やコストの試算は、役割が確定して初めて正確に進められます。PPWR対応では、役割の確定を最優先に取り組むことが重要です。</p>
+
+<h2>よくある質問</h2>
+<h3>Q. 包装を自社で成形していなくてもメーカーになりますか？</h3>
+<p>A. なり得ます。PPWRのメーカーは、包装の仕様を決めて発注する者を含みます。成形を外部に委託していても、材質や構造を指定していればメーカーに当たる可能性があります。</p>
+<h3>Q. producerとメーカーは同じ意味ですか？</h3>
+<p>A. 異なります。メーカーは包装の適合に責任を負う役割、producerは加盟国で最初に包装を提供し、EPRの費用を負担する役割です。同じ会社が両方を兼ねることはあります。</p>
+<h3>Q. EUの販売会社がproducerとして登録していれば、日本の本社は何もしなくてよいですか？</h3>
+<p>A. いいえ。日本の本社がメーカーに当たる場合は、技術文書やDoCの作成義務があります。また、EUの事業者から材質・重量・再生材の比率などのデータ提供を求められることになります。</p>
+<h3>Q. 顧客が企業（B2B）の場合もproducerの義務はありますか？</h3>
+<p>A. あります。PPWRの最終使用者には、受け取った製品を自社の生産に使う法人も含まれます。B2Bの取引であることを理由に、producerの義務が外れることはありません。</p>
+<h3>Q. 17条の認定代理人を選任すれば、EPRの代理人も兼ねられますか？</h3>
+<p>A. 17条の認定代理人（製品適合）と45条のEPRの認定代理人は別の制度です。それぞれの要否を個別に確認する必要があります。</p>
+
+<h2>まとめ</h2>
+<p>PPWRでは、役割によって守るべき条文が変わります。メーカーは「包装を作った会社」ではなく「仕様を決めた会社」、producerは「加盟国で最初に提供した会社」であり、EUに拠点のない日本企業は国ごとに認定代理人が必要になる場合があります。まずは商流ごとに、自社がどの役割に当たるかを整理することから始めましょう。</p>
+<p>エイトスでは、役割ごとの義務を一覧にした「義務の整理表」や、部門別のチェックリストをまとめた資料をご用意しています。PPWRの全体像は<a href="https://eitoss.com/column/ppwr-overview/">PPWR（EU包装・包装廃棄物規則）とは？</a>、EU域内の物流と再使用目標の関係は<a href="https://eitoss.com/column/ppwr-reuse-transport-packaging/">PPWRの輸送包装再使用40%とは？</a>もあわせてご覧ください。</p>
+<p><strong>PPWRの役割と義務を整理した資料を無料でダウンロードいただけます。</strong></p>
+<p><a href="https://eitoss.com/document/ppwr/">資料をダウンロードする</a></p>
+      </div>
+      <a class="cta-banner-img" href="../../document/ppwr/">
+        <img src="../../assets/column_bnr_ppwr.jpg" alt="PPWR、施行済み。いま確認すべきこと｜役割ごとの義務・期限一覧・部門別チェックリストを1冊に｜無料で資料をダウンロード" loading="lazy" width="1080" height="300">
+      </a>
+      <a class="back-link" href="../">← コラム一覧へ戻る</a>
+    </article>
+  </div>
+</main>
+<script>
+(function(){
+  if (typeof gtag !== 'function') return;
+  var article = location.pathname.split('/')[2] || '';
+  var links = document.querySelectorAll('article.post a[href*="/document/"]');
+  var io = 'IntersectionObserver' in window ? new IntersectionObserver(function(es){
+    es.forEach(function(e){
+      if (!e.isIntersecting) return;
+      gtag('event', 'cta_view', { cta_position: e.target.dataset.ctaPos, article_id: article, link_url: e.target.href });
+      io.unobserve(e.target);
+    });
+  }, { threshold: 0.5 }) : null;
+  links.forEach(function(a){
+    var pos = a.classList.contains('cta-banner-img') ? (a.closest('.article-body') ? 'banner_mid' : 'banner_bottom') : 'text_link';
+    a.dataset.ctaPos = pos;
+    a.addEventListener('click', function(){
+      gtag('event', 'cta_click', { cta_position: pos, article_id: article, link_url: a.href });
+    });
+    if (io) io.observe(a);
+  });
+})();
+</script>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand"><img src="../../assets/logo-corporate-horizontal-white.png" alt="eitoss"></div>
+        <p class="footer-addr">本社: 〒471-0031<br>愛知県豊田市小坂本町1-5-5 YAMATO BLDG2F<br>営業拠点: 〒170-6012<br>東京都豊島区東池袋3-1-1<br>サンシャイン60 12F</p>
+      </div>
+      <nav class="footer-col">
+        <p class="footer-head">サービス</p>
+        <a href="../../cayzen/ehsresearch/">Cayzen EHS Research</a>
+        <a href="../../cayzen/knowledgemanagement/">Cayzen Knowledge Management</a>
+        <a href="../../cayzen/iso/">Cayzen ISO サポート</a>
+      </nav>
+      <nav class="footer-col">
+        <p class="footer-head">コンテンツ</p>
+        <a href="../../seminar/">セミナー</a>
+        <a href="../../column/">コラム</a>
+        <a href="../../news/">ニュース</a>
+        <a href="../../document/">資料ダウンロード</a>
+        <a href="../../resources/">お役立ち資料</a>
+      </nav>
+      <nav class="footer-col">
+        <p class="footer-head">企業情報</p>
+        <a href="../../#company">会社概要</a>
+        <a href="../../recruit/">採用情報</a>
+        <a href="../../#contact">お問い合わせ</a>
+        <a href="/privacy-policy/">プライバシーポリシー</a>
+        <a href="/security-policy/">情報セキュリティ方針</a>
+        <a href="/terms/">利用規約</a>
+      </nav>
+    </div>
+    <p class="copy">© Eitoss Inc. All rights reserved.</p>
+  </div>
+</footer>
+
+</body>
+</html>
