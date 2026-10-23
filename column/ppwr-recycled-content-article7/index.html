@@ -357,6 +357,28 @@ footer .copy{font-size:12.5px;color:rgba(255,255,255,.55);text-align:center;marg
     </article>
   </div>
 </main>
+<script>
+(function(){
+  if (typeof gtag !== 'function') return;
+  var article = location.pathname.split('/')[2] || '';
+  var links = document.querySelectorAll('article.post a[href*="/document/"]');
+  var io = 'IntersectionObserver' in window ? new IntersectionObserver(function(es){
+    es.forEach(function(e){
+      if (!e.isIntersecting) return;
+      gtag('event', 'cta_view', { cta_position: e.target.dataset.ctaPos, article_id: article, link_url: e.target.href });
+      io.unobserve(e.target);
+    });
+  }, { threshold: 0.5 }) : null;
+  links.forEach(function(a){
+    var pos = a.classList.contains('cta-banner-img') ? (a.closest('.article-body') ? 'banner_mid' : 'banner_bottom') : 'text_link';
+    a.dataset.ctaPos = pos;
+    a.addEventListener('click', function(){
+      gtag('event', 'cta_click', { cta_position: pos, article_id: article, link_url: a.href });
+    });
+    if (io) io.observe(a);
+  });
+})();
+</script>
 
 <footer>
   <div class="container">
