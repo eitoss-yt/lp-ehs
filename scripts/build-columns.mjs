@@ -812,7 +812,7 @@ if (!USE_SAMPLE && API_KEY) {
 try {
   const { readdir: rd, stat } = await import('node:fs/promises');
   const pages = [];
-  const SKIP_DIRS = new Set(['assets', 'scripts', 'data', 'node_modules', '.git', '.claude']);
+  const SKIP_DIRS = new Set(['assets', 'scripts', 'data', 'node_modules', '.git', '.claude', 'lp']); // lp/ は広告専用LP（noindex）
   async function walk(dir, rel) {
     for (const e of await rd(dir, { withFileTypes: true })) {
       if (!e.isDirectory()) continue;
