@@ -24,323 +24,147 @@
 <meta property="og:description" content="役割ごとの義務、期限の一覧、部門別チェックリストを全13ページにまとめた無料資料です。">
 <meta property="og:type" content="website">
 <meta property="og:image" content="https://eitoss.com/assets/doc-ppwr.jpg">
-<meta name="theme-color" content="#0f2c35">
+<meta name="theme-color" content="#ffffff">
 <link rel="icon" type="image/svg+xml" href='data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"%3E%3Cpath d="M50 8 a42 42 0 1 0 29.7 12.3 l-12.7 12.7 a24 24 0 1 1 -17 -7 z" fill="%23106878"/%3E%3C/svg%3E'>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
 <link rel="preload" as="image" href="../../assets/lp-ppwr/p1.jpg">
 <style>
-:root{--navy:#0f2c35;--navy2:#163d48;--blue:#1d4f91;--teal:#106878;--teal2:#308098;--teal-050:#eef6f7;--gold:#c9a668;--gold2:#a4854d;--green:#2f7d4f;--ink:#1b272c;--gray:#5d6b70;--line:#dde6e8;--bg:#f6f8f8;--cta:#e8833a;--cta-dark:#cf6c24}
+:root{--brand:#1d4f91;--brand-dark:#163d70;--navy:#0f2c35;--teal:#106878;--ink:#222;--sub:#5f6b70;--line:#e3e8ea;--panel:#f4f6f8;--accent:#e6f0f8}
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
-body{font-family:"Noto Sans JP","Hiragino Sans","Yu Gothic",sans-serif;color:var(--ink);background:#fff;line-height:1.75;font-size:16px;-webkit-font-smoothing:antialiased;padding-bottom:84px}
+body{font-family:"Noto Sans JP","Hiragino Sans","Yu Gothic",sans-serif;color:var(--ink);background:#fff;line-height:1.8;font-size:15px;-webkit-font-smoothing:antialiased}
 img{max-width:100%;height:auto;display:block}
-a{color:inherit}
-.wrap{max-width:560px;margin:0 auto;padding:0 20px}
-.sec{padding:56px 0}
-.sec.alt{background:var(--bg)}
-.eyebrow{display:inline-block;font-size:12px;font-weight:700;letter-spacing:.16em;color:var(--teal);margin-bottom:8px}
-h2{font-size:24px;line-height:1.45;font-weight:900;color:var(--navy);margin-bottom:18px}
-h2 em{font-style:normal;color:var(--blue)}
-.lead{font-size:15px;color:var(--gray);margin-bottom:22px}
+a{color:var(--brand)}
 
 /* header */
-.hd{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.96);backdrop-filter:blur(6px);border-bottom:1px solid var(--line)}
-.hd .wrap{display:flex;align-items:center;justify-content:space-between;height:54px}
+.hd{border-bottom:1px solid var(--line);background:#fff}
+.hd .in{max-width:1120px;margin:0 auto;padding:0 20px;height:56px;display:flex;align-items:center}
 .hd img{height:24px;width:auto}
-.hd a.mini{font-size:13px;font-weight:700;color:#fff;background:var(--cta);border-radius:999px;padding:7px 14px;text-decoration:none}
 
-/* hero */
-.hero{position:relative;overflow:hidden;background:linear-gradient(180deg,#fff 0,#f4f7f8 60%,#e9efef 100%);padding:28px 0 36px}
-.hero::after{content:"";position:absolute;left:0;right:0;bottom:0;height:46%;background:url(../../assets/lp-ppwr/photo.jpg) 50% 85%/cover no-repeat;opacity:.55;-webkit-mask-image:linear-gradient(transparent,#000 45%);mask-image:linear-gradient(transparent,#000 45%)}
-.hero .wrap{position:relative;z-index:1;text-align:center}
-.hero .pill{display:inline-block;background:var(--navy);color:#fff;font-size:13px;font-weight:700;border-radius:999px;padding:5px 16px;margin-bottom:14px}
-.hero .kick{font-size:13px;font-weight:700;color:var(--teal);letter-spacing:.04em}
-.hero h1{font-size:52px;line-height:1.05;font-weight:900;color:var(--navy);margin:4px 0 10px;letter-spacing:-.01em}
-.hero h1 span{color:var(--blue)}
-.hero .bar{display:inline-block;background:var(--navy);color:#fff;font-size:24px;font-weight:900;letter-spacing:.14em;padding:4px 20px 6px 24px;border-radius:8px}
-.hero .sub{font-size:15px;font-weight:700;margin:16px 0 18px;line-height:1.7}
-.hero .sub b{color:var(--blue)}
-.hero .book{position:relative;width:62%;max-width:280px;margin:0 auto 22px}
-.hero .book img{border-radius:4px;box-shadow:0 18px 40px rgba(15,44,53,.28);transform:rotate(-2deg)}
-.hero .badge{position:absolute;right:-26px;top:-14px;width:84px;height:84px;border-radius:50%;background:var(--cta);color:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;font-weight:900;box-shadow:0 8px 18px rgba(232,131,58,.4);transform:rotate(8deg)}
-.hero .badge b{font-size:24px;line-height:1}
-.hero .badge small{font-size:11px;margin-top:3px}
-.cta{display:flex;align-items:center;justify-content:center;gap:8px;width:100%;min-height:60px;border:0;border-radius:999px;background:linear-gradient(180deg,#f0924a,var(--cta));color:#fff;font-size:18px;font-weight:900;text-decoration:none;box-shadow:0 8px 18px rgba(232,131,58,.35),inset 0 -3px 0 rgba(0,0,0,.12);cursor:pointer;font-family:inherit}
-.cta:active{transform:translateY(1px);box-shadow:0 4px 10px rgba(232,131,58,.35)}
-.cta svg{width:20px;height:20px;flex:none}
-.micro{font-size:12.5px;color:var(--gray);margin-top:10px;text-align:center}
-.micro b{color:var(--ink)}
+/* title area */
+.ttl{background:var(--panel);border-bottom:1px solid var(--line)}
+.ttl .in{max-width:1120px;margin:0 auto;padding:18px 20px 22px}
+.crumb{font-size:12px;color:var(--sub);margin-bottom:8px}
+.label{display:inline-block;font-size:12px;font-weight:700;color:var(--brand);border:1px solid var(--brand);border-radius:3px;padding:1px 8px;margin-bottom:8px;background:#fff}
+h1{font-size:22px;line-height:1.5;font-weight:700;color:var(--navy)}
+h1 small{display:block;font-size:14px;font-weight:500;color:var(--sub);margin-top:4px}
 
-/* facts */
-.facts{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:-6px}
-.fact{background:#fff;border:1px solid var(--line);border-radius:12px;padding:14px 6px;text-align:center}
-.fact b{display:block;font-size:20px;font-weight:900;color:var(--navy);line-height:1.15}
-.fact b.g{color:var(--gold2)}
-.fact span{display:block;font-size:11.5px;font-weight:700;color:var(--gray);margin-top:6px;line-height:1.4}
-.alert{margin-top:16px;background:var(--navy);color:#fff;border-radius:12px;padding:16px 18px;font-size:15px;font-weight:700;line-height:1.65}
-.alert em{font-style:normal;color:var(--gold)}
+/* layout */
+.main{max-width:1120px;margin:0 auto;padding:24px 20px 56px}
+.cover{background:var(--panel);border-radius:6px;padding:24px 0 20px;margin-bottom:18px}
+.cover img{width:58%;max-width:300px;margin:0 auto;box-shadow:0 10px 26px rgba(15,44,53,.18)}
+.meta{display:flex;justify-content:center;gap:8px;margin-top:16px;flex-wrap:wrap}
+.meta span{font-size:12px;font-weight:700;color:var(--sub);background:#fff;border:1px solid var(--line);border-radius:999px;padding:3px 12px}
+.summary{font-size:15px;margin-bottom:22px}
+.summary b{color:var(--navy)}
+.tofrm{display:flex;align-items:center;justify-content:center;width:100%;min-height:54px;border-radius:6px;background:var(--brand);color:#fff;font-size:16px;font-weight:700;text-decoration:none;margin-bottom:30px}
 
-/* pains */
-.pains{list-style:none}
-.pains li{display:flex;gap:12px;align-items:flex-start;background:#fff;border:1px solid var(--line);border-radius:12px;padding:13px 14px;margin-bottom:10px;font-size:15px;font-weight:700;line-height:1.55}
-.pains li::before{content:"";flex:none;width:22px;height:22px;margin-top:1px;border-radius:6px;border:2.5px solid var(--teal);background:#fff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M5 12.5l4.5 4.5L19 7.5' fill='none' stroke='%23106878' stroke-width='3.2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/16px no-repeat}
-.painbox{position:relative}
-.painbox .worry{width:150px;margin:-6px auto 0}
-.answer{text-align:center;font-size:17px;font-weight:900;color:var(--navy);margin-top:6px}
-.answer em{font-style:normal;color:var(--blue)}
+h2{font-size:18px;font-weight:700;color:var(--navy);padding-left:12px;border-left:4px solid var(--brand);line-height:1.4;margin:34px 0 14px}
+.learn{list-style:none}
+.learn li{position:relative;padding:12px 0 12px 30px;border-bottom:1px solid var(--line);font-size:15px;line-height:1.6}
+.learn li::before{content:"";position:absolute;left:2px;top:15px;width:18px;height:18px;border-radius:50%;background:var(--brand) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M6 12.5l4 4L18 8' fill='none' stroke='%23fff' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/12px no-repeat}
+.pages{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.pages figure{background:var(--panel);border-radius:6px;padding:10px;text-align:center}
+.pages img{border:1px solid var(--line);background:#fff}
+.pages figcaption{font-size:12.5px;color:var(--sub);margin-top:8px;line-height:1.5}
+.toc{list-style:none;counter-reset:t}
+.toc li{counter-increment:t;display:flex;gap:12px;padding:10px 0;border-bottom:1px dashed var(--line);font-size:14.5px}
+.toc li::before{content:counter(t,decimal-leading-zero);font-weight:700;color:var(--brand);flex:none}
+.toc li span{color:var(--sub);font-size:12.5px;display:block}
+.rec{list-style:none;background:var(--accent);border-radius:6px;padding:14px 18px}
+.rec li{position:relative;padding:6px 0 6px 18px;font-size:14.5px;line-height:1.6}
+.rec li::before{content:"";position:absolute;left:0;top:14px;width:8px;height:8px;border-radius:50%;background:var(--brand)}
+.about{font-size:14px;color:var(--sub)}
 
-/* pages carousel */
-.rail{display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;padding:4px 20px 14px;margin:0 -20px;-webkit-overflow-scrolling:touch;scrollbar-width:none}
-.rail::-webkit-scrollbar{display:none}
-.card{flex:0 0 74%;max-width:300px;scroll-snap-align:center;background:#fff;border-radius:12px;border:1px solid var(--line);overflow:hidden;box-shadow:0 6px 18px rgba(15,44,53,.08)}
-.card img{width:100%;aspect-ratio:210/297;object-fit:cover;object-position:top}
-.card div{padding:12px 14px 14px}
-.card b{display:block;font-size:15px;color:var(--navy);line-height:1.45}
-.card span{display:block;font-size:12.5px;color:var(--gray);line-height:1.55;margin-top:4px}
-.dots{display:flex;justify-content:center;gap:6px;margin-top:2px}
-.dots i{width:7px;height:7px;border-radius:50%;background:#c9d6d9;transition:all .2s}
-.dots i.on{width:20px;border-radius:4px;background:var(--teal)}
-.hint{font-size:12px;color:var(--gray);text-align:center;margin-top:6px}
-
-/* toc */
-.toc{list-style:none;counter-reset:t;border-top:1px solid var(--line)}
-.toc li{counter-increment:t;display:flex;gap:14px;align-items:baseline;padding:13px 2px;border-bottom:1px solid var(--line);font-size:15px;font-weight:700;color:var(--navy)}
-.toc li::before{content:counter(t,decimal-leading-zero);font-size:18px;font-weight:900;color:var(--gold)}
-.toc li small{display:block;font-size:12.5px;font-weight:400;color:var(--gray);margin-top:2px}
-
-/* who */
-.who{display:grid;gap:10px}
-.who>div{background:#fff;border-radius:12px;padding:14px 16px;border-left:5px solid var(--teal)}
-.who>div:nth-child(2){border-color:var(--blue)}
-.who>div:nth-child(3){border-color:var(--gold)}
-.who b{display:block;font-size:15.5px;color:var(--navy)}
-.who span{font-size:13px;color:var(--gray);line-height:1.55}
-
-/* about */
-.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:6px}
-.stats div{text-align:center;border-top:3px solid var(--gold);padding-top:10px}
-.stats b{display:block;font-size:17px;font-weight:900;color:var(--navy);line-height:1.3}
-.stats span{font-size:11.5px;color:var(--gray)}
-
-/* faq */
-details{border-bottom:1px solid var(--line)}
-details:first-of-type{border-top:1px solid var(--line)}
-summary{list-style:none;cursor:pointer;padding:16px 36px 16px 0;font-size:15px;font-weight:700;color:var(--navy);position:relative;line-height:1.55}
-summary::-webkit-details-marker{display:none}
-summary::before{content:"Q";color:var(--teal);font-weight:900;margin-right:10px}
-summary::after{content:"";position:absolute;right:6px;top:50%;width:10px;height:10px;border-right:2.5px solid var(--teal);border-bottom:2.5px solid var(--teal);transform:translateY(-70%) rotate(45deg);transition:transform .2s}
-details[open] summary::after{transform:translateY(-30%) rotate(-135deg)}
-details p{font-size:14.5px;color:var(--gray);padding:0 0 16px 24px}
-
-/* form */
-.formsec{background:linear-gradient(180deg,var(--navy) 0,var(--navy2) 100%);color:#fff}
-.formsec h2{color:#fff}
-.formsec h2 em{color:var(--gold)}
-.formsec .lead{color:#cfdde0}
-.formhead{display:flex;gap:14px;align-items:center;margin-bottom:18px}
-.formhead img{width:84px;border-radius:3px;box-shadow:0 8px 18px rgba(0,0,0,.35)}
-.formhead p{font-size:13.5px;color:#cfdde0;line-height:1.6}
-.formhead p b{display:block;color:#fff;font-size:16px}
-.formbox{background:#fff;color:var(--ink);border-radius:16px;padding:22px 18px 10px;box-shadow:0 16px 40px rgba(0,0,0,.25);min-height:420px}
-.formnote{font-size:12px;color:#9fb5ba;margin-top:12px;line-height:1.6}
-.formnote a{color:#fff}
-.done{display:none;text-align:center;padding:16px 4px 20px}
+/* form card */
+.formcard{border:1px solid var(--line);border-top:4px solid var(--brand);border-radius:6px;background:#fff;box-shadow:0 6px 24px rgba(15,44,53,.08)}
+.formcard .fh{padding:18px 20px 6px}
+.formcard .fh p.t{font-size:17px;font-weight:700;color:var(--navy);line-height:1.5}
+.formcard .fh p.s{font-size:12.5px;color:var(--sub);margin-top:4px}
+.formcard .fb{padding:8px 20px 20px;min-height:380px}
+.formnote{font-size:12px;color:var(--sub);padding:0 20px 18px;line-height:1.6}
+.done{display:none;text-align:center;padding:10px 0 6px}
 .done.show{display:block}
-.done h3{font-size:20px;color:var(--navy);margin-bottom:8px}
-.done p{font-size:14px;color:var(--gray);margin-bottom:18px}
+.done p.t{font-size:18px;font-weight:700;color:var(--navy);margin-bottom:6px}
+.done p{font-size:14px;color:var(--sub);margin-bottom:16px}
+.done a{display:flex;align-items:center;justify-content:center;min-height:54px;border-radius:6px;background:var(--brand);color:#fff;font-weight:700;text-decoration:none}
 
-/* footer */
-.ft{background:#0b2128;color:#9fb5ba;font-size:12px;text-align:center;padding:26px 20px 30px}
-.ft img{height:22px;width:auto;margin:0 auto 10px;filter:brightness(0) invert(1);opacity:.85}
-.ft a{color:#cfdde0;margin:0 8px}
-
-/* sticky cta */
-.sticky{position:fixed;left:0;right:0;bottom:0;z-index:30;padding:10px 14px calc(10px + env(safe-area-inset-bottom));background:rgba(255,255,255,.97);border-top:1px solid var(--line);box-shadow:0 -6px 18px rgba(15,44,53,.1);transform:translateY(110%);transition:transform .25s}
-.sticky.show{transform:none}
-.sticky .wrap{display:flex;gap:10px;align-items:center;padding:0}
-.sticky img{width:40px;border-radius:2px;box-shadow:0 2px 6px rgba(0,0,0,.2)}
-.sticky .cta{min-height:52px;font-size:16px}
-
-/* hubspot form polish */
+/* hubspot */
 .hs-form fieldset{max-width:none!important}
 .hs-form .hs-form-field{margin-bottom:14px}
-.hs-form label{font-size:14px;font-weight:700;color:var(--navy)}
-.hs-form input[type=text],.hs-form input[type=email],.hs-form input[type=tel],.hs-form select,.hs-form textarea{width:100%!important;font-size:16px!important;padding:12px!important;border:1.5px solid #cfd8db!important;border-radius:10px!important;margin-top:6px;font-family:inherit;background:#fff}
-.hs-form input:focus,.hs-form select:focus{outline:none;border-color:var(--teal)!important;box-shadow:0 0 0 3px rgba(16,104,120,.15)}
-.hs-form .hs-error-msgs{list-style:none;font-size:12.5px;color:#c8553d;margin-top:4px}
-.hs-form .hs-button{width:100%;min-height:58px;border:0;border-radius:999px;background:linear-gradient(180deg,#f0924a,var(--cta));color:#fff;font-size:18px;font-weight:900;cursor:pointer;box-shadow:0 8px 18px rgba(232,131,58,.35);font-family:inherit;-webkit-appearance:none}
-.hs-form .legal-consent-container{font-size:12px;color:var(--gray)}
+.hs-form label{font-size:13.5px;font-weight:700;color:var(--ink)}
+.hs-form .hs-form-required{color:#d0453a;margin-left:2px}
+.hs-form input[type=text],.hs-form input[type=email],.hs-form input[type=tel],.hs-form select,.hs-form textarea{width:100%!important;font-size:16px!important;padding:11px 12px!important;border:1px solid #c9d2d6!important;border-radius:4px!important;margin-top:5px;font-family:inherit;background:#fff}
+.hs-form input:focus,.hs-form select:focus{outline:none;border-color:var(--brand)!important;box-shadow:0 0 0 3px rgba(29,79,145,.15)}
+.hs-form .hs-error-msgs{list-style:none;font-size:12px;color:#d0453a;margin-top:3px}
+.hs-form .hs-button{width:100%;min-height:56px;border:0;border-radius:6px;background:var(--brand);color:#fff;font-size:17px;font-weight:700;cursor:pointer;font-family:inherit;-webkit-appearance:none}
+.hs-form .hs-button:hover{background:var(--brand-dark)}
+.hs-form .legal-consent-container{font-size:12px;color:var(--sub)}
 
-@media (min-width:900px){
-  body{padding-bottom:0}
-  .sticky{display:none}
-  .wrap{max-width:980px}
-  .hero{padding:56px 0 64px}
-  .hero .wrap{display:grid;grid-template-columns:1.15fr .85fr;gap:40px;align-items:center;text-align:left}
-  .hero h1{font-size:76px}
-  .hero .book{width:100%;max-width:340px}
-  .hero .cta{max-width:420px}
-  .hero .micro{text-align:left}
-  .sec .wrap.narrow{max-width:720px}
-  .facts{grid-template-columns:repeat(3,1fr);max-width:720px;margin:0 auto}
-  .card{flex-basis:260px}
-  .rail{justify-content:center;flex-wrap:wrap;overflow:visible}
-  .dots,.hint{display:none}
-  .formwrap{display:grid;grid-template-columns:.8fr 1.2fr;gap:40px;align-items:start}
+/* footer */
+.ft{border-top:1px solid var(--line);background:var(--panel);font-size:12px;color:var(--sub);text-align:center;padding:22px 20px calc(80px + env(safe-area-inset-bottom))}
+.ft a{color:var(--sub);margin:0 8px}
+
+/* sticky (SP only) */
+.sticky{position:fixed;left:0;right:0;bottom:0;z-index:30;padding:10px 16px calc(10px + env(safe-area-inset-bottom));background:rgba(255,255,255,.97);border-top:1px solid var(--line);box-shadow:0 -4px 14px rgba(0,0,0,.06);transform:translateY(110%);transition:transform .25s}
+.sticky.show{transform:none}
+.sticky a{display:flex;align-items:center;justify-content:center;min-height:50px;border-radius:6px;background:var(--brand);color:#fff;font-size:16px;font-weight:700;text-decoration:none}
+
+/* SP: フォームを概要の直後に置く */
+.grid{display:flex;flex-direction:column}
+.c-intro{order:1}
+.c-form{order:2;margin-bottom:8px}
+.c-detail{order:3}
+
+@media (min-width:960px){
+  body{font-size:15px}
+  h1{font-size:28px}
+  .grid{display:grid;grid-template-columns:minmax(0,1fr) 400px;grid-template-areas:"intro form" "detail form";column-gap:48px;align-items:start}
+  .c-intro{grid-area:intro}
+  .c-detail{grid-area:detail}
+  .c-form{grid-area:form;position:sticky;top:20px;margin:0}
+  .tofrm,.sticky{display:none}
+  .ft{padding-bottom:22px}
+  .cover{display:grid;grid-template-columns:240px 1fr;gap:28px;align-items:center;padding:28px;text-align:left}
+  .cover img{width:100%;margin:0}
+  .meta{justify-content:flex-start}
 }
 </style>
 </head>
 <body>
 
-<header class="hd">
-  <div class="wrap">
-    <img src="../../assets/logo-corporate-horizontal-single.svg" alt="エイトス株式会社" width="120" height="24">
-    <a class="mini" href="#form" data-cta="header">無料DL</a>
-  </div>
-</header>
+<header class="hd"><div class="in"><img src="../../assets/logo-corporate-horizontal-single.svg" alt="エイトス株式会社" width="120" height="24"></div></header>
 
-<main>
-<!-- HERO -->
-<section class="hero" id="top">
-  <div class="wrap">
-    <div>
-      <span class="pill">EU輸出企業のご担当者さまへ</span>
-      <p class="kick">EU包装・包装廃棄物規則（Regulation (EU) 2025/40）</p>
-      <h1><span>PPWR</span>規制</h1>
-      <span class="bar">対応まとめ</span>
-      <p class="sub">2026年8月12日、<b>適用開始済み</b>。<br>義務・期限・チェックリストを全13ページに。</p>
-      <div class="book" data-sp>
-        <img src="../../assets/lp-ppwr/p1.jpg" alt="資料の表紙「PPWR規制 対応まとめ」" width="909" height="1287">
-        <div class="badge"><b>無料</b><small>PDF資料</small></div>
-      </div>
-      <a class="cta" href="#form" data-cta="hero">無料で資料をダウンロード<svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v12M6 11l6 6 6-6M5 20h14"/></svg></a>
-      <p class="micro">入力は<b>約1分</b>。送信後すぐに資料をご覧いただけます。</p>
-    </div>
-    <div class="book" data-pc style="display:none">
-      <img src="../../assets/lp-ppwr/p1.jpg" alt="" width="909" height="1287">
-      <div class="badge"><b>無料</b><small>PDF資料</small></div>
-    </div>
+<div class="ttl">
+  <div class="in">
+    <p class="crumb">資料ダウンロード</p>
+    <span class="label">無料ホワイトペーパー</span>
+    <h1>PPWR規制 対応まとめ<small>EU包装・包装廃棄物規則（Regulation (EU) 2025/40）日本企業がいま押さえるべきポイント</small></h1>
   </div>
-</section>
+</div>
 
-<!-- FACTS -->
-<section class="sec" style="padding-top:28px">
-  <div class="wrap narrow">
-    <div class="facts">
-      <div class="fact"><b>2026.8.12</b><span>適用開始<br>（施行済み）</span></div>
-      <div class="fact"><b>5つ</b><span>役割で<br>変わる義務</span></div>
-      <div class="fact"><b class="g">2029年末</b><span>実質的な<br>対応期限</span></div>
-    </div>
-    <div class="alert">技術文書・EU適合宣言書は、<em>すでに求められている義務</em>です。「2030年の話」と考えていると、対応が間に合わないおそれがあります。</div>
-  </div>
-</section>
+<main class="main">
+  <div class="grid">
 
-<!-- PAINS -->
-<section class="sec alt">
-  <div class="wrap narrow">
-    <span class="eyebrow">CHECK</span>
-    <h2>こんなこと、<br>すぐに答えられますか？</h2>
-    <div class="painbox">
-      <ul class="pains">
-        <li>自社はPPWRの「producer」や「メーカー」に当たるのか</li>
-        <li>技術文書・EU適合宣言書の準備は進んでいるか</li>
-        <li>工業用・BtoBの包装でも対象になるのか</li>
-        <li>再生材35%など、2030年の要件に間に合うか</li>
-      </ul>
-      <img class="worry" src="../../assets/lp-ppwr/worry.png" alt="" width="150" height="150" loading="lazy">
-    </div>
-    <p class="answer">その答えを、<em>1冊の資料</em>にまとめました。</p>
-  </div>
-</section>
-
-<!-- INSIDE -->
-<section class="sec">
-  <div class="wrap">
-    <span class="eyebrow">INSIDE</span>
-    <h2>資料の中身を<br><em>少しだけ</em>お見せします</h2>
-    <div class="rail" id="rail">
-      <div class="card"><img src="../../assets/lp-ppwr/p4.jpg" alt="役割と義務のページ" loading="lazy" width="909" height="1287"><div><b>5つの役割と義務の整理表</b><span>メーカー・輸入者・producerなど、誰に何が求められるかを1枚に。</span></div></div>
-      <div class="card"><img src="../../assets/lp-ppwr/p10.jpg" alt="期限の一覧のページ" loading="lazy" width="909" height="1287"><div><b>2026〜2040年の期限の一覧</b><span>2030年に集中する要件と、実質的な期限がひと目でわかります。</span></div></div>
-      <div class="card"><img src="../../assets/lp-ppwr/p9.jpg" alt="出荷から顧客到着までの8段階のページ" loading="lazy" width="909" height="1287"><div><b>出荷から顧客到着まで8段階</b><span>どこで、どの条文が効くのかを物流の流れで整理。</span></div></div>
-      <div class="card"><img src="../../assets/lp-ppwr/p11.jpg" alt="部門別チェックリストのページ" loading="lazy" width="909" height="1287"><div><b>部門別チェックリスト</b><span>包装設計・調達・法務が、明日から着手できる項目。</span></div></div>
-    </div>
-    <div class="dots" id="dots"><i class="on"></i><i></i><i></i><i></i></div>
-    <p class="hint">横にスワイプしてご覧ください</p>
-  </div>
-</section>
-
-<!-- TOC -->
-<section class="sec alt">
-  <div class="wrap narrow">
-    <span class="eyebrow">CONTENTS</span>
-    <h2>全13ページの構成</h2>
-    <ol class="toc">
-      <li><div>PPWRの全体像<small>5つの問いで全体をつかむ／法令の4つの階層</small></div></li>
-      <li><div>役割と義務<small>5つの役割／義務の整理表／すでに求められている義務</small></div></li>
-      <li><div>包装への要求<small>リサイクル等級・再生材35%／空きスペース・再使用／表示とEPR</small></div></li>
-      <li><div>よくある誤解<small>「工業用だから対象外」など6つの認識</small></div></li>
-      <li><div>実務の流れとスケジュール<small>出荷から顧客到着までの8段階／期限の一覧</small></div></li>
-      <li><div>いま確認すべきこと<small>最優先の3つ／部門別チェックリスト</small></div></li>
-    </ol>
-    <div style="margin-top:26px"><a class="cta" href="#form" data-cta="mid">無料で資料をダウンロード<svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v12M6 11l6 6 6-6M5 20h14"/></svg></a></div>
-  </div>
-</section>
-
-<!-- WHO -->
-<section class="sec">
-  <div class="wrap narrow">
-    <span class="eyebrow">FOR</span>
-    <h2>こんな方におすすめです</h2>
-    <div class="who">
-      <div><b>品質保証・環境・包装設計の方</b><span>技術文書の準備や、包装の材質・重量の把握から始めたい</span></div>
-      <div><b>調達・物流の方</b><span>包装メーカーへの照会や、EU向けの物流ルートを整理したい</span></div>
-      <div><b>法務・営業・欧州拠点の方</b><span>国ごとのproducerやEPR登録の状況を確認したい</span></div>
-    </div>
-  </div>
-</section>
-
-<!-- ABOUT -->
-<section class="sec alt">
-  <div class="wrap narrow">
-    <span class="eyebrow">ABOUT</span>
-    <h2>EHS法令の専門チームが<br>一次情報からまとめました</h2>
-    <p class="lead">エイトス株式会社の「Cayzen EHS Research」は、環境・労働安全衛生の法令調査を支援するサービスです。EU規則の条文・欧州委員会のガイダンスなど一次情報をもとに、日本企業の実務の目線で整理しています。</p>
-    <div class="stats">
-      <div><b>約9,000法令</b><span>独自の法改正DB</span></div>
-      <div><b>専門チーム</b><span>一次情報から精査</span></div>
-      <div><b>国内＋海外</b><span>EU規則まで対応</span></div>
-    </div>
-  </div>
-</section>
-
-<!-- FAQ -->
-<section class="sec">
-  <div class="wrap narrow">
-    <span class="eyebrow">FAQ</span>
-    <h2>よくあるご質問</h2>
-    <details><summary>本当に無料ですか？</summary><p>はい、無料でダウンロードいただけます。</p></details>
-    <details><summary>資料はいつ受け取れますか？</summary><p>フォーム送信後、この画面からすぐにご覧いただけます。同じ資料をメールでもお送りします。</p></details>
-    <details><summary>工業用・BtoBの製品を扱う企業でも関係ありますか？</summary><p>PPWRには業種を理由とした一般的な除外はなく、工業用・BtoBの包装も対象になり得ます。詳しくは資料の「よくある誤解」をご覧ください。</p></details>
-    <details><summary>どのような形式の資料ですか？</summary><p>A4縦・全13ページのPDFです。社内での共有にもお使いいただけます。</p></details>
-  </div>
-</section>
-
-<!-- FORM -->
-<section class="sec formsec" id="form">
-  <div class="wrap">
-    <div class="formwrap">
-      <div>
-        <span class="eyebrow" style="color:var(--gold)">DOWNLOAD</span>
-        <h2>必要事項を入力して<br><em>無料でダウンロード</em></h2>
-        <div class="formhead">
-          <img src="../../assets/lp-ppwr/p1.jpg" alt="" width="84" loading="lazy">
-          <p><b>PPWR規制 対応まとめ</b>A4縦・全13ページ／PDF<br>送信後すぐにご覧いただけます</p>
+    <section class="c-intro">
+      <div class="cover">
+        <div><img src="../../assets/lp-ppwr/p1.jpg" alt="資料の表紙「PPWR規制 対応まとめ」" width="909" height="1287"></div>
+        <div>
+          <div class="meta"><span>PDF</span><span>A4縦</span><span>全13ページ</span><span>無料</span></div>
         </div>
       </div>
-      <div>
-        <div class="formbox">
+      <p class="summary">2026年8月12日、EUの包装・包装廃棄物規則（PPWR）の適用が始まりました。<b>技術文書やEU適合宣言書は、すでに求められている義務</b>です。本資料では、役割ごとの義務、2040年までの期限の一覧、部門別のチェックリストを、日本企業の実務の目線でまとめました。</p>
+    </section>
+
+    <aside class="c-form" id="form">
+      <div class="formcard">
+        <div class="fh">
+          <p class="t">必要事項をご入力ください</p>
+          <p class="s">送信後、すぐに資料をご覧いただけます。同じ資料をメールでもお送りします。</p>
+        </div>
+        <div class="fb">
           <div id="hsform">
             <script charset="utf-8" type="text/javascript" src="//js-na2.hsforms.net/forms/embed/v2.js"></script>
             <script>
@@ -353,58 +177,76 @@ details p{font-size:14.5px;color:var(--gray);padding:0 0 16px 24px}
             </script>
           </div>
           <div class="done" id="done">
-            <h3>ありがとうございます</h3>
-            <p>下のボタンから資料をご覧いただけます。<br>同じ資料をメールでもお送りしました。</p>
-            <a class="cta" href="../../assets/dl/EU_PPWR_overview_eitoss.pdf" target="_blank" rel="noopener" data-cta="pdf">資料を見る（PDF）</a>
+            <p class="t">お申し込みありがとうございます</p>
+            <p>下のボタンから資料をご覧いただけます。</p>
+            <a href="../../assets/dl/EU_PPWR_overview_eitoss.pdf" target="_blank" rel="noopener" data-cta="pdf">資料を見る（PDF）</a>
           </div>
         </div>
-        <p class="formnote">ご入力いただいた情報は、<a href="../../privacy-policy/" target="_blank" rel="noopener">プライバシーポリシー</a>に基づき適切に管理いたします。</p>
+        <p class="formnote">ご入力いただいた個人情報は、<a href="../../privacy-policy/" target="_blank" rel="noopener">プライバシーポリシー</a>に基づき適切に取り扱います。</p>
       </div>
-    </div>
+    </aside>
+
+    <section class="c-detail">
+      <h2>この資料でわかること</h2>
+      <ul class="learn">
+        <li>PPWRの全体像と、規則・委任法令・ガイダンス・加盟国措置の4つの階層</li>
+        <li>メーカー・輸入者・producerなど5つの役割と、役割ごとの義務</li>
+        <li>すでに求められている義務（技術文書・EU適合宣言書・producer登録など）</li>
+        <li>リサイクル等級、再生材35%、空きスペース、再使用など包装への要求</li>
+        <li>出荷から顧客到着までの8段階で、どの条文が効くか</li>
+        <li>2026〜2040年の期限の一覧と、実質的な期限（2029年末）</li>
+      </ul>
+
+      <h2>資料の一部をご紹介</h2>
+      <div class="pages">
+        <figure><img src="../../assets/lp-ppwr/p4.jpg" alt="役割と義務のページ" loading="lazy" width="909" height="1287"><figcaption>5つの役割と義務の整理表</figcaption></figure>
+        <figure><img src="../../assets/lp-ppwr/p10.jpg" alt="期限の一覧のページ" loading="lazy" width="909" height="1287"><figcaption>2026〜2040年の期限の一覧</figcaption></figure>
+        <figure><img src="../../assets/lp-ppwr/p9.jpg" alt="8段階の流れのページ" loading="lazy" width="909" height="1287"><figcaption>出荷から顧客到着までの8段階</figcaption></figure>
+        <figure><img src="../../assets/lp-ppwr/p11.jpg" alt="部門別チェックリストのページ" loading="lazy" width="909" height="1287"><figcaption>部門別チェックリスト</figcaption></figure>
+      </div>
+
+      <h2>目次</h2>
+      <ol class="toc">
+        <li><div>PPWRの全体像<span>5つの問いで全体をつかむ／法令の4つの階層</span></div></li>
+        <li><div>役割と義務<span>5つの役割／義務の整理表／すでに求められている義務</span></div></li>
+        <li><div>包装への要求<span>リサイクル等級・再生材／最小化・空きスペース・再使用／表示とEPR</span></div></li>
+        <li><div>よくある誤解<span>社内で見直したい6つの認識</span></div></li>
+        <li><div>実務の流れとスケジュール<span>出荷から顧客到着までの8段階／期限の一覧</span></div></li>
+        <li><div>いま確認すべきこと<span>最優先の3つ／部門別チェックリスト</span></div></li>
+      </ol>
+
+      <h2>こんな方におすすめ</h2>
+      <ul class="rec">
+        <li>EU向けに製品を輸出している製造業の、品質保証・環境・包装設計のご担当者</li>
+        <li>自社がPPWRのどの役割に当たり、何をすべきかを整理したい方</li>
+        <li>技術文書・EU適合宣言書の準備を進める必要がある方</li>
+        <li>包装設計・調達・物流・法務など、部門横断で対応を始めたい方</li>
+      </ul>
+
+      <h2>提供</h2>
+      <p class="about">エイトス株式会社（Cayzen EHS Research）。環境・労働安全衛生の法令調査を支援しています。EU規則の条文や欧州委員会のガイダンスなどの一次情報をもとに、日本企業の実務の目線で整理しています。</p>
+    </section>
+
   </div>
-</section>
 </main>
 
 <footer class="ft">
-  <img src="../../assets/logo-corporate-horizontal-single.svg" alt="エイトス株式会社" width="110" height="22">
-  <p>© Eitoss Inc. All rights reserved.</p>
-  <p style="margin-top:6px"><a href="../../" target="_blank" rel="noopener">会社サイト</a><a href="../../privacy-policy/" target="_blank" rel="noopener">プライバシーポリシー</a></p>
+  <p><a href="../../" target="_blank" rel="noopener">エイトス株式会社</a><a href="../../privacy-policy/" target="_blank" rel="noopener">プライバシーポリシー</a></p>
+  <p style="margin-top:6px">© Eitoss Inc. All rights reserved.</p>
 </footer>
 
-<div class="sticky" id="sticky">
-  <div class="wrap">
-    <img src="../../assets/lp-ppwr/p1.jpg" alt="" width="40">
-    <a class="cta" href="#form" data-cta="sticky">無料で資料をダウンロード</a>
-  </div>
-</div>
+<div class="sticky" id="sticky"><a href="#form" data-cta="sticky">フォームに入力して資料をダウンロード</a></div>
 
 <script>
 (function(){
-  // PC表示ではヒーロー右側に表紙を出し、左カラムの表紙は隠す
-  var mq = window.matchMedia('(min-width:900px)');
-  function layout(){
-    document.querySelector('.book[data-sp]').style.display = mq.matches ? 'none' : '';
-    document.querySelector('.book[data-pc]').style.display = mq.matches ? '' : 'none';
-  }
-  layout(); mq.addEventListener ? mq.addEventListener('change', layout) : mq.addListener(layout);
-
-  // 追従CTA：ヒーローを過ぎたら表示し、フォームが見えている間は隠す
-  var sticky = document.getElementById('sticky');
-  var heroOut = false, formIn = false;
-  function upd(){ sticky.classList.toggle('show', heroOut && !formIn); }
+  // SP：フォームより下までスクロールしたら、フォームへ戻るボタンを表示する
+  var sticky = document.getElementById('sticky'), form = document.getElementById('form');
   if ('IntersectionObserver' in window) {
-    new IntersectionObserver(function(es){ heroOut = !es[0].isIntersecting; upd(); }, { rootMargin: '-120px 0px 0px 0px' }).observe(document.querySelector('.hero .cta'));
-    new IntersectionObserver(function(es){ formIn = es[0].isIntersecting; upd(); }, { threshold: 0.05 }).observe(document.getElementById('form'));
+    new IntersectionObserver(function(es){
+      var e = es[0];
+      sticky.classList.toggle('show', !e.isIntersecting && e.boundingClientRect.top < 0);
+    }).observe(form);
   }
-
-  // 資料プレビューのドット表示
-  var rail = document.getElementById('rail'), dots = document.querySelectorAll('#dots i');
-  rail.addEventListener('scroll', function(){
-    var cards = rail.children, mid = rail.scrollLeft + rail.clientWidth / 2, best = 0, bd = 1e9;
-    for (var i = 0; i < cards.length; i++) { var c = cards[i], d = Math.abs(c.offsetLeft + c.offsetWidth / 2 - mid); if (d < bd) { bd = d; best = i; } }
-    dots.forEach(function(el, i){ el.classList.toggle('on', i === best); });
-  }, { passive: true });
-
   // CTAのクリックをGA4で計測
   document.querySelectorAll('[data-cta]').forEach(function(a){
     a.addEventListener('click', function(){ if (typeof gtag === 'function') gtag('event', 'lp_cta_click', { cta_position: a.dataset.cta, page_type: 'ad_lp' }); });
