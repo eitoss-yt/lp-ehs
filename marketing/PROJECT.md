@@ -117,6 +117,10 @@ Spirの面談予約はGA4では計測できないため、Spir側の予約件数
 
 新しいものを上に追記する。
 
+- 2026-10-23 コラムの計測を追加。記事内の資料CTAの表示（cta_view）とクリック（cta_click）をGA4に送信し、BigQueryに記事別・日別の集計ビュー `eitoss-marketing-510701.marketing.column_kpi_daily` を作成（検索の表示回数・クリック・平均掲載順位、PV、CTA表示・クリック、記事閲覧後の資料請求）（Web/LP）
+- 2026-10-23 PPWRコラム6本を公開準備（PR #106）。本番はコミット済みのcolumn/のHTMLを配信しており、microCMSからの再生成が動いていないことを確認（Web/LP）
+- 2026-10-22 PPWR資料「PPWR規制 対応まとめ」（A4縦13ページ）とDLページ /document/ppwr/ を公開。VercelのProduction Branchを main に変更（Web/LP）
+
 - 2026-10-10 Meta広告の実績を会社のBigQueryにコピーし、9月のベースラインを記録（ISOのCPA 2,113円、EHSのCPA 5,282円）（Web/LP）
 
 - 2026-10-10 Meta広告の実績を、運用者の個人BigQueryからビュー共有で受け取れることを確認（Cayzen AI、531行、費用502,660円）。運用者の元データは閲覧できないことも確認済み（Web/LP）
