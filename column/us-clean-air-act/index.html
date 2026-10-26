@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-199DLM16MH"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-199DLM16MH');
+  window.addEventListener('message', function(e){
+    var d = e.data;
+    if (!d || d.type !== 'hsFormCallback' || d.eventName !== 'onFormSubmitted') return;
+    var isContact = d.id === 'de61c417-f176-4c76-af10-c59923cdfd79';
+    gtag('event', isContact ? 'contact_submit' : 'document_request', { form_id: d.id });
+  });
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>米国大気浄化法（Clean Air Act）とは？2026年の規制見直しと日本企業の対応 - コラム｜エイトス株式会社</title>
+<meta name="description" content="米国の大気浄化法（Clean Air Act）の構成と、工場が受ける許可・排出報告・モニタリングの義務を整理。2026年の危険性認定撤回など規制見直しの確定・訴訟中の区別、州規制、日本企業がやるべきことを解説します。">
+<meta property="og:title" content="米国大気浄化法（Clean Air Act）とは？2026年の規制見直しと日本企業の対応 - コラム｜エイトス株式会社">
+<meta property="og:description" content="米国の大気浄化法（Clean Air Act）の構成と、工場が受ける許可・排出報告・モニタリングの義務を整理。2026年の危険性認定撤回など規制見直しの確定・訴訟中の区別、州規制、日本企業がやるべきことを解説します。">
+<meta property="og:type" content="article">
+<link rel="canonical" href="https://eitoss.com/column/us-clean-air-act/">
+<meta property="og:url" content="https://eitoss.com/column/us-clean-air-act/">
+<link rel="icon" type="image/svg+xml" href='data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"%3E%3Cpath d="M50 8 a42 42 0 1 0 29.7 12.3 l-12.7 12.7 a24 24 0 1 1 -17 -7 z" fill="%23106878"/%3E%3C/svg%3E'>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600;700&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--teal-900:#0b4e5b;--teal-700:#106878;--teal-500:#308098;--teal-300:#58a0b0;--teal-100:#80c0c8;--teal-050:#eef6f7;--ink:#2b3338;--gray:#505050;--line:#dde6e8;--white:#ffffff;--accent:#e8a13d}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:130px}
+body{font-family:"Noto Sans JP",sans-serif;font-size:17.5px;color:var(--ink);line-height:1.8;background:var(--white);-webkit-font-smoothing:antialiased}
+img{max-width:100%;height:auto;display:block}
+h1,h2,h3{letter-spacing:.08em;text-wrap:balance}
+a{color:var(--teal-700);text-decoration:none}
+.container{max-width:1080px;margin:0 auto;padding:0 20px}
+.btn{display:inline-block;padding:16px 30px;border-radius:8px;font-weight:500;font-size:17.5px;text-align:center;transition:transform .15s ease,box-shadow .15s ease;box-shadow:0 4px 14px rgba(16,104,120,.25)}
+.btn::after{content:"›";margin-left:8px;opacity:.55;font-weight:400}
+.btn:hover{transform:translateY(-2px);box-shadow:0 8px 20px rgba(16,104,120,.3)}
+.btn-primary{background:linear-gradient(135deg,var(--teal-500),var(--teal-700));color:#fff}
+.btn-ghost{background:#fff;color:var(--teal-700);box-shadow:0 4px 14px rgba(16,104,120,.18)}
+.btn-sm{padding:10px 22px;font-size:15.5px}
+.brand{display:inline-flex;align-items:center;gap:10px}
+.brand .name{font-weight:500;font-size:18.5px;color:var(--ink)}
+header{position:fixed;top:0;left:0;right:0;background:rgba(255,255,255,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);z-index:100}
+.header-inner{display:flex;align-items:center;justify-content:space-between;height:68px;max-width:1160px;margin:0 auto;padding:0 20px}
+.header-nav{display:flex;align-items:center;gap:10px}
+.header-nav .nav-links{display:flex;gap:22px;margin-right:14px;font-size:15.5px;font-weight:500}
+.header-nav .nav-links a{color:var(--ink)}
+.header-nav .nav-links a:hover{color:var(--teal-700)}
+.page-head{position:relative;overflow:hidden;padding:155px 0 46px;background:radial-gradient(1100px 500px at 85% -10%,rgba(128,192,200,.30),transparent 60%),linear-gradient(180deg,#f6fafb 0%,#eef6f7 100%)}
+.page-head::before{content:attr(data-wm);position:absolute;top:96px;left:50%;transform:translateX(-50%);font-family:"Poppins","Noto Sans JP",sans-serif;font-weight:700;font-size:150px;line-height:1;letter-spacing:.08em;color:rgba(16,104,120,.06);white-space:nowrap;pointer-events:none}
+.page-head .container{position:relative}
+.page-head[data-wm] .container{text-align:center}
+.page-head[data-wm] .breadcrumb{text-align:left}
+.page-head .label{display:none}
+.page-head h1{font-size:35.5px;font-weight:500;line-height:1.5;margin-top:6px}
+.page-head .lead{color:var(--gray);margin-top:10px;font-size:16.5px}
+.breadcrumb{font-size:14px;color:var(--gray);margin-bottom:14px}
+.breadcrumb a{color:var(--gray)}
+.breadcrumb a:hover{color:var(--teal-700)}
+.chip{display:inline-block;background:var(--teal-050);color:var(--teal-700);font-size:13.5px;font-weight:500;padding:4px 14px;border-radius:999px}
+.meta{display:flex;align-items:center;gap:12px;font-size:14.5px;color:var(--gray)}
+main.section{padding:56px 0 80px}
+.col-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
+.col-card{background:#fff;border-radius:14px;overflow:hidden;box-shadow:0 10px 26px rgba(16,104,120,.10);transition:transform .15s ease,box-shadow .15s ease;display:flex;flex-direction:column}
+.col-card:hover{transform:translateY(-4px);box-shadow:0 16px 34px rgba(16,104,120,.16)}
+.col-card .thumb{aspect-ratio:16/9;background:linear-gradient(135deg,var(--teal-050),#dcebee);display:flex;align-items:center;justify-content:center;overflow:hidden}
+.col-card .thumb img{width:100%;height:100%;object-fit:cover}
+.col-card .thumb svg{width:44px;height:44px;opacity:.5}
+.col-card .body{padding:20px 22px 24px;display:flex;flex-direction:column;gap:10px;flex:1}
+.col-card h2{font-size:18px;font-weight:500;line-height:1.55;color:var(--ink)}
+.col-card p.desc{font-size:14.5px;color:var(--gray);flex:1}
+.empty{padding:60px 0;text-align:center;color:var(--gray)}
+article.post{max-width:760px;margin:0 auto}
+.post-head h1{font-size:31.5px;font-weight:500;line-height:1.5;margin:14px 0 16px}
+.post-eyecatch{border-radius:14px;overflow:hidden;box-shadow:0 14px 34px rgba(16,104,120,.14);margin:26px 0 36px}
+.article-body{font-size:17px;overflow-wrap:break-word}
+.article-body a{word-break:break-all}
+.article-body h1,.article-body h2{font-size:25.5px;font-weight:500;line-height:1.5;margin:46px 0 16px;padding-bottom:10px;border-bottom:2px solid var(--teal-050)}
+.article-body h3{font-size:20.5px;font-weight:500;margin:36px 0 12px;padding-left:12px;border-left:4px solid var(--teal-500)}
+.article-body h4{font-size:18px;font-weight:500;margin:28px 0 10px}
+.article-body p{margin:0 0 1.3em}
+.article-body ul,.article-body ol{margin:0 0 1.3em;padding-left:1.5em}
+.article-body li{margin-bottom:.4em}
+.article-body a{text-decoration:underline;text-underline-offset:3px}
+.article-body img{border-radius:10px;margin:8px 0 20px;box-shadow:0 8px 22px rgba(16,104,120,.12)}
+.article-body blockquote{background:var(--teal-050);border-left:4px solid var(--teal-500);border-radius:0 10px 10px 0;padding:16px 20px;margin:0 0 1.3em;color:var(--gray)}
+.article-body blockquote p:last-child{margin-bottom:0}
+.article-body table{border-collapse:collapse;width:100%;margin:0 0 1.3em;font-size:15.5px}
+.article-body th,.article-body td{border:1px solid var(--line);padding:10px 12px;text-align:left}
+.article-body th{background:var(--teal-050);font-weight:500}
+.article-body pre{background:#0f2e33;color:#e8f2f4;border-radius:10px;padding:16px 18px;overflow-x:auto;font-size:14.5px;margin:0 0 1.3em}
+.article-body code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace}
+.post-cta{margin-top:60px;background:linear-gradient(135deg,var(--teal-050),#f6fafb);border-radius:16px;padding:34px 30px;text-align:center;box-shadow:0 10px 26px rgba(16,104,120,.08)}
+.post-cta h2{font-size:21.5px;font-weight:500;margin-bottom:8px}
+.post-cta p{font-size:15.5px;color:var(--gray);margin-bottom:20px}
+.post-cta .btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+.back-link{display:inline-block;margin-top:44px;font-size:15.5px;font-weight:500}
+@media(max-width:900px){
+  .col-grid{grid-template-columns:1fr}
+  .page-head h1{font-size:27.5px}
+  .page-head::before{font-size:64px;top:122px}
+  .post-head h1{font-size:24.5px}
+  .header-nav .nav-links{display:none}
+  .header-nav .btn-sm{padding:9px 14px;font-size:14px;white-space:nowrap}
+  main.section{padding:40px 0 60px}
+}
+header.gh{position:fixed;top:0;left:0;right:0;background:rgba(255,255,255,.96);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);z-index:100}
+.gh-inner{display:flex;justify-content:space-between;align-items:center;gap:24px;max-width:1360px;margin:0 auto;padding:10px 24px}
+.gh-left{display:flex;flex-direction:column;gap:7px;align-items:flex-start}
+.gh-brand img{height:32px;width:auto;display:block}
+.gh-nav{display:flex;align-items:center;gap:26px;font-size:16px;font-weight:500}
+.gh-nav a,.gh-dd-label{color:#1c1c1c;white-space:nowrap;cursor:pointer}
+.gh-nav a:hover,.gh-dd:hover .gh-dd-label{color:var(--teal-700)}
+.gh-dd{position:relative}
+.gh-dd-label::after{content:" ▾";font-size:12.5px}
+.gh-dd-menu{display:none;position:absolute;top:100%;left:-14px;padding-top:12px;z-index:110}
+.gh-dd:hover .gh-dd-menu{display:block}
+.gh-dd-menu .in{background:#fff;border-radius:10px;box-shadow:0 12px 32px rgba(16,104,120,.18);padding:8px;min-width:280px}
+.gh-dd-menu a{display:block;padding:10px 14px;border-radius:8px;font-size:15.5px;white-space:nowrap}
+.gh-dd-menu a:hover{background:var(--teal-050)}
+.gh-right{display:flex;flex-direction:column;align-items:flex-end;gap:7px}
+.gh-tel{font-size:14px;color:#333;white-space:nowrap;line-height:1.3;display:flex;align-items:baseline;gap:6px}
+.gh-tel b{font-size:22.5px;font-weight:500;font-family:"Poppins","Noto Sans JP",sans-serif}
+.gh-tel span{color:#555}
+.gh-actions{display:flex;gap:10px}
+.gh-btn{display:inline-flex;align-items:center;gap:7px;padding:10px 20px;border-radius:6px;color:#fff;font-weight:700;font-size:15.5px;white-space:nowrap;transition:transform .15s ease,filter .15s ease;box-shadow:0 3px 10px rgba(0,0,0,.14)}
+.gh-btn:hover{transform:translateY(-1px);filter:brightness(1.06)}
+.gh-btn svg{width:16px;height:16px}
+.gh-btn-dl{background:#f6941c}
+.gh-btn-tr{background:linear-gradient(90deg,#54a4ec,#2e7fd6)}
+.gh-btn-ct{background:#45a3b4}
+@media(max-width:1180px){.gh-nav{gap:18px;font-size:15px}}
+@media(max-width:1020px){.gh-nav{display:none}.gh-tel{display:none}.gh-left{flex-direction:row;align-items:center}}
+@media(max-width:640px){
+  .gh-inner{padding:10px 14px;gap:10px}
+  .gh-brand img{height:26px}
+  .gh-btn{padding:8px 10px;font-size:13.5px;gap:5px}
+  .gh-btn svg{width:14px;height:14px}
+  .gh-actions{gap:6px}
+}
+
+/* 記事下CTAバナー（画像） */
+.cta-banner-img{display:block;margin-top:60px;border-radius:14px;overflow:hidden;box-shadow:0 14px 34px rgba(16,104,120,.16);transition:transform .15s ease,box-shadow .15s ease}
+.cta-banner-img:hover{transform:translateY(-3px);box-shadow:0 20px 44px rgba(16,104,120,.22)}
+.cta-banner-img img{width:100%;height:auto;display:block;margin:0;border-radius:0;box-shadow:none}
+
+.news-rows{max-width:860px;margin:0 auto}
+.news-row.nr-hidden{display:none}
+.news-more{background:none;border:none;box-shadow:none;padding:6px 10px;font-family:inherit;font-size:16.5px;font-weight:500;color:var(--teal-700);cursor:pointer}
+.news-more:hover{text-decoration:underline;text-underline-offset:4px}
+.news-row{display:flex;gap:22px;align-items:baseline;padding:18px 10px;border-bottom:1px solid var(--line);font-size:16px;color:var(--ink)}
+.news-row time{flex:0 0 auto;color:var(--teal-500);font-weight:500;font-family:"Poppins","Noto Sans JP",sans-serif}
+.news-row:hover .t{color:var(--teal-700)}
+@media(max-width:640px){.news-row{flex-direction:column;gap:4px}}
+
+.chip-open{background:#fdf0dc;color:#b06a00}
+.chip-closed{background:#eceff1;color:#607078}
+.chip-archive{background:var(--teal-700);color:#fff}
+.sem-info{background:var(--teal-050);border-radius:12px;padding:18px 22px;margin:0 0 26px;font-size:16px}
+.sem-section{margin-bottom:56px}
+.sem-section .sem-heading{font-size:23.5px;font-weight:500;padding-left:14px;border-left:5px solid var(--teal-500);margin-bottom:22px}
+.video-wrap{position:relative;padding-top:56.25%;background:#0b4e5b;border-radius:14px;overflow:hidden;box-shadow:0 14px 34px rgba(16,104,120,.16);margin:26px 0 36px}
+.video-wrap iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.sem-apply{margin:30px 0 10px;text-align:center}
+footer{background:var(--teal-900);color:#fff;padding:56px 0 28px}
+.footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:44px;align-items:start;max-width:1080px;margin:0 auto}
+.footer-brand{display:inline-block}
+.footer-brand img{height:38px;width:auto;display:block}
+.footer-addr{font-size:13.5px;color:rgba(255,255,255,.75);margin-top:18px;line-height:2}
+.footer-head{font-size:15.5px;font-weight:500;color:#fff;letter-spacing:.08em;margin-bottom:14px;padding-bottom:8px;border-bottom:1px solid rgba(255,255,255,.2)}
+.footer-col a{display:block;font-size:14.5px;color:rgba(255,255,255,.8);margin-bottom:10px}
+.footer-col a:hover{color:#fff}
+footer .copy{font-size:12.5px;color:rgba(255,255,255,.55);text-align:center;margin-top:44px;padding-top:20px;border-top:1px solid rgba(255,255,255,.12)}
+@media(max-width:860px){.footer-grid{grid-template-columns:1fr 1fr;gap:30px}}
+@media(max-width:560px){.footer-grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+
+<header class="gh">
+  <div class="gh-inner">
+    <div class="gh-left">
+      <a class="gh-brand" href="../../" aria-label="エイトス株式会社"><img src="../../assets/logo-corporate-horizontal-single.svg" alt="eitoss"></a>
+      <nav class="gh-nav">
+        <div class="gh-dd">
+          <span class="gh-dd-label">活用シーン</span>
+          <div class="gh-dd-menu"><div class="in">
+            <a href="../../cayzen/ehsresearch/">Cayzen EHS Research（EHS法令調査代行）</a>
+            <a href="../../cayzen/knowledgemanagement/">Cayzen Knowledge Management（SaaS）</a>
+            <a href="../../cayzen/iso/">Cayzen ISO サポート</a>
+          </div></div>
+        </div>
+        <a href="../../seminar/">セミナー</a>
+        <a href="../../column/">コラム</a>
+        <a href="../../news/">ニュース</a>
+        <a href="../../resources/">お役立ち資料</a>
+        <a href="../../#company">会社概要</a>
+        <a href="../../recruit/">採用情報</a>
+      </nav>
+    </div>
+    <div class="gh-right">
+      <p class="gh-tel">TEL: <b>050-8881-9881</b><span>（平日10:00〜19:00）</span></p>
+      <div class="gh-actions">
+        <a class="gh-btn gh-btn-dl" href="../../document/"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h9l4 4v14H6z"/><path d="M15 3v4h4M9 12h6M9 16h6"/></svg> 資料請求</a>
+        <a class="gh-btn gh-btn-ct" href="../../#contact"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg> お問合せ</a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="page-head">
+  <div class="container">
+    <article class="post post-head-wrap" style="max-width:760px;margin:0 auto">
+      <p class="breadcrumb"><a href="../../">HOME</a> ／ <a href="../">コラム</a> ／ 米国大気浄化法（Clean Air Act）とは？2026年の規制見直しと日本企業の対応</p>
+      <div class="meta"><span class="chip">法令改正</span><time datetime="2026-10-26T08:10:00.000Z">2026.10.26</time></div>
+      <div class="post-head"><h1>米国大気浄化法（Clean Air Act）とは？2026年の規制見直しと日本企業の対応</h1></div>
+    </article>
+  </div>
+</div>
+<main class="section">
+  <div class="container">
+    <article class="post">
+      <div class="post-eyecatch"><img src="/assets/column/us-clean-air-act.jpg?w=1280&fm=webp" alt=""></div>
+      <div class="article-body">
+<p>米国の大気浄化法（Clean Air Act：CAA）は、工場や発電所などの固定発生源、自動車やエンジンなどの移動発生源から出る大気汚染物質を規制する連邦法です。1970年の大改正で現在の骨格ができ、1990年の改正で有害大気汚染物質、酸性雨、運転許可（Title V）、オゾン層保護の仕組みが加わりました。米国に工場や拠点を持つ日本企業はもちろん、エンジンや車両、冷凍空調機器などを米国へ輸出するメーカーにとっても、事業の前提となる法律です。</p>
+<p>2025年以降、トランプ政権下の米国環境保護庁（EPA）は、温室効果ガス（GHG）規制や有害大気汚染物質の基準を中心に大規模な見直しを進めています。2026年2月には、GHG規制の土台だった2009年の「危険性認定（endangerment finding）」の撤回が最終化されました。一方で、多くの見直しは訴訟中か提案段階にとどまり、州独自の規制も残るため、「規制が緩んだから対応は不要」とは言えない状況です。</p>
+<p>本記事では、大気浄化法の構成を整理したうえで、工場が受ける主な義務、2026年10月時点の動向（確定したものと訴訟中・提案中のもの）、カリフォルニア州などの州規制、日本企業が今やるべきことを解説します。</p>
+<blockquote><p>出典：Federal Register「Rescission of the Greenhouse Gas Endangerment Finding and Motor Vehicle Greenhouse Gas Emission Standards」（2026年2月18日） <a href="https://www.federalregister.gov/documents/2026/02/18/2026-03157/rescission-of-the-greenhouse-gas-endangerment-finding-and-motor-vehicle-greenhouse-gas-emission" target="_blank" rel="noopener noreferrer nofollow">https://www.federalregister.gov/documents/2026/02/18/2026-03157/rescission-of-the-greenhouse-gas-endangerment-finding-and-motor-vehicle-greenhouse-gas-emission</a><br>米国会計検査院（GAO）「B-338118」 <a href="https://www.gao.gov/products/b-338118" target="_blank" rel="noopener noreferrer nofollow">https://www.gao.gov/products/b-338118</a><br>EPA「Ethylene Oxide Emissions Standards for Sterilization Facilities: Proposed Reconsideration（2026年3月12日署名）」 <a href="https://www.epa.gov/system/files/documents/2026-03/7055.1-eto-sterilizers-proposal-preamble-20260312_admin_forweb.pdf" target="_blank" rel="noopener noreferrer nofollow">https://www.epa.gov/system/files/documents/2026-03/7055.1-eto-sterilizers-proposal-preamble-20260312_admin_forweb.pdf</a><br>EPA「Technology Transitions Final Rule Fact Sheet（2026年5月）」 <a href="https://www.epa.gov/system/files/documents/2026-05/technology-transitions-final-rule-fact-sheet-updated-may-2026.pdf" target="_blank" rel="noopener noreferrer nofollow">https://www.epa.gov/system/files/documents/2026-05/technology-transitions-final-rule-fact-sheet-updated-may-2026.pdf</a><br>Beveridge &amp; Diamond「EPA Partially Repeals Power Plant Carbon Rules」 <a href="https://www.bdlaw.com/publications/epa-partially-repeals-power-plant-carbon-rules-punts-questions-of-broader-authority-to-new-proposal/" target="_blank" rel="noopener noreferrer nofollow">https://www.bdlaw.com/publications/epa-partially-repeals-power-plant-carbon-rules-punts-questions-of-broader-authority-to-new-proposal/</a><br>Harvard EELP「PM2.5 NAAQS Quick Take」 <a href="https://eelp.law.harvard.edu/wp-content/uploads/2026/07/PM2.5-NAAQS-Quick-Take.pdf" target="_blank" rel="noopener noreferrer nofollow">https://eelp.law.harvard.edu/wp-content/uploads/2026/07/PM2.5-NAAQS-Quick-Take.pdf</a></p></blockquote>
+<p><strong>米国を含む海外拠点の環境・労働安全関連の法令調査を効率化する方法を、資料で紹介しています。</strong></p>
+<p><a href="https://eitoss.com/document/ehs-research/">資料をダウンロードする</a></p>
+<hr>
+
+<h2>米国大気浄化法とは｜連邦が基準を決め、州が実施する仕組み</h2>
+<p>大気浄化法の特徴は、<strong>連邦（EPA）が基準を定め、州が許可や監督などの実務を担う</strong>という役割分担にあります。EPAは全国一律の環境基準や排出基準を定め、州は「州実施計画（State Implementation Plan：SIP）」を作ってEPAの承認を受け、工場への許可発行や立入検査を行います。そのため、同じ連邦法の対象でも、実際の許可条件や手続は州ごとに異なります。</p>
+<p>多くの州では、州の環境部局（例：テキサス州環境品質委員会TCEQ、オハイオ州環境保護庁など）や、さらに下の地域の大気管理区が窓口になります。日本企業の米国工場では、まず「自社の工場を所管しているのはどの機関か」を把握することが出発点です。</p>
+<h3>法律の主な構成</h3>
+<table><tbody>
+<tr><th>区分</th><th>主な仕組み</th><th>工場・製品への影響</th></tr>
+<tr><td>Title I（固定発生源・環境基準）</td><td>NAAQS、SIP、NSPS（108〜111条）、NESHAP（112条）、New Source Review・PSD</td><td>工場の新設・増設の事前許可、設備ごとの排出基準</td></tr>
+<tr><td>Title II（移動発生源）</td><td>自動車・エンジン・燃料の排出基準と認証</td><td>エンジンや車両、建設機械などの輸出時の認証</td></tr>
+<tr><td>Title IV（酸性雨）</td><td>発電所のSO2・NOxの排出量取引</td><td>主に電力事業者</td></tr>
+<tr><td>Title V（運転許可）</td><td>大規模発生源の運転許可の一元化</td><td>許可条件の遵守、年次の遵守証明</td></tr>
+<tr><td>Title VI（成層圏オゾン層保護）</td><td>オゾン層破壊物質の段階的廃止、冷媒管理</td><td>冷凍空調機器の冷媒の取扱い、製品表示</td></tr>
+</tbody></table>
+
+<h2>固定発生源の規制｜NAAQS・NSPS・NESHAP・NSRを区別する</h2>
+<h3>NAAQS（国家環境大気質基準）と州実施計画</h3>
+<p>EPAは、オゾン、粒子状物質（PM2.5・PM10）、一酸化炭素、二酸化硫黄、二酸化窒素、鉛の6物質について、NAAQSを定めています。基準を満たさない地域は「未達成地域（nonattainment area）」に指定され、その地域では新設工場への要求が厳しくなります。工場の立地が未達成地域かどうかで、許可の難易度や排出量の相殺（オフセット）の要否が変わります。</p>
+<h3>NSPS（新規発生源性能基準）</h3>
+<p>111条に基づき、ボイラー、ガスタービン、塗装ライン、石油化学設備など、設備の種類ごとに新設・改造時の排出基準を定めたものです。40 CFR Part 60に業種別のサブパートとして収録されています。</p>
+<h3>NESHAP・MACT（有害大気汚染物質の排出基準）</h3>
+<p>112条は、ベンゼンやエチレンオキシドなど180余りの有害大気汚染物質（HAP）を対象に、業種ごとの排出基準を定めています。年間に単一のHAPを10トン以上、HAP合計で25トン以上排出し得る施設は「主要発生源（major source）」とされ、最大限達成可能な制御技術（MACT）に基づく基準が適用されます。それ未満の「地域発生源（area source）」にも、業種によっては基準があります。基準は40 CFR Part 63に収録されており、塗装、メッキ、金属加工、化学製造など、日本企業の米国工場に関係する業種も多く含まれます。</p>
+<h3>New Source Review（NSR）とPSD</h3>
+<p>工場の新設や、排出量が大きく増える改造を行う前には、着工前の許可（preconstruction permit）が必要です。達成地域では「PSD（重大な悪化の防止）」許可として最善の利用可能な制御技術（BACT）の導入が、未達成地域では「Nonattainment NSR」として最も低い達成可能な排出率（LAER）と排出量のオフセットが求められます。小規模な案件でも、多くの州は独自の「マイナーNSR」許可を設けています。設備投資の計画段階で許可の要否を判断しないと、着工の遅れにつながります。</p>
+
+<h2>Title V運転許可と、工場が受ける主な義務</h2>
+<p>Title Vは、一定規模以上の工場（原則として、いずれかの大気汚染物質の潜在排出量が年100トン以上の施設や、HAPの主要発生源など）に対して、適用されるすべての大気規制を1つの運転許可にまとめる制度です。許可の有効期間は原則5年で、更新が必要です。小規模な工場でも、州の許可（State Operating Permit）や、排出量を一定以下に抑える条件付きの許可（Synthetic Minor）が必要になることがあります。</p>
+<table><tbody>
+<tr><th>義務</th><th>主な内容</th><th>実務での注意点</th></tr>
+<tr><td>許可</td><td>着工前許可（NSR・PSD・マイナーNSR）、運転許可（Title V・州許可）</td><td>設備の追加・変更のたびに、許可の変更が必要か判断する</td></tr>
+<tr><td>排出報告</td><td>州への年次排出量インベントリ、Title Vの半期報告・年次遵守証明、EPAの温室効果ガス報告（GHGRP）</td><td>Title Vの遵守証明は責任者（Responsible Official）の署名が必要</td></tr>
+<tr><td>モニタリング・記録</td><td>連続排出監視（CEMS）、運転パラメータの監視、性能試験、漏えい検知と補修（LDAR）、記録の保存（原則5年）</td><td>記録の欠落自体が違反になる</td></tr>
+<tr><td>逸脱の報告</td><td>許可条件からの逸脱や故障時の排出の報告</td><td>報告期限は州・許可条件により異なる</td></tr>
+</tbody></table>
+<p>違反した場合、EPAや州による行政命令、民事制裁金（インフレ調整により1違反1日あたり10万ドルを超える水準）、悪質な場合は刑事罰の対象になります。大気浄化法には市民訴訟の規定もあり、環境団体が直接企業を訴えることもできます。米国子会社の買収時には、許可の遵守状況がデューデリジェンスの重要項目になります。</p>
+
+<a class="cta-banner-img" href="../../document/ehs-research/">
+        <img src="../../assets/column_bnr_ehs.jpg" alt="環境・労働安全関連の法令対応のお悩み、AI調査代行でスピード解決！最大95%工数削減｜詳しくはこちら" loading="lazy" width="1080" height="300">
+      </a>
+<h2>移動発生源とオゾン層保護｜輸出メーカーに関係する部分</h2>
+<h3>Title II：エンジン・車両の認証</h3>
+<p>米国で販売する自動車、二輪車、汎用エンジン、発電機、建設機械・農業機械用のエンジンなどは、EPAの排出基準を満たし、適合証明（Certificate of Conformity）を取得する必要があります。カリフォルニア州で販売する場合は、さらにCARB（カリフォルニア州大気資源局）の認証（Executive Order）が必要になる製品も多くあります。工場の立地がなくても、<strong>製品を輸出するだけで対象になる</strong>点に注意が必要です。</p>
+<h3>Title VIとAIM法：冷媒とHFC</h3>
+<p>Title VIは、オゾン層破壊物質（CFC、HCFCなど）の生産・輸入の段階的廃止や、冷凍空調機器の冷媒の回収・漏えい管理（608条）を定めています。代替フロンであるHFCは、2020年制定の「米国イノベーション・製造法（AIM法）」に基づき、2036年までに基準量の85%を削減する段階的削減が進められています。AIM法は大気浄化法とは別の法律ですが、執行には大気浄化法の規定が準用されており、実務上は一体として扱われます。</p>
+<p>AIM法の「技術移行（Technology Transitions）規則」は、機器の分野ごとに地球温暖化係数（GWP）の上限と期限を定め、該当するHFCを使う製品の製造・輸入を制限するものです。EPAは2026年5月に同規則の改正を最終化し、スーパーマーケット用冷凍システム、冷蔵倉庫、半導体製造用の工業プロセス冷凍、家庭用・小規模業務用空調などの一部で期限の延長や要件の緩和を行いました。ただし規制そのものは残っているため、空調・冷凍機器メーカーは分野ごとの最新の期限を確認する必要があります。</p>
+
+<hr>
+<p><strong>米国の連邦法と州法をまとめて調査する方法を、資料で紹介しています。</strong></p>
+<p><a href="https://eitoss.com/document/ehs-research/">資料をダウンロードする</a></p>
+<hr>
+
+<h2>2025〜2026年の動向｜確定したものと、訴訟中・提案中のもの</h2>
+<p>トランプ政権下のEPAは、2025年3月に多数の規制の見直しを公表し、2026年にかけて順次手続を進めています。2026年10月時点の主な動きを、手続の段階ごとに整理すると次のとおりです。</p>
+<table><tbody>
+<tr><th>項目</th><th>2026年10月時点の状況</th><th>段階</th></tr>
+<tr><td>2009年の危険性認定の撤回と、自動車のGHG排出基準の廃止</td><td>2026年2月18日に連邦官報で公布、4月20日に発効。州・自治体や環境団体がD.C.巡回区控訴裁判所に提訴</td><td>最終化済み・訴訟中</td></tr>
+<tr><td>発電所のGHG基準（2024年）の撤回</td><td>2026年9月に大部分の撤回を最終化し、11月16日に発効予定とされる。残りの規制をすべて撤回する追加提案は、11月2日までが意見募集期間。訴訟も提起済み</td><td>一部最終化・一部提案中</td></tr>
+<tr><td>エチレンオキシド（EtO）商業用滅菌施設のNESHAP（2024年）</td><td>2026年3月に、リスクに基づく基準の撤回などを含む見直し案を公表。最終規則は確認できていない</td><td>提案中</td></tr>
+<tr><td>化学製造業のNESHAP（HON）など</td><td>見直し対象に指定。一部の化学工場には、大統領による一時的な適用免除が出されたと報じられている</td><td>見直し中</td></tr>
+<tr><td>PM2.5のNAAQS（2024年に年平均9μg/m³へ強化）</td><td>EPAは取り消しを求めたが、D.C.巡回区控訴裁判所が2026年6月に基準を維持。連邦最高裁への上訴申立てが出ている</td><td>基準は有効・係争中</td></tr>
+<tr><td>温室効果ガス報告制度（GHGRP）</td><td>2025年9月に多くの業種の報告義務を廃止する案を公表。2025年分の報告期限は延期が続いている</td><td>提案中</td></tr>
+<tr><td>NSRの「着工」の定義の見直し</td><td>2026年5月に、排出を伴わない部分の工事を許可前に始められるようにする案を公表</td><td>提案中</td></tr>
+</tbody></table>
+<h3>危険性認定の撤回が意味すること</h3>
+<p>2009年の危険性認定は、GHGが公衆の健康と福祉を脅かすとEPAが認定したもので、自動車のGHG規制の法的な根拠でした。今回撤回されたのは<strong>新車・エンジンに関する認定</strong>であり、固定発生源や航空機に関する別の認定は、この規則では撤回されていません。ただし、発電所については別の手続で撤回が進んでおり、GHG規制全体が縮小する方向にあることは確かです。いずれも訴訟の行方次第で覆る可能性があり、最終的には連邦最高裁まで争われるとの見方もあります。</p>
+<h3>PFASと大気規制</h3>
+<p>PFASについては、2026年10月時点で大気浄化法上の有害大気汚染物質（HAP）には指定されていません。2024年8月にノースカロライナ州など3州が、PFOA、PFOS、PFNA、GenXの4物質をHAPに追加するようEPAに請願していますが、EPAが判断を示したことは確認できていません。現行の規制としては、クロムメッキのNESHAP（40 CFR Part 63 Subpart N）でPFOSを含むミスト抑制剤の使用が禁止されています。PFASは大気よりも、水質や有害物質規制法（TSCA）の報告義務の側で動きが大きい分野です。EUのPFAS規制については<a href="https://eitoss.com/column/eu-pfas-restriction/">EUのPFAS規制の解説</a>をご覧ください。</p>
+
+<h2>州の規制｜連邦の緩和がそのまま現場に届くとは限らない</h2>
+<p>大気浄化法は、州が連邦より厳しい規制を設けることを認めています。そのため、連邦の基準が緩和されても、州の規制やSIPに組み込まれた要件、すでに発行された許可の条件は、それだけでは変わりません。</p>
+<p>代表例がカリフォルニア州です。CARBは自動車の排出基準について、連邦の適用除外（waiver）を受けて独自の基準を定めてきましたが、2025年6月に議会審査法（CRA）に基づく決議で、新車の販売をゼロエミッション車へ移行させる「Advanced Clean Cars II」や、トラックに関する規則のwaiverが無効とされました。カリフォルニア州などはこれを違法として提訴しており、2026年10月時点で判決は確認できていません。CARBは一部の規則を廃止する一方、他の規則は訴訟中でも執行を続けているとされます。</p>
+<p>工場の規制でも、カリフォルニア州の南海岸大気質管理局（SCAQMD）のような地域の大気管理区は、塗料や溶剤のVOC含有量、ボイラーのNOx基準などで連邦より厳しい規則を持っています。また、ニューヨーク州やワシントン州などは、独自のGHG排出量取引制度や報告制度を運用しています。米国の拠点では、<strong>連邦・州・地域の3層</strong>で規制を確認する必要があります。</p>
+
+<h2>日本企業が今やるべきこと</h2>
+<h3>1. 拠点ごとの許可と義務を棚卸しする</h3>
+<p>米国の工場・倉庫・研究所ごとに、保有している許可（Title V、州許可、マイナーNSR）、適用されるNSPS・NESHAPのサブパート、報告・モニタリングの期限を一覧にします。現地任せになっている場合は、日本本社でも状況を把握できるようにしておくことが重要です。</p>
+<h3>2. 規制の見直しは「確定するまで現行のルールで対応」</h3>
+<p>EPAの見直し案が出ていても、最終規則が発効するまでは現行の基準が有効です。最終化された規則も、訴訟で取り消されれば元に戻る可能性があります。設備投資やモニタリングの停止は、規則の発効と訴訟の状況を確認してから判断し、許可条件に残っている要件は許可の変更手続を経るまで守る必要があります。</p>
+<h3>3. 設備投資の計画段階で許可の要否を確認する</h3>
+<p>米国工場での増産や新ラインの導入は、NSR・PSDの対象になるかで、スケジュールが数か月から1年以上変わります。立地が未達成地域かどうか、PM2.5の基準強化による地域指定の変更がないかも確認します。</p>
+<h3>4. 輸出製品の認証と冷媒を確認する</h3>
+<p>エンジンや車両、機械を輸出するメーカーは、EPAとCARBの認証の要否を製品ごとに確認します。冷凍空調機器やその部品を扱う場合は、AIM法の技術移行規則の分野別の期限と、改正後の要件を確認します。</p>
+<h3>5. 顧客・投資家向けのGHG開示とは切り分ける</h3>
+<p>連邦のGHG規制や報告制度が縮小しても、カリフォルニア州の気候関連開示法や、取引先・投資家からのGHG排出量の開示要請は別に存在します。規制対応と開示対応を混同せず、排出量の算定体制は維持しておくことが現実的です。</p>
+<h3>EUの大気規制との違い</h3>
+<p>EUでは、産業排出指令（IED 2.0、Directive (EU) 2024/1785）が、大規模施設の統合的な許可制度の中で大気・水・廃棄物をまとめて扱い、BAT（利用可能な最良の技術）に基づく排出レベルを許可条件に反映させます。米国は大気浄化法が大気だけを対象とし、業種別の連邦基準と州の許可が組み合わさる点が異なります。欧州と米国の両方に拠点がある企業は、同じ設備でも求められる考え方が違うことを前提に管理する必要があります。欧州の化学物質規制については<a href="https://eitoss.com/column/eu-reach-regulation/">REACH規則の解説</a>もご覧ください。</p>
+
+<h2>よくある質問</h2>
+<h3>Q. 米国に工場がなく、製品を輸出しているだけでも大気浄化法は関係しますか？</h3>
+<p>A. 関係する場合があります。エンジン、車両、建設機械、発電機などはTitle IIの排出基準と認証の対象です。冷凍空調機器はTitle VIやAIM法の冷媒規制の対象になります。</p>
+<h3>Q. 危険性認定が撤回されたので、工場のGHG対応は不要になりましたか？</h3>
+<p>A. いいえ。撤回されたのは新車・エンジンに関する認定で、訴訟も続いています。発電所以外の工場にはもともと連邦のGHG排出基準は限られていますが、州の制度や取引先からの開示要請は残っています。</p>
+<h3>Q. EPAが基準の見直し案を出した場合、すぐに対応を緩めてよいですか？</h3>
+<p>A. 緩めるべきではありません。提案の段階では現行の基準が有効です。最終規則が発効し、自社の許可条件が変更されるまでは、現行の義務を守る必要があります。</p>
+<h3>Q. Title V許可が必要かどうかは、どう判断しますか？</h3>
+<p>A. 実際の排出量ではなく、設備の能力から見た潜在排出量で判断するのが原則です。基準の数値は汚染物質や地域（未達成地域かどうか）によって異なるため、所管の州機関の基準を確認します。</p>
+<h3>Q. 州ごとの規制は、どこまで確認すればよいですか？</h3>
+<p>A. 拠点がある州の環境部局の規則と、その地域の大気管理区の規則までを確認します。カリフォルニア州のように地域の規則が厳しい州では、地域の規則が実務上もっとも重要になります。</p>
+
+<h2>まとめ</h2>
+<p>米国の大気浄化法は、連邦が定めるNAAQS・NSPS・NESHAPなどの基準と、州が担う許可・監督の組み合わせで成り立っています。工場には着工前許可と運転許可、排出報告、モニタリングと記録の義務があり、輸出製品にもエンジンの認証や冷媒規制が及びます。2026年には危険性認定の撤回が発効し、発電所のGHG規制の撤回も進んでいますが、多くの見直しは訴訟中か提案段階で、州の規制も残っています。確定した変更と未確定の変更を区別し、拠点ごとの許可と義務を把握しておくことが、日本企業にとって最も確実な対応です。</p>
+<p>エイトスのCayzen EHS Researchでは、米国の連邦法・州法を含む海外拠点の環境・労働安全関連の法令調査を代行しています。社内での検討にお役立てください。</p>
+<p><strong>米国を含む海外拠点の環境・労働安全関連の法令調査を効率化する方法を、資料で紹介しています。</strong></p>
+<p><a href="https://eitoss.com/document/ehs-research/">資料をダウンロードする</a></p>
+
+      </div>
+      <a class="cta-banner-img" href="../../document/ehs-research/">
+        <img src="../../assets/column_bnr_ehs.jpg" alt="環境・労働安全関連の法令対応のお悩み、AI調査代行でスピード解決！最大95%工数削減｜詳しくはこちら" loading="lazy" width="1080" height="300">
+      </a>
+      <a class="back-link" href="../">← コラム一覧へ戻る</a>
+    </article>
+  </div>
+</main>
+<script>
+(function(){
+  if (typeof gtag !== 'function') return;
+  var article = location.pathname.split('/')[2] || '';
+  var links = document.querySelectorAll('article.post a[href*="/document/"]');
+  var io = 'IntersectionObserver' in window ? new IntersectionObserver(function(es){
+    es.forEach(function(e){
+      if (!e.isIntersecting) return;
+      gtag('event', 'cta_view', { cta_position: e.target.dataset.ctaPos, article_id: article, link_url: e.target.href });
+      io.unobserve(e.target);
+    });
+  }, { threshold: 0.5 }) : null;
+  links.forEach(function(a){
+    var pos = a.classList.contains('cta-banner-img') ? (a.closest('.article-body') ? 'banner_mid' : 'banner_bottom') : 'text_link';
+    a.dataset.ctaPos = pos;
+    a.addEventListener('click', function(){
+      gtag('event', 'cta_click', { cta_position: pos, article_id: article, link_url: a.href });
+    });
+    if (io) io.observe(a);
+  });
+})();
+</script>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand"><img src="../../assets/logo-corporate-horizontal-white.png" alt="eitoss"></div>
+        <p class="footer-addr">本社: 〒471-0031<br>愛知県豊田市小坂本町1-5-5 YAMATO BLDG2F<br>営業拠点: 〒170-6012<br>東京都豊島区東池袋3-1-1<br>サンシャイン60 12F</p>
+      </div>
+      <nav class="footer-col">
+        <p class="footer-head">サービス</p>
+        <a href="../../cayzen/ehsresearch/">Cayzen EHS Research</a>
+        <a href="../../cayzen/knowledgemanagement/">Cayzen Knowledge Management</a>
+        <a href="../../cayzen/iso/">Cayzen ISO サポート</a>
+      </nav>
+      <nav class="footer-col">
+        <p class="footer-head">コンテンツ</p>
+        <a href="../../seminar/">セミナー</a>
+        <a href="../../column/">コラム</a>
+        <a href="../../news/">ニュース</a>
+        <a href="../../document/">資料ダウンロード</a>
+        <a href="../../resources/">お役立ち資料</a>
+      </nav>
+      <nav class="footer-col">
+        <p class="footer-head">企業情報</p>
+        <a href="../../#company">会社概要</a>
+        <a href="../../recruit/">採用情報</a>
+        <a href="../../#contact">お問い合わせ</a>
+        <a href="/privacy-policy/">プライバシーポリシー</a>
+        <a href="/security-policy/">情報セキュリティ方針</a>
+        <a href="/terms/">利用規約</a>
+      </nav>
+    </div>
+    <p class="copy">© Eitoss Inc. All rights reserved.</p>
+  </div>
+</footer>
+
+</body>
+</html>

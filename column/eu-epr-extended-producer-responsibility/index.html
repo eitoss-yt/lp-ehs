@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-199DLM16MH"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-199DLM16MH');
+  window.addEventListener('message', function(e){
+    var d = e.data;
+    if (!d || d.type !== 'hsFormCallback' || d.eventName !== 'onFormSubmitted') return;
+    var isContact = d.id === 'de61c417-f176-4c76-af10-c59923cdfd79';
+    gtag('event', isContact ? 'contact_submit' : 'document_request', { form_id: d.id });
+  });
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EUのEPR（拡大生産者責任）とは？包装・電池・WEEE・繊維の国別登録と日本企業の対応 - コラム｜エイトス株式会社</title>
+<meta name="description" content="EUのEPR（拡大生産者責任）を、廃棄物枠組み指令の共通ルールと包装・電気電子機器・電池・繊維の品目別制度で整理。ドイツやフランスの国別登録、マーケットプレイスの確認義務、日本企業がやるべき対応を2026年10月時点で解説します。">
+<meta property="og:title" content="EUのEPR（拡大生産者責任）とは？包装・電池・WEEE・繊維の国別登録と日本企業の対応 - コラム｜エイトス株式会社">
+<meta property="og:description" content="EUのEPR（拡大生産者責任）を、廃棄物枠組み指令の共通ルールと包装・電気電子機器・電池・繊維の品目別制度で整理。ドイツやフランスの国別登録、マーケットプレイスの確認義務、日本企業がやるべき対応を2026年10月時点で解説します。">
+<meta property="og:type" content="article">
+<link rel="canonical" href="https://eitoss.com/column/eu-epr-extended-producer-responsibility/">
+<meta property="og:url" content="https://eitoss.com/column/eu-epr-extended-producer-responsibility/">
+<link rel="icon" type="image/svg+xml" href='data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"%3E%3Cpath d="M50 8 a42 42 0 1 0 29.7 12.3 l-12.7 12.7 a24 24 0 1 1 -17 -7 z" fill="%23106878"/%3E%3C/svg%3E'>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600;700&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--teal-900:#0b4e5b;--teal-700:#106878;--teal-500:#308098;--teal-300:#58a0b0;--teal-100:#80c0c8;--teal-050:#eef6f7;--ink:#2b3338;--gray:#505050;--line:#dde6e8;--white:#ffffff;--accent:#e8a13d}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:130px}
+body{font-family:"Noto Sans JP",sans-serif;font-size:17.5px;color:var(--ink);line-height:1.8;background:var(--white);-webkit-font-smoothing:antialiased}
+img{max-width:100%;height:auto;display:block}
+h1,h2,h3{letter-spacing:.08em;text-wrap:balance}
+a{color:var(--teal-700);text-decoration:none}
+.container{max-width:1080px;margin:0 auto;padding:0 20px}
+.btn{display:inline-block;padding:16px 30px;border-radius:8px;font-weight:500;font-size:17.5px;text-align:center;transition:transform .15s ease,box-shadow .15s ease;box-shadow:0 4px 14px rgba(16,104,120,.25)}
+.btn::after{content:"›";margin-left:8px;opacity:.55;font-weight:400}
+.btn:hover{transform:translateY(-2px);box-shadow:0 8px 20px rgba(16,104,120,.3)}
+.btn-primary{background:linear-gradient(135deg,var(--teal-500),var(--teal-700));color:#fff}
+.btn-ghost{background:#fff;color:var(--teal-700);box-shadow:0 4px 14px rgba(16,104,120,.18)}
+.btn-sm{padding:10px 22px;font-size:15.5px}
+.brand{display:inline-flex;align-items:center;gap:10px}
+.brand .name{font-weight:500;font-size:18.5px;color:var(--ink)}
+header{position:fixed;top:0;left:0;right:0;background:rgba(255,255,255,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);z-index:100}
+.header-inner{display:flex;align-items:center;justify-content:space-between;height:68px;max-width:1160px;margin:0 auto;padding:0 20px}
+.header-nav{display:flex;align-items:center;gap:10px}
+.header-nav .nav-links{display:flex;gap:22px;margin-right:14px;font-size:15.5px;font-weight:500}
+.header-nav .nav-links a{color:var(--ink)}
+.header-nav .nav-links a:hover{color:var(--teal-700)}
+.page-head{position:relative;overflow:hidden;padding:155px 0 46px;background:radial-gradient(1100px 500px at 85% -10%,rgba(128,192,200,.30),transparent 60%),linear-gradient(180deg,#f6fafb 0%,#eef6f7 100%)}
+.page-head::before{content:attr(data-wm);position:absolute;top:96px;left:50%;transform:translateX(-50%);font-family:"Poppins","Noto Sans JP",sans-serif;font-weight:700;font-size:150px;line-height:1;letter-spacing:.08em;color:rgba(16,104,120,.06);white-space:nowrap;pointer-events:none}
+.page-head .container{position:relative}
+.page-head[data-wm] .container{text-align:center}
+.page-head[data-wm] .breadcrumb{text-align:left}
+.page-head .label{display:none}
+.page-head h1{font-size:35.5px;font-weight:500;line-height:1.5;margin-top:6px}
+.page-head .lead{color:var(--gray);margin-top:10px;font-size:16.5px}
+.breadcrumb{font-size:14px;color:var(--gray);margin-bottom:14px}
+.breadcrumb a{color:var(--gray)}
+.breadcrumb a:hover{color:var(--teal-700)}
+.chip{display:inline-block;background:var(--teal-050);color:var(--teal-700);font-size:13.5px;font-weight:500;padding:4px 14px;border-radius:999px}
+.meta{display:flex;align-items:center;gap:12px;font-size:14.5px;color:var(--gray)}
+main.section{padding:56px 0 80px}
+.col-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
+.col-card{background:#fff;border-radius:14px;overflow:hidden;box-shadow:0 10px 26px rgba(16,104,120,.10);transition:transform .15s ease,box-shadow .15s ease;display:flex;flex-direction:column}
+.col-card:hover{transform:translateY(-4px);box-shadow:0 16px 34px rgba(16,104,120,.16)}
+.col-card .thumb{aspect-ratio:16/9;background:linear-gradient(135deg,var(--teal-050),#dcebee);display:flex;align-items:center;justify-content:center;overflow:hidden}
+.col-card .thumb img{width:100%;height:100%;object-fit:cover}
+.col-card .thumb svg{width:44px;height:44px;opacity:.5}
+.col-card .body{padding:20px 22px 24px;display:flex;flex-direction:column;gap:10px;flex:1}
+.col-card h2{font-size:18px;font-weight:500;line-height:1.55;color:var(--ink)}
+.col-card p.desc{font-size:14.5px;color:var(--gray);flex:1}
+.empty{padding:60px 0;text-align:center;color:var(--gray)}
+article.post{max-width:760px;margin:0 auto}
+.post-head h1{font-size:31.5px;font-weight:500;line-height:1.5;margin:14px 0 16px}
+.post-eyecatch{border-radius:14px;overflow:hidden;box-shadow:0 14px 34px rgba(16,104,120,.14);margin:26px 0 36px}
+.article-body{font-size:17px;overflow-wrap:break-word}
+.article-body a{word-break:break-all}
+.article-body h1,.article-body h2{font-size:25.5px;font-weight:500;line-height:1.5;margin:46px 0 16px;padding-bottom:10px;border-bottom:2px solid var(--teal-050)}
+.article-body h3{font-size:20.5px;font-weight:500;margin:36px 0 12px;padding-left:12px;border-left:4px solid var(--teal-500)}
+.article-body h4{font-size:18px;font-weight:500;margin:28px 0 10px}
+.article-body p{margin:0 0 1.3em}
+.article-body ul,.article-body ol{margin:0 0 1.3em;padding-left:1.5em}
+.article-body li{margin-bottom:.4em}
+.article-body a{text-decoration:underline;text-underline-offset:3px}
+.article-body img{border-radius:10px;margin:8px 0 20px;box-shadow:0 8px 22px rgba(16,104,120,.12)}
+.article-body blockquote{background:var(--teal-050);border-left:4px solid var(--teal-500);border-radius:0 10px 10px 0;padding:16px 20px;margin:0 0 1.3em;color:var(--gray)}
+.article-body blockquote p:last-child{margin-bottom:0}
+.article-body table{border-collapse:collapse;width:100%;margin:0 0 1.3em;font-size:15.5px}
+.article-body th,.article-body td{border:1px solid var(--line);padding:10px 12px;text-align:left}
+.article-body th{background:var(--teal-050);font-weight:500}
+.article-body pre{background:#0f2e33;color:#e8f2f4;border-radius:10px;padding:16px 18px;overflow-x:auto;font-size:14.5px;margin:0 0 1.3em}
+.article-body code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace}
+.post-cta{margin-top:60px;background:linear-gradient(135deg,var(--teal-050),#f6fafb);border-radius:16px;padding:34px 30px;text-align:center;box-shadow:0 10px 26px rgba(16,104,120,.08)}
+.post-cta h2{font-size:21.5px;font-weight:500;margin-bottom:8px}
+.post-cta p{font-size:15.5px;color:var(--gray);margin-bottom:20px}
+.post-cta .btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+.back-link{display:inline-block;margin-top:44px;font-size:15.5px;font-weight:500}
+@media(max-width:900px){
+  .col-grid{grid-template-columns:1fr}
+  .page-head h1{font-size:27.5px}
+  .page-head::before{font-size:64px;top:122px}
+  .post-head h1{font-size:24.5px}
+  .header-nav .nav-links{display:none}
+  .header-nav .btn-sm{padding:9px 14px;font-size:14px;white-space:nowrap}
+  main.section{padding:40px 0 60px}
+}
+header.gh{position:fixed;top:0;left:0;right:0;background:rgba(255,255,255,.96);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);z-index:100}
+.gh-inner{display:flex;justify-content:space-between;align-items:center;gap:24px;max-width:1360px;margin:0 auto;padding:10px 24px}
+.gh-left{display:flex;flex-direction:column;gap:7px;align-items:flex-start}
+.gh-brand img{height:32px;width:auto;display:block}
+.gh-nav{display:flex;align-items:center;gap:26px;font-size:16px;font-weight:500}
+.gh-nav a,.gh-dd-label{color:#1c1c1c;white-space:nowrap;cursor:pointer}
+.gh-nav a:hover,.gh-dd:hover .gh-dd-label{color:var(--teal-700)}
+.gh-dd{position:relative}
+.gh-dd-label::after{content:" ▾";font-size:12.5px}
+.gh-dd-menu{display:none;position:absolute;top:100%;left:-14px;padding-top:12px;z-index:110}
+.gh-dd:hover .gh-dd-menu{display:block}
+.gh-dd-menu .in{background:#fff;border-radius:10px;box-shadow:0 12px 32px rgba(16,104,120,.18);padding:8px;min-width:280px}
+.gh-dd-menu a{display:block;padding:10px 14px;border-radius:8px;font-size:15.5px;white-space:nowrap}
+.gh-dd-menu a:hover{background:var(--teal-050)}
+.gh-right{display:flex;flex-direction:column;align-items:flex-end;gap:7px}
+.gh-tel{font-size:14px;color:#333;white-space:nowrap;line-height:1.3;display:flex;align-items:baseline;gap:6px}
+.gh-tel b{font-size:22.5px;font-weight:500;font-family:"Poppins","Noto Sans JP",sans-serif}
+.gh-tel span{color:#555}
+.gh-actions{display:flex;gap:10px}
+.gh-btn{display:inline-flex;align-items:center;gap:7px;padding:10px 20px;border-radius:6px;color:#fff;font-weight:700;font-size:15.5px;white-space:nowrap;transition:transform .15s ease,filter .15s ease;box-shadow:0 3px 10px rgba(0,0,0,.14)}
+.gh-btn:hover{transform:translateY(-1px);filter:brightness(1.06)}
+.gh-btn svg{width:16px;height:16px}
+.gh-btn-dl{background:#f6941c}
+.gh-btn-tr{background:linear-gradient(90deg,#54a4ec,#2e7fd6)}
+.gh-btn-ct{background:#45a3b4}
+@media(max-width:1180px){.gh-nav{gap:18px;font-size:15px}}
+@media(max-width:1020px){.gh-nav{display:none}.gh-tel{display:none}.gh-left{flex-direction:row;align-items:center}}
+@media(max-width:640px){
+  .gh-inner{padding:10px 14px;gap:10px}
+  .gh-brand img{height:26px}
+  .gh-btn{padding:8px 10px;font-size:13.5px;gap:5px}
+  .gh-btn svg{width:14px;height:14px}
+  .gh-actions{gap:6px}
+}
+
+/* 記事下CTAバナー（画像） */
+.cta-banner-img{display:block;margin-top:60px;border-radius:14px;overflow:hidden;box-shadow:0 14px 34px rgba(16,104,120,.16);transition:transform .15s ease,box-shadow .15s ease}
+.cta-banner-img:hover{transform:translateY(-3px);box-shadow:0 20px 44px rgba(16,104,120,.22)}
+.cta-banner-img img{width:100%;height:auto;display:block;margin:0;border-radius:0;box-shadow:none}
+
+.news-rows{max-width:860px;margin:0 auto}
+.news-row.nr-hidden{display:none}
+.news-more{background:none;border:none;box-shadow:none;padding:6px 10px;font-family:inherit;font-size:16.5px;font-weight:500;color:var(--teal-700);cursor:pointer}
+.news-more:hover{text-decoration:underline;text-underline-offset:4px}
+.news-row{display:flex;gap:22px;align-items:baseline;padding:18px 10px;border-bottom:1px solid var(--line);font-size:16px;color:var(--ink)}
+.news-row time{flex:0 0 auto;color:var(--teal-500);font-weight:500;font-family:"Poppins","Noto Sans JP",sans-serif}
+.news-row:hover .t{color:var(--teal-700)}
+@media(max-width:640px){.news-row{flex-direction:column;gap:4px}}
+
+.chip-open{background:#fdf0dc;color:#b06a00}
+.chip-closed{background:#eceff1;color:#607078}
+.chip-archive{background:var(--teal-700);color:#fff}
+.sem-info{background:var(--teal-050);border-radius:12px;padding:18px 22px;margin:0 0 26px;font-size:16px}
+.sem-section{margin-bottom:56px}
+.sem-section .sem-heading{font-size:23.5px;font-weight:500;padding-left:14px;border-left:5px solid var(--teal-500);margin-bottom:22px}
+.video-wrap{position:relative;padding-top:56.25%;background:#0b4e5b;border-radius:14px;overflow:hidden;box-shadow:0 14px 34px rgba(16,104,120,.16);margin:26px 0 36px}
+.video-wrap iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.sem-apply{margin:30px 0 10px;text-align:center}
+footer{background:var(--teal-900);color:#fff;padding:56px 0 28px}
+.footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:44px;align-items:start;max-width:1080px;margin:0 auto}
+.footer-brand{display:inline-block}
+.footer-brand img{height:38px;width:auto;display:block}
+.footer-addr{font-size:13.5px;color:rgba(255,255,255,.75);margin-top:18px;line-height:2}
+.footer-head{font-size:15.5px;font-weight:500;color:#fff;letter-spacing:.08em;margin-bottom:14px;padding-bottom:8px;border-bottom:1px solid rgba(255,255,255,.2)}
+.footer-col a{display:block;font-size:14.5px;color:rgba(255,255,255,.8);margin-bottom:10px}
+.footer-col a:hover{color:#fff}
+footer .copy{font-size:12.5px;color:rgba(255,255,255,.55);text-align:center;margin-top:44px;padding-top:20px;border-top:1px solid rgba(255,255,255,.12)}
+@media(max-width:860px){.footer-grid{grid-template-columns:1fr 1fr;gap:30px}}
+@media(max-width:560px){.footer-grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+
+<header class="gh">
+  <div class="gh-inner">
+    <div class="gh-left">
+      <a class="gh-brand" href="../../" aria-label="エイトス株式会社"><img src="../../assets/logo-corporate-horizontal-single.svg" alt="eitoss"></a>
+      <nav class="gh-nav">
+        <div class="gh-dd">
+          <span class="gh-dd-label">活用シーン</span>
+          <div class="gh-dd-menu"><div class="in">
+            <a href="../../cayzen/ehsresearch/">Cayzen EHS Research（EHS法令調査代行）</a>
+            <a href="../../cayzen/knowledgemanagement/">Cayzen Knowledge Management（SaaS）</a>
+            <a href="../../cayzen/iso/">Cayzen ISO サポート</a>
+          </div></div>
+        </div>
+        <a href="../../seminar/">セミナー</a>
+        <a href="../../column/">コラム</a>
+        <a href="../../news/">ニュース</a>
+        <a href="../../resources/">お役立ち資料</a>
+        <a href="../../#company">会社概要</a>
+        <a href="../../recruit/">採用情報</a>
+      </nav>
+    </div>
+    <div class="gh-right">
+      <p class="gh-tel">TEL: <b>050-8881-9881</b><span>（平日10:00〜19:00）</span></p>
+      <div class="gh-actions">
+        <a class="gh-btn gh-btn-dl" href="../../document/"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h9l4 4v14H6z"/><path d="M15 3v4h4M9 12h6M9 16h6"/></svg> 資料請求</a>
+        <a class="gh-btn gh-btn-ct" href="../../#contact"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg> お問合せ</a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="page-head">
+  <div class="container">
+    <article class="post post-head-wrap" style="max-width:760px;margin:0 auto">
+      <p class="breadcrumb"><a href="../../">HOME</a> ／ <a href="../">コラム</a> ／ EUのEPR（拡大生産者責任）とは？包装・電池・WEEE・繊維の国別登録と日本企業の対応</p>
+      <div class="meta"><span class="chip">法令改正</span><time datetime="2026-10-26T08:20:00.000Z">2026.10.26</time></div>
+      <div class="post-head"><h1>EUのEPR（拡大生産者責任）とは？包装・電池・WEEE・繊維の国別登録と日本企業の対応</h1></div>
+    </article>
+  </div>
+</div>
+<main class="section">
+  <div class="container">
+    <article class="post">
+      <div class="post-eyecatch"><img src="/assets/column/eu-epr-extended-producer-responsibility.jpg?w=1280&fm=webp" alt=""></div>
+      <div class="article-body">
+<p>EUでは、製品を市場に出した事業者が、その製品が廃棄物になった後の回収・リサイクルの費用まで負担する「拡大生産者責任」（Extended Producer Responsibility：EPR）の仕組みが広く使われています。包装、電気電子機器、電池に加え、2025年の廃棄物枠組み指令の改正で繊維製品にもEPRが義務付けられることになりました。</p>
+<p>EPRの特徴は、EU全体の共通ルールがありながら、<strong>実際の登録・報告・費用の支払いは国ごとに行う</strong>点です。ドイツで登録していても、フランスやイタリアで販売すれば、その国でも別に登録が必要です。さらに、オンラインマーケットプレイスが出品者の登録状況を確認する義務を負うようになり、未登録の製品は販売そのものが止められるおそれがあります。</p>
+<p>本記事では、2026年10月時点の情報をもとに、EPRの共通ルール、品目別の制度（包装・電気電子機器・電池・繊維）、ドイツとフランスの例、日本企業がやるべきことを整理します。</p>
+<blockquote><p>出典：legislation.gov.uk「Directive 2008/98/EC Article 8a」 <a href="https://www.legislation.gov.uk/eudr/2008/98/article/8a" target="_blank" rel="noopener noreferrer nofollow">https://www.legislation.gov.uk/eudr/2008/98/article/8a</a><br>legislation.gov.uk「Directive 2012/19/EU Article 16」 <a href="https://www.legislation.gov.uk/eudr/2012/19/article/16" target="_blank" rel="noopener noreferrer nofollow">https://www.legislation.gov.uk/eudr/2012/19/article/16</a><br>EUR-Lex「COM(2025) 982 環境オムニバス提案」 <a href="https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A52025PC0982" target="_blank" rel="noopener noreferrer nofollow">https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A52025PC0982</a><br>Zentrale Stelle Verpackungsregister「VerpackG改正の概要」 <a href="https://www.verpackungsregister.org/stiftung-und-behoerde/verpackungsgesetz/uebersicht-aenderungen-verpackg" target="_blank" rel="noopener noreferrer nofollow">https://www.verpackungsregister.org/stiftung-und-behoerde/verpackungsgesetz/uebersicht-aenderungen-verpackg</a></p></blockquote>
+<p><strong>EU各国のEPRを含む、環境・労働安全関連の法令調査を効率化する方法を、資料で紹介しています。</strong></p>
+<p><a href="https://eitoss.com/document/ehs-research/">資料をダウンロードする</a></p>
+<hr>
+
+<h2>EPR（拡大生産者責任）とは｜「売った後」まで責任を持つ仕組み</h2>
+<p>EPRは、製品の生産者に、製品が使用済みになった後の回収・選別・リサイクルの費用や運営の責任を負わせる政策手法です。費用を負担させることで、リサイクルしやすい設計や廃棄物の削減を促すことが狙いです。</p>
+<p>実務では、生産者が自ら回収の仕組みを運営するのではなく、各国の<strong>生産者責任組織</strong>（Producer Responsibility Organisation：PRO。ドイツの「デュアルシステム」、フランスの「エコオーガニズム」など）に加入し、市場に出した量に応じた料金を支払う形が一般的です。</p>
+<h3>EPRで生産者が負う主な義務</h3>
+<ul>
+<li>国の生産者登録簿への登録（登録番号の取得）</li>
+<li>PROへの加入、または個別の回収体制の構築</li>
+<li>市場に出した量（重量・個数など）の定期報告</li>
+<li>回収・リサイクル費用（EPR料金）の支払い</li>
+<li>国内に拠点がない場合の授権代理人の指名</li>
+<li>製品や包装への表示、消費者への情報提供</li>
+</ul>
+
+<h2>EUの共通ルール｜廃棄物枠組み指令8a条の一般要件</h2>
+<p>EPRの土台となるのが、廃棄物枠組み指令（Directive 2008/98/EC）の8条と8a条です。8条は、加盟国がEPRを導入できることを定め、8a条は、加盟国がEPR制度を設ける場合に満たすべき<strong>一般的な最低要件</strong>を定めています。2018年の改正で追加された条文です。</p>
+<table><tbody>
+<tr><th>8a条の主な要件</th><th>内容</th></tr>
+<tr><td>役割の明確化</td><td>生産者、PRO、自治体、廃棄物事業者などの役割と責任を明確に定める</td></tr>
+<tr><td>生産者の平等な扱い</td><td>出身国や規模にかかわらず生産者を平等に扱い、小規模生産者に過度な負担をかけない</td></tr>
+<tr><td>報告の仕組み</td><td>市場に出した製品の量や回収・処理の実績データを集める仕組みを整える</td></tr>
+<tr><td>料金の調整</td><td>耐久性、修理しやすさ、リサイクルしやすさなどに応じて料金に差をつける（エコモジュレーション）</td></tr>
+<tr><td>授権代理人</td><td>他の加盟国に拠点がある生産者が、自国内の代理人を指名できるようにする。加盟国は代理人に登録・報告などの要件を課すことができる</td></tr>
+</tbody></table>
+<p>8a条は加盟国に向けた規定で、企業に直接義務を課すものではありません。企業の具体的な義務は、品目別のEU法と各国の国内法で決まります。そのため、同じ「包装のEPR」でも、登録先、報告の頻度、料金の計算方法は国ごとに異なります。</p>
+
+<h2>品目別のEPR｜包装・電気電子機器・電池・繊維</h2>
+<p>EUで生産者にEPRを義務付けている主な品目と、2026年10月時点の状況は次のとおりです。</p>
+<table><tbody>
+<tr><th>品目</th><th>EU法</th><th>EPRの根拠と時期</th><th>国内に拠点がない生産者</th></tr>
+<tr><td>包装</td><td>包装・包装廃棄物規則（Regulation (EU) 2025/40）</td><td>44条・45条。2026年8月12日から適用</td><td>販売する加盟国ごとに授権代理人を書面で指名（45条）</td></tr>
+<tr><td>電気電子機器</td><td>WEEE指令（Directive 2012/19/EU）</td><td>各国の国内法で実施済み。登録簿は16条</td><td>各国の国内法に従い代理人を指名（ドイツなどは義務）</td></tr>
+<tr><td>電池</td><td>電池規則（Regulation (EU) 2023/1542）</td><td>55条（登録）・56条（EPR）。2025年8月18日から適用</td><td>販売する加盟国ごとにEPRの授権代理人を指名</td></tr>
+<tr><td>繊維・履物</td><td>改正廃棄物枠組み指令（Directive (EU) 2025/1892）</td><td>2025年10月16日発効。加盟国は2028年4月17日までにEPR制度を整備</td><td>各国の国内法で定められる見込み</td></tr>
+</tbody></table>
+<p>このほか、使い捨てプラスチック製品（SUP指令）にもEPRがあり、加盟国によっては家具、タイヤ、玩具などに独自のEPRを設けています。フランスはとくに対象品目が多い国です。</p>
+
+<h3>包装｜包装・包装廃棄物規則のproducer登録とEPR</h3>
+<p>2026年8月12日に適用が始まった包装・包装廃棄物規則では、加盟国で最初に包装や包装済み製品を提供する者が「producer（生産者）」としてEPRを負います。producerは、販売する国ごとの生産者登録簿に登録し（44条）、EPRの義務を果たす必要があります（45条）。</p>
+<p>EU域外の日本企業がEUの顧客に直接販売してproducerに当たる場合、販売する各加盟国で<strong>授権代理人を書面で指名</strong>しなければなりません。producerの範囲は、製造者や輸入者とは別の概念として定義されているため、どの会社が該当するかを商流ごとに確認することが重要です。詳しくは<a href="https://eitoss.com/column/ppwr-producer-manufacturer/">PPWRのproducerとは？製造者・輸入者との違い</a>で解説しています。規則全体の概要は<a href="https://eitoss.com/column/ppwr-overview/">PPWRの全体像</a>をご覧ください。</p>
+
+<h3>電気電子機器｜WEEE指令と各国の登録</h3>
+<p>電気電子機器のEPRは、WEEE指令をもとに各国の国内法で運用されています。加盟国は通信販売の事業者を含む生産者の登録簿を設け、オンラインでの登録を可能にすることが求められています（16条）。</p>
+<p>ドイツの電気・電子機器法（ElektroG）では、ドイツに拠点のない製造者は自ら登録できず、ドイツの<strong>授権代理人（Bevollmächtigter）</strong>を指名し、登録機関のstiftung earを通じて登録する必要があります。登録はブランドと機器の種類ごとに行い、登録番号が発行されます。海外の供給者が登録していない場合、ドイツで販売する事業者が製造者とみなされ、登録義務を負うことがあります。</p>
+
+<h3>電池｜電池規則の生産者責任（2025年8月18日から）</h3>
+<p>電池規則では、2025年8月18日から、生産者の登録（55条）とEPR（56条）が適用されています。電池単体だけでなく、<strong>機器に組み込まれた電池も対象</strong>です。電池を内蔵した電子機器を輸出している場合、WEEEと電池の両方で登録が必要になることがあります。</p>
+<p>ドイツでは、2025年10月7日に電池法実施法（BattDG）が施行され、生産者はPROへの加入に加えて、PROに任せず自ら登録することが求められています。国内に拠点がない生産者は、ドイツに拠点を持つ代理人の指名が必要です。電池規則の全体像は別の記事で整理しています。</p>
+
+<h3>繊維｜2025年の廃棄物枠組み指令改正で新たにEPRの対象に</h3>
+<p>Directive (EU) 2025/1892により、衣料品、繊維関連製品、履物について、加盟国は生産者にEPRを課すことが義務付けられました。指令は2025年10月16日に発効し、国内法化の期限は2027年6月17日、EPR制度の整備期限は2028年4月17日です。零細企業には1年長い猶予が設けられていると報じられています。</p>
+<p>フランスはすでに繊維のEPRを運用しており、オランダなど独自に先行導入した国もあります。そのほかの国は2028年に向けて制度を整備している段階のため、<strong>国ごとに開始時期や登録方法が異なる</strong>点に注意が必要です。工業用の繊維製品がどこまで対象になるかも、各国の国内法の確認が必要です。</p>
+
+<hr>
+<p><strong>品目ごと・国ごとに異なるEPRの最新情報を、効率よく把握する方法を資料で紹介しています。</strong></p>
+<p><a href="https://eitoss.com/document/ehs-research/">資料をダウンロードする</a></p>
+<hr>
+
+<a class="cta-banner-img" href="../../document/ehs-research/">
+        <img src="../../assets/column_bnr_ehs.jpg" alt="環境・労働安全関連の法令対応のお悩み、AI調査代行でスピード解決！最大95%工数削減｜詳しくはこちら" loading="lazy" width="1080" height="300">
+      </a>
+<h2>主要国の例｜ドイツのLUCIDとフランスのTriman</h2>
+<p>EPRの運用は国ごとに大きく異なります。日本企業の主な販売先であるドイツとフランスの例を見てみましょう。</p>
+<table><tbody>
+<tr><th>項目</th><th>ドイツ</th><th>フランス</th></tr>
+<tr><td>包装の登録</td><td>中央機関（ZSVR）の包装登録簿「LUCID」に登録し、デュアルシステムに加入</td><td>エコオーガニズム（CITEOなど）に加入し、固有識別番号（IDU）を取得</td></tr>
+<tr><td>電気電子機器・電池</td><td>stiftung earに登録。国外の製造者は代理人を指名</td><td>品目ごとのエコオーガニズムに加入</td></tr>
+<tr><td>表示</td><td>EPR固有の統一マークはない</td><td>家庭向け製品に分別マーク「Triman」と分別方法の表示「Info-tri」</td></tr>
+<tr><td>オンライン販売</td><td>マーケットプレイスとフルフィルメント事業者に登録の確認義務</td><td>マーケットプレイスが出品者のEPR対応に責任を負う</td></tr>
+</tbody></table>
+<h3>ドイツ｜LUCIDの登録とPROへの加入は別の手続</h3>
+<p>ドイツの包装法（VerpackG）では、LUCIDへの登録と、デュアルシステム（PRO）との契約の両方が必要です。登録だけでは義務を果たしたことにはなりません。代理人を使う場合も、LUCIDの登録そのものは義務者本人が行う必要があります。</p>
+<h3>フランス｜対象品目が多く、表示の義務もある</h3>
+<p>フランスでは、包装、電気電子機器、電池、繊維、家具など多くの品目にEPRがあります。家庭向けの製品にはTrimanとInfo-triの表示が求められ、EPRの固有識別番号（IDU）を販売条件などに記載する必要があります。表示は包装や製品のデザインに関わるため、出荷前に確認しておく必要があります。</p>
+
+<h2>オンライン販売の注意点｜マーケットプレイスの確認義務</h2>
+<p>EPRの未対応は、当局の罰則より先に、<strong>販売チャネルからの締め出し</strong>という形で表面化することが増えています。</p>
+<ul>
+<li>ドイツでは2022年7月1日から、マーケットプレイスが出品者のLUCID登録とデュアルシステムへの加入を確認する義務を負い、未対応の出品は認められません。フルフィルメント事業者も同様です。</li>
+<li>電気電子機器でも2023年から、マーケットプレイスとフルフィルメント事業者がstiftung earへの登録を確認する義務を負っています。</li>
+<li>包装・包装廃棄物規則では、オンラインプラットフォームが、消費者のいる加盟国での生産者の登録情報を事前に取得することが求められています。</li>
+</ul>
+<p>日本から越境ECで販売している場合、マーケットプレイスから登録番号の提出を求められ、提出できなければ出品が停止されることがあります。販売国ごとの登録番号を一覧で管理しておくことが大切です。</p>
+
+<h2>授権代理人の義務は見直されるのか｜審議中の簡素化法案</h2>
+<p>欧州委員会は2025年12月10日、環境分野の簡素化を目的とする「環境オムニバス」法案を提案しました。このうち電池と包装については、<strong>EU域内に拠点がある生産者</strong>が他の加盟国で販売する場合の授権代理人の指名義務を、2035年1月1日まで停止する案が含まれています。</p>
+<p>2026年10月時点で、この案は欧州議会と理事会で審議中です。理事会は代理人義務の停止に慎重な立場と報じられており、最終的な内容は確定していません。また、提案の段階から、<strong>EU域外に拠点がある生産者は代理人の指名が引き続き必要</strong>とされています。日本企業が直接producerになる場合は、この法案の行方にかかわらず、代理人の選任を前提に準備を進めるのが現実的です。</p>
+
+<h2>日本企業がやるべきこと｜4つのステップ</h2>
+<h3>1. 商流を整理する</h3>
+<p>EU向けの販売を「日本からEUの顧客へ直送」「EUの販売子会社経由」「商社・代理店経由」「越境EC」などに分けます。どの国に、どの製品を、どの包装で出しているかを一覧にします。</p>
+<h3>2. どの国で誰がproducerかを確定する</h3>
+<p>EPRのproducerは、品目ごと・国ごとに判定します。EUの子会社が輸入して販売していれば子会社がproducerになることが多い一方、日本から最終顧客へ直接販売していれば、日本の本社がproducerになる可能性があります。包装、電気電子機器、電池、繊維のそれぞれについて、国ごとにproducerを決めます。取引条件（インコタームズ）や契約で、誰が登録と費用負担を行うかも明確にしておきます。</p>
+<h3>3. 授権代理人とPROを選任する</h3>
+<p>日本の本社がproducerになる国では、授権代理人を書面で指名し、PROに加入します。代理人は登録や報告の窓口になるため、対応できる品目と国の範囲、報告データの受け渡し方法、費用を比較して選びます。</p>
+<h3>4. 報告データを準備する</h3>
+<p>EPRの報告では、国ごとに市場に出した量を、品目・材質・重量などの区分で報告します。包装なら材質別の重量、電池なら種類別の重量と個数、電気電子機器なら機器の区分ごとの量が必要です。出荷データから国別・区分別に集計できるよう、製品マスタに包装材の重量や内蔵電池の情報を登録しておくと、報告の負担を減らせます。</p>
+
+<h2>よくある質問</h2>
+<h3>Q. EUで1か国に登録すれば、ほかの国でも販売できますか？</h3>
+<p>A. できません。EPRの登録は国ごとに行う必要があります。包装・包装廃棄物規則や電池規則のようにEUで統一された規則でも、登録簿とPROは加盟国ごとに分かれています。</p>
+<h3>Q. B2B向けの工業製品もEPRの対象ですか？</h3>
+<p>A. 対象になり得ます。包装はB2B・B2Cの区別なくすべてが対象です。電気電子機器や電池でも産業用の区分があり、国によって登録や報告の方法が異なります。</p>
+<h3>Q. 機器に内蔵された電池にもEPRがかかりますか？</h3>
+<p>A. かかります。電池規則は機器に組み込まれた電池も対象としているため、電子機器を輸出している場合は、WEEEと電池の両方の登録が必要になることがあります。</p>
+<h3>Q. 授権代理人の義務はなくなると聞きましたが本当ですか？</h3>
+<p>A. 2026年10月時点で審議中の法案で、確定していません。また、停止の対象とされているのはEU域内に拠点がある生産者で、EU域外の生産者は引き続き代理人の指名が必要とされています。</p>
+<h3>Q. 繊維のEPRはいつから始まりますか？</h3>
+<p>A. 加盟国は2028年4月17日までに繊維のEPR制度を整備することが求められています。フランスなどすでに導入している国もあるため、販売国ごとの開始時期を確認する必要があります。</p>
+
+<h2>まとめ</h2>
+<p>EUのEPRは、廃棄物枠組み指令8a条の共通ルールのもとで、包装、電気電子機器、電池、繊維などの品目ごとに制度が設けられています。包装は2026年8月12日、電池は2025年8月18日から新しいEU規則が適用され、繊維は2028年4月に向けて各国で制度づくりが進んでいます。登録・報告・費用の支払いは国ごとに行う必要があり、マーケットプレイスの確認義務によって、未登録の製品は販売そのものが止められるおそれがあります。</p>
+<p>まずは商流を整理し、品目ごと・国ごとに誰がproducerになるかを確定させたうえで、代理人の選任と報告データの準備を進めることが大切です。授権代理人の義務を見直す法案は審議中のため、最新の動向も継続して確認していきましょう。</p>
+<p><strong>EU各国のEPRを含む、環境・労働安全関連の法令調査を効率化する方法を、資料で紹介しています。</strong></p>
+<p><a href="https://eitoss.com/document/ehs-research/">資料をダウンロードする</a></p>
+      </div>
+      <a class="cta-banner-img" href="../../document/ehs-research/">
+        <img src="../../assets/column_bnr_ehs.jpg" alt="環境・労働安全関連の法令対応のお悩み、AI調査代行でスピード解決！最大95%工数削減｜詳しくはこちら" loading="lazy" width="1080" height="300">
+      </a>
+      <a class="back-link" href="../">← コラム一覧へ戻る</a>
+    </article>
+  </div>
+</main>
+<script>
+(function(){
+  if (typeof gtag !== 'function') return;
+  var article = location.pathname.split('/')[2] || '';
+  var links = document.querySelectorAll('article.post a[href*="/document/"]');
+  var io = 'IntersectionObserver' in window ? new IntersectionObserver(function(es){
+    es.forEach(function(e){
+      if (!e.isIntersecting) return;
+      gtag('event', 'cta_view', { cta_position: e.target.dataset.ctaPos, article_id: article, link_url: e.target.href });
+      io.unobserve(e.target);
+    });
+  }, { threshold: 0.5 }) : null;
+  links.forEach(function(a){
+    var pos = a.classList.contains('cta-banner-img') ? (a.closest('.article-body') ? 'banner_mid' : 'banner_bottom') : 'text_link';
+    a.dataset.ctaPos = pos;
+    a.addEventListener('click', function(){
+      gtag('event', 'cta_click', { cta_position: pos, article_id: article, link_url: a.href });
+    });
+    if (io) io.observe(a);
+  });
+})();
+</script>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand"><img src="../../assets/logo-corporate-horizontal-white.png" alt="eitoss"></div>
+        <p class="footer-addr">本社: 〒471-0031<br>愛知県豊田市小坂本町1-5-5 YAMATO BLDG2F<br>営業拠点: 〒170-6012<br>東京都豊島区東池袋3-1-1<br>サンシャイン60 12F</p>
+      </div>
+      <nav class="footer-col">
+        <p class="footer-head">サービス</p>
+        <a href="../../cayzen/ehsresearch/">Cayzen EHS Research</a>
+        <a href="../../cayzen/knowledgemanagement/">Cayzen Knowledge Management</a>
+        <a href="../../cayzen/iso/">Cayzen ISO サポート</a>
+      </nav>
+      <nav class="footer-col">
+        <p class="footer-head">コンテンツ</p>
+        <a href="../../seminar/">セミナー</a>
+        <a href="../../column/">コラム</a>
+        <a href="../../news/">ニュース</a>
+        <a href="../../document/">資料ダウンロード</a>
+        <a href="../../resources/">お役立ち資料</a>
+      </nav>
+      <nav class="footer-col">
+        <p class="footer-head">企業情報</p>
+        <a href="../../#company">会社概要</a>
+        <a href="../../recruit/">採用情報</a>
+        <a href="../../#contact">お問い合わせ</a>
+        <a href="/privacy-policy/">プライバシーポリシー</a>
+        <a href="/security-policy/">情報セキュリティ方針</a>
+        <a href="/terms/">利用規約</a>
+      </nav>
+    </div>
+    <p class="copy">© Eitoss Inc. All rights reserved.</p>
+  </div>
+</footer>
+
+</body>
+</html>
