@@ -412,9 +412,14 @@ ${articles.length ? `    <div class="col-grid">\n${cards}\n    </div>` : '    <p
   });
 }
 
-// 記事テーマ別のCTAバナー（タイトルにISOを含む記事はISO資料、それ以外はEHS調査代行）
-// バナー画像: assets/column_bnr_iso14001.jpg ／ assets/column_bnr_ehs.jpg
+// 記事テーマ別のCTAバナー（タイトルにPPWRを含む記事はPPWR資料、ISOを含む記事はISO資料、それ以外はEHS調査代行）
+// バナー画像: assets/column_bnr_ppwr.jpg ／ assets/column_bnr_iso14001.jpg ／ assets/column_bnr_ehs.jpg
 function ctaBanner(a) {
+  if (/PPWR/i.test(a.title || '')) {
+    return `<a class="cta-banner-img" href="../../document/ppwr/">
+        <img src="../../assets/column_bnr_ppwr.jpg" alt="PPWR、施行済み。いま確認すべきこと｜役割ごとの義務・期限一覧・部門別チェックリストを1冊に｜無料で資料をダウンロード" loading="lazy" width="1080" height="300">
+      </a>`;
+  }
   if (/iso/i.test(a.title || '')) {
     return `<a class="cta-banner-img" href="../../document/ISO14001_2026-revision/">
         <img src="../../assets/column_bnr_iso14001.jpg" alt="どう変わる？ISO14001の改訂を現場レベルで確認するポイント｜詳しくはこちら" loading="lazy" width="1080" height="300">
@@ -442,6 +447,31 @@ function insertMidBanner(html, banner) {
   return html;
 }
 
+// 記事内の資料CTA（記事中・記事下のバナー、本文のテキストリンク）の表示とクリックをGA4に送る
+// イベント: cta_view（画面に50%以上表示） / cta_click、パラメータ: cta_position, article_id, link_url
+const CTA_TRACKING = `<script>
+(function(){
+  if (typeof gtag !== 'function') return;
+  var article = location.pathname.split('/')[2] || '';
+  var links = document.querySelectorAll('article.post a[href*="/document/"]');
+  var io = 'IntersectionObserver' in window ? new IntersectionObserver(function(es){
+    es.forEach(function(e){
+      if (!e.isIntersecting) return;
+      gtag('event', 'cta_view', { cta_position: e.target.dataset.ctaPos, article_id: article, link_url: e.target.href });
+      io.unobserve(e.target);
+    });
+  }, { threshold: 0.5 }) : null;
+  links.forEach(function(a){
+    var pos = a.classList.contains('cta-banner-img') ? (a.closest('.article-body') ? 'banner_mid' : 'banner_bottom') : 'text_link';
+    a.dataset.ctaPos = pos;
+    a.addEventListener('click', function(){
+      gtag('event', 'cta_click', { cta_position: pos, article_id: article, link_url: a.href });
+    });
+    if (io) io.observe(a);
+  });
+})();
+</script>`;
+
 function articlePage(a) {
   const cat = catOf(a);
   const body = `<div class="page-head">
@@ -464,7 +494,8 @@ ${insertMidBanner(stripEmoji(bodyOf(a)), ctaBanner(a))}
       <a class="back-link" href="../">← コラム一覧へ戻る</a>
     </article>
   </div>
-</main>`;
+</main>
+${CTA_TRACKING}`;
 
   return chrome(2, body, {
     title: `${a.title} - コラム｜エイトス株式会社`,
@@ -694,6 +725,20 @@ if (USE_SAMPLE) {
   console.log(`[build-columns] コラム: ${all.length} 件取得（公開済み ${articles.length} 件を掲載）`);
 }
 
+// microCMS未登録の記事をリポジトリ内のデータ（data/column-local.json）で補完。同じIDがmicroCMSにあればそちらを優先
+try {
+  const { readFile } = await import('node:fs/promises');
+  const local = JSON.parse(await readFile(path.join(ROOT, 'data', 'column-local.json'), 'utf-8'));
+  const ids = new Set(articles.map(a => a.id));
+  const add = local.filter(a => a.id && !ids.has(a.id));
+  if (add.length) {
+    articles = [...articles, ...add].sort((a, b) => new Date(dateOf(b)) - new Date(dateOf(a)));
+    console.log(`[build-columns] コラム: リポジトリ内データから ${add.length} 件を追加`);
+  }
+} catch (e) {
+  if (e.code !== 'ENOENT') console.warn(`[build-columns] data/column-local.json の読み込みをスキップ: ${e.message}`);
+}
+
 await rm(path.join(ROOT, 'column'), { recursive: true, force: true });
 await mkdir(path.join(ROOT, 'column'), { recursive: true });
 await writeFile(path.join(ROOT, 'column', 'index.html'), listPage(articles));
@@ -767,7 +812,7 @@ if (!USE_SAMPLE && API_KEY) {
 try {
   const { readdir: rd, stat } = await import('node:fs/promises');
   const pages = [];
-  const SKIP_DIRS = new Set(['assets', 'scripts', 'data', 'node_modules', '.git', '.claude']);
+  const SKIP_DIRS = new Set(['assets', 'scripts', 'data', 'node_modules', '.git', '.claude', 'lp']); // lp/ は広告専用LP（noindex）
   async function walk(dir, rel) {
     for (const e of await rd(dir, { withFileTypes: true })) {
       if (!e.isDirectory()) continue;

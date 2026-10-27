@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-199DLM16MH"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-199DLM16MH');
+  window.addEventListener('message', function(e){
+    var d = e.data;
+    if (!d || d.type !== 'hsFormCallback' || d.eventName !== 'onFormSubmitted') return;
+    var isContact = d.id === 'de61c417-f176-4c76-af10-c59923cdfd79';
+    gtag('event', isContact ? 'contact_submit' : 'document_request', { form_id: d.id });
+  });
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>REACH規則とは？SVHC・成形品の義務と2026年の改正動向、日本企業の対応 - コラム｜エイトス株式会社</title>
+<meta name="description" content="EUのREACH規則の登録・評価・認可・制限の仕組み、成形品のSVHC 0.1%と情報伝達、SCIP届出、唯一の代理人、候補リスト253物質や附属書XVIIの最新動向、2026年10月時点の改正状況と日本の輸出メーカーの対応を解説します。">
+<meta property="og:title" content="REACH規則とは？SVHC・成形品の義務と2026年の改正動向、日本企業の対応 - コラム｜エイトス株式会社">
+<meta property="og:description" content="EUのREACH規則の登録・評価・認可・制限の仕組み、成形品のSVHC 0.1%と情報伝達、SCIP届出、唯一の代理人、候補リスト253物質や附属書XVIIの最新動向、2026年10月時点の改正状況と日本の輸出メーカーの対応を解説します。">
+<meta property="og:type" content="article">
+<link rel="canonical" href="https://eitoss.com/column/eu-reach-regulation/">
+<meta property="og:url" content="https://eitoss.com/column/eu-reach-regulation/">
+<link rel="icon" type="image/svg+xml" href='data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"%3E%3Cpath d="M50 8 a42 42 0 1 0 29.7 12.3 l-12.7 12.7 a24 24 0 1 1 -17 -7 z" fill="%23106878"/%3E%3C/svg%3E'>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600;700&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--teal-900:#0b4e5b;--teal-700:#106878;--teal-500:#308098;--teal-300:#58a0b0;--teal-100:#80c0c8;--teal-050:#eef6f7;--ink:#2b3338;--gray:#505050;--line:#dde6e8;--white:#ffffff;--accent:#e8a13d}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:130px}
+body{font-family:"Noto Sans JP",sans-serif;font-size:17.5px;color:var(--ink);line-height:1.8;background:var(--white);-webkit-font-smoothing:antialiased}
+img{max-width:100%;height:auto;display:block}
+h1,h2,h3{letter-spacing:.08em;text-wrap:balance}
+a{color:var(--teal-700);text-decoration:none}
+.container{max-width:1080px;margin:0 auto;padding:0 20px}
+.btn{display:inline-block;padding:16px 30px;border-radius:8px;font-weight:500;font-size:17.5px;text-align:center;transition:transform .15s ease,box-shadow .15s ease;box-shadow:0 4px 14px rgba(16,104,120,.25)}
+.btn::after{content:"›";margin-left:8px;opacity:.55;font-weight:400}
+.btn:hover{transform:translateY(-2px);box-shadow:0 8px 20px rgba(16,104,120,.3)}
+.btn-primary{background:linear-gradient(135deg,var(--teal-500),var(--teal-700));color:#fff}
+.btn-ghost{background:#fff;color:var(--teal-700);box-shadow:0 4px 14px rgba(16,104,120,.18)}
+.btn-sm{padding:10px 22px;font-size:15.5px}
+.brand{display:inline-flex;align-items:center;gap:10px}
+.brand .name{font-weight:500;font-size:18.5px;color:var(--ink)}
+header{position:fixed;top:0;left:0;right:0;background:rgba(255,255,255,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);z-index:100}
+.header-inner{display:flex;align-items:center;justify-content:space-between;height:68px;max-width:1160px;margin:0 auto;padding:0 20px}
+.header-nav{display:flex;align-items:center;gap:10px}
+.header-nav .nav-links{display:flex;gap:22px;margin-right:14px;font-size:15.5px;font-weight:500}
+.header-nav .nav-links a{color:var(--ink)}
+.header-nav .nav-links a:hover{color:var(--teal-700)}
+.page-head{position:relative;overflow:hidden;padding:155px 0 46px;background:radial-gradient(1100px 500px at 85% -10%,rgba(128,192,200,.30),transparent 60%),linear-gradient(180deg,#f6fafb 0%,#eef6f7 100%)}
+.page-head::before{content:attr(data-wm);position:absolute;top:96px;left:50%;transform:translateX(-50%);font-family:"Poppins","Noto Sans JP",sans-serif;font-weight:700;font-size:150px;line-height:1;letter-spacing:.08em;color:rgba(16,104,120,.06);white-space:nowrap;pointer-events:none}
+.page-head .container{position:relative}
+.page-head[data-wm] .container{text-align:center}
+.page-head[data-wm] .breadcrumb{text-align:left}
+.page-head .label{display:none}
+.page-head h1{font-size:35.5px;font-weight:500;line-height:1.5;margin-top:6px}
+.page-head .lead{color:var(--gray);margin-top:10px;font-size:16.5px}
+.breadcrumb{font-size:14px;color:var(--gray);margin-bottom:14px}
+.breadcrumb a{color:var(--gray)}
+.breadcrumb a:hover{color:var(--teal-700)}
+.chip{display:inline-block;background:var(--teal-050);color:var(--teal-700);font-size:13.5px;font-weight:500;padding:4px 14px;border-radius:999px}
+.meta{display:flex;align-items:center;gap:12px;font-size:14.5px;color:var(--gray)}
+main.section{padding:56px 0 80px}
+.col-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
+.col-card{background:#fff;border-radius:14px;overflow:hidden;box-shadow:0 10px 26px rgba(16,104,120,.10);transition:transform .15s ease,box-shadow .15s ease;display:flex;flex-direction:column}
+.col-card:hover{transform:translateY(-4px);box-shadow:0 16px 34px rgba(16,104,120,.16)}
+.col-card .thumb{aspect-ratio:16/9;background:linear-gradient(135deg,var(--teal-050),#dcebee);display:flex;align-items:center;justify-content:center;overflow:hidden}
+.col-card .thumb img{width:100%;height:100%;object-fit:cover}
+.col-card .thumb svg{width:44px;height:44px;opacity:.5}
+.col-card .body{padding:20px 22px 24px;display:flex;flex-direction:column;gap:10px;flex:1}
+.col-card h2{font-size:18px;font-weight:500;line-height:1.55;color:var(--ink)}
+.col-card p.desc{font-size:14.5px;color:var(--gray);flex:1}
+.empty{padding:60px 0;text-align:center;color:var(--gray)}
+article.post{max-width:760px;margin:0 auto}
+.post-head h1{font-size:31.5px;font-weight:500;line-height:1.5;margin:14px 0 16px}
+.post-eyecatch{border-radius:14px;overflow:hidden;box-shadow:0 14px 34px rgba(16,104,120,.14);margin:26px 0 36px}
+.article-body{font-size:17px;overflow-wrap:break-word}
+.article-body a{word-break:break-all}
+.article-body h1,.article-body h2{font-size:25.5px;font-weight:500;line-height:1.5;margin:46px 0 16px;padding-bottom:10px;border-bottom:2px solid var(--teal-050)}
+.article-body h3{font-size:20.5px;font-weight:500;margin:36px 0 12px;padding-left:12px;border-left:4px solid var(--teal-500)}
+.article-body h4{font-size:18px;font-weight:500;margin:28px 0 10px}
+.article-body p{margin:0 0 1.3em}
+.article-body ul,.article-body ol{margin:0 0 1.3em;padding-left:1.5em}
+.article-body li{margin-bottom:.4em}
+.article-body a{text-decoration:underline;text-underline-offset:3px}
+.article-body img{border-radius:10px;margin:8px 0 20px;box-shadow:0 8px 22px rgba(16,104,120,.12)}
+.article-body blockquote{background:var(--teal-050);border-left:4px solid var(--teal-500);border-radius:0 10px 10px 0;padding:16px 20px;margin:0 0 1.3em;color:var(--gray)}
+.article-body blockquote p:last-child{margin-bottom:0}
+.article-body table{border-collapse:collapse;width:100%;margin:0 0 1.3em;font-size:15.5px}
+.article-body th,.article-body td{border:1px solid var(--line);padding:10px 12px;text-align:left}
+.article-body th{background:var(--teal-050);font-weight:500}
+.article-body pre{background:#0f2e33;color:#e8f2f4;border-radius:10px;padding:16px 18px;overflow-x:auto;font-size:14.5px;margin:0 0 1.3em}
+.article-body code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace}
+.post-cta{margin-top:60px;background:linear-gradient(135deg,var(--teal-050),#f6fafb);border-radius:16px;padding:34px 30px;text-align:center;box-shadow:0 10px 26px rgba(16,104,120,.08)}
+.post-cta h2{font-size:21.5px;font-weight:500;margin-bottom:8px}
+.post-cta p{font-size:15.5px;color:var(--gray);margin-bottom:20px}
+.post-cta .btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+.back-link{display:inline-block;margin-top:44px;font-size:15.5px;font-weight:500}
+@media(max-width:900px){
+  .col-grid{grid-template-columns:1fr}
+  .page-head h1{font-size:27.5px}
+  .page-head::before{font-size:64px;top:122px}
+  .post-head h1{font-size:24.5px}
+  .header-nav .nav-links{display:none}
+  .header-nav .btn-sm{padding:9px 14px;font-size:14px;white-space:nowrap}
+  main.section{padding:40px 0 60px}
+}
+header.gh{position:fixed;top:0;left:0;right:0;background:rgba(255,255,255,.96);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);z-index:100}
+.gh-inner{display:flex;justify-content:space-between;align-items:center;gap:24px;max-width:1360px;margin:0 auto;padding:10px 24px}
+.gh-left{display:flex;flex-direction:column;gap:7px;align-items:flex-start}
+.gh-brand img{height:32px;width:auto;display:block}
+.gh-nav{display:flex;align-items:center;gap:26px;font-size:16px;font-weight:500}
+.gh-nav a,.gh-dd-label{color:#1c1c1c;white-space:nowrap;cursor:pointer}
+.gh-nav a:hover,.gh-dd:hover .gh-dd-label{color:var(--teal-700)}
+.gh-dd{position:relative}
+.gh-dd-label::after{content:" ▾";font-size:12.5px}
+.gh-dd-menu{display:none;position:absolute;top:100%;left:-14px;padding-top:12px;z-index:110}
+.gh-dd:hover .gh-dd-menu{display:block}
+.gh-dd-menu .in{background:#fff;border-radius:10px;box-shadow:0 12px 32px rgba(16,104,120,.18);padding:8px;min-width:280px}
+.gh-dd-menu a{display:block;padding:10px 14px;border-radius:8px;font-size:15.5px;white-space:nowrap}
+.gh-dd-menu a:hover{background:var(--teal-050)}
+.gh-right{display:flex;flex-direction:column;align-items:flex-end;gap:7px}
+.gh-tel{font-size:14px;color:#333;white-space:nowrap;line-height:1.3;display:flex;align-items:baseline;gap:6px}
+.gh-tel b{font-size:22.5px;font-weight:500;font-family:"Poppins","Noto Sans JP",sans-serif}
+.gh-tel span{color:#555}
+.gh-actions{display:flex;gap:10px}
+.gh-btn{display:inline-flex;align-items:center;gap:7px;padding:10px 20px;border-radius:6px;color:#fff;font-weight:700;font-size:15.5px;white-space:nowrap;transition:transform .15s ease,filter .15s ease;box-shadow:0 3px 10px rgba(0,0,0,.14)}
+.gh-btn:hover{transform:translateY(-1px);filter:brightness(1.06)}
+.gh-btn svg{width:16px;height:16px}
+.gh-btn-dl{background:#f6941c}
+.gh-btn-tr{background:linear-gradient(90deg,#54a4ec,#2e7fd6)}
+.gh-btn-ct{background:#45a3b4}
+@media(max-width:1180px){.gh-nav{gap:18px;font-size:15px}}
+@media(max-width:1020px){.gh-nav{display:none}.gh-tel{display:none}.gh-left{flex-direction:row;align-items:center}}
+@media(max-width:640px){
+  .gh-inner{padding:10px 14px;gap:10px}
+  .gh-brand img{height:26px}
+  .gh-btn{padding:8px 10px;font-size:13.5px;gap:5px}
+  .gh-btn svg{width:14px;height:14px}
+  .gh-actions{gap:6px}
+}
+
+/* 記事下CTAバナー（画像） */
+.cta-banner-img{display:block;margin-top:60px;border-radius:14px;overflow:hidden;box-shadow:0 14px 34px rgba(16,104,120,.16);transition:transform .15s ease,box-shadow .15s ease}
+.cta-banner-img:hover{transform:translateY(-3px);box-shadow:0 20px 44px rgba(16,104,120,.22)}
+.cta-banner-img img{width:100%;height:auto;display:block;margin:0;border-radius:0;box-shadow:none}
+
+.news-rows{max-width:860px;margin:0 auto}
+.news-row.nr-hidden{display:none}
+.news-more{background:none;border:none;box-shadow:none;padding:6px 10px;font-family:inherit;font-size:16.5px;font-weight:500;color:var(--teal-700);cursor:pointer}
+.news-more:hover{text-decoration:underline;text-underline-offset:4px}
+.news-row{display:flex;gap:22px;align-items:baseline;padding:18px 10px;border-bottom:1px solid var(--line);font-size:16px;color:var(--ink)}
+.news-row time{flex:0 0 auto;color:var(--teal-500);font-weight:500;font-family:"Poppins","Noto Sans JP",sans-serif}
+.news-row:hover .t{color:var(--teal-700)}
+@media(max-width:640px){.news-row{flex-direction:column;gap:4px}}
+
+.chip-open{background:#fdf0dc;color:#b06a00}
+.chip-closed{background:#eceff1;color:#607078}
+.chip-archive{background:var(--teal-700);color:#fff}
+.sem-info{background:var(--teal-050);border-radius:12px;padding:18px 22px;margin:0 0 26px;font-size:16px}
+.sem-section{margin-bottom:56px}
+.sem-section .sem-heading{font-size:23.5px;font-weight:500;padding-left:14px;border-left:5px solid var(--teal-500);margin-bottom:22px}
+.video-wrap{position:relative;padding-top:56.25%;background:#0b4e5b;border-radius:14px;overflow:hidden;box-shadow:0 14px 34px rgba(16,104,120,.16);margin:26px 0 36px}
+.video-wrap iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.sem-apply{margin:30px 0 10px;text-align:center}
+footer{background:var(--teal-900);color:#fff;padding:56px 0 28px}
+.footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:44px;align-items:start;max-width:1080px;margin:0 auto}
+.footer-brand{display:inline-block}
+.footer-brand img{height:38px;width:auto;display:block}
+.footer-addr{font-size:13.5px;color:rgba(255,255,255,.75);margin-top:18px;line-height:2}
+.footer-head{font-size:15.5px;font-weight:500;color:#fff;letter-spacing:.08em;margin-bottom:14px;padding-bottom:8px;border-bottom:1px solid rgba(255,255,255,.2)}
+.footer-col a{display:block;font-size:14.5px;color:rgba(255,255,255,.8);margin-bottom:10px}
+.footer-col a:hover{color:#fff}
+footer .copy{font-size:12.5px;color:rgba(255,255,255,.55);text-align:center;margin-top:44px;padding-top:20px;border-top:1px solid rgba(255,255,255,.12)}
+@media(max-width:860px){.footer-grid{grid-template-columns:1fr 1fr;gap:30px}}
+@media(max-width:560px){.footer-grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+
+<header class="gh">
+  <div class="gh-inner">
+    <div class="gh-left">
+      <a class="gh-brand" href="../../" aria-label="エイトス株式会社"><img src="../../assets/logo-corporate-horizontal-single.svg" alt="eitoss"></a>
+      <nav class="gh-nav">
+        <div class="gh-dd">
+          <span class="gh-dd-label">活用シーン</span>
+          <div class="gh-dd-menu"><div class="in">
+            <a href="../../cayzen/ehsresearch/">Cayzen EHS Research（EHS法令調査代行）</a>
+            <a href="../../cayzen/knowledgemanagement/">Cayzen Knowledge Management（SaaS）</a>
+            <a href="../../cayzen/iso/">Cayzen ISO サポート</a>
+          </div></div>
+        </div>
+        <a href="../../seminar/">セミナー</a>
+        <a href="../../column/">コラム</a>
+        <a href="../../news/">ニュース</a>
+        <a href="../../resources/">お役立ち資料</a>
+        <a href="../../#company">会社概要</a>
+        <a href="../../recruit/">採用情報</a>
+      </nav>
+    </div>
+    <div class="gh-right">
+      <p class="gh-tel">TEL: <b>050-8881-9881</b><span>（平日10:00〜19:00）</span></p>
+      <div class="gh-actions">
+        <a class="gh-btn gh-btn-dl" href="../../document/"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h9l4 4v14H6z"/><path d="M15 3v4h4M9 12h6M9 16h6"/></svg> 資料請求</a>
+        <a class="gh-btn gh-btn-ct" href="../../#contact"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg> お問合せ</a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="page-head">
+  <div class="container">
+    <article class="post post-head-wrap" style="max-width:760px;margin:0 auto">
+      <p class="breadcrumb"><a href="../../">HOME</a> ／ <a href="../">コラム</a> ／ REACH規則とは？SVHC・成形品の義務と2026年の改正動向、日本企業の対応</p>
+      <div class="meta"><span class="chip">法令改正</span><time datetime="2026-10-26T08:50:00.000Z">2026.10.26</time></div>
+      <div class="post-head"><h1>REACH規則とは？SVHC・成形品の義務と2026年の改正動向、日本企業の対応</h1></div>
+    </article>
+  </div>
+</div>
+<main class="section">
+  <div class="container">
+    <article class="post">
+      <div class="post-eyecatch"><img src="/assets/column/eu-reach-regulation.jpg?w=1280&fm=webp" alt=""></div>
+      <div class="article-body">
+<p>REACH規則（Regulation (EC) No 1907/2006）は、EU域内で製造・輸入される化学物質を「登録・評価・認可・制限」の4つの仕組みで管理するEUの基本法です。2007年6月に施行されてから約20年がたちますが、高懸念物質（SVHC）の候補リストへの追加や、附属書XVIIの制限の追加は毎年のように続いており、対応が終わることのない規制といえます。</p>
+<p>日本の製造業にとって特に重要なのは、化学品そのものではなく、部品や製品などの<strong>成形品（アーティクル）を輸出している場合にも義務がかかる</strong>点です。SVHCが0.1%を超えて含まれる成形品には情報伝達の義務があり、EUの取引先からは含有情報の提出を繰り返し求められます。2026年10月10日にはPFHxAの制限が衣料品や食品包装などに適用され始めるなど、2026年も見直しの手を止められない状況です。</p>
+<p>本記事では、REACH規則の仕組みを整理したうえで、成形品にかかる義務、EU域外メーカーと唯一の代理人（OR）の関係、SVHC候補リストと附属書XVIIの最近の動き、2026年10月時点の改正動向、日本の輸出メーカーが社内で整えるべき確認フローを解説します。</p>
+<blockquote><p>出典：EUR-Lex「Regulation (EC) No 1907/2006 (REACH)」 <a href="https://eur-lex.europa.eu/eli/reg/2006/1907/oj" target="_blank" rel="noopener noreferrer nofollow">https://eur-lex.europa.eu/eli/reg/2006/1907/oj</a><br>ECHA「Candidate List of substances of very high concern for Authorisation」 <a href="https://echa.europa.eu/candidate-list-table" target="_blank" rel="noopener noreferrer nofollow">https://echa.europa.eu/candidate-list-table</a><br>ECHA「ECHA adds two hazardous chemicals to the Candidate List」（2026年2月） <a href="https://echa.europa.eu/-/echa-adds-two-hazardous-chemicals-to-the-candidate-list-1" target="_blank" rel="noopener noreferrer nofollow">https://echa.europa.eu/-/echa-adds-two-hazardous-chemicals-to-the-candidate-list-1</a><br>欧州議会「Chemicals: deal on simplification of cosmetics, fertiliser and labelling rules」（2026年6月） <a href="https://www.europarl.europa.eu/news/en/press-room/20260616IPR45506/chemicals-deal-on-simplification-of-cosmetics-fertiliser-and-labelling-rules" target="_blank" rel="noopener noreferrer nofollow">https://www.europarl.europa.eu/news/en/press-room/20260616IPR45506/chemicals-deal-on-simplification-of-cosmetics-fertiliser-and-labelling-rules</a></p></blockquote>
+<p><strong>REACH規則を含む欧州の化学物質規制の調査を効率化する方法を、資料で紹介しています。</strong></p>
+<p><a href="https://eitoss.com/document/ehs-research/">資料をダウンロードする</a></p>
+<hr>
+
+<h2>REACH規則とは｜「データなくして市場なし」のEU化学物質規制</h2>
+<p>REACHは、Registration（登録）、Evaluation（評価）、Authorisation（認可）、Restriction（制限）の頭文字をとった名称です。2006年12月に採択され、2007年6月1日に施行されました。運用はフィンランドのヘルシンキにある欧州化学品庁（ECHA）が担っています。</p>
+<p>REACHの基本的な考え方は、化学物質の安全性を証明する責任を行政ではなく事業者に負わせることです。登録されていない物質は製造も上市もできないという原則は「No data, no market（データなくして市場なし）」と呼ばれています。REACHは「規則」であるため、加盟国の国内法化を待たずにEU全体へ直接適用されます。ただし、罰則や執行は加盟国ごとに定められています。</p>
+<h3>4つの仕組みの全体像</h3>
+<table><tbody>
+<tr><th>仕組み</th><th>内容</th><th>日本企業への主な影響</th></tr>
+<tr><td>登録（Registration）</td><td>年間1トン以上の物質を製造・輸入する者が、ECHAに技術書類を提出する</td><td>化学品の輸出ではORの選任や登録費用。成形品は意図的放出物質のみ（7条1項）</td></tr>
+<tr><td>評価（Evaluation）</td><td>ECHAと加盟国が登録書類や物質の懸念を審査する</td><td>追加試験の要求。評価の結果がSVHC指定や制限につながる</td></tr>
+<tr><td>認可（Authorisation）</td><td>附属書XIVの物質は、日没日以降、認可を得た用途でしか使えない</td><td>EU域内の顧客が使う物質の調達継続性に影響</td></tr>
+<tr><td>制限（Restriction）</td><td>附属書XVIIに掲げた物質の製造・上市・使用を条件付きで禁止する</td><td>成形品にも直接適用。含有量の上限を守れなければ輸出できない</td></tr>
+</tbody></table>
+
+<h2>成形品（アーティクル）にかかる3つの義務</h2>
+<p>REACHでいう成形品とは、製造時に与えられた形状や表面、デザインが、化学組成よりも機能を大きく決める物体のことです（3条3項）。電子部品、機械部品、ケーブル、樹脂成形品、完成した機械や家電など、日本からEUへ輸出される工業製品の多くが成形品に当たります。成形品に対する主な義務は、次の3つです。</p>
+<h3>1. 33条の情報伝達</h3>
+<p>SVHC候補リストに載った物質を<strong>0.1%（重量比）を超えて</strong>含む成形品を供給する者は、受領者に安全に使用するための十分な情報、少なくとも物質名を伝えなければなりません（33条1項）。この義務には数量の下限がなく、1個の出荷でもかかります。消費者から求められた場合は、45日以内に無償で情報を提供する必要があります（33条2項）。</p>
+<p>0.1%の分母は、完成品全体ではなく<strong>それを構成する成形品ごと</strong>です。2015年のEU司法裁判所判決（C-106/14）で「一度成形品になったものは、組み込まれても成形品であり続ける」という考え方が示されました。たとえば機械全体ではSVHCがごく微量でも、ケーブルの被覆に0.1%を超えて含まれていれば、その部品について情報伝達が必要です。</p>
+<h3>2. 7条2項の届出</h3>
+<p>成形品の生産者・輸入者は、SVHCが成形品中に0.1%を超えて含まれ、かつその物質の合計が<strong>年間1トンを超える</strong>場合、ECHAに届け出なければなりません（7条2項）。届出期限は、物質が候補リストに追加されてから6か月以内です。2026年2月4日に追加された物質であれば、届出期限は2026年8月4日でした。</p>
+<h3>3. SCIPデータベースへの届出</h3>
+<p>見落とされやすいのが、SCIPデータベースへの届出は<strong>REACHではなく廃棄物枠組み指令（Directive 2008/98/EC）9条1項(i)に基づく義務</strong>だという点です。2021年1月5日から、SVHCを0.1%を超えて含む成形品をEU市場に供給する者は、33条1項と同じ情報をECHAのSCIPデータベースに提出しなければなりません。指令に基づく義務のため、加盟国の国内法で手続や罰則が定められています。</p>
+<table><tbody>
+<tr><th>義務</th><th>根拠</th><th>発生条件</th><th>主に義務を負う者</th></tr>
+<tr><td>情報伝達</td><td>REACH 33条</td><td>SVHC 0.1%超（数量の下限なし）</td><td>成形品のサプライチェーン上のすべての供給者</td></tr>
+<tr><td>ECHAへの届出</td><td>REACH 7条2項</td><td>SVHC 0.1%超かつ年間1トン超</td><td>EUの生産者・輸入者</td></tr>
+<tr><td>SCIP届出</td><td>廃棄物枠組み指令 9条1項(i)</td><td>SVHC 0.1%超（数量の下限なし）</td><td>EU市場に成形品を供給する者（輸入者・販売者など）</td></tr>
+<tr><td>制限の遵守</td><td>REACH 附属書XVII</td><td>各エントリーの条件による</td><td>上市するすべての者</td></tr>
+</tbody></table>
+
+<h2>EU域外メーカーと唯一の代理人（OR）</h2>
+<p>REACHの義務は、原則としてEU域内の製造者・輸入者にかかります。日本のメーカーは直接の名宛人ではありませんが、EUの輸入者が登録や届出の義務を負うため、実務では日本側に情報の提供や対応が求められます。</p>
+<p>そこで用意されているのが、唯一の代理人（Only Representative：OR）の制度です（8条）。EU域外の物質の製造者、混合物の配合者、成形品の生産者は、EU域内に拠点を持つ自然人または法人をORに選任し、輸入者に代わって登録の義務を果たさせることができます。ORを選任すると、EUの輸入者は川下使用者として扱われ、複数の輸入者がそれぞれ登録する必要がなくなります。組成情報を取引先に開示せずに済む点も利点です。</p>
+<p>一方で、成形品の場合、ORが関係するのは主に7条1項の意図的放出物質の登録です。7条2項の届出や33条の情報伝達、SCIP届出は、EUの輸入者や販売者が実施する形になるのが一般的とされています。日本のメーカーとしては、<strong>ORを置いているかどうかにかかわらず、成形品のSVHC含有情報を自社で正確に把握し、求めに応じて提供できる体制</strong>を整えておくことが欠かせません。</p>
+
+<a class="cta-banner-img" href="../../document/ehs-research/">
+        <img src="../../assets/column_bnr_ehs.jpg" alt="環境・労働安全関連の法令対応のお悩み、AI調査代行でスピード解決！最大95%工数削減｜詳しくはこちら" loading="lazy" width="1080" height="300">
+      </a>
+<h2>SVHC候補リストの最新状況と更新頻度</h2>
+<p>SVHC候補リストは、ECHAが原則として年2回、1月と6月ごろに更新しています。ただし時期は固定ではなく、2025年11月や2026年2月のように前後することもあります。</p>
+<p>直近では、<strong>2026年2月4日にn-ヘキサンとビスフェノールAF（BPAF）およびその塩の2エントリーが追加され、候補リストは253エントリーになりました</strong>。n-ヘキサンは反復ばく露による特定標的臓器毒性、BPAFは生殖毒性を理由とした指定です。本記事の執筆時点（2026年10月）で、これ以降の追加を確認できる公表情報は見当たりませんでしたが、更新は予告なく行われることがあるため、最新の件数は必ずECHAの候補リストのページで確認してください。</p>
+<p>候補リストに追加されると、その日から33条の情報伝達とSCIP届出の対象となり、6か月以内に7条2項の届出期限が来ます。さらに、候補リストの物質は将来、認可対象（附属書XIV）や制限（附属書XVII）に進む可能性があります。「候補リストに載った時点で、代替の検討を始めるかどうかを判断する」という運用が、調達リスクを減らすうえで有効です。</p>
+
+<hr>
+<p><strong>SVHCの追加や制限の改正を継続的に把握する方法を、資料で紹介しています。</strong></p>
+<p><a href="https://eitoss.com/document/ehs-research/">資料をダウンロードする</a></p>
+<hr>
+
+<h2>附属書XVIIの制限｜成形品に直接効く最近の追加</h2>
+<p>附属書XVIIの制限は、候補リストと違って「情報を伝えればよい」ではなく、条件を満たさない製品をEU市場に出せなくなる規制です。成形品にも直接適用されるため、輸出の可否に直結します。最近の主な追加は次のとおりです。</p>
+<table><tbody>
+<tr><th>制限</th><th>根拠</th><th>主な内容と適用日</th></tr>
+<tr><td>ホルムアルデヒド（エントリー77）</td><td>Regulation (EU) 2023/1464</td><td>家具・成形品から放出されるホルムアルデヒドを規制。家具・木質成形品は0.062 mg/m³、その他の成形品は0.080 mg/m³。2026年8月6日から適用。道路車両の内装は2027年8月6日から</td></tr>
+<tr><td>PFHxAとその塩・関連物質（エントリー79）</td><td>Regulation (EU) 2024/2462</td><td>PFHxAとその塩は25 ppb、関連物質は1,000 ppb。衣料品・履物、一般消費者向け混合物、化粧品、食品と接触する紙・板紙は2026年10月10日から。衣料品以外の繊維・皮革などは2027年10月10日から</td></tr>
+<tr><td>泡消火剤中のPFAS（エントリー82）</td><td>Regulation (EU) 2025/1988</td><td>PFASの合計濃度で泡消火剤を規制。用途ごとに段階的に適用され、多くは2030年以降</td></tr>
+</tbody></table>
+<p>ホルムアルデヒドの制限は家具に限らず幅広い成形品が対象となり得ます。また、PFAS全体を対象とする包括的な制限案は、ECHAのリスク評価委員会（RAC）が2026年3月に意見を採択し、社会経済分析委員会（SEAC）は最終意見を2026年末ごろにまとめる見通しとされています。採択は早くても2027年以降とみられています。PFAS規制の詳細は<a href="https://eitoss.com/column/eu-pfas-restriction/">EUのPFAS規制の解説記事</a>をご覧ください。</p>
+
+<h2>REACH改正の動向｜2026年10月時点で確定していること</h2>
+<p>欧州委員会は2020年の「持続可能性のための化学物質戦略」でREACHの改正を掲げ、2022年、その後2025年第4四半期と提出予定を繰り返し先送りしてきました。2025年9月には、改正案の草案が欧州委員会内部の規制監視委員会（RSB）で否定的な評価を受けたと報じられています。</p>
+<p>そして2026年4月27日、ロスヴァル環境担当委員は欧州議会で、<strong>現時点ではREACH本文を開いて全面改正することはしない</strong>と表明したと報じられています。代わりに、欧州議会の審議を経ない委員会の手続（コミトロジー）で附属書を改正する形の簡素化と、執行の強化に取り組む方針とされています。2026年10月時点で、REACH本文の改正案は欧州委員会から提出されていません。附属書改正の具体的な内容や時期も公表されておらず、検討段階にあります。</p>
+<p>なお、2025年7月に欧州委員会が提案した「化学品の簡素化オムニバス」（オムニバスVI）は、REACHではなくCLP規則（分類・表示・包装）、化粧品規則、肥料製品規則を対象とするものです。2026年6月16日に欧州議会と理事会が政治合意に達し、B2B向け出荷のラベルの文字サイズ要件の削除などが盛り込まれました。正式な採択と官報掲載はこれからの手続とされています。</p>
+<p>全面改正が見送られたからといって、現行の義務が軽くなるわけではありません。候補リストの追加と附属書XVIIの制限は、現行の仕組みのまま今後も積み上がっていきます。</p>
+
+<h2>日本の輸出メーカーがやるべきこと</h2>
+<h3>1. chemSHERPAで部品ごとの含有情報をそろえる</h3>
+<p>日本では、成形品の含有情報の伝達にchemSHERPA（成形品はchemSHERPA-AI、化学品はchemSHERPA-CI）が広く使われています。0.1%の判定は部品ごとに行う必要があるため、サプライヤーから受け取るデータを<strong>完成品単位ではなく、構成部品・均質材料の単位で</strong>保存し、どの部品にどの物質がどれだけ含まれるかをさかのぼれるようにしておきます。データの回答日や対象となった候補リストの版も記録しておくと、更新時の確認が速くなります。</p>
+<h3>2. 候補リスト更新時の確認フローを決めておく</h3>
+<p>候補リストの更新は年2回程度、予告なく行われます。更新のたびに慌てないよう、次の流れを社内で決めておくことをおすすめします。</p>
+<ol>
+<li>ECHAの更新を検知し、追加物質のCAS番号と主な用途を確認する</li>
+<li>chemSHERPAの管理対象物質リストが更新されたら、サプライヤーに再調査を依頼する</li>
+<li>自社の部品データと突き合わせ、0.1%を超える部品を特定する</li>
+<li>該当があれば、EUの顧客・輸入者に33条の情報を提供し、SCIP届出と7条2項の届出（年間1トン超の場合）に必要な情報を渡す</li>
+<li>6か月の届出期限と、代替の要否の判断を記録に残す</li>
+</ol>
+<h3>3. 附属書XVIIの制限を製品ごとに照合する</h3>
+<p>候補リストと制限は別の一覧です。ホルムアルデヒドやPFHxAのように、適用日が来ると出荷できなくなる制限について、自社製品が対象になるかを製品群ごとに照合し、必要な試験データを準備します。</p>
+<h3>4. 商流ごとに義務を負う会社を整理する</h3>
+<p>EUの販売子会社経由か、商社経由か、顧客への直送かによって、7条2項やSCIPの届出を誰が行うかが変わります。化学品を輸出している場合は、ORの選任状況と登録トン数帯も確認します。製品の環境情報を求める規制はREACHに限らず広がっており、<a href="https://eitoss.com/column/eu-espr-ecodesign/">ESPR（エコデザイン規則）</a>のデジタル製品パスポートでも懸念物質の情報が求められる見込みです。</p>
+
+<h2>よくある質問</h2>
+<h3>Q. 日本から部品を輸出しているだけでもREACHの対象になりますか？</h3>
+<p>A. 直接の義務はEU域内の輸入者などにかかりますが、輸入者が33条の情報伝達やSCIP届出を行うには日本側の含有情報が必要です。附属書XVIIの制限に適合しない部品は、そもそもEUに輸出できません。実務上は対象になると考えて準備するのが適切です。</p>
+<h3>Q. SVHCの0.1%は、完成品の重量で判断してよいですか？</h3>
+<p>A. いいえ。2015年のEU司法裁判所判決により、完成品を構成する成形品ごとに判断します。複数の部品からなる製品では、部品単位で含有率を確認する必要があります。</p>
+<h3>Q. SCIP届出はREACHの義務ですか？</h3>
+<p>A. SCIP届出は廃棄物枠組み指令9条1項(i)に基づく義務で、REACHそのものの義務ではありません。ただし、届け出る情報の範囲はREACH 33条1項と同じく、候補リストのSVHCを0.1%を超えて含む成形品です。</p>
+<h3>Q. REACHの改正で、義務は緩和されるのですか？</h3>
+<p>A. 2026年10月時点で、REACH本文の全面改正は当面見送られており、改正案は提出されていません。附属書の改正による簡素化が検討されていますが、内容は未公表です。現行の義務はそのまま続くと考えて対応してください。</p>
+<h3>Q. 候補リストはどのくらいの頻度で確認すればよいですか？</h3>
+<p>A. 更新は原則として年2回ですが、時期は前後します。少なくとも四半期に1回はECHAの候補リストを確認し、更新があればすぐにサプライヤーへの再調査を始める運用をおすすめします。</p>
+
+<h2>まとめ</h2>
+<p>REACH規則は、登録・評価・認可・制限の4つの仕組みで化学物質を管理し、成形品を輸出する日本企業にも33条の情報伝達、7条2項の届出、廃棄物枠組み指令に基づくSCIP届出という形で影響を及ぼします。SVHC候補リストは2026年2月の更新で253エントリーとなり、附属書XVIIではホルムアルデヒドやPFHxAの制限が2026年に適用され始めました。一方、REACH本文の全面改正は当面見送られ、附属書改正による簡素化が検討されている段階です。</p>
+<p>日本の輸出メーカーにとって大切なのは、改正の行方を待つことではなく、部品単位の含有情報をchemSHERPAでそろえ、候補リストと制限の更新を確実に拾う確認フローを回し続けることです。エイトスのCayzen EHS Researchでは、欧州をはじめとする各国の化学物質規制の改正を継続的に調査し、自社製品に関係する更新を把握するお手伝いをしています。</p>
+<p><strong>REACH規則を含む欧州の化学物質規制の調査を効率化する方法を、資料で紹介しています。</strong></p>
+<p><a href="https://eitoss.com/document/ehs-research/">資料をダウンロードする</a></p>
+
+      </div>
+      <a class="cta-banner-img" href="../../document/ehs-research/">
+        <img src="../../assets/column_bnr_ehs.jpg" alt="環境・労働安全関連の法令対応のお悩み、AI調査代行でスピード解決！最大95%工数削減｜詳しくはこちら" loading="lazy" width="1080" height="300">
+      </a>
+      <a class="back-link" href="../">← コラム一覧へ戻る</a>
+    </article>
+  </div>
+</main>
+<script>
+(function(){
+  if (typeof gtag !== 'function') return;
+  var article = location.pathname.split('/')[2] || '';
+  var links = document.querySelectorAll('article.post a[href*="/document/"]');
+  var io = 'IntersectionObserver' in window ? new IntersectionObserver(function(es){
+    es.forEach(function(e){
+      if (!e.isIntersecting) return;
+      gtag('event', 'cta_view', { cta_position: e.target.dataset.ctaPos, article_id: article, link_url: e.target.href });
+      io.unobserve(e.target);
+    });
+  }, { threshold: 0.5 }) : null;
+  links.forEach(function(a){
+    var pos = a.classList.contains('cta-banner-img') ? (a.closest('.article-body') ? 'banner_mid' : 'banner_bottom') : 'text_link';
+    a.dataset.ctaPos = pos;
+    a.addEventListener('click', function(){
+      gtag('event', 'cta_click', { cta_position: pos, article_id: article, link_url: a.href });
+    });
+    if (io) io.observe(a);
+  });
+})();
+</script>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand"><img src="../../assets/logo-corporate-horizontal-white.png" alt="eitoss"></div>
+        <p class="footer-addr">本社: 〒471-0031<br>愛知県豊田市小坂本町1-5-5 YAMATO BLDG2F<br>営業拠点: 〒170-6012<br>東京都豊島区東池袋3-1-1<br>サンシャイン60 12F</p>
+      </div>
+      <nav class="footer-col">
+        <p class="footer-head">サービス</p>
+        <a href="../../cayzen/ehsresearch/">Cayzen EHS Research</a>
+        <a href="../../cayzen/knowledgemanagement/">Cayzen Knowledge Management</a>
+        <a href="../../cayzen/iso/">Cayzen ISO サポート</a>
+      </nav>
+      <nav class="footer-col">
+        <p class="footer-head">コンテンツ</p>
+        <a href="../../seminar/">セミナー</a>
+        <a href="../../column/">コラム</a>
+        <a href="../../news/">ニュース</a>
+        <a href="../../document/">資料ダウンロード</a>
+        <a href="../../resources/">お役立ち資料</a>
+      </nav>
+      <nav class="footer-col">
+        <p class="footer-head">企業情報</p>
+        <a href="../../#company">会社概要</a>
+        <a href="../../recruit/">採用情報</a>
+        <a href="../../#contact">お問い合わせ</a>
+        <a href="/privacy-policy/">プライバシーポリシー</a>
+        <a href="/security-policy/">情報セキュリティ方針</a>
+        <a href="/terms/">利用規約</a>
+      </nav>
+    </div>
+    <p class="copy">© Eitoss Inc. All rights reserved.</p>
+  </div>
+</footer>
+
+</body>
+</html>

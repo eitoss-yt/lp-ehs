@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-199DLM16MH"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-199DLM16MH');
+  window.addEventListener('message', function(e){
+    var d = e.data;
+    if (!d || d.type !== 'hsFormCallback' || d.eventName !== 'onFormSubmitted') return;
+    var isContact = d.id === 'de61c417-f176-4c76-af10-c59923cdfd79';
+    gtag('event', isContact ? 'contact_submit' : 'document_request', { form_id: d.id });
+  });
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PPWRのEU適合宣言書（DoC）と技術文書とは？求められる内容と保管期間 - コラム｜エイトス株式会社</title>
+<meta name="description" content="PPWRで2026年8月から求められている技術文書とEU適合宣言書（DoC）を解説。誰が作成するのか、保管期間、輸入者の確認義務、サプライヤーからの情報収集のポイントを整理します。">
+<meta property="og:title" content="PPWRのEU適合宣言書（DoC）と技術文書とは？求められる内容と保管期間 - コラム｜エイトス株式会社">
+<meta property="og:description" content="PPWRで2026年8月から求められている技術文書とEU適合宣言書（DoC）を解説。誰が作成するのか、保管期間、輸入者の確認義務、サプライヤーからの情報収集のポイントを整理します。">
+<meta property="og:type" content="article">
+<link rel="canonical" href="https://eitoss.com/column/ppwr-doc-technical-documentation/">
+<meta property="og:url" content="https://eitoss.com/column/ppwr-doc-technical-documentation/">
+<link rel="icon" type="image/svg+xml" href='data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"%3E%3Cpath d="M50 8 a42 42 0 1 0 29.7 12.3 l-12.7 12.7 a24 24 0 1 1 -17 -7 z" fill="%23106878"/%3E%3C/svg%3E'>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600;700&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--teal-900:#0b4e5b;--teal-700:#106878;--teal-500:#308098;--teal-300:#58a0b0;--teal-100:#80c0c8;--teal-050:#eef6f7;--ink:#2b3338;--gray:#505050;--line:#dde6e8;--white:#ffffff;--accent:#e8a13d}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:130px}
+body{font-family:"Noto Sans JP",sans-serif;font-size:17.5px;color:var(--ink);line-height:1.8;background:var(--white);-webkit-font-smoothing:antialiased}
+img{max-width:100%;height:auto;display:block}
+h1,h2,h3{letter-spacing:.08em;text-wrap:balance}
+a{color:var(--teal-700);text-decoration:none}
+.container{max-width:1080px;margin:0 auto;padding:0 20px}
+.btn{display:inline-block;padding:16px 30px;border-radius:8px;font-weight:500;font-size:17.5px;text-align:center;transition:transform .15s ease,box-shadow .15s ease;box-shadow:0 4px 14px rgba(16,104,120,.25)}
+.btn::after{content:"›";margin-left:8px;opacity:.55;font-weight:400}
+.btn:hover{transform:translateY(-2px);box-shadow:0 8px 20px rgba(16,104,120,.3)}
+.btn-primary{background:linear-gradient(135deg,var(--teal-500),var(--teal-700));color:#fff}
+.btn-ghost{background:#fff;color:var(--teal-700);box-shadow:0 4px 14px rgba(16,104,120,.18)}
+.btn-sm{padding:10px 22px;font-size:15.5px}
+.brand{display:inline-flex;align-items:center;gap:10px}
+.brand .name{font-weight:500;font-size:18.5px;color:var(--ink)}
+header{position:fixed;top:0;left:0;right:0;background:rgba(255,255,255,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);z-index:100}
+.header-inner{display:flex;align-items:center;justify-content:space-between;height:68px;max-width:1160px;margin:0 auto;padding:0 20px}
+.header-nav{display:flex;align-items:center;gap:10px}
+.header-nav .nav-links{display:flex;gap:22px;margin-right:14px;font-size:15.5px;font-weight:500}
+.header-nav .nav-links a{color:var(--ink)}
+.header-nav .nav-links a:hover{color:var(--teal-700)}
+.page-head{position:relative;overflow:hidden;padding:155px 0 46px;background:radial-gradient(1100px 500px at 85% -10%,rgba(128,192,200,.30),transparent 60%),linear-gradient(180deg,#f6fafb 0%,#eef6f7 100%)}
+.page-head::before{content:attr(data-wm);position:absolute;top:96px;left:50%;transform:translateX(-50%);font-family:"Poppins","Noto Sans JP",sans-serif;font-weight:700;font-size:150px;line-height:1;letter-spacing:.08em;color:rgba(16,104,120,.06);white-space:nowrap;pointer-events:none}
+.page-head .container{position:relative}
+.page-head[data-wm] .container{text-align:center}
+.page-head[data-wm] .breadcrumb{text-align:left}
+.page-head .label{display:none}
+.page-head h1{font-size:35.5px;font-weight:500;line-height:1.5;margin-top:6px}
+.page-head .lead{color:var(--gray);margin-top:10px;font-size:16.5px}
+.breadcrumb{font-size:14px;color:var(--gray);margin-bottom:14px}
+.breadcrumb a{color:var(--gray)}
+.breadcrumb a:hover{color:var(--teal-700)}
+.chip{display:inline-block;background:var(--teal-050);color:var(--teal-700);font-size:13.5px;font-weight:500;padding:4px 14px;border-radius:999px}
+.meta{display:flex;align-items:center;gap:12px;font-size:14.5px;color:var(--gray)}
+main.section{padding:56px 0 80px}
+.col-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
+.col-card{background:#fff;border-radius:14px;overflow:hidden;box-shadow:0 10px 26px rgba(16,104,120,.10);transition:transform .15s ease,box-shadow .15s ease;display:flex;flex-direction:column}
+.col-card:hover{transform:translateY(-4px);box-shadow:0 16px 34px rgba(16,104,120,.16)}
+.col-card .thumb{aspect-ratio:16/9;background:linear-gradient(135deg,var(--teal-050),#dcebee);display:flex;align-items:center;justify-content:center;overflow:hidden}
+.col-card .thumb img{width:100%;height:100%;object-fit:cover}
+.col-card .thumb svg{width:44px;height:44px;opacity:.5}
+.col-card .body{padding:20px 22px 24px;display:flex;flex-direction:column;gap:10px;flex:1}
+.col-card h2{font-size:18px;font-weight:500;line-height:1.55;color:var(--ink)}
+.col-card p.desc{font-size:14.5px;color:var(--gray);flex:1}
+.empty{padding:60px 0;text-align:center;color:var(--gray)}
+article.post{max-width:760px;margin:0 auto}
+.post-head h1{font-size:31.5px;font-weight:500;line-height:1.5;margin:14px 0 16px}
+.post-eyecatch{border-radius:14px;overflow:hidden;box-shadow:0 14px 34px rgba(16,104,120,.14);margin:26px 0 36px}
+.article-body{font-size:17px;overflow-wrap:break-word}
+.article-body a{word-break:break-all}
+.article-body h1,.article-body h2{font-size:25.5px;font-weight:500;line-height:1.5;margin:46px 0 16px;padding-bottom:10px;border-bottom:2px solid var(--teal-050)}
+.article-body h3{font-size:20.5px;font-weight:500;margin:36px 0 12px;padding-left:12px;border-left:4px solid var(--teal-500)}
+.article-body h4{font-size:18px;font-weight:500;margin:28px 0 10px}
+.article-body p{margin:0 0 1.3em}
+.article-body ul,.article-body ol{margin:0 0 1.3em;padding-left:1.5em}
+.article-body li{margin-bottom:.4em}
+.article-body a{text-decoration:underline;text-underline-offset:3px}
+.article-body img{border-radius:10px;margin:8px 0 20px;box-shadow:0 8px 22px rgba(16,104,120,.12)}
+.article-body blockquote{background:var(--teal-050);border-left:4px solid var(--teal-500);border-radius:0 10px 10px 0;padding:16px 20px;margin:0 0 1.3em;color:var(--gray)}
+.article-body blockquote p:last-child{margin-bottom:0}
+.article-body table{border-collapse:collapse;width:100%;margin:0 0 1.3em;font-size:15.5px}
+.article-body th,.article-body td{border:1px solid var(--line);padding:10px 12px;text-align:left}
+.article-body th{background:var(--teal-050);font-weight:500}
+.article-body pre{background:#0f2e33;color:#e8f2f4;border-radius:10px;padding:16px 18px;overflow-x:auto;font-size:14.5px;margin:0 0 1.3em}
+.article-body code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace}
+.post-cta{margin-top:60px;background:linear-gradient(135deg,var(--teal-050),#f6fafb);border-radius:16px;padding:34px 30px;text-align:center;box-shadow:0 10px 26px rgba(16,104,120,.08)}
+.post-cta h2{font-size:21.5px;font-weight:500;margin-bottom:8px}
+.post-cta p{font-size:15.5px;color:var(--gray);margin-bottom:20px}
+.post-cta .btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+.back-link{display:inline-block;margin-top:44px;font-size:15.5px;font-weight:500}
+@media(max-width:900px){
+  .col-grid{grid-template-columns:1fr}
+  .page-head h1{font-size:27.5px}
+  .page-head::before{font-size:64px;top:122px}
+  .post-head h1{font-size:24.5px}
+  .header-nav .nav-links{display:none}
+  .header-nav .btn-sm{padding:9px 14px;font-size:14px;white-space:nowrap}
+  main.section{padding:40px 0 60px}
+}
+header.gh{position:fixed;top:0;left:0;right:0;background:rgba(255,255,255,.96);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);z-index:100}
+.gh-inner{display:flex;justify-content:space-between;align-items:center;gap:24px;max-width:1360px;margin:0 auto;padding:10px 24px}
+.gh-left{display:flex;flex-direction:column;gap:7px;align-items:flex-start}
+.gh-brand img{height:32px;width:auto;display:block}
+.gh-nav{display:flex;align-items:center;gap:26px;font-size:16px;font-weight:500}
+.gh-nav a,.gh-dd-label{color:#1c1c1c;white-space:nowrap;cursor:pointer}
+.gh-nav a:hover,.gh-dd:hover .gh-dd-label{color:var(--teal-700)}
+.gh-dd{position:relative}
+.gh-dd-label::after{content:" ▾";font-size:12.5px}
+.gh-dd-menu{display:none;position:absolute;top:100%;left:-14px;padding-top:12px;z-index:110}
+.gh-dd:hover .gh-dd-menu{display:block}
+.gh-dd-menu .in{background:#fff;border-radius:10px;box-shadow:0 12px 32px rgba(16,104,120,.18);padding:8px;min-width:280px}
+.gh-dd-menu a{display:block;padding:10px 14px;border-radius:8px;font-size:15.5px;white-space:nowrap}
+.gh-dd-menu a:hover{background:var(--teal-050)}
+.gh-right{display:flex;flex-direction:column;align-items:flex-end;gap:7px}
+.gh-tel{font-size:14px;color:#333;white-space:nowrap;line-height:1.3;display:flex;align-items:baseline;gap:6px}
+.gh-tel b{font-size:22.5px;font-weight:500;font-family:"Poppins","Noto Sans JP",sans-serif}
+.gh-tel span{color:#555}
+.gh-actions{display:flex;gap:10px}
+.gh-btn{display:inline-flex;align-items:center;gap:7px;padding:10px 20px;border-radius:6px;color:#fff;font-weight:700;font-size:15.5px;white-space:nowrap;transition:transform .15s ease,filter .15s ease;box-shadow:0 3px 10px rgba(0,0,0,.14)}
+.gh-btn:hover{transform:translateY(-1px);filter:brightness(1.06)}
+.gh-btn svg{width:16px;height:16px}
+.gh-btn-dl{background:#f6941c}
+.gh-btn-tr{background:linear-gradient(90deg,#54a4ec,#2e7fd6)}
+.gh-btn-ct{background:#45a3b4}
+@media(max-width:1180px){.gh-nav{gap:18px;font-size:15px}}
+@media(max-width:1020px){.gh-nav{display:none}.gh-tel{display:none}.gh-left{flex-direction:row;align-items:center}}
+@media(max-width:640px){
+  .gh-inner{padding:10px 14px;gap:10px}
+  .gh-brand img{height:26px}
+  .gh-btn{padding:8px 10px;font-size:13.5px;gap:5px}
+  .gh-btn svg{width:14px;height:14px}
+  .gh-actions{gap:6px}
+}
+
+/* 記事下CTAバナー（画像） */
+.cta-banner-img{display:block;margin-top:60px;border-radius:14px;overflow:hidden;box-shadow:0 14px 34px rgba(16,104,120,.16);transition:transform .15s ease,box-shadow .15s ease}
+.cta-banner-img:hover{transform:translateY(-3px);box-shadow:0 20px 44px rgba(16,104,120,.22)}
+.cta-banner-img img{width:100%;height:auto;display:block;margin:0;border-radius:0;box-shadow:none}
+
+.news-rows{max-width:860px;margin:0 auto}
+.news-row.nr-hidden{display:none}
+.news-more{background:none;border:none;box-shadow:none;padding:6px 10px;font-family:inherit;font-size:16.5px;font-weight:500;color:var(--teal-700);cursor:pointer}
+.news-more:hover{text-decoration:underline;text-underline-offset:4px}
+.news-row{display:flex;gap:22px;align-items:baseline;padding:18px 10px;border-bottom:1px solid var(--line);font-size:16px;color:var(--ink)}
+.news-row time{flex:0 0 auto;color:var(--teal-500);font-weight:500;font-family:"Poppins","Noto Sans JP",sans-serif}
+.news-row:hover .t{color:var(--teal-700)}
+@media(max-width:640px){.news-row{flex-direction:column;gap:4px}}
+
+.chip-open{background:#fdf0dc;color:#b06a00}
+.chip-closed{background:#eceff1;color:#607078}
+.chip-archive{background:var(--teal-700);color:#fff}
+.sem-info{background:var(--teal-050);border-radius:12px;padding:18px 22px;margin:0 0 26px;font-size:16px}
+.sem-section{margin-bottom:56px}
+.sem-section .sem-heading{font-size:23.5px;font-weight:500;padding-left:14px;border-left:5px solid var(--teal-500);margin-bottom:22px}
+.video-wrap{position:relative;padding-top:56.25%;background:#0b4e5b;border-radius:14px;overflow:hidden;box-shadow:0 14px 34px rgba(16,104,120,.16);margin:26px 0 36px}
+.video-wrap iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.sem-apply{margin:30px 0 10px;text-align:center}
+footer{background:var(--teal-900);color:#fff;padding:56px 0 28px}
+.footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:44px;align-items:start;max-width:1080px;margin:0 auto}
+.footer-brand{display:inline-block}
+.footer-brand img{height:38px;width:auto;display:block}
+.footer-addr{font-size:13.5px;color:rgba(255,255,255,.75);margin-top:18px;line-height:2}
+.footer-head{font-size:15.5px;font-weight:500;color:#fff;letter-spacing:.08em;margin-bottom:14px;padding-bottom:8px;border-bottom:1px solid rgba(255,255,255,.2)}
+.footer-col a{display:block;font-size:14.5px;color:rgba(255,255,255,.8);margin-bottom:10px}
+.footer-col a:hover{color:#fff}
+footer .copy{font-size:12.5px;color:rgba(255,255,255,.55);text-align:center;margin-top:44px;padding-top:20px;border-top:1px solid rgba(255,255,255,.12)}
+@media(max-width:860px){.footer-grid{grid-template-columns:1fr 1fr;gap:30px}}
+@media(max-width:560px){.footer-grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+
+<header class="gh">
+  <div class="gh-inner">
+    <div class="gh-left">
+      <a class="gh-brand" href="../../" aria-label="エイトス株式会社"><img src="../../assets/logo-corporate-horizontal-single.svg" alt="eitoss"></a>
+      <nav class="gh-nav">
+        <div class="gh-dd">
+          <span class="gh-dd-label">活用シーン</span>
+          <div class="gh-dd-menu"><div class="in">
+            <a href="../../cayzen/ehsresearch/">Cayzen EHS Research（EHS法令調査代行）</a>
+            <a href="../../cayzen/knowledgemanagement/">Cayzen Knowledge Management（SaaS）</a>
+            <a href="../../cayzen/iso/">Cayzen ISO サポート</a>
+          </div></div>
+        </div>
+        <a href="../../seminar/">セミナー</a>
+        <a href="../../column/">コラム</a>
+        <a href="../../news/">ニュース</a>
+        <a href="../../resources/">お役立ち資料</a>
+        <a href="../../#company">会社概要</a>
+        <a href="../../recruit/">採用情報</a>
+      </nav>
+    </div>
+    <div class="gh-right">
+      <p class="gh-tel">TEL: <b>050-8881-9881</b><span>（平日10:00〜19:00）</span></p>
+      <div class="gh-actions">
+        <a class="gh-btn gh-btn-dl" href="../../document/"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h9l4 4v14H6z"/><path d="M15 3v4h4M9 12h6M9 16h6"/></svg> 資料請求</a>
+        <a class="gh-btn gh-btn-ct" href="../../#contact"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg> お問合せ</a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="page-head">
+  <div class="container">
+    <article class="post post-head-wrap" style="max-width:760px;margin:0 auto">
+      <p class="breadcrumb"><a href="../../">HOME</a> ／ <a href="../">コラム</a> ／ PPWRのEU適合宣言書（DoC）と技術文書とは？求められる内容と保管期間</p>
+      <div class="meta"><span class="chip">法令改正</span><time datetime="2026-10-22T08:40:00.000Z">2026.10.22</time></div>
+      <div class="post-head"><h1>PPWRのEU適合宣言書（DoC）と技術文書とは？求められる内容と保管期間</h1></div>
+    </article>
+  </div>
+</div>
+<main class="section">
+  <div class="container">
+    <article class="post">
+      <div class="post-eyecatch"><img src="/assets/column/ppwr-doc-technical-documentation.jpg?w=1280&fm=webp" alt=""></div>
+      <div class="article-body">
+<p>EUの包装・包装廃棄物規則（PPWR）は2026年8月12日に適用が始まりました。2030年からの再生材やリサイクル設計の要件に注目が集まりがちですが、<strong>技術文書とEU適合宣言書（DoC）は、すでに求められている義務</strong>です。</p>
+<p>これらの書類がなければ、EUの輸入者は製品を受け入れられず、当局から求められても適合を説明できません。しかも、技術文書の中身の多くは、容器メーカーや樹脂メーカーなどのサプライヤーが持つ情報に依存しています。</p>
+<p>本記事では、PPWRで求められる技術文書とDoCの位置づけ、誰が作成するのか、何を記載する必要があるのか、保管期間、そしてサプライヤーからの情報収集の考え方を、精密部品や電子部品の包装を例に解説します。</p>
+<blockquote><p>出典：EUR-Lex「Regulation (EU) 2025/40」第15条（メーカーの義務）、第16条、第18条、第22条、第39条、Annex VII・Annex VIII <a href="https://eur-lex.europa.eu/eli/reg/2025/40/oj" target="_blank" rel="noopener noreferrer nofollow">https://eur-lex.europa.eu/eli/reg/2025/40/oj</a></p></blockquote>
+<p><strong>すでに求められている義務と、部門別の確認項目をまとめた資料を無料でダウンロードいただけます。</strong></p>
+<p><a href="https://eitoss.com/document/ppwr/">資料をダウンロードする</a></p>
+<hr>
+
+<h2>PPWRにおける適合性評価・技術文書・DoCの関係</h2>
+<p>PPWRでは、包装を市場に出す前に、その包装が規則の要件を満たしていることを確認し、書類で示す必要があります。流れは次の3段階です。</p>
+<table><tbody>
+<tr><th>段階</th><th>内容</th><th>条文</th></tr>
+<tr><td>適合性評価</td><td>包装が要件（5〜12条）を満たすことをメーカー自らが確認する</td><td>15条・Annex VII</td></tr>
+<tr><td>技術文書</td><td>適合の根拠を記録した書類一式</td><td>15条・Annex VII</td></tr>
+<tr><td>EU適合宣言書（DoC）</td><td>包装が要件を満たしていることをメーカーが宣言する文書</td><td>39条・Annex VIII</td></tr>
+</tbody></table>
+<p>PPWRに適合した包装でなければEU市場に出せない（4条）ため、この3段階は、EU向けの出荷を続けるための前提条件といえます。</p>
+<h3>第三者認証は不要。ただし責任はメーカーが負う</h3>
+<p>PPWRの適合性評価は、Annex VIIの「Module A（内部生産管理）」によって行います。第三者機関の認証は必要ありません。その分、<strong>適合の根拠を自社で示す責任</strong>はメーカーにあります。「認証機関が確認してくれる」という前提がないため、社内で根拠をそろえ、説明できる状態にしておくことが求められます。</p>
+
+<h2>誰が作成するのか</h2>
+<p>技術文書とDoCを作成するのは、PPWR上の<strong>メーカー</strong>です。メーカーは包装を成形した会社とは限らず、包装の仕様を決めて発注する会社が該当し得ます。たとえば、電子部品メーカーが製品用のトレイや専用容器の材質・寸法を指定して外部に成形を委託している場合、DoCの作成義務を負うのは電子部品メーカー側になる可能性があります。</p>
+<p>また、輸入者や販売者が自社の名称・商標で上市する場合は、その会社がメーカーとみなされます（21条）。輸送包装については、包装を最終的な形にする者が原則としてメーカーに当たる、という整理が欧州委員会のFAQで示されています。自社がメーカーに当たるかどうかは、<a href="https://eitoss.com/column/ppwr-producer-manufacturer/">PPWRのproducerとは？製造者・輸入者との違い</a>で解説しています。</p>
+<h3>認定代理人に技術文書の作成は任せられない</h3>
+<p>PPWRには、メーカーが製品適合に関する認定代理人を置く制度があります（17条）。ただし、<strong>技術文書の作成は委任の範囲に含めることができません</strong>。EUに代理人を置いても、技術文書はメーカー自身が整える必要があります。</p>
+<h3>輸入者には「確認」の義務がある</h3>
+<p>EUの輸入者は、メーカーが適合性評価を行い、技術文書とDoCを作成し、表示を整えていることを確認しなければなりません。さらに、DoCを保管し、<strong>当局から求められた場合は10日以内に提出</strong>する必要があります（18条）。日本のメーカーが書類を整えていなければ、EUの販売子会社や代理店などの取引先が義務を果たせなくなります。</p>
+
+<h2>技術文書には何が必要か</h2>
+<p>技術文書は、包装がPPWRの各要件を満たしていることを裏付ける書類一式です。包装そのものの情報に加えて、要件ごとの根拠が求められます。主な観点と、その根拠となる情報の例を整理すると次のとおりです。</p>
+<table><tbody>
+<tr><th>観点</th><th>条文</th><th>根拠となる情報の例</th><th>情報を持っていることが多い先</th></tr>
+<tr><td>包装の構成と材質</td><td>Annex VII</td><td>部品ごとの材料・重量（容器本体、保持部品、シール、フィルターなど）</td><td>自社（実測）・容器メーカー</td></tr>
+<tr><td>懸念物質</td><td>5条</td><td>添加剤、離型剤、ESD添加材などの化学物質情報</td><td>樹脂メーカー・容器メーカー</td></tr>
+<tr><td>リサイクル可能性</td><td>6条</td><td>多材質構成の分別可否、ESD材やシールの扱い</td><td>容器メーカー</td></tr>
+<tr><td>再生材の含有率</td><td>7条</td><td>樹脂グレード、再生材の比率と由来</td><td>樹脂メーカー・容器メーカー</td></tr>
+<tr><td>包装の最小化</td><td>10条</td><td>落下・振動試験、設計FMEA、CAEなどの結果</td><td>自社（品質保証・包装設計）</td></tr>
+<tr><td>表示</td><td>12条・22条</td><td>材質表示、バッチ・シリアル番号、事業者名、連絡先</td><td>自社</td></tr>
+</tbody></table>
+<h3>包装の最小化（10条）は「試験データ」で説明する</h3>
+<p>なかでも説明の質が問われるのが<strong>包装の最小化（10条）</strong>です。「保護性能が必要だから厚い緩衝材を使う」では足りず、「この振動・落下・汚染の性能を満たすために、この材料と体積が最小限必要である」ことを、根拠をもって説明する必要があります。</p>
+<p>PPWRは2条2項で、既存のEUの製品安全・品質・輸送などの要求を尊重するとしているため、製品破損の防止、振動の抑制、粉塵や湿度の管理といった包装の機能を、PPWRのために無条件で削る必要はありません。求められているのは、その必要量を証拠で示すことです。多くの精密部品メーカーは、すでに落下試験や振動試験のデータを持っています。それらを技術文書につなげられるかどうかが、対応の負担を大きく左右します。</p>
+<h3>緩衝材で埋めた空間も「空きスペース」になる</h3>
+<p>輸送包装などには、2030年1月1日から空隙率50%以下の基準がかかります（24条）。緩衝フォームやエアクッションで埋めた空間も空きスペースに算入されるため、緩衝材の量そのものが評価の対象になります。製品保護に必要な空間は、技術文書で説明しておく必要があります。</p>
+
+<hr>
+<p><strong>技術文書の準備に向けた部門別チェックリストを含む資料を無料でダウンロードいただけます。</strong></p>
+<p><a href="https://eitoss.com/document/ppwr/">資料をダウンロードする</a></p>
+<hr>
+
+<a class="cta-banner-img" href="../../document/ppwr/">
+        <img src="../../assets/column_bnr_ppwr.jpg" alt="PPWR、施行済み。いま確認すべきこと｜役割ごとの義務・期限一覧・部門別チェックリストを1冊に｜無料で資料をダウンロード" loading="lazy" width="1080" height="300">
+      </a>
+<h2>EU適合宣言書（DoC）のポイント</h2>
+<p>DoCは、包装がPPWRの要件を満たしていることをメーカーが宣言する文書です。様式はAnnex VIIIで定められています。</p>
+<h3>保管期間は包装の種類で異なる</h3>
+<table><tbody>
+<tr><th>包装の種類</th><th>保管期間</th></tr>
+<tr><td>単回使用の包装</td><td>5年</td></tr>
+<tr><td>再使用包装</td><td>10年</td></tr>
+</tbody></table>
+<p>包装ごとにDoCを作成し、保管する体制が必要です。製品や包装の種類が多い会社ほど、管理の仕組みづくりが課題になります。たとえば、同じ製品でも顧客ごとに包装指定書があり、トレイや外装の仕様が異なる場合は、仕様の数だけ書類の管理が発生する可能性があります。</p>
+<h3>2030年を待たない「現在進行形」の義務</h3>
+<p>技術文書とDoCは、2026年8月12日の適用開始とともに求められている義務です。2030年以降に本格化する再生材やリサイクル等級の要件は、委任法令などの確定にあわせて内容を更新していくことになります。つまり、技術文書は一度作れば終わりではなく、<strong>法令の整備に合わせて育てていく書類</strong>と考える必要があります。</p>
+
+<h2>本当の課題は「サプライヤーからの情報収集」</h2>
+<p>技術文書やDoCの作成で最も時間がかかるのは、書類を書く作業ではなく、<strong>根拠となる情報を集める作業</strong>です。包装の樹脂グレード、再生材の比率、化学物質の情報などは、多くの場合サプライヤーが持っています。</p>
+<p>PPWRには、包装・包装材のサプライヤーがメーカーに対して、適合の判断に必要な情報を提供する義務が定められています（16条）。この条文は、容器メーカーへの照会の法的な根拠になります。</p>
+<h3>容器メーカーに照会したい主な項目</h3>
+<ul>
+<li>採用している樹脂のグレードと、再生材の比率</li>
+<li>材質ごとに分別できる設計かどうか（リサイクル設計）</li>
+<li>回収や部品交換のサービスの有無</li>
+<li>DoCの作成に必要な情報や支援を提供できるかどうか</li>
+</ul>
+<h3>契約で取り決めておきたい観点</h3>
+<p>照会に一度回答してもらうだけでは、仕様が変わったときに技術文書との整合が崩れます。包装材のサプライヤーとの契約では、情報提供の範囲、再生材の由来を示す証憑、DoC作成への協力、データの保存期間、仕様変更の事前通知、監査の権利などを、どこまで取り決めるかを検討しておくことが重要です。</p>
+<p>ただし、サプライヤーが海外の企業である場合や、取引量が小さい場合など、必要なデータがすぐにそろわないことも少なくありません。照会の進め方や、社内のどの部門が何を担うかの整理は、資料の部門別チェックリストで紹介しています。</p>
+
+<h2>精密部品・電子部品の包装で論点になりやすい箇所</h2>
+<p>技術文書の作成で手間がかかりやすいのは、複数の材料や部品を組み合わせた包装です。日本の製造業でよく使われる包装を例にすると、次のような点が論点になります。</p>
+<ul>
+<li><strong>専用容器・製品ケース</strong>：シェルや蓋と保持部で異なる樹脂を使う構成では、部品ごとの材質と重量、分別できるかどうかの説明が必要になります</li>
+<li><strong>防湿袋・ESD袋</strong>：アルミラミネートなどの多層構造はリサイクル設計の評価が課題になり、ESD添加材を含む場合は懸念物質の情報も求められます</li>
+<li><strong>緩衝材・振動吸収ユニット</strong>：発泡PU・PE・PP・PSの混在や、異なる材料を接着した構造は、リサイクル設計の面で不利になります</li>
+<li><strong>段ボール外装・パレット</strong>：自社の出荷場で外装を仕上げている場合、輸送包装のメーカーとして扱われる可能性があります</li>
+</ul>
+<p>出荷から顧客到着までの段階ごとに、どの包装にどの条文が効くかを整理した一覧は、資料に掲載しています。</p>
+
+<h2>書類づくりの前提になる「包装の台帳」</h2>
+<p>技術文書を包装ごとに作るには、その前提として、EU向けの包装を一覧で管理できる状態が必要です。部品番号、材質、部品重量、サプライヤー、製造工場、再生材の比率、単回使用か再使用か、年間のEU投入数といった情報を1つの台帳に集めておくと、技術文書、DoC、再生材の判定、EPRの報告を同じ情報から作れるようになります。</p>
+<p>逆に、この台帳がない状態では、再生材35%の判定も、5%未満の部品の除外判定もできません。詳しくは<a href="https://eitoss.com/column/ppwr-recycled-content-article7/">PPWRの再生材含有率35%とは？</a>で解説しています。</p>
+
+<h2>よくある質問</h2>
+<h3>Q. DoCは第三者機関に発行してもらう必要がありますか？</h3>
+<p>A. 必要ありません。DoCはメーカーが自ら作成する文書です。その代わり、適合の根拠となる技術文書を自社で整える責任があります。</p>
+<h3>Q. 2030年の要件がまだ確定していないのに、技術文書は作れますか？</h3>
+<p>A. 2026年8月12日の時点で適用されている要件については、すでに技術文書による説明が求められます。2030年以降の要件は、委任法令などの確定にあわせて内容を更新していくことになります。</p>
+<h3>Q. 輸入者がいる場合、日本のメーカーは書類を用意しなくてよいですか？</h3>
+<p>A. いいえ。輸入者の義務は、メーカーが書類を整えていることを確認することです。日本のメーカーがメーカーに当たる場合、技術文書とDoCの作成義務はメーカーにあります。</p>
+<h3>Q. 当局から求められたら、どのくらいの期間で提出が必要ですか？</h3>
+<p>A. 輸入者は、当局の要請から10日以内に提出する必要があります（18条）。日本側から速やかに書類を渡せる体制が求められます。</p>
+<h3>Q. 落下試験や振動試験の結果は技術文書に使えますか？</h3>
+<p>A. 包装の最小化（10条）の説明では、試験・研究・シミュレーションなどで、必要な材料や体積を説明する仕組みとされています。既存の試験データは、その根拠として活用できる可能性があります。</p>
+
+<h2>まとめ</h2>
+<p>PPWRの技術文書とEU適合宣言書（DoC）は、2030年を待たずにすでに求められている義務です。作成するのはメーカーで、第三者認証は不要ですが、適合の根拠を自社で示す責任があります。輸入者は当局の要請から10日以内に提出する必要があり、DoCは単回使用で5年、再使用包装で10年保管します。本当の課題は、サプライヤーから必要な情報を集め、包装の台帳として管理する仕組みづくりです。</p>
+<p>エイトスでは、PPWRで現在求められている義務と、部門別の確認項目をまとめた資料をご用意しています。PPWRの全体像は<a href="https://eitoss.com/column/ppwr-overview/">PPWR（EU包装・包装廃棄物規則）とは？</a>、期限の一覧は<a href="https://eitoss.com/column/ppwr-schedule/">PPWRの適用スケジュール一覧</a>もあわせてご覧ください。</p>
+<p><strong>技術文書・DoCの準備に役立つPPWR対応資料を無料でダウンロードいただけます。</strong></p>
+<p><a href="https://eitoss.com/document/ppwr/">資料をダウンロードする</a></p>
+      </div>
+      <a class="cta-banner-img" href="../../document/ppwr/">
+        <img src="../../assets/column_bnr_ppwr.jpg" alt="PPWR、施行済み。いま確認すべきこと｜役割ごとの義務・期限一覧・部門別チェックリストを1冊に｜無料で資料をダウンロード" loading="lazy" width="1080" height="300">
+      </a>
+      <a class="back-link" href="../">← コラム一覧へ戻る</a>
+    </article>
+  </div>
+</main>
+<script>
+(function(){
+  if (typeof gtag !== 'function') return;
+  var article = location.pathname.split('/')[2] || '';
+  var links = document.querySelectorAll('article.post a[href*="/document/"]');
+  var io = 'IntersectionObserver' in window ? new IntersectionObserver(function(es){
+    es.forEach(function(e){
+      if (!e.isIntersecting) return;
+      gtag('event', 'cta_view', { cta_position: e.target.dataset.ctaPos, article_id: article, link_url: e.target.href });
+      io.unobserve(e.target);
+    });
+  }, { threshold: 0.5 }) : null;
+  links.forEach(function(a){
+    var pos = a.classList.contains('cta-banner-img') ? (a.closest('.article-body') ? 'banner_mid' : 'banner_bottom') : 'text_link';
+    a.dataset.ctaPos = pos;
+    a.addEventListener('click', function(){
+      gtag('event', 'cta_click', { cta_position: pos, article_id: article, link_url: a.href });
+    });
+    if (io) io.observe(a);
+  });
+})();
+</script>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand"><img src="../../assets/logo-corporate-horizontal-white.png" alt="eitoss"></div>
+        <p class="footer-addr">本社: 〒471-0031<br>愛知県豊田市小坂本町1-5-5 YAMATO BLDG2F<br>営業拠点: 〒170-6012<br>東京都豊島区東池袋3-1-1<br>サンシャイン60 12F</p>
+      </div>
+      <nav class="footer-col">
+        <p class="footer-head">サービス</p>
+        <a href="../../cayzen/ehsresearch/">Cayzen EHS Research</a>
+        <a href="../../cayzen/knowledgemanagement/">Cayzen Knowledge Management</a>
+        <a href="../../cayzen/iso/">Cayzen ISO サポート</a>
+      </nav>
+      <nav class="footer-col">
+        <p class="footer-head">コンテンツ</p>
+        <a href="../../seminar/">セミナー</a>
+        <a href="../../column/">コラム</a>
+        <a href="../../news/">ニュース</a>
+        <a href="../../document/">資料ダウンロード</a>
+        <a href="../../resources/">お役立ち資料</a>
+      </nav>
+      <nav class="footer-col">
+        <p class="footer-head">企業情報</p>
+        <a href="../../#company">会社概要</a>
+        <a href="../../recruit/">採用情報</a>
+        <a href="../../#contact">お問い合わせ</a>
+        <a href="/privacy-policy/">プライバシーポリシー</a>
+        <a href="/security-policy/">情報セキュリティ方針</a>
+        <a href="/terms/">利用規約</a>
+      </nav>
+    </div>
+    <p class="copy">© Eitoss Inc. All rights reserved.</p>
+  </div>
+</footer>
+
+</body>
+</html>

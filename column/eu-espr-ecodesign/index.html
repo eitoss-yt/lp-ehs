@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-199DLM16MH"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-199DLM16MH');
+  window.addEventListener('message', function(e){
+    var d = e.data;
+    if (!d || d.type !== 'hsFormCallback' || d.eventName !== 'onFormSubmitted') return;
+    var isContact = d.id === 'de61c417-f176-4c76-af10-c59923cdfd79';
+    gtag('event', isContact ? 'contact_submit' : 'document_request', { form_id: d.id });
+  });
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ESPR（EUエコデザイン規則）とは？DPPと売れ残り廃棄禁止、日本企業の準備 - コラム｜エイトス株式会社</title>
+<meta name="description" content="EUのエコデザイン規則（ESPR）を2026年10月時点で解説。旧指令との違い、エコデザイン要件、デジタル製品パスポート（DPP）の開始時期、作業計画、売れ残り衣料品・靴の廃棄禁止と、日本企業が準備すべきことを整理します。">
+<meta property="og:title" content="ESPR（EUエコデザイン規則）とは？DPPと売れ残り廃棄禁止、日本企業の準備 - コラム｜エイトス株式会社">
+<meta property="og:description" content="EUのエコデザイン規則（ESPR）を2026年10月時点で解説。旧指令との違い、エコデザイン要件、デジタル製品パスポート（DPP）の開始時期、作業計画、売れ残り衣料品・靴の廃棄禁止と、日本企業が準備すべきことを整理します。">
+<meta property="og:type" content="article">
+<link rel="canonical" href="https://eitoss.com/column/eu-espr-ecodesign/">
+<meta property="og:url" content="https://eitoss.com/column/eu-espr-ecodesign/">
+<link rel="icon" type="image/svg+xml" href='data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"%3E%3Cpath d="M50 8 a42 42 0 1 0 29.7 12.3 l-12.7 12.7 a24 24 0 1 1 -17 -7 z" fill="%23106878"/%3E%3C/svg%3E'>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600;700&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--teal-900:#0b4e5b;--teal-700:#106878;--teal-500:#308098;--teal-300:#58a0b0;--teal-100:#80c0c8;--teal-050:#eef6f7;--ink:#2b3338;--gray:#505050;--line:#dde6e8;--white:#ffffff;--accent:#e8a13d}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:130px}
+body{font-family:"Noto Sans JP",sans-serif;font-size:17.5px;color:var(--ink);line-height:1.8;background:var(--white);-webkit-font-smoothing:antialiased}
+img{max-width:100%;height:auto;display:block}
+h1,h2,h3{letter-spacing:.08em;text-wrap:balance}
+a{color:var(--teal-700);text-decoration:none}
+.container{max-width:1080px;margin:0 auto;padding:0 20px}
+.btn{display:inline-block;padding:16px 30px;border-radius:8px;font-weight:500;font-size:17.5px;text-align:center;transition:transform .15s ease,box-shadow .15s ease;box-shadow:0 4px 14px rgba(16,104,120,.25)}
+.btn::after{content:"›";margin-left:8px;opacity:.55;font-weight:400}
+.btn:hover{transform:translateY(-2px);box-shadow:0 8px 20px rgba(16,104,120,.3)}
+.btn-primary{background:linear-gradient(135deg,var(--teal-500),var(--teal-700));color:#fff}
+.btn-ghost{background:#fff;color:var(--teal-700);box-shadow:0 4px 14px rgba(16,104,120,.18)}
+.btn-sm{padding:10px 22px;font-size:15.5px}
+.brand{display:inline-flex;align-items:center;gap:10px}
+.brand .name{font-weight:500;font-size:18.5px;color:var(--ink)}
+header{position:fixed;top:0;left:0;right:0;background:rgba(255,255,255,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);z-index:100}
+.header-inner{display:flex;align-items:center;justify-content:space-between;height:68px;max-width:1160px;margin:0 auto;padding:0 20px}
+.header-nav{display:flex;align-items:center;gap:10px}
+.header-nav .nav-links{display:flex;gap:22px;margin-right:14px;font-size:15.5px;font-weight:500}
+.header-nav .nav-links a{color:var(--ink)}
+.header-nav .nav-links a:hover{color:var(--teal-700)}
+.page-head{position:relative;overflow:hidden;padding:155px 0 46px;background:radial-gradient(1100px 500px at 85% -10%,rgba(128,192,200,.30),transparent 60%),linear-gradient(180deg,#f6fafb 0%,#eef6f7 100%)}
+.page-head::before{content:attr(data-wm);position:absolute;top:96px;left:50%;transform:translateX(-50%);font-family:"Poppins","Noto Sans JP",sans-serif;font-weight:700;font-size:150px;line-height:1;letter-spacing:.08em;color:rgba(16,104,120,.06);white-space:nowrap;pointer-events:none}
+.page-head .container{position:relative}
+.page-head[data-wm] .container{text-align:center}
+.page-head[data-wm] .breadcrumb{text-align:left}
+.page-head .label{display:none}
+.page-head h1{font-size:35.5px;font-weight:500;line-height:1.5;margin-top:6px}
+.page-head .lead{color:var(--gray);margin-top:10px;font-size:16.5px}
+.breadcrumb{font-size:14px;color:var(--gray);margin-bottom:14px}
+.breadcrumb a{color:var(--gray)}
+.breadcrumb a:hover{color:var(--teal-700)}
+.chip{display:inline-block;background:var(--teal-050);color:var(--teal-700);font-size:13.5px;font-weight:500;padding:4px 14px;border-radius:999px}
+.meta{display:flex;align-items:center;gap:12px;font-size:14.5px;color:var(--gray)}
+main.section{padding:56px 0 80px}
+.col-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
+.col-card{background:#fff;border-radius:14px;overflow:hidden;box-shadow:0 10px 26px rgba(16,104,120,.10);transition:transform .15s ease,box-shadow .15s ease;display:flex;flex-direction:column}
+.col-card:hover{transform:translateY(-4px);box-shadow:0 16px 34px rgba(16,104,120,.16)}
+.col-card .thumb{aspect-ratio:16/9;background:linear-gradient(135deg,var(--teal-050),#dcebee);display:flex;align-items:center;justify-content:center;overflow:hidden}
+.col-card .thumb img{width:100%;height:100%;object-fit:cover}
+.col-card .thumb svg{width:44px;height:44px;opacity:.5}
+.col-card .body{padding:20px 22px 24px;display:flex;flex-direction:column;gap:10px;flex:1}
+.col-card h2{font-size:18px;font-weight:500;line-height:1.55;color:var(--ink)}
+.col-card p.desc{font-size:14.5px;color:var(--gray);flex:1}
+.empty{padding:60px 0;text-align:center;color:var(--gray)}
+article.post{max-width:760px;margin:0 auto}
+.post-head h1{font-size:31.5px;font-weight:500;line-height:1.5;margin:14px 0 16px}
+.post-eyecatch{border-radius:14px;overflow:hidden;box-shadow:0 14px 34px rgba(16,104,120,.14);margin:26px 0 36px}
+.article-body{font-size:17px;overflow-wrap:break-word}
+.article-body a{word-break:break-all}
+.article-body h1,.article-body h2{font-size:25.5px;font-weight:500;line-height:1.5;margin:46px 0 16px;padding-bottom:10px;border-bottom:2px solid var(--teal-050)}
+.article-body h3{font-size:20.5px;font-weight:500;margin:36px 0 12px;padding-left:12px;border-left:4px solid var(--teal-500)}
+.article-body h4{font-size:18px;font-weight:500;margin:28px 0 10px}
+.article-body p{margin:0 0 1.3em}
+.article-body ul,.article-body ol{margin:0 0 1.3em;padding-left:1.5em}
+.article-body li{margin-bottom:.4em}
+.article-body a{text-decoration:underline;text-underline-offset:3px}
+.article-body img{border-radius:10px;margin:8px 0 20px;box-shadow:0 8px 22px rgba(16,104,120,.12)}
+.article-body blockquote{background:var(--teal-050);border-left:4px solid var(--teal-500);border-radius:0 10px 10px 0;padding:16px 20px;margin:0 0 1.3em;color:var(--gray)}
+.article-body blockquote p:last-child{margin-bottom:0}
+.article-body table{border-collapse:collapse;width:100%;margin:0 0 1.3em;font-size:15.5px}
+.article-body th,.article-body td{border:1px solid var(--line);padding:10px 12px;text-align:left}
+.article-body th{background:var(--teal-050);font-weight:500}
+.article-body pre{background:#0f2e33;color:#e8f2f4;border-radius:10px;padding:16px 18px;overflow-x:auto;font-size:14.5px;margin:0 0 1.3em}
+.article-body code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace}
+.post-cta{margin-top:60px;background:linear-gradient(135deg,var(--teal-050),#f6fafb);border-radius:16px;padding:34px 30px;text-align:center;box-shadow:0 10px 26px rgba(16,104,120,.08)}
+.post-cta h2{font-size:21.5px;font-weight:500;margin-bottom:8px}
+.post-cta p{font-size:15.5px;color:var(--gray);margin-bottom:20px}
+.post-cta .btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+.back-link{display:inline-block;margin-top:44px;font-size:15.5px;font-weight:500}
+@media(max-width:900px){
+  .col-grid{grid-template-columns:1fr}
+  .page-head h1{font-size:27.5px}
+  .page-head::before{font-size:64px;top:122px}
+  .post-head h1{font-size:24.5px}
+  .header-nav .nav-links{display:none}
+  .header-nav .btn-sm{padding:9px 14px;font-size:14px;white-space:nowrap}
+  main.section{padding:40px 0 60px}
+}
+header.gh{position:fixed;top:0;left:0;right:0;background:rgba(255,255,255,.96);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);z-index:100}
+.gh-inner{display:flex;justify-content:space-between;align-items:center;gap:24px;max-width:1360px;margin:0 auto;padding:10px 24px}
+.gh-left{display:flex;flex-direction:column;gap:7px;align-items:flex-start}
+.gh-brand img{height:32px;width:auto;display:block}
+.gh-nav{display:flex;align-items:center;gap:26px;font-size:16px;font-weight:500}
+.gh-nav a,.gh-dd-label{color:#1c1c1c;white-space:nowrap;cursor:pointer}
+.gh-nav a:hover,.gh-dd:hover .gh-dd-label{color:var(--teal-700)}
+.gh-dd{position:relative}
+.gh-dd-label::after{content:" ▾";font-size:12.5px}
+.gh-dd-menu{display:none;position:absolute;top:100%;left:-14px;padding-top:12px;z-index:110}
+.gh-dd:hover .gh-dd-menu{display:block}
+.gh-dd-menu .in{background:#fff;border-radius:10px;box-shadow:0 12px 32px rgba(16,104,120,.18);padding:8px;min-width:280px}
+.gh-dd-menu a{display:block;padding:10px 14px;border-radius:8px;font-size:15.5px;white-space:nowrap}
+.gh-dd-menu a:hover{background:var(--teal-050)}
+.gh-right{display:flex;flex-direction:column;align-items:flex-end;gap:7px}
+.gh-tel{font-size:14px;color:#333;white-space:nowrap;line-height:1.3;display:flex;align-items:baseline;gap:6px}
+.gh-tel b{font-size:22.5px;font-weight:500;font-family:"Poppins","Noto Sans JP",sans-serif}
+.gh-tel span{color:#555}
+.gh-actions{display:flex;gap:10px}
+.gh-btn{display:inline-flex;align-items:center;gap:7px;padding:10px 20px;border-radius:6px;color:#fff;font-weight:700;font-size:15.5px;white-space:nowrap;transition:transform .15s ease,filter .15s ease;box-shadow:0 3px 10px rgba(0,0,0,.14)}
+.gh-btn:hover{transform:translateY(-1px);filter:brightness(1.06)}
+.gh-btn svg{width:16px;height:16px}
+.gh-btn-dl{background:#f6941c}
+.gh-btn-tr{background:linear-gradient(90deg,#54a4ec,#2e7fd6)}
+.gh-btn-ct{background:#45a3b4}
+@media(max-width:1180px){.gh-nav{gap:18px;font-size:15px}}
+@media(max-width:1020px){.gh-nav{display:none}.gh-tel{display:none}.gh-left{flex-direction:row;align-items:center}}
+@media(max-width:640px){
+  .gh-inner{padding:10px 14px;gap:10px}
+  .gh-brand img{height:26px}
+  .gh-btn{padding:8px 10px;font-size:13.5px;gap:5px}
+  .gh-btn svg{width:14px;height:14px}
+  .gh-actions{gap:6px}
+}
+
+/* 記事下CTAバナー（画像） */
+.cta-banner-img{display:block;margin-top:60px;border-radius:14px;overflow:hidden;box-shadow:0 14px 34px rgba(16,104,120,.16);transition:transform .15s ease,box-shadow .15s ease}
+.cta-banner-img:hover{transform:translateY(-3px);box-shadow:0 20px 44px rgba(16,104,120,.22)}
+.cta-banner-img img{width:100%;height:auto;display:block;margin:0;border-radius:0;box-shadow:none}
+
+.news-rows{max-width:860px;margin:0 auto}
+.news-row.nr-hidden{display:none}
+.news-more{background:none;border:none;box-shadow:none;padding:6px 10px;font-family:inherit;font-size:16.5px;font-weight:500;color:var(--teal-700);cursor:pointer}
+.news-more:hover{text-decoration:underline;text-underline-offset:4px}
+.news-row{display:flex;gap:22px;align-items:baseline;padding:18px 10px;border-bottom:1px solid var(--line);font-size:16px;color:var(--ink)}
+.news-row time{flex:0 0 auto;color:var(--teal-500);font-weight:500;font-family:"Poppins","Noto Sans JP",sans-serif}
+.news-row:hover .t{color:var(--teal-700)}
+@media(max-width:640px){.news-row{flex-direction:column;gap:4px}}
+
+.chip-open{background:#fdf0dc;color:#b06a00}
+.chip-closed{background:#eceff1;color:#607078}
+.chip-archive{background:var(--teal-700);color:#fff}
+.sem-info{background:var(--teal-050);border-radius:12px;padding:18px 22px;margin:0 0 26px;font-size:16px}
+.sem-section{margin-bottom:56px}
+.sem-section .sem-heading{font-size:23.5px;font-weight:500;padding-left:14px;border-left:5px solid var(--teal-500);margin-bottom:22px}
+.video-wrap{position:relative;padding-top:56.25%;background:#0b4e5b;border-radius:14px;overflow:hidden;box-shadow:0 14px 34px rgba(16,104,120,.16);margin:26px 0 36px}
+.video-wrap iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.sem-apply{margin:30px 0 10px;text-align:center}
+footer{background:var(--teal-900);color:#fff;padding:56px 0 28px}
+.footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:44px;align-items:start;max-width:1080px;margin:0 auto}
+.footer-brand{display:inline-block}
+.footer-brand img{height:38px;width:auto;display:block}
+.footer-addr{font-size:13.5px;color:rgba(255,255,255,.75);margin-top:18px;line-height:2}
+.footer-head{font-size:15.5px;font-weight:500;color:#fff;letter-spacing:.08em;margin-bottom:14px;padding-bottom:8px;border-bottom:1px solid rgba(255,255,255,.2)}
+.footer-col a{display:block;font-size:14.5px;color:rgba(255,255,255,.8);margin-bottom:10px}
+.footer-col a:hover{color:#fff}
+footer .copy{font-size:12.5px;color:rgba(255,255,255,.55);text-align:center;margin-top:44px;padding-top:20px;border-top:1px solid rgba(255,255,255,.12)}
+@media(max-width:860px){.footer-grid{grid-template-columns:1fr 1fr;gap:30px}}
+@media(max-width:560px){.footer-grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+
+<header class="gh">
+  <div class="gh-inner">
+    <div class="gh-left">
+      <a class="gh-brand" href="../../" aria-label="エイトス株式会社"><img src="../../assets/logo-corporate-horizontal-single.svg" alt="eitoss"></a>
+      <nav class="gh-nav">
+        <div class="gh-dd">
+          <span class="gh-dd-label">活用シーン</span>
+          <div class="gh-dd-menu"><div class="in">
+            <a href="../../cayzen/ehsresearch/">Cayzen EHS Research（EHS法令調査代行）</a>
+            <a href="../../cayzen/knowledgemanagement/">Cayzen Knowledge Management（SaaS）</a>
+            <a href="../../cayzen/iso/">Cayzen ISO サポート</a>
+          </div></div>
+        </div>
+        <a href="../../seminar/">セミナー</a>
+        <a href="../../column/">コラム</a>
+        <a href="../../news/">ニュース</a>
+        <a href="../../resources/">お役立ち資料</a>
+        <a href="../../#company">会社概要</a>
+        <a href="../../recruit/">採用情報</a>
+      </nav>
+    </div>
+    <div class="gh-right">
+      <p class="gh-tel">TEL: <b>050-8881-9881</b><span>（平日10:00〜19:00）</span></p>
+      <div class="gh-actions">
+        <a class="gh-btn gh-btn-dl" href="../../document/"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h9l4 4v14H6z"/><path d="M15 3v4h4M9 12h6M9 16h6"/></svg> 資料請求</a>
+        <a class="gh-btn gh-btn-ct" href="../../#contact"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg> お問合せ</a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="page-head">
+  <div class="container">
+    <article class="post post-head-wrap" style="max-width:760px;margin:0 auto">
+      <p class="breadcrumb"><a href="../../">HOME</a> ／ <a href="../">コラム</a> ／ ESPR（EUエコデザイン規則）とは？DPPと売れ残り廃棄禁止、日本企業の準備</p>
+      <div class="meta"><span class="chip">法令改正</span><time datetime="2026-10-26T08:30:00.000Z">2026.10.26</time></div>
+      <div class="post-head"><h1>ESPR（EUエコデザイン規則）とは？DPPと売れ残り廃棄禁止、日本企業の準備</h1></div>
+    </article>
+  </div>
+</div>
+<main class="section">
+  <div class="container">
+    <article class="post">
+      <div class="post-eyecatch"><img src="/assets/column/eu-espr-ecodesign.jpg?w=1280&fm=webp" alt=""></div>
+      <div class="article-body">
+<p>EUの「持続可能な製品のためのエコデザイン規則」（Ecodesign for Sustainable Products Regulation：ESPR、Regulation (EU) 2024/1781）は、EU市場に出される製品に、耐久性や修理のしやすさ、再生材の使用、含有化学物質の情報提供などを求めるための枠組みとなる法律です。2024年7月に発効し、従来のエコデザイン指令を置き換えました。</p>
+<p>ESPRそのものは「枠組み」であり、製品ごとの具体的な要件は、今後順次採択される委任法（delegated act）で定められます。そのため「まだ具体的な義務はない」と受け止められがちですが、2026年7月19日には大企業を対象とした<strong>売れ残りの衣料品・靴の廃棄禁止</strong>が始まり、同じ時期にデジタル製品パスポート（DPP）の登録簿も立ち上がりました。鉄鋼をはじめとする最初の製品別要件の策定作業も進んでいます。</p>
+<p>本記事では、2026年10月時点の情報をもとに、ESPRの仕組み、旧指令との違い、エコデザイン要件とDPP、2025〜2030年の作業計画、売れ残り製品の廃棄禁止、そして日本のメーカー・輸出企業がいまから準備すべきことを整理します。</p>
+<blockquote><p>出典：EUR-Lex「Regulation (EU) 2024/1781 establishing a framework for the setting of ecodesign requirements for sustainable products」 <a href="https://eur-lex.europa.eu/eli/reg/2024/1781/oj" target="_blank" rel="noopener noreferrer nofollow">https://eur-lex.europa.eu/eli/reg/2024/1781/oj</a><br>欧州委員会「Digital Product Passport」 <a href="https://single-market-economy.ec.europa.eu/single-market/digital-product-passport_en" target="_blank" rel="noopener noreferrer nofollow">https://single-market-economy.ec.europa.eu/single-market/digital-product-passport_en</a><br>European Circular Economy Stakeholder Platform「New EU rules to stop the destruction of unsold clothes and shoes」 <a href="https://circulareconomy.europa.eu/platform/fr/node/9650" target="_blank" rel="noopener noreferrer nofollow">https://circulareconomy.europa.eu/platform/fr/node/9650</a></p></blockquote>
+<p><strong>ESPRをはじめとする欧州の製品規制・環境規制の調査を効率化する方法を、資料で紹介しています。</strong></p>
+<p><a href="https://eitoss.com/document/ehs-research/">資料をダウンロードする</a></p>
+<hr>
+
+<h2>ESPRとは｜ほぼすべての製品を対象にした「エコデザインの枠組み」</h2>
+<p>ESPRは、EU市場に出される製品の環境性能を高めるために、製品グループごとにエコデザイン要件を設定する仕組みを定めた規則です。2024年6月28日にEU官報で公布され、同年7月18日に発効しました。</p>
+<p>対象は原則として、EU市場に出される、または使用開始されるすべての物理的な製品で、部品や中間製品も含まれます。食品、飼料、医薬品、動植物などの生物、そして自動車など別の法律で規制されている一部の車両は対象外とされています。逆にいえば、家電や電子機器に限らず、繊維製品、家具、タイヤ、さらには鉄鋼やアルミニウムといった素材まで、幅広い製品が将来の規制対象になり得ます。</p>
+<p>ESPRは「規則」なので、加盟国の国内法化を待たずにEU全体へ直接適用されます。ただし、ESPRの本文だけで製品ごとの要件が決まるわけではありません。欧州委員会が製品グループごとに委任法を採択し、そこで初めて具体的な数値基準や情報提供の義務が確定します。</p>
+<h3>成立から主な適用までの流れ</h3>
+<table><tbody>
+<tr><th>時期</th><th>出来事</th></tr>
+<tr><td>2024年6月28日</td><td>EU官報で公布</td></tr>
+<tr><td>2024年7月18日</td><td>発効。旧エコデザイン指令（2009/125/EC）を置き換え</td></tr>
+<tr><td>2025年4月16日</td><td>2025〜2030年の作業計画を欧州委員会が採択</td></tr>
+<tr><td>2026年2月9日</td><td>売れ残り衣料品・靴の廃棄禁止の例外を定める委任規則と、開示様式を定める実施規則を採択</td></tr>
+<tr><td>2026年7月19日</td><td>大企業に対する売れ残り衣料品・靴の廃棄禁止が適用開始。DPP登録簿の設置期限</td></tr>
+<tr><td>2030年7月19日</td><td>中企業にも廃棄禁止と開示義務が適用</td></tr>
+</tbody></table>
+
+<h2>旧エコデザイン指令との違い｜対象・要件・法形式が広がった</h2>
+<p>EUには以前から「エコデザイン指令（Directive 2009/125/EC）」があり、冷蔵庫、照明、モーター、ディスプレイなどのエネルギー関連製品に、主に省エネ性能の要件を課してきました。ESPRはこの指令を発展させたもので、違いは大きく3つあります。</p>
+<table><tbody>
+<tr><th>比較の観点</th><th>旧エコデザイン指令</th><th>ESPR</th></tr>
+<tr><td>対象製品</td><td>エネルギー関連製品に限定</td><td>食品・医薬品など一部を除く、ほぼすべての物理的製品（中間製品を含む）</td></tr>
+<tr><td>主な要件</td><td>エネルギー効率が中心</td><td>耐久性、修理可能性、再生材、懸念物質、カーボンフットプリントなど循環性全般</td></tr>
+<tr><td>情報提供</td><td>製品情報の表示が中心</td><td>デジタル製品パスポート（DPP）による情報提供の仕組みを新設</td></tr>
+<tr><td>新たな義務</td><td>なし</td><td>売れ残り消費者製品の廃棄に関する開示と、一部製品の廃棄禁止</td></tr>
+<tr><td>法形式</td><td>指令（各国の国内法化が必要）</td><td>規則（枠組み自体は直接適用、要件は委任法で設定）</td></tr>
+</tbody></table>
+<p>なお、旧指令のもとで採択済みの製品別規則（家電やモーターの省エネ規則など）は、ESPRの経過措置により、ESPRに基づく新しい規則に置き換えられるまで引き続き有効です。家電や電気機器を輸出している企業は、既存の製品別規則への対応を続けながら、ESPRに基づく新しい要件にも備える必要があります。</p>
+
+<h2>エコデザイン要件とは｜何が求められるのか</h2>
+<p>ESPRは、委任法で設定できるエコデザイン要件の項目を幅広く列挙しています。代表的なものは次のとおりです。</p>
+<ul>
+<li><strong>耐久性・信頼性</strong>：製品寿命、故障しにくさ、保証期間に関わる性能</li>
+<li><strong>修理可能性・保守性</strong>：分解のしやすさ、交換部品やソフトウェア更新の提供期間、修理情報の提供、修理性スコアの表示</li>
+<li><strong>再使用・アップグレード・再製造のしやすさ</strong></li>
+<li><strong>リサイクル可能性</strong>：素材の分別のしやすさ、リサイクルを妨げる物質の制限</li>
+<li><strong>再生材の含有</strong>：再生材の最低含有率や含有率の情報提供</li>
+<li><strong>懸念物質（Substances of Concern）</strong>：含有の有無、濃度、位置などの情報提供と追跡</li>
+<li><strong>エネルギー・資源効率</strong></li>
+<li><strong>環境フットプリント・カーボンフットプリント</strong></li>
+<li><strong>廃棄物の発生量</strong>（包装を含む）</li>
+</ul>
+<p>要件には、最低基準や上限を定める「性能要件」と、ラベルやDPPを通じた「情報要件」があります。製品グループごとに、どの項目をどの水準で課すかが委任法で決まります。</p>
+<h3>懸念物質の情報要件は化学物質管理に直結する</h3>
+<p>日本企業にとって特に影響が大きいのが懸念物質の扱いです。ESPRでいう懸念物質には、REACH規則の高懸念物質（SVHC）やCLP規則で特定の有害性に分類された物質のほか、製品の再使用やリサイクルを妨げる物質も含まれます。製品ごとの委任法で情報要件が設定されると、サプライチェーンを通じて含有情報を把握し、DPPなどで提供することが求められる見込みです。REACHの基本は<a href="https://eitoss.com/column/eu-reach-regulation/">REACH規則とは？</a>で解説しています。</p>
+
+<h2>デジタル製品パスポート（DPP）｜いつから必要になるのか</h2>
+<p>デジタル製品パスポート（DPP）は、製品に付けたQRコードなどのデータキャリアから、その製品の素材、懸念物質、修理方法、リサイクル方法、適合性などの情報にアクセスできるようにする仕組みです。消費者、修理業者、リサイクル業者、税関や市場監視当局が、必要な情報を確認できるようにすることが目的です。</p>
+<h3>DPPの義務は「委任法で指定された製品」から始まる</h3>
+<p>重要なのは、<strong>DPPはESPRの発効と同時にすべての製品で義務になったわけではない</strong>という点です。DPPが必要になるのは、製品別の委任法でDPPの要件が定められた製品だけです。委任法の適用までには、原則として発効から18か月以上の猶予が設けられます。</p>
+<p>一方、DPPの共通基盤づくりは進んでいます。ESPRは、製品や事業者の一意の識別子を保存する「DPP登録簿」を2026年7月19日までに設置することを欧州委員会に求めており、欧州委員会は2026年7月に登録簿の運用を開始したとしています。また、DPPのデータ形式や相互運用性に関する欧州規格（CEN・CENELEC）の整備も進められています。</p>
+<h3>電池パスポートが先行事例になる</h3>
+<p>ESPRとは別に、EU電池規則では、産業用電池やEV用電池などを対象に2027年2月18日から「電池パスポート」が義務化されます。仕組みはDPPと共通する部分が多く、ESPRのDPPを検討するうえでの先行事例になります。詳しくは<a href="https://eitoss.com/column/eu-battery-regulation/">EU電池規則とは？</a>をご覧ください。</p>
+
+<a class="cta-banner-img" href="../../document/ehs-research/">
+        <img src="../../assets/column_bnr_ehs.jpg" alt="環境・労働安全関連の法令対応のお悩み、AI調査代行でスピード解決！最大95%工数削減｜詳しくはこちら" loading="lazy" width="1080" height="300">
+      </a>
+<h2>2025〜2030年の作業計画｜どの製品から規制が始まるのか</h2>
+<p>欧州委員会は2025年4月16日、ESPRに基づく最初の作業計画（2025〜2030年）を採択しました。作業計画は、どの製品グループを優先して委任法を作るかを示したものです。</p>
+<table><tbody>
+<tr><th>区分</th><th>対象</th><th>委任法の採択目安（作業計画上）</th></tr>
+<tr><td>中間製品</td><td>鉄鋼</td><td>2026年</td></tr>
+<tr><td>中間製品</td><td>アルミニウム</td><td>2027年</td></tr>
+<tr><td>最終製品</td><td>繊維製品（衣料品を中心に）</td><td>2027年</td></tr>
+<tr><td>最終製品</td><td>タイヤ</td><td>2027年</td></tr>
+<tr><td>最終製品</td><td>家具</td><td>2028年</td></tr>
+<tr><td>最終製品</td><td>マットレス</td><td>2029年</td></tr>
+<tr><td>横断的措置</td><td>電気電子機器の修理性スコア、リサイクル可能性の要件など</td><td>2027年以降</td></tr>
+<tr><td>エネルギー関連製品</td><td>食器洗い機、モーター、EV充電器、ディスプレイなど旧作業計画からの継続分</td><td>製品ごとに順次</td></tr>
+</tbody></table>
+<p>採択時期はあくまで作業計画上の目安で、実際の採択は前後する可能性があります。また、作業計画では、消費者向け電子機器や小型家電などに横断的に適用する修理性スコアや、電気電子機器のリサイクル可能性の要件も検討対象とされています。製品別の委任法が出ていない分野でも、横断的措置によって要件がかかる可能性がある点に注意が必要です。</p>
+<h3>鉄鋼が最初の製品別委任法になる見込み</h3>
+<p>作業計画の中で最も早いのが鉄鋼です。2026年には委任法に向けた意見募集が行われ、カーボンフットプリントや再生材含有率などの情報要件、カーボンフットプリントに基づく性能クラス、DPPの要件などが検討されているとされています。日本の業界団体からも、対象を鉄鋼を含む最終製品にまで広げないよう求める意見が出されています。</p>
+
+<hr>
+<p><strong>欧州規制を含む環境・労働安全関連の法令調査を効率化する方法を、資料で紹介しています。</strong></p>
+<p><a href="https://eitoss.com/document/ehs-research/">資料をダウンロードする</a></p>
+<hr>
+
+<h2>売れ残り消費者製品の廃棄禁止と開示義務</h2>
+<p>ESPRには、製品のエコデザイン要件とは別に、売れ残った消費者製品の廃棄に関するルールが盛り込まれています。これは委任法を待たずにESPR本文で直接定められた義務です。</p>
+<h3>衣料品・靴の廃棄禁止（2026年7月19日から）</h3>
+<p>売れ残った衣料品、衣料品の付属品、靴の廃棄（焼却や埋め立てなど）は、大企業については2026年7月19日から禁止されています。中企業には2030年7月19日から適用され、零細企業・小企業は適用除外です。</p>
+<p>欧州委員会は2026年2月9日、廃棄が例外的に認められる場合を定めた委任規則を採択しました。安全上の理由、製品の損傷や欠陥、知的財産権の侵害、寄付や再使用の受け入れ先がない場合などが例外として挙げられており、例外を使う場合はその理由を記録しておく必要があるとされています。</p>
+<h3>廃棄量の開示義務</h3>
+<p>売れ残った消費者製品を廃棄する大企業には、廃棄した製品の数量や重量、廃棄の理由、廃棄物の処理方法（再使用、リサイクルなど）を年1回、ウェブサイトなどで開示する義務があります。この開示義務は衣料品・靴に限らず、すべての消費者製品が対象です。中企業には2030年7月19日から適用されます。</p>
+<p>開示の標準様式を定める実施規則も2026年2月に採択され、2027年から適用されるとされています。</p>
+<h3>日本企業が対象になるのはどんな場合か</h3>
+<p>廃棄禁止と開示義務は、EU域内で売れ残りが発生する事業者にかかります。日本企業でも、EUに販売子会社や物流拠点を持ち、自社で在庫を抱えて販売している場合は、その現地法人が対象になり得ます。企業規模の判定は、EUの会計指令の基準をもとに行われるため、現地法人単体だけでなくグループ全体の規模も確認しておくと安心です。</p>
+
+<h2>委任法の策定状況｜2026年10月時点で確定していること</h2>
+<p>2026年10月時点の状況を、確定しているものと、策定・検討中のものに分けて整理します。</p>
+<h3>すでに確定・適用されているもの</h3>
+<ul>
+<li>ESPR本文（2024年7月18日発効）</li>
+<li>2025〜2030年の作業計画（2025年4月16日採択）</li>
+<li>売れ残り衣料品・靴の廃棄禁止の例外を定める委任規則と、開示様式を定める実施規則（2026年2月9日採択）</li>
+<li>大企業に対する衣料品・靴の廃棄禁止（2026年7月19日適用）</li>
+<li>DPP登録簿の運用開始（2026年7月）</li>
+</ul>
+<h3>策定・検討中のもの</h3>
+<ul>
+<li>鉄鋼の委任法：意見募集を経て策定作業中とされています。採択は2026年後半以降とみられ、採択されても適用までには猶予期間が設けられる見込みです</li>
+<li>繊維製品、タイヤ、アルミニウムの委任法：作業計画上は2027年の採択が目安です</li>
+<li>修理性スコア、リサイクル可能性などの横断的措置：検討段階です</li>
+</ul>
+<p>EUでは企業の負担を減らすためのオムニバス（簡素化）法案が相次いで提案されていますが、2026年10月時点で、ESPR本体の廃棄禁止やDPPの義務の時期を変更する改正は確認されていません。ただし、デジタル化や製品規制に関する簡素化の議論は続いており、今後の審議によって細部が変わる可能性はあります。最新の動向は、欧州委員会や官報で継続的に確認する必要があります。</p>
+
+<h2>日本のメーカー・輸出企業がいまから準備すべきこと</h2>
+<p>製品別の委任法が出そろうのは先ですが、DPPや懸念物質の情報要件に対応するには、社内の製品データとサプライヤーからの情報収集の仕組みが欠かせません。委任法の適用までの猶予は原則18か月以上とされますが、サプライチェーン全体のデータ整備には数年かかることも珍しくありません。次の4点から着手することをおすすめします。</p>
+<h3>1. 自社製品と作業計画の対応関係を整理する</h3>
+<p>EU向けに出荷している製品と、その製品に使われている素材（鉄鋼、アルミニウム、繊維など）を一覧にし、作業計画のどの製品グループに当たるかを確認します。最終製品だけでなく、部品や素材を供給している場合も、中間製品の委任法の影響を受ける可能性があります。旧指令に基づく製品別規則の対象製品も、あわせて棚卸ししておきます。</p>
+<h3>2. 製品データを部品・素材単位で管理できるようにする</h3>
+<p>DPPでは、素材構成、再生材の含有率、懸念物質、カーボンフットプリント、修理やリサイクルの情報などが求められる見込みです。これらを製品ごとに出せるよう、部品表（BOM）と素材・化学物質の情報をひもづけて管理できる体制を整えます。製品のモデルやロットとデータをどう結び付けるか、識別子の付け方もこの段階で検討しておくと後の手戻りが減ります。</p>
+<h3>3. サプライヤーからの情報収集の仕組みを整える</h3>
+<p>懸念物質の含有情報やカーボンフットプリント、再生材の比率は、自社だけでは把握できません。chemSHERPAなど既存の含有化学物質情報の仕組みを活用しつつ、取引先との契約や購買仕様書に情報提供の条項を加えることを検討します。鉄鋼やアルミニウムを調達している場合は、素材メーカーがDPPや環境データをどのように提供する予定かも確認しておきます。</p>
+<h3>4. EU側の拠点・取引先と役割を確認する</h3>
+<p>ESPRの義務は、製造者、輸入者、販売者、フルフィルメントサービス事業者など、役割ごとに分かれています。日本から直接EUの顧客へ販売するのか、EUの輸入者や販売子会社を経由するのかによって、DPPの作成やデータ提供の責任の所在が変わります。売れ残り製品の廃棄禁止と開示義務についても、EUの現地法人が対象になるかを確認しておきます。</p>
+<p>なお、ESPRは包装を直接の対象とする規則ではなく、EUの包装ルールは別にPPWRで定められています。包装の対応は<a href="https://eitoss.com/column/ppwr-overview/">EU包装・包装廃棄物規則の解説</a>をご覧ください。</p>
+
+<h2>よくある質問</h2>
+<h3>Q. ESPRはすでに日本企業に義務を課していますか？</h3>
+<p>A. 製品別のエコデザイン要件やDPPは、委任法が採択・適用されるまで義務になりません。一方、売れ残り衣料品・靴の廃棄禁止と、売れ残り消費者製品の廃棄に関する開示義務は、EU域内の大企業にすでに適用されています。EUに販売拠点を持つ日本企業は、現地法人が対象になり得ます。</p>
+<h3>Q. DPPはいつから必要になりますか？</h3>
+<p>A. 製品ごとに異なります。DPPは、製品別の委任法でDPPの要件が定められた製品について、その適用日から必要になります。2026年10月時点で、ESPRに基づくDPPの適用が始まった製品はなく、鉄鋼や繊維製品などで要件が検討されている段階です。ESPRとは別に、EU電池規則の電池パスポートは2027年2月18日から始まります。</p>
+<h3>Q. 部品や素材を供給しているだけでも関係しますか？</h3>
+<p>A. 関係する可能性があります。ESPRは部品や中間製品も対象とし、作業計画では鉄鋼やアルミニウムが優先されています。また、最終製品のメーカーがDPPを作成するためには、部品や素材の情報が必要になるため、顧客から情報提供を求められることが想定されます。</p>
+<h3>Q. 旧エコデザイン指令に基づく省エネ規則はどうなりますか？</h3>
+<p>A. 旧指令のもとで採択された製品別規則は、ESPRに基づく新しい規則に置き換えられるまで引き続き有効です。家電やモーターなどは、既存の規則への対応を続けながら、ESPRに基づく見直しの動向を確認する必要があります。</p>
+<h3>Q. 違反した場合の罰則はどうなりますか？</h3>
+<p>A. 罰則は加盟国が定めます。有効で比例的かつ抑止的なものであることが求められ、罰金のほか、製品の回収や公共調達からの排除などが考えられます。主な販売先の国の国内法も確認しておく必要があります。</p>
+
+<h2>まとめ</h2>
+<p>ESPRは、エネルギー関連製品に限られていた旧エコデザイン指令を、ほぼすべての製品に広げた枠組みの規則です。製品別の要件とDPPは委任法の採択を待つ段階ですが、2026年7月19日には大企業に対する売れ残り衣料品・靴の廃棄禁止が始まり、DPP登録簿も稼働しました。作業計画では鉄鋼を皮切りに、アルミニウム、繊維製品、タイヤ、家具、マットレスと、横断的な修理性・リサイクル性の要件が続きます。</p>
+<p>日本のメーカー・輸出企業にとっての準備の中心は、製品データを部品・素材単位で管理し、サプライヤーから懸念物質や環境データを集める仕組みを整えることです。委任法の採択状況は今後も動くため、継続的な情報収集が欠かせません。</p>
+<p><strong>ESPRをはじめとする欧州の製品規制・環境規制の調査を効率化する方法を、資料で紹介しています。</strong></p>
+<p><a href="https://eitoss.com/document/ehs-research/">資料をダウンロードする</a></p>
+      </div>
+      <a class="cta-banner-img" href="../../document/ehs-research/">
+        <img src="../../assets/column_bnr_ehs.jpg" alt="環境・労働安全関連の法令対応のお悩み、AI調査代行でスピード解決！最大95%工数削減｜詳しくはこちら" loading="lazy" width="1080" height="300">
+      </a>
+      <a class="back-link" href="../">← コラム一覧へ戻る</a>
+    </article>
+  </div>
+</main>
+<script>
+(function(){
+  if (typeof gtag !== 'function') return;
+  var article = location.pathname.split('/')[2] || '';
+  var links = document.querySelectorAll('article.post a[href*="/document/"]');
+  var io = 'IntersectionObserver' in window ? new IntersectionObserver(function(es){
+    es.forEach(function(e){
+      if (!e.isIntersecting) return;
+      gtag('event', 'cta_view', { cta_position: e.target.dataset.ctaPos, article_id: article, link_url: e.target.href });
+      io.unobserve(e.target);
+    });
+  }, { threshold: 0.5 }) : null;
+  links.forEach(function(a){
+    var pos = a.classList.contains('cta-banner-img') ? (a.closest('.article-body') ? 'banner_mid' : 'banner_bottom') : 'text_link';
+    a.dataset.ctaPos = pos;
+    a.addEventListener('click', function(){
+      gtag('event', 'cta_click', { cta_position: pos, article_id: article, link_url: a.href });
+    });
+    if (io) io.observe(a);
+  });
+})();
+</script>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand"><img src="../../assets/logo-corporate-horizontal-white.png" alt="eitoss"></div>
+        <p class="footer-addr">本社: 〒471-0031<br>愛知県豊田市小坂本町1-5-5 YAMATO BLDG2F<br>営業拠点: 〒170-6012<br>東京都豊島区東池袋3-1-1<br>サンシャイン60 12F</p>
+      </div>
+      <nav class="footer-col">
+        <p class="footer-head">サービス</p>
+        <a href="../../cayzen/ehsresearch/">Cayzen EHS Research</a>
+        <a href="../../cayzen/knowledgemanagement/">Cayzen Knowledge Management</a>
+        <a href="../../cayzen/iso/">Cayzen ISO サポート</a>
+      </nav>
+      <nav class="footer-col">
+        <p class="footer-head">コンテンツ</p>
+        <a href="../../seminar/">セミナー</a>
+        <a href="../../column/">コラム</a>
+        <a href="../../news/">ニュース</a>
+        <a href="../../document/">資料ダウンロード</a>
+        <a href="../../resources/">お役立ち資料</a>
+      </nav>
+      <nav class="footer-col">
+        <p class="footer-head">企業情報</p>
+        <a href="../../#company">会社概要</a>
+        <a href="../../recruit/">採用情報</a>
+        <a href="../../#contact">お問い合わせ</a>
+        <a href="/privacy-policy/">プライバシーポリシー</a>
+        <a href="/security-policy/">情報セキュリティ方針</a>
+        <a href="/terms/">利用規約</a>
+      </nav>
+    </div>
+    <p class="copy">© Eitoss Inc. All rights reserved.</p>
+  </div>
+</footer>
+
+</body>
+</html>
