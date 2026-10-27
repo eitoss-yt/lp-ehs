@@ -284,6 +284,7 @@ function chrome(depth, bodyHtml, { title, description, canonicalPath, ogType = '
     if (!d || d.type !== 'hsFormCallback' || d.eventName !== 'onFormSubmitted') return;
     var isContact = d.id === 'de61c417-f176-4c76-af10-c59923cdfd79';
     gtag('event', isContact ? 'contact_submit' : 'document_request', { form_id: d.id });
+    if (typeof fbq === 'function') fbq('track', isContact ? 'Contact' : 'Lead', { form_id: d.id });
   });
 </script>
 <meta charset="UTF-8">
