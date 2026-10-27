@@ -117,6 +117,7 @@ Spirの面談予約はGA4では計測できないため、Spir側の予約件数
 
 新しいものを上に追記する。
 
+- 2026-10-27 Meta広告ダッシュボード用のBigQueryビューのSQLと、Looker Studioでの作り方を `marketing/bi/` に用意。`meta_daily` の列名確認とSQLの実行、Looker Studioでの画面作成はユーザー側で行う（Web/LP）
 - 2026-10-10 Meta広告の実績を会社のBigQueryにコピーし、9月のベースラインを記録（ISOのCPA 2,113円、EHSのCPA 5,282円）（Web/LP）
 
 - 2026-10-10 Meta広告の実績を、運用者の個人BigQueryからビュー共有で受け取れることを確認（Cayzen AI、531行、費用502,660円）。運用者の元データは閲覧できないことも確認済み（Web/LP）
