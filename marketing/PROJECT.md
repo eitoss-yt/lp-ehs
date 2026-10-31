@@ -117,6 +117,8 @@ Spirの面談予約はGA4では計測できないため、Spir側の予約件数
 
 新しいものを上に追記する。
 
+- 2026-10-31 新サービス「Cayzen Chemical Management」（化学物質管理・リスクアセスメント・SDS作成の代行）のLP /cayzen/chemicalmanagement/ を作成。全ページのナビ・フッター、TOPのサービス一覧、サイトマップに追加。専用の資料DLフォームが未作成のため、CTAは問い合わせフォームのみ（Web/LP）
+
 - 2026-10-27 Meta広告からLPへ遷移した資料請求を、Meta・GA4・HubSpotの3か所で計測できるようにする準備。全ページにHubSpotの計測コードを追加（HubSpotに登録済みのMetaピクセル 735101431770371 もこれで全ページに配信される）し、フォーム送信時にMetaへイベントを送るよう追加（資料請求はLead、お問い合わせはContact、PR #113）。GA4は contact_submit と document_request がキーイベント（CV_お問い合わせ、CV_資料ダウンロード）として設定済みで、meta / paid_social の流入は Paid Social に分類されることを確認。同日マージして本番反映し、eitoss.com でピクセルの読み込みとPageView送信、フォーム送信時のLead送信処理を確認。残り：Metaのドメイン認証、広告セット Cayzen-PPWR_004_LP の最適化先をウェブサイトのリードに変更（Web/LP）
 - 2026-10-26 競合Enhesaのコンプライアンス特集に合わせ、PFAS・REACH・電池規則・ESPR・EPR・米国大気浄化法のコラム6本を公開（PR #111）。出典URLは執筆時に開けなかったため、公開後に一次情報で日付を確認する。Notion「マーケ実行」に各記事のタスクあり（Web/LP）
 - 2026-10-23 コラムの計測を追加。記事内の資料CTAの表示（cta_view）とクリック（cta_click）をGA4に送信し、BigQueryに記事別・日別の集計ビュー `eitoss-marketing-510701.marketing.column_kpi_daily` を作成（検索の表示回数・クリック・平均掲載順位、PV、CTA表示・クリック、記事閲覧後の資料請求）（Web/LP）
