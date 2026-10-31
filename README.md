@@ -10,6 +10,7 @@
 - `cayzen/knowledgemanagement/index.html` — Cayzen ナレッジマネジメントLP（公開URL: `/cayzen/knowledgemanagement/`）
 - `cayzen/knowledgemanagement/assets/` — 同LP用の画像（プロダクト画面・導入企業ロゴ）
 - `cayzen/iso/index.html` — Cayzen ISOサポートLP（公開URL: `/cayzen/iso/`）
+- `cayzen/chemicalmanagement/index.html` — Cayzen Chemical Management LP（化学物質管理・リスクアセスメント・SDS作成の代行。公開URL: `/cayzen/chemicalmanagement/`）
 - `assets/` — TOPページ用の画像（導入企業ロゴ・サービスカードのサムネイル）
 
 導入企業ロゴを追加する際は、各ページの `assets/` に画像を置いて `.logo-track` に `<li>` を追記してください。
