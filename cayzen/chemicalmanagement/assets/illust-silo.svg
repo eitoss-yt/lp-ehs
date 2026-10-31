@@ -1,11 +1,11 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 140" role="img" aria-label="一人の担当者に業務が集中しているイラスト">
-<defs><radialGradient id="bg" cx=".5" cy=".5" r=".5"><stop offset="0" stop-color="#106878" stop-opacity=".13"/><stop offset="1" stop-color="#106878" stop-opacity="0"/></radialGradient><linearGradient id="gl" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fff" stop-opacity=".95"/><stop offset="1" stop-color="#fff" stop-opacity=".6"/></linearGradient></defs><ellipse cx="100" cy="74" rx="92" ry="64" fill="url(#bg)"/>
+<defs><radialGradient id="bg" cx=".5" cy=".5" r=".5"><stop offset="0" stop-color="#106878" stop-opacity=".13"/><stop offset="1" stop-color="#106878" stop-opacity="0"/></radialGradient><filter id="sh" x="-30%" y="-30%" width="160%" height="170%"><feDropShadow dx="0" dy="5" stdDeviation="6" flood-color="#106878" flood-opacity=".2"/></filter></defs><ellipse cx="100" cy="74" rx="92" ry="64" fill="url(#bg)"/>
 <g fill="#106878" fill-opacity=".14"><circle cx="38" cy="86" r="9"/><path d="M22 122 q0-24 16-24 q16 0 16 24z"/><circle cx="162" cy="86" r="9"/><path d="M146 122 q0-24 16-24 q16 0 16 24z"/></g>
-<g stroke="#106878" stroke-width="1.6">
-<rect x="70" y="14" width="60" height="11" rx="3" fill="#106878" fill-opacity=".12"/>
-<rect x="66" y="27" width="68" height="11" rx="3" fill="#106878" fill-opacity=".22"/>
-<rect x="72" y="40" width="58" height="11" rx="3" fill="#106878" fill-opacity=".38"/>
-<rect x="68" y="53" width="64" height="11" rx="3" fill="#106878" fill-opacity=".6"/>
+<g fill="#106878">
+<rect x="70" y="14" width="60" height="11" rx="3" fill-opacity=".15"/>
+<rect x="66" y="27" width="68" height="11" rx="3" fill-opacity=".28"/>
+<rect x="72" y="40" width="58" height="11" rx="3" fill-opacity=".45"/>
+<rect x="68" y="53" width="64" height="11" rx="3" fill-opacity=".68"/>
 </g>
 <path d="M84 104 L73 66 M116 104 L127 66" stroke="#106878" stroke-width="8" stroke-linecap="round"/>
 <circle cx="100" cy="82" r="12" fill="#106878"/><path d="M76 126 q0-31 24-31 q24 0 24 31z" fill="#106878"/>

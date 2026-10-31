@@ -1,13 +1,12 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 140" role="img" aria-label="化学物質台帳のイラスト">
-<defs><radialGradient id="bg" cx=".5" cy=".5" r=".5"><stop offset="0" stop-color="#106878" stop-opacity=".13"/><stop offset="1" stop-color="#106878" stop-opacity="0"/></radialGradient><linearGradient id="gl" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fff" stop-opacity=".95"/><stop offset="1" stop-color="#fff" stop-opacity=".6"/></linearGradient></defs><ellipse cx="100" cy="74" rx="92" ry="64" fill="url(#bg)"/>
-<rect x="30" y="24" width="126" height="96" rx="8" fill="url(#gl)" stroke="#106878" stroke-width="1.6"/>
+<defs><radialGradient id="bg" cx=".5" cy=".5" r=".5"><stop offset="0" stop-color="#106878" stop-opacity=".13"/><stop offset="1" stop-color="#106878" stop-opacity="0"/></radialGradient><filter id="sh" x="-30%" y="-30%" width="160%" height="170%"><feDropShadow dx="0" dy="5" stdDeviation="6" flood-color="#106878" flood-opacity=".2"/></filter></defs><ellipse cx="100" cy="74" rx="92" ry="64" fill="url(#bg)"/>
+<rect x="30" y="24" width="126" height="96" rx="8" fill="#fff" filter="url(#sh)"/>
 <path d="M38 24 h110 q8 0 8 8 v12 h-126 v-12 q0-8 8-8z" fill="#106878"/>
 <g fill="#fff" fill-opacity=".75"><rect x="40" y="31" width="34" height="6" rx="3"/><rect x="88" y="31" width="22" height="6" rx="3"/><rect x="122" y="31" width="22" height="6" rx="3"/></g>
-<g fill="#106878" fill-opacity=".05"><rect x="31" y="62" width="124" height="18"/><rect x="31" y="98" width="124" height="18"/></g>
-<g fill="#106878" fill-opacity=".18"><rect x="40" y="51" width="38" height="5" rx="2.5"/><rect x="40" y="69" width="30" height="5" rx="2.5"/><rect x="40" y="87" width="36" height="5" rx="2.5"/><rect x="40" y="105" width="28" height="5" rx="2.5"/><rect x="88" y="51" width="20" height="5" rx="2.5"/><rect x="88" y="69" width="20" height="5" rx="2.5"/><rect x="88" y="87" width="20" height="5" rx="2.5"/><rect x="88" y="105" width="20" height="5" rx="2.5"/></g>
+<g fill="#106878" fill-opacity=".05"><rect x="30" y="62" width="126" height="18"/><path d="M30 98 h126 v14 q0 8-8 8 h-110 q-8 0-8-8z"/></g>
+<g fill="#106878" fill-opacity=".16"><rect x="40" y="51" width="38" height="5" rx="2.5"/><rect x="40" y="69" width="30" height="5" rx="2.5"/><rect x="40" y="87" width="36" height="5" rx="2.5"/><rect x="40" y="105" width="28" height="5" rx="2.5"/><rect x="88" y="51" width="20" height="5" rx="2.5"/><rect x="88" y="69" width="20" height="5" rx="2.5"/><rect x="88" y="87" width="20" height="5" rx="2.5"/><rect x="88" y="105" width="20" height="5" rx="2.5"/></g>
 <g stroke="#106878" stroke-width="2.6" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M126 53 l4 4 8-8"/><path d="M126 71 l4 4 8-8"/><path d="M126 107 l4 4 8-8"/></g>
 <circle cx="132" cy="89" r="5.5" fill="#e8a13d"/>
-<circle cx="166" cy="92" r="23" fill="#fff" fill-opacity=".7" stroke="#106878" stroke-width="1.6"/>
-<path d="M161 79 h10 M163 79 v10 l-8 13 q-2 4 2 4 h17 q4 0 2-4 l-8-13 v-10" stroke="#106878" stroke-width="2.2" fill="none" stroke-linejoin="round"/>
-<path d="M158 98 h16 l2.5 4 q1.5 4-2 4 h-17 q-3.5 0-2-4z" fill="#106878" fill-opacity=".3"/>
+<circle cx="166" cy="92" r="24" fill="#fff" filter="url(#sh)"/>
+<g transform="translate(154 76)"><rect x="6" y="0" width="12" height="4" rx="2" fill="#106878"/><path d="M8.5 4 h7 v10 l9 16 q2.5 5 -3 5 h-19 q-5.5 0 -3 -5 l9 -16z" fill="#106878" fill-opacity=".16"/><path d="M4.6 24 h14.8 l4.2 7 q1.6 4 -2.6 4 h-18 q-4.2 0 -2.6 -4z" fill="#106878" fill-opacity=".55"/></g>
 </svg>
