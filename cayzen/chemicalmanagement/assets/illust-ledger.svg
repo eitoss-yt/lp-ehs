@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 140" role="img" aria-label="化学物質台帳のイラスト">
+<ellipse cx="100" cy="76" rx="90" ry="56" fill="#eef6f7"/>
+<rect x="30" y="24" width="126" height="96" rx="8" fill="#fff" stroke="#80c0c8" stroke-width="2"/>
+<rect x="30" y="24" width="126" height="20" rx="8" fill="#106878"/><rect x="30" y="36" width="126" height="8" fill="#106878"/>
+<g fill="#fff" opacity=".85"><rect x="40" y="31" width="34" height="6" rx="3"/><rect x="88" y="31" width="22" height="6" rx="3"/><rect x="122" y="31" width="22" height="6" rx="3"/></g>
+<g fill="#f2f8f9"><rect x="32" y="62" width="122" height="18"/><rect x="32" y="98" width="122" height="18"/></g>
+<g fill="#cfe3e7"><rect x="40" y="51" width="38" height="5" rx="2.5"/><rect x="40" y="69" width="30" height="5" rx="2.5"/><rect x="40" y="87" width="36" height="5" rx="2.5"/><rect x="40" y="105" width="28" height="5" rx="2.5"/><rect x="88" y="51" width="20" height="5" rx="2.5"/><rect x="88" y="69" width="20" height="5" rx="2.5"/><rect x="88" y="87" width="20" height="5" rx="2.5"/><rect x="88" y="105" width="20" height="5" rx="2.5"/></g>
+<g stroke="#308098" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M126 53 l4 4 8-8"/><path d="M126 71 l4 4 8-8"/><path d="M126 107 l4 4 8-8"/></g>
+<circle cx="132" cy="89" r="6" fill="#e8a13d"/>
+<g transform="translate(148 70)"><circle cx="18" cy="22" r="24" fill="#0b4e5b"/><path d="M13 8 h10 M15 8 v10 l-8 14 q-2 4 2 4 h18 q4 0 2-4 l-8-14 v-10" stroke="#fff" stroke-width="2.6" fill="none" stroke-linejoin="round"/><path d="M10 30 h16" stroke="#80c0c8" stroke-width="4" stroke-linecap="round"/></g>
+</svg>

@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 140" role="img" aria-label="一人の担当者に業務が集中しているイラスト">
+<ellipse cx="100" cy="80" rx="88" ry="54" fill="#eef6f7"/>
+<g fill="#c9d6d9"><circle cx="38" cy="84" r="9"/><path d="M22 120 q0-24 16-24 q16 0 16 24z"/><circle cx="162" cy="84" r="9"/><path d="M146 120 q0-24 16-24 q16 0 16 24z"/></g>
+<rect x="70" y="14" width="60" height="12" rx="3" fill="#80c0c8"/><rect x="66" y="27" width="68" height="12" rx="3" fill="#58a0b0"/><rect x="72" y="40" width="58" height="12" rx="3" fill="#308098"/><rect x="68" y="53" width="64" height="12" rx="3" fill="#106878"/>
+<path d="M84 104 L72 64 M116 104 L128 64" stroke="#106878" stroke-width="9" stroke-linecap="round" fill="none"/>
+<circle cx="100" cy="80" r="13" fill="#106878"/><path d="M76 126 q0-32 24-32 q24 0 24 32z" fill="#106878"/>
+<path d="M140 30 l6-6 M146 40 h8 M140 50 l6 6" stroke="#e8a13d" stroke-width="3" stroke-linecap="round"/>
+</svg>
