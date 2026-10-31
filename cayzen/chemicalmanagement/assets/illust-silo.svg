@@ -1,8 +1,13 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 140" role="img" aria-label="一人の担当者に業務が集中しているイラスト">
-<ellipse cx="100" cy="80" rx="88" ry="54" fill="#eef6f7"/>
-<g fill="#c9d6d9"><circle cx="38" cy="84" r="9"/><path d="M22 120 q0-24 16-24 q16 0 16 24z"/><circle cx="162" cy="84" r="9"/><path d="M146 120 q0-24 16-24 q16 0 16 24z"/></g>
-<rect x="70" y="14" width="60" height="12" rx="3" fill="#80c0c8"/><rect x="66" y="27" width="68" height="12" rx="3" fill="#58a0b0"/><rect x="72" y="40" width="58" height="12" rx="3" fill="#308098"/><rect x="68" y="53" width="64" height="12" rx="3" fill="#106878"/>
-<path d="M84 104 L72 64 M116 104 L128 64" stroke="#106878" stroke-width="9" stroke-linecap="round" fill="none"/>
-<circle cx="100" cy="80" r="13" fill="#106878"/><path d="M76 126 q0-32 24-32 q24 0 24 32z" fill="#106878"/>
-<path d="M140 30 l6-6 M146 40 h8 M140 50 l6 6" stroke="#e8a13d" stroke-width="3" stroke-linecap="round"/>
+<defs><radialGradient id="bg" cx=".5" cy=".5" r=".5"><stop offset="0" stop-color="#106878" stop-opacity=".13"/><stop offset="1" stop-color="#106878" stop-opacity="0"/></radialGradient><linearGradient id="gl" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fff" stop-opacity=".95"/><stop offset="1" stop-color="#fff" stop-opacity=".6"/></linearGradient></defs><ellipse cx="100" cy="74" rx="92" ry="64" fill="url(#bg)"/>
+<g fill="#106878" fill-opacity=".14"><circle cx="38" cy="86" r="9"/><path d="M22 122 q0-24 16-24 q16 0 16 24z"/><circle cx="162" cy="86" r="9"/><path d="M146 122 q0-24 16-24 q16 0 16 24z"/></g>
+<g stroke="#106878" stroke-width="1.6">
+<rect x="70" y="14" width="60" height="11" rx="3" fill="#106878" fill-opacity=".12"/>
+<rect x="66" y="27" width="68" height="11" rx="3" fill="#106878" fill-opacity=".22"/>
+<rect x="72" y="40" width="58" height="11" rx="3" fill="#106878" fill-opacity=".38"/>
+<rect x="68" y="53" width="64" height="11" rx="3" fill="#106878" fill-opacity=".6"/>
+</g>
+<path d="M84 104 L73 66 M116 104 L127 66" stroke="#106878" stroke-width="8" stroke-linecap="round"/>
+<circle cx="100" cy="82" r="12" fill="#106878"/><path d="M76 126 q0-31 24-31 q24 0 24 31z" fill="#106878"/>
+<path d="M141 28 l6-6 M146 39 h8 M141 50 l6 6" stroke="#e8a13d" stroke-width="3" stroke-linecap="round"/>
 </svg>

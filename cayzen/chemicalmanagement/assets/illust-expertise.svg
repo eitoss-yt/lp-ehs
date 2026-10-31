@@ -1,12 +1,12 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 140" role="img" aria-label="虫眼鏡で書類を確認するイラスト">
-<ellipse cx="100" cy="78" rx="88" ry="56" fill="#eef6f7"/>
-<rect x="40" y="22" width="84" height="100" rx="8" fill="#fff" stroke="#80c0c8" stroke-width="2"/>
-<g transform="translate(62 56) rotate(45)"><rect x="-14" y="-14" width="28" height="28" rx="3" fill="#fff" stroke="#d9363e" stroke-width="4"/></g>
-<rect x="60" y="45" width="4" height="13" rx="2" fill="#2b3338"/><circle cx="62" cy="63" r="2.4" fill="#2b3338"/>
-<rect x="86" y="44" width="28" height="5" rx="2.5" fill="#cfe3e7"/><rect x="86" y="55" width="22" height="5" rx="2.5" fill="#cfe3e7"/><rect x="86" y="66" width="26" height="5" rx="2.5" fill="#cfe3e7"/>
-<rect x="52" y="88" width="60" height="5" rx="2.5" fill="#cfe3e7"/><rect x="52" y="99" width="46" height="5" rx="2.5" fill="#cfe3e7"/>
-<circle cx="122" cy="84" r="24" fill="rgba(255,255,255,.65)" stroke="#106878" stroke-width="7"/>
-<rect x="138" y="100" width="12" height="34" rx="6" transform="rotate(-45 144 117)" fill="#0b4e5b"/>
-<path d="M140 16 h34 q8 0 8 8 v18 q0 8-8 8 h-18 l-10 9 v-9 h-6 q-8 0-8-8 v-18 q0-8 8-8z" fill="#e8a13d"/>
-<text x="157" y="42" text-anchor="middle" font-family="Poppins,sans-serif" font-size="22" font-weight="700" fill="#fff">?</text>
+<defs><radialGradient id="bg" cx=".5" cy=".5" r=".5"><stop offset="0" stop-color="#106878" stop-opacity=".13"/><stop offset="1" stop-color="#106878" stop-opacity="0"/></radialGradient><linearGradient id="gl" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fff" stop-opacity=".95"/><stop offset="1" stop-color="#fff" stop-opacity=".6"/></linearGradient></defs><ellipse cx="100" cy="74" rx="92" ry="64" fill="url(#bg)"/>
+<rect x="40" y="22" width="84" height="100" rx="8" fill="url(#gl)" stroke="#106878" stroke-width="1.6"/>
+<g transform="translate(62 56) rotate(45)"><rect x="-13" y="-13" width="26" height="26" rx="3" fill="#e8a13d" fill-opacity=".1" stroke="#e8a13d" stroke-width="2.6"/></g>
+<rect x="60.2" y="47" width="3.6" height="11" rx="1.8" fill="#e8a13d"/><circle cx="62" cy="62.5" r="2.2" fill="#e8a13d"/>
+<g fill="#106878" fill-opacity=".18"><rect x="86" y="46" width="28" height="5" rx="2.5"/><rect x="86" y="57" width="22" height="5" rx="2.5"/><rect x="52" y="86" width="60" height="5" rx="2.5"/><rect x="52" y="97" width="46" height="5" rx="2.5"/><rect x="52" y="108" width="54" height="5" rx="2.5"/></g>
+<circle cx="124" cy="84" r="23" fill="#106878" fill-opacity=".08" stroke="#106878" stroke-width="5"/>
+<path d="M115 74 a13 13 0 0 1 14 -3" stroke="#fff" stroke-width="3" fill="none" stroke-linecap="round" stroke-opacity=".9"/>
+<path d="M141 101 L158 118" stroke="#106878" stroke-width="9" stroke-linecap="round"/>
+<path d="M144 16 h30 q8 0 8 8 v16 q0 8-8 8 h-16 l-9 8 v-8 h-5 q-8 0-8-8 v-16 q0-8 8-8z" fill="#e8a13d"/>
+<text x="159" y="40" text-anchor="middle" font-family="Poppins,sans-serif" font-size="20" font-weight="600" fill="#fff">?</text>
 </svg>

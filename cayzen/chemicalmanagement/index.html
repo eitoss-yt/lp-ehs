@@ -110,13 +110,6 @@ section{padding:80px 0}
 .hero-orb small{font-size:11.5px;font-weight:500}
 .hero-orb b{font-family:"Poppins","Noto Sans JP",sans-serif;font-size:27px;font-weight:600}
 .hero-orb b span{font-family:"Noto Sans JP",sans-serif;font-size:13px;margin-left:1px}
-@media (prefers-reduced-motion:no-preference){
-  .glass,.hero-orb{animation:float 7s ease-in-out infinite}
-  .g2{animation-delay:-2.3s}
-  .g3{animation-delay:-4.6s}
-  .hero-orb{animation-duration:9s}
-}
-@keyframes float{50%{transform:translateY(-10px)}}
 
 /* clients */
 .clients-band{background:#fff;padding:28px 0 36px}
@@ -299,12 +292,24 @@ section{padding:80px 0}
 .cta-tab{appearance:none;border:0;background:#fff;color:var(--teal-700);font-family:inherit;font-size:16.5px;font-weight:500;padding:14px 30px;border-radius:999px;cursor:pointer;transition:all .15s ease;box-shadow:0 4px 14px rgba(16,104,120,.14)}
 .cta-tab:hover{background:var(--teal-050)}
 .cta-tab.active{background:var(--teal-700);color:#fff}
-.cta-panels{max-width:720px;margin:0 auto}
+.cta-panels{max-width:980px;margin:0 auto}
+#panel-contact{max-width:720px;margin:0 auto}
 .cta-panel{display:none;background:#fff;border-radius:16px;box-shadow:0 12px 32px rgba(16,104,120,.12);padding:38px 36px}
 .cta-panel.active{display:block}
 .cta-panel h3{font-size:22.5px;font-weight:500;text-align:center;margin-bottom:8px}
 .cta-panel .desc{font-size:15.5px;color:var(--gray);text-align:center;margin-bottom:26px}
 .hs-form-frame{min-height:320px}
+.dl-grid{display:grid;grid-template-columns:1fr 1.1fr;gap:40px;align-items:start}
+.dl-grid > *{min-width:0}
+.dl-info img{border-radius:10px;box-shadow:0 10px 26px rgba(16,104,120,.18);margin-bottom:20px}
+.dl-info h3{text-align:left;font-size:17.5px;margin-bottom:6px}
+.dl-info p{font-size:15px;color:var(--gray);margin-bottom:12px}
+.dl-info ul{list-style:none;display:flex;flex-direction:column;gap:6px}
+.dl-info li{position:relative;background:var(--teal-050);border-radius:8px;padding:7px 12px 7px 34px;font-size:14.5px}
+.dl-info li::before{content:"";position:absolute;left:12px;top:14px;width:14px;height:14px;border-radius:50%;background:var(--teal-500)}
+.dl-info li::after{content:"";position:absolute;left:16.5px;top:16.5px;width:5px;height:8px;border-right:2px solid #fff;border-bottom:2px solid #fff;transform:rotate(45deg)}
+.dl-form h3{font-size:20px}
+.dl-form .desc{margin-bottom:18px}
 
 /* company */
 .company{background:#fff}
@@ -313,17 +318,9 @@ section{padding:80px 0}
 .company td{padding:14px 18px;border-bottom:1px solid var(--line);color:var(--ink)}
 
 /* animations */
-html.js .hero-anim{opacity:0;transform:translateY(18px)}
-html.hero-go .hero-anim{opacity:1;transform:none;transition:opacity .7s ease,transform .7s cubic-bezier(.22,.61,.36,1)}
-html.hero-go .hd1{transition-delay:.1s}
-html.hero-go .hd2{transition-delay:.2s}
-html.hero-go .hd3{transition-delay:.32s}
-html.hero-go .hd4{transition-delay:.44s}
-html.hero-go .hd5{transition-delay:.55s}
 .reveal{opacity:0;transform:translateY(24px);transition:opacity .6s ease,transform .6s cubic-bezier(.22,.61,.36,1)}
 .reveal.in{opacity:1;transform:none}
 @media (prefers-reduced-motion:reduce){
-  html.js .hero-anim{opacity:1;transform:none;transition:none}
   .reveal{opacity:1;transform:none;transition:none}
 }
 
@@ -343,7 +340,7 @@ html.hero-go .hd5{transition-delay:.55s}
   .hero-awards .aw-bsi{height:30px}
   .hero-visual{height:auto;display:flex;flex-direction:column;gap:12px;align-items:center}
   .hero-visual .molecule,.hero-orb{display:none}
-  .glass{position:relative;top:auto;left:auto;right:auto;width:100%;max-width:340px;animation:none}
+  .glass{position:relative;top:auto;left:auto;right:auto;width:100%;max-width:340px}
   .section-title{font-size:25.5px}
   .section-msg{font-size:17.5px}
   section{padding:60px 0}
@@ -351,6 +348,8 @@ html.hero-go .hd5{transition-delay:.55s}
   .detail-head img{width:130px}
   .detail-head .section-title{text-align:center}
   .cta-panel{padding:28px 20px}
+  .dl-grid{grid-template-columns:1fr;gap:28px}
+  .dl-info img{width:100%;max-width:420px;margin:0 auto 18px}
   .logo-track li{margin-right:48px}
   .trend-stat .after{font-size:46px}
 }
@@ -480,21 +479,21 @@ footer .copy{font-size:12.5px;color:rgba(255,255,255,.55);text-align:center;marg
     <div class="container">
       <div class="hero-grid">
         <div class="hero-left">
-          <div class="hero-brand hero-anim"><img src="assets/mark.png" alt=""><span class="txt"><span class="cz">Cayzen</span><span class="nm">Chemical Management</span></span></div>
-          <span class="hero-badge hero-anim hd1">化学物質管理・リスクアセスメント・SDS作成の代行</span>
-          <h1 class="hero-anim hd2">毎年広がる、<br>化学物質規制に、<br><span class="em">実務ごと対応。</span></h1>
-          <p class="hero-sub hero-anim hd3">台帳整備からリスクアセスメント、SDS作成まで。<br>化学物質管理者の実務を引き受けます。</p>
-          <div class="hero-cta hero-anim hd4">
+          <div class="hero-brand"><img src="assets/mark.png" alt=""><span class="txt"><span class="cz">Cayzen</span><span class="nm">Chemical Management</span></span></div>
+          <span class="hero-badge">化学物質管理・リスクアセスメント・SDS作成の代行</span>
+          <h1>毎年広がる、<br>化学物質規制に、<br><span class="em">実務ごと対応。</span></h1>
+          <p class="hero-sub">台帳整備からリスクアセスメント、SDS作成まで。<br>化学物質管理者の実務を引き受けます。</p>
+          <div class="hero-cta">
             <a class="btn btn-white" href="#cta" data-tab="download">資料を請求する</a>
             <a class="btn btn-accent" href="#cta" data-tab="contact">無料相談はこちら</a>
           </div>
-          <div class="hero-awards hero-anim hd5">
+          <div class="hero-awards">
             <img class="aw-jstartup" src="assets/award-jstartup.png" alt="J-Startup CENTRAL">
             <img class="aw-sap" src="assets/award-sap.png" alt="SAP Partner">
             <img class="aw-bsi" src="assets/award-bsi.png" alt="BSI Associate Consultant">
           </div>
         </div>
-        <div class="hero-visual hero-anim hd2">
+        <div class="hero-visual">
           <svg class="molecule" viewBox="0 0 520 460" aria-hidden="true">
             <g stroke="#fff" stroke-width="2" stroke-opacity=".45" fill="none">
               <path d="M200 150 L260 115 L320 150 L320 220 L260 255 L200 220 Z"/>
@@ -992,9 +991,23 @@ footer .copy{font-size:12.5px;color:rgba(255,255,255,.55);text-align:center;marg
       </div>
       <div class="cta-panels">
         <div class="cta-panel active" id="panel-download" role="tabpanel">
-          <h3>サービス資料のご請求</h3>
-          <p class="desc">Cayzen Chemical Managementのサービス資料をお送りします。規制の動向から、サービス内容・導入の進め方・提供体制までをまとめています。</p>
-          <div class="hs-form-frame" id="hs-form-download"></div>
+          <div class="dl-grid">
+            <div class="dl-info">
+              <img src="../../assets/doc-chemical-management.jpg" alt="「Cayzen Chemical Management」サービス資料の表紙" loading="lazy">
+              <h3>「Cayzen Chemical Management」サービス資料</h3>
+              <p>化学物質管理・リスクアセスメント・SDS作成の代行サービスを、全14ページでご紹介します。</p>
+              <ul>
+                <li>化学物質規制の動向</li>
+                <li>3つのサービスの内容と成果物</li>
+                <li>導入の進め方と提供体制</li>
+              </ul>
+            </div>
+            <div class="dl-form">
+              <h3>資料をダウンロードする（無料）</h3>
+              <p class="desc">フォーム送信後、資料をご案内します。</p>
+              <div class="hs-form-frame" id="hs-form-download"></div>
+            </div>
+          </div>
         </div>
         <div class="cta-panel" id="panel-contact" role="tabpanel">
           <h3>無料相談・お問い合わせ</h3>
@@ -1084,10 +1097,6 @@ footer .copy{font-size:12.5px;color:rgba(255,255,255,.55);text-align:center;marg
 <script>
 (function(){
   var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  requestAnimationFrame(function(){ requestAnimationFrame(function(){
-    document.documentElement.classList.add('hero-go');
-  }); });
-
   if(reduce || !('IntersectionObserver' in window)) return;
   ['.pb-grid', '.s-grid', '.step-row', '.sds-feats', '.flow-grid', '.sc-grid', '.e-grid', '.st-grid', '.lu-grid', '.timeline', '.method-grid'].forEach(function(sel){
     document.querySelectorAll(sel).forEach(function(grid){

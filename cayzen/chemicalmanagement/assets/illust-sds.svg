@@ -1,12 +1,12 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 140" role="img" aria-label="SDSとラベルのイラスト">
-<ellipse cx="100" cy="78" rx="90" ry="56" fill="#eef6f7"/>
-<rect x="36" y="16" width="86" height="112" rx="8" fill="#fff" stroke="#80c0c8" stroke-width="2"/>
-<rect x="36" y="16" width="86" height="22" rx="8" fill="#106878"/><rect x="36" y="30" width="86" height="8" fill="#106878"/>
-<text x="79" y="32" text-anchor="middle" font-family="Poppins,sans-serif" font-size="12" font-weight="600" fill="#fff">SDS</text>
-<g transform="translate(58 62) rotate(45)"><rect x="-11" y="-11" width="22" height="22" rx="2.5" fill="#fff" stroke="#d9363e" stroke-width="3.5"/></g>
-<path d="M58 70 c-6 0 -8-5 -6-9 c1 3 3 3 3 3 c-1-5 2-9 5-11 c0 4 2 5 4 8 c2 3 1 9 -6 9z" fill="#2b3338"/>
-<g transform="translate(92 62) rotate(45)"><rect x="-11" y="-11" width="22" height="22" rx="2.5" fill="#fff" stroke="#d9363e" stroke-width="3.5"/></g>
-<rect x="90.5" y="54" width="3" height="10" rx="1.5" fill="#2b3338"/><circle cx="92" cy="68" r="1.9" fill="#2b3338"/>
-<g fill="#cfe3e7"><rect x="46" y="88" width="66" height="5" rx="2.5"/><rect x="46" y="99" width="54" height="5" rx="2.5"/><rect x="46" y="110" width="60" height="5" rx="2.5"/></g>
-<g transform="translate(118 70) rotate(12)"><path d="M10 0 h48 q6 0 6 6 v30 q0 6-6 6 h-48 l-10-21z" fill="#e8a13d"/><circle cx="12" cy="21" r="4" fill="#fff"/><rect x="24" y="12" width="30" height="5" rx="2.5" fill="#fff" opacity=".9"/><rect x="24" y="23" width="22" height="5" rx="2.5" fill="#fff" opacity=".7"/></g>
+<defs><radialGradient id="bg" cx=".5" cy=".5" r=".5"><stop offset="0" stop-color="#106878" stop-opacity=".13"/><stop offset="1" stop-color="#106878" stop-opacity="0"/></radialGradient><linearGradient id="gl" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fff" stop-opacity=".95"/><stop offset="1" stop-color="#fff" stop-opacity=".6"/></linearGradient></defs><ellipse cx="100" cy="74" rx="92" ry="64" fill="url(#bg)"/>
+<rect x="36" y="16" width="86" height="112" rx="8" fill="url(#gl)" stroke="#106878" stroke-width="1.6"/>
+<path d="M44 16 h70 q8 0 8 8 v14 h-86 v-14 q0-8 8-8z" fill="#106878"/>
+<text x="79" y="32" text-anchor="middle" font-family="Poppins,sans-serif" font-size="11" font-weight="600" fill="#fff" letter-spacing=".1em">SDS</text>
+<g transform="translate(58 62) rotate(45)"><rect x="-10" y="-10" width="20" height="20" rx="2.5" fill="#106878" fill-opacity=".08" stroke="#106878" stroke-width="2.2"/></g>
+<path d="M58 69 c-5 0 -7-4 -5-8 c1 2.5 2.5 2.5 2.5 2.5 c-1-4 2-8 4.5-9.5 c0 3.5 2 4.5 3.5 7 c2 3 1 8 -5.5 8z" fill="#106878"/>
+<g transform="translate(92 62) rotate(45)"><rect x="-10" y="-10" width="20" height="20" rx="2.5" fill="#e8a13d" fill-opacity=".1" stroke="#e8a13d" stroke-width="2.2"/></g>
+<rect x="90.4" y="54" width="3.2" height="9.5" rx="1.6" fill="#e8a13d"/><circle cx="92" cy="67.5" r="1.9" fill="#e8a13d"/>
+<g fill="#106878" fill-opacity=".18"><rect x="46" y="88" width="66" height="5" rx="2.5"/><rect x="46" y="99" width="54" height="5" rx="2.5"/><rect x="46" y="110" width="60" height="5" rx="2.5"/></g>
+<g transform="translate(118 70) rotate(10)"><path d="M10 0 h48 q6 0 6 6 v30 q0 6-6 6 h-48 l-10-21z" fill="#fff" fill-opacity=".75" stroke="#106878" stroke-width="1.6"/><circle cx="12" cy="21" r="3.6" fill="none" stroke="#106878" stroke-width="1.6"/><rect x="24" y="12" width="30" height="5" rx="2.5" fill="#e8a13d"/><rect x="24" y="23" width="22" height="5" rx="2.5" fill="#106878" fill-opacity=".2"/></g>
 </svg>
