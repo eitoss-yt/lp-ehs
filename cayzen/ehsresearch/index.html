@@ -132,20 +132,37 @@ header{position:fixed;top:0;left:0;right:0;background:rgba(255,255,255,.94);back
 .s-card .s-scene::after{content:"→"}
 
 /* scene */
-.scene{background:#fff}
-.sc-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:28px}
-.sc-card{background:#fff;border-radius:18px;overflow:hidden;display:flex;flex-direction:column;color:var(--ink);box-shadow:0 12px 30px rgba(16,104,120,.12);transition:transform .15s ease,box-shadow .15s ease}
-.sc-card:hover{transform:translateY(-4px);box-shadow:0 18px 40px rgba(16,104,120,.18)}
-.sc-card .art{background:linear-gradient(180deg,#f2f8fd,#fff);padding:22px 30px 6px}
-.sc-card .art img{width:100%;max-width:300px;margin:0 auto}
-.sc-card .body{padding:14px 30px 30px;display:flex;flex-direction:column;flex:1}
-.sc-card .no{font-family:"Poppins",sans-serif;font-size:13.5px;font-weight:500;color:var(--teal-300);letter-spacing:.14em}
-.sc-card h3{font-size:23px;font-weight:500;margin:2px 0 8px}
-.sc-card p{font-size:15.5px;color:var(--gray);flex:1}
-.sc-card .chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
-.sc-card .chip{background:var(--teal-050);color:var(--teal-700);font-size:13.5px;font-weight:500;padding:3px 12px;border-radius:999px}
-.sc-card .go{margin-top:18px;font-weight:500;color:var(--teal-700)}
-.sc-card .go::after{content:" →"}
+.scene{background:#fff;padding-bottom:90px}
+.scene-wrap{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(0,.65fr);gap:56px;align-items:center;padding-right:max(24px,calc((100vw - 1080px) / 2))}
+.scene-panel{display:none;background:linear-gradient(135deg,#1d8a9c 0%,var(--teal-700) 100%);border-radius:0 28px 28px 0;padding:48px 48px 44px max(24px,calc((100vw - 1080px) / 2));color:#fff}
+.scene-panel.active{display:block}
+.sp-visual{position:relative;height:330px;margin-bottom:30px}
+.sp-card{position:absolute;background:#fff;border-radius:14px;box-shadow:0 20px 44px rgba(4,40,48,.3);overflow:hidden}
+.sp-card .cap{display:block;font-size:12.5px;font-weight:500;color:var(--teal-700);letter-spacing:.06em;padding:12px 16px 0}
+.sp-card img{display:block;width:100%}
+.sp-main{left:0;top:0;width:58%}
+.sp-main img{padding:4px 14px 12px}
+.sp-sub{right:4%;bottom:0;width:40%}
+.sp-sub img{padding:2px 10px 8px}
+.sp-doc{left:4%;top:0;width:34%}
+.sp-doc img{padding:0}
+.sp-chip{position:absolute;display:inline-flex;align-items:center;gap:6px;background:#fff;color:#9a5b00;font-size:13.5px;font-weight:700;padding:7px 16px;border-radius:999px;box-shadow:0 10px 24px rgba(4,40,48,.25)}
+.sp-chip b{color:#e0640a;font-family:"Poppins","Noto Sans JP",sans-serif;font-size:16px}
+.sp-text{font-size:16px;line-height:1.9;max-width:640px;color:rgba(255,255,255,.92)}
+.sp-links{display:flex;flex-wrap:wrap;gap:14px 34px;margin-top:22px}
+.sp-links a{display:inline-flex;align-items:center;gap:12px;color:#fff;font-weight:500;font-size:15.5px}
+.sp-links a .arr{width:34px;height:34px;border-radius:50%;border:1.5px solid rgba(255,255,255,.85);display:flex;align-items:center;justify-content:center;transition:background .15s ease}
+.sp-links a .arr svg{width:16px;height:16px;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.sp-links a:hover .arr{background:rgba(255,255,255,.18)}
+.scene-tabs{display:flex;flex-direction:column;gap:10px}
+.scene-tab{appearance:none;border:0;background:transparent;font-family:inherit;text-align:left;cursor:pointer;display:grid;grid-template-columns:auto 1fr;column-gap:18px;align-items:baseline;padding:18px 22px;border-radius:14px;color:#8a979b;transition:background .15s ease,color .15s ease}
+.scene-tab .n{font-family:"Poppins",sans-serif;font-size:22px;font-weight:500;letter-spacing:.04em}
+.scene-tab .t{font-size:20px;font-weight:500;letter-spacing:.06em}
+.scene-tab .d{grid-column:2;font-size:14px;margin-top:2px}
+.scene-tab:hover{color:var(--teal-700)}
+.scene-tab[aria-selected="true"]{background:var(--teal-050);color:var(--teal-700)}
+.scene-tab[aria-selected="true"] .d{color:var(--gray)}
+.scene-tab:focus-visible{outline:2px solid var(--teal-500);outline-offset:2px}
 
 /* flow */
 .flow-steps{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-bottom:36px}
@@ -311,9 +328,16 @@ html.hero-go .hd6{transition-delay:.68s}
 
 /* responsive */
 @media(max-width:900px){
-  .sc-grid{grid-template-columns:1fr}
-  .sc-card .art{padding:18px 20px 4px}
-  .sc-card .body{padding:12px 22px 24px}
+  .scene-wrap{grid-template-columns:1fr;gap:18px;padding:0 20px}
+  .scene-tabs{order:-1;flex-direction:row;gap:8px}
+  .scene-tab{flex:1;padding:12px 14px;column-gap:10px}
+  .scene-tab .n{font-size:17px}
+  .scene-tab .t{font-size:16px}
+  .scene-tab .d{display:none}
+  .scene-panel{border-radius:20px;padding:26px 20px 28px}
+  .sp-visual{height:240px;margin-bottom:22px}
+  .sp-chip{font-size:12px;padding:5px 12px}
+  .sp-chip b{font-size:14px}
   .card-grid,.flow-steps,.ns-grid{grid-template-columns:1fr}
   .s-grid,.scope-grid,.uc-grid,.e-grid,.merits .m-cols{grid-template-columns:1fr}
   .stats{grid-template-columns:repeat(2,1fr)}
@@ -562,27 +586,36 @@ footer .copy{font-size:12.5px;color:rgba(255,255,255,.55);text-align:center;marg
       <p class="section-label">Scene</p>
       <h2 class="section-title">活用シーン</h2>
       <p class="section-lead">法令調査の知見を、テーマごとの実務支援にも活かしています。</p>
-      <div class="sc-grid">
-        <a class="sc-card" href="../chemicalmanagement/">
-          <div class="art"><img src="assets/scene-chemical.svg" alt=""></div>
-          <div class="body">
-            <span class="no">SCENE 01</span>
-            <h3>化学物質</h3>
-            <p>毎年広がる化学物質規制に、実務ごと対応。台帳整備からリスクアセスメント、SDS作成までを代行します。</p>
-            <div class="chips"><span class="chip">化学物質台帳</span><span class="chip">リスクアセスメント</span><span class="chip">SDS・ラベル作成</span></div>
-            <span class="go">化学物質の活用シーンを見る</span>
+    </div>
+    <div class="scene-wrap">
+      <div class="scene-panels">
+        <div class="scene-panel active" id="scene-p1" role="tabpanel" aria-labelledby="scene-t1">
+          <div class="sp-visual">
+            <div class="sp-card sp-main"><span class="cap">化学物質台帳</span><img src="assets/scene-ledger.svg" alt=""></div>
+            <div class="sp-card sp-sub"><span class="cap">SDS・ラベル作成</span><img src="assets/scene-chemical.svg" alt=""></div>
+            <span class="sp-chip" style="left:44%;top:6%">RA対象物 <b>約2,900</b>物質</span>
           </div>
-        </a>
-        <a class="sc-card" href="../../lp/ppwr/">
-          <div class="art"><img src="assets/scene-ppwr.svg" alt=""></div>
-          <div class="body">
-            <span class="no">SCENE 02</span>
-            <h3>欧州規制：PPWR</h3>
-            <p>2026年8月に適用が始まったEU包装・包装廃棄物規則。役割ごとの義務と期限を、一次情報から整理します。</p>
-            <div class="chips"><span class="chip">役割別の義務</span><span class="chip">期限の一覧</span><span class="chip">部門別チェックリスト</span></div>
-            <span class="go">PPWRの活用シーンを見る</span>
+          <p class="sp-text">毎年広がる化学物質規制に、実務ごと対応します。化学物質台帳の整備から、リスクアセスメント、SDS・ラベルの作成までを代行し、法改正にも継続して追従します。</p>
+          <div class="sp-links">
+            <a href="../chemicalmanagement/">化学物質の活用シーン<span class="arr"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
+            <a href="../../document/chemical-management/">サービス資料<span class="arr"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
           </div>
-        </a>
+        </div>
+        <div class="scene-panel" id="scene-p2" role="tabpanel" aria-labelledby="scene-t2">
+          <div class="sp-visual">
+            <div class="sp-card sp-doc"><img src="../../assets/lp-ppwr/p1.jpg" alt="資料「PPWR規制 対応まとめ」の表紙"></div>
+            <div class="sp-card sp-sub" style="width:48%;right:2%"><span class="cap">EU包装・包装廃棄物規則</span><img src="assets/scene-ppwr.svg" alt=""></div>
+            <span class="sp-chip" style="left:44%;top:8%"><b>2026年8月</b>適用開始</span>
+          </div>
+          <p class="sp-text">2026年8月に適用が始まったEU包装・包装廃棄物規則（PPWR）。メーカー・輸入者などの役割ごとの義務と、2040年までの期限を一次情報から整理します。</p>
+          <div class="sp-links">
+            <a href="../../lp/ppwr/">PPWRの活用シーン<span class="arr"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
+          </div>
+        </div>
+      </div>
+      <div class="scene-tabs" role="tablist" aria-label="活用シーン">
+        <button class="scene-tab" id="scene-t1" type="button" role="tab" aria-selected="true" aria-controls="scene-p1"><span class="n">01</span><span class="t">化学物質</span><span class="d">台帳整備・リスクアセスメント・SDS作成</span></button>
+        <button class="scene-tab" id="scene-t2" type="button" role="tab" aria-selected="false" aria-controls="scene-p2" tabindex="-1"><span class="n">02</span><span class="t">欧州規制：PPWR</span><span class="d">役割ごとの義務と期限の整理</span></button>
       </div>
     </div>
   </section>
@@ -990,7 +1023,7 @@ footer .copy{font-size:12.5px;color:rgba(255,255,255,.55);text-align:center;marg
   if(reduce || !('IntersectionObserver' in window)) return;
 
   // カード類のスクロールフェードイン（グループ内で順に表示）
-  ['.card-grid', '.s-grid', '.sc-grid', '.flow-steps', '.ns-grid'].forEach(function(sel){
+  ['.card-grid', '.s-grid', '.flow-steps', '.ns-grid'].forEach(function(sel){
     document.querySelectorAll(sel).forEach(function(grid){
       Array.prototype.forEach.call(grid.children, function(el, i){
         el.classList.add('reveal');
@@ -1071,6 +1104,30 @@ footer .copy{font-size:12.5px;color:rgba(255,255,255,.55);text-align:center;marg
   }
   window.addEventListener('hashchange', handleHash);
   handleHash();
+})();
+</script>
+
+<script>
+(function(){
+  var tabs = Array.prototype.slice.call(document.querySelectorAll('.scene-tab'));
+  function select(tab){
+    tabs.forEach(function(t){
+      var on = t === tab;
+      t.setAttribute('aria-selected', on ? 'true' : 'false');
+      t.tabIndex = on ? 0 : -1;
+      document.getElementById(t.getAttribute('aria-controls')).classList.toggle('active', on);
+    });
+  }
+  tabs.forEach(function(t, i){
+    t.addEventListener('click', function(){ select(t); });
+    t.addEventListener('keydown', function(e){
+      var k = e.key, j = -1;
+      if(k === 'ArrowDown' || k === 'ArrowRight') j = (i + 1) % tabs.length;
+      if(k === 'ArrowUp' || k === 'ArrowLeft') j = (i - 1 + tabs.length) % tabs.length;
+      if(j < 0) return;
+      e.preventDefault(); select(tabs[j]); tabs[j].focus();
+    });
+  });
 })();
 </script>
 
