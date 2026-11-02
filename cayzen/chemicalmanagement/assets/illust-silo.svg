@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 140" role="img" aria-label="一人の担当者に業務が集中しているイラスト">
+<defs><radialGradient id="bg" cx=".5" cy=".5" r=".5"><stop offset="0" stop-color="#2d86de" stop-opacity=".13"/><stop offset="1" stop-color="#2d86de" stop-opacity="0"/></radialGradient><filter id="sh" x="-30%" y="-30%" width="160%" height="170%"><feDropShadow dx="0" dy="5" stdDeviation="6" flood-color="#2d86de" flood-opacity=".2"/></filter></defs><ellipse cx="100" cy="74" rx="92" ry="64" fill="url(#bg)"/>
+<g fill="#2d86de" fill-opacity=".14"><circle cx="38" cy="86" r="9"/><path d="M22 122 q0-24 16-24 q16 0 16 24z"/><circle cx="162" cy="86" r="9"/><path d="M146 122 q0-24 16-24 q16 0 16 24z"/></g>
+<g fill="#2d86de">
+<rect x="70" y="14" width="60" height="11" rx="3" fill-opacity=".15"/>
+<rect x="66" y="27" width="68" height="11" rx="3" fill-opacity=".28"/>
+<rect x="72" y="40" width="58" height="11" rx="3" fill-opacity=".45"/>
+<rect x="68" y="53" width="64" height="11" rx="3" fill-opacity=".68"/>
+</g>
+<path d="M84 104 L73 66 M116 104 L127 66" stroke="#2d86de" stroke-width="8" stroke-linecap="round"/>
+<circle cx="100" cy="82" r="12" fill="#2d86de"/><path d="M76 126 q0-31 24-31 q24 0 24 31z" fill="#2d86de"/>
+<path d="M141 28 l6-6 M146 39 h8 M141 50 l6 6" stroke="#e8a13d" stroke-width="3" stroke-linecap="round"/>
+</svg>
