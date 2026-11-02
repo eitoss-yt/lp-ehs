@@ -117,6 +117,8 @@ Spirの面談予約はGA4では計測できないため、Spir側の予約件数
 
 新しいものを上に追記する。
 
+- 2026-11-02 PR #115 をマージし本番反映。活用シーン「EU（欧州）規制」LP https://eitoss.com/cayzen/euregulation/ を公開。TOP（Cayzenシリーズの下）とEHS Researchページに活用シーンを追加、全ページのヘッダーから採用情報を削除、名称を「EU（欧州）規制」に統一（Web/LP）
+
 - 2026-11-02 PR #114 をマージし本番反映。活用シーン「化学物質」LP https://eitoss.com/cayzen/chemicalmanagement/ と資料DLページ https://eitoss.com/document/chemical-management/ を公開。全ページのメニューを「サービス」「活用シーン」に分割（Web/LP）
 
 - 2026-11-02 化学物質管理のLPを独立サービスではなく「Cayzen EHS Research の活用シーン」として位置づけ直し。全ページのヘッダーメニューを「サービス」（EHS Research／Knowledge Management／ISO）と「活用シーン」（化学物質／欧州規制：PPWR）に分割。TOPのサービス一覧は3サービスに戻した（Web/LP）
