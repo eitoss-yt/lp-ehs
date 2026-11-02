@@ -324,7 +324,7 @@ function chrome(depth, bodyHtml, { title, description, canonicalPath, ogType = '
           <div class="gh-dd-menu"><div class="in">
             <p class="gh-dd-head">Cayzen EHS Research の活用シーン</p>
             <a href="${rel}cayzen/chemicalmanagement/">化学物質</a>
-            <a href="${rel}lp/ppwr/">欧州規制：PPWR</a>
+            <a href="${rel}cayzen/euregulation/">欧州規制</a>
           </div></div>
         </div>
         <a href="${rel}seminar/">セミナー</a>
@@ -360,7 +360,7 @@ ${bodyHtml}
         <a href="${rel}cayzen/iso/">Cayzen ISO サポート</a>
         <p class="footer-head footer-sub">活用シーン</p>
         <a href="${rel}cayzen/chemicalmanagement/">化学物質</a>
-        <a href="${rel}lp/ppwr/">欧州規制：PPWR</a>
+        <a href="${rel}cayzen/euregulation/">欧州規制</a>
       </nav>
       <nav class="footer-col">
         <p class="footer-head">コンテンツ</p>
