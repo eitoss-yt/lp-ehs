@@ -242,24 +242,6 @@ section{padding:80px 0}
 .run li::before{content:"●";color:var(--accent);font-size:10px;margin-right:8px;vertical-align:2px}
 .flow-card.last .foot{color:#9a5b00}
 
-/* team */
-.scheme{background:linear-gradient(180deg,var(--teal-050),#f6fafb)}
-.sc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
-.sc-card{background:#fff;border-radius:16px;padding:28px 24px;box-shadow:0 8px 22px rgba(16,104,120,.08)}
-.sc-card .ico-badge{justify-content:flex-start;margin-bottom:12px}
-.sc-card h3{font-size:18px;font-weight:500;line-height:1.5;margin-bottom:10px}
-.sc-card ul{list-style:none;display:flex;flex-direction:column;gap:6px}
-.sc-card li{background:#f6fafb;border-radius:8px;padding:6px 12px;font-size:14.5px;color:var(--gray)}
-
-/* experts */
-.experts{background:#fff}
-.e-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
-.e-card{background:var(--teal-050);border-radius:14px;padding:20px 22px;display:flex;gap:16px;align-items:center}
-.e-card .av{width:60px;height:60px;border-radius:50%;background:#fff;color:var(--teal-500);display:flex;align-items:center;justify-content:center;flex:0 0 auto}
-.e-card .av .ico{width:30px;height:30px;stroke-width:1.3}
-.e-card h3{font-size:16.5px;font-weight:500;color:var(--teal-900);line-height:1.5}
-.e-card p{font-size:14.5px;color:var(--gray)}
-
 /* merits */
 .strengths{background:linear-gradient(180deg,var(--teal-050),#f6fafb)}
 .st-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
@@ -327,7 +309,7 @@ section{padding:80px 0}
 
 /* responsive */
 @media(max-width:900px){
-  .hero-grid,.trend-grid,.pb-grid,.s-grid,.e-grid,.sc-grid,.st-grid,.flow-grid,.lu-grid,.method-grid,.sds-grid,.sds-feats{grid-template-columns:1fr}
+  .hero-grid,.trend-grid,.pb-grid,.s-grid,.st-grid,.flow-grid,.lu-grid,.method-grid,.sds-grid,.sds-feats{grid-template-columns:1fr}
   .step-row{grid-template-columns:1fr 1fr}
   .step-row .step-card:not(:last-child)::after{display:none}
   .hero{padding:118px 0 90px}
@@ -850,68 +832,6 @@ footer .copy{font-size:12.5px;color:rgba(255,255,255,.55);text-align:center;marg
     </div>
   </section>
 
-  <!-- TEAM -->
-  <section class="scheme wm" id="scheme" data-wm="TEAM">
-    <div class="container">
-      <h2 class="section-title">専門チームと運用基盤で、<br>品質とスピードを両立</h2>
-      <div class="sc-grid">
-        <div class="sc-card">
-          <span class="ico-badge"><svg class="ico" viewBox="0 0 24 24"><ellipse cx="12" cy="5" rx="8" ry="3"/><path d="M4 5v14c0 1.7 3.6 3 8 3s8-1.3 8-3V5"/><path d="M4 12c0 1.7 3.6 3 8 3s8-1.3 8-3"/></svg></span>
-          <h3>約9,000法令・全条例の<br>法改正データベース</h3>
-          <ul>
-            <li>官報・e-Gov等を継続的に取得</li>
-            <li>RA対象物の追加や濃度基準値の改正も把握</li>
-            <li>お預かりした物質情報と突き合わせて判定</li>
-          </ul>
-        </div>
-        <div class="sc-card">
-          <span class="ico-badge"><svg class="ico" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3"/><path d="M3 20c0-3.3 2.7-6 6-6s6 2.7 6 6"/><circle cx="17" cy="9" r="2.5"/><path d="M15.5 14.3c3 .3 5.5 2.6 5.5 5.7"/></svg></span>
-          <h3>EHSの専門チーム</h3>
-          <ul>
-            <li>化学・製薬・電子部品の現場経験者が評価</li>
-            <li>チームのレビューを経てレポート化</li>
-            <li>判断が分かれる論点は根拠条文を明示</li>
-          </ul>
-        </div>
-        <div class="sc-card">
-          <span class="ico-badge"><svg class="ico" viewBox="0 0 24 24"><rect x="6" y="6" width="12" height="12" rx="2"/><path d="M9 2v4M15 2v4M9 18v4M15 18v4M2 9h4M2 15h4M18 9h4M18 15h4"/><path d="M10 10h4v4h-4z"/></svg></span>
-          <h3>オペレーションのDX・AI化</h3>
-          <ul>
-            <li>手順と判定基準を標準化</li>
-            <li>定型作業の自動化で品質を安定化</li>
-            <li>物質数・拠点が増えても対応</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- EXPERTS -->
-  <section class="experts wm" id="experts" data-wm="EXPERT">
-    <div class="container">
-      <h2 class="section-title">現場を歩いてきたEHS専門家が対応</h2>
-      <p class="section-lead">（経歴は一例）</p>
-      <div class="e-grid">
-        <div class="e-card">
-          <span class="av"><svg class="ico" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-8 8-8s8 3.6 8 8"/></svg></span>
-          <div><h3>米国化学会社に計38年</h3><p>EHSコンプライアンス監査、化学工場の運転・業務管理</p></div>
-        </div>
-        <div class="e-card">
-          <span class="av"><svg class="ico" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-8 8-8s8 3.6 8 8"/></svg></span>
-          <div><h3>大手ガラス・製薬・石油化学でEHS19年</h3><p>ISO主任審査員。海外化学工場のEHS監査、RA研修</p></div>
-        </div>
-        <div class="e-card">
-          <span class="av"><svg class="ico" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-8 8-8s8 3.6 8 8"/></svg></span>
-          <div><h3>外資系製薬でEHS順守体制を構築</h3><p>製薬団体のEHS委員長を歴任。国立大学でも安全衛生を担当</p></div>
-        </div>
-        <div class="e-card">
-          <span class="av"><svg class="ico" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-8 8-8s8 3.6 8 8"/></svg></span>
-          <div><h3>大手電子部品で環境・安全衛生業務</h3><p>主任審査員・CSR監査員。化学物質管理の研修講師</p></div>
-        </div>
-      </div>
-    </div>
-  </section>
-
   <!-- MERIT -->
   <section class="strengths wm" id="merit" data-wm="MERIT">
     <div class="container">
@@ -1093,7 +1013,7 @@ footer .copy{font-size:12.5px;color:rgba(255,255,255,.55);text-align:center;marg
 (function(){
   var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   if(reduce || !('IntersectionObserver' in window)) return;
-  ['.pb-grid', '.s-grid', '.step-row', '.sds-feats', '.flow-grid', '.sc-grid', '.e-grid', '.st-grid', '.lu-grid', '.timeline', '.method-grid'].forEach(function(sel){
+  ['.pb-grid', '.s-grid', '.step-row', '.sds-feats', '.flow-grid', '.st-grid', '.lu-grid', '.timeline', '.method-grid'].forEach(function(sel){
     document.querySelectorAll(sel).forEach(function(grid){
       Array.prototype.forEach.call(grid.children, function(el, i){
         el.classList.add('reveal');
