@@ -132,36 +132,9 @@ header{position:fixed;top:0;left:0;right:0;background:rgba(255,255,255,.94);back
 .sv-card .link::after{content:" →"}
 
 /* scene */
-.scene{background:linear-gradient(180deg,#f3f9f9,#eaf5f5);padding-bottom:96px}
-.scene-rows{display:flex;flex-direction:column;gap:80px;max-width:1120px;margin:0 auto;padding:0 20px}
-.scene-row{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:64px;align-items:center}
-.scene-row.rev{grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr)}
-.scene-row.rev .scene-visual{order:2}
-.sp-visual{position:relative;height:360px}
-.sp-visual::before{content:"";position:absolute;left:6%;right:0;top:10%;bottom:4%;background:rgba(255,255,255,.65);border-radius:18px}
-.sp-card{position:absolute;background:#fff;border-radius:12px;box-shadow:0 14px 36px rgba(16,104,120,.14);overflow:hidden}
-.sp-card .cap{display:block;font-size:12.5px;font-weight:500;color:var(--teal-700);letter-spacing:.06em;padding:12px 16px 0}
-.sp-card img{display:block;width:100%}
-.sp-main{left:0;top:0;width:60%}
-.sp-main img{padding:4px 14px 12px}
-.sp-sub{right:2%;bottom:0;width:42%}
-.sp-sub img{padding:2px 10px 8px}
-.sp-doc{left:4%;top:0;width:34%}
-.sp-ill{position:absolute;display:block}
-.sp-ill-main{left:0;top:4%;width:68%}
-.sp-ill-sub{right:0;bottom:0;width:52%}
-.sp-chip{position:absolute;display:inline-flex;align-items:center;gap:6px;background:#fff;color:#9a5b00;font-size:13.5px;font-weight:700;padding:7px 16px;border-radius:999px;box-shadow:0 10px 24px rgba(16,104,120,.16)}
-.sp-chip b{color:#e0640a;font-family:"Poppins","Noto Sans JP",sans-serif;font-size:16px}
-.scene-body .n{display:block;font-family:"Poppins",sans-serif;font-size:14px;font-weight:500;color:var(--teal-300);letter-spacing:.16em;margin-bottom:8px}
-.scene-body h3{font-size:28px;font-weight:700;line-height:1.55;margin-bottom:16px}
-.scene-body p{font-size:16px;color:var(--gray);line-height:1.9}
-.scene-body .chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
-.scene-body .chip{background:#fff;color:var(--teal-700);font-size:13.5px;font-weight:500;padding:3px 12px;border-radius:999px}
-.sp-links{display:flex;flex-wrap:wrap;gap:14px 30px;margin-top:24px}
-.sp-links a{display:inline-flex;align-items:center;gap:12px;color:var(--teal-700);font-weight:500;font-size:15.5px}
-.sp-links a .arr{width:34px;height:34px;border-radius:50%;border:1.5px solid var(--teal-700);display:flex;align-items:center;justify-content:center;transition:background .15s ease,color .15s ease}
-.sp-links a .arr svg{width:16px;height:16px;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
-.sp-links a:hover .arr{background:var(--teal-700);color:#fff}
+.scene{background:#fff}
+.sv-card .thumb-ill{display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#f2f8fd,#e8f2f6)}
+.sv-card .thumb-ill img{width:82%;height:auto;object-fit:contain}
 
 /* news */
 .news{background:#fff}
@@ -239,13 +212,6 @@ html.hero-go .hd2{transition-delay:.26s}
 
 /* responsive */
 @media(max-width:900px){
-  .scene-rows{gap:52px}
-  .scene-row,.scene-row.rev{grid-template-columns:1fr;gap:22px}
-  .scene-row.rev .scene-visual{order:0}
-  .sp-visual{height:250px}
-  .sp-chip{font-size:12px;padding:5px 12px}
-  .sp-chip b{font-size:14px}
-  .scene-body h3{font-size:22px}
   .sv-grid{grid-template-columns:1fr}
   .hero h1{font-size:30.5px}
   .hero h1.hero-en-main{font-size:31.5px}
@@ -470,45 +436,34 @@ footer .copy{font-size:12.5px;color:rgba(255,255,255,.55);text-align:center;marg
       <p class="section-label">Scene</p>
       <h2 class="section-title">活用シーン</h2>
       <p class="section-lead">Cayzen EHS Research の法令調査の知見を、テーマごとの実務支援にも活かしています。</p>
-    </div>
-    <div class="scene-rows">
-      <div class="scene-row">
-        <div class="scene-visual">
-          <div class="sp-visual">
-            <img class="sp-ill sp-ill-main" src="assets/scene/scene-ledger.svg" alt="">
-            <img class="sp-ill sp-ill-sub" src="assets/scene/scene-chemical.svg" alt="">
-            <span class="sp-chip" style="left:44%;top:6%">RA対象物 <b>約2,900</b>物質</span>
+      <div class="sv-grid">
+        <a class="sv-card" href="cayzen/chemicalmanagement/">
+          <div class="thumb thumb-ill"><img src="assets/scene/scene-ledger.svg" alt=""></div>
+          <div class="body">
+            <span class="tag">活用シーン</span>
+            <h3>化学物質</h3>
+            <p>化学物質台帳の整備から、リスクアセスメント、SDS・ラベルの作成までを代行。毎年広がる化学物質規制に、実務ごと対応します。</p>
+            <span class="link">活用シーンを見る</span>
           </div>
-        </div>
-        <div class="scene-body">
-          <span class="n">SCENE 01</span>
-          <h3>化学物質</h3>
-          <p>毎年広がる化学物質規制に、実務ごと対応します。化学物質台帳の整備から、リスクアセスメント、SDS・ラベルの作成までを代行し、法改正にも継続して追従します。</p>
-          <div class="chips"><span class="chip">化学物質台帳</span><span class="chip">リスクアセスメント</span><span class="chip">SDS・ラベル作成</span></div>
-          <div class="sp-links">
-            <a href="cayzen/chemicalmanagement/">化学物質の活用シーン<span class="arr"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
-            <a href="document/chemical-management/">サービス資料<span class="arr"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
+        </a>
+        <a class="sv-card" href="cayzen/euregulation/">
+          <div class="thumb thumb-ill"><img src="assets/scene/scene-eu-apply.svg" alt=""></div>
+          <div class="body">
+            <span class="tag">活用シーン</span>
+            <h3>欧州規制</h3>
+            <p>REACH、PFAS制限、ESPR、電池規則、PPWRなど、EUの製品規制について、自社に関係する義務と期限を一次情報から整理します。</p>
+            <span class="link">活用シーンを見る</span>
           </div>
-        </div>
-      </div>
-      <div class="scene-row rev">
-        <div class="scene-visual">
-          <div class="sp-visual">
-            <img class="sp-ill sp-ill-main" src="assets/scene/scene-eu-apply.svg" alt="">
-            <img class="sp-ill sp-ill-sub" style="width:44%;right:-2%" src="assets/scene/scene-eu-monitor.svg" alt="">
-            <span class="sp-chip" style="left:46%;top:4%"><b>2026年8月</b>PPWR適用開始</span>
+        </a>
+        <a class="sv-card" href="lp/ppwr/">
+          <div class="thumb thumb-ill"><img src="assets/scene/scene-ppwr.svg" alt=""></div>
+          <div class="body">
+            <span class="tag">活用シーン</span>
+            <h3>欧州規制：PPWR</h3>
+            <p>2026年8月に適用が始まったEU包装・包装廃棄物規則。役割ごとの義務と期限、部門別チェックリストを資料にまとめています。</p>
+            <span class="link">お役立ち資料を見る</span>
           </div>
-        </div>
-        <div class="scene-body">
-          <span class="n">SCENE 02</span>
-          <h3>欧州規制</h3>
-          <p>REACH、PFAS制限、ESPR、電池規則、PPWRなど、次々と始まるEUの製品規制。条文と欧州委員会のガイダンスから、自社に関係する義務と期限を整理します。</p>
-          <div class="chips"><span class="chip">適用規制の洗い出し</span><span class="chip">改正の定期調査</span><span class="chip">個別の問い合わせ</span></div>
-          <div class="sp-links">
-            <a href="cayzen/euregulation/">欧州規制の活用シーン<span class="arr"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
-            <a href="document/ppwr/">PPWRのお役立ち資料<span class="arr"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
-          </div>
-        </div>
+        </a>
       </div>
     </div>
   </section>
