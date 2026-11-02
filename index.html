@@ -133,8 +133,11 @@ header{position:fixed;top:0;left:0;right:0;background:rgba(255,255,255,.94);back
 
 /* scene */
 .scene{background:#fff}
-.sv-card .thumb-ill{display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#f2f8fd,#e8f2f6)}
-.sv-card .thumb-ill img{width:82%;height:auto;object-fit:contain}
+.sv-card .thumb-shot{display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#f2f8fd,#e8f2f6);padding:0 16px}
+.sv-card .thumb-shot img{width:100%;height:auto;border-radius:8px;box-shadow:0 10px 24px rgba(16,104,120,.16)}
+.sv-card .thumb-photo{position:relative}
+.sv-card .thumb-photo .ov{position:absolute;right:12px;bottom:12px;width:66%;height:auto;border-radius:8px;box-shadow:0 10px 24px rgba(16,104,120,.22)}
+.scene-note{text-align:right;font-size:12.5px;color:var(--gray);margin-top:16px}
 
 /* news */
 .news{background:#fff}
@@ -438,7 +441,7 @@ footer .copy{font-size:12.5px;color:rgba(255,255,255,.55);text-align:center;marg
       <p class="section-lead">Cayzen EHS Research の法令調査の知見を、テーマごとの実務支援にも活かしています。</p>
       <div class="sv-grid">
         <a class="sv-card" href="cayzen/chemicalmanagement/">
-          <div class="thumb thumb-ill"><img src="assets/scene/scene-ledger.svg" alt=""></div>
+          <div class="thumb thumb-shot"><img src="assets/scene/scene-chem-ledger.webp" alt="化学物質台帳の画面イメージ"></div>
           <div class="body">
             <span class="tag">活用シーン</span>
             <h3>化学物質</h3>
@@ -447,7 +450,7 @@ footer .copy{font-size:12.5px;color:rgba(255,255,255,.55);text-align:center;marg
           </div>
         </a>
         <a class="sv-card" href="cayzen/euregulation/">
-          <div class="thumb thumb-ill"><img src="assets/scene/scene-eu-apply.svg" alt=""></div>
+          <div class="thumb thumb-photo"><img class="ph" src="assets/lp-ppwr/photo.jpg" alt="製品と包装材の写真"><img class="ov" src="assets/scene/scene-eu-judge.webp" alt="EU向け製品の適用規制を判定する画面イメージ"></div>
           <div class="body">
             <span class="tag">活用シーン</span>
             <h3>欧州規制</h3>
@@ -456,7 +459,7 @@ footer .copy{font-size:12.5px;color:rgba(255,255,255,.55);text-align:center;marg
           </div>
         </a>
         <a class="sv-card" href="lp/ppwr/">
-          <div class="thumb thumb-ill"><img src="assets/scene/scene-ppwr.svg" alt=""></div>
+          <div class="thumb"><img src="assets/doc-ppwr.jpg" alt="資料「EU PPWR 対応 要点まとめ」"></div>
           <div class="body">
             <span class="tag">活用シーン</span>
             <h3>欧州規制：PPWR</h3>
@@ -465,6 +468,7 @@ footer .copy{font-size:12.5px;color:rgba(255,255,255,.55);text-align:center;marg
           </div>
         </a>
       </div>
+      <p class="scene-note">※ 画面はイメージです</p>
     </div>
   </section>
 
