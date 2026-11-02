@@ -275,6 +275,21 @@ section{padding:80px 0}
 .lu-card .link{margin-top:12px;font-size:14.5px;font-weight:500;color:var(--teal-700)}
 .lu-card .link::after{content:" →"}
 
+/* resource */
+.resource{background:#fff}
+.res-card{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:40px;align-items:center;max-width:920px;margin:0 auto;background:#fff;border-radius:18px;padding:32px;color:var(--ink);box-shadow:0 12px 32px rgba(16,104,120,.12);transition:transform .15s ease,box-shadow .15s ease}
+.res-card:hover{transform:translateY(-3px);box-shadow:0 18px 40px rgba(16,104,120,.16)}
+.res-card img{border-radius:10px;box-shadow:0 8px 22px rgba(16,104,120,.16)}
+.res-tag{display:inline-block;background:var(--accent-050);color:#9a5b00;font-size:13px;font-weight:700;padding:3px 12px;border-radius:999px;margin-bottom:10px}
+.res-body h3{font-size:21px;font-weight:500;margin-bottom:8px}
+.res-body p{font-size:15px;color:var(--gray);margin-bottom:12px}
+.res-body ul{list-style:none;display:flex;flex-direction:column;gap:6px}
+.res-body li{position:relative;background:var(--teal-050);border-radius:8px;padding:6px 12px 6px 34px;font-size:14.5px}
+.res-body li::before{content:"";position:absolute;left:12px;top:12.5px;width:14px;height:14px;border-radius:50%;background:var(--teal-500)}
+.res-body li::after{content:"";position:absolute;left:16.5px;top:15px;width:5px;height:8px;border-right:2px solid #fff;border-bottom:2px solid #fff;transform:rotate(45deg)}
+.res-go{display:inline-flex;margin-top:16px;font-weight:700;color:#fff;background:linear-gradient(135deg,#f28a1e,#e0640a);padding:11px 22px;border-radius:8px}
+.res-go::after{content:"›";margin-left:8px;opacity:.7}
+
 /* CTA */
 .cta{background:#f6fafb}
 .cta-tabs{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin-bottom:34px}
@@ -334,6 +349,7 @@ section{padding:80px 0}
   .detail-head .section-title{text-align:center}
   .cta-panel{padding:28px 20px}
   .dl-grid{grid-template-columns:1fr;gap:28px}
+  .res-card{grid-template-columns:1fr;gap:20px;padding:22px}
   .dl-info img{width:100%;max-width:420px;margin:0 auto 18px}
   .logo-track li{margin-right:48px}
   .trend-stat .after{font-size:46px}
@@ -440,8 +456,8 @@ footer .copy{font-size:12.5px;color:rgba(255,255,255,.55);text-align:center;marg
     <div class="gh-right">
       <p class="gh-tel">TEL: <b>050-8881-9881</b><span>（平日10:00〜19:00）</span></p>
       <div class="gh-actions">
-        <a class="gh-btn gh-btn-dl" href="#cta" data-tab="download"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h9l4 4v14H6z"/><path d="M15 3v4h4M9 12h6M9 16h6"/></svg> 資料請求</a>
-        <a class="gh-btn gh-btn-ct" href="#cta" data-tab="contact"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg> お問合せ</a>
+        <a class="gh-btn gh-btn-dl" href="../../document/"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h9l4 4v14H6z"/><path d="M15 3v4h4M9 12h6M9 16h6"/></svg> 資料請求</a>
+        <a class="gh-btn gh-btn-ct" href="#cta"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg> お問合せ</a>
       </div>
     </div>
   </div>
@@ -478,8 +494,8 @@ footer .copy{font-size:12.5px;color:rgba(255,255,255,.55);text-align:center;marg
           <h1>次々と始まる、<br>欧州の製品規制に、<br><span class="em">一次情報で対応。</span></h1>
           <p class="hero-sub">EU規則の条文と欧州委員会のガイダンスから、<br>自社に関係する義務と期限を整理します。</p>
           <div class="hero-cta">
-            <a class="btn btn-white" href="#cta" data-tab="download">資料を請求する</a>
-            <a class="btn btn-accent" href="#cta" data-tab="contact">無料相談はこちら</a>
+            <a class="btn btn-accent" href="#cta">無料相談はこちら</a>
+            <a class="btn btn-white" href="#resource">PPWRのお役立ち資料</a>
           </div>
         </div>
         <div class="hero-visual">
@@ -881,37 +897,35 @@ footer .copy{font-size:12.5px;color:rgba(255,255,255,.55);text-align:center;marg
     </div>
   </section>
 
+  <!-- RESOURCE -->
+  <section class="resource wm" id="resource" data-wm="RESOURCE">
+    <div class="container">
+      <h2 class="section-title">お役立ち資料</h2>
+      <a class="res-card" href="../../document/ppwr/">
+        <img src="../../assets/doc-ppwr.jpg" alt="資料「EU PPWR 対応 要点まとめ」の表紙" loading="lazy">
+        <div class="res-body">
+          <span class="res-tag">無料ダウンロード</span>
+          <h3>EU PPWR 対応 要点まとめ</h3>
+          <p>2026年8月に適用が始まったEU包装・包装廃棄物規則（PPWR）への対応を、全13ページにまとめた資料です。</p>
+          <ul>
+            <li>役割ごとの義務の整理表</li>
+            <li>2040年までの期限の一覧</li>
+            <li>部門別チェックリスト</li>
+          </ul>
+          <span class="res-go">資料をダウンロードする</span>
+        </div>
+      </a>
+    </div>
+  </section>
+
   <!-- CTA FORM -->
   <section class="cta wm" id="cta" data-wm="CONTACT">
     <div class="container">
       <p class="section-label">Contact</p>
       <h2 class="section-title">お気軽にお問い合わせください</h2>
       <p class="section-lead">対象規制の洗い出しから、改正の確認、日々の疑問まで、検討のどの段階でもご相談を承ります。</p>
-      <div class="cta-tabs" role="tablist">
-        <button class="cta-tab active" type="button" data-panel="download" role="tab" aria-selected="true">資料請求</button>
-        <button class="cta-tab" type="button" data-panel="contact" role="tab" aria-selected="false">無料相談・お問い合わせ</button>
-      </div>
       <div class="cta-panels">
-        <div class="cta-panel active" id="panel-download" role="tabpanel">
-          <div class="dl-grid">
-            <div class="dl-info">
-              <img src="../../assets/doc-ppwr.jpg" alt="資料「EU PPWR 対応 要点まとめ」の表紙" loading="lazy">
-              <h3>EU PPWR 対応 要点まとめ</h3>
-              <p>2026年8月に適用が始まったEU包装・包装廃棄物規則（PPWR）への対応を、全13ページにまとめた資料です。</p>
-              <ul>
-                <li>役割ごとの義務の整理表</li>
-                <li>2040年までの期限の一覧</li>
-                <li>部門別チェックリスト</li>
-              </ul>
-            </div>
-            <div class="dl-form">
-              <h3>資料をダウンロードする（無料）</h3>
-              <p class="desc">フォーム送信後、資料をご案内します。</p>
-              <div class="hs-form-frame" id="hs-form-download"></div>
-            </div>
-          </div>
-        </div>
-        <div class="cta-panel" id="panel-contact" role="tabpanel">
+        <div class="cta-panel active" id="panel-contact">
           <h3>無料相談・お問い合わせ</h3>
           <p class="desc">対象の製品や販売国をお伺いしたうえで、進め方とお見積りをご提案いたします。</p>
           <div class="hs-form-frame" id="hs-form-contact"></div>
@@ -963,12 +977,6 @@ footer .copy{font-size:12.5px;color:rgba(255,255,255,.55);text-align:center;marg
 <!-- HubSpot Forms -->
 <script charset="utf-8" type="text/javascript" src="https://js-na2.hsforms.net/forms/embed/v2.js"></script>
 <script>
-  hbspt.forms.create({
-    portalId: "8170895",
-    formId: "83a73b1f-76df-4e38-b2b6-b19bd37bc567",
-    region: "na2",
-    target: "#hs-form-download"
-  });
   hbspt.forms.create({
     portalId: "8170895",
     formId: "de61c417-f176-4c76-af10-c59923cdfd79",
