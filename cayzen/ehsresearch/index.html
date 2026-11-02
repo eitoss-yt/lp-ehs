@@ -147,6 +147,9 @@ header{position:fixed;top:0;left:0;right:0;background:rgba(255,255,255,.94);back
 .sp-sub{right:2%;bottom:0;width:42%}
 .sp-sub img{padding:2px 10px 8px}
 .sp-doc{left:4%;top:0;width:34%}
+.sp-ill{position:absolute;display:block}
+.sp-ill-main{left:0;top:4%;width:68%}
+.sp-ill-sub{right:0;bottom:0;width:52%}
 .sp-chip{position:absolute;display:inline-flex;align-items:center;gap:6px;background:#fff;color:#9a5b00;font-size:13.5px;font-weight:700;padding:7px 16px;border-radius:999px;box-shadow:0 10px 24px rgba(16,104,120,.16)}
 .sp-chip b{color:#e0640a;font-family:"Poppins","Noto Sans JP",sans-serif;font-size:16px}
 .scene-body .n{display:block;font-family:"Poppins",sans-serif;font-size:14px;font-weight:500;color:var(--teal-300);letter-spacing:.16em;margin-bottom:8px}
@@ -584,8 +587,8 @@ footer .copy{font-size:12.5px;color:rgba(255,255,255,.55);text-align:center;marg
       <div class="scene-row">
         <div class="scene-visual">
           <div class="sp-visual">
-            <div class="sp-card sp-main"><span class="cap">化学物質台帳</span><img src="assets/scene-ledger.svg" alt=""></div>
-            <div class="sp-card sp-sub"><span class="cap">SDS・ラベル作成</span><img src="assets/scene-chemical.svg" alt=""></div>
+            <img class="sp-ill sp-ill-main" src="assets/scene-ledger.svg" alt="">
+            <img class="sp-ill sp-ill-sub" src="assets/scene-chemical.svg" alt="">
             <span class="sp-chip" style="left:44%;top:6%">RA対象物 <b>約2,900</b>物質</span>
           </div>
         </div>
@@ -604,7 +607,7 @@ footer .copy{font-size:12.5px;color:rgba(255,255,255,.55);text-align:center;marg
         <div class="scene-visual">
           <div class="sp-visual">
             <div class="sp-card sp-doc"><img src="../../assets/lp-ppwr/p1.jpg" alt="資料「PPWR規制 対応まとめ」の表紙"></div>
-            <div class="sp-card sp-sub" style="width:48%;right:2%"><span class="cap">EU包装・包装廃棄物規則</span><img src="assets/scene-ppwr.svg" alt=""></div>
+            <img class="sp-ill sp-ill-sub" style="width:62%;right:-2%" src="assets/scene-ppwr.svg" alt="">
             <span class="sp-chip" style="left:44%;top:8%"><b>2026年8月</b>適用開始</span>
           </div>
         </div>
