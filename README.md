@@ -11,6 +11,7 @@
 - `cayzen/knowledgemanagement/assets/` — 同LP用の画像（プロダクト画面・導入企業ロゴ）
 - `cayzen/iso/index.html` — Cayzen ISOサポートLP（公開URL: `/cayzen/iso/`）
 - `cayzen/chemicalmanagement/index.html` — Cayzen EHS Research の活用シーン「化学物質」LP（化学物質管理・リスクアセスメント・SDS作成の代行。公開URL: `/cayzen/chemicalmanagement/`）
+- `cayzen/euregulation/index.html` — Cayzen EHS Research の活用シーン「EU（欧州）規制」LP（REACH・PFAS・ESPR・電池規則・EPR・PPWRなどEU規制の調査。公開URL: `/cayzen/euregulation/`）
 - `assets/` — TOPページ用の画像（導入企業ロゴ・サービスカードのサムネイル）
 
 導入企業ロゴを追加する際は、各ページの `assets/` に画像を置いて `.logo-track` に `<li>` を追記してください。

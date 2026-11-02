@@ -131,6 +131,14 @@ header{position:fixed;top:0;left:0;right:0;background:rgba(255,255,255,.94);back
 .sv-card .link{margin-top:18px;font-weight:500;color:var(--teal-700)}
 .sv-card .link::after{content:" →"}
 
+/* scene */
+.scene{background:#fff}
+.sv-card .thumb-shot{display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#f2f8fd,#e8f2f6);padding:0 16px}
+.sv-card .thumb-shot img{width:100%;height:auto;border-radius:8px;box-shadow:0 10px 24px rgba(16,104,120,.16)}
+.sv-card .thumb-photo{position:relative}
+.sv-card .thumb-photo .ov{position:absolute;right:12px;bottom:12px;width:66%;height:auto;border-radius:8px;box-shadow:0 10px 24px rgba(16,104,120,.22)}
+.scene-note{text-align:right;font-size:12.5px;color:var(--gray);margin-top:16px}
+
 /* news */
 .news{background:#fff}
 .news-list{max-width:820px;margin:0 auto;list-style:none}
@@ -307,7 +315,7 @@ footer .copy{font-size:12.5px;color:rgba(255,255,255,.55);text-align:center;marg
           <div class="gh-dd-menu"><div class="in">
           <p class="gh-dd-head">Cayzen EHS Research の活用シーン</p>
           <a href="cayzen/chemicalmanagement/">化学物質</a>
-          <a href="lp/ppwr/">欧州規制：PPWR</a>
+          <a href="cayzen/euregulation/">EU（欧州）規制</a>
           </div></div>
         </div>
         <a href="seminar/">セミナー</a>
@@ -315,7 +323,6 @@ footer .copy{font-size:12.5px;color:rgba(255,255,255,.55);text-align:center;marg
         <a href="news/">ニュース</a>
         <a href="resources/">お役立ち資料</a>
         <a href="#company">会社概要</a>
-        <a href="recruit/">採用情報</a>
       </nav>
     </div>
     <div class="gh-right">
@@ -426,6 +433,45 @@ footer .copy{font-size:12.5px;color:rgba(255,255,255,.55);text-align:center;marg
     </div>
   </section>
 
+  <!-- SCENE -->
+  <section class="scene wm" id="scene" data-wm="SCENE">
+    <div class="container">
+      <p class="section-label">Scene</p>
+      <h2 class="section-title">活用シーン</h2>
+      <p class="section-lead">Cayzen EHS Research の法令調査の知見を、テーマごとの実務支援にも活かしています。</p>
+      <div class="sv-grid">
+        <a class="sv-card" href="cayzen/chemicalmanagement/">
+          <div class="thumb thumb-shot"><img src="assets/scene/scene-chem-ledger.webp" alt="化学物質台帳の画面イメージ"></div>
+          <div class="body">
+            <span class="tag">活用シーン</span>
+            <h3>化学物質</h3>
+            <p>化学物質台帳の整備から、リスクアセスメント、SDS・ラベルの作成までを代行。毎年広がる化学物質規制に、実務ごと対応します。</p>
+            <span class="link">活用シーンを見る</span>
+          </div>
+        </a>
+        <a class="sv-card" href="cayzen/euregulation/">
+          <div class="thumb thumb-photo"><img class="ph" src="assets/lp-ppwr/photo.jpg" alt="製品と包装材の写真"><img class="ov" src="assets/scene/scene-eu-judge.webp" alt="EU向け製品の適用規制を判定する画面イメージ"></div>
+          <div class="body">
+            <span class="tag">活用シーン</span>
+            <h3>EU（欧州）規制</h3>
+            <p>REACH、PFAS制限、ESPR、電池規則、PPWRなど、EUの製品規制について、自社に関係する義務と期限を一次情報から整理します。</p>
+            <span class="link">活用シーンを見る</span>
+          </div>
+        </a>
+        <a class="sv-card" href="lp/ppwr/">
+          <div class="thumb"><img src="assets/doc-ppwr.jpg" alt="資料「EU PPWR 対応 要点まとめ」"></div>
+          <div class="body">
+            <span class="tag">活用シーン</span>
+            <h3>EU（欧州）規制：PPWR</h3>
+            <p>2026年8月に適用が始まったEU包装・包装廃棄物規則。役割ごとの義務と期限、部門別チェックリストを資料にまとめています。</p>
+            <span class="link">お役立ち資料を見る</span>
+          </div>
+        </a>
+      </div>
+      <p class="scene-note">※ 画面はイメージです</p>
+    </div>
+  </section>
+
   <!-- NEWS -->
   <section class="news wm" id="news" data-wm="NEWS">
     <div class="container">
@@ -507,7 +553,7 @@ footer .copy{font-size:12.5px;color:rgba(255,255,255,.55);text-align:center;marg
         <a href="cayzen/iso/">Cayzen ISO サポート</a>
         <p class="footer-head footer-sub">活用シーン</p>
         <a href="cayzen/chemicalmanagement/">化学物質</a>
-        <a href="lp/ppwr/">欧州規制：PPWR</a>
+        <a href="cayzen/euregulation/">EU（欧州）規制</a>
       </nav>
       <nav class="footer-col">
         <p class="footer-head">コンテンツ</p>
