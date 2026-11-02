@@ -332,7 +332,6 @@ function chrome(depth, bodyHtml, { title, description, canonicalPath, ogType = '
         <a href="${rel}news/">ニュース</a>
         <a href="${rel}resources/">お役立ち資料</a>
         <a href="${rel}#company">会社概要</a>
-        <a href="${rel}recruit/">採用情報</a>
       </nav>
     </div>
     <div class="gh-right">
