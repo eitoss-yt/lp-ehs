@@ -64,6 +64,8 @@ section{padding:80px 0}
 .btn:hover{transform:translateY(-2px);box-shadow:0 8px 20px rgba(16,104,120,.3)}
 .btn-primary{background:linear-gradient(135deg,var(--teal-500),var(--teal-700));color:#fff}
 .btn-ghost{background:#fff;color:var(--teal-700);box-shadow:0 4px 14px rgba(16,104,120,.18)}
+.btn-blue{background:linear-gradient(90deg,#54a4ec,#2e7fd6);color:#fff;box-shadow:0 4px 14px rgba(46,127,214,.3)}
+.btn-blue:hover{box-shadow:0 8px 20px rgba(46,127,214,.36)}
 .btn-sm{padding:10px 22px;font-size:15.5px}
 
 /* brand */
@@ -193,8 +195,8 @@ header{position:fixed;top:0;left:0;right:0;background:rgba(255,255,255,.94);back
 .feat-label{font-family:"Poppins","Noto Sans JP",sans-serif;font-size:12px;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:var(--teal-500);opacity:.8}
 .feat-card h3{font-size:18.5px;font-weight:500;margin:2px 0 4px;color:var(--ink)}
 .feat-card p{font-size:13.5px;color:var(--gray);line-height:1.7}
-.feat-card .more{display:inline-block;margin-top:8px;font-size:14px;font-weight:500;color:var(--teal-700)}
-.feat-card .more::after{content:" →"}
+.feat-card .more{display:inline-flex;align-self:flex-start;margin-top:10px;font-size:13.5px;font-weight:700;color:#fff;background:linear-gradient(90deg,#54a4ec,#2e7fd6);padding:6px 16px;border-radius:999px;box-shadow:0 4px 12px rgba(46,127,214,.25)}
+.feat-card .more::after{content:"→";margin-left:6px}
 @media(max-width:760px){.feat-grid{grid-template-columns:1fr}.feat-card{grid-template-columns:36% 1fr;min-height:150px}.feat-body{padding:16px 18px}}
 
 /* mission / vision（地続きの1ブロック） */
@@ -479,7 +481,7 @@ footer .copy{font-size:12.5px;color:rgba(255,255,255,.55);text-align:center;marg
         <li><span class="date">2026.06.10</span><span class="body"><a href="news/e3g8fmzcxx/">労働安全衛生展（福岡）に出展します。</a></span></li>
 <!--NEWS_LIST_END-->
       </ul>
-      <p style="text-align:center;margin-top:30px"><a class="btn btn-ghost" href="news/">ニュース一覧を見る</a></p>
+      <p style="text-align:center;margin-top:30px"><a class="btn btn-blue" href="news/">ニュース一覧を見る</a></p>
       <div class="feat-grid">
         <a class="feat-card" href="document/">
           <div class="ph">
@@ -498,7 +500,7 @@ footer .copy{font-size:12.5px;color:rgba(255,255,255,.55);text-align:center;marg
           </div>
         </a>
         <a class="feat-card" href="seminar/">
-          <div class="ph"><img class="bg" src="assets/home/seminar.webp" alt="セミナーで画面を使って説明している様子" loading="lazy"></div>
+          <div class="ph"><img class="bg" style="object-position:12% 60%" src="assets/home/seminar.webp" alt="オンラインセミナーの画面イメージ" loading="lazy"></div>
           <div class="feat-body">
             <p class="feat-label">Seminar</p>
             <h3>イベント・セミナー</h3>
