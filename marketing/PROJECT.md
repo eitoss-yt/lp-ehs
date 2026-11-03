@@ -117,6 +117,8 @@ Spirの面談予約はGA4では計測できないため、Spir側の予約件数
 
 新しいものを上に追記する。
 
+- 2026-11-03 決定：ユースケース（活用シーン）の導線は、サービス×ユースケースの整理と各ページが揃うまで一旦なし。メニューの「サービス」を Cayzen EHS Research／Cayzen EHS Research｜化学物質管理／Cayzen Knowledge Management／Cayzen ISO Support の並びに変更。EU（欧州）規制LPはページのみ残し導線なし（Web/LP）
+
 - 2026-11-03 PR #116 をマージし本番反映。トップページの head に Facebook ドメイン認証の metaタグ（facebook-domain-verification）を追加（Web/LP）
 
 - 2026-11-02 PR #115 をマージし本番反映。活用シーン「EU（欧州）規制」LP https://eitoss.com/cayzen/euregulation/ を公開。TOP（Cayzenシリーズの下）とEHS Researchページに活用シーンを追加、全ページのヘッダーから採用情報を削除、名称を「EU（欧州）規制」に統一（Web/LP）
