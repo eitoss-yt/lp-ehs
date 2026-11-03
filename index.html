@@ -177,6 +177,25 @@ header{position:fixed;top:0;left:0;right:0;background:rgba(255,255,255,.94);back
 @media(max-width:760px){.res-grid{grid-template-columns:1fr}}
 
 
+/* feature cards (download / seminar) */
+.feat-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;max-width:1000px;margin:56px auto 0}
+.feat-card{position:relative;display:flex;align-items:flex-end;min-height:320px;border-radius:18px;overflow:hidden;color:#fff;background:var(--teal-900);box-shadow:0 14px 34px rgba(16,104,120,.18);isolation:isolate}
+.feat-card .bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2;transition:transform .6s ease}
+.feat-card::before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(6,34,42,.08) 0%,rgba(6,34,42,.35) 40%,rgba(6,34,42,.88) 100%)}
+.feat-card:hover .bg{transform:scale(1.05)}
+.feat-card .docs{position:absolute;right:20px;top:18px;width:42%;height:52%;z-index:-1}
+.feat-card .docs img{position:absolute;width:74%;border-radius:6px;box-shadow:0 12px 28px rgba(0,0,0,.35)}
+.feat-card .docs .d1{right:0;top:0;transform:rotate(7deg)}
+.feat-card .docs .d2{right:10%;top:10%;transform:rotate(1deg)}
+.feat-card .docs .d3{right:22%;top:22%;transform:rotate(-5deg)}
+.feat-body{padding:26px 30px 28px}
+.feat-label{font-family:"Poppins","Noto Sans JP",sans-serif;font-size:13px;font-weight:500;letter-spacing:.18em;text-transform:uppercase;opacity:.8}
+.feat-card h3{font-size:24px;font-weight:500;margin:2px 0 6px;color:#fff}
+.feat-card p{font-size:14.5px;color:rgba(255,255,255,.88)}
+.feat-card .more{display:inline-block;margin-top:12px;font-size:15px;font-weight:500;color:#fff}
+.feat-card .more::after{content:" →"}
+@media(max-width:760px){.feat-grid{grid-template-columns:1fr}.feat-card{min-height:330px}.feat-card .docs{width:46%;height:40%;top:14px;right:14px}.feat-body{padding:22px 22px 24px}}
+
 /* mission / vision（地続きの1ブロック） */
 .mv{position:relative;overflow:hidden;padding:120px 0;text-align:center;background:linear-gradient(180deg,rgba(8,28,40,.55),rgba(8,28,40,.66)),url(assets/hero-bg.jpg) center/cover no-repeat}
 .mv .mv-scrim{position:relative}
@@ -460,17 +479,29 @@ footer .copy{font-size:12.5px;color:rgba(255,255,255,.55);text-align:center;marg
 <!--NEWS_LIST_END-->
       </ul>
       <p style="text-align:center;margin-top:30px"><a class="btn btn-ghost" href="news/">ニュース一覧を見る</a></p>
-      <div class="res-grid" style="margin-top:56px">
-        <a class="res-card res-dl" href="document/">
-          <p class="res-label">Download</p>
-          <h3>資料ダウンロード</h3>
-          <span class="more">資料一覧を見る</span>
+      <div class="feat-grid">
+        <a class="feat-card" href="document/">
+          <img class="bg" src="assets/home/download.webp" alt="" loading="lazy">
+          <div class="docs" aria-hidden="true">
+            <img class="d1" src="assets/doc-ppwr.jpg" alt="" loading="lazy">
+            <img class="d2" src="assets/doc-chemical-management.jpg" alt="" loading="lazy">
+            <img class="d3" src="assets/doc-ehs.jpg" alt="" loading="lazy">
+          </div>
+          <div class="feat-body">
+            <p class="feat-label">Download</p>
+            <h3>資料ダウンロード</h3>
+            <p>サービス紹介や法改正の解説資料を、無料でダウンロードいただけます。</p>
+            <span class="more">資料一覧を見る</span>
+          </div>
         </a>
-        <a class="res-card" href="seminar/">
-          <p class="res-label">Seminar</p>
-          <h3>イベント・セミナー</h3>
-          <p>EHS法令対応・ISO・現場のデジタル活用をテーマにセミナーを開催しています。</p>
-          <span class="more">セミナー一覧を見る</span>
+        <a class="feat-card" href="seminar/">
+          <img class="bg" src="assets/home/seminar.webp" alt="セミナーで画面を使って説明している様子" loading="lazy">
+          <div class="feat-body">
+            <p class="feat-label">Seminar</p>
+            <h3>イベント・セミナー</h3>
+            <p>EHS法令対応・ISO・現場のデジタル活用をテーマにセミナーを開催しています。</p>
+            <span class="more">セミナー一覧を見る</span>
+          </div>
         </a>
       </div>
     </div>
