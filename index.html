@@ -64,6 +64,8 @@ section{padding:80px 0}
 .btn:hover{transform:translateY(-2px);box-shadow:0 8px 20px rgba(16,104,120,.3)}
 .btn-primary{background:linear-gradient(135deg,var(--teal-500),var(--teal-700));color:#fff}
 .btn-ghost{background:#fff;color:var(--teal-700);box-shadow:0 4px 14px rgba(16,104,120,.18)}
+.btn-blue{background:linear-gradient(90deg,#54a4ec,#2e7fd6);color:#fff;box-shadow:0 4px 14px rgba(46,127,214,.3)}
+.btn-blue:hover{box-shadow:0 8px 20px rgba(46,127,214,.36)}
 .btn-sm{padding:10px 22px;font-size:15.5px}
 
 /* brand */
@@ -176,6 +178,24 @@ header{position:fixed;top:0;left:0;right:0;background:rgba(255,255,255,.94);back
 .res-card.res-dl .more{color:#fff}
 @media(max-width:760px){.res-grid{grid-template-columns:1fr}}
 
+
+/* feature cards (download / seminar) */
+.feat-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;max-width:960px;margin:56px auto 0}
+.feat-card{display:grid;grid-template-columns:32% 1fr;align-items:stretch;min-height:170px;border-radius:14px;overflow:hidden;background:#fff;color:var(--ink);box-shadow:0 8px 22px rgba(16,104,120,.10);transition:transform .15s ease,box-shadow .15s ease}
+.feat-card:hover{transform:translateY(-3px);box-shadow:0 14px 30px rgba(46,127,214,.22)}
+.feat-card .ph{position:relative;overflow:hidden;background:var(--teal-050)}
+.feat-card .ph .bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:saturate(.75)}
+.feat-card .ph::after{content:"";position:absolute;inset:0;background:rgba(16,104,120,.10)}
+.feat-card .ph.ic{display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#eef6fd,#e2eef9)}
+.feat-card .ph.ic::after{display:none}
+.feat-card .ph.ic svg{width:64px;height:64px;fill:none;stroke:#2e7fd6;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+.feat-body{padding:20px 22px;display:flex;flex-direction:column;justify-content:center;background:linear-gradient(135deg,#54a4ec,#2e7fd6);color:#fff}
+.feat-label{font-family:"Poppins","Noto Sans JP",sans-serif;font-size:12px;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.8)}
+.feat-card h3{font-size:18.5px;font-weight:500;margin:2px 0 4px;color:#fff}
+.feat-card p{font-size:13.5px;color:rgba(255,255,255,.9);line-height:1.7}
+.feat-card .more{display:inline-block;margin-top:10px;font-size:14px;font-weight:700;color:#fff}
+.feat-card .more::after{content:"→";margin-left:6px}
+@media(max-width:760px){.feat-grid{grid-template-columns:1fr}.feat-card{grid-template-columns:30% 1fr;min-height:150px}.feat-card .ph.ic svg{width:48px;height:48px}.feat-body{padding:16px 18px}}
 
 /* mission / vision（地続きの1ブロック） */
 .mv{position:relative;overflow:hidden;padding:120px 0;text-align:center;background:linear-gradient(180deg,rgba(8,28,40,.55),rgba(8,28,40,.66)),url(assets/hero-bg.jpg) center/cover no-repeat}
@@ -459,18 +479,25 @@ footer .copy{font-size:12.5px;color:rgba(255,255,255,.55);text-align:center;marg
         <li><span class="date">2026.06.10</span><span class="body"><a href="news/e3g8fmzcxx/">労働安全衛生展（福岡）に出展します。</a></span></li>
 <!--NEWS_LIST_END-->
       </ul>
-      <p style="text-align:center;margin-top:30px"><a class="btn btn-ghost" href="news/">ニュース一覧を見る</a></p>
-      <div class="res-grid" style="margin-top:56px">
-        <a class="res-card res-dl" href="document/">
-          <p class="res-label">Download</p>
-          <h3>資料ダウンロード</h3>
-          <span class="more">資料一覧を見る</span>
+      <p style="text-align:center;margin-top:30px"><a class="btn btn-blue" href="news/">ニュース一覧を見る</a></p>
+      <div class="feat-grid">
+        <a class="feat-card" href="document/">
+          <div class="ph ic" aria-hidden="true"><svg viewBox="0 0 48 48"><path d="M12 6h17l9 9v27H12z"/><path d="M29 6v9h9"/><path d="M25 21v13M19.5 28.5L25 34l5.5-5.5"/><path d="M18 38h14"/></svg></div>
+          <div class="feat-body">
+            <p class="feat-label">Download</p>
+            <h3>資料ダウンロード</h3>
+            <p>サービス紹介や法改正の解説資料を、無料でダウンロードいただけます。</p>
+            <span class="more">資料一覧を見る</span>
+          </div>
         </a>
-        <a class="res-card" href="seminar/">
-          <p class="res-label">Seminar</p>
-          <h3>イベント・セミナー</h3>
-          <p>EHS法令対応・ISO・現場のデジタル活用をテーマにセミナーを開催しています。</p>
-          <span class="more">セミナー一覧を見る</span>
+        <a class="feat-card" href="seminar/">
+          <div class="ph ic" aria-hidden="true"><svg viewBox="0 0 48 48"><rect x="5" y="9" width="38" height="25" rx="3"/><path d="M20 16.5v10l8.5-5z"/><path d="M17 41h14M24 34v7"/></svg></div>
+          <div class="feat-body">
+            <p class="feat-label">Seminar</p>
+            <h3>イベント・セミナー</h3>
+            <p>EHS法令対応・ISO・現場のデジタル活用をテーマにセミナーを開催しています。</p>
+            <span class="more">セミナー一覧を見る</span>
+          </div>
         </a>
       </div>
     </div>
