@@ -277,12 +277,30 @@ html.hero-go .hd6{transition-delay:.68s}
 .cta-tab{appearance:none;border:0;background:#fff;color:var(--teal-700);font-family:inherit;font-size:16.5px;font-weight:500;padding:14px 30px;border-radius:999px;cursor:pointer;transition:all .15s ease;box-shadow:0 4px 14px rgba(16,104,120,.14)}
 .cta-tab:hover{background:var(--teal-050)}
 .cta-tab.active{background:var(--teal-700);color:#fff}
-.cta-panels{max-width:720px;margin:0 auto}
+.cta-panels{max-width:980px;margin:0 auto}
 .cta-panel{display:none;background:#fff;border-radius:16px;box-shadow:0 12px 32px rgba(16,104,120,.12);padding:38px 36px}
 .cta-panel.active{display:block}
 .cta-panel h3{font-size:22.5px;font-weight:500;text-align:center;margin-bottom:8px}
 .cta-panel .desc{font-size:15.5px;color:var(--gray);text-align:center;margin-bottom:26px}
 .hs-form-frame{min-height:320px}
+.dl-grid{display:grid;grid-template-columns:1fr 1.1fr;gap:40px;align-items:start}
+.dl-grid > *{min-width:0}
+.dl-info img{border-radius:10px;box-shadow:0 10px 26px rgba(16,104,120,.18);margin-bottom:20px}
+.dl-info h3{text-align:left;font-size:17.5px;margin-bottom:6px}
+.dl-info p{font-size:15px;color:var(--gray);margin-bottom:12px}
+.dl-info ul{list-style:none;display:flex;flex-direction:column;gap:6px}
+.dl-info li{position:relative;background:var(--teal-050);border-radius:8px;padding:7px 12px 7px 34px;font-size:14.5px}
+.dl-info li::before{content:"";position:absolute;left:12px;top:14px;width:14px;height:14px;border-radius:50%;background:var(--teal-500)}
+.dl-info li::after{content:"";position:absolute;left:16.5px;top:16.5px;width:5px;height:8px;border-right:2px solid #fff;border-bottom:2px solid #fff;transform:rotate(45deg)}
+.dl-form h3{font-size:20px}
+.dl-form .desc{margin-bottom:18px}
+.ct-info{background:var(--teal-050);border-radius:12px;padding:26px 24px}
+.dl-info.ct-info li{background:#fff}
+.ct-info .ct-flow-head{font-size:15px;font-weight:500;color:var(--teal-700);margin:22px 0 10px}
+.ct-steps{list-style:none;display:flex;flex-direction:column;gap:8px;counter-reset:ct}
+.ct-info .ct-steps li{counter-increment:ct;padding:9px 12px 9px 46px}
+.ct-info .ct-steps li::before{content:counter(ct);top:50%;left:12px;width:24px;height:24px;margin-top:-12px;background:var(--teal-700);color:#fff;font-size:13px;font-weight:700;display:flex;align-items:center;justify-content:center;font-family:"Poppins","Noto Sans JP",sans-serif}
+.ct-info .ct-steps li::after{display:none}
 
 
 /* responsive */
@@ -308,6 +326,9 @@ html.hero-go .hd6{transition-delay:.68s}
   .header-nav .btn-sm{padding:9px 14px;font-size:14px;white-space:nowrap}
   .header-logo img{height:30px}
   .cta-panel{padding:28px 20px}
+  .dl-grid{grid-template-columns:1fr;gap:28px}
+  .dl-info img{width:100%;max-width:420px;margin:0 auto 18px}
+  .ct-info{padding:22px 18px;order:2}
   .output-block h3{font-size:22.5px}
 }
 
@@ -823,15 +844,48 @@ footer .copy{font-size:12.5px;color:rgba(255,255,255,.55);text-align:center;marg
       </div>
       <div class="cta-panels">
         <div class="cta-panel active" id="panel-download" role="tabpanel">
-          <h3>サービス資料ダウンロード</h3>
-          <p class="desc">Cayzen EHS Researchのサービス資料をダウンロードいただけます。フォーム送信後、資料をご案内します。</p>
-          <div class="hs-form-frame" id="hs-form-download"></div>
-        </div>
+          <div class="dl-grid">
+            <div class="dl-info">
+              <img src="../../assets/doc-ehs.jpg" alt="Cayzen EHS Researchサービス資料の表紙" loading="lazy">
+              <h3>Cayzen EHS Research サービス資料</h3>
+              <p>EHS法令や輸出規制の調査・届出支援を、AIと専門アシスタントが代行するリモートアシスタントサービスをご紹介します。こんな方におすすめです。</p>
+              <ul>
+                <li>法令調査に時間がかかっている方</li>
+                <li>法改正の確認が担当者任せになっている方</li>
+                <li>調査の負荷が月ごとに変わり、稼働を読めない方</li>
+              </ul>
+            </div>
+            <div class="dl-form">
+              <h3>資料をダウンロードする（無料）</h3>
+              <p class="desc">フォーム送信後、資料をご案内します。</p>
+              <div class="hs-form-frame" id="hs-form-download"></div>
+            </div>
+          </div>
         </div>
         <div class="cta-panel" id="panel-contact" role="tabpanel">
-          <h3>お問い合わせ</h3>
-          <p class="desc">サービス内容・お見積り・個別のご相談など、お気軽にお問い合わせください。</p>
-          <div class="hs-form-frame" id="hs-form-contact"></div>
+          <div class="dl-grid">
+            <div class="dl-info ct-info">
+              <h3>こんなご相談を承ります</h3>
+              <p>検討のどの段階でもかまいません。お気軽にご相談ください。</p>
+              <ul>
+                <li>自社に関係する法令を洗い出したい</li>
+                <li>法改正の確認を定期的に任せたい</li>
+                <li>設備新設・新製品の法令や届出を調べたい</li>
+                <li>費用感や進め方を知りたい</li>
+              </ul>
+              <p class="ct-flow-head">ご相談の流れ</p>
+              <ol class="ct-steps">
+                <li>フォームを送信</li>
+                <li>担当者からご連絡</li>
+                <li>ヒアリングのうえ、ご提案・お見積り</li>
+              </ol>
+            </div>
+            <div class="dl-form">
+              <h3>お問い合わせ</h3>
+              <p class="desc">サービス内容・お見積り・個別のご相談など、お気軽にお問い合わせください。</p>
+              <div class="hs-form-frame" id="hs-form-contact"></div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
