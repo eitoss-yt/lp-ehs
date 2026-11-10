@@ -297,12 +297,18 @@ section{padding:80px 0}
 .cta-tab:hover{background:var(--teal-050)}
 .cta-tab.active{background:var(--teal-700);color:#fff}
 .cta-panels{max-width:980px;margin:0 auto}
-#panel-contact{max-width:720px;margin:0 auto}
 .cta-panel{display:none;background:#fff;border-radius:16px;box-shadow:0 12px 32px rgba(16,104,120,.12);padding:38px 36px}
 .cta-panel.active{display:block}
 .cta-panel h3{font-size:22.5px;font-weight:500;text-align:center;margin-bottom:8px}
 .cta-panel .desc{font-size:15.5px;color:var(--gray);text-align:center;margin-bottom:26px}
 .hs-form-frame{min-height:320px}
+.ct-info{background:var(--teal-050);border-radius:12px;padding:26px 24px}
+.dl-info.ct-info li{background:#fff}
+.ct-info .ct-flow-head{font-size:15px;font-weight:500;color:var(--teal-700);margin:22px 0 10px}
+.ct-steps{list-style:none;display:flex;flex-direction:column;gap:8px;counter-reset:ct}
+.ct-info .ct-steps li{counter-increment:ct;padding:9px 12px 9px 46px}
+.ct-info .ct-steps li::before{content:counter(ct);top:50%;left:12px;width:24px;height:24px;margin-top:-12px;background:var(--teal-700);color:#fff;font-size:13px;font-weight:700;display:flex;align-items:center;justify-content:center;font-family:"Poppins","Noto Sans JP",sans-serif}
+.ct-info .ct-steps li::after{display:none}
 .dl-grid{display:grid;grid-template-columns:1fr 1.1fr;gap:40px;align-items:start}
 .dl-grid > *{min-width:0}
 .dl-info img{border-radius:10px;box-shadow:0 10px 26px rgba(16,104,120,.18);margin-bottom:20px}
@@ -351,6 +357,7 @@ section{padding:80px 0}
   .dl-grid{grid-template-columns:1fr;gap:28px}
   .res-card{grid-template-columns:1fr;gap:20px;padding:22px}
   .dl-info img{width:100%;max-width:420px;margin:0 auto 18px}
+  .ct-info{padding:22px 18px;order:2}
   .logo-track li{margin-right:48px}
   .trend-stat .after{font-size:46px}
 }
@@ -919,9 +926,29 @@ footer .copy{font-size:12.5px;color:rgba(255,255,255,.55);text-align:center;marg
       <p class="section-lead">対象規制の洗い出しから、改正の確認、日々の疑問まで、検討のどの段階でもご相談を承ります。</p>
       <div class="cta-panels">
         <div class="cta-panel active" id="panel-contact">
-          <h3>無料相談・お問い合わせ</h3>
-          <p class="desc">対象の製品や販売国をお伺いしたうえで、進め方とお見積りをご提案いたします。</p>
-          <div class="hs-form-frame" id="hs-form-contact"></div>
+          <div class="dl-grid">
+            <div class="dl-info ct-info">
+              <h3>こんなご相談を承ります</h3>
+              <p>検討のどの段階でもかまいません。お気軽にご相談ください。</p>
+              <ul>
+                <li>自社製品にかかるEU規制を洗い出したい</li>
+                <li>規制の改正を定期的に確認したい</li>
+                <li>個別の規制について相談したい</li>
+                <li>費用感や進め方を知りたい</li>
+              </ul>
+              <p class="ct-flow-head">ご相談の流れ</p>
+              <ol class="ct-steps">
+                <li>フォームを送信</li>
+                <li>担当者からご連絡</li>
+                <li>ヒアリングのうえ、ご提案・お見積り</li>
+              </ol>
+            </div>
+            <div class="dl-form">
+              <h3>無料相談・お問い合わせ</h3>
+              <p class="desc">対象の製品や販売国をお伺いしたうえで、進め方とお見積りをご提案いたします。</p>
+              <div class="hs-form-frame" id="hs-form-contact"></div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
