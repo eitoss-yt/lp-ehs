@@ -117,7 +117,7 @@ Spirの面談予約はGA4では計測できないため、Spir側の予約件数
 
 新しいものを上に追記する。
 
-- 2026-11-11 PPWR適合宣言書コラムのアイキャッチに、資料（作成ガイドの表紙とWordテンプレート）のイメージを追加（Web/LP）
+- 2026-11-11 PR #135 をマージし本番反映。PPWR適合宣言書コラムのアイキャッチを、資料が主役のデザインに作り直した（コラム用の写真背景は使わず、作成ガイドの表紙・Wordテンプレート・中のページを大きく配置し、タイトルを3段で表示）（Web/LP）
 - 2026-11-11 microCMSに残っていたPPWR適合宣言書コラムの下書き（ID 202611-ppwr-declaration-of-conformity）を削除。記事はリポジトリ内データ（data/column-local.json）で管理しており、公開中の記事には影響なし（Web/LP）
 - 2026-11-11 PR #134 をマージし本番反映。サービス一覧に「Cayzen EHS Research｜海外法規制」を追加（全ページのヘッダーのサービスメニュー・フッター、コラム生成スクリプト、TOPのCayzenシリーズのカードとサムネイル。TOPのカードは5枚を3枚＋2枚の中央揃えに変更）（Web/LP）
 - 2026-11-11 PR #132 をマージし本番反映。コラム https://eitoss.com/column/202611-ppwr-declaration-of-conformity/ と資料DLページ https://eitoss.com/document/ppwr-declaration-of-conformity/ を公開（HubSpotフォーム c4c81f83-8b66-48b3-a31b-b749afecf7eb、お礼メール「お礼メール_資料送付_PPWR適合宣言書作成ガイド」）。このフォームは送信後にその場でお礼メッセージを表示する設定で、ページ上にPDF・Wordのダウンロードボタンも出る（他の資料フォームのようにサンクスページへは移動しない。ユーザー判断）。残り：Search Consoleでインデックス登録をリクエスト。microCMSにある同じIDの下書きは公開しないこと（Web/LP）
