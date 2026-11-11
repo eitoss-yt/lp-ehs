@@ -17,7 +17,7 @@ export default function ServiceBand() {
             <div className="svc-c" key={k}><small>{k}</small><strong>{t}</strong><p>{d}</p></div>
           ))}
         </div>
-        <p style={{ marginTop: 24 }}><a className="btn btn-primary" href={SITE.serviceUrl}>サービス詳細を見る</a></p>
+        <p className="actions"><a className="btn btn-primary" href={SITE.serviceUrl}>サービス詳細を見る</a></p>
       </div>
     </section>
   );

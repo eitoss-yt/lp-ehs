@@ -10,12 +10,12 @@ export function ArticleList({ items }: { items: Article[] }) {
       {items.map((a) => (
         <li className="item" key={a.id}>
           <Link className="row" href={`/articles/${a.id}`}>
-            <time dateTime={a.date}>{fmtDate(a.date)}</time>
-            <div>
+            <div className="meta">
+              <time dateTime={a.date}>{fmtDate(a.date)}</time>
               <ArticleTags a={a} />
-              <h3>{a.title}</h3>
-              {a.summary && <p>{a.summary}</p>}
             </div>
+            <h3>{a.title}</h3>
+            {a.summary && <p>{a.summary}</p>}
           </Link>
         </li>
       ))}

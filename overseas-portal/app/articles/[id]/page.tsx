@@ -48,7 +48,7 @@ export default async function ArticlePage({ params }: { params: P }) {
         </div>
       </section>
       <div className="wrap main">
-        <article>
+        <article className="sheet">
           <header className="art-h">
             <ArticleTags a={a} link />
             <h1>{a.title}</h1>
@@ -87,7 +87,7 @@ export default async function ArticlePage({ params }: { params: P }) {
           )}
 
           {a.downloadUrl && (
-            <p style={{ margin: "24px 0" }}><a className="btn btn-accent" href={a.downloadUrl}>資料をダウンロードする（無料）</a></p>
+            <p className="actions"><a className="btn btn-accent" href={a.downloadUrl}>資料をダウンロードする（無料）</a></p>
           )}
           {a.sourceUrl && (
             <p className="src">一次情報：<a href={a.sourceUrl} target="_blank" rel="noopener noreferrer">{a.sourceUrl}</a></p>
@@ -95,7 +95,7 @@ export default async function ArticlePage({ params }: { params: P }) {
 
           {(a.regulations || []).length > 0 && (
             <section className="related">
-              <div className="sec-h"><h2>関連する規制</h2></div>
+              <div className="sec-h"><h2 data-en="REGULATIONS">関連する規制</h2></div>
               <div className="regs">
                 {a.regulations!.map((r) => (
                   <Link key={r.id} href={`/regulations/${r.id}`} className="reg">
@@ -109,7 +109,7 @@ export default async function ArticlePage({ params }: { params: P }) {
           )}
           {related.length > 0 && (
             <section className="related">
-              <div className="sec-h"><h2>関連する記事</h2></div>
+              <div className="sec-h"><h2 data-en="RELATED">関連する記事</h2></div>
               <ArticleList items={related} />
             </section>
           )}

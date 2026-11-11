@@ -19,7 +19,7 @@ export default async function RegulationsPage() {
           <p>主な海外規制の概要・適用スケジュール・求められる対応をまとめています。</p>
         </div>
       </section>
-      <div className="wrap" style={{ padding: "40px var(--gutter) 64px" }}>
+      <div className="wrap page">
         {regions.map((g) => (
           <section className="sec" key={g.code}>
             <div className="sec-h"><h2><span className="code">{g.code}</span>{g.label}</h2></div>

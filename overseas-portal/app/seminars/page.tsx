@@ -26,14 +26,14 @@ export default async function SeminarsPage() {
           <p>海外規制の最新動向と実務対応を、専門スタッフが解説します。</p>
         </div>
       </section>
-      <div className="wrap" style={{ padding: "40px var(--gutter) 64px" }}>
+      <div className="wrap page">
         <section className="sec">
-          <div className="sec-h"><h2>開催予定</h2></div>
+          <div className="sec-h"><h2 data-en="UPCOMING">開催予定</h2></div>
           {up.length ? <div className="cards">{up.map((a) => <Card key={a.id} a={a} open />)}</div> : <p className="empty">現在、受付中のウェビナーはありません。</p>}
         </section>
         {past.length > 0 && (
           <section className="sec">
-            <div className="sec-h"><h2>過去の開催</h2></div>
+            <div className="sec-h"><h2 data-en="ARCHIVE">過去の開催</h2></div>
             <div className="cards">{past.map((a) => <Card key={a.id} a={a} open={false} />)}</div>
           </section>
         )}

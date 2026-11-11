@@ -42,7 +42,7 @@ export default async function RegulationPage({ params }: { params: P }) {
           <div className="crumbs">
             <Link href="/">ホーム</Link> ＞ <Link href="/regulations">規制一覧</Link> ＞ {region?.value}（{region?.label}） ＞ {r.field?.[0]}
           </div>
-          <div className="tags" style={{ marginBottom: 8 }}>
+          <div className="tags">
             <span className="tag">{r.region?.[0]}</span><span className="tag tag-line">{r.field?.[0]}</span><StatusTag value={r.status?.[0]} />
           </div>
           <h1>{r.name}</h1>
@@ -51,7 +51,7 @@ export default async function RegulationPage({ params }: { params: P }) {
         </div>
       </section>
       <div className="wrap main">
-        <div className="prose">
+        <div className="sheet prose">
           {r.overview && (<section id="overview"><h2>概要</h2><p>{r.overview}</p>{r.keyDates && <div dangerouslySetInnerHTML={{ __html: r.keyDates }} />}</section>)}
           {r.requirements && (<section id="requirements"><h2>主な要件</h2><div dangerouslySetInnerHTML={{ __html: r.requirements }} /></section>)}
           {r.obligations && (<section id="obligations"><h2>誰に、何が求められるか</h2><p>同じ製品でも、自社の役割によって求められる義務が変わります。</p><div dangerouslySetInnerHTML={{ __html: r.obligations }} /></section>)}
@@ -59,7 +59,7 @@ export default async function RegulationPage({ params }: { params: P }) {
             <section id="support">
               <h2>当社がご支援できること</h2>
               <div dangerouslySetInnerHTML={{ __html: r.support }} />
-              <p style={{ display: "flex", gap: 10, flexWrap: "wrap" }}>
+              <p className="actions">
                 <a className="btn btn-primary" href={SITE.contactUrl}>{(r.name.match(/（(.+)）/)?.[1] ?? r.name)}対応を相談する</a>
                 {templates[0] && <Link className="btn btn-line" href={`/articles/${templates[0].id}`}>テンプレートをダウンロード</Link>}
               </p>

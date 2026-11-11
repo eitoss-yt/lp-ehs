@@ -45,7 +45,7 @@ export default async function Home() {
       <div className="wrap main">
         <div>
           <section className="sec">
-            <div className="sec-h"><h2>注目の規制</h2><Link href="/regulations">規制一覧 →</Link></div>
+            <div className="sec-h"><h2 data-en="FEATURED">注目の規制</h2><Link href="/regulations">規制一覧 →</Link></div>
             <div className="regs">
               {featured.map((r) => (
                 <Link key={r.id} href={`/regulations/${r.id}`} className="reg">
@@ -58,13 +58,13 @@ export default async function Home() {
           </section>
 
           <section className="sec">
-            <div className="sec-h"><h2>新着情報</h2><Link href="/articles">一覧 →</Link></div>
+            <div className="sec-h"><h2 data-en="NEWS">新着情報</h2><Link href="/articles">一覧 →</Link></div>
             <NewsFilter items={news} />
           </section>
 
           {upcoming.length > 0 && (
             <section className="sec">
-              <div className="sec-h"><h2>ウェビナー・セミナー</h2><Link href="/seminars">すべて見る →</Link></div>
+              <div className="sec-h"><h2 data-en="WEBINAR">ウェビナー・セミナー</h2><Link href="/seminars">すべて見る →</Link></div>
               <div className="cards">
                 {upcoming.map((s) => (
                   <Link key={s.id} href={`/articles/${s.id}`} className="card">
@@ -79,7 +79,7 @@ export default async function Home() {
 
           {watch.length > 0 && (
             <section className="sec">
-              <div className="sec-h"><h2>規制動向ウォッチ</h2><Link href="/articles?type=watch">一覧 →</Link></div>
+              <div className="sec-h"><h2 data-en="WATCH">規制動向ウォッチ</h2><Link href="/articles?type=watch">一覧 →</Link></div>
               <p className="lead">定期配信サービスでお届けしている規制動向から、タイトルの一部をご紹介します。全文と自社への影響度は、ご契約企業さま向けに配信しています。</p>
               <div className="watch">
                 <table>

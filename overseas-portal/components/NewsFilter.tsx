@@ -45,7 +45,7 @@ export default function NewsFilter({ items }: { items: Article[] }) {
       {hit.length === 0 && (
         <p className="empty"><button className="chip" onClick={() => { setType(""); setRegion(""); setField(""); }}>条件をリセット</button></p>
       )}
-      <p style={{ textAlign: "right", marginTop: 12 }}><Link href="/articles">記事一覧をすべて見る →</Link></p>
+      <p className="more"><Link href="/articles">記事一覧をすべて見る →</Link></p>
     </>
   );
 }
