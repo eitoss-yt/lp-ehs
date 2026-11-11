@@ -1,0 +1,140 @@
+[
+  {
+    "id": "ppwr",
+    "name": "包装規則（PPWR）",
+    "nameEn": "Packaging and Packaging Waste Regulation",
+    "officialName": "Regulation (EU) 2025/40",
+    "region": [
+      "EU"
+    ],
+    "field": [
+      "製品・包装"
+    ],
+    "status": [
+      "適用中"
+    ],
+    "statusNote": "適用中 2026.08.12〜",
+    "isFeatured": true,
+    "sortOrder": 1,
+    "overview": "包装・包装廃棄物指令（94/62/EC）に代わる規則です。指令と違い、加盟国の国内法を待たずにEU全域で直接適用されます。包装の設計から上市・回収・リサイクルまで、ライフサイクル全体に要件を設けています。",
+    "keyDates": "<table><tbody><tr><th>正式名称</th><td>Regulation (EU) 2025/40</td></tr><tr><th>公布</th><td>2025年1月22日（EU官報）</td></tr><tr><th>発効</th><td>2025年2月11日</td></tr><tr><th>適用開始</th><td>2026年8月12日（要件ごとに段階的な適用日あり）</td></tr><tr><th>対象</th><td>EU域内で上市されるすべての包装と包装廃棄物</td></tr></tbody></table>",
+    "requirements": "<h3>物質の制限</h3><p>包装中の重金属（鉛・カドミウム・水銀・六価クロム）の合計濃度を制限。食品接触包装へのPFASの使用も、2026年8月12日から濃度基準で制限されます。</p><h3>リサイクル可能性</h3><p>リサイクルを前提とした設計を求め、性能をグレードで評価します（2030年以降、段階的に適用）。</p><h3>再生材の含有</h3><p>プラスチック包装に、再生材の最低含有率を段階的に設けます（2030年以降）。</p><h3>包装の最小化</h3><p>重量・容積を機能に必要な最小限に抑え、過剰な空間を減らします。</p><h3>表示</h3><p>材質と分別方法を示す、EU共通のラベル表示を導入します（実施法令の採択後、段階的に適用）。</p><h3>適合性の証明</h3><p>適合性評価を行い、技術文書を作成し、EU適合宣言書を作成・保管します。</p><h3>拡大生産者責任（EPR）</h3><p>包装を上市する国ごとに、生産者登録と費用負担を求めます。</p>",
+    "obligations": "<table><thead><tr><th>役割</th><th>主な義務</th></tr></thead><tbody><tr><th>製造者</th><td>適合性評価、技術文書とEU適合宣言書の作成、表示</td></tr><tr><th>輸入者</th><td>製造者が義務を果たしていることの確認、連絡先の表示、書類の保管</td></tr><tr><th>流通業者</th><td>表示・書類がそろっていることの確認</td></tr><tr><th>生産者（EPR）</th><td>上市する加盟国ごとの登録と報告</td></tr></tbody></table>",
+    "support": "<ul><li>対象となる包装と、自社の役割の整理</li><li>要件ごとの現状との差分の確認</li><li>適合宣言書・技術文書の作成支援</li><li>下位法令・ガイダンス・改正の定期配信</li></ul>"
+  },
+  {
+    "id": "eudr",
+    "name": "森林破壊防止規則（EUDR）",
+    "nameEn": "EU Deforestation Regulation",
+    "officialName": "Regulation (EU) 2023/1115（改正：Regulation (EU) 2025/2650）",
+    "region": [
+      "EU"
+    ],
+    "field": [
+      "サステナビリティ"
+    ],
+    "status": [
+      "適用予定"
+    ],
+    "statusNote": "適用予定 2026.12.30〜",
+    "isFeatured": true,
+    "sortOrder": 2,
+    "overview": "特定の産品とその派生製品について、森林破壊に関与していないこと（2020年12月31日以降に森林破壊・森林劣化が生じた土地で生産されていないこと）と、生産国の関連法令に適合していることを、デューデリジェンスで確認したうえでEU市場に上市・輸出することを求める規則です。2度の延期を経て、2026年12月30日から大・中規模事業者に適用されます。",
+    "keyDates": "<table><tbody><tr><th>正式名称</th><td>Regulation (EU) 2023/1115</td></tr><tr><th>発効</th><td>2023年6月29日</td></tr><tr><th>適用開始（大・中規模事業者）</th><td>2026年12月30日</td></tr><tr><th>適用開始（零細・小規模事業者）</th><td>2027年6月30日</td></tr><tr><th>対象産品</th><td>牛、カカオ、コーヒー、パーム油、ゴム、大豆、木材と、その派生製品（附属書I）</td></tr></tbody></table>",
+    "requirements": "<h3>森林破壊フリー</h3><p>2020年12月31日以降に森林破壊が生じた土地で生産されていないこと。</p><h3>合法性</h3><p>生産国の土地利用・環境・労働・人権などの関連法令に従って生産されていること。</p><h3>デューデリジェンス</h3><p>情報収集（生産地の位置情報を含む）、リスク評価、リスク軽減の3段階を実施します。</p><h3>デューデリジェンス声明（DDS）</h3><p>上市・輸出の前に、EUの情報システムにDDSを提出します。</p>",
+    "obligations": "<table><thead><tr><th>役割</th><th>主な義務</th></tr></thead><tbody><tr><th>事業者（オペレーター）</th><td>デューデリジェンスの実施とDDSの提出、記録の保管</td></tr><tr><th>取引業者（トレーダー）</th><td>事業規模に応じた情報の収集・保管と提供</td></tr><tr><th>サプライヤー（EU域外）</th><td>生産地の位置情報など、デューデリジェンスに必要な情報の提供（取引先からの要請）</td></tr></tbody></table>",
+    "support": "<ul><li>対象品目（HSコード）と自社の役割の確認</li><li>サプライヤーへの情報提供依頼の整理</li><li>改正・ガイダンス・国別リスク分類の定期配信</li></ul>"
+  },
+  {
+    "id": "cbam",
+    "name": "炭素国境調整措置（CBAM）",
+    "nameEn": "Carbon Border Adjustment Mechanism",
+    "officialName": "Regulation (EU) 2023/956",
+    "region": [
+      "EU"
+    ],
+    "field": [
+      "環境・通商"
+    ],
+    "status": [
+      "適用中"
+    ],
+    "statusNote": "証書販売 2027.02〜",
+    "isFeatured": true,
+    "sortOrder": 3,
+    "overview": "EU域外から輸入される特定製品の製造時の排出量（体化排出量）に応じて、EU排出量取引制度（EU ETS）と同等の炭素価格を課す仕組みです。報告のみの移行期間（2023年10月〜2025年12月）を経て、2026年1月から確定期間に入りました。",
+    "keyDates": "<table><tbody><tr><th>正式名称</th><td>Regulation (EU) 2023/956</td></tr><tr><th>移行期間</th><td>2023年10月1日〜2025年12月31日（四半期報告のみ）</td></tr><tr><th>確定期間</th><td>2026年1月1日〜</td></tr><tr><th>CBAM証書の販売開始</th><td>2027年2月（予定）</td></tr><tr><th>2026年分の年次申告・証書の引き渡し</th><td>2027年9月30日まで</td></tr><tr><th>対象品目</th><td>鉄鋼、アルミニウム、セメント、肥料、水素、電力</td></tr></tbody></table>",
+    "requirements": "<h3>認可申告者</h3><p>確定期間に対象品目を輸入するには、認可CBAM申告者としての認可が必要です（年間50トン以下の輸入は適用除外）。</p><h3>体化排出量の算定</h3><p>製造施設ごとに直接・間接排出量を算定し、第三者検証を受けます。</p><h3>年次申告と証書の引き渡し</h3><p>前年の輸入量と体化排出量を申告し、相当するCBAM証書を引き渡します。</p>",
+    "obligations": "<table><thead><tr><th>役割</th><th>主な義務</th></tr></thead><tbody><tr><th>EU輸入者（認可申告者）</th><td>認可の取得、年次申告、CBAM証書の購入・引き渡し</td></tr><tr><th>域外の製造事業者</th><td>排出量データの算定と輸入者への提供、検証への対応</td></tr></tbody></table>",
+    "support": "<ul><li>対象品目と輸出量の確認</li><li>排出量データの算定・提供方法の整理</li><li>実施規則・デフォルト値の改正情報の定期配信</li></ul>"
+  },
+  {
+    "id": "reach",
+    "name": "REACH規則",
+    "nameEn": "Registration, Evaluation, Authorisation and Restriction of Chemicals",
+    "officialName": "Regulation (EC) No 1907/2006",
+    "region": [
+      "EU"
+    ],
+    "field": [
+      "化学物質"
+    ],
+    "status": [
+      "改正中"
+    ],
+    "statusNote": "SVHC 253物質（2026.02）",
+    "isFeatured": true,
+    "sortOrder": 4,
+    "overview": "EUで化学物質を製造・輸入する事業者に、登録・評価・認可・制限を求める規則です。成形品（アーティクル）中の高懸念物質（SVHC）についても情報伝達・届出の義務があり、日本から部品・製品を輸出する企業にも影響します。PFAS（有機フッ素化合物）全体を対象とする包括的な制限案も審議が続いています。",
+    "keyDates": "<table><tbody><tr><th>正式名称</th><td>Regulation (EC) No 1907/2006</td></tr><tr><th>SVHC候補リスト</th><td>253物質（2026年2月4日更新）</td></tr><tr><th>PFAS包括制限案</th><td>2023年2月提出。ECHAの委員会で評価中</td></tr></tbody></table>",
+    "requirements": "<h3>登録</h3><p>年間1トン以上製造・輸入する物質は、ECHAへの登録が必要です。</p><h3>成形品中のSVHC</h3><p>0.1重量%を超えて含む場合、受領者への情報伝達（第33条）とSCIPデータベースへの届出が必要です。年間1トンを超える場合はECHAへの届出（第7条2項）も求められます。</p><h3>制限（附属書XVII）</h3><p>附属書XVIIに収載された物質は、条件に従って製造・上市・使用が制限されます。</p>",
+    "obligations": "<table><thead><tr><th>役割</th><th>主な義務</th></tr></thead><tbody><tr><th>製造者・輸入者</th><td>登録、SDSの作成、SVHC届出</td></tr><tr><th>成形品の生産者・輸入者</th><td>SVHC含有情報の伝達、SCIP届出</td></tr><tr><th>川下ユーザー</th><td>SDSに沿った使用、用途情報の伝達</td></tr></tbody></table>",
+    "support": "<ul><li>製品・部材ごとのSVHC含有確認の進め方</li><li>候補リスト・制限の更新の定期配信</li><li>PFAS制限案の審議状況のフォロー</li></ul>"
+  },
+  {
+    "id": "csrd-csddd",
+    "name": "CSRD・CSDDD",
+    "nameEn": "Corporate Sustainability Reporting / Due Diligence Directive",
+    "officialName": "Directive (EU) 2022/2464 ／ Directive (EU) 2024/1760（改正：Directive (EU) 2026/470）",
+    "region": [
+      "EU"
+    ],
+    "field": [
+      "サステナビリティ"
+    ],
+    "status": [
+      "改正中"
+    ],
+    "statusNote": "Omnibus I 公布 2026.02",
+    "isFeatured": false,
+    "sortOrder": 5,
+    "overview": "CSRD（企業サステナビリティ報告指令）はサステナビリティ情報の開示を、CSDDD（企業サステナビリティ・デューデリジェンス指令）は人権・環境のデューデリジェンスを企業に求めます。2026年2月に公布された「オムニバスI」指令により、両指令の適用対象が大幅に絞り込まれました。",
+    "keyDates": "<table><tbody><tr><th>改正指令</th><td>Directive (EU) 2026/470（オムニバスI）</td></tr><tr><th>EU官報掲載</th><td>2026年2月26日</td></tr><tr><th>CSRDの対象（EU企業）</th><td>従業員1,000人超かつ純売上高4億5,000万ユーロ超</td></tr><tr><th>CSDDDの対象（EU企業）</th><td>従業員5,000人超かつ純売上高15億ユーロ超</td></tr></tbody></table>",
+    "requirements": "<h3>サステナビリティ報告（CSRD）</h3><p>欧州サステナビリティ報告基準（ESRS）に基づく開示。ESRSも簡素化の改定が進められています。</p><h3>デューデリジェンス（CSDDD）</h3><p>自社・子会社・取引先の活動における人権・環境への負の影響の特定と防止・軽減。</p>",
+    "obligations": "<table><thead><tr><th>役割</th><th>主な義務</th></tr></thead><tbody><tr><th>対象となる企業</th><td>報告・デューデリジェンスの実施</td></tr><tr><th>サプライヤー（日本企業を含む）</th><td>取引先からの情報提供・行動規範への対応の要請</td></tr></tbody></table>",
+    "support": "<ul><li>自社・EU子会社が対象となるかの確認</li><li>取引先からの要請への対応整理</li><li>ESRS改定・国内法化の状況の定期配信</li></ul>"
+  },
+  {
+    "id": "battery",
+    "name": "電池規則",
+    "nameEn": "Batteries Regulation",
+    "officialName": "Regulation (EU) 2023/1542",
+    "region": [
+      "EU"
+    ],
+    "field": [
+      "製品・包装"
+    ],
+    "status": [
+      "適用中"
+    ],
+    "statusNote": "適用中 2024.02.18〜（段階適用）",
+    "isFeatured": false,
+    "sortOrder": 6,
+    "overview": "電池指令（2006/66/EC）に代わる規則で、電池のライフサイクル全体（設計・製造・回収・リサイクル）に要件を設けています。カーボンフットプリント、再生材含有、ラベル表示、デジタル電池パスポート、デューデリジェンスなどの要件が段階的に適用されます。",
+    "keyDates": "<table><tbody><tr><th>正式名称</th><td>Regulation (EU) 2023/1542</td></tr><tr><th>適用開始</th><td>2024年2月18日（要件ごとに段階適用）</td></tr><tr><th>ラベル表示</th><td>2026年8月18日〜</td></tr><tr><th>電池パスポート（EV・産業用等）</th><td>2027年2月18日〜</td></tr><tr><th>デューデリジェンス義務</th><td>2027年8月18日〜（延期後）</td></tr></tbody></table>",
+    "requirements": "<h3>物質の制限</h3><p>水銀・カドミウム・鉛の含有を制限します。</p><h3>ラベル表示・QRコード</h3><p>容量や化学組成などの表示、分別回収マークを求めます。</p><h3>電池パスポート</h3><p>EV用・産業用（2kWh超）などの電池に、デジタル電池パスポートを求めます。</p><h3>デューデリジェンス</h3><p>コバルト・リチウム・ニッケル・天然黒鉛などの原材料の調達に関するデューデリジェンスを求めます。</p>",
+    "obligations": "<table><thead><tr><th>役割</th><th>主な義務</th></tr></thead><tbody><tr><th>製造者</th><td>適合性評価、技術文書、CEマーキング、表示</td></tr><tr><th>輸入者・流通業者</th><td>適合の確認、書類の保管</td></tr><tr><th>生産者（EPR）</th><td>登録、回収・リサイクルの費用負担</td></tr></tbody></table>",
+    "support": "<ul><li>対象電池の分類と自社の役割の整理</li><li>段階適用スケジュールの整理</li><li>委任法令・ガイダンスの定期配信</li></ul>"
+  }
+]

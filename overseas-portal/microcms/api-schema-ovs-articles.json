@@ -1,0 +1,187 @@
+{
+  "apiFields": [
+    {
+      "fieldId": "title",
+      "name": "タイトル",
+      "kind": "text",
+      "required": true
+    },
+    {
+      "fieldId": "type",
+      "name": "記事の種類",
+      "kind": "select",
+      "selectItems": [
+        {
+          "id": "hf0c01doi5",
+          "value": "法改正情報"
+        },
+        {
+          "id": "1g3zku4c99",
+          "value": "解説コラム"
+        },
+        {
+          "id": "eoekpdssbh",
+          "value": "ウェビナー・セミナー"
+        },
+        {
+          "id": "0btnauqobf",
+          "value": "お役立ち資料"
+        },
+        {
+          "id": "68pzcyzhh9",
+          "value": "規制動向ウォッチ"
+        },
+        {
+          "id": "rw4jsahxp4",
+          "value": "お知らせ"
+        }
+      ],
+      "selectInitialValue": [],
+      "multipleSelect": false,
+      "required": true
+    },
+    {
+      "fieldId": "regions",
+      "name": "地域",
+      "kind": "select",
+      "selectItems": [
+        {
+          "id": "4dccb2nnvc",
+          "value": "EU"
+        },
+        {
+          "id": "yey9935nwg",
+          "value": "英国"
+        },
+        {
+          "id": "pc11e2zzh3",
+          "value": "米国"
+        },
+        {
+          "id": "j5ku14el1v",
+          "value": "中国"
+        },
+        {
+          "id": "4sc9hw7ghb",
+          "value": "韓国"
+        },
+        {
+          "id": "t7ailqs5ln",
+          "value": "台湾"
+        },
+        {
+          "id": "j8m2wmqkr3",
+          "value": "ASEAN"
+        },
+        {
+          "id": "gulqlc4xz3",
+          "value": "国際"
+        }
+      ],
+      "selectInitialValue": [],
+      "multipleSelect": true,
+      "required": false
+    },
+    {
+      "fieldId": "fields",
+      "name": "分野",
+      "kind": "select",
+      "selectItems": [
+        {
+          "id": "n7a586c0g1",
+          "value": "化学物質"
+        },
+        {
+          "id": "caead5flqg",
+          "value": "製品・包装"
+        },
+        {
+          "id": "t75ugg22zf",
+          "value": "サステナビリティ"
+        },
+        {
+          "id": "3xasvxgt59",
+          "value": "環境・通商"
+        }
+      ],
+      "selectInitialValue": [],
+      "multipleSelect": true,
+      "required": false
+    },
+    {
+      "fieldId": "date",
+      "name": "掲載日",
+      "kind": "date",
+      "required": true,
+      "dateFormat": true
+    },
+    {
+      "fieldId": "summary",
+      "name": "概要（一覧・OGPに表示）",
+      "kind": "textArea",
+      "required": false
+    },
+    {
+      "fieldId": "eyecatch",
+      "name": "アイキャッチ画像",
+      "kind": "media",
+      "required": false
+    },
+    {
+      "fieldId": "body",
+      "name": "本文",
+      "kind": "richEditorV2",
+      "required": false
+    },
+    {
+      "fieldId": "regulations",
+      "name": "関連する規制",
+      "kind": "relationList",
+      "required": false,
+      "referenceKey": "ovs-regulations"
+    },
+    {
+      "fieldId": "isPickup",
+      "name": "トップのピックアップに表示",
+      "kind": "boolean",
+      "required": false
+    },
+    {
+      "fieldId": "eventDate",
+      "name": "【セミナー】開始日時",
+      "kind": "date",
+      "required": false
+    },
+    {
+      "fieldId": "eventEndDate",
+      "name": "【セミナー】終了日時",
+      "kind": "date",
+      "required": false
+    },
+    {
+      "fieldId": "eventPlace",
+      "name": "【セミナー】会場",
+      "kind": "text",
+      "required": false
+    },
+    {
+      "fieldId": "eventUrl",
+      "name": "【セミナー】申込URL",
+      "kind": "text",
+      "required": false
+    },
+    {
+      "fieldId": "downloadUrl",
+      "name": "【資料】ダウンロード・フォームURL",
+      "kind": "text",
+      "required": false
+    },
+    {
+      "fieldId": "sourceUrl",
+      "name": "一次情報のURL",
+      "kind": "text",
+      "required": false
+    }
+  ],
+  "customFields": []
+}

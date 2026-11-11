@@ -1,0 +1,165 @@
+{
+  "apiFields": [
+    {
+      "fieldId": "name",
+      "name": "規制名（日本語・略称）",
+      "kind": "text",
+      "required": true
+    },
+    {
+      "fieldId": "nameEn",
+      "name": "英語名",
+      "kind": "text",
+      "required": false
+    },
+    {
+      "fieldId": "officialName",
+      "name": "正式名称・法令番号",
+      "kind": "text",
+      "required": false
+    },
+    {
+      "fieldId": "region",
+      "name": "地域",
+      "kind": "select",
+      "selectItems": [
+        {
+          "id": "jewkx2vev2",
+          "value": "EU"
+        },
+        {
+          "id": "2a0gjtxu6c",
+          "value": "英国"
+        },
+        {
+          "id": "sesorwi0oi",
+          "value": "米国"
+        },
+        {
+          "id": "ss8zznbta3",
+          "value": "中国"
+        },
+        {
+          "id": "a8fmj4wevq",
+          "value": "韓国"
+        },
+        {
+          "id": "t6atzpm1n3",
+          "value": "台湾"
+        },
+        {
+          "id": "8upckxb7v6",
+          "value": "ASEAN"
+        },
+        {
+          "id": "u9fjq0qnfm",
+          "value": "国際"
+        }
+      ],
+      "selectInitialValue": [],
+      "multipleSelect": false,
+      "required": true
+    },
+    {
+      "fieldId": "field",
+      "name": "分野",
+      "kind": "select",
+      "selectItems": [
+        {
+          "id": "9i275fqoly",
+          "value": "化学物質"
+        },
+        {
+          "id": "d4s844ly86",
+          "value": "製品・包装"
+        },
+        {
+          "id": "6snse0hd4x",
+          "value": "サステナビリティ"
+        },
+        {
+          "id": "0sooa20fv6",
+          "value": "環境・通商"
+        }
+      ],
+      "selectInitialValue": [],
+      "multipleSelect": false,
+      "required": true
+    },
+    {
+      "fieldId": "status",
+      "name": "ステータス",
+      "kind": "select",
+      "selectItems": [
+        {
+          "id": "bv96oas5qk",
+          "value": "適用中"
+        },
+        {
+          "id": "cpkeia7c3k",
+          "value": "適用予定"
+        },
+        {
+          "id": "f326xaoj5f",
+          "value": "審議中"
+        },
+        {
+          "id": "p2161q80qs",
+          "value": "改正中"
+        }
+      ],
+      "selectInitialValue": [],
+      "multipleSelect": false,
+      "required": true
+    },
+    {
+      "fieldId": "statusNote",
+      "name": "ステータス補足（例：適用中 2026.08.12〜）",
+      "kind": "text",
+      "required": false
+    },
+    {
+      "fieldId": "overview",
+      "name": "概要",
+      "kind": "textArea",
+      "required": false
+    },
+    {
+      "fieldId": "keyDates",
+      "name": "基本情報・スケジュール（表）",
+      "kind": "richEditorV2",
+      "required": false
+    },
+    {
+      "fieldId": "requirements",
+      "name": "主な要件",
+      "kind": "richEditorV2",
+      "required": false
+    },
+    {
+      "fieldId": "obligations",
+      "name": "誰に、何が求められるか（表）",
+      "kind": "richEditorV2",
+      "required": false
+    },
+    {
+      "fieldId": "support",
+      "name": "当社がご支援できること",
+      "kind": "richEditorV2",
+      "required": false
+    },
+    {
+      "fieldId": "isFeatured",
+      "name": "注目の規制に表示",
+      "kind": "boolean",
+      "required": false
+    },
+    {
+      "fieldId": "sortOrder",
+      "name": "表示順（小さいほど上）",
+      "kind": "number",
+      "required": false
+    }
+  ],
+  "customFields": []
+}
