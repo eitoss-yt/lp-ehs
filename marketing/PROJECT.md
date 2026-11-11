@@ -117,6 +117,7 @@ Spirの面談予約はGA4では計測できないため、Spir側の予約件数
 
 新しいものを上に追記する。
 
+- 2026-11-11 PR #134 をマージし本番反映。サービス一覧に「Cayzen EHS Research｜海外法規制」を追加（全ページのヘッダーのサービスメニュー・フッター、コラム生成スクリプト、TOPのCayzenシリーズのカードとサムネイル。TOPのカードは5枚を3枚＋2枚の中央揃えに変更）（Web/LP）
 - 2026-11-11 PR #132 をマージし本番反映。コラム https://eitoss.com/column/202611-ppwr-declaration-of-conformity/ と資料DLページ https://eitoss.com/document/ppwr-declaration-of-conformity/ を公開（HubSpotフォーム c4c81f83-8b66-48b3-a31b-b749afecf7eb、お礼メール「お礼メール_資料送付_PPWR適合宣言書作成ガイド」）。このフォームは送信後にその場でお礼メッセージを表示する設定で、ページ上にPDF・Wordのダウンロードボタンも出る（他の資料フォームのようにサンクスページへは移動しない。ユーザー判断）。残り：Search Consoleでインデックス登録をリクエスト。microCMSにある同じIDの下書きは公開しないこと（Web/LP）
 - 2026-11-11 PR #131 をマージし本番反映。海外法規制対応支援のLP https://eitoss.com/cayzen/overseasregulation/ を公開（EU規制LPのデザインを踏襲。FVは日本中心の世界地図と貿易ルートのSVGイラスト。資料請求フォーム 615bad3a-9072-45e5-8e0c-b0db729fece6、お問い合わせはEU規制LPと共通）。サイト内からの導線は未設定（サイトマップのみ）、フォームの送信テストは未実施。EU規制ページを海外法規制ページへ拡張する案は保留（Notionに下書き保存）（Web/LP）
 - 2026-11-11 PR #133 をマージし本番反映。資料一覧に新しい資料を掲載するスキル `add-document` が使えるようになった。資料をHubSpotのファイルマネージャーにアップロードし、URLを共有して実行する（Web/LP）
