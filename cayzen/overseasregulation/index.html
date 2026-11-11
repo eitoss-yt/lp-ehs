@@ -421,16 +421,20 @@ footer .copy{font-size:12.5px;color:rgba(255,255,255,.55);text-align:center;marg
 @media(max-width:560px){.footer-grid{grid-template-columns:1fr}}
 
 /* ===== 海外法規制LP 追加 ===== */
-.g1{top:6px;left:0}
-.g2{top:150px;right:0}
-.g3{top:262px;left:24px}
-.g4{top:374px;right:36px}
-.glass{animation:float 6s ease-in-out infinite}
-.g2{animation-delay:-1.5s}.g3{animation-delay:-3s}.g4{animation-delay:-4.5s}
+@media(min-width:901px){.hero-visual{height:490px}}
+.g1{top:0;left:0}
+.g2{top:148px;right:0}
+.g3{top:264px;left:24px}
+.g4{top:380px;right:36px}
+@media(min-width:901px) and (max-width:940px){.hero-orb{display:none}}
+.hero-visual .glass{width:280px}
+@media(min-width:901px) and (prefers-reduced-motion:no-preference){
+  .glass{animation:float 6s ease-in-out infinite}
+  .g2{animation-delay:-1.5s}.g3{animation-delay:-3s}.g4{animation-delay:-4.5s}
+}
 @keyframes float{50%{transform:translateY(-8px)}}
 .hero-orb{top:-6px;right:10px}
 .hero-orb b span{font-size:15px}
-@media (prefers-reduced-motion:reduce){.glass{animation:none}}
 
 /* 対象地域 */
 .reg-grid{display:grid;grid-template-columns:1fr;gap:24px;align-items:stretch}
@@ -532,6 +536,7 @@ footer .copy{font-size:12.5px;color:rgba(255,255,255,.55);text-align:center;marg
 .g-row{margin-top:10px}
 .g-lbl{background:var(--teal-050);border-radius:10px;padding:10px 14px;font-size:14.5px;font-weight:500;color:var(--teal-900)}
 .bar{display:flex;align-items:center;height:42px;border-radius:999px;padding:0 20px;font-size:14px;font-weight:500;color:#fff;white-space:nowrap;transform-origin:left center;transition:transform .9s cubic-bezier(.22,.61,.36,1),opacity .6s ease}
+.bar .per{display:none}
 .b1{grid-column:2 / span 2;background:var(--teal-900)}
 .b2{grid-column:3 / span 2;background:var(--teal-700)}
 .b3{grid-column:2 / span 4;background:#c3e1e6;color:var(--teal-900)}
@@ -575,18 +580,16 @@ footer .copy{font-size:12.5px;color:rgba(255,255,255,.55);text-align:center;marg
   .reg-list{grid-template-columns:1fr 1fr}
   .outputs-row{grid-template-columns:1fr 1fr}
   .g1,.g2,.g3,.g4{top:auto;left:auto;right:auto}
+  .hero-visual .glass{width:100%}
 }
 @media(max-width:760px){
   .flow .table-scroll{overflow:visible}
   .gantt{min-width:0;padding:18px 16px}
   .g-head,.g-months{display:none}
   .g-row{grid-template-columns:1fr;gap:6px;margin-top:14px}
-  .g-row:first-of-type{margin-top:0}
+  .g-months + .g-row{margin-top:0}
   .bar{display:block;grid-column:auto !important;height:auto;padding:9px 16px;border-radius:12px;white-space:normal;line-height:1.6}
-  .bar::before{display:block;font-size:12.5px}
-  .b1::before{content:"1〜2か月目";opacity:.8}
-  .b2::before{content:"2〜3か月目";opacity:.8}
-  .b3::before{content:"1か月目から継続";opacity:.8}
+  .bar .per{display:block;font-size:12.5px;opacity:.8}
 }
 @media(max-width:560px){
   .s-grid.four,.step-row.five{grid-template-columns:1fr}
@@ -1040,10 +1043,10 @@ footer .copy{font-size:12.5px;color:rgba(255,255,255,.55);text-align:center;marg
             <span class="phase keep">継続期</span>
           </div>
           <div class="g-months"><span></span><span>1か月目</span><span>2か月目</span><span>3か月目</span><span>4か月目以降</span></div>
-          <div class="g-row"><span class="g-lbl">01 適用判定・方針の整理</span><span class="bar b1">対象規制の特定 → 方針・対応計画</span></div>
-          <div class="g-row"><span class="g-lbl">02 必要書類の作成支援</span><span class="bar b2">要求事項の整理 → レビュー</span></div>
-          <div class="g-row"><span class="g-lbl">03 個別相談・調査対応</span><span class="bar b3">随時（メール・定例打合せ）</span></div>
-          <div class="g-row"><span class="g-lbl">04 法改正情報の定期配信</span><span class="bar b3">定期配信（影響度・対応事項つき）</span></div>
+          <div class="g-row"><span class="g-lbl">01 適用判定・方針の整理</span><span class="bar b1"><span class="per">1〜2か月目</span>対象規制の特定 → 方針・対応計画</span></div>
+          <div class="g-row"><span class="g-lbl">02 必要書類の作成支援</span><span class="bar b2"><span class="per">2〜3か月目</span>要求事項の整理 → レビュー</span></div>
+          <div class="g-row"><span class="g-lbl">03 個別相談・調査対応</span><span class="bar b3"><span class="per">1か月目から継続</span>随時（メール・定例打合せ）</span></div>
+          <div class="g-row"><span class="g-lbl">04 法改正情報の定期配信</span><span class="bar b3"><span class="per">1か月目から継続</span>定期配信（影響度・対応事項つき）</span></div>
         </div>
       </div>
       <div class="terms">
