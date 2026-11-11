@@ -316,6 +316,7 @@ function chrome(depth, bodyHtml, { title, description, canonicalPath, ogType = '
             <p class="gh-dd-head">Cayzenシリーズ</p>
             <a href="${rel}cayzen/ehsresearch/">EHS Research</a>
             <a href="${rel}cayzen/chemicalmanagement/">EHS Research｜化学物質管理</a>
+            <a href="${rel}cayzen/overseasregulation/">EHS Research｜海外法規制</a>
             <a href="${rel}cayzen/knowledgemanagement/">Knowledge Management</a>
             <a href="${rel}cayzen/iso/">ISO Support</a>
           </div></div>
@@ -350,6 +351,7 @@ ${bodyHtml}
         <p class="footer-head">サービス</p>
         <a href="${rel}cayzen/ehsresearch/">Cayzen EHS Research</a>
         <a href="${rel}cayzen/chemicalmanagement/">Cayzen EHS Research｜化学物質管理</a>
+        <a href="${rel}cayzen/overseasregulation/">Cayzen EHS Research｜海外法規制</a>
         <a href="${rel}cayzen/knowledgemanagement/">Cayzen Knowledge Management</a>
         <a href="${rel}cayzen/iso/">Cayzen ISO Support</a>
       </nav>

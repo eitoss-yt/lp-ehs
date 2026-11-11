@@ -116,7 +116,8 @@ header{position:fixed;top:0;left:0;right:0;background:rgba(255,255,255,.94);back
 .services{background:linear-gradient(180deg,var(--teal-050),#f6fafb)}
 .services .container{max-width:1280px}
 .services .section-lead{margin-bottom:36px}
-.sv-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:20px}
+.sv-grid{display:flex;flex-wrap:wrap;justify-content:center;gap:20px}
+.sv-grid > .sv-card{flex:0 0 calc((100% - 40px) / 3);min-width:0}
 .sv-card{background:#fff;border-radius:16px;overflow:hidden;box-shadow:0 10px 30px rgba(16,104,120,.12);display:flex;flex-direction:column;transition:transform .18s ease,box-shadow .18s ease}
 .sv-card:hover{transform:translateY(-4px);box-shadow:0 18px 40px rgba(16,104,120,.18)}
 .sv-card .thumb{aspect-ratio:2/1;overflow:hidden;border-bottom:1px solid var(--line)}
@@ -148,7 +149,7 @@ header{position:fixed;top:0;left:0;right:0;background:rgba(255,255,255,.94);back
 .services .sv-card p{font-size:13.5px;line-height:1.75}
 .services .sv-card .link{margin-top:12px;font-size:14px}
 .services .sv-card .thumb-real .tag{left:10px;top:9px;font-size:11.5px;padding:2px 10px}
-@media(max-width:1100px){.sv-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:1100px){.sv-grid > .sv-card{flex-basis:calc((100% - 20px) / 2)}}
 .sv-card .tag{display:inline-block;align-self:flex-start;background:var(--teal-050);color:var(--teal-700);font-size:13.5px;font-weight:500;padding:4px 14px;border-radius:999px;margin-bottom:12px}
 .sv-card h3{font-size:20.5px;font-weight:500;margin-bottom:10px;color:var(--ink)}
 .sv-card p{font-size:15.5px;color:var(--gray);flex:1}
@@ -249,7 +250,7 @@ html.hero-go .hd2{transition-delay:.26s}
 
 /* responsive */
 @media(max-width:900px){
-  .sv-grid{grid-template-columns:1fr}
+  .sv-grid > .sv-card{flex-basis:100%}
   .hero h1{font-size:30.5px}
   .hero h1.hero-en-main{font-size:31.5px}
   .hero-jp{text-wrap:balance;font-size:18.5px}
@@ -341,6 +342,7 @@ footer .copy{font-size:12.5px;color:rgba(255,255,255,.55);text-align:center;marg
           <p class="gh-dd-head">Cayzenシリーズ</p>
           <a href="cayzen/ehsresearch/">EHS Research</a>
           <a href="cayzen/chemicalmanagement/">EHS Research｜化学物質管理</a>
+          <a href="cayzen/overseasregulation/">EHS Research｜海外法規制</a>
           <a href="cayzen/knowledgemanagement/">Knowledge Management</a>
           <a href="cayzen/iso/">ISO Support</a>
           </div></div>
@@ -427,7 +429,7 @@ footer .copy{font-size:12.5px;color:rgba(255,255,255,.55);text-align:center;marg
     <div class="container">
       <p class="section-label">Service</p>
       <h2 class="section-title">Cayzenシリーズ</h2>
-      <p class="section-lead">EHS（環境・労働安全衛生）の法令対応や化学物質管理から、現場のナレッジマネジメント、ISOの構築・運用まで。ものづくりの土台を支えるサービスをワンストップで提供します。</p>
+      <p class="section-lead">EHS（環境・労働安全衛生）の法令対応や化学物質管理、海外法規制への対応から、現場のナレッジマネジメント、ISOの構築・運用まで。ものづくりの土台を支えるサービスをワンストップで提供します。</p>
       <div class="sv-grid">
         <a class="sv-card" href="cayzen/ehsresearch/">
           <div class="thumb thumb-real"><img src="assets/thumb/ehs.webp" alt="国内・海外のEHS法令の調査レポートの画面" loading="lazy"><span class="tag">調査代行サービス</span></div>
@@ -442,6 +444,14 @@ footer .copy{font-size:12.5px;color:rgba(255,255,255,.55);text-align:center;marg
           <div class="body">
             <h3 class="svc-logo card-logo" aria-label="Cayzen EHS Research｜化学物質管理"><img src="assets/cayzen-mark.png" alt=""><span class="txt"><span class="cz">Cayzen</span><span class="nm">EHS Research</span><span class="sub">化学物質管理</span></span></h3>
             <p>化学物質台帳の整備と化学物質管理者の実務、リスクアセスメント、SDS・ラベルの作成を一貫して代行。毎年広がる化学物質規制に、実務ごと対応します。</p>
+            <span class="link">サービスサイトを見る</span>
+          </div>
+        </a>
+        <a class="sv-card" href="cayzen/overseasregulation/">
+          <div class="thumb thumb-real"><img src="assets/thumb/overseas.webp" alt="海外法規制対応支援の資料と規制一覧の画面イメージ" loading="lazy"><span class="tag">対応支援サービス</span></div>
+          <div class="body">
+            <h3 class="svc-logo card-logo" aria-label="Cayzen EHS Research｜海外法規制"><img src="assets/cayzen-mark.png" alt=""><span class="txt"><span class="cz">Cayzen</span><span class="nm">EHS Research</span><span class="sub">海外法規制</span></span></h3>
+            <p>EU・米国・英国・アジアなど輸出先ごとの法規制に、適用判定・方針の整理から必要書類の作成支援、法改正情報の配信まで一貫して対応。方針から書類まで支えます。</p>
             <span class="link">サービスサイトを見る</span>
           </div>
         </a>
@@ -550,6 +560,7 @@ footer .copy{font-size:12.5px;color:rgba(255,255,255,.55);text-align:center;marg
         <p class="footer-head">サービス</p>
         <a href="cayzen/ehsresearch/">Cayzen EHS Research</a>
         <a href="cayzen/chemicalmanagement/">Cayzen EHS Research｜化学物質管理</a>
+        <a href="cayzen/overseasregulation/">Cayzen EHS Research｜海外法規制</a>
         <a href="cayzen/knowledgemanagement/">Cayzen Knowledge Management</a>
         <a href="cayzen/iso/">Cayzen ISO Support</a>
       </nav>
