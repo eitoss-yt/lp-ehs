@@ -5,7 +5,11 @@
 - マーケティング施策の正本は `marketing/PROJECT.md`。「admin | Web/LP」「admin | HubSpot clone」「admin | Adplanners」の3スレッドで共有する。
 - ユーザーが「ネクストアクション考えて」と言ったら、まず `git fetch origin main` で最新を取得し、`marketing/PROJECT.md` のスケジュール・判定基準・未決事項・進捗ログを読み、今日の日付時点で次にやるべきことを担当スレッド別に提案する。
 - 進捗や決定事項が出たら `marketing/PROJECT.md` の該当箇所と進捗ログを更新し、main に反映する。
-- `marketing/` と `CLAUDE.md` は `.vercelignore` で公開対象から外している。サイトはリポジトリ直下をそのまま公開するため、社内向けの情報は必ずこの2つのどちらかに置く。
+- `marketing/` と `CLAUDE.md`、`.claude/` は `.vercelignore` で公開対象から外している。サイトはリポジトリ直下をそのまま公開するため、社内向けの情報は必ずこのどれかに置く。
+
+## 作業の手順（スキル）
+
+- 資料一覧（資料ダウンロード `/document/`、お役立ち資料 `/resources/`）に新しい資料を掲載するときは、スキル `add-document`（`.claude/skills/add-document/SKILL.md`）の手順に従う。
 
 ## ユーザーの指定
 
