@@ -117,7 +117,7 @@ Spirの面談予約はGA4では計測できないため、Spir側の予約件数
 
 新しいものを上に追記する。
 
-- 2026-11-11 海外法規制ポータル（海外の改正情報・解説・ウェビナー案内をまとめるサイト。サービスページ /cayzen/overseasregulation/ とは別）の枠組みと初期コンテンツを作成し、`overseas-portal/` に保存（ブランチ claude/overseas-portal、未マージ）。Next.js＋microCMS（API ovs-regulations / ovs-articles を新設予定。既存の news・blogs には触れない）で、規制6件・記事13件の初期コンテンツ入り。Vercelの別プロジェクトで仮公開中 https://ehs-overseas-portal.vercel.app （noindex）。`overseas-portal` は `.vercelignore` で静的サイトの公開対象から外した。残り：microCMSのAPI作成と初期コンテンツ投入、初期コンテンツの事実確認、仮の値（ウェビナー日時・申込URL、資料DL URL、メルマガフォーム）の差し替え、正式公開のURL決定。Notionのタスク：マーケ実行「海外法規制ポータル（microCMS）の構築と初期コンテンツ作成」（Web/LP）
+- 2026-11-11 海外法規制ポータル（海外の改正情報・解説・ウェビナー案内をまとめるサイト。サービスページ /cayzen/overseasregulation/ とは別）の枠組みと初期コンテンツを作成し、`overseas-portal/` に保存（ブランチ claude/overseas-portal、未マージ）。Next.js＋microCMS（API ovs-regulations / ovs-articles を新設予定。既存の news・blogs には触れない）で、規制6件・記事13件の初期コンテンツ入り。Vercelの別プロジェクトで仮公開中 https://ehs-overseas-portal.vercel.app （noindex）。コーポレートサイト側では `vercel.json` で `/overseas-portal/` 以下をトップへ転送し、ソースが見えないようにした（`.vercelignore` はポータル自身のデプロイにも効くため使わない）。残り：microCMSのAPI作成と初期コンテンツ投入、初期コンテンツの事実確認、仮の値（ウェビナー日時・申込URL、資料DL URL、メルマガフォーム）の差し替え、正式公開のURL決定。Notionのタスク：マーケ実行「海外法規制ポータル（microCMS）の構築と初期コンテンツ作成」（Web/LP）
 - 2026-11-11 PR #135 をマージし本番反映。PPWR適合宣言書コラムのアイキャッチを、資料が主役のデザインに作り直した（コラム用の写真背景は使わず、作成ガイドの表紙・Wordテンプレート・中のページを大きく配置し、タイトルを3段で表示）（Web/LP）
 - 2026-11-11 microCMSに残っていたPPWR適合宣言書コラムの下書き（ID 202611-ppwr-declaration-of-conformity）を削除。記事はリポジトリ内データ（data/column-local.json）で管理しており、公開中の記事には影響なし（Web/LP）
 - 2026-11-11 PR #134 をマージし本番反映。サービス一覧に「Cayzen EHS Research｜海外法規制」を追加（全ページのヘッダーのサービスメニュー・フッター、コラム生成スクリプト、TOPのCayzenシリーズのカードとサムネイル。TOPのカードは5枚を3枚＋2枚の中央揃えに変更）（Web/LP）

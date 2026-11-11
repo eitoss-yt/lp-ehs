@@ -11,7 +11,7 @@
 ## リポジトリ内での位置づけ
 
 - コーポレートサイト（`lp-ehs` リポジトリ直下の静的サイト）とは別のアプリです。このフォルダ `overseas-portal/` だけで完結します。
-- リポジトリ直下はそのまま公開されるため、`overseas-portal` は `.vercelignore` で静的サイトの公開対象から外しています。
+- リポジトリ直下はそのまま公開されるため、コーポレートサイトの `vercel.json` で `/overseas-portal/` 以下へのアクセスをトップページへ転送し、ソースが見えないようにしています（`.vercelignore` に入れるとポータル自身のデプロイからも除外されるため使わない）。
 - Vercelでは専用プロジェクト `ehs-overseas-portal` で動かします。GitHub連携する場合は、プロジェクトの Settings > General > Root Directory を `overseas-portal` に設定してください。
 
 ## ページ構成
