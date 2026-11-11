@@ -420,8 +420,14 @@ ${articles.length ? `    <div class="col-grid">\n${cards}\n    </div>` : '    <p
 }
 
 // 記事テーマ別のCTAバナー（タイトルにPPWRを含む記事はPPWR資料、ISOを含む記事はISO資料、それ以外はEHS調査代行）
-// バナー画像: assets/column_bnr_ppwr.jpg ／ assets/column_bnr_iso14001.jpg ／ assets/column_bnr_ehs.jpg
+// タイトルに「適合宣言書」を含むPPWR記事は、適合宣言書 作成ガイド（Wordテンプレート付き）の資料
+// バナー画像: assets/column_bnr_ppwr_doc.jpg ／ assets/column_bnr_ppwr.jpg ／ assets/column_bnr_iso14001.jpg ／ assets/column_bnr_ehs.jpg
 function ctaBanner(a) {
+  if (/PPWR/i.test(a.title || '') && /適合宣言書/.test(a.title || '')) {
+    return `<a class="cta-banner-img" href="../../document/ppwr-declaration-of-conformity/">
+        <img src="../../assets/column_bnr_ppwr_doc.jpg" alt="PPWR適合宣言書、自社で書けますか？｜8項目の書き方・英文の記入例・署名前チェックリストを1冊に｜Wordテンプレート付き｜無料で資料をダウンロード" loading="lazy" width="1080" height="300">
+      </a>`;
+  }
   if (/PPWR/i.test(a.title || '')) {
     return `<a class="cta-banner-img" href="../../document/ppwr/">
         <img src="../../assets/column_bnr_ppwr.jpg" alt="PPWR、施行済み。いま確認すべきこと｜役割ごとの義務・期限一覧・部門別チェックリストを1冊に｜無料で資料をダウンロード" loading="lazy" width="1080" height="300">
