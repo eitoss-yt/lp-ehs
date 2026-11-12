@@ -20,3 +20,5 @@ img{position:absolute;box-shadow:0 22px 48px rgba(8,14,60,.45),0 3px 8px rgba(8,
 .cta{position:absolute;left:0;right:0;bottom:0;height:128px;background:var(--navy);color:#fff;display:flex;align-items:center;justify-content:space-between;padding:0 72px;z-index:6}
 .cta .m{font-size:28px;font-weight:700;opacity:.92}
 .cta .btn{background:#fff;color:var(--navy);font-size:30px;font-weight:900;padding:16px 34px;border-radius:999px}
+
+.head .logo{position:static;height:46px;width:auto;box-shadow:none}
