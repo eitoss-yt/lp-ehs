@@ -159,6 +159,7 @@ EU規制ページと資料の比較
 
 新しいものを上に追記する。
 
+- 2026-11-12 PPWR適合宣言書 作成ガイドの表紙を更新（タイトルに「PPWR」を大きく入れた版）。配布用PDF（assets/dl/PPWR_DoC_guide_eitoss.pdf）を差し替え、表紙を使っている画像3点（資料DLページの画像 assets/doc-ppwr-declaration-of-conformity.jpg、コラムのアイキャッチ assets/column/202611-ppwr-declaration-of-conformity.jpg、記事内の資料DLバナー assets/column_bnr_ppwr_doc.jpg）を作り直した（PR作成）。本文は変更なし。残り：HubSpotのファイルマネージャー（DLフォルダ）の同じPDFの差し替え（お礼メールはそちらにリンク）、marketing/ 内のWord版と figures/cover.html は旧表紙のまま（Web/LP・HubSpot）
 - 2026-11-12 PPWR適合宣言書のコラム記事・資料DLのタスクを完了（Notion「マーケ実行」のタスクも完了に更新）（Web/LP）
 - 2026-11-12 ニュース2件のリンク切れを解消。microCMSの「link」を空にし、「関連リンクはこちら」のボタンを削除（/news/62t5rrk_/ 中部経済新聞の掲載記事、/news/tsu2lkd_/ 生成AIセミナーの告知。リンク先の /news/20220512 と /seminar/20241024 は存在しなかった）。PPWR適合宣言書の資料DLページはSearch Consoleでインデックス登録済みを確認（Web/LP）
 - 2026-11-12 PR #137 をマージし本番反映。旧サイトからの移行で二重登録されていたニュース7件をサイトに掲載しないようにした（本番で転送と一覧からの除外を確認、ニュースは75件）。旧URL（日付形式のID）の記事を残し、重複のURLは旧URLへ転送。microCMSの重複記事は管理画面から非公開にする必要あり（APIでは非公開にできないため）（Web/LP）
