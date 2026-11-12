@@ -952,6 +952,76 @@
       "source": "/document/JISQ14001_2026-guide/",
       "destination": "/resources/",
       "permanent": false
+    },
+    {
+      "source": "/news/news20230712/",
+      "destination": "/news/20230712/",
+      "permanent": true
+    },
+    {
+      "source": "/news/news20230712",
+      "destination": "/news/20230712/",
+      "permanent": true
+    },
+    {
+      "source": "/news/0_3mkbwr/",
+      "destination": "/news/20240215/",
+      "permanent": true
+    },
+    {
+      "source": "/news/0_3mkbwr",
+      "destination": "/news/20240215/",
+      "permanent": true
+    },
+    {
+      "source": "/news/z6bbdabk/",
+      "destination": "/news/20231107/",
+      "permanent": true
+    },
+    {
+      "source": "/news/z6bbdabk",
+      "destination": "/news/20231107/",
+      "permanent": true
+    },
+    {
+      "source": "/news/rel94r5v/",
+      "destination": "/news/20220312/",
+      "permanent": true
+    },
+    {
+      "source": "/news/rel94r5v",
+      "destination": "/news/20220312/",
+      "permanent": true
+    },
+    {
+      "source": "/news/r2cmdjnz/",
+      "destination": "/news/20231204/",
+      "permanent": true
+    },
+    {
+      "source": "/news/r2cmdjnz",
+      "destination": "/news/20231204/",
+      "permanent": true
+    },
+    {
+      "source": "/news/sc4ybkz8/",
+      "destination": "/news/20231226/",
+      "permanent": true
+    },
+    {
+      "source": "/news/sc4ybkz8",
+      "destination": "/news/20231226/",
+      "permanent": true
+    },
+    {
+      "source": "/news/tt0b_udf/",
+      "destination": "/news/20231114/",
+      "permanent": true
+    },
+    {
+      "source": "/news/tt0b_udf",
+      "destination": "/news/20231114/",
+      "permanent": true
     }
   ]
 }

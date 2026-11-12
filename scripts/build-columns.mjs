@@ -767,7 +767,9 @@ console.log(`[build-columns] 生成完了: column/index.html + 記事 ${articles
 // ---- ニュースの生成 ----
 if (!USE_SAMPLE && API_KEY) {
   try {
-    const allNews = (await fetchAll(NEWS_ENDPOINT)).filter(n => n.publishedAt);
+    // 旧サイトからの移行で二重登録されたニュース（旧URLの記事を残し、こちらは掲載しない。URLは vercel.json で旧URLへ転送）
+    const NEWS_EXCLUDE = new Set(['news20230712', '0_3mkbwr', 'z6bbdabk', 'rel94r5v', 'r2cmdjnz', 'sc4ybkz8', 'tt0b_udf']);
+    const allNews = (await fetchAll(NEWS_ENDPOINT)).filter(n => n.publishedAt && !NEWS_EXCLUDE.has(n.id));
     allNews.sort((a, b) => new Date(dateOf(b)) - new Date(dateOf(a)));
     await rm(path.join(ROOT, 'news'), { recursive: true, force: true });
     await mkdir(path.join(ROOT, 'news'), { recursive: true });
