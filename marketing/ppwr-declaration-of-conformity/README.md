@@ -55,3 +55,18 @@ node marketing/ppwr-declaration-of-conformity/render.mjs figures    # 解説書�
 
 - 片側だけに線を引く装飾（見出しの左線、カードの上線、項目ごとの下線など）は使わない。区切りは余白や背景色で表す（CLAUDE.md）。
 - 解説書の章見出しは薄い青の帯、囲み記事は背景色だけで表している。
+
+## Meta広告のクリエイティブ（meta-ads/）
+
+Meta広告「PPWR適合宣言書 資料DL Meta広告配信」（Notionのマーケ実行）用の画像（1080×1080）。
+
+| ファイル | 内容 |
+|---|---|
+| `meta-ads/cr1.html`〜`cr4.html` | 人物なしの4パターン（すでに必要／セルフチェック／テンプレート／署名前の確認） |
+| `meta-ads/cr1p.html`〜`cr4p.html` | 同じ見出しで、考える女性のイラストと吹き出しを入れたパターン |
+| `meta-ads/woman-think.svg` | 女性のイラストのデザイン元（`woman-think.png` はこれを2倍の解像度で書き出したもの） |
+| `meta-ads/common.css` | 共通のスタイル |
+
+```bash
+node marketing/ppwr-declaration-of-conformity/meta-ads/render.mjs   # out/meta-ads/ に Meta_PPWR_DoC_1_Eitoss_1〜4.jpg と 1p〜4p.jpg を出力
+```
