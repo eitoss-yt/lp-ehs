@@ -1,5 +1,11 @@
 <!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="common.css"><style>
-body{background:radial-gradient(ellipse 70% 60% at 72% 52%,#2a2e38 0%,#181a20 50%,#0d0e12 100%)}
+body{background:linear-gradient(150deg,#0e1016 0%,#121726 55%,#0b0d13 100%)}
+.bgx{position:absolute;inset:0;overflow:hidden;z-index:0}
+.bgx>div{position:absolute;border-radius:50%}
+.g1{left:520px;top:120px;width:760px;height:760px;background:radial-gradient(circle,rgba(51,85,209,.45),rgba(51,85,209,0) 65%);filter:blur(40px)}
+.g2{left:-260px;top:560px;width:720px;height:620px;background:radial-gradient(circle,rgba(91,192,208,.22),rgba(91,192,208,0) 65%);filter:blur(50px)}
+.g3{left:180px;top:-320px;width:760px;height:600px;background:radial-gradient(circle,rgba(110,90,200,.22),rgba(110,90,200,0) 65%);filter:blur(50px)}
+.ribbon{position:absolute;inset:0}
 .head .chip{background:transparent;border:2px solid rgba(255,255,255,.85);color:#fff}
 .grain{position:absolute;inset:0;opacity:.07;mix-blend-mode:screen;z-index:0}
 .k{position:absolute;left:72px;top:150px;font-size:28px;font-weight:700;color:var(--navy);letter-spacing:.04em;z-index:2}
@@ -15,7 +21,12 @@ body{background:radial-gradient(ellipse 70% 60% at 72% 52%,#2a2e38 0%,#181a20 50
 .fan .p2{left:670px;top:340px}
 .fan .p1{left:615px;top:405px}
 .fan .cv{left:560px;top:470px}
-</style></head><body>
+</style></head><body><div class="bgx"><div class="g1"></div><div class="g2"></div><div class="g3"></div>
+<svg class="ribbon" viewBox="0 0 1080 1080" width="1080" height="1080"><defs>
+<linearGradient id="rb" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#5bc0d0" stop-opacity="0"/><stop offset=".45" stop-color="#7f9cff" stop-opacity=".18"/><stop offset="1" stop-color="#3355D1" stop-opacity="0"/></linearGradient>
+<filter id="rbf"><feGaussianBlur stdDeviation="10"/></filter></defs>
+<path d="M-60 860 C220 700 440 980 720 760 C860 650 980 560 1140 600 L1140 700 C980 660 880 740 740 850 C460 1060 220 790 -60 950 Z" fill="url(#rb)" filter="url(#rbf)"/>
+</svg></div>
 <svg class="grain" width="1080" height="1080"><filter id="gn"><feTurbulence type="fractalNoise" baseFrequency=".9" numOctaves="2" stitchTiles="stitch"/><feColorMatrix type="saturate" values="0"/></filter><rect width="100%" height="100%" filter="url(#gn)"/></svg>
 <div class="head"><div class="chip">PPWR｜EU包装規則</div><img class="logo" src="logo-eitoss-white.png" alt="eitoss"></div>
 <div class="t">適合宣言書の8項目を、<br>英文の記入例つきで</div>
