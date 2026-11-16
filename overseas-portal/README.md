@@ -80,5 +80,5 @@ microCMS の「API設定 → Webhook → カスタム通知」に `https://<サ�
 
 ## 初期コンテンツ（content/seed）
 
-規制6件（PPWR / EUDR / CBAM / REACH / CSRD・CSDDD / 電池規則）、記事13件（法改正情報4・解説コラム3・ウェビナー2・資料1・ウォッチ2・お知らせ1）。
+規制7件（PPWR / EUDR / CBAM / REACH / CSRD・CSDDD / 電池規則 / POPs規則）、記事14件（法改正情報5・解説コラム3・ウェビナー2・資料1・ウォッチ2・お知らせ1）。
 公開前に `docs/content-review.md` のチェック項目を確認してください。
