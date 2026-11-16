@@ -24,8 +24,7 @@ img{max-width:100%;height:auto}
 .hd{background:#fff;box-shadow:0 2px 16px rgba(11,63,74,.08);position:sticky;top:0;z-index:50}
 .hd-top{display:flex;align-items:center;gap:var(--s2) var(--s3);flex-wrap:wrap;padding:var(--s2) 0}
 .logo{display:flex;align-items:center;gap:var(--s2);text-decoration:none;color:var(--navy)}
-.logo b{font-size:24px;line-height:32px;letter-spacing:-.01em}
-.logo span{font-size:13px;line-height:16px;color:var(--muted);font-weight:500}
+.logo img{display:block;height:40px;width:auto}
 .logo em{font-style:normal;font-size:12px;line-height:16px;color:#fff;background:var(--navy);padding:4px var(--s1);border-radius:var(--r-sm);font-weight:600}
 .hd-actions{margin-left:auto;display:flex;gap:var(--s1);align-items:center;flex-wrap:wrap}
 .search{display:flex;height:40px;border:1px solid var(--line-2);border-radius:var(--r-sm);overflow:hidden;background:#fff}

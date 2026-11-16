@@ -1,5 +1,6 @@
 "use client";
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { useEffect, useRef } from "react";
 import type { Regulation } from "@/lib/types";
@@ -30,9 +31,8 @@ export default function Header({ regulations }: { regulations: Pick<Regulation, 
     <header className="hd">
       <div className="wrap">
         <div className="hd-top">
-          <Link href="/" className="logo">
-            <b>eitoss</b>
-            <span>Cayzen EHS Research</span>
+          <Link href="/" className="logo" aria-label="Cayzen EHS Research 海外法規制ポータル トップ">
+            <Image src="/images/logo-ehs-research.png" alt="Cayzen EHS Research" width={297} height={48} priority />
             <em>海外法規制</em>
           </Link>
           <div className="hd-actions">
