@@ -93,6 +93,7 @@ pdftotext -layout "$SCRATCH/doc/source.pdf" - | head -400
    - `<title>`、`meta description`、`og:title`、`og:description`
    - `canonical` と `og:url`（`https://eitoss.com/document/<slug>/`）
    - パンくず、H1、`.lead`
+   - パンくずの2番目と、ページ下の戻るリンクを掲載先の一覧に合わせる。資料ダウンロードは `<a href="../">資料ダウンロード</a>` と `← 資料ダウンロード一覧へ戻る`（`href="../"`）、お役立ち資料は `<a href="../../resources/">お役立ち資料</a>` と `← お役立ち資料一覧へ戻る`（`href="../../resources/"`）
    - `.cover` の画像（`../../assets/doc-<slug>.jpg`）と alt
    - `.desc`、「この資料でわかること」、「こんな方におすすめ」
    - コピー元に、その資料だけのリンクや段落があれば削除する
