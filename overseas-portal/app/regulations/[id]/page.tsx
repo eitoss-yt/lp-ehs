@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import { getArticles, getRegulation, getRegulations } from "@/lib/microcms";
@@ -52,6 +53,7 @@ export default async function RegulationPage({ params }: { params: P }) {
       </section>
       <div className="wrap main">
         <div className="sheet prose">
+          {r.image && <Image className="cover" src={r.image.url} alt="" width={960} height={600} sizes="(max-width:960px) 100vw, 800px" priority />}
           {r.overview && (<section id="overview"><h2>概要</h2><p>{r.overview}</p>{r.keyDates && <div dangerouslySetInnerHTML={{ __html: r.keyDates }} />}</section>)}
           {r.requirements && (<section id="requirements"><h2>主な要件</h2><div dangerouslySetInnerHTML={{ __html: r.requirements }} /></section>)}
           {r.obligations && (<section id="obligations"><h2>誰に、何が求められるか</h2><p>同じ製品でも、自社の役割によって求められる義務が変わります。</p><div dangerouslySetInnerHTML={{ __html: r.obligations }} /></section>)}

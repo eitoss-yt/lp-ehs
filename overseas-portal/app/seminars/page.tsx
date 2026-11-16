@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { getArticles } from "@/lib/microcms";
 import { fmtEvent, isUpcoming } from "@/lib/format";
 import { ContactBand } from "@/components/Footer";
@@ -12,6 +13,7 @@ export default async function SeminarsPage() {
   const past = all.filter((a) => !isUpcoming(a.eventDate)).sort((a, b) => ((a.eventDate || "") < (b.eventDate || "") ? 1 : -1));
   const Card = ({ a, open }: { a: (typeof all)[number]; open: boolean }) => (
     <Link href={`/articles/${a.id}`} className="card">
+      {a.eyecatch && <Image className="ph" src={a.eyecatch.url} alt="" width={960} height={600} sizes="(max-width:640px) 100vw, 560px" />}
       <div className="when">{open ? <span className="badge-open">受付中</span> : <span className="badge-end">終了</span>}{fmtEvent(a.eventDate, a.eventEndDate)}</div>
       <strong>{a.title}</strong>
       <p>{a.summary}</p>

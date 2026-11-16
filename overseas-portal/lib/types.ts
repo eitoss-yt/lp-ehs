@@ -22,6 +22,7 @@ export type Regulation = MicroCMSMeta & {
   requirements?: string; // リッチエディタ
   obligations?: string; // リッチエディタ
   support?: string; // リッチエディタ
+  image?: MicroCMSImage;
   isFeatured?: boolean;
   sortOrder?: number;
 };

@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { getArticles, getRegulations } from "@/lib/microcms";
 import { fmtDate, fmtEvent, isUpcoming } from "@/lib/format";
 import { StatusTag } from "@/components/Tags";
@@ -26,13 +27,14 @@ export default async function Home() {
 
   return (
     <>
-      <section className="band">
+      <section className="band hero">
         <div className="wrap">
           <h1>海外法規制の新着情報・規制動向</h1>
           <p>{SITE.description}</p>
           <div className="pickups">
             {pickups.map((a) => (
               <Link key={a.id} href={`/articles/${a.id}`} className="pickup">
+                {a.eyecatch && <Image className="ph" src={a.eyecatch.url} alt="" width={960} height={600} sizes="(max-width:640px) 100vw, 384px" priority />}
                 <small>{label(a)}</small>
                 <strong>{a.title}</strong>
                 <span>{a.eventDate ? fmtEvent(a.eventDate) : fmtDate(a.date)}</span>
@@ -49,6 +51,7 @@ export default async function Home() {
             <div className="regs">
               {featured.map((r) => (
                 <Link key={r.id} href={`/regulations/${r.id}`} className="reg">
+                  {r.image && <Image className="ph" src={r.image.url} alt="" width={960} height={600} sizes="(max-width:640px) 100vw, 420px" />}
                   <div className="meta"><span className="tag">{r.region?.[0]}</span>{r.field?.[0]}</div>
                   <strong>{r.name}</strong>
                   <div className="meta"><StatusTag value={r.status?.[0]} />{r.statusNote}</div>
@@ -68,6 +71,7 @@ export default async function Home() {
               <div className="cards">
                 {upcoming.map((s) => (
                   <Link key={s.id} href={`/articles/${s.id}`} className="card">
+                    {s.eyecatch && <Image className="ph" src={s.eyecatch.url} alt="" width={960} height={600} sizes="(max-width:640px) 100vw, 420px" />}
                     <div className="when"><span className="badge-open">受付中</span>{fmtEvent(s.eventDate, s.eventEndDate)}</div>
                     <strong>{s.title}</strong>
                     <p>{s.eventPlace}</p>

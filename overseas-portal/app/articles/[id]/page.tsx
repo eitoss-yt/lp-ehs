@@ -56,7 +56,7 @@ export default async function ArticlePage({ params }: { params: P }) {
           </header>
 
           {a.eyecatch && (
-            <Image src={a.eyecatch.url} alt="" width={a.eyecatch.width || 1200} height={a.eyecatch.height || 630} style={{ width: "100%", height: "auto", borderRadius: 6, marginBottom: 24 }} />
+            <Image className="cover" src={a.eyecatch.url} alt="" width={a.eyecatch.width || 1200} height={a.eyecatch.height || 630} sizes="(max-width:960px) 100vw, 800px" priority />
           )}
 
           {a.eventDate && (

@@ -149,6 +149,12 @@
       "required": false
     },
     {
+      "fieldId": "image",
+      "name": "画像（カード・ページ上部）",
+      "kind": "media",
+      "required": false
+    },
+    {
       "fieldId": "isFeatured",
       "name": "注目の規制に表示",
       "kind": "boolean",

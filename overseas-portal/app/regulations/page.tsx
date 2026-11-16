@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { getRegulations } from "@/lib/microcms";
 import { REGIONS } from "@/lib/constants";
 import { StatusTag } from "@/components/Tags";
@@ -26,6 +27,7 @@ export default async function RegulationsPage() {
             <div className="regs">
               {regs.filter((r) => r.region?.includes(g.value)).map((r) => (
                 <Link key={r.id} href={`/regulations/${r.id}`} className="reg">
+                  {r.image && <Image className="ph" src={r.image.url} alt="" width={960} height={600} sizes="(max-width:640px) 100vw, 560px" />}
                   <div className="meta">{r.field?.[0]}</div>
                   <strong>{r.name}</strong>
                   <div className="meta"><StatusTag value={r.status?.[0]} />{r.statusNote}</div>
