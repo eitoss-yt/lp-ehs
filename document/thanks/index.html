@@ -325,6 +325,9 @@ footer .copy{font-size:12.5px;color:rgba(255,255,255,.55);text-align:center;marg
     var p = ss('eitoss_dl_page');
     if (!p) return null;
     if (/^\/lp\/ppwr\/?/.test(p)) return 'ppwr';
+    var LP = { 'ehsresearch': 'ehs-research', 'chemicalmanagement': 'chemical-management', 'overseasregulation': 'overseas-regulation', 'knowledgemanagement': 'cayzen', 'iso': 'cayzen-iso' };
+    var c = p.match(/^\/cayzen\/([^\/]+)\/?/);
+    if (c) return LP.hasOwnProperty(c[1]) ? LP[c[1]] : null;
     var m = p.match(/^\/document\/([^\/]+)\/?/);
     return (m && DOCS.hasOwnProperty(m[1])) ? m[1] : null;
   }
