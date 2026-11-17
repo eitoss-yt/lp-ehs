@@ -8,9 +8,11 @@
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
   gtag('config', 'G-199DLM16MH');
+  try { sessionStorage.setItem('eitoss_dl_page', location.pathname); sessionStorage.removeItem('eitoss_dl_form'); } catch (_) {}
   window.addEventListener('message', function(e){
     var d = e.data;
     if (!d || d.type !== 'hsFormCallback' || d.eventName !== 'onFormSubmitted') return;
+    try { sessionStorage.setItem('eitoss_dl_form', d.id); } catch (_) {}
     var isContact = d.id === 'de61c417-f176-4c76-af10-c59923cdfd79';
     gtag('event', isContact ? 'contact_submit' : 'document_request', { form_id: d.id });
     if (typeof fbq === 'function') fbq('track', isContact ? 'Contact' : 'Lead', { form_id: d.id });
