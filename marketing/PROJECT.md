@@ -159,6 +159,7 @@ EU規制ページと資料の比較
 
 新しいものを上に追記する。
 
+- 2026-11-17 PR #142 をマージし本番反映。サービスLP（/cayzen/ehsresearch/、chemicalmanagement/、overseasregulation/、knowledgemanagement/、iso/）の資料フォームから申し込んだときも、お礼ページにその資料のダウンロード欄を表示。本番で5ページとも表示を確認（Web/LP）
 - 2026-11-17 PR #141 をマージし本番反映。お礼ページのダウンロード欄の対象に /document/ppwr-declaration-of-conformity/ を追加（作成ガイドのPDFとWordテンプレートの2ボタン）。本番で表示と2ファイルが開けることを確認（Web/LP）
 - 2026-11-17 PR #140 をマージし本番反映。資料DLのお礼ページ /document/thanks/ に、申し込んだ資料をその場で開けるダウンロード欄を追加（お礼メールのHubSpot配信ドメインが大企業の社内ネットワークで止められる対策）。PDFは vercel.json の rewrites で eitoss.com/dl/ 配下から配信し、本番 /document/ppwr/ のテスト送信で表示とPDFを確認（Web/LP）
 - 2026-11-12 PR #138 をマージし本番反映。PPWR適合宣言書 作成ガイドの表紙更新版PDFと、表紙を使う画像3点（資料DLページの画像、コラムのアイキャッチ、記事内の資料DLバナー）を公開。残り：HubSpotのファイルマネージャー（DLフォルダ）の同じPDFの差し替え（Web/LP・HubSpot）
