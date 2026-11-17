@@ -174,6 +174,11 @@ footer .copy{font-size:12.5px;color:rgba(255,255,255,.55);text-align:center;marg
 .dl-btn{display:inline-flex;align-items:center;gap:10px;background:#ff9902;color:#fff;font-weight:700;font-size:17px;padding:15px 32px;border-radius:10px;box-shadow:0 6px 16px rgba(255,153,2,.32);transition:transform .15s ease,filter .15s ease}
 .dl-btn:hover{transform:translateY(-2px);filter:brightness(1.05)}
 .dl-btn svg{width:20px;height:20px;flex:0 0 auto}
+.dl-btns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.dl-btn-sub{display:inline-flex;align-items:center;gap:10px;background:#fff;color:#e08600;font-weight:700;font-size:16px;padding:14px 26px;border-radius:10px;box-shadow:0 4px 12px rgba(255,153,2,.18);transition:transform .15s ease}
+.dl-btn-sub[hidden]{display:none}
+.dl-btn-sub:hover{transform:translateY(-2px)}
+.dl-btn-sub svg{width:20px;height:20px;flex:0 0 auto}
 .dl-box .dl-note{font-size:13.5px;color:var(--gray);margin-top:16px;text-wrap:balance}
 .later{text-align:center;margin-top:22px;font-size:14.5px;color:var(--gray)}
 .thx-btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-top:22px}
@@ -227,7 +232,10 @@ footer .copy{font-size:12.5px;color:rgba(255,255,255,.55);text-align:center;marg
       <div class="dl-box" id="dl-box" hidden>
         <p class="dl-lead">資料はこちらからすぐにご覧いただけます</p>
         <p class="dl-name" id="dl-name"></p>
+        <div class="dl-btns">
         <a class="dl-btn" id="dl-btn" href="#" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12"/><path d="M7 10l5 5 5-5"/><path d="M5 20h14"/></svg>資料をダウンロードする（PDF）</a>
+        <a class="dl-btn-sub" id="dl-btn-sub" href="#" download hidden><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12"/><path d="M7 10l5 5 5-5"/><path d="M5 20h14"/></svg><span id="dl-btn-sub-label"></span></a>
+        </div>
         <p class="dl-note">開けない場合は、お手数ですがお問い合わせください。メールでも同じ資料をお送りしています。</p>
       </div>
       <div class="book">
@@ -297,7 +305,8 @@ footer .copy{font-size:12.5px;color:rgba(255,255,255,.55);text-align:center;marg
     'cayzen': { name: '「Cayzen Knowledge Management」サービス資料', url: '/dl/knowledge-management.pdf', form: '29321982-b048-45f3-ae3c-3752d8dba971' },
     'cayzen-iso': { name: '「Cayzen ISO サポート」ISO支援サービス資料', url: '/dl/cayzen-iso.pdf', form: '7068807f-ff4c-4e6a-957e-016e2aa5cdb4' },
     'pamphlet': { name: '「エイトス会社概要」パンフレット', url: '/dl/pamphlet.pdf', form: 'cb42c267-24d5-4f5c-b43a-f25e46fa67b0' },
-    'ISO14001_2026-revision': { name: '「ISO14001」2026年 改訂ポイント解説', url: '/dl/iso14001-2026-revision.pdf', form: 'fc0028af-5f65-4651-96c1-68899b9a82fa' }
+    'ISO14001_2026-revision': { name: '「ISO14001」2026年 改訂ポイント解説', url: '/dl/iso14001-2026-revision.pdf', form: 'fc0028af-5f65-4651-96c1-68899b9a82fa' },
+    'ppwr-declaration-of-conformity': { name: '「PPWR適合宣言書 作成ガイド」Wordテンプレート付き', url: '/assets/dl/PPWR_DoC_guide_eitoss.pdf', form: 'c4c81f83-8b66-48b3-a31b-b749afecf7eb', sub: { label: 'テンプレートをダウンロードする（Word）', url: '/assets/dl/PPWR_DoC_template_eitoss.docx', file: 'template' } }
   };
   function ss(k){ try { return sessionStorage.getItem(k); } catch (_) { return null; } }
   function fromParam(){
@@ -329,6 +338,15 @@ footer .copy{font-size:12.5px;color:rgba(255,255,255,.55);text-align:center;marg
   btn.addEventListener('click', function(){
     if (typeof gtag === 'function') gtag('event', 'document_download', { doc: key, place: 'thanks' });
   });
+  if (doc.sub) {
+    var sub = document.getElementById('dl-btn-sub');
+    sub.href = doc.sub.url;
+    document.getElementById('dl-btn-sub-label').textContent = doc.sub.label;
+    sub.addEventListener('click', function(){
+      if (typeof gtag === 'function') gtag('event', 'document_download', { doc: key, place: 'thanks', file: doc.sub.file });
+    });
+    sub.hidden = false;
+  }
   document.getElementById('thx-lead').textContent = '下のボタンから資料をご覧いただけます。同じ資料をご入力いただいたメールアドレス宛にもお送りしました。';
   box.hidden = false;
 })();
