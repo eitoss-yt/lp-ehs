@@ -22,7 +22,7 @@ const browser = await chromium.launch(proxy ? { proxy } : {});
   await p.screenshot({ path: path.join(DIR, 'cover-ad.png') });
   await ctx.close();
 }
-for (const n of ['1', '2', '3', '4', '1p', '2p', '3p', '4p', '1m', '2m', '3m', '4m', '5mock', '6real', '6real_black', '6flat_black', '7pages_black', 'v2_check', 'v2_woman_q', 'v2_word', 'v2_woman_word', 'v3_check', 'v3_woman_q', 'v3_word', 'v3_woman_word']) {
+for (const n of ['1', '2', '3', '4', '1p', '2p', '3p', '4p', '1m', '2m', '3m', '4m', '5mock', '6real', '6real_black', '6flat_black', '7pages_black', 'v2_check', 'v2_woman_q', 'v2_word', 'v2_woman_word', 'v3_check', 'v3_woman_q', 'v3_word', 'v3_woman_word', 'v4_lines_word', 'v4_lines_woman_word', 'v4_waves_word', 'v4_waves_woman_word', 'v4_digital_word', 'v4_digital_woman_word']) {
   const ctx = await browser.newContext({ viewport: { width: 1080, height: 1080 }, ignoreHTTPSErrors: true });
   const p = await ctx.newPage();
   await p.goto('file://' + path.join(DIR, `cr${n}.html`));
