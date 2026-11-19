@@ -215,9 +215,9 @@ header.gh{position:fixed;top:0;left:0;right:0;background:rgba(255,255,255,.96);b
 .gh-btn{display:inline-flex;align-items:center;gap:7px;padding:10px 20px;border-radius:6px;color:#fff;font-weight:700;font-size:15.5px;white-space:nowrap;transition:transform .15s ease,filter .15s ease;box-shadow:0 3px 10px rgba(0,0,0,.14)}
 .gh-btn:hover{transform:translateY(-1px);filter:brightness(1.06)}
 .gh-btn svg{width:16px;height:16px}
-.gh-btn-dl{background:#f6941c}
+.gh-btn-dl{background:#fff;color:#106878;box-shadow:inset 0 0 0 1.5px #106878,0 3px 10px rgba(0,0,0,.1)}
 .gh-btn-tr{background:linear-gradient(90deg,#54a4ec,#2e7fd6)}
-.gh-btn-ct{background:#45a3b4}
+.gh-btn-ct{background:linear-gradient(135deg,#f28a1e,#e0640a)}
 @media(max-width:1180px){.gh-nav{gap:18px;font-size:15px}}
 @media(max-width:1020px){.gh-nav{display:none}.gh-tel{display:none}.gh-left{flex-direction:row;align-items:center}}
 @media(max-width:640px){
@@ -316,6 +316,7 @@ function chrome(depth, bodyHtml, { title, description, canonicalPath, ogType = '
             <p class="gh-dd-head">Cayzenシリーズ</p>
             <a href="${rel}cayzen/ehsresearch/">EHS Research</a>
             <a href="${rel}cayzen/chemicalmanagement/">EHS Research｜化学物質管理</a>
+            <a href="${rel}cayzen/overseasregulation/">EHS Research｜海外法規制</a>
             <a href="${rel}cayzen/knowledgemanagement/">Knowledge Management</a>
             <a href="${rel}cayzen/iso/">ISO Support</a>
           </div></div>
@@ -350,6 +351,7 @@ ${bodyHtml}
         <p class="footer-head">サービス</p>
         <a href="${rel}cayzen/ehsresearch/">Cayzen EHS Research</a>
         <a href="${rel}cayzen/chemicalmanagement/">Cayzen EHS Research｜化学物質管理</a>
+        <a href="${rel}cayzen/overseasregulation/">Cayzen EHS Research｜海外法規制</a>
         <a href="${rel}cayzen/knowledgemanagement/">Cayzen Knowledge Management</a>
         <a href="${rel}cayzen/iso/">Cayzen ISO Support</a>
       </nav>
@@ -420,8 +422,14 @@ ${articles.length ? `    <div class="col-grid">\n${cards}\n    </div>` : '    <p
 }
 
 // 記事テーマ別のCTAバナー（タイトルにPPWRを含む記事はPPWR資料、ISOを含む記事はISO資料、それ以外はEHS調査代行）
-// バナー画像: assets/column_bnr_ppwr.jpg ／ assets/column_bnr_iso14001.jpg ／ assets/column_bnr_ehs.jpg
+// タイトルに「適合宣言書」を含むPPWR記事は、適合宣言書 作成ガイド（Wordテンプレート付き）の資料
+// バナー画像: assets/column_bnr_ppwr_doc.jpg ／ assets/column_bnr_ppwr.jpg ／ assets/column_bnr_iso14001.jpg ／ assets/column_bnr_ehs.jpg
 function ctaBanner(a) {
+  if (/PPWR/i.test(a.title || '') && /適合宣言書/.test(a.title || '')) {
+    return `<a class="cta-banner-img" href="../../document/ppwr-declaration-of-conformity/">
+        <img src="../../assets/column_bnr_ppwr_doc.jpg" alt="PPWR適合宣言書、自社で書けますか？｜8項目の書き方・英文の記入例・署名前チェックリストを1冊に｜Wordテンプレート付き｜無料で資料をダウンロード" loading="lazy" width="1080" height="300">
+      </a>`;
+  }
   if (/PPWR/i.test(a.title || '')) {
     return `<a class="cta-banner-img" href="../../document/ppwr/">
         <img src="../../assets/column_bnr_ppwr.jpg" alt="PPWR、施行済み。いま確認すべきこと｜役割ごとの義務・期限一覧・部門別チェックリストを1冊に｜無料で資料をダウンロード" loading="lazy" width="1080" height="300">
@@ -759,7 +767,9 @@ console.log(`[build-columns] 生成完了: column/index.html + 記事 ${articles
 // ---- ニュースの生成 ----
 if (!USE_SAMPLE && API_KEY) {
   try {
-    const allNews = (await fetchAll(NEWS_ENDPOINT)).filter(n => n.publishedAt);
+    // 旧サイトからの移行で二重登録されたニュース（旧URLの記事を残し、こちらは掲載しない。URLは vercel.json で旧URLへ転送）
+    const NEWS_EXCLUDE = new Set(['news20230712', '0_3mkbwr', 'z6bbdabk', 'rel94r5v', 'r2cmdjnz', 'sc4ybkz8', 'tt0b_udf']);
+    const allNews = (await fetchAll(NEWS_ENDPOINT)).filter(n => n.publishedAt && !NEWS_EXCLUDE.has(n.id));
     allNews.sort((a, b) => new Date(dateOf(b)) - new Date(dateOf(a)));
     await rm(path.join(ROOT, 'news'), { recursive: true, force: true });
     await mkdir(path.join(ROOT, 'news'), { recursive: true });

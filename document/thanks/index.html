@@ -67,9 +67,9 @@ header.gh{position:fixed;top:0;left:0;right:0;background:rgba(255,255,255,.96);b
 .gh-btn{display:inline-flex;align-items:center;gap:7px;padding:10px 20px;border-radius:6px;color:#fff;font-weight:700;font-size:15.5px;white-space:nowrap;transition:transform .15s ease,filter .15s ease;box-shadow:0 3px 10px rgba(0,0,0,.14)}
 .gh-btn:hover{transform:translateY(-1px);filter:brightness(1.06)}
 .gh-btn svg{width:16px;height:16px}
-.gh-btn-dl{background:#f6941c}
+.gh-btn-dl{background:#fff;color:#106878;box-shadow:inset 0 0 0 1.5px #106878,0 3px 10px rgba(0,0,0,.1)}
 .gh-btn-tr{background:linear-gradient(90deg,#54a4ec,#2e7fd6)}
-.gh-btn-ct{background:#45a3b4}
+.gh-btn-ct{background:linear-gradient(135deg,#f28a1e,#e0640a)}
 @media(max-width:1180px){.gh-nav{gap:18px;font-size:15px}}
 @media(max-width:1020px){.gh-nav{display:none}.gh-tel{display:none}.gh-left{flex-direction:row;align-items:center}}
 @media(max-width:640px){
@@ -167,6 +167,19 @@ footer .copy{font-size:12.5px;color:rgba(255,255,255,.55);text-align:center;marg
 .cal iframe{display:block;width:100%;height:720px;border:0;border-radius:12px;background:#fff}
 .cal-alt{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:12px;font-size:13.5px;color:var(--gray)}
 .cal-alt a{flex:0 0 auto;background:linear-gradient(90deg,#54a4ec,#2e7fd6);color:#fff;font-weight:700;font-size:14px;padding:9px 18px;border-radius:8px}
+.dl-box{max-width:640px;margin:0 auto 34px;background:var(--teal-050);border-radius:16px;padding:28px 26px;text-align:center}
+.dl-box[hidden]{display:none}
+.dl-box .dl-lead{font-size:15px;color:var(--gray)}
+.dl-box .dl-name{font-size:19px;font-weight:500;color:var(--teal-900);line-height:1.6;margin:6px 0 18px}
+.dl-btn{display:inline-flex;align-items:center;gap:10px;background:#ff9902;color:#fff;font-weight:700;font-size:17px;padding:15px 32px;border-radius:10px;box-shadow:0 6px 16px rgba(255,153,2,.32);transition:transform .15s ease,filter .15s ease}
+.dl-btn:hover{transform:translateY(-2px);filter:brightness(1.05)}
+.dl-btn svg{width:20px;height:20px;flex:0 0 auto}
+.dl-btns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.dl-btn-sub{display:inline-flex;align-items:center;gap:10px;background:#fff;color:#e08600;font-weight:700;font-size:16px;padding:14px 26px;border-radius:10px;box-shadow:0 4px 12px rgba(255,153,2,.18);transition:transform .15s ease}
+.dl-btn-sub[hidden]{display:none}
+.dl-btn-sub:hover{transform:translateY(-2px)}
+.dl-btn-sub svg{width:20px;height:20px;flex:0 0 auto}
+.dl-box .dl-note{font-size:13.5px;color:var(--gray);margin-top:16px;text-wrap:balance}
 .later{text-align:center;margin-top:22px;font-size:14.5px;color:var(--gray)}
 .thx-btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-top:22px}
 @media(max-width:900px){.book{grid-template-columns:1fr}.book-info{padding:26px 22px}.cal{padding:12px}.cal iframe{height:760px}.thx-head{flex-direction:column;text-align:center;gap:10px}.cal-alt{flex-direction:column;text-align:center}}
@@ -185,6 +198,7 @@ footer .copy{font-size:12.5px;color:rgba(255,255,255,.55);text-align:center;marg
             <p class="gh-dd-head">Cayzenシリーズ</p>
             <a href="../../cayzen/ehsresearch/">EHS Research</a>
             <a href="../../cayzen/chemicalmanagement/">EHS Research｜化学物質管理</a>
+            <a href="../../cayzen/overseasregulation/">EHS Research｜海外法規制</a>
             <a href="../../cayzen/knowledgemanagement/">Knowledge Management</a>
             <a href="../../cayzen/iso/">ISO Support</a>
           </div></div>
@@ -214,7 +228,16 @@ footer .copy{font-size:12.5px;color:rgba(255,255,255,.55);text-align:center;marg
 <main class="section">
   <div class="container">
     <div class="thx">
-      <div class="thx-head"><span class="ok"><svg viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span><div><h2>お申し込みありがとうございます</h2><p>ご入力いただいたメールアドレス宛に、資料のご案内をお送りしました。</p></div></div>
+      <div class="thx-head"><span class="ok"><svg viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span><div><h2>お申し込みありがとうございます</h2><p id="thx-lead">ご入力いただいたメールアドレス宛に、資料のご案内をお送りしました。</p></div></div>
+      <div class="dl-box" id="dl-box" hidden>
+        <p class="dl-lead">資料はこちらからすぐにご覧いただけます</p>
+        <p class="dl-name" id="dl-name"></p>
+        <div class="dl-btns">
+        <a class="dl-btn" id="dl-btn" href="#" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12"/><path d="M7 10l5 5 5-5"/><path d="M5 20h14"/></svg>資料をダウンロードする（PDF）</a>
+        <a class="dl-btn-sub" id="dl-btn-sub" href="#" download hidden><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12"/><path d="M7 10l5 5 5-5"/><path d="M5 20h14"/></svg><span id="dl-btn-sub-label"></span></a>
+        </div>
+        <p class="dl-note">開けない場合は、お手数ですがお問い合わせください。メールでも同じ資料をお送りしています。</p>
+      </div>
       <div class="book">
         <div class="book-info">
           <span class="lbl">資料の内容を、担当者がご説明します</span>
@@ -245,6 +268,7 @@ footer .copy{font-size:12.5px;color:rgba(255,255,255,.55);text-align:center;marg
         <p class="footer-head">サービス</p>
         <a href="../../cayzen/ehsresearch/">Cayzen EHS Research</a>
         <a href="../../cayzen/chemicalmanagement/">Cayzen EHS Research｜化学物質管理</a>
+        <a href="../../cayzen/overseasregulation/">Cayzen EHS Research｜海外法規制</a>
         <a href="../../cayzen/knowledgemanagement/">Cayzen Knowledge Management</a>
         <a href="../../cayzen/iso/">Cayzen ISO Support</a>
       </nav>
@@ -269,6 +293,67 @@ footer .copy{font-size:12.5px;color:rgba(255,255,255,.55);text-align:center;marg
     <p class="copy">© Eitoss Inc. All rights reserved.</p>
   </div>
 </footer>
+
+<script>
+(function(){
+  var DOCS = {
+    'ppwr': { name: '「EU PPWR 対応 要点まとめ」包装・包装廃棄物規則の対応ガイド', url: '/assets/dl/EU_PPWR_overview_eitoss.pdf', form: '83a73b1f-76df-4e38-b2b6-b19bd37bc567' },
+    'ppwr-support': { name: '「Cayzen EHS Research」PPWR対応支援 サービス資料', url: '/dl/ppwr-support.pdf', form: '41efbd6d-136b-4b4f-9c00-09077c22d063' },
+    'overseas-regulation': { name: '「Cayzen EHS Research」海外法規制対応支援 サービス資料', url: '/dl/overseas-regulation.pdf', form: '615bad3a-9072-45e5-8e0c-b0db729fece6' },
+    'chemical-management': { name: '「Cayzen EHS Research」化学物質管理 サービス資料', url: '/dl/chemical-management.pdf', form: 'aad7f3d4-684e-4e7b-94ea-70040e23b5e0' },
+    'ehs-research': { name: '「Cayzen EHS Research」サービス資料', url: '/dl/ehs-research.pdf', form: '9af5e0d3-f32b-430f-a647-c4b3a56c343c' },
+    'cayzen': { name: '「Cayzen Knowledge Management」サービス資料', url: '/dl/knowledge-management.pdf', form: '29321982-b048-45f3-ae3c-3752d8dba971' },
+    'cayzen-iso': { name: '「Cayzen ISO サポート」ISO支援サービス資料', url: '/dl/cayzen-iso.pdf', form: '7068807f-ff4c-4e6a-957e-016e2aa5cdb4' },
+    'pamphlet': { name: '「エイトス会社概要」パンフレット', url: '/dl/pamphlet.pdf', form: 'cb42c267-24d5-4f5c-b43a-f25e46fa67b0' },
+    'ISO14001_2026-revision': { name: '「ISO14001」2026年 改訂ポイント解説', url: '/dl/iso14001-2026-revision.pdf', form: 'fc0028af-5f65-4651-96c1-68899b9a82fa' },
+    'ppwr-declaration-of-conformity': { name: '「PPWR適合宣言書 作成ガイド」Wordテンプレート付き', url: '/assets/dl/PPWR_DoC_guide_eitoss.pdf', form: 'c4c81f83-8b66-48b3-a31b-b749afecf7eb', sub: { label: 'テンプレートをダウンロードする（Word）', url: '/assets/dl/PPWR_DoC_template_eitoss.docx', file: 'template' } }
+  };
+  function ss(k){ try { return sessionStorage.getItem(k); } catch (_) { return null; } }
+  function fromParam(){
+    var m = location.search.match(/[?&]doc=([^&]+)/);
+    if (!m) return null;
+    try { var v = decodeURIComponent(m[1]); } catch (_) { return null; }
+    return DOCS.hasOwnProperty(v) ? v : null;
+  }
+  function fromForm(){
+    var id = ss('eitoss_dl_form');
+    if (!id) return null;
+    for (var k in DOCS) if (DOCS.hasOwnProperty(k) && DOCS[k].form === id) return k;
+    return null;
+  }
+  function fromPage(){
+    var p = ss('eitoss_dl_page');
+    if (!p) return null;
+    if (/^\/lp\/ppwr\/?/.test(p)) return 'ppwr';
+    var LP = { 'ehsresearch': 'ehs-research', 'chemicalmanagement': 'chemical-management', 'overseasregulation': 'overseas-regulation', 'knowledgemanagement': 'cayzen', 'iso': 'cayzen-iso' };
+    var c = p.match(/^\/cayzen\/([^\/]+)\/?/);
+    if (c) return LP.hasOwnProperty(c[1]) ? LP[c[1]] : null;
+    var m = p.match(/^\/document\/([^\/]+)\/?/);
+    return (m && DOCS.hasOwnProperty(m[1])) ? m[1] : null;
+  }
+  var key = fromParam() || fromForm() || fromPage();
+  if (!key) return;
+  var doc = DOCS[key];
+  var box = document.getElementById('dl-box');
+  var btn = document.getElementById('dl-btn');
+  document.getElementById('dl-name').textContent = doc.name;
+  btn.href = doc.url;
+  btn.addEventListener('click', function(){
+    if (typeof gtag === 'function') gtag('event', 'document_download', { doc: key, place: 'thanks' });
+  });
+  if (doc.sub) {
+    var sub = document.getElementById('dl-btn-sub');
+    sub.href = doc.sub.url;
+    document.getElementById('dl-btn-sub-label').textContent = doc.sub.label;
+    sub.addEventListener('click', function(){
+      if (typeof gtag === 'function') gtag('event', 'document_download', { doc: key, place: 'thanks', file: doc.sub.file });
+    });
+    sub.hidden = false;
+  }
+  document.getElementById('thx-lead').textContent = '下のボタンから資料をご覧いただけます。同じ資料をご入力いただいたメールアドレス宛にもお送りしました。';
+  box.hidden = false;
+})();
+</script>
 
 <!-- Start of HubSpot Embed Code -->
 <script type="text/javascript" id="hs-script-loader" async defer src="//js-na2.hs-scripts.com/8170895.js"></script>
