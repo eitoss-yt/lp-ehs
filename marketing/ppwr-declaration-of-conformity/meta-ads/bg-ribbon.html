@@ -1,0 +1,25 @@
+<!doctype html><html><head><meta charset="utf-8"><style>html,body{margin:0;width:1080px;height:1080px;overflow:hidden;background:#f6f8fc}canvas{display:block}</style></head><body>
+<canvas id="c" width="2160" height="2160" style="width:1080px;height:1080px"></canvas>
+<script>
+// 布のリボン＋細い線の背景（seedを固定して毎回同じ絵にする）
+let seed=7; const rnd=()=>{seed=(seed*16807)%2147483647;return (seed-1)/2147483646};
+const c=document.getElementById('c'), x=c.getContext('2d'); x.scale(2,2);
+const W=1080,H=1080;
+// ベース
+let g=x.createLinearGradient(0,0,W,H); g.addColorStop(0,'#fbfcfe'); g.addColorStop(.5,'#f1f5fb'); g.addColorStop(1,'#e8eef8'); x.fillStyle=g; x.fillRect(0,0,W,H);
+// リボン（太い帯をぼかして重ねる）
+function ribbon(pts,w,col,blur,alpha){x.save();x.filter=`blur(${blur}px)`;x.globalAlpha=alpha;x.strokeStyle=col;x.lineWidth=w;x.lineCap='round';x.beginPath();x.moveTo(pts[0],pts[1]);x.bezierCurveTo(pts[2],pts[3],pts[4],pts[5],pts[6],pts[7]);x.stroke();x.restore();}
+ribbon([1250,-80, 700,260, 820,520, 300,1200],260,'#7fb2e6',60,.55);   // 大きな青
+ribbon([1200,150, 760,380, 640,640, 120,1150],120,'#4f8fd8',34,.55);
+ribbon([980,-120, 760,200, 900,420, 560,760],90,'#9fc8ee',30,.6);
+ribbon([-150,260, 160,420, 260,700, 380,1200],120,'#f2a15a',38,.55);   // オレンジ
+ribbon([-120,300, 140,470, 230,720, 330,1200],50,'#ee8a3a',14,.55);
+ribbon([1180,780, 980,860, 820,980, 700,1200],140,'#f6b880',50,.35);
+// 光
+x.save();x.filter='blur(80px)';x.globalAlpha=.9;x.fillStyle='#ffffff';x.beginPath();x.ellipse(330,300,330,200,-.3,0,7);x.fill();x.restore();
+// 細い線の束（布のメッシュ）
+function bundle(n,f,col,a,wid){x.save();x.strokeStyle=col;x.globalAlpha=a;x.lineWidth=wid;for(let i=0;i<n;i++){const t=i/n;const p=f(t,rnd());x.beginPath();x.moveTo(p[0],p[1]);x.bezierCurveTo(p[2],p[3],p[4],p[5],p[6],p[7]);x.stroke();}x.restore();}
+bundle(46,(t,r)=>[-100+t*260,-80, 200+t*500+r*40,300+t*120, 300-t*200,700+r*60, 120+t*900,1180],'#3a6fc4',.28,1);
+bundle(40,(t,r)=>[1180,-60+t*500, 760-t*200,200+t*200+r*40, 700+t*180,620-t*80, -80,900+t*240],'#5a86c8',.22,1);
+bundle(28,(t,r)=>[600+t*300,-80, 520+t*160,260+r*50, 820-t*120,520, 1180,700+t*300],'#7aa0d8',.20,1);
+</script></body></html>
