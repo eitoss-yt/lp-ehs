@@ -39,10 +39,13 @@ img{position:absolute;display:block}
 .doc{filter:drop-shadow(0 22px 30px rgba(5,10,50,.45)) drop-shadow(0 3px 6px rgba(5,10,50,.3))}
 .doc.cv{outline:3px solid rgba(255,255,255,.9)}
 /* 無料バッジ */
-.free{position:absolute;z-index:7;border-radius:50%;background:radial-gradient(circle at 35% 30%,#ffc766,var(--o2) 60%,var(--o3));color:#fff;font-weight:900;font-size:34px;line-height:1.2;display:flex;align-items:center;justify-content:center;text-align:center;box-shadow:0 10px 24px rgba(238,90,12,.45),inset 0 -4px 0 rgba(0,0,0,.08);text-shadow:0 1px 2px rgba(150,50,0,.35)}
+.free{position:absolute;z-index:7;border-radius:50%;background:linear-gradient(135deg,#ff9a2e,#ff6a1f);color:#fff;font-weight:900;font-size:34px;line-height:1.2;display:flex;align-items:center;justify-content:center;text-align:center;}
 /* 下の帯とCTA */
 .cta{position:absolute;left:0;right:0;bottom:0;height:136px;z-index:8;display:flex;align-items:center;justify-content:space-between;padding:0 56px 0 64px;background:linear-gradient(90deg,#141d5c,#1c2a85 60%,#22339a)}
 .cta::before{content:"";position:absolute;left:0;right:0;top:0;height:3px;background:linear-gradient(90deg,transparent,rgba(127,211,239,.8),transparent)}
 .cta .m{color:#fff;font-size:27px;font-weight:700;letter-spacing:.01em;white-space:nowrap}
-.cta .btn{position:relative;display:flex;align-items:center;gap:14px;color:#fff;font-size:33px;font-weight:900;letter-spacing:.02em;padding:18px 30px 20px 38px;white-space:nowrap;border-radius:999px;background:linear-gradient(180deg,var(--o1) 0%,var(--o2) 55%,var(--o3) 100%);box-shadow:0 10px 26px rgba(255,110,20,.55),inset 0 2px 0 rgba(255,255,255,.45),inset 0 -4px 0 rgba(160,50,0,.25);text-shadow:0 1px 2px rgba(150,50,0,.4)}
-.cta .btn span{display:inline-flex;width:40px;height:40px;border-radius:50%;background:#fff;color:var(--o3);font-size:26px;align-items:center;justify-content:center;text-shadow:none}
+.cta .btn{position:relative;display:flex;align-items:center;gap:12px;color:#fff;font-size:33px;font-weight:900;letter-spacing:.02em;padding:20px 40px;border-radius:999px;white-space:nowrap;background:linear-gradient(90deg,#ff9a2e 0%,#ff6a1f 100%)}
+.cta .btn span{font-size:32px;font-weight:700}
+
+/* 全体のグラフィック */
+.deco{position:absolute;inset:0;z-index:1;pointer-events:none}
