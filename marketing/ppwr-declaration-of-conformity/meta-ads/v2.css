@@ -1,0 +1,48 @@
+/* v2：フォントを端末のNoto Sans CJK JPの太字ファイルに固定（擬似太字と英数字の別フォント混在を防ぐ） */
+@font-face{font-family:"JP";src:local("NotoSansCJKjp-Medium"),local("Noto Sans CJK JP Medium");font-weight:500}
+@font-face{font-family:"JP";src:local("NotoSansCJKjp-Bold"),local("Noto Sans CJK JP Bold");font-weight:700}
+@font-face{font-family:"JP";src:local("NotoSansCJKjp-Black"),local("Noto Sans CJK JP Black");font-weight:900}
+:root{--navy:#18236b;--blue:#2f55e0;--ink:#2b3247;--o1:#ffb547;--o2:#ff7a1a;--o3:#ee5a0c}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:1080px;height:1080px;overflow:hidden;font-family:"JP",sans-serif;-webkit-font-smoothing:antialiased;font-feature-settings:"palt"}
+body{position:relative;color:var(--navy);background:linear-gradient(160deg,#f8faff 0%,#eef2fd 45%,#e2e9fb 100%)}
+img{position:absolute;display:block}
+/* 背景 */
+.bg{position:absolute;inset:0;overflow:hidden;z-index:0}
+.bg .grid{position:absolute;inset:0;background-image:linear-gradient(rgba(47,85,224,.07) 1px,transparent 1px),linear-gradient(90deg,rgba(47,85,224,.07) 1px,transparent 1px);background-size:40px 40px;-webkit-mask-image:radial-gradient(ellipse 80% 70% at 25% 30%,#000 30%,transparent 80%)}
+.bg .m1{position:absolute;left:520px;top:-220px;width:760px;height:620px;border-radius:50%;background:radial-gradient(circle,rgba(110,200,235,.40),rgba(110,200,235,0) 65%);filter:blur(30px)}
+.bg .m2{position:absolute;left:-260px;top:520px;width:720px;height:620px;border-radius:50%;background:radial-gradient(circle,rgba(150,130,240,.28),rgba(150,130,240,0) 65%);filter:blur(30px)}
+.bg .m3{position:absolute;left:140px;top:120px;width:520px;height:420px;border-radius:50%;background:radial-gradient(circle,rgba(255,255,255,.75),rgba(255,255,255,0) 65%);filter:blur(20px)}
+/* 大きな円 */
+.orb{position:absolute;border-radius:50%;background:radial-gradient(circle at 32% 28%,#4f74f0 0%,#2b44c4 28%,#1c2a85 58%,#121a55 100%);box-shadow:0 40px 90px rgba(24,35,107,.35),inset 0 0 0 2px rgba(255,255,255,.08)}
+.orb::before{content:"";position:absolute;inset:0;border-radius:50%;background:radial-gradient(circle at 30% 20%,rgba(255,255,255,.28),rgba(255,255,255,0) 40%)}
+.orb::after{content:"";position:absolute;inset:-34px;border-radius:50%;border:2px solid rgba(47,85,224,.18)}
+.ring{position:absolute;border-radius:50%;border:1.5px dashed rgba(47,85,224,.25)}
+.dot{position:absolute;border-radius:50%;background:linear-gradient(135deg,#7fd3ef,#2f55e0);box-shadow:0 4px 10px rgba(47,85,224,.3)}
+.spark{position:absolute;width:26px;height:26px;background:radial-gradient(circle,#fff 0 18%,transparent 19%),conic-gradient(from 45deg,transparent 0 10%,rgba(255,255,255,.95) 10% 15%,transparent 15% 35%,rgba(255,255,255,.95) 35% 40%,transparent 40% 60%,rgba(255,255,255,.95) 60% 65%,transparent 65% 85%,rgba(255,255,255,.95) 85% 90%,transparent 90%);filter:drop-shadow(0 0 6px rgba(255,255,255,.9))}
+/* ヘッダー */
+.head{position:absolute;left:64px;right:64px;top:56px;display:flex;justify-content:space-between;align-items:center;z-index:5}
+.chip{background:var(--navy);color:#fff;font-weight:700;font-size:27px;letter-spacing:.04em;padding:9px 22px;border-radius:8px}
+.logo{position:static;height:55px;width:auto}
+/* 見出し */
+.t{position:absolute;left:64px;top:140px;z-index:5;font-weight:900;font-size:78px;line-height:1.28;letter-spacing:.01em;color:var(--navy)}
+.t .b{color:var(--blue)}
+.sub{position:absolute;left:64px;z-index:5;font-weight:700;font-size:32px;line-height:1.55;color:var(--ink)}
+/* チェック */
+.checks{position:absolute;left:64px;z-index:5;display:flex;flex-direction:column;gap:14px}
+.checks div{display:flex;align-items:center;gap:16px;background:rgba(255,255,255,.95);border-radius:14px;padding:16px 26px 16px 18px;font-size:31px;font-weight:700;color:var(--navy);box-shadow:0 8px 22px rgba(24,35,107,.12)}
+.checks i{font-style:normal;flex:none;width:40px;height:40px;border-radius:10px;background:linear-gradient(135deg,#4f74f0,#2f55e0);color:#fff;font-size:24px;font-weight:900;display:flex;align-items:center;justify-content:center}
+/* 吹き出し */
+.bub{position:absolute;z-index:6;background:#fff;color:var(--navy);font-weight:700;font-size:32px;padding:16px 28px;border-radius:22px;box-shadow:0 10px 26px rgba(24,35,107,.16);white-space:nowrap}
+.bub::after{content:"";position:absolute;left:-12px;top:50%;margin-top:-10px;border:10px solid transparent;border-right:14px solid #fff;border-left:0}
+/* 資料 */
+.doc{filter:drop-shadow(0 22px 30px rgba(5,10,50,.45)) drop-shadow(0 3px 6px rgba(5,10,50,.3))}
+.doc.cv{outline:3px solid rgba(255,255,255,.9)}
+/* 無料バッジ */
+.free{position:absolute;z-index:7;border-radius:50%;background:radial-gradient(circle at 35% 30%,#ffc766,var(--o2) 60%,var(--o3));color:#fff;font-weight:900;font-size:34px;line-height:1.2;display:flex;align-items:center;justify-content:center;text-align:center;box-shadow:0 10px 24px rgba(238,90,12,.45),inset 0 -4px 0 rgba(0,0,0,.08);text-shadow:0 1px 2px rgba(150,50,0,.35)}
+/* 下の帯とCTA */
+.cta{position:absolute;left:0;right:0;bottom:0;height:136px;z-index:8;display:flex;align-items:center;justify-content:space-between;padding:0 56px 0 64px;background:linear-gradient(90deg,#141d5c,#1c2a85 60%,#22339a)}
+.cta::before{content:"";position:absolute;left:0;right:0;top:0;height:3px;background:linear-gradient(90deg,transparent,rgba(127,211,239,.8),transparent)}
+.cta .m{color:#fff;font-size:27px;font-weight:700;letter-spacing:.01em;white-space:nowrap}
+.cta .btn{position:relative;display:flex;align-items:center;gap:14px;color:#fff;font-size:33px;font-weight:900;letter-spacing:.02em;padding:18px 30px 20px 38px;white-space:nowrap;border-radius:999px;background:linear-gradient(180deg,var(--o1) 0%,var(--o2) 55%,var(--o3) 100%);box-shadow:0 10px 26px rgba(255,110,20,.55),inset 0 2px 0 rgba(255,255,255,.45),inset 0 -4px 0 rgba(160,50,0,.25);text-shadow:0 1px 2px rgba(150,50,0,.4)}
+.cta .btn span{display:inline-flex;width:40px;height:40px;border-radius:50%;background:#fff;color:var(--o3);font-size:26px;align-items:center;justify-content:center;text-shadow:none}
