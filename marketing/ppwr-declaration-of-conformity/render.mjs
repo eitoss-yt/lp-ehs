@@ -1,6 +1,7 @@
 // このフォルダのHTMLから画像を作り直す
 // 使い方（リポジトリのルートで実行）:
 //   node marketing/ppwr-declaration-of-conformity/render.mjs eyecatch   … コラムのアイキャッチ（1280×720 JPEG）
+//   node marketing/ppwr-declaration-of-conformity/render.mjs thumb      … お役立ち資料一覧のカード画像（表紙のタイトルを拡大、1280×720 JPEG）
 //   node marketing/ppwr-declaration-of-conformity/render.mjs banner     … 記事内の資料DLバナー（1080×300 JPEG）
 //   node marketing/ppwr-declaration-of-conformity/render.mjs figures    … 解説書の表紙と図1〜5（PNG、2倍の解像度）
 // 出力先は out/（このフォルダ内。gitには入れない）
@@ -17,6 +18,7 @@ mkdirSync(OUT, { recursive: true });
 
 const jobs = {
   eyecatch: [{ html: 'eyecatch/eyecatch.html', out: 'eyecatch.jpg', w: 1280, h: 720, type: 'jpeg' }],
+  thumb: [{ html: 'eyecatch/thumb.html', out: 'thumb.jpg', w: 1280, h: 720, type: 'jpeg' }],
   banner: [{ html: 'figures/banner.html', out: 'banner.jpg', w: 1080, h: 300, type: 'jpeg' }],
   figures: [
     { html: 'figures/cover.html', out: 'cover.png', w: 1240, h: 1754, scale: 2 },
@@ -25,7 +27,7 @@ const jobs = {
 };
 const target = process.argv[2];
 if (!jobs[target]) {
-  console.error('使い方: node render.mjs eyecatch | banner | figures');
+  console.error('使い方: node render.mjs eyecatch | thumb | banner | figures');
   process.exit(1);
 }
 // Google Fontsを読み込むため、環境にプロキシがあれば使う
