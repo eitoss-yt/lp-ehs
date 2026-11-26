@@ -1,0 +1,31 @@
+<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="common.css"><style>body{background:linear-gradient(165deg,#fbfcfe 0%,#f3f6fb 45%,#e8edf7 100%)}
+.bgx{position:absolute;inset:0;overflow:hidden;z-index:0}
+.bgx>div{position:absolute;border-radius:50%}
+.b1{left:540px;top:60px;width:760px;height:760px;background:radial-gradient(circle at 50% 50%,rgba(120,145,230,.42),rgba(120,145,230,0) 65%);filter:blur(40px)}
+.b2{left:760px;top:560px;width:600px;height:520px;background:radial-gradient(circle,rgba(110,195,210,.38),rgba(110,195,210,0) 65%);filter:blur(40px)}
+.b3{left:-260px;top:560px;width:760px;height:640px;background:radial-gradient(circle,rgba(150,160,225,.30),rgba(150,160,225,0) 65%);filter:blur(50px)}
+.b4{left:260px;top:-300px;width:700px;height:560px;background:radial-gradient(circle,rgba(170,215,230,.30),rgba(170,215,230,0) 65%);filter:blur(50px)}
+.b5{left:420px;top:380px;width:420px;height:420px;background:radial-gradient(circle,rgba(255,255,255,.55),rgba(255,255,255,0) 65%);filter:blur(30px)}
+.light{position:absolute;right:-200px;top:-200px;width:900px;height:900px;background:conic-gradient(from 210deg at 70% 30%,rgba(255,255,255,0) 0deg,rgba(255,255,255,.35) 20deg,rgba(255,255,255,0) 45deg);filter:blur(30px)}
+.grain{position:absolute;inset:0;opacity:.06;mix-blend-mode:multiply}
+.head,.main{z-index:2}
+
+.t{font-size:80px}
+.mock{position:absolute;left:270px;top:215px;width:1100px;height:auto;box-shadow:none;z-index:1}
+.mshadow{position:absolute;left:270px;top:215px;width:1100px;height:auto;box-shadow:none;z-index:0;opacity:.9}
+.feat{position:absolute;left:72px;top:440px;display:flex;flex-direction:column;gap:16px;z-index:3}
+.feat div{background:rgba(255,255,255,.92);border-radius:14px;padding:16px 22px;font-size:27px;font-weight:700;color:var(--navy);display:flex;align-items:center;gap:14px;box-shadow:0 6px 16px rgba(28,39,112,.10)}
+.feat i{font-style:normal;flex:none;width:38px;height:38px;border-radius:9px;background:var(--pale);color:var(--blue);font-size:22px;font-weight:900;display:flex;align-items:center;justify-content:center}
+.free{left:40px;top:700px;width:240px;height:240px;font-size:40px;line-height:1.25}
+</style></head><body><div class="bgx">
+ <div class="b1"></div><div class="b2"></div><div class="b3"></div><div class="b4"></div><div class="b5"></div>
+ <div class="light"></div>
+ <svg class="grain" width="1080" height="1080"><filter id="gn"><feTurbulence type="fractalNoise" baseFrequency=".85" numOctaves="2" stitchTiles="stitch"/><feColorMatrix type="saturate" values="0"/></filter><rect width="100%" height="100%" filter="url(#gn)"/></svg>
+</div>
+<div class="head"><div class="chip">PPWR｜EU包装規則</div><img class="logo" src="logo-eitoss.png" alt="eitoss"></div>
+<div class="main"><div class="t">記入例とテンプレートで<br><span class="b">迷わず作成</span></div></div>
+<img class="mshadow" src="mock-shadow.png"><img class="mock" src="mock-book.png">
+<div class="feat"><div><i>✓</i>附属書VIIIの書き方</div><div><i>✓</i>英文の記入例</div><div><i>✓</i>署名前チェックリスト</div></div>
+<div class="free">無料<br>プレゼント</div>
+<div class="cta"><div class="m">作成ガイド18ページ＋Wordテンプレート</div><div class="btn">無料でダウンロード →</div></div>
+</body></html>

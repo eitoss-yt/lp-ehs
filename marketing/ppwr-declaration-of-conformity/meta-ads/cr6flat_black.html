@@ -1,0 +1,43 @@
+<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="common.css"><style>
+body{background:linear-gradient(160deg,#0f1638 0%,#0b1230 50%,#070b1f 100%)}
+.deco{position:absolute;left:0;top:0;z-index:0}
+.head .chip{background:transparent;border:2px solid rgba(255,255,255,.85);color:#fff}
+.grain{position:absolute;inset:0;opacity:.07;mix-blend-mode:screen;z-index:0}
+.k{position:absolute;left:72px;top:150px;font-size:28px;font-weight:700;color:var(--navy);letter-spacing:.04em;z-index:2}
+.t{position:absolute;left:72px;top:200px;font-size:64px;font-weight:900;line-height:1.32;color:#fff;z-index:2}
+.s{position:absolute;left:72px;top:420px;font-size:27px;font-weight:500;line-height:1.75;color:#c8ccd8;z-index:2}
+.s b{font-weight:700}
+.tag{position:absolute;left:72px;top:600px;background:#fff;color:var(--navy);font-size:26px;font-weight:700;padding:8px 18px;border-radius:6px;z-index:2}
+.mock{position:absolute;left:600px;top:420px;width:340px;height:auto;z-index:1;box-shadow:none}
+.mshadow{display:none}
+.pg{position:absolute;z-index:1;box-shadow:none;filter:drop-shadow(0 18px 30px rgba(0,0,0,.55)) drop-shadow(0 3px 8px rgba(0,0,0,.35))}
+.mock{filter:drop-shadow(0 24px 40px rgba(0,0,0,.65)) drop-shadow(0 4px 10px rgba(0,0,0,.4))}
+.head{z-index:2}
+
+.head .logo{height:58px}
+.cta .btn{background:linear-gradient(90deg,#ff9a2e 0%,#ff6a1f 100%);color:#fff}
+</style></head><body>
+<svg class="deco" width="1080" height="1080" viewBox="0 0 1080 1080" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<radialGradient id="g1" cx="78%" cy="50%" r="55%"><stop offset="0" stop-color="#2f55e0" stop-opacity=".6"/><stop offset=".55" stop-color="#1C2770" stop-opacity=".25"/><stop offset="1" stop-color="#0a0f2a" stop-opacity="0"/></radialGradient>
+<radialGradient id="g2" cx="5%" cy="92%" r="50%"><stop offset="0" stop-color="#3fb6d9" stop-opacity=".35"/><stop offset="1" stop-color="#3fb6d9" stop-opacity="0"/></radialGradient>
+<linearGradient id="ln" x1="0" y1="0" x2="1080" y2="0" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#3fb6d9" stop-opacity=".2"/><stop offset=".5" stop-color="#6f95ff"/><stop offset="1" stop-color="#3fb6d9" stop-opacity=".3"/></linearGradient>
+<pattern id="dp" width="22" height="22" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1.6" fill="#8fb0ff" fill-opacity=".35"/></pattern>
+<linearGradient id="dm" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset=".6" stop-color="#fff" stop-opacity=".9"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient>
+<mask id="mk"><rect width="1080" height="1080" fill="url(#dm)"/></mask>
+</defs>
+<rect width="1080" height="1080" fill="url(#g1)"/>
+<rect width="1080" height="1080" fill="url(#g2)"/>
+<rect x="560" y="120" width="520" height="830" fill="url(#dp)" mask="url(#mk)"/>
+<g fill="none" stroke="url(#ln)" stroke-opacity="0.32" stroke-width="1"><path d="M-60 640C260 520 600 1000 1140 620"/><path d="M-60 645C262 519 598 1004 1140 626"/><path d="M-60 649C263 518 596 1007 1140 631"/><path d="M-60 654C265 517 594 1011 1140 637"/><path d="M-60 658C266 516 592 1014 1140 643"/><path d="M-60 663C268 515 590 1018 1140 648"/><path d="M-60 668C269 514 588 1022 1140 654"/><path d="M-60 672C271 513 586 1025 1140 659"/><path d="M-60 677C272 512 584 1029 1140 665"/><path d="M-60 682C274 511 582 1032 1140 671"/><path d="M-60 686C275 510 579 1036 1140 676"/><path d="M-60 691C277 509 577 1039 1140 682"/><path d="M-60 695C278 508 575 1043 1140 688"/><path d="M-60 700C280 507 573 1047 1140 693"/><path d="M-60 705C282 506 571 1050 1140 699"/><path d="M-60 709C283 505 569 1054 1140 705"/><path d="M-60 714C285 504 567 1057 1140 710"/><path d="M-60 718C286 503 565 1061 1140 716"/><path d="M-60 723C288 502 563 1065 1140 722"/><path d="M-60 728C289 501 561 1068 1140 727"/><path d="M-60 732C291 499 559 1072 1140 733"/><path d="M-60 737C292 498 557 1075 1140 738"/><path d="M-60 742C294 497 555 1079 1140 744"/><path d="M-60 746C295 496 553 1083 1140 750"/><path d="M-60 751C297 495 551 1086 1140 755"/><path d="M-60 755C298 494 549 1090 1140 761"/><path d="M-60 760C300 493 547 1093 1140 767"/><path d="M-60 765C302 492 545 1097 1140 772"/><path d="M-60 769C303 491 543 1101 1140 778"/><path d="M-60 774C305 490 541 1104 1140 784"/><path d="M-60 778C306 489 538 1108 1140 789"/><path d="M-60 783C308 488 536 1111 1140 795"/><path d="M-60 788C309 487 534 1115 1140 801"/><path d="M-60 792C311 486 532 1118 1140 806"/><path d="M-60 797C312 485 530 1122 1140 812"/><path d="M-60 802C314 484 528 1126 1140 817"/><path d="M-60 806C315 483 526 1129 1140 823"/><path d="M-60 811C317 482 524 1133 1140 829"/><path d="M-60 815C318 481 522 1136 1140 834"/><path d="M-60 820C320 480 520 1140 1140 840"/></g>
+<g fill="none" stroke="url(#ln)" stroke-opacity="0.18" stroke-width="1"><path d="M-60 260C320 160 660 560 1140 200"/><path d="M-60 264C321 164 661 563 1140 206"/><path d="M-60 268C323 168 661 566 1140 211"/><path d="M-60 272C324 172 662 568 1140 217"/><path d="M-60 277C326 177 663 571 1140 222"/><path d="M-60 281C327 181 663 574 1140 228"/><path d="M-60 285C328 185 664 577 1140 233"/><path d="M-60 289C330 189 665 579 1140 239"/><path d="M-60 293C331 193 666 582 1140 244"/><path d="M-60 297C332 197 666 585 1140 250"/><path d="M-60 301C334 201 667 588 1140 255"/><path d="M-60 306C335 206 668 590 1140 261"/><path d="M-60 310C337 210 668 593 1140 266"/><path d="M-60 314C338 214 669 596 1140 272"/><path d="M-60 318C339 218 670 599 1140 277"/><path d="M-60 322C341 222 670 601 1140 283"/><path d="M-60 326C342 226 671 604 1140 288"/><path d="M-60 330C343 230 672 607 1140 294"/><path d="M-60 334C345 234 672 610 1140 299"/><path d="M-60 339C346 239 673 612 1140 305"/><path d="M-60 343C348 243 674 615 1140 310"/><path d="M-60 347C349 247 674 618 1140 316"/><path d="M-60 351C350 251 675 621 1140 321"/><path d="M-60 355C352 255 676 623 1140 327"/><path d="M-60 359C353 259 677 626 1140 332"/><path d="M-60 363C354 263 677 629 1140 338"/><path d="M-60 368C356 268 678 632 1140 343"/><path d="M-60 372C357 272 679 634 1140 349"/><path d="M-60 376C359 276 679 637 1140 354"/><path d="M-60 380C360 280 680 640 1140 360"/></g>
+<g fill="none" stroke="#5f8cff" stroke-opacity=".5" stroke-width="2"><circle cx="980" cy="230" r="10"/><circle cx="560" cy="880" r="7"/></g>
+<g stroke="#8fb0ff" stroke-opacity=".6" stroke-width="2.5" stroke-linecap="round"><path d="M520 140v20M510 150h20"/><path d="M1030 860v18M1021 869h18"/></g>
+</svg>
+<div class="head"><div class="chip">PPWR｜EU包装規則</div><img class="logo" src="logo-cayzen-ehs-white.png" alt="eitoss"></div>
+<div class="t">適合宣言書の8項目を、<br>英文の記入例つきで</div>
+<div class="s">附属書VIIIの書き方<br>署名前チェックリスト<br>Wordテンプレート</div>
+<div class="tag">無料・全18ページ</div>
+<img class="pg" src="page13.png" style="left:735px;top:255px;width:340px;transform:rotate(5deg)"><img class="pg" src="page7.png" style="left:690px;top:310px;width:340px;transform:rotate(3deg)"><img class="pg" src="page2.png" style="left:645px;top:365px;width:340px;transform:rotate(1.5deg)"><img class="mshadow" src="mock-shadow.png"><img class="mock" src="cover-ad.png">
+<div class="cta" style="background:#1C2770"><div class="m">作成ガイド18ページ＋Wordテンプレート</div><div class="btn">無料でダウンロード →</div></div>
+</body></html>
