@@ -163,10 +163,10 @@ footer .copy{font-size:12.5px;color:rgba(255,255,255,.55);text-align:center;marg
 .book-info li svg{flex:0 0 auto;width:18px;height:18px;margin-top:3px;stroke:#fff;fill:none;stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round}
 .meta{display:flex;flex-wrap:wrap;gap:8px}
 .meta span{background:#fff;color:#1f6fbf;font-size:13px;font-weight:700;padding:5px 12px;border-radius:999px}
-.cal{display:flex;flex-direction:column;padding:16px 16px 18px;background:#f7fafc}
-.cal iframe{display:block;width:100%;height:720px;border:0;border-radius:12px;background:#fff}
-.cal-alt{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:12px;font-size:13.5px;color:var(--gray)}
-.cal-alt a{flex:0 0 auto;background:linear-gradient(90deg,#54a4ec,#2e7fd6);color:#fff;font-weight:700;font-size:14px;padding:9px 18px;border-radius:8px}
+.cal{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px;padding:40px 28px;background:#f7fafc;text-align:center}
+.cal-ico{width:52px;height:52px;stroke:#2e7fd6;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.cal-txt{font-size:15.5px;color:var(--teal-900)}
+.cal-btn{display:inline-block;background:linear-gradient(90deg,#54a4ec,#2e7fd6);color:#fff;font-weight:700;font-size:15.5px;padding:14px 30px;border-radius:10px;box-shadow:0 8px 20px rgba(46,127,214,.28)}
 .dl-box{max-width:640px;margin:0 auto 34px;background:var(--teal-050);border-radius:16px;padding:28px 26px;text-align:center}
 .dl-box[hidden]{display:none}
 .dl-box .dl-lead{font-size:15px;color:var(--gray)}
@@ -182,7 +182,7 @@ footer .copy{font-size:12.5px;color:rgba(255,255,255,.55);text-align:center;marg
 .dl-box .dl-note{font-size:13.5px;color:var(--gray);margin-top:16px;text-wrap:balance}
 .later{text-align:center;margin-top:22px;font-size:14.5px;color:var(--gray)}
 .thx-btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-top:22px}
-@media(max-width:900px){.book{grid-template-columns:1fr}.book-info{padding:26px 22px}.cal{padding:12px}.cal iframe{height:760px}.thx-head{flex-direction:column;text-align:center;gap:10px}.cal-alt{flex-direction:column;text-align:center}}
+@media(max-width:900px){.book{grid-template-columns:1fr}.book-info{padding:26px 22px}.cal{padding:30px 20px}.thx-head{flex-direction:column;text-align:center;gap:10px}}
 </style>
 </head>
 <body>
@@ -242,13 +242,14 @@ footer .copy{font-size:12.5px;color:rgba(255,255,255,.55);text-align:center;marg
         <div class="book-info">
           <span class="lbl">資料の内容を、担当者がご説明します</span>
           <h3>30分のオンライン面談で、貴社に合わせた進め方をご提案</h3>
-          <p class="sub">カレンダーから空いている日時を選ぶだけで、予約が完了します。</p>
+          <p class="sub">予約ページで空いている日時を選ぶだけで、予約が完了します。</p>
           <ul><li><svg viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg><span>資料のポイントを、貴社の状況に合わせてご説明</span></li><li><svg viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg><span>法改正への対応状況や課題を整理</span></li><li><svg viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg><span>お見積りの目安もお伝えします</span></li></ul>
           <div class="meta"><span>30分</span><span>オンライン</span><span>無料</span></div>
         </div>
         <div class="cal">
-          <iframe src="https://app.spirinc.com/patterns/availability-sharing/67aba859-b660-40c6-b39f-22509224e0b1/confirm-guest" title="オンライン面談の日程調整" loading="lazy"></iframe>
-          <p class="cal-alt"><span>カレンダーが表示されない場合は、別のタブで日程を選べます。</span><a href="https://app.spirinc.com/patterns/availability-sharing/67aba859-b660-40c6-b39f-22509224e0b1/confirm-guest" target="_blank" rel="noopener">別タブで日程を選ぶ</a></p>
+          <svg class="cal-ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>
+          <p class="cal-txt">予約ページで、空いている日時をお選びください。</p>
+          <a class="cal-btn" href="https://app.spirinc.com/patterns/availability-sharing/67aba859-b660-40c6-b39f-22509224e0b1/confirm-guest" target="_blank" rel="noopener">日程を選ぶ（別タブで開きます）</a>
         </div>
       </div>
       <p class="later">メールが届かない場合は、迷惑メールフォルダをご確認のうえ、お問い合わせください。</p>
